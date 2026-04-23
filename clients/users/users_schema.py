@@ -13,6 +13,7 @@ class CreateUserRequestSchema(BaseModel):
     middle_name: str = Field(alias='middleName')
     last_name: str = Field(alias='lastName')
 
+
 # Update User Payload
 class UpdateUserRequestSchema(BaseModel):
     email: str | None

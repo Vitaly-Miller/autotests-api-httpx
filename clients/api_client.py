@@ -2,68 +2,61 @@
 API Client
 """
 from httpx import Client, Response, URL, QueryParams         # для аннотации типов
+from httpx._types import RequestData, RequestFiles   # NOQA  # для аннотации типов
 from typing import Any                                       # для аннотации типов
-from pydantic import BaseModel
 
 #=======================================================================================================================
 class APIClient:
     def __init__(self, client: Client):
+        """
+        Базовый API-клиент, принимающий httpx.Client-сессию.
+
+        :param client: Экземпляр httpx.Client для выполнения запросов
+        """
         self.client = client
 
     # 🟩GET ------------------------------------------------------------------------------------------------------------
     def get(self,
             url: URL | str,
-            params: QueryParams | None = None,
-            headers: dict | None = None) -> Response:
+            params: QueryParams | None = None) -> Response:
         """
         GET-запрос.
 
-        :param     url: URL-адрес эндпоинта.
-        :param  params: Параметры запроса (например, ?key=value).
-        :param headers: Headers.
-        :return       : Объект httpx.Response с данными ответа.
+        :param url: URL-адрес эндпоинта.
+        :param params: Параметры запроса (например, ?key=value).
+        :return Объект httpx.Response с данными ответа.
         """
-        return self.client.get(url=url, params=params, headers=headers)
+        return self.client.get(url=url, params=params)
 
     # 🟨POST -----------------------------------------------------------------------------------------------------------
     def post(self,
              url: URL | str,
-             params: QueryParams | None = None,
              json: Any | None = None,
-             data: Any | None = None,
-             files: Any | None = None,
-             timeout: float | None = None) -> Response:
+             data: RequestData | None = None,
+             files: RequestFiles | None = None) -> Response:
         """
         POST-запрос.
 
-        :param     url: URL-адрес эндпоинта.
-        :param  params: Параметры запроса.
-        :param    json: Данные в формате JSON.
-        :param    data: Форматированные данные формы (например, application/x-www-form-urlencoded).
-        :param   files: Файлы для загрузки на сервер.
-        :param timeout: Timeout
-        :return       : Объект httpx.Response с данными ответа.
+        :param url: URL-адрес эндпоинта.
+        :param json: Данные в формате JSON.
+        :param data: Форматированные данные формы (например, application/x-www-form-urlencoded).
+        :param files: Файлы для загрузки на сервер.
+        :return Объект httpx.Response с данными ответа.
         """
-        if isinstance(json, BaseModel):
-            json = json.model_dump(by_alias=True)
-        return self.client.post(url=url, params=params, json=json, data=data, files=files, timeout=timeout)
+        return self.client.post(url=url, json=json, data=data, files=files)
 
     # 🟪PATCH ---------------------------------------------------------------------------------------------------------
     def patch(self,
               url: URL | str,
-              json: Any | None = None,
-              data: Any | None = None,
-              files: Any | None = None) -> Response:
+              json: Any | None = None) -> Response:
         """
-        PATCH-запрос (Частичное обновление ресурса, передавая измененные данные).
+        PATCH-запрос (Частичное обновление ресурса, передавая только измененные данные).
 
-        :param   url: URL-адрес эндпоинта.
-        :param  json: Данные для обновления в формате JSON.
-        :param  data: Передает параметры в x-www-form-urlencoded формате.
-        :param files: Позволяет загружать файлы на сервер.
-        :return     : Объект httpx.Response с данными ответа.
+        :param url: URL-адрес эндпоинта.
+        :param json: Данные для обновления в формате JSON.
+        :return Объект httpx.Response с данными ответа.
         """
-        return self.client.patch(url=url, json=json, data=data, files=files)
+        return self.client.patch(url=url, json=json)
 
     # 🟦PUT ------------------------------------------------------------------------------------------------------------
     def put(self,
@@ -72,23 +65,21 @@ class APIClient:
         """
         PUT-запрос (Полное обновление данных).
 
-        :param  url: URL-адрес эндпоинта.
+        :param url: URL-адрес эндпоинта.
         :param json: Данные для обновления в формате JSON.
-        :return    : Объект httpx.Response с данными ответа.
+        :return Объект httpx.Response с данными ответа.
         """
         return self.client.put(url=url, json=json)
 
     # 🟥DELETE ---------------------------------------------------------------------------------------------------------
     def delete(self,
-               url: URL | str,
-               params: QueryParams | None = None) -> Response:
+               url: URL | str) -> Response:
         """
         DELETE-запрос (удаление данных).
 
-        :param    url: URL-адрес эндпоинта.
-        :param params: Параметры запроса.
-        :return      : Объект httpx.Response с данными ответа.
+        :param url: URL-адрес эндпоинта.
+        :return Объект httpx.Response с данными ответа.
         """
-        return self.client.delete(url=url, params=params)
+        return self.client.delete(url=url)
 
 #-----------------------------------------------------------------------------------------------------------------------

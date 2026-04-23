@@ -1,7 +1,7 @@
 """
 API Client Get User
 """
-from clients.authentication.authentication_schema import AuthenticationUserSchema
+from clients.auth.auth_schema import AuthUserSchema
 from clients.users.private_users_client import get_private_users_client
 from clients.users.public_users_client import get_public_users_client
 from clients.users.users_schema import CreateUserRequestSchema
@@ -27,7 +27,7 @@ print(f'Create User Data:\n{create_user_response.json()}')
 
 
 #2. Запрос на аутентификацию пользователя
-authentication_user = AuthenticationUserSchema(
+authentication_user = AuthUserSchema(
   email=create_user_request.email,
   password=create_user_request.password
 )

@@ -4,20 +4,20 @@ Authentication Client
 """
 from httpx import Response
 from clients.api_client import APIClient
-from clients.authentication.authentication_schema import LoginRequestSchema, RefreshRequestSchema, LoginResponseSchema
+from clients.auth.auth_schema import LoginRequestSchema, RefreshRequestSchema, LoginResponseSchema
 from clients.users.public_http_builder import get_public_http_client
 
 #=======================================================================================================================
 #------------------------------------------------------- Client --------------------------------------------------------
-class AuthenticationClient(APIClient):
+class AuthClient(APIClient):
     ENDPOINT = '/authentication'
 
     def login_api(self, request: LoginRequestSchema) -> Response:
         """
         Метод выполняет АУТЕНТИФИКАЦИЮ пользователя.
 
-        :param request: Словарь с email и password.
-        :return: Ответ от сервера в виде объекта httpx.Response
+        :param request: Словарь с email и password (login_payload = {}).
+        :return Ответ от сервера в виде объекта httpx.Response
         """
         return self.post(url=f'{self.ENDPOINT}/login', json=request)
 
@@ -43,13 +43,13 @@ class AuthenticationClient(APIClient):
 
 #-----------------------------------------------------------------------------------------------------------------------
 # Builder (Public client)
-def get_authentication_client() -> AuthenticationClient:
+def get_auth_client() -> AuthClient:
     """
     Функция создает экземпляр AuthenticationClient с уже настроенным http-клиентом.
 
     :return: Готовый к использованию объект AuthenticationClient.
     """
-    return AuthenticationClient(client=get_public_http_client())
+    return AuthClient(client=get_public_http_client())
 
 
 #-----------------------------------------------------------------------------------------------------------------------

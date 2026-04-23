@@ -10,14 +10,14 @@ class CreateFileRequestSchema(BaseModel):
     directory: str      # Название Директории сохранения
     upload_path: str    # Путь к файлу
 
-class File(BaseModel):
+class FileSchema(BaseModel):
     id: str
     filename: str
     directory: str
     url: str
 
 class CreateFileResponseSchema(BaseModel):
-    file: File
+    file: FileSchema
 
 
 #-----------------------------------------------------------------------------------------------------------------------

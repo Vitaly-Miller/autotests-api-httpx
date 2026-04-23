@@ -6,23 +6,22 @@ import httpx
 
 #=======================================================================================================================
 # 1. Проходим аутентификацию (обычный httpx)
-login_payload = {
+login_payload = {                                                # Данные зарегистрированного пользователя
     'email': 'user@example.com',
     'password': 'string'
 }
-# Выполняем httpx запрос
+# Выполняем обычный httpx запрос
 login_response = httpx.post('http://localhost:8000/api/v1/authentication/login', json=login_payload)
 
 #-------------------------------------------------------
-# 2. Инициализируем клиент с авторизацией (httpx.Client) 👈
+# 2. Инициализируем httpx.Client клиент-сессию с Base URL и headers-авторизацией 👈
 client = httpx.Client(
     base_url='http://localhost:8000/api/v1',
-    timeout=100,
     headers={'Authorization': f'Bearer {login_response.json()['token']['accessToken']}'}
 )
 
 # Выполняем client запрос с авторизацией
-get_user_me_response = client.get('/users/me')
+get_user_me_response = client.get(url='/users/me')                  # Просто добавили endpoint. Всё остальное из client
 
 #-----------------------------------------------------------------------------------------------------------------------
 # Output

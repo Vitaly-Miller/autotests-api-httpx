@@ -5,7 +5,7 @@ Files Client
 """
 from httpx import Response
 from clients.api_client import APIClient
-from clients.authentication.authentication_schema import AuthenticationUserSchema
+from clients.auth.auth_schema import AuthUserSchema
 from clients.files.files_schema import CreateFileRequestSchema
 from clients.users.private_http_builder import get_private_http_client
 
@@ -33,7 +33,7 @@ class FilesClient(APIClient):
         with open(request['upload_path'], 'rb') as f:
             return self.post(
                 url=self.ENDPOINT,
-                data=request,  # Request целиком -> Сервер получит лишнее поле file_path (✔️ничего страшного)
+                data=request,           # Request целиком -> Сервер получит лишнее поле file_path (✔️ничего страшного)
                 files={'upload_file': f})
 
     def delete_file_api(self, file_id: str) -> Response:
@@ -47,7 +47,7 @@ class FilesClient(APIClient):
 
 #-----------------------------------------------------------------------------------------------------------------------
 # Builder
-def get_files_client(user: AuthenticationUserSchema) -> FilesClient:
+def get_files_client(user: AuthUserSchema) -> FilesClient:
     """
     Функция создаёт экземпляр FilesClient с уже настроенным HTTP-клиентом.
 

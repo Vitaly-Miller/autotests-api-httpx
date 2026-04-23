@@ -4,7 +4,7 @@ Courses Client
 """
 from httpx import Response
 from clients.api_client import APIClient
-from clients.authentication.authentication_schema import AuthenticationUserSchema
+from clients.auth.auth_schema import AuthUserSchema
 from clients.courses.courses_schema import GetCoursesQuerySchema, CreateCourseRequestSchema, UpdateCourseRequestSchema
 from clients.users.private_http_builder import get_private_http_client
 
@@ -13,14 +13,14 @@ from clients.users.private_http_builder import get_private_http_client
 class CoursesClient(APIClient):
     ENDPOINT = '/courses'
 
-    def get_courses_api(self, query: GetCoursesQuerySchema) -> Response:
+    def get_courses_api(self, query_user_id: GetCoursesQuerySchema) -> Response:
         """
-        Метод для ПОЛУЧЕНИЯ СПИСКА курсов по User ID.
+        Метод для ПОЛУЧЕНИЯ СПИСКА курсов по User ID (?query).
 
-        :param query: User ID
+        :param query_user_id: Словарь с User ID
         :return: Ответ от сервера в виде объекта httpx.Response
         """
-        return self.get(url=self.ENDPOINT, params=query)  # NOQA
+        return self.get(url=self.ENDPOINT, params=query_user_id)  # NOQA
 
     def get_course_api(self, course_id: str) -> Response:
         """
@@ -34,7 +34,7 @@ class CoursesClient(APIClient):
     def create_course_api(self, request: CreateCourseRequestSchema) -> Response:
         """
         Метод для СОЗДАНИЯ курса.
-
+        :param request: Словарь с title, maxScore, minScore, description, estimatedTime, previewFileId, createdByUserId.
         :return: Ответ от сервера в виде объекта httpx.Response
         """
         return self.post(url=self.ENDPOINT, json=request)
@@ -61,7 +61,7 @@ class CoursesClient(APIClient):
 
 #-----------------------------------------------------------------------------------------------------------------------
 # Builder
-def get_courses_client(user: AuthenticationUserSchema) -> CoursesClient:
+def get_courses_client(user: AuthUserSchema) -> CoursesClient:
     """
     Функция создаёт экземпляр CoursesClient с уже настроенным HTTP-клиентом.
 

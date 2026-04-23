@@ -5,7 +5,7 @@
 """
 from httpx import Response
 from clients.api_client import APIClient
-from clients.authentication.authentication_schema import AuthenticationUserSchema
+from clients.auth.auth_schema import AuthUserSchema
 from clients.users.private_http_builder import get_private_http_client
 from clients.users.users_schema import UpdateUserRequestSchema
 
@@ -52,7 +52,7 @@ class PrivateUsersClient(APIClient):
 
 #-----------------------------------------------------------------------------------------------------------------------
 # Builder
-def get_private_users_client(user: AuthenticationUserSchema) -> PrivateUsersClient:
+def get_private_users_client(user: AuthUserSchema) -> PrivateUsersClient:
     """
     Функция создаёт экземпляр PrivateUsersClient с уже настроенным HTTP-клиентом.
 
