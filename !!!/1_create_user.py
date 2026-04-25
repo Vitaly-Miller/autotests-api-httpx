@@ -18,7 +18,7 @@ create_user_payload = {
 }
 
 create_user_response = httpx.post(        # 🟨POST запрос на создание нового пользователя
-    url=f'{BASE_URL}/users',          # URL (BASE_URL + endpoint)
+    url=f'{BASE_URL}/users',              # URL (BASE_URL + endpoint)
     json=create_user_payload              # Передаем create_user_payload c данными нового пользователя
 )
 

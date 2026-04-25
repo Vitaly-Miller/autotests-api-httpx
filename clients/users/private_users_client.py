@@ -20,7 +20,7 @@ class PrivateUsersClient(APIClient):
 
         :return: Ответ от сервера в виде объекта httpx.Response
         """
-        return self.get(url=self.ENDPOINT)
+        return self.get(url=f'{self.ENDPOINT}/me')
 
     def get_user_api(self, user_id: str) -> Response:
         """
@@ -35,8 +35,8 @@ class PrivateUsersClient(APIClient):
         """
         Метод для ЧАСТИЧНОГО ОБНОВЛЕНИЯ данных пользователя по User ID.
 
-        :param user_id: ID пользователя
-        :param request: Словарь с email, lastName, firstName, middleName.
+        :param user_id: User ID
+        :param request: Словарь с email, firstName, middleName, lastName.
         :return: Ответ от сервера в виде объекта httpx.Response
         """
         return self.patch(url=f'{self.ENDPOINT}/{user_id}', json=request)
@@ -45,7 +45,7 @@ class PrivateUsersClient(APIClient):
         """
         Метод для УДАЛЕНИЯ пользователя по User ID.
 
-        :param user_id: ID пользователя
+        :param user_id: User ID
         :return: Ответ от сервера в виде объекта httpx.Response
         """
         return self.delete(url=f'{self.ENDPOINT}/{user_id}')

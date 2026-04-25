@@ -30,10 +30,12 @@ class FilesClient(APIClient):
         :param request: Словарь с данными файла (CreateFileRequestDict)
         :return: Ответ от сервера в виде объекта httpx.Response
         """
-        with open(request['upload_path'], 'rb') as f:
+        with open(request.upload_path, 'rb') as f:
+        #with open(request['upload_path'], 'rb') as f:             # - ⚠️проверить
             return self.post(
                 url=self.ENDPOINT,
-                data=request,           # Request целиком -> Сервер получит лишнее поле file_path (✔️ничего страшного)
+                # data=request,                                    # - ⚠️проверить - Request целиком -> Сервер получит лишнее поле file_path (✔️ничего страшного)
+                data={'filename': request.filename, 'directory': request.directory},
                 files={'upload_file': f})
 
     def delete_file_api(self, file_id: str) -> Response:
@@ -43,7 +45,7 @@ class FilesClient(APIClient):
         :param file_id: File ID
         :return: Ответ от сервера в виде объекта httpx.Response
         """
-        return self.delete(url=f'{self.ENDPOINT}{file_id}')
+        return self.delete(url=f'{self.ENDPOINT}/{file_id}')
 
 #-----------------------------------------------------------------------------------------------------------------------
 # Builder

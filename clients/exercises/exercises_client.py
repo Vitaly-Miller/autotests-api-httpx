@@ -5,21 +5,23 @@ from httpx import Response
 from clients.api_client import APIClient
 from clients.exercises.exercises_schema import (
     CreateExerciseSchema,
-    UpdateExerciseSchema)
+    UpdateExerciseSchema,
+    GetExercisesQuerySchema
+)
 
 #=======================================================================================================================
 #------------------------------------------------------- Client --------------------------------------------------------
 class ExercisesClient(APIClient):
     ENDPOINT = '/exercises'
 
-    def get_exercises_api(self, course_id: str) -> Response:
+    def get_exercises_api(self, query_course_id: GetExercisesQuerySchema) -> Response:
         """
-        Метод получение списка заданий для определенного курса.
+        Метод получение списка заданий для определенного курса Course ID (?query).
 
-        :param course_id: Course ID (qwery)
+        :param query_course_id: Словарь с Course ID
         :return Ответ от сервера в виде объекта httpx.Response
         """
-        return self.get(url=self.ENDPOINT, params=course_id)  # NOQA
+        return self.get(url=self.ENDPOINT, params=query_course_id)  # NOQA
 
     def get_exercise_api(self, exercise_id: str) -> Response:
         """

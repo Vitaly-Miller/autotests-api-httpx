@@ -5,6 +5,9 @@ from pydantic import BaseModel, Field
 
 #=======================================================================================================================
 #-------------------------------------------------- Pydantic Schemas ---------------------------------------------------
+class GetExercisesQuerySchema(BaseModel):
+    course_id: str = Field(alias='courseId')
+
 class CreateExerciseSchema(BaseModel):
     title: str
     course_id: str = Field(alias='courseId')

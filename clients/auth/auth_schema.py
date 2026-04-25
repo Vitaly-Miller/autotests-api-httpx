@@ -5,35 +5,22 @@ Authentication Schema
 from pydantic import BaseModel, Field
 
 #=======================================================================================================================
-#-------------------------------------------------- Pydantic Schemas ---------------------------------------------------
-class LoginRequestSchema(BaseModel):                  # login_payload = {}
+#----------------------------------------------- REQUEST Pydantic Schemas ----------------------------------------------
+class LoginRequestSchema(BaseModel):
     """
     Описание структуры запроса Аутентификации.
+    login_payload = {}
     """
     email: str
     password: str
 
-class AuthUserSchema(BaseModel):                      # login_payload = {}
+class AuthUserSchema(BaseModel):
     """
     Описание структуры пользователя для аутентификации.
+    login_payload = {}
     """
     email: str
     password: str
-
-
-class TokenSchema(BaseModel):
-    """
-    Описание структуры Токена.
-    """
-    token_type: str = Field(alias='tokenType')
-    access_token: str = Field(alias='accessToken')
-    refresh_token: str = Field(alias='refreshToken')
-
-class LoginResponseSchema(BaseModel):
-    """
-    Описание схемы ответа Аутентификации.
-    """
-    token: TokenSchema
 
 class RefreshRequestSchema(BaseModel):
     """
@@ -41,4 +28,19 @@ class RefreshRequestSchema(BaseModel):
     """
     refresh_token: str = Field(alias='refreshToken')
 
-#-----------------------------------------------------------------------------------------------------------------------
+
+#---------------------------------------------- RESPONSE Pydantic Schemas ----------------------------------------------
+class TokenResponseSchema(BaseModel):
+    """
+    Описание схемы получения Токена.
+    """
+    token_type: str = Field(alias='tokenType')
+    access_token: str = Field(alias='accessToken')
+    refresh_token: str = Field(alias='refreshToken')
+
+class LoginResponseSchema(BaseModel):
+    """
+    Схемы ответа Аутентификации (login).
+    """
+    token: TokenResponseSchema
+#---------------------------------------------------
