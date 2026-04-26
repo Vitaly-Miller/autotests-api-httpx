@@ -52,10 +52,11 @@ class PrivateUsersClient(APIClient):
 
 
 #--------------------------------------------------- Client Builder ----------------------------------------------------
-def get_private_users_client(user: AuthUserSchema) -> PrivateUsersClient:
+def get_private_users_client(auth_data: AuthUserSchema) -> PrivateUsersClient:
     """
     Функция создаёт экземпляр PrivateUsersClient с уже настроенным HTTP-клиентом.
 
+    :param auth_data: Данные для аутентификации пользователя (Email, Password)
     :return: Готовый к использованию PrivateUsersClient.
     """
-    return PrivateUsersClient(client=get_private_http_client(user))
+    return PrivateUsersClient(client=get_private_http_client(auth_data))

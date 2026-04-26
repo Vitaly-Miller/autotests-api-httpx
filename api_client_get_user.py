@@ -27,12 +27,12 @@ user_id = create_user_response_data['user']['id']               # Вытаски
 
 #--------------------------------------------------- Get User ----------------------------------------------------------
 # Инициализация Pydantic Model
-user_auth = AuthUserSchema(
+auth_data = AuthUserSchema(
   email=create_user_payload.email,                              # Берем email из create_user_payload модели
   password=create_user_payload.password                         # Берем password из create_user_payload модели
 )
 # Запрос на аутентификацию пользователя
-private_users_client = get_private_users_client(user=user_auth) # Инициализация клиента через Private Client Builder
+private_users_client = get_private_users_client(auth_data=auth_data) # Инициализация клиента через Private Client Builder
 user_response = private_users_client.get_user_api(user_id)      # Выполняем 🟩GET запрос на получение данных пользователя
 
 
