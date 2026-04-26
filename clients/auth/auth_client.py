@@ -5,49 +5,49 @@ Authentication Client
 from httpx import Response
 from clients.api_client import APIClient
 from clients.auth.auth_schema import LoginRequestSchema, RefreshRequestSchema, LoginResponseSchema
-from clients.users.public_http_builder import get_public_http_client
+from clients.public_http_builder import get_public_http_client
 
 #=======================================================================================================================
 #------------------------------------------------------- Client --------------------------------------------------------
 class AuthClient(APIClient):
     ENDPOINT = '/authentication'
 
-    def login_api(self, request: LoginRequestSchema) -> Response:
+    def login_api(self, payload: LoginRequestSchema) -> Response:
         """
-        Метод выполняет АУТЕНТИФИКАЦИЮ пользователя.
+        Метод выполняет АУТЕНТИФИКАЦИЮ (login) пользователя.
 
-        :param request: Словарь с email и password (login_payload = {}).
+        :param payload: Словарь с Email и Password.
         :return Ответ от сервера в виде объекта httpx.Response
         """
-        return self.post(url=f'{self.ENDPOINT}/login', json=request)
+        return self.post(url=f'{self.ENDPOINT}/login', json=payload.model_dump(by_alias=True))
 
-    def refresh_api(self, request: RefreshRequestSchema) -> Response:
+    def refresh_api(self, payload: RefreshRequestSchema) -> Response:
         """
         Метод ОБНОВЛЯЕТ ТОКЕН авторизации.
 
-        :param request: Словарь с refreshToken.
+        :param payload: Словарь с refreshToken.
         :return: Ответ от сервера в виде объекта httpx.Response
         """
-        return self.post(url=f'{self.ENDPOINT}/refresh', json=request)
+        return self.post(url=f'{self.ENDPOINT}/refresh', json=payload.model_dump(by_alias=True))
 
 
-    def login(self, request: LoginRequestSchema) -> LoginResponseSchema:
+    def login(self, payload: LoginRequestSchema) -> LoginResponseSchema:
         """
-        Отправляет запрос на аутентификацию
+        Авторизует (логинит) зарегистрированного пользователя через готовый метод login_api()
 
-        :param request:
-        :return: Ответ авторизации в формате JSON
+        :param payload: Словарь с Email и Password
+        :return: Ответ авторизации в формате JSON для получения необходимых данных пользователя
         """
-        response = self.login_api(request)
-        return response.json()
+        response = self.login_api(payload) # обращение в методу login_api()
+        return response.json()             # тело ответа из которого будем вытаскивать необходимые данные (token, User ID ...)
 
-#-----------------------------------------------------------------------------------------------------------------------
-# Builder (Public client)
+
+#--------------------------------------------------- Client Builder ----------------------------------------------------
 def get_auth_client() -> AuthClient:
     """
-    Функция создает экземпляр AuthenticationClient с уже настроенным http-клиентом.
+    Функция создает экземпляр AuthClient с уже настроенным http-клиентом.
 
-    :return: Готовый к использованию объект AuthenticationClient.
+    :return: Готовый к использованию объект AuthenticationClient базовыми параметрами.
     """
     return AuthClient(client=get_public_http_client())
 

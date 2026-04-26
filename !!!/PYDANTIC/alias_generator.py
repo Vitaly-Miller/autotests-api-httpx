@@ -14,7 +14,7 @@ from pydantic.alias_generators import to_camel
 #--------------------------------------------------- Pydantic Schema ---------------------------------------------------
 class UserSchema(BaseModel):
     model_config = ConfigDict(
-        alias_generator=to_camel,          # ✅автоматический alias (🐍snake_case -> 🐫camelCase)
+        alias_generator=to_camel,          # ✅автоматический alias (🐍snake_case <--> 🐫camelCase)
         populate_by_name=True              # ✅позволяет передавать поля как в 🐍snake_case, так и в 🐫camelCase
     )
 

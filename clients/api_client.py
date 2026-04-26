@@ -5,6 +5,7 @@ from httpx import Client, Response, URL, QueryParams         # для аннот
 from httpx._types import RequestData, RequestFiles   # NOQA  # для аннотации типов
 from typing import Any                                       # для аннотации типов
 
+
 #=======================================================================================================================
 class APIClient:
     def __init__(self, client: Client):

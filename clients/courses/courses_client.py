@@ -5,15 +5,15 @@ Courses Client
 from httpx import Response
 from clients.api_client import APIClient
 from clients.auth.auth_schema import AuthUserSchema
-from clients.courses.courses_schema import GetCoursesQuerySchema, CreateCourseRequestSchema, UpdateCourseRequestSchema
-from clients.users.private_http_builder import get_private_http_client
+from clients.courses.courses_schema import GetCoursesRequestSchema, CreateCourseRequestSchema, UpdateCourseRequestSchema
+from clients.private_http_builder import get_private_http_client
 
 #=======================================================================================================================
 #----------------------------------------------------- Client ----------------------------------------------------------
 class CoursesClient(APIClient):
     ENDPOINT = '/courses'
 
-    def get_courses_api(self, query_user_id: GetCoursesQuerySchema) -> Response:
+    def get_courses_api(self, query_user_id: GetCoursesRequestSchema) -> Response:
         """
         Метод для ПОЛУЧЕНИЯ СПИСКА курсов по User ID (?query).
 
@@ -31,23 +31,24 @@ class CoursesClient(APIClient):
         """
         return self.get(url=f'{self.ENDPOINT}/{course_id}')
 
-    def create_course_api(self, request: CreateCourseRequestSchema) -> Response:
+    def create_course_api(self, payload: CreateCourseRequestSchema) -> Response:
         """
         Метод для СОЗДАНИЯ курса.
-        :param request: Словарь с title, maxScore, minScore, description, estimatedTime, previewFileId, createdByUserId.
+
+        :param payload: Словарь с title, maxScore, minScore, description, estimatedTime, previewFileId, createdByUserId.
         :return: Ответ от сервера в виде объекта httpx.Response
         """
-        return self.post(url=self.ENDPOINT, json=request)
+        return self.post(url=self.ENDPOINT, json=payload.model_dump(by_alias=True))
 
-    def update_course_api(self, course_id: str, request: UpdateCourseRequestSchema) -> Response:
+    def update_course_api(self, course_id: str, payload: UpdateCourseRequestSchema) -> Response:
         """
         Метод для ЧАСТИЧНОГО ОБНОВЛЕНИЯ курса по его ID.
 
         :param course_id: Course ID
-        :param request: Словарь с ...
+        :param payload: Словарь с данными, которые необходимо обновить
         :return: Ответ от сервера в виде объекта httpx.Response
         """
-        return self.patch(url=f'{self.ENDPOINT}/{course_id}', json=request)
+        return self.patch(url=f'{self.ENDPOINT}/{course_id}', json=payload.model_dump(by_alias=True))
 
     def delete_course_api(self, course_id: str) -> Response:
         """
@@ -59,8 +60,7 @@ class CoursesClient(APIClient):
         return self.delete(url=f'{self.ENDPOINT}/{course_id}')
 
 
-#-----------------------------------------------------------------------------------------------------------------------
-# Builder
+#--------------------------------------------------- Client Builder ----------------------------------------------------
 def get_courses_client(user: AuthUserSchema) -> CoursesClient:
     """
     Функция создаёт экземпляр CoursesClient с уже настроенным HTTP-клиентом.

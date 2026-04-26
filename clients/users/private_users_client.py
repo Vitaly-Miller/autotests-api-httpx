@@ -6,7 +6,7 @@
 from httpx import Response
 from clients.api_client import APIClient
 from clients.auth.auth_schema import AuthUserSchema
-from clients.users.private_http_builder import get_private_http_client
+from clients.private_http_builder import get_private_http_client
 from clients.users.users_schema import UpdateUserRequestSchema
 
 #=======================================================================================================================
@@ -31,15 +31,15 @@ class PrivateUsersClient(APIClient):
         """
         return self.get(url=f'{self.ENDPOINT}/{user_id}')
 
-    def update_user_api(self, user_id: str, request: UpdateUserRequestSchema) -> Response:
+    def update_user_api(self, user_id: str, payload: UpdateUserRequestSchema) -> Response:
         """
         Метод для ЧАСТИЧНОГО ОБНОВЛЕНИЯ данных пользователя по User ID.
 
         :param user_id: User ID
-        :param request: Словарь с email, firstName, middleName, lastName.
+        :param payload: Словарь с email, firstName, middleName, lastName.
         :return: Ответ от сервера в виде объекта httpx.Response
         """
-        return self.patch(url=f'{self.ENDPOINT}/{user_id}', json=request)
+        return self.patch(url=f'{self.ENDPOINT}/{user_id}', json=payload.model_dump(by_alias=True))
 
     def delete_user_api(self, user_id: str) -> Response:
         """
@@ -50,8 +50,8 @@ class PrivateUsersClient(APIClient):
         """
         return self.delete(url=f'{self.ENDPOINT}/{user_id}')
 
-#-----------------------------------------------------------------------------------------------------------------------
-# Builder
+
+#--------------------------------------------------- Client Builder ----------------------------------------------------
 def get_private_users_client(user: AuthUserSchema) -> PrivateUsersClient:
     """
     Функция создаёт экземпляр PrivateUsersClient с уже настроенным HTTP-клиентом.

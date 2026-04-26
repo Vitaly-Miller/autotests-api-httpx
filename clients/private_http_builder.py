@@ -1,0 +1,25 @@
+"""
+🔒Private http Builder
+(Для методов, требующих авторизации)
+"""
+from httpx import Client
+from clients.auth.auth_client import get_auth_client
+from clients.auth.auth_schema import LoginRequestSchema, AuthUserSchema
+
+#=======================================================================================================================
+#--------------------------------------------------- http Builder ------------------------------------------------------
+BASE_URL = 'http://localhost:8000/api/v1'
+
+def get_private_http_client(user_auth_data: AuthUserSchema) -> Client:
+    """
+    Функция создаёт экземпляр httpx.Client с аутентификацией пользователя.
+
+    :param user_auth_data: Объект AuthUserSchema с Email и Password пользователя.
+    :return: Готовый к использованию объект httpx.Client с установленным заголовком Authorization.
+    """
+    auth_client = get_auth_client()                                                 # Инициализируем AuthenticationClient для аутентификации
+    login_request = LoginRequestSchema(email=user_auth_data.email, password=user_auth_data.password)    # Инициализируем запрос на аутентификацию
+    login_response = auth_client.login(login_request)                               # Выполняем POST запрос и аутентифицируемся
+    token = login_response["token"]["accessToken"]                                  # Вытаскиваем токен из отела ответа
+    auth_headers = {'Authorization': f'Bearer {token}'}                             # Сформируем заголовок для аутентификации
+    return Client(base_url=BASE_URL, headers=auth_headers)

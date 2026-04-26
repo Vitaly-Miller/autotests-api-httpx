@@ -7,7 +7,7 @@ from httpx import Response
 from clients.api_client import APIClient
 from clients.auth.auth_schema import AuthUserSchema
 from clients.files.files_schema import CreateFileRequestSchema
-from clients.users.private_http_builder import get_private_http_client
+from clients.private_http_builder import get_private_http_client
 
 #=======================================================================================================================
 #----------------------------------------------------- Client ----------------------------------------------------------
@@ -23,19 +23,19 @@ class FilesClient(APIClient):
         """
         return self.get(url=f'/files/{file_id}')
 
-    def create_file_api(self, request: CreateFileRequestSchema) -> Response:
+    def create_file_api(self, payload: CreateFileRequestSchema) -> Response:
         """
         Метод для СОЗДАНИЯ (upload) файла через ✅with - контекстный менеджер (для закрытия после выполнения запроса)
 
-        :param request: Словарь с данными файла (CreateFileRequestDict)
+        :param payload: Словарь с данными файла (CreateFileRequestDict)
         :return: Ответ от сервера в виде объекта httpx.Response
         """
-        with open(request.upload_path, 'rb') as f:
+        with open(payload.upload_path, 'rb') as f:
         #with open(request['upload_path'], 'rb') as f:             # - ⚠️проверить
             return self.post(
                 url=self.ENDPOINT,
-                # data=request,                                    # - ⚠️проверить - Request целиком -> Сервер получит лишнее поле file_path (✔️ничего страшного)
-                data={'filename': request.filename, 'directory': request.directory},
+                # data=request,                                    # - ⚠️проверить - Request целиком -> Сервер получит лишние поля: 'filename' и 'directory' (✔️ничего страшного)
+                data={'filename': payload.filename, 'directory': payload.directory},
                 files={'upload_file': f})
 
     def delete_file_api(self, file_id: str) -> Response:
@@ -47,8 +47,9 @@ class FilesClient(APIClient):
         """
         return self.delete(url=f'{self.ENDPOINT}/{file_id}')
 
-#-----------------------------------------------------------------------------------------------------------------------
-# Builder
+
+
+#--------------------------------------------------- Client Builder ----------------------------------------------------
 def get_files_client(user: AuthUserSchema) -> FilesClient:
     """
     Функция создаёт экземпляр FilesClient с уже настроенным HTTP-клиентом.

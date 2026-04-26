@@ -5,14 +5,15 @@ Delete User http://localhost:8000/docs#/users/delete_user_view_api_v1_users__use
 import httpx
 import faker
 
+fake = faker.Faker()
 #=======================================================================================================================
 BASE_URL = 'http://localhost:8000/api/v1'
 
 #-----------------------------------------------------------------------------------------------------------------------
 # 1. [Pre-conditions] Create User
 create_user_payload = {
-  "email": faker.Faker().email(),                  # Генерируем email нового пользователя
-  "password": faker.Faker().password(),            # Генерируем password нового пользователя
+  "email": fake.email(),                  # Генерируем email нового пользователя
+  "password": fake.password(),            # Генерируем password нового пользователя
   "lastName": "string",
   "firstName": "string",
   "middleName": "string"
