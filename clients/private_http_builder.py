@@ -1,5 +1,5 @@
 """
-🔒Private http Builder
+🔒PRIVATE http Builder
 (Для методов, требующих авторизации)
 """
 from httpx import Client
@@ -7,7 +7,7 @@ from clients.auth.auth_client import get_auth_client
 from clients.auth.auth_schema import LoginRequestSchema, AuthUserSchema
 
 #=======================================================================================================================
-#--------------------------------------------------- http Builder ------------------------------------------------------
+#------------------------------------------------ http Builder (Private) -----------------------------------------------
 BASE_URL = 'http://localhost:8000/api/v1'
 
 def get_private_http_client(auth_data: AuthUserSchema) -> Client:

@@ -56,7 +56,7 @@ User password': {create_user_payload['password']}
 #-----------------------------------------------------------------------------------------------------------------------
 # 3. Относительный путь к файлу -> .parents[1] - на один уровень вверх относительно текущего файла с запросом
 file_path = Path(__file__).parents[1]/'testdata'/'my_files'/'my_image.png'
-
+#file_path = "testdata/my_files/my_image.png"                     # если пусковой файл в корне
 #-----------------------------------------------------------------------------------------------------------------------
 # 4. Create File (⚠️Через контекстный менеджер <with> - для закрытия после запроса)
 with open(file_path, 'rb') as f:                                  # open('путь к файлу', бинарный режим чтения) as <переменная>
@@ -68,7 +68,7 @@ with open(file_path, 'rb') as f:                                  # open('пут
     )
 
 
-create_file_response_data = create_file_response.json()
+create_file_response_data = create_file_response.json()           # Сохраняем ответ
 file_id = create_file_response_data['file']['id']                 # Вытаскиваем File ID из тела ответа по индексу []
 
 print(f"""

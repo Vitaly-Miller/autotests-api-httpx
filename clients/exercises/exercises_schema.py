@@ -7,14 +7,14 @@ from pydantic import BaseModel, Field
 #---------------------------------------------------- Get Exercises ----------------------------------------------------
 class GetExercisesRequestSchema(BaseModel):
     """
-    Схема для запроса списка заданий для определенного курса по Course ID (?query).
+    Схема запроса на получение списка заданий для определенного курса по Course ID (?query).
     """
     course_id: str = Field(alias='courseId')
 
 #--------------------------------------------------- Create Exercise ---------------------------------------------------
 class CreateExerciseRequestSchema(BaseModel):
     """
-    Схема для создания нового задания.
+    Схема запроса на создание нового задания.
     """
     title: str
     course_id: str = Field(alias='courseId')
@@ -27,7 +27,7 @@ class CreateExerciseRequestSchema(BaseModel):
 #--------------------------------------------------- Update Exercise ---------------------------------------------------
 class UpdateExerciseRequestSchema(BaseModel):
     """
-    Схема для частичного обновления задания.
+    Схема для запроса на частичное обновление задания.
     """
     title: str | None
     course_id: str | None = Field(alias='courseId')

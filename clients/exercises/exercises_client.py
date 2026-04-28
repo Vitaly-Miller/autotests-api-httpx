@@ -10,11 +10,10 @@ from clients.exercises.exercises_schema import (
     UpdateExerciseRequestSchema,
     GetExercisesRequestSchema
 )
-#=======================================================================================================================
-#------------------------------------------------------- Client --------------------------------------------------------
+#======================================================= Client ========================================================
 class ExercisesClient(APIClient):
     ENDPOINT = '/exercises'
-
+    #------------------------------------------------ Get Exercises ----------------------------------------------------
     def get_exercises_api(self, query_course_id: GetExercisesRequestSchema) -> Response:
         """
         Метод получения списка заданий для определенного курса Course ID (?query).
@@ -24,6 +23,7 @@ class ExercisesClient(APIClient):
         """
         return self.get(url=self.ENDPOINT, params=query_course_id)  # NOQA
 
+    #------------------------------------------------ Get Exercise -----------------------------------------------------
     def get_exercise_api(self, exercise_id: str) -> Response:
         """
         Метод получение информации о задании по Exercise ID.
@@ -33,6 +33,7 @@ class ExercisesClient(APIClient):
         """
         return self.get(url=f'{self.ENDPOINT}/{exercise_id}')
 
+    #---------------------------------------------- Create Exercise ----------------------------------------------------
     def create_exercise_api(self, json: CreateExerciseRequestSchema) -> Response:
         """
         Метод создания задания.
@@ -42,6 +43,7 @@ class ExercisesClient(APIClient):
         """
         return self.post(url=self.ENDPOINT, json=json.model_dump(by_alias=True))
 
+    #---------------------------------------------- Update Exercise ----------------------------------------------------
     def update_exercise_api(self, exercise_id: str, json: UpdateExerciseRequestSchema) -> Response:
         """
         Метод частичного обновления данных задания.
@@ -52,6 +54,7 @@ class ExercisesClient(APIClient):
         """
         return self.patch(url=f'{self.ENDPOINT}/{exercise_id}', json=json.model_dump(by_alias=True))
 
+    #---------------------------------------------- Delete Exercise ----------------------------------------------------
     def delete_exercise_api(self, exercise_id: str) -> Response:
         """
         Метод удаление задания.
@@ -62,11 +65,12 @@ class ExercisesClient(APIClient):
         return self.delete(url=f'{self.ENDPOINT}/{exercise_id}')
 
 
-#--------------------------------------------------- Client Builder ----------------------------------------------------
-def get_exercise_client(user: AuthUserSchema) -> ExercisesClient:
+#=================================================== Client Builder ====================================================
+def get_exercise_client(auth_data: AuthUserSchema) -> ExercisesClient:
     """
     Функция создаёт экземпляр ExercisesClient с уже настроенным HTTP-клиентом.
 
+    :param auth_data: Данные для аутентификации пользователя (Email, Password)
     :return: Готовый к использованию ExercisesClient.
     """
-    return ExercisesClient(client=get_private_http_client(user))
+    return ExercisesClient(client=get_private_http_client(auth_data))

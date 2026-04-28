@@ -2,9 +2,8 @@
 API Client
 """
 from httpx import Client, Response, URL, QueryParams         # для аннотации типов
-from httpx._types import RequestData, RequestFiles   # NOQA  # для аннотации типов
+from httpx._types import RequestData, RequestFiles   # NOQA  # для аннотации типов (работа с файлами)
 from typing import Any                                       # для аннотации типов
-
 
 #=======================================================================================================================
 class APIClient:

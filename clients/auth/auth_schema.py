@@ -7,16 +7,14 @@ from pydantic import BaseModel, Field
 #-------------------------------------------------------- Login --------------------------------------------------------
 class LoginRequestSchema(BaseModel):
     """
-    Описание структуры запроса Аутентификации.
-    login_payload = {}
+    Схема запроса на аутентификацию пользователя.
     """
     email: str
     password: str
 
 class AuthUserSchema(BaseModel):
     """
-    Описание структуры пользователя для аутентификации.
-    login_payload = {}
+    Схема запроса на Log in пользователя.
     """
     email: str
     password: str
@@ -24,7 +22,7 @@ class AuthUserSchema(BaseModel):
 #------------------------------------------------------- Refresh -------------------------------------------------------
 class RefreshRequestSchema(BaseModel):
     """
-    Описание структуры запроса для Обновления токена.
+    Схема запроса на обновления токена.
     """
     refresh_token: str = Field(alias='refreshToken')
 
@@ -33,7 +31,7 @@ class RefreshRequestSchema(BaseModel):
 #-------------------------------------------------------- Login --------------------------------------------------------
 class TokenSchema(BaseModel):
     """
-    Описание схемы получения Токена.
+    Схемы ответа при получении Токена.
     """
     token_type: str = Field(alias='tokenType')
     access_token: str = Field(alias='accessToken')
@@ -41,7 +39,7 @@ class TokenSchema(BaseModel):
 
 class LoginResponseSchema(BaseModel):
     """
-    Схемы ответа Аутентификации (login).
+    Схемы ответа при Аутентификации/Login.
     """
     token: TokenSchema
 #------------------------------------------------------- Refresh -------------------------------------------------------

@@ -1,14 +1,14 @@
 """
 Authentication Pydantic Schemas
 """
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, ConfigDict
+from pydantic.alias_generators import to_camel
 
 #=================================================== REQUEST schema ====================================================
 #---------------------------------------------------- Create User ------------------------------------------------------
 class CreateUserRequestSchema(BaseModel):
     """
-    Схема User для создания нового пользователя
-    (метод create_user_api)
+    Схема payload для запроса на создание нового пользователя
     """
     email: str
     password: str
@@ -19,8 +19,7 @@ class CreateUserRequestSchema(BaseModel):
 #---------------------------------------------------- Update User -------------------=----------------------------------
 class UpdateUserRequestSchema(BaseModel):
     """
-    Схема User для обновления данных пользователя
-    (метод update_user_api)
+    Схема payload для запроса на обновления данных пользователя
     """
     email: str | None
     last_name: str | None = Field(alias='lastName')
@@ -29,39 +28,39 @@ class UpdateUserRequestSchema(BaseModel):
 
 
 #================================================== RESPONSE schema ====================================================
+#-------------------------------------------------------- BASE ---------------------------------------------------------
+class UserSchema(BaseModel):
+    """
+    Базовая схема ключа "user": {}
+    """
+    id: str
+    email: str
+    last_name: str = Field(alias='lastName')
+    first_name: str = Field(alias='firstName')
+    middle_name: str = Field(alias='middleName')
+
+class BaseUserResponseSchema(BaseModel):
+    """
+    Базовая схема API ответа при работе с пользователями.
+    """
+    user: UserSchema
+
 #---------------------------------------------------- Create User ------------------------------------------------------
-class UserResponseSchema(BaseModel):
+class CreateUserResponseSchema(BaseUserResponseSchema):
     """
-    Схема ключа user из ответа Create User
+    Схема ответа при создании нового пользователя
+    """  # Наследуется
+    pass
+#------------------------------------------------------ Get User -------------------------------------------------------
+class GetUserResponseSchema(BaseUserResponseSchema):
     """
-    id: str
-    email: str
-    last_name: str = Field(alias='lastName')
-    first_name: str = Field(alias='firstName')
-    middle_name: str = Field(alias='middleName')
-
-class CreateUserResponseSchema(BaseModel):
+    Схема ответа при получении данных пользователя
+    """  # Наследуется
+    pass
+#----------------------------------------------------- Get User Me -----------------------------------------------------
+class GetUserMeResponseSchema(BaseUserResponseSchema):
     """
-    Схема ответа Create User
-    (метод create_user)
-    """
-    user: UserResponseSchema
-
-#---------------------------------------------------- Get User Me ------------------------------------------------------
-class UserMeResponseSchema(BaseModel):
-    """
-    Схема ключа user из ответа Get User Mе
-    """
-    id: str
-    email: str
-    last_name: str = Field(alias='lastName')
-    first_name: str = Field(alias='firstName')
-    middle_name: str = Field(alias='middleName')
-
-class GetUserMeResponseSchema(BaseModel):
-    """
-    Схема ответа Get User Me
-    (метод get_user_me_api)
-    """
-    user: UserMeResponseSchema
+    Схема ответа при получении данных текущего пользователя
+    """  # Наследуется
+    pass
 #-----------------------------------------------------------------------------------------------------------------------

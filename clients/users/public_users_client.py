@@ -8,11 +8,11 @@ from clients.api_client import APIClient
 from clients.public_http_builder import get_public_http_client
 from clients.users.users_schema import CreateUserRequestSchema, CreateUserResponseSchema
 
-#=======================================================================================================================
-#------------------------------------------------------- Client --------------------------------------------------------
+#======================================================= Client ========================================================
 class PublicUsersClient(APIClient):
     ENDPOINT = '/users'
 
+    #------------------------------------------------- Create User  ----------------------------------------------------
     def create_user_api(self, payload: CreateUserRequestSchema) -> Response:
         """
         Метод для СОЗДАНИЯ нового пользователя.
@@ -24,16 +24,16 @@ class PublicUsersClient(APIClient):
 
     def create_user(self, payload: CreateUserRequestSchema) -> CreateUserResponseSchema:
         """
-        Метод получения JSON-ответа о созданном пользователе.
+        Метод получения JSON-объекта с данными созданного пользователя.
 
-        :param payload: Словарь с данными для создания пользователя.
-        :return: Ответ от сервера о созданном пользователе в виде JSON объекта
+        :param payload: Словарь с данными для создания нового пользователя.
+        :return: JSON-объект с данными о созданном пользователе
         """
         response = self.create_user_api(payload)
         return response.json()
 
 
-#----------------------------------------------- Client Builder (Public) -----------------------------------------------
+#=============================================== Client Builder (Public) ===============================================
 def get_public_users_client() -> PublicUsersClient:
     """
     Функция создаёт экземпляр PrivateUsersClient с уже настроенным HTTP-клиентом.
