@@ -1,8 +1,7 @@
 """
-Pydantic __
+Pydantic ______
 """
 import uuid
-
 from pydantic import BaseModel, Field
 
 #=======================================================================================================================
@@ -52,8 +51,8 @@ class FileSchema(BaseModel):
 class UserSchema(BaseModel):
     id: str
     email: str
-    first_name: str = Field(alias='firstName')
     last_name: str = Field(alias='lastName')
+    first_name: str = Field(alias='firstName')
     middle_name: str = Field(alias='middleName')
 
 
@@ -75,13 +74,13 @@ course_model = CourseSchema(
     createdByUser=UserSchema(
         id='User_id',
         email='user@example.com',
-        firstName='John',
         lastName='Connor',
+        firstName='John',
         middleName='Middle'
     )
 )
 
-# Инициализация модели (с помощью словаря {dict})
+# Dict
 course_dict = {
     'id': '222',
     'title': 'Playwright',
@@ -104,8 +103,9 @@ course_dict = {
     }
 }
 
-# Инициализация модели (с помощью JSON)
-course_json = {
+# JSON
+course_json = """
+{
     "id": "333",
     "title": "Playwright",
     "maxScore": 100,
@@ -126,25 +126,27 @@ course_json = {
         "middleName": "Middle"
     }
 }
+"""
+
 
 #-----------------------------------------------------------------------------------------------------------------------
 # Output
 print('---------------------')
-print(f'Model                 {course_model}')  # id='111' title='Playwright' max_score=100 min_score=10 description='POM' preview_file=FileSchema(id='File_id', filename='file.txt', directory='files', url='https://example.com/file.txt') estimated_time='1 week' created_by_user=UserSchema(id='User_id', email='user@example.com', first_name='John', last_name='Connor', middle_name='Middle')
-print(f'Dict                  {course_dict}')   # {'id': '222', 'title': 'Playwright', 'maxScore': 100, 'minScore': 10, 'description': 'POM', 'previewFile': {'id': 'File_id', 'filename': 'file.txt', 'directory': 'files', 'url': 'https://example.com/file.txt'}, 'estimatedTime': '1 week', 'createdByUser': {'id': 'User_id', 'email': 'user@example.com', 'firstName': 'John', 'lastName': 'Connor', 'middleName': 'Middle'}}
-print(f'JSON                  {course_json}')   # {'id': '333', 'title': 'Playwright', 'maxScore': 100, 'minScore': 10, 'description': 'POM', 'previewFile': {'id': 'File_id', 'filename': 'file.txt', 'directory': 'files', 'url': 'https://example.com/file.txt'}, 'estimatedTime': '1 week', 'createdByUser': {'id': 'User_id', 'email': 'user@example.com', 'firstName': 'John', 'lastName': 'Connor', 'middleName': 'Middle'}}
+print(f'Model | {course_model}') # id='111' title='Playwright' max_score=100 min_score=10 description='POM' preview_file=FileSchema(id='File_id', filename='file.txt', directory='files', url='https://example.com/file.txt') estimated_time='1 week' created_by_user=UserSchema(id='User_id', email='user@example.com', first_name='John', last_name='Connor', middle_name='Middle')
+print(f'Dict  | {course_dict}')  # {'id': '222', 'title': 'Playwright', 'maxScore': 100, 'minScore': 10, 'description': 'POM', 'previewFile': {'id': 'File_id', 'filename': 'file.txt', 'directory': 'files', 'url': 'https://example.com/file.txt'}, 'estimatedTime': '1 week', 'createdByUser': {'id': 'User_id', 'email': 'user@example.com', 'firstName': 'John', 'lastName': 'Connor', 'middleName': 'Middle'}}
+print(f'JSON  | {course_json}')  # {"id": "333", "title": "Playwright", "maxScore": 100, "minScore": 10, "description": "POM", "previewFile": {"id": "File_id", "filename": "file.txt", "directory": "files", "url": "https://example.com/file.txt"}, "estimatedTime": "1 week", "createdByUser": {"id": "User_id", "email": "user@example.com", "firstName": "John", "lastName": "Connor", "middleName": "Middle"}}
 print('---------------------')
 
 # Serializing
 print('Serializing:')
 course_model_json = course_model.model_dump()                         # Model -> {dict} (🐍snake_case)
-print(f'Model -> Dict         {course_model_json}')
+print(f'Model -> Dict         | {course_model_json}')
 
 course_model_json = course_model.model_dump(by_alias=True)            # Model -> {dict} (🐫camelCase)
-print(f'Model -> Dict (alias) {course_model_json}')
+print(f'Model -> Dict (alias) | {course_model_json}')
 
 course_model_json = course_model.model_dump_json()                    # Model -> JSON   (🐍snake_case)
-print(f'Model -> JSON         {course_model_json}')
+print(f'Model -> JSON         | {course_model_json}')
 
 course_model_json_alias = course_model.model_dump_json(by_alias=True) # Model -> JSON   (🐫camelCase)
-print(f'Model -> JSON (alias) {course_model_json_alias}')
+print(f'Model -> JSON (alias) | {course_model_json_alias}')
