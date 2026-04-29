@@ -21,6 +21,17 @@ def create_user_api(self, create_user_payload: CreateUserRequestSchema) -> Respo
 
 ------------------------------------------------------------------------------------------------------------------------
 5. 
+BASE Schema c config
+
+from pydantic import BaseModel, ConfigDict
+from pydantic.alias_generators import to_camel
+
+class BaseAPIModel(BaseModel):
+    model_config = ConfigDict(
+        alias_generator=to_camel,          # ✅автоматический alias (🐍snake_case <--> 🐫camelCase)
+        validate_by_name=True,             # new - v2.11+ Позволяет передавать данные (🐍snake_case <--> 🐫camelCase)
+        validate_by_alias=True             # new - v2.11+ Позволяет передавать данные (🐍snake_case <--> 🐫camelCase)
+    )
 
 ------------------------------------------------------------------------------------------------------------------------
 6. 

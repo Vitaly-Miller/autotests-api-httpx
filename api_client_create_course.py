@@ -53,11 +53,11 @@ file_id = create_file_response['file']['id']              # Вытаскивае
 #-------------------------------------------------- 3. Create Course  --------------------------------------------------
 # Инициализация Pydantic Model
 create_course_payload = CreateCourseRequestSchema(        # Словарь с данными о курсе
-  title='My Picture',
-  maxScore=0,
-  minScore=0,
-  description='Facade',
-  estimatedTime='Estimated Time',
+  title='Python',
+  maxScore=100,
+  minScore=10,
+  description='API Course',
+  estimatedTime='2 weeks',
   previewFileId=file_id,
   createdByUserId=user_id
 )

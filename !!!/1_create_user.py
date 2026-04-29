@@ -2,10 +2,9 @@
 Create User http://localhost:8000/docs#/users/create_user_view_api_v1_users_post
 🟨POST
 """
-import json
-
 import httpx
-import faker
+import faker                               # Для генерации данных
+import json                                # ✨Только для красивого вывода JSON
 
 fake = faker.Faker()
 #=======================================================================================================================
