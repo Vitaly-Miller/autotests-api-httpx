@@ -20,17 +20,21 @@ class PublicUsersClient(APIClient):
         :param payload: Словарь с данными для создания пользователя.
         :return: Ответ от сервера в виде объекта httpx.Response
         """
-        return self.post(url=self.ENDPOINT, json=payload.model_dump(by_alias=True))  # 👈Сериализация
+        return self.post(
+            url=self.ENDPOINT,
+            json=payload.model_dump(by_alias=True))  # # + ⚠ сериализация Model -> Dict (т.к. payload - Pydantic-модель)
 
     def create_user(self, payload: CreateUserRequestSchema) -> CreateUserResponseSchema:
         """
-        Метод получения JSON-объекта с данными созданного пользователя.
+        Метод получения валидированной Pydantic-model с данными созданного пользователя.
 
         :param payload: Словарь с данными для создания нового пользователя.
+        :return: Валидированная Pydantic-модель с данными о созданном пользователе
         :return: JSON-объект с данными о созданном пользователе
         """
         response = self.create_user_api(payload)
-        return response.json()
+        return CreateUserResponseSchema.model_validate_json(response.text)  # ⚠ <- Валидируем ответ (любой) -> Model
+        return response.json()                                              # ⚠ <- Может вызвать ошибку, если придет не JSON
 
 
 #=============================================== Client Builder (Public) ===============================================

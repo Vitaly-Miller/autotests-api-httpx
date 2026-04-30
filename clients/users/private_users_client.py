@@ -33,13 +33,16 @@ class PrivateUsersClient(APIClient):
 
     def get_user(self, user_id: str) -> GetUserResponseSchema:
         """
-         Метод получения JSON-объекта с данными конкретного пользователя.
+        Метод получения Pydantic-модели/JSON-объекта с данными конкретного пользователя.
 
         :param user_id: User ID
+        :return: Pydantic-модель с данными пользователя по User ID
         :return: JSON-объект с данными пользователя по User ID
         """
         response = self.get_user_api(user_id)
-        return response.json()
+        return GetUserResponseSchema.model_validate_json(response.text)  # ⚠ <- Валидируем ответ (любой) -> Model
+        return response.json()                                           # ⚠ <- Может вызвать ошибку, если придет не JSON
+
 
     #------------------------------------------------- Update User -----------------------------------------------------
     def update_user_api(self, user_id: str, payload: UpdateUserRequestSchema) -> Response:
@@ -50,7 +53,10 @@ class PrivateUsersClient(APIClient):
         :param payload: Словарь с email, firstName, middleName, lastName.
         :return: Ответ от сервера в виде объекта httpx.Response
         """
-        return self.patch(url=f'{self.ENDPOINT}/{user_id}', json=payload.model_dump(by_alias=True))
+        return self.patch(
+            url=f'{self.ENDPOINT}/{user_id}',
+            json=payload.model_dump(by_alias=True)    # + ⚠ сериализация Model -> Dict (т.к. payload - Pydantic-модель)
+        )
 
     #------------------------------------------------- Delete User -----------------------------------------------------
     def delete_user_api(self, user_id: str) -> Response:

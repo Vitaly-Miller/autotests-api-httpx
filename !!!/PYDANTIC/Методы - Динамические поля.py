@@ -54,7 +54,7 @@ class UserSchema(BaseModel):
     #username: str = f'{first_name} {last_name}'      # ❌
 
     # Pydantic Метод
-    @computed_field                                   # 👈✅ (Общее динамическое поле <username> ПОПАДАЕТ в схему + БЕЗ скобок ())
+    @computed_field(alias='userName')                # 👈✅ Общее динамическое поле <username> ПОПАДАЕТ в схему + БЕЗ скобок ()
     #@property                                        # БЕЗ скобок () - Работает и без свойства @property при @computed_field. Но могут быть ошибки в других стеках.
     def username(self) -> str:
         return f'{self.first_name} {self.last_name}'

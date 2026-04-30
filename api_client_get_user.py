@@ -10,13 +10,18 @@ from tools.data_generator import generate_email, generate_password
 #===================================================== PRECONDITION ====================================================
 #---------------------------------------------------- 1. Create User ---------------------------------------------------
 # Инициализация Pydantic Model
-create_user_payload = CreateUserRequestSchema(    # Словарь с данными о новом пользователе
+create_user_payload = CreateUserRequestSchema(    # Инициализация данных через схему
   email=generate_email(),                         # Генерируем email
   password=generate_password(),                   # Генерируем password
   lastName="string",
   firstName="string",
   middleName="string"
 )
+
+# ❗️РЕШИТЬ
+# Model -> Dict
+#create_user_payload_dict = create_user_payload.model_dump(by_alias=True)  # ⚠️тогда нужно переделывать json=payload в методах
+
 
 # Инициализация клиента (public)
 public_users_client = get_public_users_client()
@@ -25,14 +30,15 @@ public_users_client = get_public_users_client()
 create_user_response = public_users_client.create_user(payload=create_user_payload)
 
 # User ID
-user_id = create_user_response['user']['id']      # Вытаскиваем User ID из ответа
-
+#user_id = create_user_response['user']['id']   # ⚠ Обращение по [] индексу  - Для JSON-ответа без валидацию
+user_id = create_user_response.user.id          # ⚠ Обращение через .атрибут - Для валидированной Pydantic-Model
 #------------------------------------------------------ 2. Get User ----------------------------------------------------
 # Инициализация Pydantic Model
-auth_data = AuthUserSchema(                       # Словарь с данными для аутентификации
-  email=create_user_payload.email,                # Берем email из create_user_payload модели
-  password=create_user_payload.password           # Берем password из create_user_payload модели
+auth_data = AuthUserSchema(                     # Валидация данных через схему
+  email=create_user_payload.email,              # Берем email из create_user_payload модели
+  password=create_user_payload.password         # Берем password из create_user_payload модели
 )
+
 # Инициализация клиента (private)
 users_client = get_private_users_client(auth_data=auth_data)
 

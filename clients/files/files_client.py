@@ -15,7 +15,7 @@ class FilesClient(APIClient):
     #------------------------------------------------ Get File ---------------------------------------------------------
     def get_file_api(self, file_id: str) -> Response:
         """
-        Метод для ПОЛУЧЕНИЯ (download) файла по File ID.
+        Метод для ПОЛУЧЕНИЯ (Download) файла по File ID.
 
         :param file_id: File ID
         :return: Ответ от сервера в виде объекта httpx.Response
@@ -25,30 +25,30 @@ class FilesClient(APIClient):
     #----------------------------------------------- Create File -------------------------------------------------------
     def create_file_api(self, payload: CreateFileRequestSchema) -> Response:
         """
-        Метод для СОЗДАНИЯ (upload) файла через ✅with - контекстный менеджер (для закрытия после выполнения запроса)
+        Метод для СОЗДАНИЯ (Upload) файла через ✅with - контекстный менеджер (для закрытия после выполнения запроса)
 
         :param payload: Словарь с данными о файле.
         :return: Ответ от сервера в виде объекта httpx.Response
         """
         with open(payload.upload_path, 'rb') as f:
-        #with open(request['upload_path'], 'rb') as f:             # - ⚠️проверить
             return self.post(
                 url=self.ENDPOINT,
-                # data=request,                                    # - ⚠️проверить - Request целиком -> Сервер получит лишние поля: 'filename' и 'directory' (✔️ничего страшного)
+                # data=payload,            # - ⚠️проверить - payload целиком -> Сервер получит лишние поля: 'filename' и 'directory' (✔️ничего страшного)
                 data={'filename': payload.filename, 'directory': payload.directory},
                 files={'upload_file': f}
             )
 
     def create_file(self, payload: CreateFileRequestSchema) -> CreateFileResponseSchema:
         """
-        Метод получения JSON-объекта с данными о созданном файле.
+        Метод получения валидированной Pydantic-model с данными о созданном файле.
 
         :param payload: Словарь с данными о файле.
+        :return: Валидированная Pydantic-модель с данными об авторизации пользователя
         :return: JSON-объекта с данными о созданном файле
         """
         response = self.create_file_api(payload)
-        #return CreateFileResponseSchema(**response.json())        # - ⚠️Проверить
-        return response.json()
+        return CreateFileResponseSchema.model_validate_json(response.text)  # ⚠ <- Валидируем ответ (любой) -> Model
+        return response.json()                                              # ⚠ <- Может вызвать ошибку, если придет не JSON
 
     #------------------------------------------------ Delete File ------------------------------------------------------
     def delete_file_api(self, file_id: str) -> Response:

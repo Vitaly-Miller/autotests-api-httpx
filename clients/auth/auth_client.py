@@ -18,17 +18,22 @@ class AuthClient(APIClient):
         :param payload: Словарь с Email и Password.
         :return Ответ от сервера в виде объекта httpx.Response
         """
-        return self.post(url=f'{self.ENDPOINT}/login', json=payload.model_dump(by_alias=True))
+        return self.post(
+            url=f'{self.ENDPOINT}/login',
+            json=payload.model_dump(by_alias=True)    # + ⚠ сериализация Model -> Dict (т.к. payload - Pydantic-модель)
+        )
 
     def login(self, payload: LoginRequestSchema) -> LoginResponseSchema:
         """
-        Метод получения JSON-объекта с данными об авторизации пользователя.
+        Метод получения валидированной Pydantic-модели с данными об авторизации пользователя.
 
         :param payload: Словарь с Email и Password
-        :return: JSON-объект с данными об авторизации пользователя из которого будем вытаскивать необходимые данные (token, User ID ...)
+        :return: Валидированная Pydantic-модель с данными об авторизации пользователя
+        :return: JSON-объект с данными об авторизации пользователя
         """
         response = self.login_api(payload)
-        return response.json()
+        return LoginResponseSchema.model_validate_json(response.text)  # ⚠ <- Валидируем ответ (любой) -> Model
+        return response.json()                                         # ⚠ <- Может вызвать ошибку, если придет не JSON
 
     #-------------------------------------------------- Refresh --------------------------------------------------------
     def refresh_api(self, payload: RefreshRequestSchema) -> Response:
@@ -38,8 +43,10 @@ class AuthClient(APIClient):
         :param payload: Словарь с refreshToken.
         :return: Ответ от сервера в виде объекта httpx.Response
         """
-        return self.post(url=f'{self.ENDPOINT}/refresh', json=payload.model_dump(by_alias=True))
-
+        return self.post(
+            url=f'{self.ENDPOINT}/refresh',
+            json=payload.model_dump(by_alias=True)    # + ⚠ сериализация Model -> Dict (т.к. payload - Pydantic-модель)
+        )
 
 #=================================================== Client Builder ====================================================
 def get_auth_client() -> AuthClient:

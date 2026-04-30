@@ -34,14 +34,17 @@ class ExercisesClient(APIClient):
         return self.get(url=f'{self.ENDPOINT}/{exercise_id}')
 
     #---------------------------------------------- Create Exercise ----------------------------------------------------
-    def create_exercise_api(self, json: CreateExerciseRequestSchema) -> Response:
+    def create_exercise_api(self, payload: CreateExerciseRequestSchema) -> Response:
         """
         Метод создания задания.
 
-        :param json: Данные в формате JSON
+        :param payload: Данные о задании
         :return: Ответ от сервера в виде объекта httpx.Response
         """
-        return self.post(url=self.ENDPOINT, json=json.model_dump(by_alias=True))
+        return self.post(
+            url=self.ENDPOINT,
+            json=payload.model_dump(by_alias=True)    # + ⚠ сериализация Model -> Dict (т.к. payload - Pydantic-модель)
+        )
 
     #---------------------------------------------- Update Exercise ----------------------------------------------------
     def update_exercise_api(self, exercise_id: str, json: UpdateExerciseRequestSchema) -> Response:
@@ -52,7 +55,9 @@ class ExercisesClient(APIClient):
         :param json: Обновляемые данные в формате JSON
         :return: Ответ от сервера в виде объекта httpx.Response
         """
-        return self.patch(url=f'{self.ENDPOINT}/{exercise_id}', json=json.model_dump(by_alias=True))
+        return self.patch(
+            url=f'{self.ENDPOINT}/{exercise_id}',
+            json=json.model_dump(by_alias=True))      # + ⚠ сериализация Model -> Dict (т.к. payload - Pydantic-модель)
 
     #---------------------------------------------- Delete Exercise ----------------------------------------------------
     def delete_exercise_api(self, exercise_id: str) -> Response:

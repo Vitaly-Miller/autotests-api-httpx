@@ -1,5 +1,7 @@
 """
 Pydantic встроенные типы данных
+HttpUrl  -  (⚠️БЕСПОЛЕЗНАЯ ШТУКА) - Проверяет только http или https
+EmailStr -  (✅НОРМ)              - Проверяет email полностью
 """
 
 from pydantic import BaseModel, HttpUrl, EmailStr

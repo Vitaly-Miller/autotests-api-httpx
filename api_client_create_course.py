@@ -27,19 +27,19 @@ users_client = get_public_users_client()
 create_user_response = users_client.create_user(payload=create_user_payload)
 
 # User ID
-user_id = create_user_response['user']['id']              # Вытаскиваем USER ID из ответа
-
+# user_id = create_user_response['user']['id']          # ⚠ Обращение по [] индексу  - Для JSON-ответа без валидацию
+user_id = create_user_response.user.id                  # ⚠ Обращение через .атрибут - Для валидированной Pydantic-Model
 #--------------------------------------------------- 2. Create File  ---------------------------------------------------
 # Инициализация Pydantic Model
-auth_data = AuthUserSchema(                               # Словарь с данными для аутентификации
-  email=create_user_payload.email,                        # Берем email из create_user_payload модели
-  password=create_user_payload.password                   # Берем password из create_user_payload модели
+auth_data = AuthUserSchema(                             # Словарь с данными для аутентификации
+  email=create_user_payload.email,                      # Берем email из create_user_payload модели
+  password=create_user_payload.password                 # Берем password из create_user_payload модели
 )
 # Инициализация клиента (private)
 files_client = get_files_client(auth_data=auth_data)
 
 # Инициализация Pydantic Model
-create_file_payload = CreateFileRequestSchema(            # Словарь с данными о файле
+create_file_payload = CreateFileRequestSchema(          # Словарь с данными о файле
   filename="my_image.png",
   directory="Uploaded",
   upload_path="testdata/my_files/my_image.png"
@@ -48,11 +48,11 @@ create_file_payload = CreateFileRequestSchema(            # Словарь с д
 create_file_response = files_client.create_file(payload=create_file_payload) # Сохраняем ответ
 
 # File ID
-file_id = create_file_response['file']['id']              # Вытаскиваем File ID из ответа
-
+# file_id = create_file_response['file']['id']          # ⚠ Обращение по [] индексу  - Для JSON-ответа без валидацию
+file_id = create_file_response.file.id                  # ⚠ Обращение через .атрибут - Для валидированной Pydantic-Model
 #-------------------------------------------------- 3. Create Course  --------------------------------------------------
 # Инициализация Pydantic Model
-create_course_payload = CreateCourseRequestSchema(        # Словарь с данными о курсе
+create_course_payload = CreateCourseRequestSchema(      # Словарь с данными о курсе
   title='Python',
   maxScore=100,
   minScore=10,
@@ -69,8 +69,8 @@ courses_client = get_courses_client(auth_data=auth_data)
 create_course_response = courses_client.create_course(payload=create_course_payload)
 
 # Course ID
-course_id = create_course_response['course']['id']        # Вытаскиваем Course ID из ответа
-
+#course_id = create_course_response['course']['id']     # ⚠ Обращение по [] индексу  - Для JSON-ответа без валидацию
+course_id = create_course_response.course.id            # ⚠ Обращение через .атрибут - Для валидированной Pydantic-Model
 
 #------------------------------------------------------ Output ---------------------------------------------------------
 print(f'  User ID: {user_id}')
