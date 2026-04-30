@@ -22,6 +22,7 @@ create_user_payload = CreateUserRequestSchema(             # Словарь с �
   firstName="string",
   middleName="string"
 )
+
 # Инициализация клиента (public)
 users_client = get_public_users_client()
 
@@ -38,6 +39,7 @@ auth_data = AuthUserSchema(                             # Словарь с да
   email=create_user_payload.email,                      # Берем email из create_user_payload модели
   password=create_user_payload.password                 # Берем password из create_user_payload модели
 )
+
 # Инициализация клиента (private)
 files_client = get_files_client(auth_data=auth_data)
 

@@ -36,6 +36,7 @@ auth_data = AuthUserSchema(                             # Словарь с да
   email=create_user_payload.email,                      # Берем email из create_user_payload модели
   password=create_user_payload.password                 # Берем password из create_user_payload модели
 )
+
 # Инициализация клиента (private)
 files_client = get_files_client(auth_data=auth_data)
 
@@ -45,6 +46,7 @@ create_file_payload = CreateFileRequestSchema(          # Словарь с да
   directory="Uploaded",
   upload_path="testdata/my_files/my_image.png"
 )
+
 # 🟨POST запрос на создание файла методом create_file
 create_file_response = files_client.create_file(payload=create_file_payload) # Сохраняем ответ
 
