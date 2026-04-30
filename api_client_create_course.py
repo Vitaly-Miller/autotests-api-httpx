@@ -29,6 +29,7 @@ create_user_response = users_client.create_user(payload=create_user_payload)
 # User ID
 # user_id = create_user_response['user']['id']          # ⚠ Обращение по [] индексу  - Для JSON-ответа без валидацию
 user_id = create_user_response.user.id                  # ⚠ Обращение через .атрибут - Для валидированной Pydantic-Model
+
 #--------------------------------------------------- 2. Create File  ---------------------------------------------------
 # Инициализация Pydantic Model
 auth_data = AuthUserSchema(                             # Словарь с данными для аутентификации

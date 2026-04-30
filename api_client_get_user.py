@@ -32,6 +32,7 @@ create_user_response = public_users_client.create_user(payload=create_user_paylo
 # User ID
 #user_id = create_user_response['user']['id']   # ⚠ Обращение по [] индексу  - Для JSON-ответа без валидацию
 user_id = create_user_response.user.id          # ⚠ Обращение через .атрибут - Для валидированной Pydantic-Model
+
 #------------------------------------------------------ 2. Get User ----------------------------------------------------
 # Инициализация Pydantic Model
 auth_data = AuthUserSchema(                     # Валидация данных через схему

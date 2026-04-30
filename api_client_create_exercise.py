@@ -31,6 +31,7 @@ create_user_response = users_client.create_user(payload=create_user_payload)
 # User ID
 # user_id = create_user_response['user']['id']          # ⚠ Обращение по [] индексу  - Для JSON-ответа без валидацию
 user_id = create_user_response.user.id                  # ⚠ Обращение через .атрибут - Для валидированной Pydantic-Model
+
 #--------------------------------------------------- 2. Create File  ---------------------------------------------------
 # Инициализация Pydantic Model
 auth_data = AuthUserSchema(                             # Словарь с данными для аутентификации
@@ -75,9 +76,7 @@ create_course_response = courses_client.create_course(payload=create_course_payl
 #course_id = create_course_response['course']['id']     # ⚠ Обращение по [] индексу  - Для JSON-ответа без валидацию
 course_id = create_course_response.course.id            # ⚠ Обращение через .атрибут - Для валидированной Pydantic-Model
 
-
-
-#-------------------------------------------------- 4. Create Exercise  --------------------------------------------------
+#-------------------------------------------------- 4. Create Exercise  ------------------------------------------------
 create_exercise_payload = CreateExerciseRequestSchema(
   title='Exercise 1',
   courseId=course_id,
