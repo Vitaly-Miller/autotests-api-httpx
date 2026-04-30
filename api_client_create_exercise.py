@@ -95,6 +95,7 @@ create_exercise_response = exercise_client.create_exercise(payload=create_exerci
 
 exercise_id = create_exercise_response.exercise.id       # Вытаскиваем Exercise ID через .атрибут т.к. это Pydantic Model
 
+
 #------------------------------------------------------ Output ---------------------------------------------------------
 print(f'    User ID: {user_id}')
 print(f'    File ID: {file_id}')
