@@ -43,7 +43,24 @@ class UpdateExerciseRequestSchema(BaseModel):
 
 
 #--------------------------------------------------- Create Exercise ---------------------------------------------------
+class ExerciseSchema(BaseModel):
+    """
+    Схема ключа "exercise": {}
+    """
+    id: str
+    title: str
+    course_id: str = Field(alias='courseId')
+    max_score: int = Field(alias='maxScore')
+    min_score: int = Field(alias='minScore')
+    order_index: int = Field(alias='orderIndex')
+    description: str
+    estimated_time: str = Field(alias='estimatedTime')
 
+class CreateExerciseResponseSchema(BaseModel):
+    """
+    Схема ответа на создание нового задания.
+    """
+    exercise: ExerciseSchema
 
 #--------------------------------------------------- Update Exercise ---------------------------------------------------
 

@@ -8,7 +8,7 @@ from clients.auth.auth_schema import AuthUserSchema
 from clients.exercises.exercises_schema import (
     CreateExerciseRequestSchema,
     UpdateExerciseRequestSchema,
-    GetExercisesRequestSchema
+    GetExercisesRequestSchema, CreateExerciseResponseSchema
 )
 #======================================================= Client ========================================================
 class ExercisesClient(APIClient):
@@ -45,6 +45,16 @@ class ExercisesClient(APIClient):
             url=self.ENDPOINT,
             json=payload.model_dump(by_alias=True)    # + ⚠ сериализация Model -> Dict (т.к. payload - Pydantic-модель)
         )
+
+    def create_exercise(self, payload) -> CreateExerciseResponseSchema:
+        """
+        Метод получения валидированной Pydantic-модели с данными о созданном задании.
+
+        :param payload: Модель с данными
+        :return: Валидированная Pydantic-модель с данными  о созданном задании
+        """
+        response = self.create_exercise_api(payload)
+        return CreateExerciseResponseSchema.model_validate_json(response.text)
 
     #---------------------------------------------- Update Exercise ----------------------------------------------------
     def update_exercise_api(self, exercise_id: str, json: UpdateExerciseRequestSchema) -> Response:

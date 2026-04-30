@@ -1,9 +1,11 @@
 """
-API Client Create Course
+API Client Create Exercise
 """
 from clients.auth.auth_schema import AuthUserSchema
 from clients.courses.courses_client import get_courses_client
 from clients.courses.courses_schema import CreateCourseRequestSchema
+from clients.exercises.exercises_client import get_exercise_client
+from clients.exercises.exercises_schema import CreateExerciseRequestSchema
 from clients.files.files_client import get_files_client
 from clients.files.files_schema import CreateFileRequestSchema
 from clients.users.public_users_client import get_public_users_client
@@ -73,8 +75,30 @@ create_course_response = courses_client.create_course(payload=create_course_payl
 #course_id = create_course_response['course']['id']     # ⚠ Обращение по [] индексу  - Для JSON-ответа без валидацию
 course_id = create_course_response.course.id            # ⚠ Обращение через .атрибут - Для валидированной Pydantic-Model
 
+
+
+#-------------------------------------------------- 4. Create Exercise  --------------------------------------------------
+create_exercise_payload = CreateExerciseRequestSchema(
+  title='Exercise 1',
+  courseId=course_id,
+  maxScore=5,
+  minScore=1,
+  orderIndex=0,
+  description='Find a bug',
+  estimatedTime='5 min',
+)
+
+# Инициализация клиента (private)
+exercise_client = get_exercise_client(auth_data=auth_data)
+
+# 🟨POST запрос на создание задания методом create_exercise
+create_exercise_response = exercise_client.create_exercise(payload=create_exercise_payload)
+
+exercise_id = create_exercise_response.exercise.id       # Вытаскиваем Exercise ID через .атрибут т.к. это Pydantic Model
+
 #------------------------------------------------------ Output ---------------------------------------------------------
-print(f'  User ID: {user_id}')
-print(f'  File ID: {file_id}')
-print(f'Course ID: {course_id}')
+print(f'    User ID: {user_id}')
+print(f'    File ID: {file_id}')
+print(f'  Course ID: {course_id}')
+print(f'Exercise ID: {exercise_id}')
 #-----------------------------------------------------------------------------------------------------------------------

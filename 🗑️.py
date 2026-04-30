@@ -32,7 +32,7 @@ class BaseAPIModel(BaseModel):
         validate_by_name=True,             # new - v2.11+ Позволяет передавать данные (🐍snake_case <--> 🐫camelCase)
         validate_by_alias=True             # new - v2.11+ Позволяет передавать данные (🐍snake_case <--> 🐫camelCase)
     )
-
+   + перевезти модели из CamelCase -> snake_case
 ------------------------------------------------------------------------------------------------------------------------
 6. Пересмотреть структуру проекта Схемы в Shemas, Клиенты в Clients ...
 

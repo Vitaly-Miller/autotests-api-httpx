@@ -27,7 +27,7 @@ class AuthClient(APIClient):
         """
         Метод получения валидированной Pydantic-модели с данными об авторизации пользователя.
 
-        :param payload: Словарь с Email и Password
+        :param payload: Модель с данными: Email и Password
         :return: Валидированная Pydantic-модель с данными об авторизации пользователя
         :return: JSON-объект с данными об авторизации пользователя
         """
