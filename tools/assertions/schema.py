@@ -13,7 +13,8 @@ def validation_json_schema(instance: Any, schema: dict) -> None:
     Функция валидации JSON-схемы.
 
     :param instance: Данные для валидации
-    :param schema: JSON-схема для валидации
+    :param schema: ОжидаемаяJSON-схема
+    :raise: jsonschema.ValidationError, если instance не соответствует schema
     """
     try:
         jsonschema.validate(
@@ -25,4 +26,5 @@ def validation_json_schema(instance: Any, schema: dict) -> None:
         print('✅Данные соответствуют схеме')
     except jsonschema.ValidationError as e:                     # Сохранить полное описание ошибки валидации в переменной <e>
         print(f'❌Ошибка JSON-Schema валидации: {e.message}')   # Вывод краткого описания ошибки (только текст без кода)
+        raise e
 #-----------------------------------------------------------------------------------------------------------------------
