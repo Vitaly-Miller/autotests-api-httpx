@@ -1,7 +1,7 @@
 """
 Authentication Pydantic Schemas
 """
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, EmailStr
 
 #=================================================== REQUEST schema ====================================================
 #---------------------------------------------------- Create User ------------------------------------------------------
@@ -33,7 +33,7 @@ class UserSchema(BaseModel):
     Базовая схема ключа "user": {}
     """
     id: str
-    email: str
+    email: EmailStr
     last_name: str = Field(alias='lastName')
     first_name: str = Field(alias='firstName')
     middle_name: str = Field(alias='middleName')

@@ -1,7 +1,7 @@
 """
 JSON Schema Validation (NOT Pydantic)
 """
-from jsonschema import validate, ValidationError
+import jsonschema
 
 #=======================================================================================================================
 # JSON Schema
@@ -23,10 +23,15 @@ valid_data = {
 
 # Валидация
 try:
-    validate(instance=valid_data, schema=schema)      # <instance> - данные, <schema> - схема
-    print('Данные соответствуют схеме.')              # Данные соответствуют схеме
-except ValidationError as e:                          # Сохранить полное описание ошибки валидации в переменной <e>
-    print(f'Ошибка валидации: {e.message}')           # Вывод краткого описания ошибки (только текст без кода)
+    jsonschema.validate(
+        instance=valid_data,                          # Данные для валидации
+        schema=schema,                                # JSON-схема
+        format_checker=jsonschema.FormatChecker()     # Валидация форматов (⚠️НЕ ЗАБУДЬ! - в схеме ответа email: EmailStr)
+    )
+    print('✅Данные соответствуют схеме.')
+except jsonschema.ValidationError as e:
+    print(f'❌Ошибка JSON-Schema валидации: {e.message}')   # ✅Данные соответствуют схеме.
+
 
 #----------------------------------------------- ❌Invalid data (type) -------------------------------------------------
 # Dict или JSON
@@ -37,10 +42,14 @@ invalid_data_1 = {
 
 # Валидация
 try:
-    validate(instance=invalid_data_1, schema=schema)
-    print('Данные соответствуют схеме.')
-except ValidationError as e:
-    print(f'Ошибка валидации: {e.message}')           # Ошибка валидации: '30' is not of type 'number'
+    jsonschema.validate(
+        instance=invalid_data_1,
+        schema=schema,
+        format_checker=jsonschema.FormatChecker()
+    )
+    print('✅Данные соответствуют схеме.')
+except jsonschema.ValidationError as e:
+    print(f'❌Ошибка валидации: {e.message}')           # Ошибка валидации: '30' is not of type 'number'
 
 
 #---------------------------------------------- ❌Invalid data (required) ----------------------------------------------
@@ -52,8 +61,12 @@ invalid_data_2 = {
 
 # Валидация
 try:
-    validate(instance=invalid_data_2, schema=schema)
-    print('Данные соответствуют схеме.')
-except ValidationError as e:
-    print(f'Ошибка валидации: {e.message}')           # Ошибка валидации: 'name' is a required property
+    jsonschema.validate(
+        instance=invalid_data_2,
+        schema=schema,
+        format_checker=jsonschema.FormatChecker()
+    )
+    print('✅Данные соответствуют схеме.')
+except jsonschema.ValidationError as e:
+    print(f'❌Ошибка валидации: {e.message}')           # Ошибка валидации: 'name' is a required property
 #-----------------------------------------------------------------------------------------------------------------------
