@@ -11,11 +11,11 @@ from tools.data_generator import generate_email, generate_password
 #---------------------------------------------------- 1. Create User ---------------------------------------------------
 # Инициализация Pydantic Model
 create_user_payload = CreateUserRequestSchema(    # Инициализация данных через схему
-  email=generate_email(),                         # Генерируем email
-  password=generate_password(),                   # Генерируем password
-  lastName="string",
-  firstName="string",
-  middleName="string"
+    email=generate_email(),                         # Генерируем email
+    password=generate_password(),                   # Генерируем password
+    lastName="string",
+    firstName="string",
+    middleName="string"
 )
 
 # ❗️РЕШИТЬ
@@ -36,8 +36,8 @@ user_id = create_user_response.user.id          # ⚠ Обращение чер�
 #------------------------------------------------------ 2. Get User ----------------------------------------------------
 # Инициализация Pydantic Model
 auth_data = AuthUserSchema(                     # Валидация данных через схему
-  email=create_user_payload.email,              # Берем email из create_user_payload модели
-  password=create_user_payload.password         # Берем password из create_user_payload модели
+    email=create_user_payload.email,            # Берем email из create_user_payload модели
+    password=create_user_payload.password       # Берем password из create_user_payload модели
 )
 
 # Инициализация клиента (private)

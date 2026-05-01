@@ -13,12 +13,12 @@ from tools.data_generator import generate_email, generate_password
 #=======================================================================================================================
 #---------------------------------------------------- 1. Create User ---------------------------------------------------
 # Инициализация Pydantic Model
-create_user_payload = CreateUserRequestSchema(             # Словарь с данными о новом пользователе
-  email=generate_email(),                                  # Генерируем email
-  password=generate_password(),                            # Генерируем password
-  lastName="string",
-  firstName="string",
-  middleName="string"
+create_user_payload = CreateUserRequestSchema(          # Модель с данными о новом пользователе
+    email=generate_email(),                             # Генерируем email
+    password=generate_password(),                       # Генерируем password
+    lastName="string",
+    firstName="string",
+    middleName="string"
 )
 # Инициализация клиента (public)
 users_client = get_public_users_client()
@@ -32,19 +32,19 @@ user_id = create_user_response.user.id                  # ⚠ Обращение
 
 #--------------------------------------------------- 2. Create File  ---------------------------------------------------
 # Инициализация Pydantic Model
-auth_data = AuthUserSchema(                             # Словарь с данными для аутентификации
-  email=create_user_payload.email,                      # Берем email из create_user_payload модели
-  password=create_user_payload.password                 # Берем password из create_user_payload модели
+auth_data = AuthUserSchema(                             # Модель с данными для аутентификации
+    email=create_user_payload.email,                    # Берем email из create_user_payload модели
+    password=create_user_payload.password               # Берем password из create_user_payload модели
 )
 
 # Инициализация клиента (private)
 files_client = get_files_client(auth_data=auth_data)
 
 # Инициализация Pydantic Model
-create_file_payload = CreateFileRequestSchema(          # Словарь с данными о файле
-  filename="my_image.png",
-  directory="Uploaded",
-  upload_path="testdata/my_files/my_image.png"
+create_file_payload = CreateFileRequestSchema(          # Модель с данными о файле
+    filename="my_image.png",
+    directory="Uploaded",
+    upload_path="testdata/my_files/my_image.png"
 )
 
 # 🟨POST запрос на создание файла методом create_file
@@ -56,14 +56,14 @@ file_id = create_file_response.file.id                  # ⚠ Обращение
 
 #-------------------------------------------------- 3. Create Course  --------------------------------------------------
 # Инициализация Pydantic Model
-create_course_payload = CreateCourseRequestSchema(      # Словарь с данными о курсе
-  title='Python',
-  maxScore=100,
-  minScore=10,
-  description='API Course',
-  estimatedTime='2 weeks',
-  previewFileId=file_id,
-  createdByUserId=user_id
+create_course_payload = CreateCourseRequestSchema(      # Модель с данными о курсе
+    title='Python',
+    maxScore=100,
+    minScore=10,
+    description='API Course',
+    estimatedTime='2 weeks',
+    previewFileId=file_id,
+    createdByUserId=user_id
 )
 
 # Инициализация клиента (private)

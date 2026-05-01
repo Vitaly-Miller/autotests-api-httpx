@@ -2,3 +2,4 @@ pydantic
 pydantic[email]
 httpx
 Faker
+jsonschema
