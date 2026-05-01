@@ -1,5 +1,6 @@
 """
 Валидация JSON Schema - create_user_response.json()
+Validate JSON Schema - create_user_response.json()
 """
 
 
@@ -10,7 +11,7 @@ from tools.data_generator import generate_email, generate_password
 
 
 #=======================================================================================================================
-#-------------------------------------------------- 1. Create User -----------------------------------------------------
+#----------------------------------------------- 1. Create User (API-метод) --------------------------------------------
 # Инициализация Pydantic Model
 create_user_payload = CreateUserRequestSchema(               # Модель с данными о новом пользователе
     email=generate_email(),                                  # Генерируем email
@@ -41,7 +42,7 @@ validation_json_schema(
 
 
 
-#============================================ ❌Invalid JSON-data (email) ==============================================
+#======================================== ❌Invalid JSON (invalid email format) ========================================
 create_user_response_json['user']['email'] = 'hello'    # Меняем в ответе email на невалидный (⚠️НЕ ЗАБУДЬ! - в схеме ответа email: EmailStr)
 
 #------------------------------------------------ Валидация JSON (invalid)  --------------------------------------------
