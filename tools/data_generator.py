@@ -5,7 +5,15 @@ from faker import Faker
 
 #=======================================================================================================================
 class Fake:
+    """
+    Класс для генерации случайных тестовых данных с использованием библиотеки Faker
+    """
     def __init__(self, faker: Faker):
+        """
+        Инициализация
+
+        :param faker: Экземпляр класса Faker(), который будет использоваться для генерации данных.
+        """
         self.faker = faker
 
     #-------------------------------------------------------------------------------------------------------------------
@@ -40,9 +48,9 @@ class Fake:
         """
         Генерация email
 
-        :return: example@example.com
+        :return: example@email.com
         """
-        return self.faker.email()
+        return self.faker.email(domain='email.com')
 
     #-------------------------------------------------------------------------------------------------------------------
     def password(self) -> str:
@@ -86,7 +94,8 @@ class Fake:
     def estimated_time(self, minimum: int = 2, maximum: int = 9) -> str:
         """
         Генерация оценочного времени в неделях. Default = [2-9]
-
+        :param minimum: Начало диапазона (Default = 2)
+        :param maximum: Конец диапазона (Default = 9)
         :return: [2-9] weeks
         """
         quantity = self.faker.random_int(minimum, maximum)
@@ -95,67 +104,24 @@ class Fake:
     #-------------------------------------------------------------------------------------------------------------------
     def max_core(self) -> int:
         """
-        Генерация Max Score
+        Генерация максимального бала в диапазоне [50-100]
 
-        :return: [50-100]
+        :return: Максимальный бал [50-100]
         """
         return self.faker.random_int(50, 100)
 
     #-------------------------------------------------------------------------------------------------------------------
     def min_score(self) -> int:
         """
-        Генерация Min Score
+        Генерация минимального бала в диапазоне [1-30]
 
-        :return: [1-30]
+        :return: Минимальный бал [1-30]
         """
         return self.faker.random_int(1, 30)
 
-
-# Экземпляр класса
-fake = Fake(faker=Faker())
-
-
-print(fake.first_name())
-print(fake.middle_name())
-print(fake.last_name())
-print(fake.email())
-print(fake.password())
-print(fake.user_id())
-print(fake.uuid4())
-print(fake.text())
-print(fake.text(max_nb_chars=500))
-print(fake.estimated_time())
-print(fake.max_core())
-print(fake.min_score())
-
+#-----------------------------------------------------------------------------------------------------------------------
+# Инициализация экземпляра класса (для import)
+fake = Fake(faker=Faker())                     # en_US - Default
+fake_ru = Fake(faker=Faker(locale='ru_RU'))    # ru_RU
 
 #=======================================================================================================================
-# Инициализация (Экземпляр класса)
-fake = Faker()
-
-#------------------------------------------------- User Credentials  ---------------------------------------------------
-# User email
-def generate_email() -> str:
-    return fake.email()
-
-# User password
-def generate_password() -> str:
-    return fake.password()
-
-#===================================================== faker Examples ========================================================
-print(f'Full Name            |  {fake.name()}')
-print(f'Free email           |  {fake.free_email()}')
-print(f'Company email        |  {fake.company_email()}')
-# Цифры
-print(f'Digits  (0 to 9)     |  {fake.random_digit()}')
-print(f'Digits  (100 to 999) |  {fake.random_int(min=100, max=999)}')
-print(f'Numeric ID (4-dig)   |  {fake.pyint()}')
-# Токены
-print(f'sha256               |  {fake.sha256()}')   # 9d383ef1c2b1b90990b1571f89a3c808afce0d56f5815a0394ec625fdd6908cf
-print(f'md5                  |  {fake.md5()}')      # 1a31f9244b06f85b51c66fd21c38d6c7
-print(f'UUID                 |  {fake.uuid4()}')    # cad77163-f85d-4b96-b807-27670ffc9c29
-# Строки
-print(f'Текст               |   {fake.text()}')     # Such drop give top generation across. American democratic similar student Mr always. Heart business same itself talk set. Push threat amount wish picture peace lay. Certainly modern should could.
-print(f'Буквы                |  {fake.lexify(text='Id-??????')}')     # Id-aDhLqx
-print(f'Цифры                |  {fake.numerify(text='Id-######')}')   # Id-786444
-print(f'Буквы + Цифры        |  {fake.bothify(text='Id-???###')}')    # Id-DgO817

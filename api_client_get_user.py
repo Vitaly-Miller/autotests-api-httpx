@@ -5,17 +5,17 @@ from clients.auth.auth_schema import AuthUserSchema
 from clients.users.private_users_client import get_private_users_client
 from clients.users.public_users_client import get_public_users_client
 from clients.users.users_schema import CreateUserRequestSchema
-from tools.data_generator import generate_email, generate_password
+from tools.data_generator import fake
 
 #===================================================== PRECONDITION ====================================================
 #---------------------------------------------------- 1. Create User ---------------------------------------------------
 # Инициализация Pydantic Model
 create_user_payload = CreateUserRequestSchema(    # Инициализация данных через схему
-    email=generate_email(),                         # Генерируем email
-    password=generate_password(),                   # Генерируем password
-    lastName="string",
-    firstName="string",
-    middleName="string"
+    email=fake.email(),
+    password=fake.password(),
+    lastName=fake.last_name(),
+    firstName=fake.first_name(),
+    middleName=fake.middle_name()
 )
 
 # ❗️РЕШИТЬ

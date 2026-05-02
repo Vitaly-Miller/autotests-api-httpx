@@ -7,18 +7,17 @@ Validate JSON Schema - create_user_response.json()
 from clients.users.public_users_client import get_public_users_client
 from clients.users.users_schema import CreateUserRequestSchema, CreateUserResponseSchema
 from tools.assertions.schema import validation_json_schema
-from tools.data_generator import generate_email, generate_password
-
+from tools.data_generator import fake
 
 #=======================================================================================================================
 #----------------------------------------------- 1. Create User (API-метод) --------------------------------------------
 # Инициализация Pydantic Model
 create_user_payload = CreateUserRequestSchema(               # Модель с данными о новом пользователе
-    email=generate_email(),                                  # Генерируем email
-    password=generate_password(),                            # Генерируем password
-    lastName="string",
-    firstName="string",
-    middleName="string"
+    email=fake.email(),
+    password=fake.password(),
+    lastName=fake.last_name(),
+    firstName=fake.first_name(),
+    middleName=fake.middle_name()
 )
 # Инициализация клиента (public)
 users_client = get_public_users_client()
