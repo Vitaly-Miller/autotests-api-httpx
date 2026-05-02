@@ -19,7 +19,7 @@ from uuid import uuid4
 import secrets
 from faker import Faker
 
-fake = Faker()   # 👈 генератор данных
+fake = Faker()
 
 #==================================================== Schema ===========================================================
 class UserSchema(BaseModel):

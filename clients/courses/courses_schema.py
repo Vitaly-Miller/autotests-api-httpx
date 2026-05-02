@@ -1,22 +1,26 @@
 """
-Courses Pydantic Schemas
+Courses Pydantic Schema
 """
 from pydantic import BaseModel, Field
 from clients.files.files_schema import FileSchema
 from clients.users.users_schema import UserSchema
 
-#=================================================== REQUEST schema ====================================================
+#================================================== ⬆︎REQUEST Schema ===================================================
 #----------------------------------------------------- Get Courses -----------------------------------------------------
 class GetCoursesRequestSchema(BaseModel):
     """
-    Схема запроса получение списка курсов по User ID (?qwery).
+    Схема запроса получение списка курсов по User ID (?qwery)
+
+    .
     """
     user_id: str = Field(alias='userId')
 
 #---------------------------------------------------- Create Course ----------------------------------------------------
 class CreateCourseRequestSchema(BaseModel):
     """
-    Схема запроса на создание нового курса.
+    Схема запроса на создание нового курса
+
+    .
     """
     title: str
     max_score: int = Field(alias='maxScore')
@@ -29,7 +33,9 @@ class CreateCourseRequestSchema(BaseModel):
 #---------------------------------------------------- Update Course ----------------------------------------------------
 class UpdateCourseRequestSchema(BaseModel):
     """
-    Схема запроса на частичное обновление курса.
+    Схема запроса на частичное обновление курса
+
+    .
     """
     title: str | None
     max_score: int | None = Field(alias='maxScore')
@@ -38,7 +44,7 @@ class UpdateCourseRequestSchema(BaseModel):
     estimated_time: str | None = Field(alias='estimatedTime')
 
 
-#================================================== RESPONSE schema ====================================================
+#================================================= ⬆︎RESPONSE Schema ===================================================
 #---------------------------------------------------- Get Courses ------------------------------------------------------
 
 
@@ -46,18 +52,24 @@ class UpdateCourseRequestSchema(BaseModel):
 class PreviewFileSchema(FileSchema):
     """
     Схема ключа "previewFile": {}
-    """  # Наследуется
+
+    Наследуется: FileSchema
+    """
     pass
 
 class CreatedByUserSchema(UserSchema):
     """
     Схема ключа "createdByUser": {}
-    """  # Наследуется
+
+    Наследуется: UserSchema
+    """
     pass
 
 class CourseSchema(BaseModel):
     """
     Схема ключа "course": {}
+
+    .
     """
     id: str
     title: str
@@ -70,7 +82,9 @@ class CourseSchema(BaseModel):
 
 class CreateCourseResponseSchema(BaseModel):
     """
-    Схема ответа на создание нового курса.
+    Схема ответа на создание нового курса
+
+    .
     """
     course: CourseSchema
 

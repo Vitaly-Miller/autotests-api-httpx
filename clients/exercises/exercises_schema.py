@@ -1,20 +1,24 @@
 """
-Exercises Pydantic Schemas
+Exercises Pydantic Schema
 """
 from pydantic import BaseModel, Field
 
-#=================================================== REQUEST schema ====================================================
+#================================================== ⬆︎REQUEST Schema ===================================================
 #---------------------------------------------------- Get Exercises ----------------------------------------------------
 class GetExercisesRequestSchema(BaseModel):
     """
-    Схема запроса на получение списка заданий для определенного курса по Course ID (?query).
+    Схема запроса на получение списка заданий для определенного курса по Course ID (?query)
+
+    .
     """
     course_id: str = Field(alias='courseId')
 
 #--------------------------------------------------- Create Exercise ---------------------------------------------------
 class CreateExerciseRequestSchema(BaseModel):
     """
-    Схема запроса на создание нового задания.
+    Схема запроса на создание нового задания
+
+    .
     """
     title: str
     course_id: str = Field(alias='courseId')
@@ -27,7 +31,9 @@ class CreateExerciseRequestSchema(BaseModel):
 #--------------------------------------------------- Update Exercise ---------------------------------------------------
 class UpdateExerciseRequestSchema(BaseModel):
     """
-    Схема для запроса на частичное обновление задания.
+    Схема для запроса на частичное обновление задания
+
+    .
     """
     title: str | None
     course_id: str | None = Field(alias='courseId')
@@ -38,7 +44,7 @@ class UpdateExerciseRequestSchema(BaseModel):
     estimated_time: str | None = Field(alias='estimatedTime')
 
 
-#=================================================== RESPONSE schema ===================================================
+#================================================== ⬇︎RESPONSE Schema ==================================================
 #---------------------------------------------------- Get Exercises ----------------------------------------------------
 
 
@@ -46,6 +52,8 @@ class UpdateExerciseRequestSchema(BaseModel):
 class ExerciseSchema(BaseModel):
     """
     Схема ключа "exercise": {}
+
+    .
     """
     id: str
     title: str
@@ -58,7 +66,9 @@ class ExerciseSchema(BaseModel):
 
 class CreateExerciseResponseSchema(BaseModel):
     """
-    Схема ответа на создание нового задания.
+    Схема ответа на создание нового задания
+
+    .
     """
     exercise: ExerciseSchema
 

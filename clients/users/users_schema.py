@@ -1,13 +1,15 @@
 """
-Authentication Pydantic Schemas
+Authentication Pydantic Schema
 """
 from pydantic import BaseModel, Field, EmailStr
 
-#=================================================== REQUEST schema ====================================================
-#---------------------------------------------------- Create User ------------------------------------------------------
+#================================================== ⬆︎REQUEST Schema ===================================================
+#----------------------------------------------------- Create User -----------------------------------------------------
 class CreateUserRequestSchema(BaseModel):
     """
     Схема payload для запроса на создание нового пользователя
+
+    .
     """
     email: str
     password: str
@@ -15,10 +17,12 @@ class CreateUserRequestSchema(BaseModel):
     first_name: str = Field(alias='firstName')
     middle_name: str = Field(alias='middleName')
 
-#---------------------------------------------------- Update User -------------------=----------------------------------
+#----------------------------------------------------- Update User -------------------=---------------------------------
 class UpdateUserRequestSchema(BaseModel):
     """
     Схема payload для запроса на обновления данных пользователя
+
+    .
     """
     email: str | None
     last_name: str | None = Field(alias='lastName')
@@ -26,11 +30,13 @@ class UpdateUserRequestSchema(BaseModel):
     middle_name: str | None = Field(alias='middleName')
 
 
-#================================================== RESPONSE schema ====================================================
+#================================================= ⬇︎RESPONSE Schema ===================================================
 #-------------------------------------------------------- BASE ---------------------------------------------------------
 class UserSchema(BaseModel):
     """
     Базовая схема ключа "user": {}
+
+    .
     """
     id: str
     email: EmailStr
@@ -40,7 +46,9 @@ class UserSchema(BaseModel):
 
 class BaseUserResponseSchema(BaseModel):
     """
-    Базовая схема API ответа при работе с пользователями.
+    Базовая схема API ответа при работе с пользователями
+
+    .
     """
     user: UserSchema
 
@@ -48,18 +56,25 @@ class BaseUserResponseSchema(BaseModel):
 class CreateUserResponseSchema(BaseUserResponseSchema):
     """
     Схема ответа при создании нового пользователя
-    """  # Наследуется
+
+    Наследуется: BaseUserResponseSchema
+    """
     pass
 #------------------------------------------------------ Get User -------------------------------------------------------
 class GetUserResponseSchema(BaseUserResponseSchema):
     """
     Схема ответа при получении данных пользователя по User ID
-    """  # Наследуется
+
+
+    Наследуется: BaseUserResponseSchema
+    """
     pass
 #----------------------------------------------------- Get User Me -----------------------------------------------------
 class GetUserMeResponseSchema(BaseUserResponseSchema):
     """
     Схема ответа при получении данных текущего пользователя
-    """  # Наследуется
+
+    Наследуется: BaseUserResponseSchema
+    """
     pass
 #-----------------------------------------------------------------------------------------------------------------------

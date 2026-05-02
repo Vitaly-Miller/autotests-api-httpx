@@ -2,25 +2,24 @@
 Assertions
 """
 from typing import Any
-
 import jsonschema
-from jsonschema.validators import Draft202012Validator  # для валидации форматов (email...)
+
 
 #=======================================================================================================================
 #------------------------------------------------ Validate JSON Schema -------------------------------------------------
 def validation_json_schema(instance: Any, schema: dict) -> None:
     """
-    Функция валидации JSON-схемы.
+    Валидация JSON-схемы.
 
     :param instance: Данные для валидации
-    :param schema: ОжидаемаяJSON-схема
+    :param schema: Ожидаемая JSON-схема
     :raise: jsonschema.ValidationError, если instance не соответствует schema
     """
     try:
         jsonschema.validate(
             instance=instance,                                  # Данные для валидации
             schema=schema,                                      # JSON-схема
-            format_checker=jsonschema.FormatChecker()           # Валидация форматов - лучше его (⚠️Проверить и решить)
+            format_checker=jsonschema.FormatChecker()           # Валидация форматов - лучше
             #format_checker=Draft202012Validator.FORMAT_CHECKER # Валидация форматов (требуется from jsonschema.validators import Draft202012Validator)
         )
         print('✅Данные соответствуют схеме')

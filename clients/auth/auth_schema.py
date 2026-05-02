@@ -1,20 +1,25 @@
 """
-Authentication Pydantic Schemas
+Authentication Pydantic Schema
 """
 from pydantic import BaseModel, Field
+from tools.data_generator import fake
 
-#=================================================== REQUEST schema ====================================================
+#================================================== ⬆︎REQUEST Schema ===================================================
 #------------------------------------------------------Auth/Login ------------------------------------------------------
 class LoginRequestSchema(BaseModel):
     """
-    Схема запроса на аутентификацию пользователя.
+    Схема запроса на аутентификацию пользователя
+
+    ⚠️Default fake.value for NEGATIVE test ONLY
     """
-    email: str
-    password: str
+    email: str = Field(default_factory=fake.email)
+    password: str = Field(default_factory=fake.password)
 
 class AuthUserSchema(BaseModel):
     """
-    Схема запроса на Log in пользователя.
+    Схема запроса на Log in пользователя
+
+    .
     """
     email: str
     password: str
@@ -22,16 +27,20 @@ class AuthUserSchema(BaseModel):
 #------------------------------------------------------- Refresh -------------------------------------------------------
 class RefreshRequestSchema(BaseModel):
     """
-    Схема запроса на обновления токена.
+    Схема запроса на обновления токена
+
+    ⚠️Default fake.value for NEGATIVE test ONLY
     """
-    refresh_token: str = Field(alias='refreshToken')
+    refresh_token: str = Field(alias='refreshToken', default_factory=fake.uuid4)
 
 
-#=================================================== RESPONSE schema ===================================================
+#================================================== ⬆︎RESPONSE schema ==================================================
 #------------------------------------------------------ Auth/Login -----------------------------------------------------
 class TokenSchema(BaseModel):
     """
     Схема ключа "token": {}
+
+    .
     """
     token_type: str = Field(alias='tokenType')
     access_token: str = Field(alias='accessToken')
@@ -39,9 +48,12 @@ class TokenSchema(BaseModel):
 
 class LoginResponseSchema(BaseModel):
     """
-    Схемы ответа при Аутентификации/Login.
+    Схемы ответа при Аутентификации/Login
+
+    .
     """
     token: TokenSchema
 #------------------------------------------------------- Refresh -------------------------------------------------------
+
 
 #-----------------------------------------------------------------------------------------------------------------------
