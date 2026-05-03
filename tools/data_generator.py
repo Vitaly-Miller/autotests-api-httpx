@@ -75,6 +75,14 @@ class Fake:
         """
         return self.faker.uuid4()
 
+    def random_int(self) -> int:
+        """
+        Генерация случайного 4-х значного числа
+
+        :return: Случайное число: 1234
+        """
+        return self.faker.random_int()
+
     #------------------------------------------------------- Text ------------------------------------------------------
     def sentence(self, nb_words: int = 5):
         """

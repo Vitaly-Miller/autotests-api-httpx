@@ -10,7 +10,7 @@ from clients.files.files_client import get_files_client
 from clients.files.files_schema import CreateFileRequestSchema
 from clients.users.public_users_client import get_public_users_client
 from clients.users.users_schema import CreateUserRequestSchema
-from tools.data_generator import fake
+
 
 #=======================================================================================================================
 #---------------------------------------------------- 1. Create User ---------------------------------------------------
@@ -57,13 +57,7 @@ create_course_response = courses_client.create_course(payload=create_course_payl
 
 #-------------------------------------------------- 4. Create Exercise  ------------------------------------------------
 create_exercise_payload = CreateExerciseRequestSchema(  # Модель c данными о задании
-    title='Exercise 1',
-    courseId=create_course_response.course.id,
-    maxScore=5,
-    minScore=1,
-    orderIndex=0,
-    description='Find a bug',
-    estimatedTime='5 min',
+    courseId=create_course_response.course.id
 )
 
 # Инициализация клиента (private)
@@ -78,4 +72,5 @@ print(f'    User ID: {create_user_response.user.id}')
 print(f'    File ID: {create_file_response.file.id}')
 print(f'  Course ID: {create_course_response.course.id}')
 print(f'Exercise ID: {create_exercise_response.exercise.id}')
+
 #-----------------------------------------------------------------------------------------------------------------------
