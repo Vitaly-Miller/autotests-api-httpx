@@ -1,7 +1,8 @@
 """
 Files Pydantic Schema
 """
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
+from tools.data_generator import fake
 
 #================================================== ⬆︎REQUEST Schema ===================================================
 #----------------------------------------------------- Create File -----------------------------------------------------
@@ -9,12 +10,12 @@ class CreateFileRequestSchema(BaseModel):
     """
     Схема payload для запроса на создание файла:
 
-    filename:    Имя файла
+    filename:    Имя файла при сохранении на сервере (Upload)
     directory:   Имя директории сохранения
-    upload_path: Путь к файлу
+    upload_path: Путь к файлу для загрузки
     """
-    filename: str
-    directory: str
+    filename: str = Field(default_factory=fake.png_file_name)
+    directory: str = Field(default='Uploaded')
     upload_path: str
 
 

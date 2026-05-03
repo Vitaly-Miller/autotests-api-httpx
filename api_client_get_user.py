@@ -5,18 +5,12 @@ from clients.auth.auth_schema import AuthUserSchema
 from clients.users.private_users_client import get_private_users_client
 from clients.users.public_users_client import get_public_users_client
 from clients.users.users_schema import CreateUserRequestSchema
-from tools.data_generator import fake
 
 #===================================================== PRECONDITION ====================================================
 #---------------------------------------------------- 1. Create User ---------------------------------------------------
 # Инициализация Pydantic Model
-create_user_payload = CreateUserRequestSchema(    # Инициализация данных через схему
-    email=fake.email(),
-    password=fake.password(),
-    lastName=fake.last_name(),
-    firstName=fake.first_name(),
-    middleName=fake.middle_name()
-)
+create_user_payload = CreateUserRequestSchema()    # Инициализация данных через схему
+
 
 # ❗️РЕШИТЬ
 # Model -> Dict
@@ -49,5 +43,5 @@ get_user_response = users_client.get_user(user_id)
 
 #------------------------------------------------------ Output ---------------------------------------------------------
 print(f'Create User: {create_user_response}')   # {'user': {'id': '07dc57a3-630d-42e3-b901-d4290ee533f3', 'email': 'ybaker@example.net', 'lastName': 'string', 'firstName': 'string', 'middleName': 'string'}}
-print(f'   Get User: {get_user_response}')    # {'user': {'id': '07dc57a3-630d-42e3-b901-d4290ee533f3', 'email': 'ybaker@example.net', 'lastName': 'string', 'firstName': 'string', 'middleName': 'string'}}
+print(f'   Get User: {get_user_response}')      # {'user': {'id': '07dc57a3-630d-42e3-b901-d4290ee533f3', 'email': 'ybaker@example.net', 'lastName': 'string', 'firstName': 'string', 'middleName': 'string'}}
 #-----------------------------------------------------------------------------------------------------------------------

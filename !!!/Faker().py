@@ -18,7 +18,10 @@ print(f'Email (Company)           |  {fake.company_email()}')
 
 # Цифры
 print(f'Digits  (0 to 9)          |  {fake.random_digit()}')
+print(f'Digits  (4 digits)        |  {fake.random_int()}')
 print(f'Digits  (100 to 999)      |  {fake.random_int(min=100, max=999)}')
+
+
 print(f'Numeric ID (4-dig)        |  {fake.pyint()}')
 
 # Токены
@@ -27,9 +30,11 @@ print(f'md5                       |  {fake.md5()}')       # 1a31f9244b06f85b51c6
 print(f'UUID                      |  {fake.uuid4()}')     # cad77163-f85d-4b96-b807-27670ffc9c29
 print(f'UUID (без "-")            |  {fake.uuid4().replace('-', '')}')    # cad77163f85d4b96b80727670ffc9c29
 print(f'UUID (короткий)           |  {fake.uuid4()[:8]}')  # cad77163
+
 # Текст
 print(f'Текст                     |  {fake.text()}')
 print(f'Текст (<50 chars)         |  {fake.text(max_nb_chars=50)}')
+print(f'Предложение (6 words)     |  {fake.sentence()}')
 
 # Буквы
 print(f'Буквы (4 chars)           |  {fake.lexify()}')                     # ZPHq
