@@ -62,16 +62,16 @@ class Fake:
         """
         Генерация бизнес-формата User ID
 
-        :return: USER-12345
+        :return: Строка формата: User-1234
         """
-        number = self.faker.random_int(10000, 99999)
+        number = self.faker.random_int()
         return f'User-{number}'
     #-------------------------------------------------------------------------------------------------------------------
     def uuid4(self) -> str:
         """
         Генерация UUID
 
-        :return: <cad77163-f85d-4b96-b807-27670ffc9c29>
+        :return: Строка формата: cad77163-f85d-4b96-b807-27670ffc9c29
         """
         return self.faker.uuid4()
 
@@ -83,13 +83,12 @@ class Fake:
         :return: Предложение из 5 слов (default)
         """
         return self.faker.sentence(nb_words=nb_words)
-
     #-------------------------------------------------------------------------------------------------------------------
-    def text(self, max_nb_chars: int = 100) -> str:
+    def text(self, max_nb_chars: int = 50) -> str:
         """
-        Генерация текста с заданной максимальной длиной.
+        Генерация текста с заданной максимальной длиной
 
-        :param max_nb_chars: Максимальная длина (в символах). Default = 100
+        :param max_nb_chars: Количество символов. Default = 50
         :return: Случайные предложения
         """
         return self.faker.text(max_nb_chars=max_nb_chars)
@@ -104,6 +103,7 @@ class Fake:
         """
         number = self.faker.random_int(minimum, maximum)
         return f'{number} weeks'
+
     #------------------------------------------------------ Score ------------------------------------------------------
     def max_score(self) -> int:
         """
@@ -112,7 +112,6 @@ class Fake:
         :return: Максимальный бал [50-100]
         """
         return self.faker.random_int(50, 100)
-
     #-------------------------------------------------------------------------------------------------------------------
     def min_score(self) -> int:
         """
@@ -132,7 +131,8 @@ class Fake:
         number = self.faker.random_int()
         return f'file_{number}.png'
 
-#====================================== Инициализация экземпляра класса (для import) ===================================
+
+#====================================== Инициализация экземпляра класса (❗️для import) ===================================
 fake = Fake(faker=Faker())                     # en_US - Default
 fake_ru = Fake(faker=Faker(locale='ru_RU'))    # ru_RU
 
