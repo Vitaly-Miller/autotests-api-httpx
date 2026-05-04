@@ -1,5 +1,4 @@
 pydantic
-pydantic[email]
 httpx
-Faker
 jsonschema
+Faker
