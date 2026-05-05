@@ -22,7 +22,7 @@ class PublicUsersClient(APIClient):
         """
         return self.post(
             url=self.ENDPOINT,
-            json=payload.model_dump(by_alias=True))  # # + ⚠ сериализация Model -> Dict (т.к. payload - Pydantic-модель)
+            json=payload.model_dump(by_alias=True))  # + ⚠ сериализация Model -> Dict (т.к. payload - Pydantic-модель)
 
     def create_user(self, payload: CreateUserRequestSchema) -> CreateUserResponseSchema:
         """
@@ -34,7 +34,6 @@ class PublicUsersClient(APIClient):
         """
         response = self.create_user_api(payload)
         return CreateUserResponseSchema.model_validate_json(response.text)  # ⚠ <- Валидируем ответ (любой) -> Model
-        return response.json()                                              # ⚠ <- Может вызвать ошибку, если придет не JSON
 
 
 #=============================================== Client Builder (Public) ===============================================
