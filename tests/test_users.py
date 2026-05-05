@@ -1,5 +1,5 @@
 """
-Pytest users
+Test Create User
 """
 from clients.users.public_users_client import get_public_users_client
 from clients.users.users_schema import CreateUserRequestSchema, CreateUserResponseSchema

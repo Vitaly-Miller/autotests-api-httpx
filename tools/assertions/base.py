@@ -33,7 +33,7 @@ def assert_method(actual: str, expected: str):
 🔹Actual method:   {actual}
 """)
 
-# {"key": "value_1"} = {"key": "value_2"}
+# {"key": "value"} = {"key": "value"}
 def assert_equal(actual: Any, expected: Any, field_name: str):
     """
     Проверяет совпадение значений в поле двух объектов.
