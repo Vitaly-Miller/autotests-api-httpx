@@ -9,9 +9,9 @@ def assert_login_response(response_data: LoginResponseSchema):
     """
     Проверяет тип токена, длину access- и refresh-токенов
 
-    :param response_data: Response data from login API
+    :param response_data: Response data (Pydantic-model)
     :raise AssertionError - if values are not equal
     """
-    assert_equal(response_data.token.token_type, 'bearer', 'token_type')
-    assert_value_len(response_data.token.access_token, 199, 'access_token')
-    assert_value_len(response_data.token.refresh_token, 199, 'refresh_token')
+    assert_equal(response_data.token.token_type, 'bearer', 'token_type')   # тип токена
+    assert_value_len(response_data.token.access_token, 199, 'access_token')     # длина access-токена
+    assert_value_len(response_data.token.refresh_token, 199, 'refresh_token')   # длина refresh-токена

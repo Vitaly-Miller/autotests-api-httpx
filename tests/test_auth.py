@@ -1,20 +1,18 @@
 """
-Test Create User
+Test login user (auth)
 """
 from clients.auth.auth_client import get_auth_client
 from clients.auth.auth_schema import LoginRequestSchema, LoginResponseSchema
-
 from clients.users.public_users_client import get_public_users_client
 from clients.users.users_schema import CreateUserRequestSchema, CreateUserResponseSchema
 from http import HTTPStatus, HTTPMethod
-
 from tools.assertions.auth import assert_login_response
 from tools.assertions.base import assert_status_code, assert_method
 from tools.assertions.schema import validation_json_schema
 
 
 #=======================================================================================================================
-def test_auth_user():
+def test_login():
     """
     Тест на авторизацию (Log in) зарегистрированного пользователя
     """
@@ -27,9 +25,6 @@ def test_auth_user():
 
     # Запрос на создание пользователя через API-метод
     create_user_response = public_users_client.create_user_api(payload=create_user_model)
-
-    # JSON-ответ -> Pydantic-модель (десериализация)
-    create_user_response_data = CreateUserResponseSchema.model_validate_json(create_user_response.text)
 
     #--------------------------------------------- Authentication (Log in)  --------------------------------------------
     # Инициализация клиента (public)
@@ -48,11 +43,10 @@ def test_auth_user():
     auth_response_data = LoginResponseSchema.model_validate_json(auth_response.text)
 
 
-
     #--------------------------------------------------- Assertions ----------------------------------------------------
-    assert_status_code(auth_response.status_code, HTTPStatus.OK)           # проверка статус-кода
-    assert_method(auth_response.request.method, HTTPMethod.POST)           # проверка метода запроса
-    assert_login_response(auth_response_data)              # Проверка типа токена, длину access- и refresh-токенов (3 in 1)
+    assert_status_code(auth_response.status_code, HTTPStatus.OK)        # проверка статус-кода
+    assert_method(auth_response.request.method, HTTPMethod.POST)        # проверка метода запроса
+    assert_login_response(auth_response_data)          # Проверка типа токена, длину access- и refresh-токенов (3 in 1)
 
 
     # Validation JSON Schema

@@ -10,8 +10,10 @@ def assert_create_user_response(response_data: CreateUserResponseSchema, create_
     Проверяет совпадение значения полей запроса на создание пользователя и его ответа (4 in 1)
 
     Поля: "email", "last_name", "first_name", "middle_name"
-    :param create_user_payload: create_user_payload = CreateUserRequestSchema()
-    :param response_data: response_data = CreateUserResponseSchema.model_validate_json(response.text)
+    :param response_data: Response data (Pydantic-model)
+    :param create_user_payload: Request data (Pydantic-model)
+    :raise AssertionError - if values are not equal
+
     """
     assert_equal(response_data.user.email, create_user_payload.email, 'email')
     assert_equal(response_data.user.last_name, create_user_payload.last_name, 'last_name')
