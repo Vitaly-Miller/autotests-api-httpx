@@ -46,7 +46,7 @@ def test_login():
     #--------------------------------------------------- Assertions ----------------------------------------------------
     assert_status_code(auth_response.status_code, HTTPStatus.OK)        # проверка статус-кода
     assert_method(auth_response.request.method, HTTPMethod.POST)        # проверка метода запроса
-    assert_login_response(auth_response_data)          # Проверка типа токена, длину access- и refresh-токенов (3 in 1)
+    assert_login_response(auth_response_data)                                          # Проверка на НЕпустоту, тип токена, длину access- и refresh-токенов (6 in 1)
 
 
     # Validation JSON Schema

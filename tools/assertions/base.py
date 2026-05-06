@@ -51,10 +51,26 @@ def assert_equal(actual: Any, expected: Any, field_name: str):
 🔹Actual value:   {actual}
 """
 
+# Value is NOT EMPTY
+def assert_is_true(actual: Any, field_name: str):
+    """
+    Проверяет, что фактическое значение является истинным
+
+    :param actual: Фактическое значение
+    :param field_name: Название проверяемого значения
+    :raises AssertionError: Если фактическое значение ложно
+    """
+    assert actual, f"""
+❌"{field_name}" value is empty!
+🔸Expected value: NOT empty
+🔹Actual value:   Empty (None)
+"""
+
+
 # Value length
-def assert_value_len(actual: Any, expected: int, field: str):
+def assert_value_len(actual: Any, expected: int, field_name: str):
     assert len(actual) == expected, f"""
-❌Incorrect "{field}" value length!
+❌Incorrect "{field_name}" value length!
 🔸Expected length: {expected}
 🔹Actual length:   {len(actual)}
 """
