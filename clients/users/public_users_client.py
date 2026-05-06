@@ -15,32 +15,33 @@ class PublicUsersClient(APIClient):
     #------------------------------------------------- Create User  ----------------------------------------------------
     def create_user_api(self, payload: CreateUserRequestSchema) -> Response:
         """
-        Метод для СОЗДАНИЯ нового пользователя.
+        Метод для СОЗДАНИЯ нового пользователя
 
-        :param payload: Словарь с данными для создания пользователя.
-        :return: Ответ от сервера в виде объекта httpx.Response
+        :param payload: Данные для создания пользователя в формате Pydantic-модели
+        :return: httpx.Response
         """
         return self.post(
             url=self.ENDPOINT,
-            json=payload.model_dump(by_alias=True))  # + ⚠ сериализация Model -> Dict (т.к. payload - Pydantic-модель)
+            json=payload.model_dump(by_alias=True))  # ⚠ сериализация Model —> Dict (т.к. в payload передаем Pydantic-модель) + 🐫CamelCase
 
     def create_user(self, payload: CreateUserRequestSchema) -> CreateUserResponseSchema:
         """
-        Метод получения валидированной Pydantic-model с данными созданного пользователя.
+        Метод для СОЗДАНИЯ нового пользователя с получением данных созданного пользователя в формате Pydantic-model.
 
-        :param payload: Словарь с данными для создания нового пользователя.
-        :return: Валидированная Pydantic-модель с данными о созданном пользователе
-        :return: JSON-объект с данными о созданном пользователе
+        :param payload: Данные для создания нового пользователя в формате Pydantic-модели
+        :return: Данные созданного пользователя в формате Pydantic-model
         """
-        response = self.create_user_api(payload)
-        return CreateUserResponseSchema.model_validate_json(response.text)  # ⚠ <- Валидируем ответ (любой) -> Model
+        response = self.create_user_api(payload)                            # Используем API-метод создания нового пользователя
+        return CreateUserResponseSchema.model_validate_json(response.text)  # Валидируем ответ (любой) —> Model
 
 
 #=============================================== Client Builder (Public) ===============================================
 def get_public_users_client() -> PublicUsersClient:
     """
-    Функция создаёт экземпляр PrivateUsersClient с уже настроенным HTTP-клиентом.
+    Функция создаёт экземпляр PrivateUsersClient с уже настроенным HTTP-клиентом
 
-    :return: Готовый к использованию PrivateUsersClient.
+    :return: Готовый к использованию PrivateUsersClient
     """
     return PublicUsersClient(client=get_public_http_client())
+
+#-----------------------------------------------------------------------------------------------------------------------

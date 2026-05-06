@@ -18,69 +18,67 @@ class CoursesClient(APIClient):
     #------------------------------------------------- Get Courses -----------------------------------------------------
     def get_courses_api(self, query_user_id: GetCoursesRequestSchema) -> Response:
         """
-        Метод для ПОЛУЧЕНИЯ СПИСКА курсов по User ID (?query).
+        Метод для получения СПИСКА курсов по User ID (?query)
 
-        :param query_user_id: Словарь с User ID
-        :return: Ответ от сервера в виде объекта httpx.Response
+        :param query_user_id: User ID в формате Pydantic-модели
+        :return: httpx.Response
         """
         return self.get(url=self.ENDPOINT, params=query_user_id)  # NOQA
 
     #-------------------------------------------------- Get Course -----------------------------------------------------
     def get_course_api(self, course_id: str) -> Response:
         """
-        Метод для ПОЛУЧЕНИЯ курса по его ID.
+        Метод для получения курса по его Course ID
 
         :param course_id: Course ID
-        :return: Ответ от сервера в виде объекта httpx.Response
+        :return: httpx.Response
         """
         return self.get(url=f'{self.ENDPOINT}/{course_id}')
 
     #------------------------------------------------- Create Course ---------------------------------------------------
     def create_course_api(self, payload: CreateCourseRequestSchema) -> Response:
         """
-        Метод для СОЗДАНИЯ курса.
+        Метод для СОЗДАНИЯ курса
 
-        :param payload: Словарь с title, maxScore, minScore, description, estimatedTime, previewFileId, createdByUserId.
-        :return: Ответ от сервера в виде объекта httpx.Response
+        :param payload: Данные для создания курса в формате Pydantic-model
+        :return: httpx.Response
         """
         return self.post(
             url=self.ENDPOINT,
-            json=payload.model_dump(by_alias=True)    # + ⚠ сериализация Model -> Dict (т.к. payload - Pydantic-модель)
+            json=payload.model_dump(by_alias=True)    # ⚠ сериализация Model —> Dict (т.к. payload - Pydantic-модель)
         )
 
     def create_course(self, payload: CreateCourseRequestSchema) -> CreateCourseResponseSchema:
         """
-        Метод получения валидированной Pydantic-model с данными о созданном файле.
+        Метод для СОЗДАНИЯ курса с получением данных о созданном курсе в формате Pydantic-model
 
-        :param payload: Словарь с title, maxScore, minScore, description, estimatedTime, previewFileId, createdByUserId.
-        :return: Валидированная Pydantic-модель с данными об авторизации пользователя
-        :return: JSON-объект с данными созданного курса
+        :param payload: Данные для создания курса в формате Pydantic-model
+        :return: Ответ с данными об авторизации пользователя в формате Pydantic-model
         """
         response = self.create_course_api(payload)
-        return CreateCourseResponseSchema.model_validate_json(response.text)  # ⚠ <- Валидируем ответ (любой) -> Model
-        return response.json()                                                # ⚠ <- Может вызвать ошибку, если придет не JSON
+        return CreateCourseResponseSchema.model_validate_json(response.text)  # Валидируем ответ (любой) —> Model
 
     #------------------------------------------------- Update Course ---------------------------------------------------
     def update_course_api(self, course_id: str, payload: UpdateCourseRequestSchema) -> Response:
         """
-        Метод для ЧАСТИЧНОГО ОБНОВЛЕНИЯ курса по его ID.
+        Метод для частичного ОБНОВЛЕНИЯ курса по Course ID
 
         :param course_id: Course ID
-        :param payload: Словарь с данными, которые необходимо обновить
-        :return: Ответ от сервера в виде объекта httpx.Response
+        :param payload: Данными, которые необходимо обновить в формате Pydantic-model
+        :return: httpx.Response
         """
         return self.patch(
             url=f'{self.ENDPOINT}/{course_id}',
-            json=payload.model_dump(by_alias=True)     # + ⚠ сериализация Model -> Dict (т.к. payload - Pydantic-модель)
+            json=payload.model_dump(by_alias=True)     # сериализация Model —> Dict (т.к. payload - Pydantic-модель)
         )
 
     #------------------------------------------------- Delete Course ---------------------------------------------------
     def delete_course_api(self, course_id: str) -> Response:
         """
-        Метод для УДАЛЕНИЯ курса по его ID.
+        Метод для УДАЛЕНИЯ курса по его Course ID
 
         :param course_id: Course ID
-        :return: Ответ от сервера в виде объекта httpx.Response
+        :return: httpx.Response
         """
         return self.delete(url=f'{self.ENDPOINT}/{course_id}')
 
@@ -88,9 +86,9 @@ class CoursesClient(APIClient):
 ##==================================================== Client Builder ==================================================
 def get_courses_client(auth_data: AuthUserSchema) -> CoursesClient:
     """
-    Функция создаёт экземпляр CoursesClient с уже настроенным HTTP-клиентом.
+    Функция создаёт экземпляр CoursesClient с уже настроенным HTTP-клиентом
 
-    :param auth_data: Данные для аутентификации пользователя (Email, Password)
-    :return: Готовый к использованию CoursesClient.
+    :param auth_data: Данные для аутентификации (log in) пользователя (Email, Password) в формате Pydantic-model
+    :return: Готовый к использованию CoursesClient
     """
     return CoursesClient(client=get_private_http_client(auth_data))

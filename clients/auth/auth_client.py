@@ -13,45 +13,43 @@ class AuthClient(APIClient):
     #--------------------------------------------------- Login ---------------------------------------------------------
     def login_api(self, payload: LoginRequestSchema) -> Response:
         """
-        Метод выполняет АУТЕНТИФИКАЦИЮ (login) пользователя.
+        Метод выполняет АУТЕНТИФИКАЦИЮ (log in) пользователя
 
-        :param payload: Словарь с Email и Password.
-        :return Ответ от сервера в виде объекта httpx.Response
+        :param payload: Данные с Email и Password в формате Pydantic-model
+        :return httpx.Response
         """
         return self.post(
             url=f'{self.ENDPOINT}/login',
-            json=payload.model_dump(by_alias=True)    # + ⚠ сериализация Model -> Dict (т.к. payload - Pydantic-модель)
+            json=payload.model_dump(by_alias=True)    # сериализация Model —> Dict (т.к. payload - Pydantic-модель)
         )
 
     def login(self, payload: LoginRequestSchema) -> LoginResponseSchema:
         """
-        Метод получения валидированной Pydantic-модели с данными об авторизации пользователя.
+        Метод выполняет АУТЕНТИФИКАЦИЮ (log in) пользователя с получением данных об авторизации в формате Pydantic-model
 
-        :param payload: Модель с данными: Email и Password
-        :return: Валидированная Pydantic-модель с данными об авторизации пользователя
-        :return: JSON-объект с данными об авторизации пользователя
+        :param payload: Данные с Email и Password в формате Pydantic-model
+        :return: Ответ с данными об авторизации пользователя в формате Pydantic-model
         """
         response = self.login_api(payload)
-        return LoginResponseSchema.model_validate_json(response.text)  # ⚠ <- Валидируем ответ (любой) -> Model
-        return response.json()                                         # ⚠ <- Может вызвать ошибку, если придет не JSON
+        return LoginResponseSchema.model_validate_json(response.text)  # Валидируем ответ (любой) —> Model
 
     #-------------------------------------------------- Refresh --------------------------------------------------------
     def refresh_api(self, payload: RefreshRequestSchema) -> Response:
         """
-        Метод ОБНОВЛЯЕТ ТОКЕН авторизации.
+        Метод ОБНОВЛЯЕТ ТОКЕН авторизации
 
-        :param payload: Словарь с refreshToken.
-        :return: Ответ от сервера в виде объекта httpx.Response
+        :param payload: Данные с refreshToken в формате Pydantic-model
+        :return: httpx.Response
         """
         return self.post(
             url=f'{self.ENDPOINT}/refresh',
-            json=payload.model_dump(by_alias=True)    # + ⚠ сериализация Model -> Dict (т.к. payload - Pydantic-модель)
+            json=payload.model_dump(by_alias=True)    # сериализация Model —> Dict (т.к. payload - Pydantic-модель)
         )
 
 #=================================================== Client Builder ====================================================
 def get_auth_client() -> AuthClient:
     """
-    Функция создает экземпляр AuthClient с уже настроенным http-клиентом.
+    Функция создает экземпляр AuthClient с уже настроенным http-клиентом
 
     :return: Готовый к использованию объект AuthenticationClient базовыми параметрами.
     """

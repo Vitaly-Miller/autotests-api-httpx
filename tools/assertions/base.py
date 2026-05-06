@@ -2,6 +2,7 @@
 Base assertions
 """
 from typing import Any
+
 #=======================================================================================================================
 # Status Code
 def assert_status_code(actual: int, expected: int):
@@ -45,9 +46,18 @@ def assert_equal(actual: Any, expected: Any, field_name: str):
     :raise AssertionError - если значения не совпадают
     """
     assert actual == expected, f"""
-❌Values are not equal in field (key) "{field_name}"!
+❌Values are not equal in field (key) —> "{field_name}"
 🔸Expected value: {expected}
 🔹Actual value:   {actual}
 """
+
+# Value length
+def assert_value_len(actual: Any, expected: int, field: str):
+    assert len(actual) == expected, f"""
+❌Incorrect "{field}" value length!
+🔸Expected length: {expected}
+🔹Actual length:   {len(actual)}
+"""
+
 
 #=======================================================================================================================

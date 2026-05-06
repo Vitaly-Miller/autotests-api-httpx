@@ -4,7 +4,7 @@ JSON Schema Validation (NOT Pydantic)
 import jsonschema
 
 #=======================================================================================================================
-# JSON Schema
+# JSON Schema (ручная)
 schema = {
     'type': 'object',                   # Тип данных
     'properties': {                     # Содержание:
@@ -23,10 +23,10 @@ valid_data = {
 
 # Валидация
 try:
-    jsonschema.validate(
-        instance=valid_data,                          # Данные для валидации
-        schema=schema,                                # JSON-схема
-        format_checker=jsonschema.FormatChecker()     # Валидация форматов (⚠️НЕ ЗАБУДЬ! - в схеме ответа email: EmailStr)
+    jsonschema.validate(                              # Встроенный метод
+        instance=valid_data,                          # Данные для валидации в формате JSON
+        schema=schema,                                # JSON-схема ручная (или сгенерированная из Pydantic-схемы)
+        format_checker=jsonschema.FormatChecker()     # Валидация форматов (⚠️НЕ ЗАБУДЬ! - в схеме ответа - email: EmailStr)
     )
     print('✅Данные соответствуют схеме.')
 except jsonschema.ValidationError as e:

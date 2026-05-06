@@ -27,17 +27,16 @@ create_user_response = users_client.create_user_api(payload=create_user_payload)
 
 create_user_response_json = create_user_response.json()      # сохраняем JSON-ответ
 
-#--------------------------------------------- 2. Генерация JSON Schema ------------------------------------------------
-# Pydantic Schema -> JSON Schema
-create_user_response_json_schema = CreateUserResponseSchema.model_json_schema()
+#---------------------------------------------- 5. Генерация JSON-схемы ------------------------------------------------
+# ПРОПУСКАЮ - Генерацию встроил в функцию валидации JSON-схемы - validation_json_schema() (см. ниже)
 
 
 #------------------------------------------------- 3. Валидация JSON ---------------------------------------------------
 # Через свою функцию валидации
 validation_json_schema(
     instance=create_user_response_json,
-    schema=create_user_response_json_schema
-)                                                       # ✅Данные соответствуют схеме
+    schema=CreateUserResponseSchema
+)                                                       # ✅JSON-response schema. Validation success.
 
 
 
@@ -48,5 +47,5 @@ create_user_response_json['user']['email'] = 'hello'    # Меняем в отв
 # Через свою функцию валидации
 validation_json_schema(
     instance=create_user_response_json,
-    schema=create_user_response_json_schema
-)                                                       # ❌Ошибка JSON-Schema валидации: 'hello' is not a 'email'
+    schema=CreateUserResponseSchema
+)                                                       # ❌JSON-response schema. Validation error: ['hello' is not a 'email']

@@ -6,23 +6,25 @@ from tools.data_generator import fake
 
 #================================================== ⬆︎REQUEST Schema ===================================================
 #------------------------------------------------------Auth/Login ------------------------------------------------------
-class LoginRequestSchema(BaseModel):
+class AuthUserSchema(BaseModel):
     """
-    Схема запроса на аутентификацию пользователя
+    Схема запроса на Authentication (Auth) пользователя
 
     ⚠️Default fake.value for NEGATIVE test ONLY
     """
     email: str = Field(default_factory=fake.email)
     password: str = Field(default_factory=fake.password)
 
-class AuthUserSchema(BaseModel):
+
+class LoginRequestSchema(BaseModel):
     """
     Схема запроса на Log in пользователя
 
-    .
+    ⚠️Default fake.value for NEGATIVE test ONLY
     """
-    email: str
-    password: str
+    email: str = Field(default_factory=fake.email)
+    password: str = Field(default_factory=fake.password)
+
 
 #------------------------------------------------------- Refresh -------------------------------------------------------
 class RefreshRequestSchema(BaseModel):
@@ -48,7 +50,7 @@ class TokenSchema(BaseModel):
 
 class LoginResponseSchema(BaseModel):
     """
-    Схемы ответа при Аутентификации/Login
+    Схема ответа при Аутентификации/Login
 
     .
     """

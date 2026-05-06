@@ -1,28 +1,27 @@
 """
-Assertions
+JSON Schema Validation
 """
 from typing import Any
 import jsonschema
 
 
 #=======================================================================================================================
-#------------------------------------------------ Validate JSON Schema -------------------------------------------------
-def validation_json_schema(instance: Any, json_schema: dict) -> None:
+def validation_json_schema(instance: Any, schema: Any) -> None:
     """
-    Валидация JSON-схемы.
+    Валидация JSON-схемы со встроенным генератором (Pidantic-схема —> JSON-схема)
 
-    :param instance: Данные для валидации
-    :param json_schema: Ожидаемая JSON-схема (❗️Сгенерированная: json_schema = TokenSchema.model_json_schema())
-    :raise: jsonschema.ValidationError, если instance не соответствует schema
+    :param instance: Данные для валидации в формате JSON  <response.json()>
+    :param schema: Ожидаемая Pidantic-схема  <CreateUserResponseSchema>, из которой будет генерирована JSON-схема
+    :raise: ValidationError, если instance ≠ schema
     """
     try:
         jsonschema.validate(
-            instance=instance,                                  # Данные для валидации
-            schema=json_schema,                                 # JSON-схема (❗️Сгенерированная: json_schema = TokenSchema.model_json_schema())
-            format_checker=jsonschema.FormatChecker()           # Валидация форматов (default)
+            instance=instance,                                 # Данные для валидации в формате JSON
+            schema=schema.model_json_schema(),                 # JSON-схема, .сгенерированная из Pidantic-схемы
+            format_checker=jsonschema.FormatChecker()          # Валидация форматов (default) (⚠️НЕ ЗАБУДЬ! - в схеме ответа - email: EmailStr, ...)
         )
-        print(' - ✅Успешная валидация JSON-response')                   # Вывод при успешной валидации (закомментировать)
-    except jsonschema.ValidationError as e:                     # Сохранить полное описание ошибки валидации в переменной <e>
-        print(f'❌Ошибка JSON-Schema валидации: {e.message}')   # Вывод краткого описания ошибки (только текст без кода)
-        raise e
+        print('✅JSON-response schema. Validation success.')   # Вывод при успешной валидации (можно закомментировать)
+    except jsonschema.ValidationError as e:                    # Сохранить полное описание ошибки валидации в переменной <e>
+        print(f'❌JSON-response schema. Validation error: [{e.message}]')   # Вывод краткого описания ошибки (только текст без кода)
+        raise e                                                # Упасть с полным описанием ошибки (Traceback)
 #-----------------------------------------------------------------------------------------------------------------------
