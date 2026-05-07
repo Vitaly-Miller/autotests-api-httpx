@@ -1,5 +1,6 @@
 """
 Test Create User
+Тест создания нового пользователя
 """
 from clients.users.public_users_client import get_public_users_client
 from clients.users.users_schema import CreateUserRequestSchema, CreateUserResponseSchema
@@ -10,16 +11,13 @@ from tools.assertions.users import assert_create_user_response
 
 #=======================================================================================================================
 def test_create_user():
-    """
-    Тест создания нового пользователя
-    """
     # Инициализация клиента (public)
     public_users_client = get_public_users_client()
 
     # Инициализация модели с fake данными нового пользователя по Pydantic-схеме
     create_user_payload = CreateUserRequestSchema()
 
-    # ▷ Запрос на создание пользователя через API-метод
+    # ▶ Запрос на создание пользователя через API-метод
     response = public_users_client.create_user_api(payload=create_user_payload)
 
     # JSON-ответ —> Pydantic модель (десериализация)

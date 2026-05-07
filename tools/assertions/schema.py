@@ -10,9 +10,9 @@ def validation_json_schema(instance: Any, schema: Any) -> None:
     """
     Валидация JSON-схемы со встроенным генератором (Pidantic-схема —> JSON-схема)
 
-    :param instance: Данные для валидации <response>
+    :param instance: Объект для валидации <response>
     :param schema: Ожидаемая Pidantic-схема  <CreateUserResponseSchema>, из которой будет генерирована JSON-схема
-    :raise: ValidationError, если instance ≠ schema
+    :raise: ValidationError - если instance ≠ schema
     """
     try:
         jsonschema.validate(

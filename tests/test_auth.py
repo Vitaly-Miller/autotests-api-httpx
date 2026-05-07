@@ -1,5 +1,6 @@
 """
 Test login user (auth)
+Тест на авторизацию (Log in) зарегистрированного пользователя
 """
 from clients.auth.auth_client import get_auth_client
 from clients.auth.auth_schema import LoginRequestSchema, LoginResponseSchema
@@ -13,17 +14,14 @@ from tools.assertions.schema import validation_json_schema
 
 #=======================================================================================================================
 def test_login():
-    """
-    Тест на авторизацию (Log in) зарегистрированного пользователя
-    """
-    #------------------------------------------- Precondition (Create User) --------------------------------------------
+    #------------------------------------------ [Pre-conditions] Create User -------------------------------------------
     # Инициализация клиента (public)
     public_users_client = get_public_users_client()
 
     # Инициализация модели с fake данными нового пользователя по Pydantic-схеме
     create_user_model = CreateUserRequestSchema()
 
-    # ︎▷ Запрос на создание пользователя через API-метод
+    # ︎▶ Запрос на создание пользователя через API-метод
     public_users_client.create_user_api(payload=create_user_model)
 
     #--------------------------------------------- Authentication (Log in)  --------------------------------------------
@@ -32,20 +30,20 @@ def test_login():
 
     # Инициализация модели с fake данными нового пользователя по Pydantic-схеме
     login_payload = LoginRequestSchema(
-        email=create_user_model.email,                    # Email из payload на создание пользователя
-        password=create_user_model.password               # Password из payload на создание пользователя
+        email=create_user_model.email,                                   # Email из payload на создание пользователя
+        password=create_user_model.password                              # Password из payload на создание пользователя
     )
 
     # ▷ Запрос на Authentication (Log in) через API-метод
-    auth_response = auth_client.login_api(login_payload)  # Передаем Email и Password
+    auth_response = auth_client.login_api(login_payload)                 # Передаем Email и Password
 
     # JSON-ответ —> Pydantic-модель (десериализация)
     auth_response_data = LoginResponseSchema.model_validate_json(auth_response.text)
 
 
     #--------------------------------------------------- Assertions ----------------------------------------------------
-    assert_status_code(auth_response, HTTPStatus.OK)     # проверка статус-кода
-    assert_method(auth_response, HTTPMethod.POST)        # проверка метода запроса
+    assert_status_code(auth_response, HTTPStatus.OK)    # проверка статус-кода
+    assert_method(auth_response, HTTPMethod.POST)       # проверка метода запроса
     assert_login_response(auth_response_data)                             # Проверка на НЕпустоту полей, тип токена, длину access- и refresh-токенов (6 in 1)
 
     # Validation JSON Schema

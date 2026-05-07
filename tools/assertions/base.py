@@ -5,6 +5,7 @@ from http.client import HTTPResponse
 from typing import Any
 
 #=======================================================================================================================
+#--------------------------------------------------------- API ---------------------------------------------------------
 # Status Code
 def assert_status_code(response: Any, expected: int):
     """
@@ -35,6 +36,7 @@ def assert_method(response: Any, expected: str):
 🔹Actual method:   {response.request.method}
 """
 
+#-------------------------------------------------------- Value --------------------------------------------------------
 # {"key": "value"} = {"key": "value"}
 def assert_equal(actual: Any, expected: Any, field_name: str):
     """
