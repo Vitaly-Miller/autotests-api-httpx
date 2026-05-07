@@ -12,7 +12,7 @@ BASE_URL = 'http://localhost:8000/api/v1'
 
 #-------------------------------------------- 1.[Pre-conditions] Create User -------------------------------------------
 create_user_payload = {
-  "email": faker.Faker().email(),                  # Генерируем email нового пользователя
+  "email": fake.email(),                             # Генерируем email нового пользователя
   "password": "string",
   "lastName": "string",
   "firstName": "string",
@@ -72,7 +72,7 @@ Create File Response Data: {create_file_response_data}
 """)
 
 #-----------------------------------------------------------------------------------------------------------------------
-# 5. Delete file by ID
+# 5. Delete file by File ID
 delete_file_response = httpx.delete(                              # 🟥DELETE запрос на удаление файла
     url=f'{BASE_URL}/files/{file_id}',                            # URL (BASE_URL + endpoint с file_id)
     headers=auth_headers                                          # Передаем auth_headers с токеном

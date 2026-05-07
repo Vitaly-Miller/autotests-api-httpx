@@ -3,18 +3,15 @@ Pytest info
 
 """
 
-#===================================================== Terminal ========================================================
+#===================================================== >_Terminal ========================================================
 """
 
 -- Запуск ВСЕХ тестов --
-pytest                - запуск всех тестов
-pytest -v             - запуск всех тестов с подробным выводом
-pytest -vv            - запуск всех тестов с Очень подробным выводом
-pytest -s             - запуск всех тестов с выводом print
-pytest -v -s          - 👍 запуск всех тестов с подробным выводом + выводом print
-
-(⚠️без .venv)
-python -m pytest      - запуск всех тестов
+python -m pytest                - запуск всех тестов
+python -m pytest -v             - запуск всех тестов с подробным выводом
+python -m pytest -vv            - запуск всех тестов с Очень подробным выводом
+python -m pytest -s             - запуск всех тестов с выводом print
+python -m pytest -v -s          - 👍 запуск всех тестов с подробным выводом + выводом print
 ...
 
 -- По названию --
@@ -22,27 +19,31 @@ pytest tests/test_users.py::test_create_user     - запуск конкретн
 pytest tests/test_users.py::TestUserAuth         - запуск конкретного тестового класса (TestUserAuth)
 
 -- По названию, содержащему ... --
-pytest -k create_user                            - запуск тестов, содержащих "*create_user*"
-pytest -k TestUserAuth                           - запуск тестов, содержащихся в классе "TestUserAuth"
+python -m pytest -k create_user                            - запуск тестов, содержащих "*create_user*"
+python -m pytest -k TestUserAuth                           - запуск тестов, содержащихся в классе "TestUserAuth"
 
 -- По названию, содержащему ... c логическими операторами --
-pytest -k create and user                        - запуск тестов, содержащих "*create*" И "*user*"
-pytest -k create or user                         - запуск тестов, содержащих "*create*" ИЛИ "*user*"
-pytest -k create and not user                    - запуск тестов, содержащих "*create*" и НЕТ "*user*"
+python -m pytest -k create and user                        - запуск тестов, содержащих "*create*" И "*user*"
+python -m pytest -k create or user                         - запуск тестов, содержащих "*create*" ИЛИ "*user*"
+python -m pytest -k create and not user                    - запуск тестов, содержащих "*create*" и НЕТ "*user*"
 
 -- По маркерам ---
-pytest -m smoke
-pytest -m "smoke and not regression"
+python -m pytest -m smoke
+python -m pytest -m "smoke and not regression"
+
+-- По маркерам ▷ PyCharm --- 👍
+Добавить конфигурацию запуска -> + -> pytest -> Переименовать название -> Поле <Дополнительные аргументы>: -m smoke
+
 
 -- Контроль падений ---
-pytest -x                        - Остановиться на первой ошибке
-pytest --maxfail=3               - Максимум падений
+python -m pytest -x                        - Остановиться на первой ошибке
+python -m pytest --maxfail=3               - Максимум падений
 
-pytest --tb=short                - Короткий traceback
-pytest --tb=long                 - Полный traceback
+python -m pytest --tb=short                - Короткий traceback
+python -m pytest --tb=long                 - Полный traceback
 
 ...
-python -m pytest -h            - info (help)
+python -m python -m pytest -h            - info (help)
 """
 
 #======================================================= Структура =====================================================
