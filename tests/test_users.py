@@ -43,7 +43,7 @@ def test_create_user():
     # Base
     assert_status_code(response, HTTPStatus.OK)                                    # проверка статус-кода
     assert_method(response, HTTPMethod.POST)                                       # проверка метода запроса
-    assert_create_user_response(response_data, create_user_payload) # Проверка совпадения полей запроса и ответа (4 in 1)
+    assert_create_user_response(response_data, create_user_payload)    # Проверка совпадения полей запроса и ответа (4 in 1)
 
     # Validation JSON Schema (✅через СВОЮ функию)
     validation_json_schema(response, CreateUserResponseSchema)

@@ -11,7 +11,7 @@ schema = {
         'name': {'type': 'string'},     #   'поле': {'тип': 'строка'}
         'age': {'type': 'number'}       #   'поле': {'тип': 'JS-число'}
     },
-    'required': ['name']                # Обязательные поля
+    'required': ['name']                # Обязательные поля (только 'name')
 }
 
 #---------------------------------------------------- ✅Valid data -----------------------------------------------------
@@ -24,7 +24,7 @@ valid_data = {
 # Валидация
 try:
     jsonschema.validate(                              # Встроенный метод
-        instance=valid_data,                          # Данные для валидации в формате JSON
+        instance=valid_data,                          # Данные для валидации в формате JSON/Dict
         schema=schema,                                # JSON-схема ручная (или сгенерированная из Pydantic-схемы)
         format_checker=jsonschema.FormatChecker()     # Валидация форматов (⚠️НЕ ЗАБУДЬ! - в схеме ответа - email: EmailStr)
     )
