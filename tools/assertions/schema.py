@@ -10,13 +10,13 @@ def validation_json_schema(instance: Any, schema: Any) -> None:
     """
     Валидация JSON-схемы со встроенным генератором (Pidantic-схема —> JSON-схема)
 
-    :param instance: Данные для валидации в формате JSON  <response.json()>
+    :param instance: Данные для валидации <response>
     :param schema: Ожидаемая Pidantic-схема  <CreateUserResponseSchema>, из которой будет генерирована JSON-схема
     :raise: ValidationError, если instance ≠ schema
     """
     try:
         jsonschema.validate(
-            instance=instance,                                 # Данные для валидации в формате JSON
+            instance=instance.json(),                          # Данные для валидации в формате JSON
             schema=schema.model_json_schema(),                 # JSON-схема, .сгенерированная из Pidantic-схемы
             format_checker=jsonschema.FormatChecker()          # Валидация форматов (default) (⚠️НЕ ЗАБУДЬ! - в схеме ответа - email: EmailStr, ...)
         )

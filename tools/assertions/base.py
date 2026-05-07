@@ -1,38 +1,39 @@
 """
 Base assertions
 """
+from http.client import HTTPResponse
 from typing import Any
 
 #=======================================================================================================================
 # Status Code
-def assert_status_code(actual: int, expected: int):
+def assert_status_code(response: Any, expected: int):
     """
     Проверка Status Code
 
-    :param actual: Actual Status Code
+    :param response: Response
     :param expected: Expected Status Code
     :raise AssertionError - если значения не совпадают
     """
-    assert actual == expected, f"""
+    assert response.status_code == expected, f"""
 ❌Status code is incorrect!
 🔸Expected code: {expected}
-🔹Actual code:   {actual}
+🔹Actual code:   {response.status_code}
 """
 
 # Method
-def assert_method(actual: str, expected: str):
+def assert_method(response: Any, expected: str):
     """
     Проверяет Request Method.
 
-    :param actual: Actual Request Method
+    :param response: Response
     :param expected: Expected Request Method
     :raise AssertionError - если значения не совпадают
     """
-    assert actual == expected, (f"""
+    assert response.request.method == expected, f"""
 ❌Request Method is incorrect!
 🔸Expected method: {expected}
-🔹Actual method:   {actual}
-""")
+🔹Actual method:   {response.request.method}
+"""
 
 # {"key": "value"} = {"key": "value"}
 def assert_equal(actual: Any, expected: Any, field_name: str):
@@ -46,7 +47,7 @@ def assert_equal(actual: Any, expected: Any, field_name: str):
     :raise AssertionError - если значения не совпадают
     """
     assert actual == expected, f"""
-❌Values are not equal in field (key) —> "{field_name}"
+❌Values are not equal in fields (keys) —> "{field_name}"
 🔸Expected value: {expected}
 🔹Actual value:   {actual}
 """
@@ -54,11 +55,11 @@ def assert_equal(actual: Any, expected: Any, field_name: str):
 # Value is NOT EMPTY
 def assert_is_true(actual: Any, field_name: str):
     """
-    Проверяет, что фактическое значение является истинным
+    Проверяет, что значение не пустое
 
     :param actual: Фактическое значение
-    :param field_name: Название проверяемого значения
-    :raises AssertionError: Если фактическое значение ложно
+    :param field_name: Название проверяемого объекта
+    :raises AssertionError - Если фактическое значение ложно
     """
     assert actual, f"""
 ❌"{field_name}" value is empty!
@@ -66,14 +67,20 @@ def assert_is_true(actual: Any, field_name: str):
 🔹Actual value:   Empty (None)
 """
 
-
 # Value length
-def assert_value_len(actual: Any, expected: int, field_name: str):
-    assert len(actual) == expected, f"""
+def assert_value_len(actual: Any, expected_len: int, field_name: str):
+    """
+    Проверяет длину значения
+
+    :param actual: Объект измерения
+    :param expected_len: Ожидаемая длина
+    :param field_name: Название проверяемого объекта
+    :raise AssertionError - Если значения разные
+    """
+    assert len(actual) == expected_len, f"""
 ❌Incorrect "{field_name}" value length!
-🔸Expected length: {expected}
+🔸Expected length: {expected_len}
 🔹Actual length:   {len(actual)}
 """
-
 
 #=======================================================================================================================

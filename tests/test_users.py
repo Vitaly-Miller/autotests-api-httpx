@@ -19,10 +19,10 @@ def test_create_user():
     # Инициализация модели с fake данными нового пользователя по Pydantic-схеме
     create_user_payload = CreateUserRequestSchema()
 
-    # Запрос на создание пользователя через API-метод
+    # ▷ Запрос на создание пользователя через API-метод
     response = public_users_client.create_user_api(payload=create_user_payload)
 
-    # JSON-ответ -> Pydantic модель (десериализация)
+    # JSON-ответ —> Pydantic модель (десериализация)
     response_data = CreateUserResponseSchema.model_validate_json(response.text)
 
 
@@ -41,11 +41,11 @@ def test_create_user():
 
     #------------------------------------ Assertions (✅через СВОИ assertion-функции) ----------------------------------
     # Base
-    assert_status_code(response.status_code, HTTPStatus.OK)                        # проверка статус-кода
-    assert_method(response.request.method, HTTPMethod.POST)                        # проверка метода запроса
+    assert_status_code(response, HTTPStatus.OK)                                    # проверка статус-кода
+    assert_method(response, HTTPMethod.POST)                                       # проверка метода запроса
     assert_create_user_response(response_data, create_user_payload) # Проверка совпадения полей запроса и ответа (4 in 1)
 
     # Validation JSON Schema (✅через СВОЮ функию)
-    validation_json_schema(response.json(), CreateUserResponseSchema)
+    validation_json_schema(response, CreateUserResponseSchema)
 
 #=======================================================================================================================

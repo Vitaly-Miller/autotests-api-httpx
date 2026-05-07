@@ -11,7 +11,6 @@ from clients.users.users_schema import CreateUserRequestSchema, CreateUserRespon
 #======================================================= Client ========================================================
 class PublicUsersClient(APIClient):
     ENDPOINT = '/users'
-
     #------------------------------------------------- Create User  ----------------------------------------------------
     def create_user_api(self, payload: CreateUserRequestSchema) -> Response:
         """
