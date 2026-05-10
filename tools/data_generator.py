@@ -47,7 +47,7 @@ class Fake:
 
         :return: example@email.com
         """
-        return self.faker.email(domain='email.com')
+        return self.faker.email(domain='test.com')
 
     def password(self) -> str:
         """
