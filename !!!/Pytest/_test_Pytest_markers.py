@@ -1,8 +1,6 @@
 """
 Pytest markers
 """
-import pytest
-
 """
 ---- >_terminal ----
 python -m pytest -v -s -m smoke                        - запустить Smoke тесты
@@ -14,10 +12,20 @@ python -m pytest -v -s -m "regression and not slow"    - запустить Regr
 ---- ▷ PyCharm ----
 Добавить конфигурацию запуска -> + -> pytest -> Переименовать название -> Поле <Дополнительные аргументы>: -m smoke
 
-
-❗️Кастомные названия маркеров .smoke, .regression, ... -
-- необходимо добавить в pytest.ini чтоб не вылезало <PytestUnknownMarkWarning ========= warnings summary ========> предупреждение.
+--------------------- pytest.ini --------------------
+⚠️Кастомные названия маркеров .smoke, .regression, ... - вызовут PytestUnknownMarkWarning ========= warnings summary ========> предупреждение.
+❗️- Прописать игнорирование предупреждений в pytest.ini:
+filterwarnings =
+    ignore::pytest.PytestUnknownMarkWarning
+    
+                    ИЛИ:
+❗️ - добавить названия кастомных маркеры:
+markers =
+    smoke: Fast smoke tests for critical functionality
+    regression: Full regression test suite
+------------------------------------------------------
 """
+import pytest
 #==================================================== Маркеры тестов ===================================================
 @pytest.mark.smoke                 # Маркируем тест как smoke (кастомное название)
 def test_smoke_case():

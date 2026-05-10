@@ -4,7 +4,6 @@ JSON Schema Validation
 from typing import Any
 import jsonschema
 
-
 #=======================================================================================================================
 def validation_json_schema(instance: Any, schema: Any) -> None:
     """
@@ -20,7 +19,7 @@ def validation_json_schema(instance: Any, schema: Any) -> None:
             schema=schema.model_json_schema(),                 # JSON-схема, .сгенерированная из Pidantic-схемы
             format_checker=jsonschema.FormatChecker()          # Валидация форматов (default) (⚠️НЕ ЗАБУДЬ! - в схеме ответа - email: EmailStr, ...)
         )
-        print('✅JSON-response schema. Validation success.')   # Вывод при успешной валидации (можно закомментировать)
+        #print('✅JSON-response schema. Validation success.')  # Вывод при успешной валидации (можно закомментировать)
     except jsonschema.ValidationError as e:                    # Сохранить полное описание ошибки валидации в переменной <e>
         print(f'❌JSON-response schema. Validation error: [{e.message}]')   # Вывод краткого описания ошибки (только текст без кода)
         raise e                                                # Упасть с полным описанием ошибки (Traceback)

@@ -43,7 +43,7 @@ python -m pytest --tb=short                - Короткий traceback
 python -m pytest --tb=long                 - Полный traceback
 
 ...
-python -m python -m pytest -h            - info (help)
+python -m python -m pytest -h              - info (help)
 """
 
 #======================================================= Структура =====================================================
