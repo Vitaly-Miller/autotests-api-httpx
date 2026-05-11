@@ -62,6 +62,9 @@ def create_user_api(public_users_client: PublicUsersClient) -> Response:
     create_user_payload = CreateUserRequestSchema()                              # Инициализация модели с fake-данными нового пользователя по Pydantic-схеме
     response = public_users_client.create_user_api(payload=create_user_payload)  # ︎▶ Запрос на создание пользователя через метод. Передаем сгенерированные в Pydantic-схеме fake-данные нового пользователя
     return response                                                              # Возвращает httpx.Response
+                                                                                 # ❗️Если нужно добраться до Request c 'password' - через JSON —> {dict} (парсинг):
+                                                                                                                       # request_body = json.loads(response.request.content)
+                                                                                                                       # print(request_body["password"])
 
 
 #------------------------------------------------ Auth (Authentication) ------------------------------------------------
