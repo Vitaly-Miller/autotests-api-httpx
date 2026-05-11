@@ -1,13 +1,14 @@
 """
 Base assertions
 """
-from http.client import HTTPResponse
+
 from typing import Any
+from httpx import Response
 
 #=======================================================================================================================
 #--------------------------------------------------------- API ---------------------------------------------------------
 # Status Code
-def assert_status_code(response: Any, expected: int):
+def assert_status_code(response: Response, expected: int):
     """
     Проверка Status Code
 
@@ -22,7 +23,7 @@ def assert_status_code(response: Any, expected: int):
 """
 
 # Method
-def assert_method(response: Any, expected: str):
+def assert_method(response: Response, expected: str):
     """
     Проверяет Request Method.
 
@@ -49,7 +50,7 @@ def assert_equal(actual: Any, expected: Any, field_name: str):
     :raise AssertionError - если значения не совпадают
     """
     assert actual == expected, f"""
-❌Values are not equal in fields (keys) —> "{field_name}"
+❌Values are not equal in field (key) —> "{field_name}"
 🔸Expected value: {expected}
 🔹Actual value:   {actual}
 """

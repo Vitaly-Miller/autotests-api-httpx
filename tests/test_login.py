@@ -7,7 +7,7 @@ from clients.auth.auth_client import AuthClient
 from clients.auth.auth_schema import LoginRequestSchema, LoginResponseSchema
 from http import HTTPStatus, HTTPMethod
 from tests.conftest import UserFullSchema
-from tools.assertions.auth import assert_login_response
+from tools.assertions.auth import assert_login_response_fields
 from tools.assertions.base import assert_status_code, assert_method
 from tools.assertions.schema import validation_json_schema
 
@@ -28,8 +28,8 @@ def test_login(create_user: UserFullSchema, auth_client: AuthClient):  # Пер�
     # Base assertions
     assert_status_code(response, HTTPStatus.OK)   # проверка статус-кода
     assert_method(response, HTTPMethod.POST)      # проверка метода запроса
-    # Authentication assertions
-    assert_login_response(response=response)                        # Проверка на НЕпустоту полей (6 in 1)
+    # Authentication (Log in) assertions
+    assert_login_response_fields(response=response)                # Проверка на НЕпустоту полей (6 in 1)
     # Validation JSON Schema
     validation_json_schema(response, LoginResponseSchema)
 
