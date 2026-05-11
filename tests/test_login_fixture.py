@@ -1,0 +1,40 @@
+"""
+Test Log in (Authentication) - by fixture
+"""
+import pytest
+from httpx import Response
+from clients.auth.auth_schema import LoginResponseSchema
+from http import HTTPStatus, HTTPMethod
+
+from tests.conftest import auth_api
+from tools.assertions.auth import assert_login_response
+from tools.assertions.base import assert_status_code, assert_method
+from tools.assertions.schema import validation_json_schema
+
+#=======================================================================================================================
+"""
+---------------------------------------------------------- ⚠️-----------------------------------------------------------
+Думаю, нет смысла в API-фикстурах для тестируемого функционала. 
+Потому, что логика загоняется "под капот", а тест нужен ЖИВОЙ.
+- А в живом тесте применять API-МЕТОДЫ для дальнейшей обработки Ассертами.
+- Для PRE- POST-conditions применять Pydantic-фикстуры
+...
+✨НУ ЕСЛИ ПРИПРЕТ - можно и загнать всю базовую логику и в фикстуры для минимизации кода в тестах
+------------------------------------------------------- ⬇⬇︎⬇︎⬇︎ --------------------------------------------------------
+"""
+@pytest.mark.smoke
+@pytest.mark.users
+def test_login(auth_api: Response):          # Передача фикстуры 2-in-1 (СОЗДАНИЯ ПОЛЬЗОВАТЕЛЯ c ✨АВТОРИЗАЦИЕЙ)
+
+    response = auth_api                      # Сохраняем ответ в переменную...
+                                             # ...✨НО можно фикстуру сразу загонять в ассерты.
+
+    #---------------------------------------------------- Assertions ---------------------------------------------------
+    # Base assertions
+    assert_status_code(response, HTTPStatus.OK)   # проверка статус-кода
+    assert_method(response, HTTPMethod.POST)      # проверка метода запроса
+    # Authentication assertions
+    assert_login_response(response=response)                        # Проверка на НЕпустоту полей (6-in-1)
+    # Validation JSON Schema
+    validation_json_schema(response, LoginResponseSchema)
+#=======================================================================================================================

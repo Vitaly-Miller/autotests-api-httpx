@@ -79,3 +79,31 @@ class GetUserMeResponseSchema(BaseUserResponseSchema):
     """
     pass
 #-----------------------------------------------------------------------------------------------------------------------
+
+
+#==================================================== Fixture Shema ✨==================================================
+#------------------------------------------ User Full Schema (Request + Response) --------------------------------------
+# Схема объединенных данных пользователя (Request + Response)
+class UserFullSchema(BaseModel):
+    """
+    Объединенные данные о пользователе из Request и Response в формате Pydantic-model
+
+    Request  -> Данные о пользователе (первичные)
+    Response -> Данные о пользователе (первичные, КРОМЕ password) + User ID и еще...
+    """
+    request: CreateUserRequestSchema
+    response: CreateUserResponseSchema
+
+    # Оперативные данные (для быстрого доступа по .методу)
+    @property
+    def email(self) -> str:
+        return self.request.email            # Email
+
+    @property
+    def password(self) -> str:
+        return self.request.password         # Password
+
+    @property
+    def user_id(self) -> str:
+        return self.response.user.id         # User ID
+#-----------------------------------------------------------------------------------------------------------------------
