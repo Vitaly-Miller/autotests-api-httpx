@@ -1,7 +1,6 @@
 """
 Base assertions
 """
-
 from typing import Any
 from httpx import Response
 
@@ -46,13 +45,13 @@ def assert_equal(actual: Any, expected: Any, field_name: str):
     (exemple: response_data.user.email == create_user_payload.email)
     :param actual: Actual value
     :param expected: Expected value
-    :param field_name: Field name ("key")
+    :param field_name: Field name ('key') - для вывода в сообщении об ошибке
     :raise AssertionError - если значения не совпадают
     """
     assert actual == expected, f"""
 ❌Values are not equal in field (key) —> "{field_name}"
-🔸Expected value: {expected}
-🔹Actual value:   {actual}
+🔸Expected: "{field_name}": {expected}
+🔹Actual:   "{field_name}": {actual}
 """
 
 # Value is NOT EMPTY
@@ -66,8 +65,8 @@ def assert_is_true(actual: Any, field_name: str):
     """
     assert actual, f"""
 ❌"{field_name}" value is empty!
-🔸Expected value: NOT empty
-🔹Actual value:   Empty (None)
+🔸Expected value: "..some value.."
+🔹Actual value:   Empty/None
 """
 
 # Value length

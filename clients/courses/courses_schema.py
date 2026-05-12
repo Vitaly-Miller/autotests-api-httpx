@@ -50,22 +50,6 @@ class UpdateCourseRequestSchema(BaseModel):
 
 
 #--------------------------------------------------- Create Course -----------------------------------------------------
-class PreviewFileSchema(FileSchema):
-    """
-    Схема ключа "previewFile": {}
-
-    Наследуется: FileSchema
-    """
-    pass
-
-class CreatedByUserSchema(UserSchema):
-    """
-    Схема ключа "createdByUser": {}
-
-    Наследуется: UserSchema
-    """
-    pass
-
 class CourseSchema(BaseModel):
     """
     Схема ключа "course": {}
@@ -77,9 +61,9 @@ class CourseSchema(BaseModel):
     max_score: int = Field(alias='maxScore')
     min_score: int = Field(alias='minScore')
     description: str
-    preview_file: PreviewFileSchema = Field(alias='previewFile')
+    preview_file: FileSchema = Field(alias='previewFile')
     estimated_time: str = Field(alias='estimatedTime')
-    created_by_user: CreatedByUserSchema = Field(alias='createdByUser')
+    created_by_user: UserSchema = Field(alias='createdByUser')
 
 class CreateCourseResponseSchema(BaseModel):
     """

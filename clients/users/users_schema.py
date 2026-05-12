@@ -32,7 +32,7 @@ class UpdateUserRequestSchema(BaseModel):
 
 
 #================================================= ⬇︎RESPONSE Schema ===================================================
-#-------------------------------------------------------- BASE ---------------------------------------------------------
+#----------------------------------------------------- BASE User--------------------------------------------------------
 class UserSchema(BaseModel):
     """
     Базовая схема ключа "user": {}
@@ -45,7 +45,7 @@ class UserSchema(BaseModel):
     first_name: str = Field(alias='firstName')
     middle_name: str = Field(alias='middleName')
 
-class BaseUserResponseSchema(BaseModel):
+class UserResponseSchema(BaseModel):
     """
     Базовая схема API ответа при работе с пользователями
 
@@ -54,7 +54,7 @@ class BaseUserResponseSchema(BaseModel):
     user: UserSchema
 
 #---------------------------------------------------- Create User ------------------------------------------------------
-class CreateUserResponseSchema(BaseUserResponseSchema):
+class CreateUserResponseSchema(UserResponseSchema):
     """
     Схема ответа при создании нового пользователя
 
@@ -62,7 +62,7 @@ class CreateUserResponseSchema(BaseUserResponseSchema):
     """
     pass
 #------------------------------------------------------ Get User -------------------------------------------------------
-class GetUserResponseSchema(BaseUserResponseSchema):
+class GetUserResponseSchema(UserResponseSchema):
     """
     Схема ответа при получении данных пользователя по User ID
 
@@ -71,9 +71,9 @@ class GetUserResponseSchema(BaseUserResponseSchema):
     """
     pass
 #----------------------------------------------------- Get User Me -----------------------------------------------------
-class GetUserMeResponseSchema(BaseUserResponseSchema):
+class GetUserMeResponseSchema(UserResponseSchema):
     """
-    Схема ответа при получении данных текущего пользователя
+    Схема ответа при получении данных ТЕКУЩЕГО пользователя
 
     Наследуется: BaseUserResponseSchema
     """

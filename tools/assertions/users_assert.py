@@ -3,7 +3,7 @@ Users assertions
 """
 from httpx import Response
 from clients.users.users_schema import CreateUserRequestSchema, CreateUserResponseSchema
-from tools.assertions.base import assert_equal
+from tools.assertions.base_assert import assert_equal
 
 #=======================================================================================================================
 def assert_create_user_fields(response: Response, create_user_payload: CreateUserRequestSchema = None):
@@ -19,10 +19,10 @@ def assert_create_user_fields(response: Response, create_user_payload: CreateUse
 
     """
 
-    # JSON-ответ —> Pydantic-модель (десериализация для Assertions)
+    # JSON-ответ —> Pydantic-model (десериализация для Assertions)
     response_model = CreateUserResponseSchema.model_validate_json(response.text)
 
-    # Условие, если не передать create_user_payload, то вытащить Request из Response десериализовать
+    # Условие, если не передать create_user_payload, то вытащить Request из Response и десериализовать
     if not create_user_payload:
         create_user_payload = CreateUserRequestSchema.model_validate_json(response.request.content)
 

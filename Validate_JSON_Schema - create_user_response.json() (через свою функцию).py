@@ -6,7 +6,7 @@ Validate JSON Schema - create_user_response.json()
 
 from clients.users.public_users_client import get_public_users_client
 from clients.users.users_schema import CreateUserRequestSchema, CreateUserResponseSchema
-from tools.assertions.schema import validation_json_schema
+from tools.assertions.schema_assert import validation_json_schema
 from tools.data_generator import fake
 
 #=======================================================================================================================

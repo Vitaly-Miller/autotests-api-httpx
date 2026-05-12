@@ -7,9 +7,9 @@ import pytest
 from httpx import Response
 from clients.users.users_schema import CreateUserResponseSchema
 from http import HTTPStatus, HTTPMethod
-from tools.assertions.base import assert_status_code, assert_method
-from tools.assertions.schema import validation_json_schema
-from tools.assertions.users import assert_create_user_fields
+from tools.assertions.base_assert import assert_status_code, assert_method
+from tools.assertions.schema_assert import validation_json_schema
+from tools.assertions.users_assert import assert_create_user_fields
 
 #=======================================================================================================================
 @pytest.mark.smoke

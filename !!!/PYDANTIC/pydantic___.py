@@ -2,6 +2,8 @@
 Pydantic ______
 """
 import uuid
+
+from faker import Faker
 from pydantic import BaseModel, Field
 
 #=======================================================================================================================
@@ -31,7 +33,7 @@ obj = {
 
 # Создаем Основную схему
 class CourseSchema(BaseModel):
-    id: str = Field(default_factory=lambda: str(uuid.uuid4()))             # 👈 Генерация уникального ID
+    id: str = Field(default_factory=lambda: Faker().uuid4())             # 👈 Генерация уникального ID
     title: str = 'Playwright'
     max_score: int = Field(alias='maxScore', default=1000)
     min_score: int = Field(alias='minScore', default=100)
