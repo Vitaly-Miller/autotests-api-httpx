@@ -4,7 +4,7 @@ Authentication Pydantic Schema
 from pydantic import BaseModel, Field, EmailStr
 from tools.data_generator import fake
 
-#================================================== ⬆︎REQUEST Schema ===================================================
+"""================================================ ⬆︎REQUEST Schema ================================================"""
 #----------------------------------------------------- Create User -----------------------------------------------------
 class CreateUserRequestSchema(BaseModel):
     """
@@ -31,7 +31,7 @@ class UpdateUserRequestSchema(BaseModel):
     middle_name: str | None = Field(alias='middleName', default_factory=fake.middle_name)
 
 
-#================================================= ⬇︎RESPONSE Schema ===================================================
+"""=============================================== ⬇︎RESPONSE Schema ================================================"""
 #----------------------------------------------------- BASE User--------------------------------------------------------
 class UserSchema(BaseModel):
     """

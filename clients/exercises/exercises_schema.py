@@ -2,10 +2,9 @@
 Exercises Pydantic Schema
 """
 from pydantic import BaseModel, Field
-
 from tools.data_generator import fake
 
-#================================================== ⬆︎REQUEST Schema ===================================================
+"""================================================== ⬆︎REQUEST Schema =============================================="""
 #---------------------------------------------------- Get Exercises ----------------------------------------------------
 class GetExercisesRequestSchema(BaseModel):
     """
@@ -46,7 +45,7 @@ class UpdateExerciseRequestSchema(BaseModel):
     estimated_time: str | None = Field(alias='estimatedTime', default_factory=fake.estimated_time)
 
 
-#================================================== ⬇︎RESPONSE Schema ==================================================
+"""================================================ ⬇︎RESPONSE Schema ==============================================="""
 #---------------------------------------------------- Get Exercises ----------------------------------------------------
 
 

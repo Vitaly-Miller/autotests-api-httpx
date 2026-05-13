@@ -48,7 +48,6 @@ class FilesClient(APIClient):
         response = self.create_file_api(payload)
         return CreateFileResponseSchema.model_validate_json(response.text)  # ⚠ <- Валидируем ответ (любой) -> Model
 
-
     #------------------------------------------------ Delete File ------------------------------------------------------
     def delete_file_api(self, file_id: str) -> Response:
         """

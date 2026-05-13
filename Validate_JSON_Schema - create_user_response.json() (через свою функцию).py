@@ -1,6 +1,5 @@
 """
 Валидация JSON Schema - create_user_response.json()
-Validate JSON Schema - create_user_response.json()
 """
 
 

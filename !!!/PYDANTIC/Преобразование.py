@@ -33,7 +33,7 @@ model_from_dict = DataSchema.model_validate(data_dict)            # first_name='
 # JSON -> Model                ┌──────┬──────┐
 model_from_json = DataSchema.model_validate_json(data_json)       # first_name='John' last_name='Connor'
 
-#----------------------------------------------- SERIALIZATION (dump ⮕) -----------------------------------------------
+#------------------------------------------ SERIALIZATION (dump ⮕) (Парсинг) ------------------------------------------
 # Model -> Python Dict       ┌─────┐
 model_to_dict = data_model.model_dump()                           # {'first_name': 'John', 'last_name': 'Connor'}
 # Model -> JSON-совместимый Dict✨┌─────┐╴╴╴╴╴┐

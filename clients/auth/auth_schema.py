@@ -4,7 +4,7 @@ Authentication Pydantic Schema
 from pydantic import BaseModel, Field
 from tools.data_generator import fake
 
-#================================================== ⬆︎REQUEST Schema ===================================================
+"""================================================ ⬆︎REQUEST Schema ================================================"""
 #------------------------------------------------------Auth/Login ------------------------------------------------------
 class AuthUserSchema(BaseModel):
     """
@@ -36,7 +36,7 @@ class RefreshRequestSchema(BaseModel):
     refresh_token: str = Field(alias='refreshToken', default_factory=fake.uuid4)
 
 
-#================================================== ⬆︎RESPONSE schema ==================================================
+"""================================================ ⬇︎RESPONSE schema ==============================================="""
 #------------------------------------------------------ Auth/Login -----------------------------------------------------
 class TokenSchema(BaseModel):
     """

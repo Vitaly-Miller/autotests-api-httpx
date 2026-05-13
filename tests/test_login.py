@@ -5,7 +5,7 @@ import pytest
 from clients.auth.auth_client import AuthClient
 from clients.auth.auth_schema import LoginRequestSchema, LoginResponseSchema
 from http import HTTPStatus, HTTPMethod
-from tests.conftest import UserFullSchema
+from clients.users.users_schema import UserFullSchema
 from tools.assertions.auth_assert import assert_login_response_fields
 from tools.assertions.base_assert import assert_status_code, assert_method
 from tools.assertions.schema_assert import validation_json_schema

@@ -3,7 +3,6 @@
 Хранение фикстур
 """
 import json
-
 import pytest
 from httpx import Response
 from clients.auth.auth_client import get_auth_client, AuthClient
