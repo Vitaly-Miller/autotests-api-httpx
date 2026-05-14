@@ -9,7 +9,7 @@ from tests.conftest import auth_api
 from tools.assertions.auth_assert import assert_login_response_fields
 from tools.assertions.base_assert import assert_status_code, assert_method
 from tools.assertions.schema_assert import validation_json_schema
-
+from tools.tool import Tool
 
 #=======================================================================================================================
 """
@@ -38,4 +38,5 @@ def test_login(auth_api: Response):          # Передача фикстуры
     # Validation JSON Schema
     validation_json_schema(response, LoginResponseSchema)
 
+    Tool.api_report(response)
 #=======================================================================================================================

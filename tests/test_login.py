@@ -9,6 +9,7 @@ from clients.users.users_schema import UserFullSchema
 from tools.assertions.auth_assert import assert_login_response_fields
 from tools.assertions.base_assert import assert_status_code, assert_method
 from tools.assertions.schema_assert import validation_json_schema
+from tools.tool import Tool
 
 #=======================================================================================================================
 @pytest.mark.smoke
@@ -31,5 +32,7 @@ def test_login(create_user: UserFullSchema, auth_client: AuthClient):  # Пер�
     assert_login_response_fields(response=response)                # Проверка на НЕпустоту полей (6 in 1)
     # Validation JSON Schema
     validation_json_schema(response, LoginResponseSchema)
+
+    Tool.api_report(response)
 
 #=======================================================================================================================

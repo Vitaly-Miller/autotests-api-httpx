@@ -55,14 +55,16 @@ class Tool:
 
     @staticmethod
     def api_report(response):
-        Report.api_title()
-        Report.api_url(response)
-        Report.api_method(response)
-        Report.api_status_code(response)
-        Report.api_response_time(response)
-        Report.api_request_body(response)
-        Report.api_response_body(response)
-        Report.api_request_headers(response)
-        Report.api_response_headers(response)
+        report = Report(response)       # Экземпляр класса (инициализация)
+        report.api_title()              # Методы класса:   (вызовы)
+        report.api_url()
+        report.api_method()
+        report.api_status_code()
+        report.api_response_time()
+        report.api_request_body()
+        report.api_response_body()
+        report.api_request_headers()
+        report.api_response_headers()
+
 
     #-------------------------------------------------------------------------------------------------------------------

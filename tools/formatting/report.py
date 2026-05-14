@@ -6,49 +6,47 @@ from tools.formatting.colors import ANSI
 
 #=======================================================================================================================
 class Report:
+    def __init__(self, response):
+        self.response = response
     #-------------------------------------------------- Base -----------------------------------------------------------
     # Title
     @staticmethod
     def api_title():
-        text = f'{ANSI.B_CYAN} 🅰🅿︎🅸 🆁🅴🅿︎🅾🆁🆃 {ANSI.GRAY} '
-        print(f'\n\n\n{text.center(64,  " ")}')
+        print(f'\n\n{ANSI.GRAY}{'—'*12}{ANSI.B_CYAN} API REPORT {ANSI.GRAY}{'—'*12}{ANSI.RESET}')
 
     # URL
-    @staticmethod
-    def api_url(response):
-        obj = response.request.url
-        print(f'\n{ANSI.B_CYAN}┌╴{ANSI.RESET}Request URL:\t  {obj}{ANSI.RESET}')
+    def api_url(self):
+        url = self.response.request.url
+        print(f'\n{ANSI.B_CYAN}┌╴{ANSI.RESET}Request URL:\t  {url}{ANSI.RESET}')
 
     # Method
-    @staticmethod
-    def api_method(response):
-        obj = response.request.method
-        if obj == 'GET':       color = ANSI.B_GREEN
-        elif obj == 'POST':    color = ANSI.BEIGE
-        elif obj == 'PUT':     color = ANSI.B_BLUE
-        elif obj == 'PATCH':   color = ANSI.B_PURPLE
-        elif obj == 'DELETE':  color = ANSI.B_RED
-        elif obj == 'OPTIONS': color = ANSI.PINK
+    def api_method(self):
+        method = self.response.request.method
+        if method == 'GET':       color = ANSI.B_GREEN
+        elif method == 'POST':    color = ANSI.BEIGE
+        elif method == 'PUT':     color = ANSI.B_BLUE
+        elif method == 'PATCH':   color = ANSI.B_PURPLE
+        elif method == 'DELETE':  color = ANSI.B_RED
+        elif method == 'OPTIONS': color = ANSI.PINK
         else: color = ANSI.RESET
-        print(f'{ANSI.B_CYAN}├╴{ANSI.RESET}HTTP Method:\t  {color}{obj}{ANSI.RESET}')
+        print(f'{ANSI.B_CYAN}├╴{ANSI.RESET}HTTP Method:\t  {color}{method}{ANSI.RESET}')
 
     # Status code
-    @staticmethod
-    def api_status_code(response):
-        obj = response.status_code
-        if obj < 200:   color = ANSI.SUNRISE       # 1xx
-        elif obj < 300: color = ANSI.BRIGHT_GREEN  # 2xx
-        elif obj < 400: color = ANSI.SUNRISE       # 3xx
-        elif obj < 500: color = ANSI.RED           # 4xx
-        elif obj < 600: color = ANSI.ORANGE        # 5xx
+    def api_status_code(self):
+        code = self.response.status_code                 # Сам код        (например: 200)
+        reason = self.response.reason_phrase             # Описание кода  (например: OK)
+        if code < 200:   color = ANSI.SUNRISE       # 1xx
+        elif code < 300: color = ANSI.BRIGHT_GREEN  # 2xx
+        elif code < 400: color = ANSI.SUNRISE       # 3xx
+        elif code < 500: color = ANSI.RED           # 4xx
+        elif code < 600: color = ANSI.ORANGE        # 5xx
         else: color = ANSI.RESET
-        print(f'{ANSI.B_CYAN}├╴{ANSI.RESET}Status code:\t  {color}{obj}{ANSI.RESET}')
+        print(f'{ANSI.B_CYAN}├╴{ANSI.RESET}Status code:\t  {color}{code}-{reason}{ANSI.RESET}')
 
     # Response time
-    @staticmethod
-    def api_response_time(response, max_sec=5):    # ⚠️секунды
-        obj = response.elapsed.total_seconds()
-        round_response_time = round(obj, 3)   # 0.12345 -> 0.123
+    def api_response_time(self, max_sec=5.0):            # Max sec limit = ⚠️default value
+        response_time = self.response.elapsed.total_seconds()     # 0.12345
+        round_response_time = round(response_time, 3)        # 0.12345 —> 0.123 (округление)
         if round_response_time < max_sec:
             color = ANSI.DARK_GREEN
         else:
@@ -58,39 +56,37 @@ class Report:
 
     #---------------------------------------------- REQUEST / RESPONSE -------------------------------------------------
     # REQUEST Body ⮕
-    @staticmethod
-    def api_request_body(response):
-        print(f'{ANSI.GRAY}{'|'*17}{ANSI.GREEN} REQUEST Body{ANSI.GRAY}: ⮕ {'|'*17}')
+    def api_request_body(self):
+        print(f'\n{ANSI.GREEN} REQUEST Body{ANSI.GRAY}: ⮕')
 
-        if response.request.content:
-            obj = json.loads(response.request.content)
-            obj_json = json.dumps(obj, indent=4, ensure_ascii=False)
-            print(f'{obj_json}{ANSI.RESET}')
+        if self.response.request.content:
+            request_body = json.loads(self.response.request.content)
+            request_body_json = json.dumps(request_body, indent=4, ensure_ascii=False)
+            print(request_body_json)
         else:
-            print(f'{{\n\t<None>\n}}{ANSI.RESET}')
+            print(f'{{\n\t<None>\n}}')
 
     # RESPONSE Body ⬅︎
-    @staticmethod
-    def api_response_body(response):
-        print(f'{ANSI.GRAY}{'|'*17}{ANSI.BLUE} RESPONSE Body{ANSI.GRAY}: ⬅︎ {'|'*16}')
-        obj = response.json()
-        obj_json = json.dumps(obj, indent=4, ensure_ascii=False)
-        print(f'{obj_json}{ANSI.RESET}')
+    def api_response_body(self):
+        print(f'\n{ANSI.BLUE} RESPONSE Body{ANSI.GRAY}: ⬅︎')
+        response_body = self.response.json()
+        response_body_json = json.dumps(response_body, indent=4, ensure_ascii=False)
+        print(response_body_json)
+
 
     # REQUEST Headers ⮕
-    @staticmethod
-    def api_request_headers(response):
-        print(f'{ANSI.GRAY}{'|'*16}{ANSI.BROWN} REQUEST Headers{ANSI.GRAY}: ⮕ {'|'*15}')
-        obj = dict(response.request.headers)
-        obj_json = json.dumps(obj, indent=4, ensure_ascii=False)
-        print(f'{obj_json}{ANSI.RESET}')
+    def api_request_headers(self):
+        print(f'\n{ANSI.BROWN} REQUEST Headers{ANSI.GRAY}: ⮕')
+        request_headers = dict(self.response.request.headers)
+        request_headers_json = json.dumps(request_headers, indent=4, ensure_ascii=False)
+        print(request_headers_json)
 
     # RESPONSE Headers ⬅︎
-    @staticmethod
-    def api_response_headers(response):
-        print(f'{ANSI.GRAY}{'|'*15}{ANSI.BROWN_ORANGE} RESPONSE Headers{ANSI.GRAY}: ⬅︎ {'|'*15}')
-        obj = dict(response.headers)
-        obj_json = json.dumps(obj, indent=4, ensure_ascii=False)
-        print(f'{obj_json}{ANSI.RESET}')
+    def api_response_headers(self):
+        print(f'\n{ANSI.BROWN_ORANGE} RESPONSE Headers{ANSI.GRAY}: ⬅︎')
+        response_headers = dict(self.response.headers)
+        response_headers_json = json.dumps(response_headers, indent=4, ensure_ascii=False)
+        print(response_headers_json)
+        print(f'{'—'*36}{ANSI.RESET}')
 
 #-----------------------------------------------------------------------------------------------------------------------

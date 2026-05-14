@@ -11,6 +11,7 @@ from tools.assertions.base_assert import assert_status_code, assert_method
 from tools.assertions.schema_assert import validation_json_schema
 from tools.assertions.users_assert import assert_create_user_fields
 
+
 #=======================================================================================================================
 @pytest.mark.smoke
 @pytest.mark.users
