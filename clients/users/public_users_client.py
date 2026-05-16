@@ -13,26 +13,26 @@ class PublicUsersClient(APIClient):
     ENDPOINT = '/users'
     #------------------------------------------------- Create User  ----------------------------------------------------
     # API 🟨
-    def create_user_api(self, payload: CreateUserRequestSchema) -> httpx.Response:
+    def create_user_api(self, create_user_data: CreateUserRequestSchema) -> httpx.Response:
         """
         Метод для СОЗДАНИЯ нового пользователя
 
-        :param payload: Данные для создания пользователя в формате Pydantic-модели
+        :param create_user_data: (payload) Данные для создания пользователя в формате Pydantic-модели
         :return: httpx.Response
         """
         return self.post(
             url=self.ENDPOINT,
-            json=payload.model_dump(by_alias=True))  # ⚠ сериализация Model —> Dict (т.к. в payload передаем Pydantic-модель) + 🐫CamelCase
+            json=create_user_data.model_dump(by_alias=True))  # ⚠ сериализация Model —> Dict (т.к. в payload передаем Pydantic-модель) + 🐫CamelCase
 
     # Pydantic-model
-    def create_user(self, payload: CreateUserRequestSchema) -> CreateUserResponseSchema:
+    def create_user(self, create_user_data: CreateUserRequestSchema) -> CreateUserResponseSchema:
         """
         Метод для СОЗДАНИЯ нового пользователя с получением данных созданного пользователя в формате Pydantic-model.
 
-        :param payload: Данные для создания нового пользователя в формате Pydantic-модели
+        :param create_user_data: (payload) Данные для создания нового пользователя в формате Pydantic-модели
         :return: Данные созданного пользователя в формате Pydantic-model
         """
-        response = self.create_user_api(payload)                            # Используем API-метод создания нового пользователя
+        response = self.create_user_api(create_user_data)                            # Используем API-метод создания нового пользователя
         return CreateUserResponseSchema.model_validate_json(response.text)  # Валидируем ответ (любой) —> Model
 
 

@@ -17,9 +17,9 @@ from tools.assertions.users_assert import assert_create_user_fields
 def test_create_user_1(public_users_client: PublicUsersClient):     # Передаем в тест фикстуру Public client
 
     # Инициализация Pydantic-модели с fake данными нового пользователя для регистрации
-    create_user_payload = CreateUserRequestSchema()                 # by Default (fake generated)
+    create_user_data = CreateUserRequestSchema()                 # by Default (fake generated)
     # ▶ Запрос на создание пользователя через API-метод
-    response = public_users_client.create_user_api(payload=create_user_payload)   # Передаем сгенерированные в Pydantic-схеме fake данные нового пользователя
+    response = public_users_client.create_user_api(create_user_data=create_user_data)   # Передаем сгенерированные в Pydantic-схеме fake данные нового пользователя
 
     #---------------------------------------------------- Assertions ---------------------------------------------------
     # Base assertions

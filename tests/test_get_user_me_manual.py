@@ -14,13 +14,13 @@ from tools.tool import Tool
 def test_get_user_me():  # Передача фикстур СОЗДАНИЯ ПОЛЬЗОВАТЕЛЯ и АВТОРИЗАЦИИ
     #---------------------------------------------- Pre-conditions -----------------------------------------------------
     # 1. Create User (Создаем пользователя)
-    public_users_client = get_public_users_client()          # Получаем экземпляр PublicUsersClient c уже настроенным HTTP-клиентом с Base URL
-    create_user_payload = CreateUserRequestSchema()          # Инициализируем-генерируем данные для создания пользователя через схему
-    public_users_client.create_user(payload=create_user_payload) # 🟨Post-запрос на создание пользователя
+    public_users_client = get_public_users_client()       # Получаем экземпляр PublicUsersClient c уже настроенным HTTP-клиентом с Base URL
+    create_user_data = CreateUserRequestSchema()          # Инициализируем-генерируем данные для создания пользователя через схему
+    public_users_client.create_user(create_user_data=create_user_data) # 🟨Post-запрос на создание пользователя
 
-    auth_data = AuthUserSchema(                              # Инициализируем данные для авторизации через схему. Сохраняем в переменную Email и Pass
-        email=create_user_payload.email,                     # Вытаскиваем .Email из модели
-        password=create_user_payload.password)               # Вытаскиваем .Password из модели
+    auth_data = AuthUserSchema(                           # Инициализируем данные для авторизации через схему. Сохраняем в переменную Email и Pass
+        email=create_user_data.email,                     # Вытаскиваем .Email из модели
+        password=create_user_data.password)               # Вытаскиваем .Password из модели
 
 
     # 2. Login (НЕ НУЖЕН. АВТОРИЗИРУЕТСЯ ДАЛЕЕ В ОСНОВНОМ ЗАПРОСЕ)

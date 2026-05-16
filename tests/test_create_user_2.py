@@ -17,16 +17,16 @@ from tools.assertions.users_assert import assert_create_user_fields
 def test_create_user_2(public_users_client: PublicUsersClient):     # Передаем в тест фикстуру Public client
 
     # Инициализация Pydantic-модели с fake данными нового пользователя для регистрации
-    create_user_payload = CreateUserRequestSchema()                 # by Default (fake generated)
+    create_user_data = CreateUserRequestSchema()                 # by Default (fake generated)
     # ▶ Запрос на создание пользователя через API-метод
-    response = public_users_client.create_user_api(payload=create_user_payload)   # Передаем сгенерированные в Pydantic-схеме fake данные нового пользователя
+    response = public_users_client.create_user_api(create_user_data=create_user_data)   # Передаем сгенерированные в Pydantic-схеме fake данные нового пользователя
 
     #---------------------------------------------------- Assertions ---------------------------------------------------
     # Base assertions
     assert_status_code(response, HTTPStatus.OK)    # проверка статус-кода
     assert_method(response, HTTPMethod.POST)       # проверка метода запроса
     # Create User assertions
-    assert_create_user_fields(response, create_user_payload)    # Проверка совпадения полей запроса и ответа (4 in 1)
+    assert_create_user_fields(response, create_user_data)    # Проверка совпадения полей запроса и ответа (4 in 1)
     # Validation JSON Schema
     validation_json_schema(response, CreateUserResponseSchema)
 
