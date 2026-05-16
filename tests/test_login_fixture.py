@@ -3,7 +3,7 @@ Test Log in (Authentication) - by fixture
 """
 import pytest
 from httpx import Response
-from clients.auth.auth_schema import LoginResponseSchema
+from clients.auth.auth_schema import AuthUserResponseSchema
 from http import HTTPStatus, HTTPMethod
 from tools.assertions.auth_assert import assert_login_response_fields
 from tools.assertions.base_assert import assert_status_code, assert_method
@@ -26,7 +26,7 @@ from tools.tool import Tool
 def test_login(create_and_auth_user_api: Response):          # Передача фикстуры 2-in-1 (СОЗДАНИЯ ПОЛЬЗОВАТЕЛЯ c ✨АВТОРИЗАЦИЕЙ)
 
     response = create_and_auth_user_api                      # Сохраняем ответ в переменную...
-                                             # ...✨НО можно фикстуру сразу загонять в ассерты.
+                                                             # ...✨НО можно фикстуру сразу загонять в ассерты.
 
     #---------------------------------------------------- Assertions ---------------------------------------------------
     # Base assertions
@@ -35,7 +35,7 @@ def test_login(create_and_auth_user_api: Response):          # Передача 
     # Authentication assertions
     assert_login_response_fields(response=response)                 # Проверка на НЕпустоту полей (6-in-1)
     # Validation JSON Schema
-    validation_json_schema(response, LoginResponseSchema)
+    validation_json_schema(response, AuthUserResponseSchema)
 
     Tool.api_report(response)
 #=======================================================================================================================

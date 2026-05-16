@@ -2,7 +2,7 @@
 Authentication (Log in) assertions
 """
 from httpx import Response
-from clients.auth.auth_schema import LoginResponseSchema
+from clients.auth.auth_schema import AuthUserResponseSchema
 from tools.assertions.base_assert import assert_equal, assert_value_len, assert_is_true
 
 #=======================================================================================================================
@@ -15,7 +15,7 @@ def assert_login_response_fields(response: Response):
     """
 
     # JSON-ответ —> Pydantic-model (десериализация для Assertions)
-    response_model = LoginResponseSchema.model_validate_json(response.text)
+    response_model = AuthUserResponseSchema.model_validate_json(response.text)
 
     # Assertions 6-in-1:
     assert_is_true(response_model.token.token_type, 'token_type')           # Поле не пустое ┐

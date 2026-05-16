@@ -4,7 +4,7 @@
 """
 import httpx
 from clients.auth.auth_client import get_auth_client
-from clients.auth.auth_schema import LoginRequestSchema, AuthUserSchema
+from clients.auth.auth_schema import AuthUserSchema
 
 #=======================================================================================================================
 #------------------------------------------------ http.Client (Private) -----------------------------------------------
@@ -18,10 +18,10 @@ def get_private_http_client(auth_data: AuthUserSchema) -> httpx.Client:
     :return: Готовый к использованию объект httpx.Client с установленным заголовком Authorization
     """
     auth_client = get_auth_client()                           # Инициализируем AuthClient для аутентификации
-    login_payload = LoginRequestSchema(                       # Инициализируем payload для аутентификации
+    auth_data = AuthUserSchema(                       # Инициализируем payload для аутентификации
         email=auth_data.email,
         password=auth_data.password)
-    login_response = auth_client.login(payload=login_payload) # 🟨POST-запрос на аутентификацию (login) -> LoginResponseSchema  (Pydantic-Model)
+    login_response = auth_client.login(auth_data=auth_data)   # 🟨POST-запрос на аутентификацию (login) -> LoginResponseSchema  (Pydantic-Model)
     #token = login_response["token"]["accessToken"]           # ⚠ Обращение по [] индексу   - Для JSON-ответа без валидации      (Вытаскиваем токен из отела ответа)
     token = login_response.token.access_token                 # ⚠ Обращение через .атрибут  - Для валидированной Pydantic-Model  (Вытаскиваем токен из отела ответа)
     auth_headers = {'Authorization': f'Bearer {token}'}       # Сформируем заголовок для аутентификации

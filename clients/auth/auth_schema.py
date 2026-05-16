@@ -15,7 +15,6 @@ class AuthUserSchema(BaseModel):
     email: str = Field(default_factory=fake.email)
     password: str = Field(default_factory=fake.password)
 
-
 class LoginRequestSchema(BaseModel):
     """
     Схема запроса на Log in пользователя
@@ -48,6 +47,14 @@ class TokenSchema(BaseModel):
     access_token: str = Field(alias='accessToken')
     refresh_token: str = Field(alias='refreshToken')
 
+class AuthUserResponseSchema(BaseModel):
+    """
+    Схема ответа при Аутентификации/Login
+
+    .
+    """
+    token: TokenSchema
+
 class LoginResponseSchema(BaseModel):
     """
     Схема ответа при Аутентификации/Login
@@ -55,6 +62,7 @@ class LoginResponseSchema(BaseModel):
     .
     """
     token: TokenSchema
+
 #------------------------------------------------------- Refresh -------------------------------------------------------
 
 

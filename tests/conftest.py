@@ -2,11 +2,11 @@
 сonftest.py
 Хранение фикстур
 """
+import httpx
 import json
 import pytest
-from httpx import Response
 from clients.auth.auth_client import get_auth_client, AuthClient
-from clients.auth.auth_schema import LoginRequestSchema, LoginResponseSchema
+from clients.auth.auth_schema import AuthUserResponseSchema, AuthUserSchema
 from clients.users.public_users_client import get_public_users_client, PublicUsersClient
 from clients.users.users_schema import CreateUserRequestSchema, UserFullSchema, CreateUserResponseSchema
 
@@ -73,7 +73,7 @@ def create_user_2(public_users_client: PublicUsersClient) -> CreateUserResponseS
 
 #------------------------------------------------ API —> httpx.Response ------------------------------------------------
 @pytest.fixture
-def create_user_api(public_users_client: PublicUsersClient) -> Response:
+def create_user_api(public_users_client: PublicUsersClient) -> httpx.Response:
     """
     API-фикстура СОЗДАНИЯ ПОЛЬЗОВАТЕЛЯ (Create User)
 
@@ -92,7 +92,7 @@ def create_user_api(public_users_client: PublicUsersClient) -> Response:
 #---------------------------------------------------- Pydantic-model ---------------------------------------------------
 #--- v.1 --- Базируется на объединенной Pydantic-model: UserFullSchema
 @pytest.fixture
-def create_and_auth_user(create_user: UserFullSchema, auth_client: AuthClient) -> LoginResponseSchema:
+def create_and_auth_user(create_user: UserFullSchema, auth_client: AuthClient) -> AuthUserResponseSchema:
     """
     Фикстура АВТОРИЗАЦИИ (Log in) пользователя
 
@@ -100,17 +100,17 @@ def create_and_auth_user(create_user: UserFullSchema, auth_client: AuthClient) -
     :param auth_client: Вложенная фикстура АВТОРИЗАЦИИ пользователя (Log in)
     :return: Response (Pydantic-model)
     """
-    login_payload = LoginRequestSchema(          # Инициализация модели с fake-данными нового пользователя по Pydantic-схеме
-        email=create_user.email,                 # Email из Pydantic-модели UserFullSchema
-        password=create_user.password            # Password из Pydantic-модели UserFullSchema
+    auth_data = AuthUserSchema(              # Инициализация модели с fake-данными нового пользователя по Pydantic-схеме
+        email=create_user.email,             # Email из Pydantic-модели UserFullSchema
+        password=create_user.password        # Password из Pydantic-модели UserFullSchema
     )
-    response = auth_client.login(login_payload)  # ▶ Запрос на Authentication (Log in) через метод. Передаем payload c Email и Password и сохраняем ответ в переменную
-    return response                              # Pydantic-model: LoginResponseSchema
+    response = auth_client.login(auth_data=auth_data)  # ▶ Запрос на Authentication (Log in) через метод. Передаем payload c Email и Password и сохраняем ответ в переменную
+    return response                          # Pydantic-model: LoginResponseSchema
 
 
-#--- v.2 --- Базируется на Парсинге сырого Request Body bytes
+#--- v.2 --- Базируется на Парсинге сырого Request Body (bytes)
 @pytest.fixture
-def create_and_auth_user_2(create_user_api: Response, auth_client: AuthClient) -> LoginResponseSchema:
+def create_and_auth_user_2(create_user_api: httpx.Response, auth_client: AuthClient) -> AuthUserResponseSchema:
     """
     Фикстура АВТОРИЗАЦИИ (Log in) пользователя
 
@@ -118,19 +118,19 @@ def create_and_auth_user_2(create_user_api: Response, auth_client: AuthClient) -
     :param auth_client: Вложенная фикстура АВТОРИЗАЦИИ пользователя (Log in)
     :return: Response (Pydantic-model)
     """
-    request_body = json.loads(create_user_api.request.content)  # ✨Парсинг сырого Request bytes —> {dict}
-    login_payload = LoginRequestSchema(              # Инициализация модели с fake-данными нового пользователя по Pydantic-схеме
-        email=request_body['email'],                 # Email из распарсенного Request Body
-        password=request_body['password']            # Password распарсенного Request Body
+    request_body = json.loads(create_user_api.request.content)  # ✨Парсинг сырого Request Bytes —> {dict}
+    auth_data = AuthUserSchema(             # Инициализация модели с fake-данными нового пользователя по Pydantic-схеме
+        email=request_body['email'],        # Email из распарсенного Request Body
+        password=request_body['password']   # Password распарсенного Request Body
     )
-    response = auth_client.login(login_payload)      # ▶ Запрос на Authentication (Log in) через метод. Передаем payload c Email и Password и сохраняем ответ в переменную
-    return response                                  # Pydantic-model: LoginResponseSchema
+    response = auth_client.login(auth_data=auth_data)  # ▶ Запрос на Authentication (Log in) через метод. Передаем payload c Email и Password и сохраняем ответ в переменную
+    return response                          # Pydantic-model: LoginResponseSchema
 
 
 #------------------------------------------------ API —> httpx.Response ------------------------------------------------
 #--- v.1 --- Базируется на объединенной Pydantic-model: UserFullSchema
 @pytest.fixture
-def create_and_auth_user_api(create_user: UserFullSchema, auth_client: AuthClient) -> Response:
+def create_and_auth_user_api(create_user: UserFullSchema, auth_client: AuthClient) -> httpx.Response:
     """
     API-фикстура АВТОРИЗАЦИИ (Log in) пользователя
 
@@ -138,16 +138,16 @@ def create_and_auth_user_api(create_user: UserFullSchema, auth_client: AuthClien
     :param auth_client: Вложенная фикстура АВТОРИЗАЦИИ пользователя (Log in)
     :return: httpx.Response
     """
-    login_payload = LoginRequestSchema(              # Инициализация модели с fake-данными нового пользователя по Pydantic-схеме
-        email=create_user.email,                     # Email из Pydantic-модели UserFullSchema
-        password=create_user.password                # Password из Pydantic-модели UserFullSchema
+    auth_data = AuthUserSchema(             # Инициализация модели с fake-данными нового пользователя по Pydantic-схеме
+        email=create_user.email,            # Email из Pydantic-модели UserFullSchema
+        password=create_user.password       # Password из Pydantic-модели UserFullSchema
     )
-    response = auth_client.login_api(login_payload)  # ▶ Запрос на Login (Authentication) через API-метод. Передаем payload c Email и Password и сохраняем ответ в переменную
-    return response                                  # httpx.Response
+    response = auth_client.login_api(auth_data=auth_data)  # ▶ Запрос на Login (Authentication) через API-метод. Передаем payload c Email и Password и сохраняем ответ в переменную
+    return response                         # httpx.Response
 
-#--- v.2 --- Базируется на Парсинге сырого Request Body bytes
+#--- v.2 --- Базируется на Парсинге сырого Request Body (bytes)
 @pytest.fixture
-def create_and_auth_user_api_2(create_user_api: Response, auth_client: AuthClient) -> Response:
+def create_and_auth_user_api_2(create_user_api: httpx.Response, auth_client: AuthClient) -> httpx.Response:
     """
     API-фикстура АВТОРИЗАЦИИ (Log in) пользователя
 
@@ -156,12 +156,12 @@ def create_and_auth_user_api_2(create_user_api: Response, auth_client: AuthClien
     :param auth_client: Вложенная фикстура АВТОРИЗАЦИИ пользователя (Log in)
     :return: httpx.Response
     """
-    request_body = json.loads(create_user_api.request.content)  # ✨Парсинг сырого Request bytes —> {dict}
-    login_payload = LoginRequestSchema(              # Инициализация модели с fake-данными нового пользователя по Pydantic-схеме
-        email=request_body['email'],                 # Email из распарсенного Request Body
-        password=request_body['password']            # Password распарсенного Request Body
+    request_body = json.loads(create_user_api.request.content)  # ✨Парсинг сырого Request Bytes —> {dict}
+    auth_data = AuthUserSchema(             # Инициализация модели с fake-данными нового пользователя по Pydantic-схеме
+        email=request_body['email'],        # Email из распарсенного Request Body
+        password=request_body['password']   # Password распарсенного Request Body
     )
-    response = auth_client.login_api(login_payload)  # ▶ Запрос на Login (Authentication) через API-метод. Передаем payload c Email и Password и сохраняем ответ в переменную
-    return response                                  # httpx.Response
+    response = auth_client.login_api(auth_data=auth_data)  # ▶ Запрос на Login (Authentication) через API-метод. Передаем payload c Email и Password и сохраняем ответ в переменную
+    return response                         # httpx.Response
 
 #-----------------------------------------------------------------------------------------------------------------------

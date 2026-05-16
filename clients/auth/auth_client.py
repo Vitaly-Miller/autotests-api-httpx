@@ -4,7 +4,7 @@ Authentication Client
 """
 import httpx
 from clients.api_client import APIClient
-from clients.auth.auth_schema import LoginRequestSchema, RefreshRequestSchema, LoginResponseSchema
+from clients.auth.auth_schema import RefreshRequestSchema, AuthUserSchema, AuthUserResponseSchema
 from clients.public_http_builder import get_public_http_client
 
 #==================================================== Auth Client ======================================================
@@ -12,28 +12,28 @@ class AuthClient(APIClient):
     ENDPOINT = '/authentication'
     #--------------------------------------------------- Login ---------------------------------------------------------
     # API 🟨
-    def login_api(self, payload: LoginRequestSchema) -> httpx.Response:
+    def login_api(self, auth_data: AuthUserSchema) -> httpx.Response:
         """
         Метод выполняет АУТЕНТИФИКАЦИЮ (log in) пользователя
 
-        :param payload: Данные с Email и Password в формате Pydantic-model
+        :param auth_data: Данные с Email и Password в формате Pydantic-model
         :return httpx.Response
         """
         return self.post(
             url=f'{self.ENDPOINT}/login',
-            json=payload.model_dump(by_alias=True)    # сериализация Model —> Dict (т.к. payload - Pydantic-модель)
+            json=auth_data.model_dump(by_alias=True)    # сериализация Model —> Dict (т.к. payload - Pydantic-модель)
         )
 
     # Pydantic-model
-    def login(self, payload: LoginRequestSchema) -> LoginResponseSchema:
+    def login(self, auth_data: AuthUserSchema) -> AuthUserResponseSchema:
         """
         Метод выполняет АУТЕНТИФИКАЦИЮ (log in) пользователя с получением данных об авторизации в формате Pydantic-model
 
-        :param payload: Данные с Email и Password в формате Pydantic-model
+        :param auth_data: Данные с Email и Password в формате Pydantic-model
         :return: Ответ с данными об авторизации пользователя в формате Pydantic-model
         """
-        response = self.login_api(payload)
-        return LoginResponseSchema.model_validate_json(response.text)  # Валидируем ответ (любой) —> Model
+        response = self.login_api(auth_data)
+        return AuthUserResponseSchema.model_validate_json(response.text)  # Валидируем ответ (любой) —> Model
 
 
     #-------------------------------------------------- Refresh --------------------------------------------------------

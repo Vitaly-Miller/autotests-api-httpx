@@ -58,7 +58,7 @@ class CreateUserResponseSchema(UserResponseSchema):
     """
     Схема ответа при создании нового пользователя
 
-    Наследуется: BaseUserResponseSchema
+    Наследуется: UserResponseSchema
     """
     pass
 #------------------------------------------------------ Get User -------------------------------------------------------
@@ -67,7 +67,7 @@ class GetUserResponseSchema(UserResponseSchema):
     Схема ответа при получении данных пользователя по User ID
 
 
-    Наследуется: BaseUserResponseSchema
+    Наследуется: UserResponseSchema
     """
     pass
 #----------------------------------------------------- Get User Me -----------------------------------------------------
@@ -75,7 +75,7 @@ class GetUserMeResponseSchema(UserResponseSchema):
     """
     Схема ответа при получении данных ТЕКУЩЕГО пользователя
 
-    Наследуется: BaseUserResponseSchema
+    Наследуется: UserResponseSchema
     """
     pass
 #-----------------------------------------------------------------------------------------------------------------------
