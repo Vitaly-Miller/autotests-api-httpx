@@ -1,5 +1,6 @@
 """
-Test Log in (Authentication) - by fixture
+Test Log in (Authentication) 2
+(Фикстура auth_user)
 """
 import pytest
 from httpx import Response
@@ -23,10 +24,9 @@ from tools.tool import Tool
 """
 @pytest.mark.smoke
 @pytest.mark.users
-def test_login(create_and_auth_user_api: Response):          # Передача фикстуры 2-in-1 (СОЗДАНИЯ ПОЛЬЗОВАТЕЛЯ c ✨АВТОРИЗАЦИЕЙ)
-
-    response = create_and_auth_user_api                      # Сохраняем ответ в переменную...
-                                                             # ...✨НО можно фикстуру сразу загонять в ассерты.
+def test_login(auth_user_api: Response):          # Передача фикстуры 2-in-1 (СОЗДАНИЯ ПОЛЬЗОВАТЕЛЯ c ✨АВТОРИЗАЦИЕЙ)
+    response = auth_user_api                      # Сохраняем ответ в переменную...
+                                                  # ...✨НО можно фикстуру сразу загонять в ассерты.
 
     #---------------------------------------------------- Assertions ---------------------------------------------------
     # Base assertions
@@ -37,5 +37,6 @@ def test_login(create_and_auth_user_api: Response):          # Передача 
     # Validation JSON Schema
     validation_json_schema(response, AuthUserResponseSchema)
 
-    Tool.api_report(response)
+
 #=======================================================================================================================
+    Tool.api_report(response)

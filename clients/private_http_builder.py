@@ -18,7 +18,7 @@ def get_private_http_client(auth_data: AuthUserSchema) -> httpx.Client:
     :return: Готовый к использованию объект httpx.Client с установленным заголовком Authorization
     """
     auth_client = get_auth_client()                           # Инициализируем AuthClient для аутентификации
-    auth_data = AuthUserSchema(                       # Инициализируем payload для аутентификации
+    auth_data = AuthUserSchema(                               # Инициализируем auth_data для аутентификации
         email=auth_data.email,
         password=auth_data.password)
     login_response = auth_client.login(auth_data=auth_data)   # 🟨POST-запрос на аутентификацию (login) -> LoginResponseSchema  (Pydantic-Model)

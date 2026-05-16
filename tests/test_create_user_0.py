@@ -1,7 +1,6 @@
 """
-Test Create User
-Тест создания нового пользователя
-(Ручной вариант)
+Test Create User 0
+(Manual) Без фикстур
 """
 import jsonschema
 from clients.users.public_users_client import get_public_users_client
@@ -10,17 +9,14 @@ from http import HTTPStatus, HTTPMethod
 
 #=======================================================================================================================
 def test_create_user():
-    # Инициализация клиента (public). Создает экземпляр класса PublicUsersClient
-    public_users_client = get_public_users_client()
-
-    # Инициализация модели с fake данными нового пользователя по Pydantic-схеме
-    create_user_payload = CreateUserRequestSchema()
+    public_users_client = get_public_users_client()   # Инициализация клиента (public). Создает экземпляр класса PublicUsersClient
+    create_user_data = CreateUserRequestSchema()      # Инициализация модели с fake данными нового пользователя по Pydantic-схеме
 
     # ▶ Запрос на создание пользователя через API-метод
-    response = public_users_client.create_user_api(payload=create_user_payload)          # Передаем сгенерированные в Pydantic-схеме fake данные нового пользователя
+    response = public_users_client.create_user_api(create_user_data=create_user_data)          # Передаем сгенерированные в Pydantic-схеме fake данные нового пользователя
 
-    # JSON-ответ —> Pydantic модель (десериализация)
-    response_data = CreateUserResponseSchema.model_validate_json(response.text)
+    # JSON-ответ —> Pydantic модель (десериализация для Assertions)
+    response_model = CreateUserResponseSchema.model_validate_json(response.text)
 
 
     #-------------------------------------------- Assertions (классический) --------------------------------------------
@@ -30,10 +26,10 @@ def test_create_user():
     assert response.status_code == HTTPStatus.OK, '❌Incorrect status code!'             # проверка статус-кода (через HTTPStatus)
     assert response.request.method == HTTPMethod.POST, '❌Incorrect Request Method!'     # проверка метода запроса (через HTTPMethod)
 
-    assert response_data.user.email == create_user_payload.email, '❌Разные Email!'                    # проверка отправленного и полученного email
-    assert response_data.user.last_name == create_user_payload.last_name, '❌Разные Last Name!'        # проверка отправленного и полученного Last Name
-    assert response_data.user.first_name == create_user_payload.first_name, '❌Разные First Name!'     # проверка отправленного и полученного First Name
-    assert response_data.user.middle_name == create_user_payload.middle_name, '❌Разные Middle Name!'  # проверка отправленного и полученного Middle Name
+    assert response_model.user.email == create_user_data.email, '❌Разные Email!'                    # проверка отправленного и полученного email
+    assert response_model.user.last_name == create_user_data.last_name, '❌Разные Last Name!'        # проверка отправленного и полученного Last Name
+    assert response_model.user.first_name == create_user_data.first_name, '❌Разные First Name!'     # проверка отправленного и полученного First Name
+    assert response_model.user.middle_name == create_user_data.middle_name, '❌Разные Middle Name!'  # проверка отправленного и полученного Middle Name
 
     # Validation JSON Schema
     jsonschema.validate(

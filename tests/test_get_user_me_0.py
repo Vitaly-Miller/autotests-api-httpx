@@ -1,5 +1,6 @@
 """
-Test Get User Me
+Test Get User Me 0
+Без фикстур (Manual)
 """
 import pytest
 from clients.auth.auth_schema import AuthUserSchema
@@ -11,7 +12,7 @@ from tools.tool import Tool
 #=======================================================================================================================
 @pytest.mark.smoke
 @pytest.mark.users
-def test_get_user_me():  # Передача фикстур СОЗДАНИЯ ПОЛЬЗОВАТЕЛЯ и АВТОРИЗАЦИИ
+def test_get_user_me():
     #---------------------------------------------- Pre-conditions -----------------------------------------------------
     # 1. Create User (Создаем пользователя)
     public_users_client = get_public_users_client()       # Получаем экземпляр PublicUsersClient c уже настроенным HTTP-клиентом с Base URL
@@ -22,11 +23,8 @@ def test_get_user_me():  # Передача фикстур СОЗДАНИЯ ПО
         email=create_user_data.email,                     # Вытаскиваем .Email из модели
         password=create_user_data.password)               # Вытаскиваем .Password из модели
 
-
-    # 2. Login (НЕ НУЖЕН. АВТОРИЗИРУЕТСЯ ДАЛЕЕ В ОСНОВНОМ ЗАПРОСЕ)
-
     # ------------------------------------------------------------------------------------------------------------------
-    # 3. Get User Me
+    # 2. Get User Me
     get_user_me_client = get_private_users_client(auth_data) # Получаем экземпляр PrivateUsersClient c уже настроенным HTTP-клиентом с Base URL
     response = get_user_me_client.get_user_me_api()          # 🟩Get-запрос на получение данных ТЕКУЩЕГО пользователя
 

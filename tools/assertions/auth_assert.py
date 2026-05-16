@@ -1,12 +1,12 @@
 """
 Authentication (Log in) assertions
 """
-from httpx import Response
+import httpx
 from clients.auth.auth_schema import AuthUserResponseSchema
 from tools.assertions.base_assert import assert_equal, assert_value_len, assert_is_true
 
 #=======================================================================================================================
-def assert_login_response_fields(response: Response):
+def assert_login_response_fields(response: httpx.Response):
     """
     6-in-1 | Проверяет поля на НЕпустоту, Тип токена, Длину токенов: access- и refresh-
 

@@ -1,13 +1,13 @@
 """
 Base assertions
 """
+import httpx
 from typing import Any
-from httpx import Response
 
 #=======================================================================================================================
 #--------------------------------------------------------- API ---------------------------------------------------------
 # Status Code
-def assert_status_code(response: Response, expected: int):
+def assert_status_code(response: httpx.Response, expected: int):
     """
     Проверка Status Code
 
@@ -22,7 +22,7 @@ def assert_status_code(response: Response, expected: int):
 """
 
 # Method
-def assert_method(response: Response, expected: str):
+def assert_method(response: httpx.Response, expected: str):
     """
     Проверяет Request Method.
 

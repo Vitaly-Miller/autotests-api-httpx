@@ -7,6 +7,7 @@ import json
 import pytest
 from clients.auth.auth_client import get_auth_client, AuthClient
 from clients.auth.auth_schema import AuthUserResponseSchema, AuthUserSchema
+from clients.users.private_users_client import PrivateUsersClient, get_private_users_client
 from clients.users.public_users_client import get_public_users_client, PublicUsersClient
 from clients.users.users_schema import CreateUserRequestSchema, UserFullSchema, CreateUserResponseSchema
 
@@ -18,30 +19,46 @@ from clients.users.users_schema import CreateUserRequestSchema, UserFullSchema, 
 ------------------------------------------------
 """
 
-"""===================================================== Clients ===================================================="""
-# Public Users Client
+"""=================================================== CLASS Clients ================================================"""
+# class PublicUsersClient
 @pytest.fixture                                      # scope='function' by Default
 def public_users_client() -> PublicUsersClient:
     """
-    Фикстура вызова Public Users Client Builder
+    Фикстура вызова класса PublicUsersClient
 
-    :return: PublicUsersClient
+    :return: class PublicUsersClient
     """
     return get_public_users_client()
 
 
-# Auth client (Authentication)
+# class AuthClient (Authentication)
 @pytest.fixture
 def auth_client() -> AuthClient:
     """
-    Фикстура вызова Auth Client Builder
+    Фикстура вызова класса AuthClient
 
-    :return: AuthClient
+    :return: class AuthClient
     """
     return get_auth_client()
 
+# class PrivateUsersClient
+@pytest.fixture
+def private_users_client(create_user: UserFullSchema) -> PrivateUsersClient: # Передаем фикстуру для Pre-condition (create_user)
+    """
+    Фикстура вызова класса PrivateUsersClient c авторизацией
 
-"""================================================== 1.Create User ================================================="""
+    :param create_user: Фикстура создания пользователя
+    :return: class PrivateUsersClient
+    """
+    auth_data = AuthUserSchema(                          # Инициализируем данные для авторизации через схему. Сохраняем в переменную Email и Pass
+        email=create_user.email,                         # Вытаскиваем .Email из модели <create_user>
+        password=create_user.password)                   # Вытаскиваем .Password из модели <create_user>
+    return get_private_users_client(auth_data=auth_data) #
+
+
+
+
+"""=================================================== Create User =================================================="""
 #--------------------------------------------------- Pydantic-model ----------------------------------------------------
 #--- v.1 --- Возвращает ✨объединенную Pydantic-model: UserFullSchema с данными пользователя <Request + Response>
 @pytest.fixture
@@ -88,11 +105,11 @@ def create_user_api(public_users_client: PublicUsersClient) -> httpx.Response:
                                                                             # password = request_body["password"]
 
 
-"""============================================= 2.Auth (Authentication) ============================================"""
+"""============================================== Auth (Authentication) ============================================="""
 #---------------------------------------------------- Pydantic-model ---------------------------------------------------
 #--- v.1 --- Базируется на объединенной Pydantic-model: UserFullSchema
 @pytest.fixture
-def create_and_auth_user(create_user: UserFullSchema, auth_client: AuthClient) -> AuthUserResponseSchema:
+def auth_user(create_user: UserFullSchema, auth_client: AuthClient) -> AuthUserResponseSchema:
     """
     Фикстура АВТОРИЗАЦИИ (Log in) пользователя
 
@@ -110,7 +127,7 @@ def create_and_auth_user(create_user: UserFullSchema, auth_client: AuthClient) -
 
 #--- v.2 --- Базируется на Парсинге сырого Request Body (bytes)
 @pytest.fixture
-def create_and_auth_user_2(create_user_api: httpx.Response, auth_client: AuthClient) -> AuthUserResponseSchema:
+def auth_user_2(create_user_api: httpx.Response, auth_client: AuthClient) -> AuthUserResponseSchema:
     """
     Фикстура АВТОРИЗАЦИИ (Log in) пользователя
 
@@ -130,7 +147,7 @@ def create_and_auth_user_2(create_user_api: httpx.Response, auth_client: AuthCli
 #------------------------------------------------ API —> httpx.Response ------------------------------------------------
 #--- v.1 --- Базируется на объединенной Pydantic-model: UserFullSchema
 @pytest.fixture
-def create_and_auth_user_api(create_user: UserFullSchema, auth_client: AuthClient) -> httpx.Response:
+def auth_user_api(create_user: UserFullSchema, auth_client: AuthClient) -> httpx.Response:
     """
     API-фикстура АВТОРИЗАЦИИ (Log in) пользователя
 
@@ -147,7 +164,7 @@ def create_and_auth_user_api(create_user: UserFullSchema, auth_client: AuthClien
 
 #--- v.2 --- Базируется на Парсинге сырого Request Body (bytes)
 @pytest.fixture
-def create_and_auth_user_api_2(create_user_api: httpx.Response, auth_client: AuthClient) -> httpx.Response:
+def auth_user_api_2(create_user_api: httpx.Response, auth_client: AuthClient) -> httpx.Response:
     """
     API-фикстура АВТОРИЗАЦИИ (Log in) пользователя
 
@@ -163,5 +180,18 @@ def create_and_auth_user_api_2(create_user_api: httpx.Response, auth_client: Aut
     )
     response = auth_client.login_api(auth_data=auth_data)  # ▶ Запрос на Login (Authentication) через API-метод. Передаем payload c Email и Password и сохраняем ответ в переменную
     return response                         # httpx.Response
+
+#-----------------------------------------------------------------------------------------------------------------------
+"""=================================================== Get User Me =================================================="""
+@pytest.fixture
+def get_user_me(create_user: UserFullSchema) -> httpx.Response:           # Передаем фикстуру для Pre-condition
+    # 1. Авторизационные данные созданного пользователя:
+    auth_data = AuthUserSchema(                      # Инициализируем данные для авторизации через схему. Сохраняем в переменную Email и Pass
+        email=create_user.email,                     # Вытаскиваем .Email из модели
+        password=create_user.password)               # Вытаскиваем .Password из модели
+    # 2. Get User Me
+    get_user_me_client = get_private_users_client(auth_data)  # Получаем экземпляр PrivateUsersClient c уже настроенным HTTP-клиентом с Base URL
+    response = get_user_me_client.get_user_me_api()           # 🟩Get-запрос на получение данных ТЕКУЩЕГО пользователя
+    return response                                           # httpx.Response
 
 #-----------------------------------------------------------------------------------------------------------------------

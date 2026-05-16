@@ -1,5 +1,6 @@
 """
-Test Log in (Authentication)
+Test Log in (Authentication) 1
+(Фикстуры: create_user, auth_client)
 """
 import pytest
 from clients.auth.auth_client import AuthClient
@@ -18,11 +19,11 @@ def test_login(create_user: UserFullSchema, auth_client: AuthClient):  # Пер�
 
     # Инициализация Pydantic-модели с авторизационными данными пользователя (Email и Password)
     auth_data = AuthUserSchema(
-        email=create_user.email,                      # Email из модели UserFullSchema
-        password=create_user.password                 # Password из модели UserFullSchema
+        email=create_user.email,                      # Email из модели <create_user>
+        password=create_user.password                 # Password из модели <create_user>
     )
     # ▶ Запрос на Login (Authentication) через API-метод
-    response = auth_client.login_api(auth_data)   # Передаем payload c Email и Password и сохраняем ответ в переменную
+    response = auth_client.login_api(auth_data)       # Передаем payload c Email и Password и сохраняем ответ в переменную
 
     #---------------------------------------------------- Assertions ---------------------------------------------------
     # Base assertions
@@ -33,6 +34,6 @@ def test_login(create_user: UserFullSchema, auth_client: AuthClient):  # Пер�
     # Validation JSON Schema
     validation_json_schema(response, AuthUserResponseSchema)
 
-    Tool.api_report(response)
 
 #=======================================================================================================================
+    Tool.api_report(response)

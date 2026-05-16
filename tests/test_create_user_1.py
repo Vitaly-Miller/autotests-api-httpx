@@ -1,7 +1,6 @@
 """
-Test Create User
-Тест создания пользователя
-
+Test Create User 1
+(С передачей create_user_data в assert)
 """
 import pytest
 from clients.users.public_users_client import PublicUsersClient
@@ -14,7 +13,7 @@ from tools.assertions.users_assert import assert_create_user_fields
 #=======================================================================================================================
 @pytest.mark.smoke                                                  # маркировка smoke
 @pytest.mark.users                                                  # маркировка users
-def test_create_user_1(public_users_client: PublicUsersClient):     # Передаем в тест фикстуру Public client
+def test_create_user_2(public_users_client: PublicUsersClient):     # Передаем в тест фикстуру PublicUsersClient
 
     # Инициализация Pydantic-модели с fake данными нового пользователя для регистрации
     create_user_data = CreateUserRequestSchema()                 # by Default (fake generated)
@@ -26,7 +25,7 @@ def test_create_user_1(public_users_client: PublicUsersClient):     # Перед
     assert_status_code(response, HTTPStatus.OK)    # проверка статус-кода
     assert_method(response, HTTPMethod.POST)       # проверка метода запроса
     # Create User assertions
-    assert_create_user_fields(response=response)                    # Проверка совпадения полей запроса и ответа (4 in 1)
+    assert_create_user_fields(response, create_user_data)    # 👈Проверка совпадения полей запроса и ответа (4 in 1)
     # Validation JSON Schema
     validation_json_schema(response, CreateUserResponseSchema)
 

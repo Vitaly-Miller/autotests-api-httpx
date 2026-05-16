@@ -1,6 +1,6 @@
 """
 Test Create User
-Тест создания пользователя
+(Фикстура create_user_api)
 
 """
 import pytest
