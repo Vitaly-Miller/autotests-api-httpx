@@ -29,7 +29,7 @@ def test_login(create_user: UserFullSchema, auth_client: AuthClient):  # Пер�
     assert_status_code(response, HTTPStatus.OK)   # проверка статус-кода
     assert_method(response, HTTPMethod.POST)      # проверка метода запроса
     # Authentication (Log in) assertions
-    assert_login_response_fields(response=response)                # Проверка на НЕпустоту полей (6 in 1)
+    assert_login_response_fields(response=response)                # проверка на НЕпустоту полей (6 in 1)
     # Validation JSON Schema
     validation_json_schema(response, LoginResponseSchema)
 

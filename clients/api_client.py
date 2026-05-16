@@ -1,13 +1,13 @@
 """
 API Client
 """
-from httpx import Client, Response, URL, QueryParams         # для аннотации типов
+import httpx
 from httpx._types import RequestData, RequestFiles   # NOQA  # для аннотации типов (работа с файлами)
 from typing import Any                                       # для аннотации типов
 
-#=======================================================================================================================
+#===================================================== API Client ======================================================
 class APIClient:
-    def __init__(self, client: Client):
+    def __init__(self, client: httpx.Client):
         """
         Базовый API-клиент, принимающий httpx.Client-сессию.
 
@@ -15,11 +15,10 @@ class APIClient:
         """
         self.client = client
 
-
     # 🟩GET ------------------------------------------------------------------------------------------------------------
     def get(self,
-            url: URL | str,
-            params: QueryParams | None = None) -> Response:
+            url: httpx.URL | str,
+            params: httpx.QueryParams | None = None) -> httpx.Response:
         """
         GET-запрос.
 
@@ -31,10 +30,10 @@ class APIClient:
 
     # 🟨POST -----------------------------------------------------------------------------------------------------------
     def post(self,
-             url: URL | str,
+             url: httpx.URL | str,
              json: Any | None = None,
              data: RequestData | None = None,
-             files: RequestFiles | None = None) -> Response:
+             files: RequestFiles | None = None) -> httpx.Response:
         """
         POST-запрос.
 
@@ -46,10 +45,10 @@ class APIClient:
         """
         return self.client.post(url=url, json=json, data=data, files=files)
 
-    # 🟪PATCH ---------------------------------------------------------------------------------------------------------
+    # 🟪PATCH ----------------------------------------------------------------------------------------------------------
     def patch(self,
-              url: URL | str,
-              json: Any | None = None) -> Response:
+              url: httpx.URL | str,
+              json: Any | None = None) -> httpx.Response:
         """
         PATCH-запрос (Частичное обновление ресурса, передавая только измененные данные).
 
@@ -61,8 +60,8 @@ class APIClient:
 
     # 🟦PUT ------------------------------------------------------------------------------------------------------------
     def put(self,
-            url: URL | str,
-            json: Any | None = None) -> Response:
+            url: httpx.URL | str,
+            json: Any | None = None) -> httpx.Response:
         """
         PUT-запрос (Полное обновление данных).
 
@@ -74,7 +73,7 @@ class APIClient:
 
     # 🟥DELETE ---------------------------------------------------------------------------------------------------------
     def delete(self,
-               url: URL | str) -> Response:
+               url: httpx.URL | str) -> httpx.Response:
         """
         DELETE-запрос (удаление данных).
 

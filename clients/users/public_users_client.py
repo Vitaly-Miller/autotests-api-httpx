@@ -3,16 +3,17 @@ PUBLIC Users Client
 /users
 (Для методов, НЕ требующих авторизации)
 """
-from httpx import Response
+import httpx
 from clients.api_client import APIClient
 from clients.public_http_builder import get_public_http_client
 from clients.users.users_schema import CreateUserRequestSchema, CreateUserResponseSchema
 
-#======================================================= Client ========================================================
+#================================================= Public Users Client =================================================
 class PublicUsersClient(APIClient):
     ENDPOINT = '/users'
     #------------------------------------------------- Create User  ----------------------------------------------------
-    def create_user_api(self, payload: CreateUserRequestSchema) -> Response:
+    # API 🟨
+    def create_user_api(self, payload: CreateUserRequestSchema) -> httpx.Response:
         """
         Метод для СОЗДАНИЯ нового пользователя
 
@@ -23,6 +24,7 @@ class PublicUsersClient(APIClient):
             url=self.ENDPOINT,
             json=payload.model_dump(by_alias=True))  # ⚠ сериализация Model —> Dict (т.к. в payload передаем Pydantic-модель) + 🐫CamelCase
 
+    # Pydantic-model
     def create_user(self, payload: CreateUserRequestSchema) -> CreateUserResponseSchema:
         """
         Метод для СОЗДАНИЯ нового пользователя с получением данных созданного пользователя в формате Pydantic-model.
@@ -34,12 +36,12 @@ class PublicUsersClient(APIClient):
         return CreateUserResponseSchema.model_validate_json(response.text)  # Валидируем ответ (любой) —> Model
 
 
-#=============================================== Client Builder (Public) ===============================================
+#================================================= Client (✨Helper) ===================================================
 def get_public_users_client() -> PublicUsersClient:
     """
-    Функция создаёт экземпляр PrivateUsersClient с уже настроенным HTTP-клиентом
+    Функция создаёт экземпляр класса PrivateUsersClient с уже настроенным HTTP-клиентом
 
-    :return: Готовый к использованию PrivateUsersClient
+    :return: Готовый к использованию экземпляр класса PrivateUsersClient с уже настроенным HTTP-клиентом
     """
     return PublicUsersClient(client=get_public_http_client())
 

@@ -2,16 +2,17 @@
 Authentication Client
 /authentication
 """
-from httpx import Response
+import httpx
 from clients.api_client import APIClient
 from clients.auth.auth_schema import LoginRequestSchema, RefreshRequestSchema, LoginResponseSchema
 from clients.public_http_builder import get_public_http_client
 
-#======================================================= Client ========================================================
+#==================================================== Auth Client ======================================================
 class AuthClient(APIClient):
     ENDPOINT = '/authentication'
     #--------------------------------------------------- Login ---------------------------------------------------------
-    def login_api(self, payload: LoginRequestSchema) -> Response:
+    # API 🟨
+    def login_api(self, payload: LoginRequestSchema) -> httpx.Response:
         """
         Метод выполняет АУТЕНТИФИКАЦИЮ (log in) пользователя
 
@@ -23,6 +24,7 @@ class AuthClient(APIClient):
             json=payload.model_dump(by_alias=True)    # сериализация Model —> Dict (т.к. payload - Pydantic-модель)
         )
 
+    # Pydantic-model
     def login(self, payload: LoginRequestSchema) -> LoginResponseSchema:
         """
         Метод выполняет АУТЕНТИФИКАЦИЮ (log in) пользователя с получением данных об авторизации в формате Pydantic-model
@@ -33,8 +35,10 @@ class AuthClient(APIClient):
         response = self.login_api(payload)
         return LoginResponseSchema.model_validate_json(response.text)  # Валидируем ответ (любой) —> Model
 
+
     #-------------------------------------------------- Refresh --------------------------------------------------------
-    def refresh_api(self, payload: RefreshRequestSchema) -> Response:
+    # API 🟨
+    def refresh_api(self, payload: RefreshRequestSchema) -> httpx.Response:
         """
         Метод ОБНОВЛЯЕТ ТОКЕН авторизации
 
@@ -46,7 +50,8 @@ class AuthClient(APIClient):
             json=payload.model_dump(by_alias=True)    # сериализация Model —> Dict (т.к. payload - Pydantic-модель)
         )
 
-#=================================================== Client Builder ====================================================
+
+#================================================= Client (✨Helper) ===================================================
 def get_auth_client() -> AuthClient:
     """
     Функция создает экземпляр AuthClient с уже настроенным http-клиентом
@@ -54,6 +59,5 @@ def get_auth_client() -> AuthClient:
     :return: Готовый к использованию объект AuthenticationClient базовыми параметрами.
     """
     return AuthClient(client=get_public_http_client())
-
 
 #-----------------------------------------------------------------------------------------------------------------------

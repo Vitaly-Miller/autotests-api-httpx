@@ -16,6 +16,7 @@ def my_func():
 import pytest
 
 #======================================================= yield✨========================================================
+# Фикстура с yield - возвращает результат функции и продолжить выполнение этой функции
 @pytest.fixture
 def user_data():
     print('\n1 [ДО Теста] - Функция ✅СОЗДАНИЯ пользователя (setup)')                     # 1 [ДО Теста] - Функция ✅СОЗДАНИЯ пользователя (setup)
@@ -23,11 +24,10 @@ def user_data():
     print('\n3 [ПОСЛЕ Теста] - Функция 🚫 УДАЛЕНИЯ пользователя после теста (teardown)')  # 3 [ПОСЛЕ Теста] - Функция 🚫 УДАЛЕНИЯ пользователя после теста (teardown)
 
 
+# Тест
+def test_username(user_data):                           # 1 [ДО Теста] - Функция ✅СОЗДАНИЯ пользователя (setup)
+    print(user_data)                                    # {'username': 'john_connor', 'email': 'john_connor@email.com'}
+    assert user_data['username'] == 'john_connor'       # PASSED
+                                                        # 3 [ПОСЛЕ Теста] - Функция 🚫 УДАЛЕНИЯ пользователя после теста (teardown)
 
-def test_username(user_data):
-    print(user_data)
-    assert user_data['username'] == 'john_connor'
-
-def test_user_email(user_data):
-    print(user_data)
-    assert user_data['email'] == 'john_connor@email.com'
+#-----------------------------------------------------------------------------------------------------------------------

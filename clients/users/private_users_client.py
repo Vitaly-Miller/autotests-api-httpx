@@ -3,17 +3,18 @@
 /users
 (Для методов, требующих авторизации)
 """
-from httpx import Response
+import httpx
 from clients.api_client import APIClient
 from clients.auth.auth_schema import AuthUserSchema
 from clients.private_http_builder import get_private_http_client
 from clients.users.users_schema import UpdateUserRequestSchema, GetUserResponseSchema
 
-#======================================================= Client ========================================================
+#================================================ Private Users Client =================================================
 class PrivateUsersClient(APIClient):
     ENDPOINT = '/users'
     #------------------------------------------------- Get User Me -----------------------------------------------------
-    def get_user_me_api(self) -> Response:
+    # API 🟩
+    def get_user_me_api(self) -> httpx.Response:
         """
         Метод ПОЛУЧЕНИЯ данных ТЕКУЩЕГО пользователя
 
@@ -22,7 +23,8 @@ class PrivateUsersClient(APIClient):
         return self.get(url=f'{self.ENDPOINT}/me')
 
     #-------------------------------------------------- Get User -------------------------------------------------------
-    def get_user_api(self, user_id: str) -> Response:
+    # API 🟩
+    def get_user_api(self, user_id: str) -> httpx.Response:
         """
         Метод для ПОЛУЧЕНИЯ данных конкретного пользователя
 
@@ -31,6 +33,7 @@ class PrivateUsersClient(APIClient):
         """
         return self.get(url=f'{self.ENDPOINT}/{user_id}')
 
+    # Pydantic-model
     def get_user(self, user_id: str) -> GetUserResponseSchema:
         """
         Метод для ПОЛУЧЕНИЯ данных конкретного пользователя в формате Pydantic-модели
@@ -42,9 +45,9 @@ class PrivateUsersClient(APIClient):
         return GetUserResponseSchema.model_validate_json(response.text)   # Валидируем ответ (любой) —> Model
 
 
-
     #------------------------------------------------- Update User -----------------------------------------------------
-    def update_user_api(self, user_id: str, payload: UpdateUserRequestSchema) -> Response:
+    # API 🟪
+    def update_user_api(self, user_id: str, payload: UpdateUserRequestSchema) -> httpx.Response:
         """
         Метод для ЧАСТИЧНОГО ОБНОВЛЕНИЯ данных пользователя по User ID
 
@@ -58,7 +61,8 @@ class PrivateUsersClient(APIClient):
         )
 
     #------------------------------------------------- Delete User -----------------------------------------------------
-    def delete_user_api(self, user_id: str) -> Response:
+    # API 🟥
+    def delete_user_api(self, user_id: str) -> httpx.Response:
         """
         Метод для УДАЛЕНИЯ пользователя по User ID
 
@@ -68,7 +72,7 @@ class PrivateUsersClient(APIClient):
         return self.delete(url=f'{self.ENDPOINT}/{user_id}')
 
 
-#================================================ Client Builder (Private) =============================================
+#================================================= Client (✨Helper) ===================================================
 def get_private_users_client(auth_data: AuthUserSchema) -> PrivateUsersClient:
     """
     Функция создаёт экземпляр PrivateUsersClient с уже настроенным HTTP-клиентом
@@ -77,3 +81,5 @@ def get_private_users_client(auth_data: AuthUserSchema) -> PrivateUsersClient:
     :return: Готовый к использованию PrivateUsersClient
     """
     return PrivateUsersClient(client=get_private_http_client(auth_data))
+
+#-----------------------------------------------------------------------------------------------------------------------

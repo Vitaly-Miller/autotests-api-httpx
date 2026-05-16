@@ -10,7 +10,7 @@ from http import HTTPStatus, HTTPMethod
 
 #=======================================================================================================================
 def test_create_user():
-    # Инициализация клиента (public)
+    # Инициализация клиента (public). Создает экземпляр класса PublicUsersClient
     public_users_client = get_public_users_client()
 
     # Инициализация модели с fake данными нового пользователя по Pydantic-схеме

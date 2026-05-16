@@ -41,7 +41,7 @@ def auth_client() -> AuthClient:
     return get_auth_client()
 
 
-"""=================================================== Create User =================================================="""
+"""================================================== 1.Create User ================================================="""
 #--------------------------------------------------- Pydantic-model ----------------------------------------------------
 #--- v.1 --- Возвращает ✨объединенную Pydantic-model: UserFullSchema с данными пользователя <Request + Response>
 @pytest.fixture
@@ -88,11 +88,11 @@ def create_user_api(public_users_client: PublicUsersClient) -> Response:
                                                                                  # password = request_body["password"]
 
 
-"""============================================== Auth (Authentication) ============================================="""
+"""============================================= 2.Auth (Authentication) ============================================"""
 #---------------------------------------------------- Pydantic-model ---------------------------------------------------
 #--- v.1 --- Базируется на объединенной Pydantic-model: UserFullSchema
 @pytest.fixture
-def auth(create_user: UserFullSchema, auth_client: AuthClient) -> LoginResponseSchema:
+def create_and_auth_user(create_user: UserFullSchema, auth_client: AuthClient) -> LoginResponseSchema:
     """
     Фикстура АВТОРИЗАЦИИ (Log in) пользователя
 
@@ -110,7 +110,7 @@ def auth(create_user: UserFullSchema, auth_client: AuthClient) -> LoginResponseS
 
 #--- v.2 --- Базируется на Парсинге сырого Request Body bytes
 @pytest.fixture
-def auth_2(create_user_api: Response, auth_client: AuthClient) -> LoginResponseSchema:
+def create_and_auth_user_2(create_user_api: Response, auth_client: AuthClient) -> LoginResponseSchema:
     """
     Фикстура АВТОРИЗАЦИИ (Log in) пользователя
 
@@ -130,7 +130,7 @@ def auth_2(create_user_api: Response, auth_client: AuthClient) -> LoginResponseS
 #------------------------------------------------ API —> httpx.Response ------------------------------------------------
 #--- v.1 --- Базируется на объединенной Pydantic-model: UserFullSchema
 @pytest.fixture
-def auth_api(create_user: UserFullSchema, auth_client: AuthClient) -> Response:
+def create_and_auth_user_api(create_user: UserFullSchema, auth_client: AuthClient) -> Response:
     """
     API-фикстура АВТОРИЗАЦИИ (Log in) пользователя
 
@@ -147,7 +147,7 @@ def auth_api(create_user: UserFullSchema, auth_client: AuthClient) -> Response:
 
 #--- v.2 --- Базируется на Парсинге сырого Request Body bytes
 @pytest.fixture
-def auth_api_2(create_user_api: Response, auth_client: AuthClient) -> Response:
+def create_and_auth_user_api_2(create_user_api: Response, auth_client: AuthClient) -> Response:
     """
     API-фикстура АВТОРИЗАЦИИ (Log in) пользователя
 

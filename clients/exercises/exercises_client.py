@@ -1,7 +1,7 @@
 """
 Exercises Client
 """
-from httpx import Response
+import httpx
 from clients.api_client import APIClient
 from clients.private_http_builder import get_private_http_client
 from clients.auth.auth_schema import AuthUserSchema
@@ -10,11 +10,13 @@ from clients.exercises.exercises_schema import (
     UpdateExerciseRequestSchema,
     GetExercisesRequestSchema, CreateExerciseResponseSchema
 )
-#======================================================= Client ========================================================
+
+#================================================== Exercises Client ===================================================
 class ExercisesClient(APIClient):
     ENDPOINT = '/exercises'
     #------------------------------------------------ Get Exercises ----------------------------------------------------
-    def get_exercises_api(self, query_course_id: GetExercisesRequestSchema) -> Response:
+    # API 🟩
+    def get_exercises_api(self, query_course_id: GetExercisesRequestSchema) -> httpx.Response:
         """
         Метод получения списка заданий для определенного курса Course ID (?query).
 
@@ -24,7 +26,8 @@ class ExercisesClient(APIClient):
         return self.get(url=self.ENDPOINT, params=query_course_id)  # NOQA
 
     #------------------------------------------------ Get Exercise -----------------------------------------------------
-    def get_exercise_api(self, exercise_id: str) -> Response:
+    # API 🟩
+    def get_exercise_api(self, exercise_id: str) -> httpx.Response:
         """
         Метод получение информации о задании по Exercise ID.
 
@@ -34,7 +37,8 @@ class ExercisesClient(APIClient):
         return self.get(url=f'{self.ENDPOINT}/{exercise_id}')
 
     #---------------------------------------------- Create Exercise ----------------------------------------------------
-    def create_exercise_api(self, payload: CreateExerciseRequestSchema) -> Response:
+    # API 🟨
+    def create_exercise_api(self, payload: CreateExerciseRequestSchema) -> httpx.Response:
         """
         Метод создания задания.
 
@@ -46,6 +50,7 @@ class ExercisesClient(APIClient):
             json=payload.model_dump(by_alias=True)    # + ⚠ сериализация Model -> Dict (т.к. payload - Pydantic-модель)
         )
 
+    # Pydantic-model
     def create_exercise(self, payload) -> CreateExerciseResponseSchema:
         """
         Метод получения валидированной Pydantic-модели с данными о созданном задании.
@@ -57,7 +62,8 @@ class ExercisesClient(APIClient):
         return CreateExerciseResponseSchema.model_validate_json(response.text)
 
     #---------------------------------------------- Update Exercise ----------------------------------------------------
-    def update_exercise_api(self, exercise_id: str, json: UpdateExerciseRequestSchema) -> Response:
+    # API 🟪
+    def update_exercise_api(self, exercise_id: str, json: UpdateExerciseRequestSchema) -> httpx.Response:
         """
         Метод частичного обновления данных задания.
 
@@ -70,7 +76,8 @@ class ExercisesClient(APIClient):
             json=json.model_dump(by_alias=True))      # + ⚠ сериализация Model -> Dict (т.к. payload - Pydantic-модель)
 
     #---------------------------------------------- Delete Exercise ----------------------------------------------------
-    def delete_exercise_api(self, exercise_id: str) -> Response:
+    # API 🟥
+    def delete_exercise_api(self, exercise_id: str) -> httpx.Response:
         """
         Метод удаление задания.
 
@@ -80,7 +87,7 @@ class ExercisesClient(APIClient):
         return self.delete(url=f'{self.ENDPOINT}/{exercise_id}')
 
 
-#=================================================== Client Builder ====================================================
+#================================================= Client (✨Helper) ===================================================
 def get_exercise_client(auth_data: AuthUserSchema) -> ExercisesClient:
     """
     Функция создаёт экземпляр ExercisesClient с уже настроенным HTTP-клиентом.

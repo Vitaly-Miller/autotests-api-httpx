@@ -5,7 +5,6 @@ import pytest
 from httpx import Response
 from clients.auth.auth_schema import LoginResponseSchema
 from http import HTTPStatus, HTTPMethod
-from tests.conftest import auth_api
 from tools.assertions.auth_assert import assert_login_response_fields
 from tools.assertions.base_assert import assert_status_code, assert_method
 from tools.assertions.schema_assert import validation_json_schema
@@ -24,9 +23,9 @@ from tools.tool import Tool
 """
 @pytest.mark.smoke
 @pytest.mark.users
-def test_login(auth_api: Response):          # Передача фикстуры 2-in-1 (СОЗДАНИЯ ПОЛЬЗОВАТЕЛЯ c ✨АВТОРИЗАЦИЕЙ)
+def test_login(create_and_auth_user_api: Response):          # Передача фикстуры 2-in-1 (СОЗДАНИЯ ПОЛЬЗОВАТЕЛЯ c ✨АВТОРИЗАЦИЕЙ)
 
-    response = auth_api                      # Сохраняем ответ в переменную...
+    response = create_and_auth_user_api                      # Сохраняем ответ в переменную...
                                              # ...✨НО можно фикстуру сразу загонять в ассерты.
 
     #---------------------------------------------------- Assertions ---------------------------------------------------

@@ -3,17 +3,18 @@ Files Client
 /files
 (Клиент для работы с файлами)
 """
-from httpx import Response
+import httpx
 from clients.api_client import APIClient
 from clients.auth.auth_schema import AuthUserSchema
 from clients.files.files_schema import CreateFileRequestSchema, CreateFileResponseSchema
 from clients.private_http_builder import get_private_http_client
 
-#===================================================== Client ==========================================================
+#====================================================== Files Client ===================================================
 class FilesClient(APIClient):
     ENDPOINT = '/files'
-    #------------------------------------------------ Get File ---------------------------------------------------------
-    def get_file_api(self, file_id: str) -> Response:
+    #---------------------------------------------------- Get File -----------------------------------------------------
+    # API 🟩
+    def get_file_api(self, file_id: str) -> httpx.Response:
         """
         Метод для ПОЛУЧЕНИЯ (Download) файла по File ID
 
@@ -22,8 +23,9 @@ class FilesClient(APIClient):
         """
         return self.get(url=f'/files/{file_id}')
 
-    #----------------------------------------------- Create File -------------------------------------------------------
-    def create_file_api(self, payload: CreateFileRequestSchema) -> Response:
+    #--------------------------------------------------- Create File ---------------------------------------------------
+    # API 🟨
+    def create_file_api(self, payload: CreateFileRequestSchema) -> httpx.Response:
         """
         Метод для СОЗДАНИЯ (Upload) файла через ✅with - контекстный менеджер (для закрытия после выполнения запроса)
 
@@ -38,6 +40,7 @@ class FilesClient(APIClient):
                 files={'upload_file': f}
             )
 
+    # Pydantic-model
     def create_file(self, payload: CreateFileRequestSchema) -> CreateFileResponseSchema:
         """
         Метод получения данных о созданном файле в формате Pydantic-model
@@ -48,8 +51,9 @@ class FilesClient(APIClient):
         response = self.create_file_api(payload)
         return CreateFileResponseSchema.model_validate_json(response.text)  # ⚠ <- Валидируем ответ (любой) -> Model
 
-    #------------------------------------------------ Delete File ------------------------------------------------------
-    def delete_file_api(self, file_id: str) -> Response:
+    #--------------------------------------------------- Delete File ---------------------------------------------------
+    # API 🟥
+    def delete_file_api(self, file_id: str) -> httpx.Response:
         """
         Метод для удаления файла.
 
@@ -58,9 +62,9 @@ class FilesClient(APIClient):
         """
         return self.delete(url=f'{self.ENDPOINT}/{file_id}')
 
-    #-------------------------------------------------------------------------------------------------------------------
 
-#=================================================== Client Builder =====================================================
+
+#================================================= Client (✨Helper) ===================================================
 def get_files_client(auth_data: AuthUserSchema) -> FilesClient:
     """
     Функция создаёт экземпляр FilesClient с уже настроенным HTTP-клиентом
