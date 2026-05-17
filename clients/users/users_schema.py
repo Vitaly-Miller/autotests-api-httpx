@@ -2,6 +2,8 @@
 Authentication Pydantic Schema
 """
 from pydantic import BaseModel, Field, EmailStr
+
+from clients.auth.auth_schema import AuthUserSchema
 from tools.data_generator import fake
 
 """================================================ ⬆︎REQUEST Schema ================================================"""
@@ -104,6 +106,16 @@ class UserFullSchema(BaseModel):
         return self.request.password         # Password
 
     @property
+    def auth_data(self) -> AuthUserSchema:  # Authorize Data for Log in
+        return AuthUserSchema(
+            email=self.email,               # Email из - def email(self)
+            password=self.password          # Password из - def password(self)
+        )
+
+    @property
     def user_id(self) -> str:
         return self.response.user.id         # User ID
+
+
+
 #-----------------------------------------------------------------------------------------------------------------------

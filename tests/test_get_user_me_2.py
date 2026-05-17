@@ -2,8 +2,6 @@
 Test Get User Me 1
 (Фикстура <create_user> + Manual)
 """
-from urllib import response
-
 import httpx
 import pytest
 from tools.tool import Tool
