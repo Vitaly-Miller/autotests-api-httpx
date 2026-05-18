@@ -32,8 +32,8 @@ class PrivateUsersClient(APIClient):
 
         :return: Pydantic-model: GetUserMeResponseSchema
         """
-        response = self.get_user_me_api()
-        return GetUserMeResponseSchema.model_validate_json(response.text)
+        response = self.get_user_me_api()                                     # Используем API-метод для запроса
+        return GetUserMeResponseSchema.model_validate_json(response.text)     # Валидируем ответ (любой) —> Model
 
     #-------------------------------------------------- Get User -------------------------------------------------------
     # API 🟩
@@ -83,7 +83,9 @@ class PrivateUsersClient(APIClient):
         :return: httpx.Response
         """
         response = self.update_user_api(user_id, payload)   # Используем API-метод для запроса
-        return UserUpdateResponseSchema.model_validate_json(response.text)
+        return UserUpdateResponseSchema.model_validate_json(response.text)    # Валидируем ответ (любой) —> Model
+
+
     #------------------------------------------------- Delete User -----------------------------------------------------
     # API 🟥
     def delete_user_api(self, user_id: str) -> httpx.Response:
@@ -102,7 +104,7 @@ class PrivateUsersClient(APIClient):
 #================================================= Client (✨Helper) ===================================================
 def get_private_users_client(auth_data: AuthUserSchema) -> PrivateUsersClient:
     """
-    Функция создаёт экземпляр PrivateUsersClient с уже настроенным HTTP-клиентом
+    Функция создаёт экземпляр PrivateUsersClient с уже настроенным HTTP-клиентом (Base URL + Auth)
 
     :param auth_data: Данные для аутентификации пользователя (Email, Password) в формате Pydantic-model
     :return: Готовый к использованию PrivateUsersClient
