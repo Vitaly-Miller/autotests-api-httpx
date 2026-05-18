@@ -20,11 +20,11 @@ class APIClient:
             url: httpx.URL | str,
             params: httpx.QueryParams | None = None) -> httpx.Response:
         """
-        GET-запрос.
+        GET-запрос
 
-        :param url: URL-адрес эндпоинта.
-        :param params: Параметры запроса (например, ?key=value).
-        :return Объект httpx.Response с данными ответа.
+        :param url: URL-адрес эндпоинта
+        :param params: Параметры запроса (например, ?key=value)
+        :return: httpx.Response
         """
         return self.client.get(url=url, params=params)
 
@@ -37,11 +37,11 @@ class APIClient:
         """
         POST-запрос.
 
-        :param url: URL-адрес эндпоинта.
-        :param json: Данные в формате JSON.
-        :param data: Форматированные данные формы (например, application/x-www-form-urlencoded).
-        :param files: Файлы для загрузки на сервер.
-        :return Объект httpx.Response с данными ответа.
+        :param url: URL-адрес эндпоинта
+        :param json: Данные в формате JSON
+        :param data: Форматированные данные формы (например, application/x-www-form-urlencoded)
+        :param files: Файлы для загрузки на сервер
+        :return: httpx.Response
         """
         return self.client.post(url=url, json=json, data=data, files=files)
 
@@ -50,11 +50,11 @@ class APIClient:
               url: httpx.URL | str,
               json: Any | None = None) -> httpx.Response:
         """
-        PATCH-запрос (Частичное обновление ресурса, передавая только измененные данные).
+        PATCH-запрос (Частичное обновление ресурса, передавая только измененные данные)
 
-        :param url: URL-адрес эндпоинта.
-        :param json: Данные для обновления в формате JSON.
-        :return Объект httpx.Response с данными ответа.
+        :param url: URL-адрес эндпоинта
+        :param json: Данные для обновления в формате JSON
+        :return: httpx.Response
         """
         return self.client.patch(url=url, json=json)
 
@@ -63,11 +63,11 @@ class APIClient:
             url: httpx.URL | str,
             json: Any | None = None) -> httpx.Response:
         """
-        PUT-запрос (Полное обновление данных).
+        PUT-запрос (Полное обновление данных)
 
-        :param url: URL-адрес эндпоинта.
-        :param json: Данные для обновления в формате JSON.
-        :return Объект httpx.Response с данными ответа.
+        :param url: URL-адрес эндпоинта
+        :param json: Данные для обновления в формате JSON
+        :return: httpx.Response
         """
         return self.client.put(url=url, json=json)
 
@@ -75,11 +75,11 @@ class APIClient:
     def delete(self,
                url: httpx.URL | str) -> httpx.Response:
         """
-        DELETE-запрос (удаление данных).
+        DELETE-запрос (удаление данных)
 
-        :param url: URL-адрес эндпоинта.
-        :return Объект httpx.Response с данными ответа.
+        :param url: URL-адрес эндпоинта
+        :return: httpx.Response
         """
         return self.client.delete(url=url)
 
-#-----------------------------------------------------------------------------------------------------------------------
+#=======================================================================================================================

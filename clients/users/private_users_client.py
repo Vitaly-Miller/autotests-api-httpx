@@ -3,11 +3,14 @@
 /users
 (Для методов, требующих авторизации)
 """
+from urllib import response
+
 import httpx
 from clients.api_client import APIClient
 from clients.auth.auth_schema import AuthUserSchema
 from clients.private_http_builder import get_private_http_client
-from clients.users.users_schema import UpdateUserRequestSchema, GetUserResponseSchema
+from clients.users.users_schema import UpdateUserRequestSchema, GetUserResponseSchema, GetUserMeResponseSchema, \
+    UserUpdateResponseSchema
 
 #================================================ Private Users Client =================================================
 class PrivateUsersClient(APIClient):
@@ -22,11 +25,21 @@ class PrivateUsersClient(APIClient):
         """
         return self.get(url=f'{self.ENDPOINT}/me')
 
+    # Pydantic-model
+    def get_user_me(self) -> GetUserMeResponseSchema:
+        """
+        Метод ПОЛУЧЕНИЯ данных ТЕКУЩЕГО пользователя в формате Pydantic-model
+
+        :return: Pydantic-model: GetUserMeResponseSchema
+        """
+        response = self.get_user_me_api()
+        return GetUserMeResponseSchema.model_validate_json(response.text)
+
     #-------------------------------------------------- Get User -------------------------------------------------------
     # API 🟩
     def get_user_api(self, user_id: str) -> httpx.Response:
         """
-        Метод для ПОЛУЧЕНИЯ данных конкретного пользователя
+        Метод для ПОЛУЧЕНИЯ данных пользователя по User ID
 
         :param user_id: User ID
         :return: httpx.Response
@@ -36,18 +49,32 @@ class PrivateUsersClient(APIClient):
     # Pydantic-model
     def get_user(self, user_id: str) -> GetUserResponseSchema:
         """
-        Метод для ПОЛУЧЕНИЯ данных конкретного пользователя в формате Pydantic-модели
+        Метод для ПОЛУЧЕНИЯ данных пользователя по User ID в формате Pydantic-модели
 
         :param user_id: User ID
         :return: Ответ с данными конкретного пользователя в формате Pydantic-model
         """
-        response = self.get_user_api(user_id)
-        return GetUserResponseSchema.model_validate_json(response.text)   # Валидируем ответ (любой) —> Model
+        response = self.get_user_api(user_id)                                 # Используем API-метод для запроса
+        return GetUserResponseSchema.model_validate_json(response.text)       # Валидируем ответ (любой) —> Model
 
 
     #------------------------------------------------- Update User -----------------------------------------------------
     # API 🟪
-    def update_user_api(self, user_id: str, payload: UpdateUserRequestSchema) -> httpx.Response:
+    def update_user_api(self, user_id: str, update_data: UpdateUserRequestSchema) -> httpx.Response:
+        """
+        Метод для ЧАСТИЧНОГО ОБНОВЛЕНИЯ данных пользователя по User ID
+
+        :param user_id: User ID
+        :param update_data: Данные: email, firstName, middleName, lastName - в формате Pydantic-model
+        :return: httpx.Response
+        """
+        return self.patch(
+            url=f'{self.ENDPOINT}/{user_id}',
+            json=update_data.model_dump(by_alias=True)                        # Serialize Model —> Dict
+        )
+
+    # Pydantic-model
+    def update_user(self, user_id: str, payload: UpdateUserRequestSchema) -> UserUpdateResponseSchema:
         """
         Метод для ЧАСТИЧНОГО ОБНОВЛЕНИЯ данных пользователя по User ID
 
@@ -55,11 +82,8 @@ class PrivateUsersClient(APIClient):
         :param payload: Данные: email, firstName, middleName, lastName - в формате Pydantic-model
         :return: httpx.Response
         """
-        return self.patch(
-            url=f'{self.ENDPOINT}/{user_id}',
-            json=payload.model_dump(by_alias=True)    # сериализация Model —> Dict (т.к. payload - Pydantic-модель) + 🐫CamelCase
-        )
-
+        response = self.update_user_api(user_id, payload)   # Используем API-метод для запроса
+        return UserUpdateResponseSchema.model_validate_json(response.text)
     #------------------------------------------------- Delete User -----------------------------------------------------
     # API 🟥
     def delete_user_api(self, user_id: str) -> httpx.Response:
@@ -71,6 +95,9 @@ class PrivateUsersClient(APIClient):
         """
         return self.delete(url=f'{self.ENDPOINT}/{user_id}')
 
+    # Pydantic-model (⚠️Дописать)
+    def delete_user(self, user_id: str) -> None:
+        ...
 
 #================================================= Client (✨Helper) ===================================================
 def get_private_users_client(auth_data: AuthUserSchema) -> PrivateUsersClient:

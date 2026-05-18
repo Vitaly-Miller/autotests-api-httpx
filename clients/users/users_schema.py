@@ -20,7 +20,7 @@ class CreateUserRequestSchema(BaseModel):
     first_name: str = Field(alias='firstName', default_factory=fake.first_name)
     middle_name: str = Field(alias='middleName', default_factory=fake.middle_name)
 
-#----------------------------------------------------- Update User -------------------=---------------------------------
+#----------------------------------------------------- Update User -----------------------------------------------------
 class UpdateUserRequestSchema(BaseModel):
     """
     Схема payload для запроса на обновления данных пользователя
@@ -34,7 +34,7 @@ class UpdateUserRequestSchema(BaseModel):
 
 
 """=============================================== ⬇︎RESPONSE Schema ================================================"""
-#----------------------------------------------------- BASE User--------------------------------------------------------
+#------------------------------------------------------ User -----------------------------------------------------------
 class UserSchema(BaseModel):
     """
     Базовая схема ключа "user": {}
@@ -80,8 +80,14 @@ class GetUserMeResponseSchema(UserResponseSchema):
     Наследуется: UserResponseSchema
     """
     pass
-#-----------------------------------------------------------------------------------------------------------------------
+#----------------------------------------------------- Update User -----------------------------------------------------
+class UserUpdateResponseSchema(UserResponseSchema):
+    """
+    Схема ответа при обновлении данных пользователя
 
+    Наследуется: UserResponseSchema
+    """
+    pass
 
 #==================================================== Fixture Shema ✨==================================================
 #------------------------------------------ User Full Schema (Request + Response) --------------------------------------
@@ -106,10 +112,10 @@ class UserFullSchema(BaseModel):
         return self.request.password         # Password
 
     @property
-    def auth_data(self) -> AuthUserSchema:  # Authorize Data for Log in
+    def auth_data(self) -> AuthUserSchema:   # Authorize User Data for Log in
         return AuthUserSchema(
-            email=self.email,               # Email из - def email(self)
-            password=self.password          # Password из - def password(self)
+            email=self.email,                # Email из    - def email(self)    ┐
+            password=self.password           # Password из - def password(self) ┘
         )
 
     @property

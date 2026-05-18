@@ -6,7 +6,7 @@ from clients.users.users_schema import CreateUserRequestSchema, CreateUserRespon
 from tools.assertions.base_assert import assert_equal
 
 #=======================================================================================================================
-def assert_create_user_fields(response: httpx.Response, create_user_data: CreateUserRequestSchema = None):
+def assert_user_data_fields(response: httpx.Response, create_user_data: CreateUserRequestSchema = None):
     """
     Проверяет совпадение значения полей Запроса и Ответа (4 in 1)
 

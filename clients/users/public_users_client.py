@@ -22,17 +22,17 @@ class PublicUsersClient(APIClient):
         """
         return self.post(
             url=self.ENDPOINT,
-            json=create_user_data.model_dump(by_alias=True))  # ⚠ сериализация Model —> Dict (т.к. в payload передаем Pydantic-модель) + 🐫CamelCase
+            json=create_user_data.model_dump(by_alias=True))                # Serialize Model —> Dict
 
     # Pydantic-model
     def create_user(self, create_user_data: CreateUserRequestSchema) -> CreateUserResponseSchema:
         """
-        Метод для СОЗДАНИЯ нового пользователя с получением данных созданного пользователя в формате Pydantic-model.
+        Метод для СОЗДАНИЯ нового пользователя с получением данных созданного пользователя в формате Pydantic-model
 
         :param create_user_data: (payload) Данные для создания нового пользователя в формате Pydantic-модели
         :return: Данные созданного пользователя в формате Pydantic-model
         """
-        response = self.create_user_api(create_user_data)                            # Используем API-метод создания нового пользователя
+        response = self.create_user_api(create_user_data)                   # Используем API-метод
         return CreateUserResponseSchema.model_validate_json(response.text)  # Валидируем ответ (любой) —> Model
 
 

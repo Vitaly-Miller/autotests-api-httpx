@@ -9,7 +9,7 @@ import os
 import json
 from dotenv import set_key, dotenv_values
 from tools.formatting.colors import ANSI
-from tools.formatting.report import Report
+from tools.formatting.api_report import Report
 
 #=======================================================================================================================
 class Tool:

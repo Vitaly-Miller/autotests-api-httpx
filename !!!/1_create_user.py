@@ -10,7 +10,7 @@ fake = faker.Faker()
 #=======================================================================================================================
 BASE_URL = 'http://localhost:8000/api/v1'
 
-create_user_payload = {
+create_user_data = {
   "email": fake.email(),                  # Генерируем email нового пользователя
   "password": "string",
   "lastName": "string",
@@ -20,7 +20,7 @@ create_user_payload = {
 
 create_user_response = httpx.post(        # 🟨POST запрос на создание нового пользователя
     url=f'{BASE_URL}/users',              # URL (BASE_URL + endpoint)
-    json=create_user_payload              # Передаем create_user_payload c данными нового пользователя в формате JSON
+    json=create_user_data                 # Передаем данные нового пользователя в формате JSON
 )
 
 create_user_response_data = create_user_response.json()   # Сохраняем JSON-ответ в переменную

@@ -33,8 +33,8 @@ class Report:
 
     # Status code
     def api_status_code(self):
-        code = self.response.status_code                 # Сам код        (например: 200)
-        reason = self.response.reason_phrase             # Описание кода  (например: OK)
+        code = self.response.status_code            # Код            (например: 200)
+        reason = self.response.reason_phrase        # Описание кода  (например: OK)
         if code < 200:   color = ANSI.SUNRISE       # 1xx
         elif code < 300: color = ANSI.BRIGHT_GREEN  # 2xx
         elif code < 400: color = ANSI.SUNRISE       # 3xx

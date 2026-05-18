@@ -88,7 +88,7 @@ class ExercisesClient(APIClient):
 
 
 #================================================= Client (✨Helper) ===================================================
-def get_exercise_client(auth_data: AuthUserSchema) -> ExercisesClient:
+def get_exercises_client(auth_data: AuthUserSchema) -> ExercisesClient:
     """
     Функция создаёт экземпляр ExercisesClient с уже настроенным HTTP-клиентом.
 
