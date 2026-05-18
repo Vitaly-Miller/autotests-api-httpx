@@ -3,10 +3,8 @@ Test Get User Me 1
 (Фикстура create_user + manual)
 """
 import pytest
-from clients.auth.auth_schema import AuthUserSchema
 from clients.users.private_users_client import get_private_users_client
 from clients.users.users_schema import UserFullSchema
-from tools.assertions.users_assert import assert_user_data_fields
 from tools.tool import Tool
 
 #=======================================================================================================================

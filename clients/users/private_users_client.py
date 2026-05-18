@@ -3,14 +3,16 @@
 /users
 (Для методов, требующих авторизации)
 """
-from urllib import response
-
 import httpx
 from clients.api_client import APIClient
 from clients.auth.auth_schema import AuthUserSchema
 from clients.private_http_builder import get_private_http_client
-from clients.users.users_schema import UpdateUserRequestSchema, GetUserResponseSchema, GetUserMeResponseSchema, \
+from clients.users.users_schema import (
+    UpdateUserRequestSchema,
+    GetUserResponseSchema,
+    GetUserMeResponseSchema,
     UserUpdateResponseSchema
+)
 
 #================================================ Private Users Client =================================================
 class PrivateUsersClient(APIClient):
@@ -34,6 +36,7 @@ class PrivateUsersClient(APIClient):
         """
         response = self.get_user_me_api()                                     # Используем API-метод для запроса
         return GetUserMeResponseSchema.model_validate_json(response.text)     # Валидируем ответ (любой) —> Model
+
 
     #-------------------------------------------------- Get User -------------------------------------------------------
     # API 🟩
