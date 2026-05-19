@@ -1,5 +1,5 @@
 """
-Pydantic методы
+Pydantic методы @property, @computed_field
 """
 from pydantic import BaseModel, Field, computed_field
 
@@ -12,7 +12,7 @@ obj_dict = {
     "lastName": "Connor"
 }
 
-#========================================= ВЫЗЫВАЕМОЕ динамическое поле (метод) ========================================
+#======================================== ВЫЗЫВАЕМОЕ динамическое поле (@property) =====================================
 # Схема
 class UserSchema(BaseModel):
     id: str
@@ -20,11 +20,11 @@ class UserSchema(BaseModel):
     first_name: str = Field(alias='firstName')
     last_name: str = Field(alias='lastName')
 
-    # Python Метод
+    # Свойство (метод)
     @property                                          # БЕЗ скобок ()
     def username(self) -> str:                         # 👈ВЫЗЫВАЕМОЕ динамическое поле <username> НЕ попадает в схему
         """
-        Метод позволяет создать ВЫЗЫВАЕМОЕ динамическое поле, не добавляя его к схеме
+        Метод создания ВЫЗЫВАЕМОГО динамическое поля, НЕ добавляя его к схеме
 
         :return: str
         """
@@ -54,9 +54,14 @@ class UserSchema(BaseModel):
     #username: str = f'{first_name} {last_name}'      # ❌
 
     # Pydantic Метод
-    @computed_field(alias='userName')                # 👈✅ Общее динамическое поле <username> ПОПАДАЕТ в схему + БЕЗ скобок ()
+    @computed_field(alias='userName')                 # 👈✅ Общее динамическое поле <username> ПОПАДАЕТ в схему + БЕЗ скобок ()
     #@property                                        # БЕЗ скобок () - Работает и без свойства @property при @computed_field. Но могут быть ошибки в других стеках.
     def username(self) -> str:
+        """
+        Метод создания ОБЩЕГО динамического поля, добавляя его к схеме
+
+        :return: str
+        """
         return f'{self.first_name} {self.last_name}'
 
 

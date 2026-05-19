@@ -1,8 +1,6 @@
 """
 Обработка Validation Errors
 """
-from pprint import pprint
-
 from pydantic import BaseModel, Field, ValidationError
 
 #==================================================== Schema ===========================================================
@@ -28,7 +26,7 @@ try:
     invalid_user = UserSchema(
         id=11,
         books=10,
-        age=10,                 # 👈Передаем ошибочный аргумент
+        age=10,                 # 👈Передаем ❌ошибочный аргумент
         score=10
     )
 except ValidationError as e:     # Перехват ошибки типа ValidationError и сохранения описания в переменную <e>

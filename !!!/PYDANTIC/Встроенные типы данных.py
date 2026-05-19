@@ -19,7 +19,7 @@ company = CompanySchema(
 
 print(company)                           # url=HttpUrl('https://website.com/') email='info@email.com'
 print(company.model_dump())              # {'url': HttpUrl('https://website.com/'), 'email': 'info@email.com'}
-print(company.model_dump(mode='json'))   # {'url': 'https://website.com/', 'email': 'info@email.com'} ✨- убрал HttpUrl
+print(company.model_dump(mode='json'))   # {'url': 'https://website.com/', 'email': 'info@email.com'}   ✨- убрал HttpUrl
 print(company.model_dump_json())         # {"url":"https://website.com/","email":"info@email.com"}
 
 

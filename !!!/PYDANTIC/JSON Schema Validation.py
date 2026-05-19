@@ -1,5 +1,5 @@
 """
-JSON Schema Validation (NOT Pydantic)
+JSON Schema Validation
 """
 import jsonschema
 
