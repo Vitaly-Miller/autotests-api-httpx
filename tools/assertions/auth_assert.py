@@ -3,27 +3,30 @@ Authentication (Log in) assertions
 """
 import httpx
 from clients.auth.auth_schema import AuthUserResponseSchema
-from tools.assertions.base_assert import assert_equal, assert_value_len, assert_is_true
+from tools.assertions.base_assert import assert_value_equal, assert_value_len, assert_is_value
 
 #=======================================================================================================================
-def assert_login_response_fields(response: httpx.Response):
+def assert_auth_response_fields(response: httpx.Response):
     """
     6-in-1 | Проверяет поля на НЕпустоту, Тип токена, Длину токенов: access- и refresh-
 
-    :param response: Response для десериализация в —> Pydantic-model и дальнейшего использования в assertions
-    :raise AssertionError - if values are not equal
+    :param response: httpx.Response для десериализация в —> Pydantic-model и дальнейшего использования в assertions
+    :raise AssertionError
     """
 
-    # JSON-ответ —> Pydantic-model (десериализация для Assertions)
+    # httpx.Response —> Pydantic-model (Deserialize for Assertions)
     response_model = AuthUserResponseSchema.model_validate_json(response.text)
 
-    # Assertions 6-in-1:
-    assert_is_true(response_model.token.token_type, 'token_type')           # Поле не пустое ┐
-    assert_is_true(response_model.token.access_token, 'access_token')       # Поле не пустое ├╴⚠️Бессмысленно, т.к. в следующих проверках проверяем значения и длину (Оставлено для примера)
-    assert_is_true(response_model.token.refresh_token, 'refresh_token')     # Поле не пустое ┘
+    # NON-Empty value:
+    assert_is_value(response_model.token.token_type, 'token_type')           # Поле не пустое ┐
+    assert_is_value(response_model.token.access_token, 'access_token')       # Поле не пустое ├╴⚠️Бессмысленно, т.к. в следующих проверках проверяем значения и длину (Оставлено для примера)
+    assert_is_value(response_model.token.refresh_token, 'refresh_token')     # Поле не пустое ┘
 
-    assert_equal(response_model.token.token_type, 'bearer', 'token_type')           # Тип токена - 'bearer'
-    assert_value_len(response_model.token.access_token, 199, 'access_token')     # Длина access-токена 199 знаков
-    assert_value_len(response_model.token.refresh_token, 199, 'refresh_token')   # Длина refresh-токена 199 знаков
+    # Value equal:
+    assert_value_equal(response_model.token.token_type,'token_type', 'bearer')     # Тип токена - 'bearer'
+
+    # Value length:
+    assert_value_len(response_model.token.access_token, 'access_token', 199)     # Длина access-токена  = 199 знаков
+    assert_value_len(response_model.token.refresh_token, 'refresh_token', 199)   # Длина refresh-токена = 199 знаков
 
 #-----------------------------------------------------------------------------------------------------------------------

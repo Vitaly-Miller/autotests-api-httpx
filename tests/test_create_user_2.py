@@ -21,12 +21,14 @@ def test_create_user(create_user_api: Response):         # Передаем фи
                                                          # Но не обязательно. Исполняемую фикстуру можно сразу передавать в Assertions в качестве параметра response=)
 
     #---------------------------------------------------- Assertions ---------------------------------------------------
-    # Base assertions
-    assert_status_code(response, HTTPStatus.OK)    # проверка статус-кода
-    assert_method(response, HTTPMethod.POST)       # проверка метода запроса
-    # # Create User assertions
-    assert_user_data_fields(response=response)                     # Проверка совпадения полей Запроса и Ответа (4 in 1)
-    # # Validation JSON Schema
+    # Base API assertions
+    assert_status_code(response, HTTPStatus.OK)
+    assert_method(response, HTTPMethod.POST)
+
+    # Value equal
+    assert_user_data_fields(response=response)  # Проверка совпадения полей Запроса и Ответа
+
+    # Validation JSON Schema
     validation_json_schema(response, CreateUserResponseSchema)
 
 #=======================================================================================================================

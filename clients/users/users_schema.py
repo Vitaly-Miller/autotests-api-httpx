@@ -2,7 +2,6 @@
 Authentication Pydantic Schema
 """
 from pydantic import BaseModel, Field, EmailStr
-
 from clients.auth.auth_schema import AuthUserSchema
 from tools.data_generator import fake
 
@@ -33,8 +32,9 @@ class UpdateUserRequestSchema(BaseModel):
     middle_name: str | None = Field(alias='middleName', default_factory=fake.middle_name)
 
 
+
 """=============================================== ⬇︎RESPONSE Schema ================================================"""
-#------------------------------------------------------ User -----------------------------------------------------------
+#------------------------------------------------------ Base -----------------------------------------------------------
 class UserSchema(BaseModel):
     """
     Базовая схема ключа "user": {}
@@ -89,7 +89,7 @@ class UserUpdateResponseSchema(UserResponseSchema):
     """
     pass
 
-#==================================================== Fixture Shema ✨==================================================
+"""================================================= United Shema ✨================================================="""
 #------------------------------------------ User Full Schema (Request + Response) --------------------------------------
 # Схема объединенных данных пользователя (Request + Response)
 class UserFullSchema(BaseModel):
@@ -112,16 +112,14 @@ class UserFullSchema(BaseModel):
         return self.request.password         # Password
 
     @property
-    def auth_data(self) -> AuthUserSchema:   # Authorize User Data for Log in
-        return AuthUserSchema(
-            email=self.email,                # Email из    - def email(self)    ┐
-            password=self.password           # Password из - def password(self) ┘
-        )
-
-    @property
     def user_id(self) -> str:
         return self.response.user.id         # User ID
 
-
+    @property
+    def auth_data(self) -> AuthUserSchema:   # Auth_data
+        return AuthUserSchema(
+            email=self.email,                # Email     ┐
+            password=self.password           # Password  ┘
+        )
 
 #-----------------------------------------------------------------------------------------------------------------------

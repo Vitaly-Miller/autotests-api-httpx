@@ -40,42 +40,42 @@ class CoursesClient(APIClient):
 
     #------------------------------------------------- Create Course ---------------------------------------------------
     # API 🟨
-    def create_course_api(self, payload: CreateCourseRequestSchema) -> httpx.Response:
+    def create_course_api(self, create_course_data: CreateCourseRequestSchema) -> httpx.Response:
         """
         Метод для СОЗДАНИЯ курса
 
-        :param payload: Данные для создания курса в формате Pydantic-model
+        :param create_course_data: Данные для создания курса в формате Pydantic-model
         :return: httpx.Response
         """
         return self.post(
             url=self.ENDPOINT,
-            json=payload.model_dump(by_alias=True)    # ⚠ сериализация Model —> Dict (т.к. payload - Pydantic-модель)
+            json=create_course_data.model_dump(by_alias=True)    # ⚠ сериализация Model —> Dict (т.к. payload - Pydantic-модель)
         )
 
     # Pydantic-model
-    def create_course(self, payload: CreateCourseRequestSchema) -> CreateCourseResponseSchema:
+    def create_course(self, create_course_data: CreateCourseRequestSchema) -> CreateCourseResponseSchema:
         """
         Метод для СОЗДАНИЯ курса с получением данных о созданном курсе в формате Pydantic-model
 
-        :param payload: Данные для создания курса в формате Pydantic-model
-        :return: Ответ с данными об авторизации пользователя в формате Pydantic-model
+        :param create_course_data: Данные для создания курса в формате Pydantic-model
+        :return: Pydantic-model: CreateCourseResponseSchema
         """
-        response = self.create_course_api(payload)
+        response = self.create_course_api(create_course_data)
         return CreateCourseResponseSchema.model_validate_json(response.text)  # Валидируем ответ (любой) —> Model
 
     #------------------------------------------------- Update Course ---------------------------------------------------
     # API 🟪
-    def update_course_api(self, course_id: str, payload: UpdateCourseRequestSchema) -> httpx.Response:
+    def update_course_api(self, course_id: str, update_course_data: UpdateCourseRequestSchema) -> httpx.Response:
         """
         Метод для частичного ОБНОВЛЕНИЯ курса по Course ID
 
         :param course_id: Course ID
-        :param payload: Данными, которые необходимо обновить в формате Pydantic-model
+        :param update_course_data: Данными, которые необходимо обновить в формате Pydantic-model
         :return: httpx.Response
         """
         return self.patch(
             url=f'{self.ENDPOINT}/{course_id}',
-            json=payload.model_dump(by_alias=True)     # сериализация Model —> Dict (т.к. payload - Pydantic-модель)
+            json=update_course_data.model_dump(by_alias=True)     # сериализация Model —> Dict (т.к. payload - Pydantic-модель)
         )
 
     #------------------------------------------------- Delete Course ---------------------------------------------------

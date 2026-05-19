@@ -13,7 +13,7 @@ from tools.tool import Tool
 @pytest.mark.users
 def test_get_user_me(private_users_client: PrivateUsersClient):   # Передача фикстуры СОЗДАНИЯ ПОЛЬЗОВАТЕЛЯ
 
-    response = private_users_client.get_user_me_api()             # 🟩Get-запрос на получение данных ТЕКУЩЕГО пользователя
+    response = private_users_client.get_user_me_api()             # ▶ Запрос на получение данных ТЕКУЩЕГО пользователя
 
     # ---------------------------------------------------- Assertions ---------------------------------------------------
     assert_status_code(response, http.HTTPStatus.OK)

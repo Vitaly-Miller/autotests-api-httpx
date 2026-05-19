@@ -3,32 +3,32 @@ Users assertions
 """
 import httpx
 from clients.users.users_schema import CreateUserRequestSchema, CreateUserResponseSchema
-from tools.assertions.base_assert import assert_equal
+from tools.assertions.base_assert import assert_value_equal
 
 #=======================================================================================================================
-def assert_user_data_fields(response: httpx.Response, create_user_data: CreateUserRequestSchema = None):
+def assert_user_data_fields(response: httpx.Response, request_model: CreateUserRequestSchema | None = None):
     """
-    Проверяет совпадение значения полей Запроса и Ответа (4 in 1)
+    4-in-1 | Проверяет совпадение значения полей Response и Request
 
-    Десериализует http.Response и .Request в —> Pydantic-model для Assertions
-    Проверяемые поля: email, last_name, first_name; middle_name
+    Десериализация в —> Pydantic-model для Assertions
+    Проверяемые поля: -email, -last_name, -first_name, -middle_name
 
-    :param response: Response для десериализация в —> Pydantic-model и дальнейшего использования в assertions
-    :param create_user_data: (payload) (Pydantic-model) - Внешние данные. Если не передать, то берутся из response.REQUEST.content
-    :raise AssertionError - if values are not equal
-
+    :param response: httpx.Response c User data для десериализация в —> Pydantic-model и дальнейшего использования в assertions
+    :param request_model:  Pydantic-model c User data. (Если не передать, то вытащит из response.REQUEST.content и десериализует в —> Pydantic-model)
+    :raise AssertionError
     """
 
-    # JSON-ответ —> Pydantic-model (десериализация для Assertions)
+    # httpx.Response —> Pydantic-model (Deserialize for Assertions)
     response_model = CreateUserResponseSchema.model_validate_json(response.text)
-    # Условие, если не передать create_user_data, то вытащить их из response.REQUEST.conten и распарсить в модель
-    if not create_user_data:
-        create_user_data = CreateUserRequestSchema.model_validate_json(response.request.content)
 
-    # Assertions 4-in-1:
-    assert_equal(response_model.user.email, create_user_data.email, 'email')
-    assert_equal(response_model.user.last_name, create_user_data.last_name, 'last_name')
-    assert_equal(response_model.user.first_name, create_user_data.first_name, 'first_name')
-    assert_equal(response_model.user.middle_name, create_user_data.middle_name, 'middle_ame')
+    # Условие, если не передать request_model, то вытащить их из response.REQUEST.conten и распарсить в модель
+    if not request_model:
+        request_model = CreateUserRequestSchema.model_validate_json(response.request.content)
+
+    # Value equal:
+    assert_value_equal(response_model.user.email, 'email',request_model.email)
+    assert_value_equal(response_model.user.last_name, 'last_name',request_model.last_name)
+    assert_value_equal(response_model.user.first_name, 'first_name',request_model.first_name)
+    assert_value_equal(response_model.user.middle_name, 'middle_ame',request_model.middle_name)
 
 #-----------------------------------------------------------------------------------------------------------------------

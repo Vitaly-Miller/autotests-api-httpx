@@ -2,9 +2,6 @@ pydantic
 httpx
 jsonschema
 Faker
-
 pytest
-
 loguru
-
 python-dotenv

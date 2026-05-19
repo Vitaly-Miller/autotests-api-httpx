@@ -25,30 +25,30 @@ class FilesClient(APIClient):
 
     #--------------------------------------------------- Create File ---------------------------------------------------
     # API 🟨
-    def create_file_api(self, payload: CreateFileRequestSchema) -> httpx.Response:
+    def create_file_api(self, create_file_data: CreateFileRequestSchema) -> httpx.Response:
         """
         Метод для СОЗДАНИЯ (Upload) файла через ✅with - контекстный менеджер (для закрытия после выполнения запроса)
 
-        :param payload: Данными о файле в формате Pydantic-model
+        :param create_file_data: Данные о файле в формате Pydantic-model
         :return: httpx.Response
         """
-        with open(payload.upload_path, 'rb') as f:
+        with open(create_file_data.upload_path, 'rb') as f:
             return self.post(
                 url=self.ENDPOINT,
                 # data=payload,            # - ⚠️проверить - payload целиком -> Сервер получит лишние поля: 'filename' и 'directory' (✔️ничего страшного)
-                data={'filename': payload.filename, 'directory': payload.directory},
+                data={'filename': create_file_data.filename, 'directory': create_file_data.directory},
                 files={'upload_file': f}
             )
 
     # Pydantic-model
-    def create_file(self, payload: CreateFileRequestSchema) -> CreateFileResponseSchema:
+    def create_file(self, create_file_data: CreateFileRequestSchema) -> CreateFileResponseSchema:
         """
         Метод получения данных о созданном файле в формате Pydantic-model
 
-        :param payload: Данные о создаваемом файле в формате Pydantic-model
+        :param create_file_data: Данные о создаваемом файле в формате Pydantic-model
         :return: Ответ с данными о созданном файле в формате Pydantic-model
         """
-        response = self.create_file_api(payload)
+        response = self.create_file_api(create_file_data)
         return CreateFileResponseSchema.model_validate_json(response.text)  # ⚠ <- Валидируем ответ (любой) -> Model
 
     #--------------------------------------------------- Delete File ---------------------------------------------------

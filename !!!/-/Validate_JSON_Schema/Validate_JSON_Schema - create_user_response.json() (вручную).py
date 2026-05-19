@@ -10,7 +10,7 @@ import jsonschema
 #=======================================================================================================================
 #--------------------------------------------- 1. Create User (API-метод) ----------------------------------------------
 # Инициализация Pydantic Model
-create_user_payload = CreateUserRequestSchema(              # Модель с данными о новом пользователе
+create_user_data = CreateUserRequestSchema(              # Модель с данными о новом пользователе
     email=fake.email(),
     password=fake.password(),
     lastName=fake.last_name(),
@@ -21,7 +21,7 @@ create_user_payload = CreateUserRequestSchema(              # Модель с д
 users_client = get_public_users_client()
 
 # 🟨POST запрос на создание пользователя методом create_user_api 👈 (на выходе -> http.Response)
-create_user_response = users_client.create_user_api(payload=create_user_payload)  # 👈 через .метод _api, чтобы получить - raw JSON для дальнейшего использования
+create_user_response = users_client.create_user_api(create_user_data=create_user_data)  # 👈 через .метод _api, чтобы получить - raw JSON для дальнейшего использования
 
 create_user_response_json = create_user_response.json()     # сохраняем JSON-ответ
 
