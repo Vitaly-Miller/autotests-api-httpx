@@ -10,23 +10,24 @@ def validation_json_schema(instance: httpx.Response | dict, schema: type[pydanti
     """
     Валидация JSON-схемы со встроенным генератором (Pidantic-схема —> JSON-схема)
 
-    :param instance: Объект для валидации <response>
-    :param schema: Ожидаемая Pidantic-схема  <CreateUserResponseSchema>, из которой будет генерирована JSON-схема
+    :param instance: Объект для валидации <httpx.Response> или <dict>
+    :param schema: Ожидаемая Pidantic-Schema, из которой будет генерирована JSON-схема
     :raise: ValidationError - если instance ≠ schema
     """
 
-    if isinstance(instance, httpx.Response):
-        instance = instance.json()
+    # Если передали сырой httpx.Response
+    if isinstance(instance, httpx.Response):                   # Проверка на тип данных <instance>
+        instance = instance.json()                             # httpx.Response –> Dict
 
     try:
         jsonschema.validate(
-            instance=instance,                                 # Данные для валидации
-            schema=schema.model_json_schema(),                 # JSON-схема, .сгенерированная из Pidantic-схемы
+            instance=instance,                                 # Словарь (dict) для валидации
+            schema=schema.model_json_schema(),                 # JSON-схема (dict), сгенерированная из Pidantic-схемы
             format_checker=jsonschema.FormatChecker()          # Валидация форматов (default) (⚠️НЕ ЗАБУДЬ! - в схеме ответа - email: EmailStr, ...)
         )
-        #print('✅JSON-response schema. Validation success.')  # Вывод при успешной валидации (можно закомментировать)
+        #print('✅JSON-response schema. Validation success.')  # Вывод при успешной валидации (#закомментировано)
 
-    except jsonschema.ValidationError as e:                    # Сохранить полное описание ошибки валидации в переменной <e>
+    except jsonschema.ValidationError as e:                                 # Сохранить полное описание ошибки валидации в переменной <e>
         print(f'❌JSON-response schema. Validation error: [{e.message}]')   # Вывод краткого описания ошибки (только текст без кода)
-        raise e                                                # Упасть с полным описанием ошибки (Traceback)
+        raise e                                                             # Упасть с полным описанием ошибки (Traceback)
 #-----------------------------------------------------------------------------------------------------------------------

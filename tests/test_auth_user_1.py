@@ -5,31 +5,30 @@ Test User Authentication (Log in)
 import pytest
 from clients.auth.auth_client import AuthClient
 from clients.auth.auth_schema import AuthUserResponseSchema, AuthUserSchema
-from http import HTTPStatus, HTTPMethod
 from clients.users.users_schema import UserFullSchema
 from tools.assertions.auth_assert import assert_auth_response_fields
 from tools.assertions.base_assert import assert_status_code, assert_method
 from tools.assertions.schema_assert import validation_json_schema
-from tools.tool import Tool
+from http import HTTPStatus, HTTPMethod
 
 #=======================================================================================================================
 @pytest.mark.smoke
 @pytest.mark.users
-def test_auth_user_1(create_user: UserFullSchema, auth_client: AuthClient):  # Передача фикстур СОЗДАНИЯ ПОЛЬЗОВАТЕЛЯ + Auth Client
+def test_auth_user_1(create_user: UserFullSchema, auth_client: AuthClient):  # Передача фикстур Create User + Auth Client
 
-    auth_data = AuthUserSchema(                   # Инициализация Pydantic-модели с авторизационными данными пользователя (Email и Password)
-        email=create_user.email,                  # Вытаскиваем .Email из модели
-        password=create_user.password             # Вытаскиваем .Password из модели
+    auth_data = AuthUserSchema(                   # Инициализация Pydantic-model с авторизационными данными пользователя (Email и Password)
+        email=create_user.email,                  # Вытаскиваем Email из модели фикстуры
+        password=create_user.password             # Вытаскиваем Password из модели фикстуры
     )
 
-    response = auth_client.login_api(auth_data)   # ▶ Запрос на Login (Authentication) через API-метод
+    response = auth_client.login_api(auth_data)   # ▶ Запрос на Authentication (Login) через API-метод
 
     #---------------------------------------------------- Assertions ---------------------------------------------------
     # Base API assertions
-    assert_status_code(response, HTTPStatus.OK)     # проверка статус-кода
-    assert_method(response, HTTPMethod.POST)      # проверка метода запроса
+    assert_status_code(response, HTTPStatus.OK)
+    assert_method(response, HTTPMethod.POST)
 
-    # 6-in-1
+    # 6-in-1 | NON-Empty value, Value equal, Value length:
     assert_auth_response_fields(response=response)
 
     # Validation JSON Schema

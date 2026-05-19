@@ -35,7 +35,7 @@ def test_create_user_0():
 
     # Validation JSON Schema
     jsonschema.validate(
-        instance=response.json(),                             # Данные для валидации в формате JSON
+        instance=response.json(),                             # Словарь санными для валидации
         schema=CreateUserResponseSchema.model_json_schema(),  # JSON-схема, сгенерированная из Pidantic-схемы
         format_checker=jsonschema.FormatChecker()             # Проверка форматов
     )

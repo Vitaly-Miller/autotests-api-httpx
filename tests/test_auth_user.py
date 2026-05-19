@@ -24,16 +24,18 @@ from tools.tool import Tool
 """
 @pytest.mark.smoke
 @pytest.mark.users
-def test_auth_user(auth_user_api: Response):          # Передача фикстуры 2-in-1 (СОЗДАНИЯ ПОЛЬЗОВАТЕЛЯ c ✨АВТОРИЗАЦИЕЙ)
-    response = auth_user_api                          # Сохраняем ответ в переменную...
-                                                      # ...✨НО можно фикстуру сразу загонять в ассерты.
+def test_auth_user(auth_user_api: Response):          # Передача фикстуры 2-in-1 (Create User + Auth Client)
+    response = auth_user_api                          # Сохраняем ответ работы фикстуры в переменную...
+                                                      # ...✨НО можно фикстуру сразу загонять в ассерты. (если scope='function')
 
     #---------------------------------------------------- Assertions ---------------------------------------------------
-    # Base assertions
-    assert_status_code(response, HTTPStatus.OK)   # проверка статус-кода
-    assert_method(response, HTTPMethod.POST)      # проверка метода запроса
-    # Authentication assertions
-    assert_auth_response_fields(response=response)                 # Проверка на НЕпустоту полей (6-in-1)
+    # Base API assertions
+    assert_status_code(response, HTTPStatus.OK)
+    assert_method(response, HTTPMethod.POST)
+
+    # NON-Empty values
+    assert_auth_response_fields(response=response)
+
     # Validation JSON Schema
     validation_json_schema(response, AuthUserResponseSchema)
 

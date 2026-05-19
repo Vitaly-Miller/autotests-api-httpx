@@ -1,5 +1,5 @@
 """
-Test Create User 2
+Test Create User
 (Фикстура public_users_client. Без передачи create_user_data в assert. Данные берутся из response.REQUEST.content)
 """
 import pytest

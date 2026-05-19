@@ -11,14 +11,14 @@ from tools.assertions.base_assert import assert_status_code, assert_method
 from tools.assertions.schema_assert import validation_json_schema
 from tools.assertions.users_assert import assert_user_data_fields
 
-
 #=======================================================================================================================
 @pytest.mark.smoke
 @pytest.mark.users
-def test_create_user(create_user_api: Response):         # Передаем фикстуру создания пользователя в тест
+def test_create_user(create_user_api: Response):         # Передаем фикстуру создания пользователя
 
-    response = create_user_api                           # Сохраняем ОТВЕТ в переменную
-                                                         # Но не обязательно. Исполняемую фикстуру можно сразу передавать в Assertions в качестве параметра response=)
+    response = create_user_api                           # Сохраняем ответ в переменную
+                                                         # Но не обязательно.
+                                                         # Исполняемую фикстуру можно сразу передавать в Assertions в качестве параметра response=create_user_api)
 
     #---------------------------------------------------- Assertions ---------------------------------------------------
     # Base API assertions

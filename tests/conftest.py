@@ -104,7 +104,7 @@ def create_user_api(public_users_client: PublicUsersClient) -> httpx.Response:
     :return: httpx.Response
     """
     create_user_data = CreateUserRequestSchema()          # Инициализация модели с fake-данными нового пользователя по Pydantic-схеме
-    response = public_users_client.create_user_api(create_user_data=create_user_data)  # 🟨Post-запрос на создание пользователя через метод. Передаем fake-данные нового пользователя.
+    response = public_users_client.create_user_api(create_user_data=create_user_data)  # ▶ Запрос на создание пользователя через метод. Передаем fake-данные нового пользователя.
     return response                                       # httpx.Response
                                                           # ❗️Если нужно добраться до Request c 'password' - через парсинг JSON —> {dict}:
                                                           # request_body = json.loads(response.request.content)
@@ -119,7 +119,7 @@ def create_user(public_users_client: PublicUsersClient) -> UserFullSchema:
     :return: ✨Pydantic-model: UserFullSchema с объединенными данными пользователя <Request + Response>
     """
     create_user_data = CreateUserRequestSchema()                         # Инициализация модели с fake-данными нового пользователя по Pydantic-схеме
-    response = public_users_client.create_user(create_user_data=create_user_data) # ︎🟨Post-запрос на создание пользователя. Передаем fake-данные нового пользователя.
+    response = public_users_client.create_user(create_user_data=create_user_data) # ︎▶ Запрос на создание пользователя. Передаем fake-данные нового пользователя.
     return UserFullSchema(request=create_user_data, response=response)   # Pydantic-model: UserFullSchema ✨с объединенными данными пользователя <Request + Response>
 
 
@@ -134,7 +134,7 @@ def auth_user_api(create_user: UserFullSchema, auth_client: AuthClient) -> httpx
     :param auth_client: Вложенная фикстура АВТОРИЗАЦИИ пользователя (Log in)
     :return: httpx.Response
     """
-    response = auth_client.login_api(auth_data=create_user.auth_data)    # 🟨Post-запрос на Authentication (Log in) через API-метод. Передаем auth_data c Email и Password и сохраняем ответ в переменную.
+    response = auth_client.login_api(auth_data=create_user.auth_data)    # ▶ Запрос на Authentication (Log in) через API-метод. Передаем auth_data c Email и Password и сохраняем ответ в переменную.
     return response                                                      # httpx.Response
 
 
@@ -148,7 +148,7 @@ def auth_user(create_user: UserFullSchema, auth_client: AuthClient) -> AuthUserR
     :param auth_client: Вложенная фикстура АВТОРИЗАЦИИ пользователя (Log in)
     :return: Pydantic-model: AuthUserResponseSchema
     """
-    response = auth_client.login(auth_data=create_user.auth_data)        # 🟨Post-запрос на Authentication (Log in). Передаем auth_data c Email и Password и сохраняем ответ в переменную.
+    response = auth_client.login(auth_data=create_user.auth_data)        # ▶ Запрос на Authentication (Log in). Передаем auth_data c Email и Password и сохраняем ответ в переменную.
     return response                                                      # Pydantic-model: AuthUserResponseSchema
 
 
@@ -162,7 +162,7 @@ def get_user_me_api(private_users_client: PrivateUsersClient) -> httpx.Response:
     :param private_users_client: Экземпляр класса PrivateUsersClient (c Base URL + Auth)
     :return: httpx.Response
     """
-    response = private_users_client.get_user_me_api()   # 🟩Get-запрос на получение данных ТЕКУЩЕГО пользователя
+    response = private_users_client.get_user_me_api()   # ▶ Запрос на получение данных ТЕКУЩЕГО пользователя
     return response                                     # httpx.Response
 
 # Pydantic-model
@@ -174,7 +174,7 @@ def get_user_me(private_users_client: PrivateUsersClient) -> GetUserMeResponseSc
     :param private_users_client: Экземпляр класса PrivateUsersClient (c Base URL + Auth)
     :return: Pydantic-model: GetUserMeResponseSchema
     """
-    response = private_users_client.get_user_me()       # 🟩Get-запрос на получение данных ТЕКУЩЕГО пользователя
+    response = private_users_client.get_user_me()       # ▶ Запрос на получение данных ТЕКУЩЕГО пользователя
     return response                                     # Pydantic-model: GetUserMeResponseSchema
 
 
