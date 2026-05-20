@@ -1,6 +1,11 @@
 """
-сonftest.py
+conftest.py
 Хранение фикстур
+"""
+"""
+⚠️НЕ ИСПОЛЬЗУЕТСЯ! 
+- ФИКСТУРЫ РАСПРЕДЕЛЕНЫ ПО МОДУЛЯМ-ФАЙЛАМ
+- conftest.py вынесен в корень проекта и использует pytest_plugins = ()
 """
 import httpx
 import pytest
