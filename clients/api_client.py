@@ -35,7 +35,7 @@ class APIClient:
              data: RequestData | None = None,
              files: RequestFiles | None = None) -> httpx.Response:
         """
-        POST-запрос.
+        POST-запрос
 
         :param url: URL-адрес эндпоинта
         :param json: Данные в формате JSON

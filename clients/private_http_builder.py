@@ -26,3 +26,5 @@ def get_private_http_client(auth_data: AuthUserSchema) -> httpx.Client:
     token = login_response.token.access_token                 # ⚠ Обращение через .атрибут  - Для валидированной Pydantic-Model  (Вытаскиваем токен из отела ответа)
     auth_headers = {'Authorization': f'Bearer {token}'}       # Сформируем заголовок для аутентификации
     return httpx.Client(base_url=BASE_URL, headers=auth_headers)
+
+#-----------------------------------------------------------------------------------------------------------------------

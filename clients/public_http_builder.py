@@ -15,3 +15,5 @@ def get_public_http_client() -> httpx.Client:
     :return: Готовый к использованию объект httpx.Client с Base URL
     """
     return httpx.Client(base_url=BASE_URL)
+
+#-----------------------------------------------------------------------------------------------------------------------
