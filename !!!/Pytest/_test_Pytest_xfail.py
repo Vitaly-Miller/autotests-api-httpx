@@ -19,10 +19,12 @@ import pytest
 def test_bug_found():
     assert 1 == 2                # XFAIL (Баг в приложении. Тест падает с ошибкой)
 
+
 # ✖️-> ☑️ (Неожиданно успешный тест)
 @pytest.mark.xfail(reason='Баг уже исправлен, но на тесте все еще висит маркировка xfail')
 def test_bug_fixed():
     assert 1 == 1                # XPASS (Баг уже исправлен, но на тесте все еще висит маркировка xfail)
+
 
 # ✅ (Успешный тест)
 def test_success():

@@ -12,7 +12,7 @@ def test_1():                                    # SKIPPED (unconditional skip)
     assert 1 + 1 == 2
 
 
-@pytest.mark.skip(reason='Фича в разработке')    # Пропуск теста c указанием причины
+@pytest.mark.skip(reason='Фича в разработке')    # Пропуск теста (c указанием причины)
 def test_2():                                    # SKIPPED (Фича в разработке)
     assert 1 + 1 == 2
 
