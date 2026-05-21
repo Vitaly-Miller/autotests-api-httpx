@@ -10,6 +10,7 @@ Pytest parametrize (для Тестов)
 import pytest
 
 #================================================ Manual parametrize ===================================================
+# Manual
 def test_1():
     assert 1 > 0  # PASSED
 
@@ -19,9 +20,11 @@ def test_2():
 def test_3():
     assert 3 > 0  # PASSED
 
+# # 3-in-1 (❌Bad practice)
 def test_loop():
     for n in [1, 2, 3]:  # или range(1, 4)
-        assert n > 0  # PASSED (❌Bad practice - если тест упадет на первом <n>, то остальные параметры не будут проверены)
+        assert n > 0     # PASSED (❌Bad practice - если тест упадет на первом <n>, то остальные параметры не будут проверены)
+
 
 #==================================================== Parametrize ======================================================
 # 3-in-1
@@ -71,4 +74,5 @@ def test_multi_param(comp: str, os: str):   # <- передаем парамет
                                             # [Linux-Computer-2] PASSED
                                             # [Linux-hComputer-3] PASSED
                                             # [Linux-Computer-4] PASSED
+
 #=======================================================================================================================
