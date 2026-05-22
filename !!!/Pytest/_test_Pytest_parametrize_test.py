@@ -28,7 +28,7 @@ def test_loop():
 
 #==================================================== Parametrize ======================================================
 # 3-in-1
-@pytest.mark.parametrize('number', [1, 2, 3])  # —> number = 1, number = 2, number = 3
+@pytest.mark.parametrize('number', [1, 2, 3])  # number = 1, number = 2, number = 3
 def test_1(number: int):            # передаем <number>
     assert number > 0               # подставляет КАЖДЫЙ <number>
                                     # [1] PASSED
@@ -37,7 +37,7 @@ def test_1(number: int):            # передаем <number>
 
 #========================================== Parametrize (c двумя параметрами) ==========================================
 # 3-in-1
-@pytest.mark.parametrize('number, expected', [    # <- 'название параметра 2, название параметра 2'
+@pytest.mark.parametrize('number, expected', [    # 'параметр_1, параметр_2', [
     (1, 1),         # number = 1, expected = 1
     (2, 4),         # number = 2, expected = 4
     (3, 9)          # number = 3, expected = 9
@@ -56,7 +56,7 @@ def test_2(number: int, expected: int):    # —> передаем <number> и <
     'Computer-3',
     'Computer-4'
 ])
-@pytest.mark.parametrize('os', [         # каждый параметр <OS> будет подставлен 4 раза - к computer_1, _2, _3 и _4
+@pytest.mark.parametrize('os', [         # каждый параметр <os> будет подставлен 4 раза - к computer_1, _2, _3 и _4
     'Windows',
     'MacOS',
     'Linux'
