@@ -1,6 +1,6 @@
 """
 Pytest parametrize (для Тестов)
-@pytest.mark.parametrize(...)
+@pytest.mark.parametrize()
 """
 """
 Позволяет запустить одну и ту же функцию (тест) с разными входными данными
@@ -29,11 +29,11 @@ def test_loop():
 #==================================================== Parametrize ======================================================
 # 3-in-1
 @pytest.mark.parametrize('number', [1, 2, 3])  # —> number = 1, number = 2, number = 3
-def test_1(number: int):           # передаем <number>
-    assert number > 0              # подставляет КАЖДЫЙ <number>
-                                   # [1] PASSED
-                                   # [2] PASSED
-                                   # [3] PASSED
+def test_1(number: int):            # передаем <number>
+    assert number > 0               # подставляет КАЖДЫЙ <number>
+                                    # [1] PASSED
+                                    # [2] PASSED
+                                    # [3] PASSED
 
 #========================================== Parametrize (c двумя параметрами) ==========================================
 # 3-in-1
@@ -53,7 +53,7 @@ def test_2(number: int, expected: int):    # —> передаем <number> и <
 @pytest.mark.parametrize('comp', [       # каждый параметр <comp> будет подставлен 3 раза к Windows, MacOS и Linux
     'Computer-1',
     'Computer-2',
-    'Computer-3'
+    'Computer-3',
     'Computer-4'
 ])
 @pytest.mark.parametrize('os', [         # каждый параметр <OS> будет подставлен 4 раза - к computer_1, _2, _3 и _4
