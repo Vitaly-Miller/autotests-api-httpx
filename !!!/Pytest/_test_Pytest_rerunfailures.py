@@ -1,11 +1,11 @@
 """
-Pytest Rerun Failures - Перезапуск нестабильных (flaky) тестов
+pytest-rerunfailures - модуль перезапуска нестабильных (flaky) тестов
 """
 import pytest
 import random
 
 """
-terminal:
+Terminal:
 pip install pytest-rerunfailures
 
 ⚠️Синтаксис: (строгий)
