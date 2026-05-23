@@ -68,7 +68,6 @@ class GetUserResponseSchema(UserResponseSchema):
     """
     Схема ответа при получении данных пользователя по User ID
 
-
     Наследуется: UserResponseSchema
     """
     pass
@@ -89,34 +88,37 @@ class UserUpdateResponseSchema(UserResponseSchema):
     """
     pass
 
-"""================================================= United Shema ✨================================================="""
-#------------------------------------------ User Full Schema (Request + Response) --------------------------------------
-# Схема объединенных данных пользователя (Request + Response)
+
+
+"""===================================== User Full Schema (⬆︎Request + ⬇Response) ✨================================="""
 class UserFullSchema(BaseModel):
     """
-    Объединенные данные о пользователе из Request и Response в формате Pydantic-model
+    Объединенные данные о пользователе из Request + Response в формате Pydantic-model
 
     Request  -> Данные о пользователе (первичные)
     Response -> Данные о пользователе (первичные, КРОМЕ password) + User ID и еще...
     """
     request: CreateUserRequestSchema
     response: CreateUserResponseSchema
-
-    # Оперативные данные (для быстрого доступа по .методу)
+    #------------------------------------- Методы для прямого доступа к данным -----------------------------------------
+    # Email
     @property
     def email(self) -> str:
-        return self.request.email            # Email
+        return self.request.email
 
+    # Password
     @property
     def password(self) -> str:
-        return self.request.password         # Password
+        return self.request.password
 
+    # User ID
     @property
     def user_id(self) -> str:
-        return self.response.user.id         # User ID
+        return self.response.user.id
 
+   # User Auth Data
     @property
-    def auth_data(self) -> AuthUserSchema:   # Auth_data
+    def auth_data(self) -> AuthUserSchema:
         return AuthUserSchema(
             email=self.email,                # Email     ┐
             password=self.password           # Password  ┘

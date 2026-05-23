@@ -1,6 +1,8 @@
 """
 Test Get User Me 0
-Без фикстур (Manual)
+"""
+"""
+- Без фикстур (Manual)
 """
 from http import HTTPMethod, HTTPStatus
 import jsonschema

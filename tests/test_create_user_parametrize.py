@@ -1,6 +1,10 @@
 """
-Test Create User (Email parametrize)
-(Фикстура public_users_client. Без передачи create_user_data в assert. Данные берутся из response.REQUEST.content)
+Test Create User (Email parametrize 3-in-1)
+"""
+"""
+- Фикстура public_users_client. 
+- Без передачи create_user_data в assert-фунцию. 
+- Create User data забирается из response.REQUEST.content на уровне assert-фунции.
 """
 import pytest
 from clients.users.public_users_client import PublicUsersClient
@@ -13,25 +17,24 @@ from tools.data_generator import fake
 from tools.tool import Tool
 
 #=======================================================================================================================
-# Test data
-email_1 = fake.email('amazon.com')
-email_2 = fake.email('gmail.com')
-email_3 = fake.email('yahoo.com')
-
-#-----------------------------------------------------------------------------------------------------------------------
 @pytest.mark.smoke
 @pytest.mark.users
-@pytest.mark.parametrize('email', [email_1, email_2, email_3])
-def test_create_user(email: str, public_users_client: PublicUsersClient):       # Передаем фикстуру PublicUsersClient
+@pytest.mark.parametrize(                                # email parametrize (3-in-1)
+    'email', [
+        fake.email('amazon.com'),
+        fake.email('gmail.com'),
+        fake.email('yahoo.com')
+    ]
+)
+def test_create_user(email: str, public_users_client: PublicUsersClient):  # Передаем parametrize email и фикстуру PublicUsersClient
 
-
-    create_user_data = CreateUserRequestSchema(          # Инициализация Pydantic-модели с default-генерацией fake User data нового пользователя для регистрации
+    create_user_data = CreateUserRequestSchema(          # Инициализация Pydantic-модели с default-генерацией fake User data нового пользователя
         email=email                                      # 👈 Замена сгенерированного email на значение из parametrize
     )
 
     response = public_users_client.create_user_api(create_user_data=create_user_data)   # ▶ Запрос на создание пользователя через API-метод
 
-    #---------------------------------------------------- Assertions ---------------------------------------------------
+    #--------------------------------------------------- Assertions ----------------------------------------------------
     # Base API assertions
     assert_status_code(response, HTTPStatus.OK)
     assert_method(response, HTTPMethod.POST)

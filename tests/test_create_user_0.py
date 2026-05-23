@@ -1,6 +1,8 @@
 """
 Test Create User 0
-(Manual) Без фикстур
+"""
+"""
+- Без фикстур (Manual) 
 """
 import jsonschema
 from clients.users.public_users_client import get_public_users_client

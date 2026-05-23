@@ -1,6 +1,9 @@
 """
 Test Create User 1
-(С передачей create_user_data в assert)
+"""
+"""
+- Фикстура public_users_client
+- Передача create_user_data в assert
 """
 import pytest
 from clients.users.public_users_client import PublicUsersClient

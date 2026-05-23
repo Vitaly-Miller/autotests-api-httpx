@@ -14,14 +14,14 @@ def assert_user_data_fields(response: httpx.Response, request_model: CreateUserR
     Проверяемые поля: -email, -last_name, -first_name, -middle_name
 
     :param response: httpx.Response c User data для десериализация в —> Pydantic-model и дальнейшего использования в assertions
-    :param request_model:  Pydantic-model c User data. (Если не передать, то вытащит из response.REQUEST.content и десериализует в —> Pydantic-model)
+    :param request_model: Pydantic-model c User data. (Если не передать, то вытащит из response.REQUEST.content и —> десериализует в Pydantic-model)
     :raise AssertionError
     """
 
     # httpx.Response —> Pydantic-model (Deserialize for Assertions)
     response_model = CreateUserResponseSchema.model_validate_json(response.text)
 
-    # Условие, если не передать request_model, то вытащить их из response.REQUEST.conten и распарсить в модель
+    # Условие, если не передать request_model, то получить данные из response.REQUEST.conten и —> распарсить в Pydantic-model
     if not request_model:
         request_model = CreateUserRequestSchema.model_validate_json(response.request.content)
 

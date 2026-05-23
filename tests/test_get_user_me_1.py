@@ -1,6 +1,8 @@
 """
 Test Get User Me 1
-(Фикстура create_user + manual)
+"""
+"""
+Фикстура create_user + manual
 """
 import http
 import pytest

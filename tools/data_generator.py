@@ -41,29 +41,12 @@ class Fake:
         """
         return self.faker.last_name()
 
-    def email_(self) -> str:
-        """
-        Генерация email
-
-        :return: example@example.com
-        """
-        return self.faker.email()
-
     def email(self, domain: str | None = None) -> str:
         """
         Генерация email c возможностью @custom-domain.com
 
-        :param: domain: - Custom domain ['custom-domain.com']
-        :return: Default —> ...@example.com
-        """
-        return self.faker.email(domain=domain)
-
-    def email_domain(self, domain: str) -> str:
-        """
-        Генерация email c @custom-domain.com
-
-        :param: domain - Custom domain ['custom-domain.com']
-        :return: example@custom-domain.com
+        :param: domain: - Custom domain ['custom-domain.com'] Default —> ...@example.com
+        :return: email
         """
         return self.faker.email(domain=domain)
 

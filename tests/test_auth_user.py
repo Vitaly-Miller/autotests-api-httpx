@@ -1,6 +1,8 @@
 """
 Test User Authentication (Log in)
-(Фикстура auth_user)
+"""
+"""
+- Фикстура полного цикла: auth_user (Create User + Auth Client) 2-in-1
 """
 import pytest
 from httpx import Response

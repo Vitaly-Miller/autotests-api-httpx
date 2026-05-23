@@ -1,6 +1,9 @@
 """
 Test User Authentication (Log in)
-(Фикстуры: create_user, auth_client)
+
+"""
+"""
+Фикстуры: create_user, auth_client
 """
 import pytest
 from clients.auth.auth_client import AuthClient

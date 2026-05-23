@@ -1,6 +1,10 @@
 """
 Test Create User
-(Фикстура public_users_client. Без передачи create_user_data в assert. Данные берутся из response.REQUEST.content)
+"""
+"""
+- Фикстура public_users_client. 
+- Без передачи create_user_data в assert-фунцию. 
+- Create User data забирается из response.REQUEST.content на уровне assert-фунции.
 """
 import pytest
 from clients.users.public_users_client import PublicUsersClient

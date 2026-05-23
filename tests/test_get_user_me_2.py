@@ -1,6 +1,8 @@
 """
 Test Get User Me 2
-(Фикстура get_user_me)
+"""
+"""
+- Фикстура get_user_me (полный цикл: Create User + Get User Me)
 """
 import http
 import httpx

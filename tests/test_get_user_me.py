@@ -1,6 +1,8 @@
 """
 Test Get User Me
-(Фикстура private_users_client)
+"""
+"""
+- Фикстура private_users_client
 """
 import http
 import pytest
@@ -24,9 +26,9 @@ def test_get_user_me(private_users_client: PrivateUsersClient):   # Переда
     assert_method(response, http.HTTPMethod.GET)
 
     # Fields assertions
-    # Нет доступа к Request внутренней фикстуры Create User
+    # PASS: Нет доступа к Request внутренней фикстуры <create_user>
 
-    # NON-Empty value, ID length
+    # (6-in-1) NON-Empty value, ID length
     assert_get_user_me_response_fields(response=response)
 
     # Validation JSON Schema

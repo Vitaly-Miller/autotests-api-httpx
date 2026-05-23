@@ -1,7 +1,8 @@
 """
 Test Create User
-(Фикстура create_user_api)
-
+"""
+"""
+- Фикстура create_user_api (полный цикл)
 """
 import pytest
 from httpx import Response
