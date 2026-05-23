@@ -14,7 +14,7 @@ def courses_client(create_user: UserFullSchema) -> CoursesClient:
     """
     Фикстура вызова Courses Client (c Base URL + АВТОРИЗАЦИЯ)
 
-    :param create_user: Фикстура создания пользователя
+    :param create_user: Вложенная фикстура создания пользователя
     :return: Экземпляр класса CoursesClient (c Base URL + АВТОРИЗАЦИЯ)
     """
     return get_courses_client(auth_data=create_user.auth_data)

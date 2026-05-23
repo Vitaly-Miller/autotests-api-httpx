@@ -4,7 +4,7 @@ Courses Client
 """
 import httpx
 from clients.api_client import APIClient
-from clients.private_http_builder import get_private_http_client
+from clients.private_http_client_builder import get_private_http_client
 from clients.auth.auth_schema import AuthUserSchema
 from clients.courses.courses_schema import (
     GetCoursesRequestSchema,
@@ -12,6 +12,7 @@ from clients.courses.courses_schema import (
     UpdateCourseRequestSchema,
     CreateCourseResponseSchema
 )
+
 
 #=================================================== Courses Client ====================================================
 class CoursesClient(APIClient):

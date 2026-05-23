@@ -7,7 +7,8 @@ import httpx
 from clients.api_client import APIClient
 from clients.auth.auth_schema import AuthUserSchema
 from clients.files.files_schema import CreateFileRequestSchema, CreateFileResponseSchema
-from clients.private_http_builder import get_private_http_client
+from clients.private_http_client_builder import get_private_http_client
+
 
 #====================================================== Files Client ===================================================
 class FilesClient(APIClient):

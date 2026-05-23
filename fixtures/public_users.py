@@ -3,6 +3,7 @@ Public Users fixtures
 """
 import httpx
 import pytest
+
 from clients.users.public_users_client import get_public_users_client, PublicUsersClient
 from clients.users.users_schema import UserFullSchema, CreateUserRequestSchema
 
@@ -28,7 +29,7 @@ def create_user_api(public_users_client: PublicUsersClient) -> httpx.Response:
     :return: httpx.Response
     """
     create_user_data = CreateUserRequestSchema()          # Инициализация модели с fake-данными нового пользователя по Pydantic-схеме
-    response = public_users_client.create_user_api(create_user_data=create_user_data)  # ▶ Запрос на создание пользователя через метод. Передаем fake-данные нового пользователя.
+    response = public_users_client.create_user_api(create_user_data=create_user_data)  # ▶ Запрос на создание пользователя через API-метод. Передаем fake-данные нового пользователя.
     return response                                       # httpx.Response
                                                           # ❗️Если нужно добраться до Request c 'password' - через парсинг JSON —> {dict}:
                                                           # request_body = json.loads(response.request.content)
