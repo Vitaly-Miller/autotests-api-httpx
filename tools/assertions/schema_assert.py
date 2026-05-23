@@ -6,6 +6,15 @@ import jsonschema
 import pydantic
 
 #=======================================================================================================================
+# Text Constants
+error_title = """
+╭────────╮
+│ ERROR! │
+╰────────╯"""
+exp = '✅Expected:'
+act = '❌Actual:  '
+
+
 def validation_json_schema(instance: httpx.Response | dict, schema: type[pydantic.BaseModel]) -> None:
     """
     Валидация JSON-схемы со встроенным генератором (Pidantic-схема —> JSON-схема)
@@ -29,5 +38,6 @@ def validation_json_schema(instance: httpx.Response | dict, schema: type[pydanti
 
     except jsonschema.ValidationError as e:                                 # Сохранить полное описание ошибки валидации в переменной <e>
         print(f'❌JSON-response schema. Validation error: [{e.message}]')   # Вывод краткого описания ошибки (только текст без кода)
-        raise e                                                             # Упасть с полным описанием ошибки (Traceback)
+        raise e                                                           # Упасть с полным описанием ошибки (Traceback)
 #-----------------------------------------------------------------------------------------------------------------------
+# ⚠️Разобраться НЕ ПАДАЕТ КАК НАДО!

@@ -41,13 +41,31 @@ class Fake:
         """
         return self.faker.last_name()
 
-    def email(self) -> str:
+    def email_(self) -> str:
         """
         Генерация email
 
-        :return: example@email.com
+        :return: example@example.com
         """
         return self.faker.email()
+
+    def email(self, domain: str | None = None) -> str:
+        """
+        Генерация email c возможностью @custom-domain.com
+
+        :param: domain: - Custom domain ['custom-domain.com']
+        :return: Default —> ...@example.com
+        """
+        return self.faker.email(domain=domain)
+
+    def email_domain(self, domain: str) -> str:
+        """
+        Генерация email c @custom-domain.com
+
+        :param: domain - Custom domain ['custom-domain.com']
+        :return: example@custom-domain.com
+        """
+        return self.faker.email(domain=domain)
 
     def password(self) -> str:
         """
@@ -140,7 +158,8 @@ class Fake:
         return f'file_{number}.png'
 
 
-#=================================== ✨Инициализация экземпляров класса (❗️для import) =================================
+#======================================================= Helper ✨======================================================
+# Инициализация экземпляров класса Fake c настройками local
 fake = Fake(faker=Faker())                     # en_US - Default
 fake_ru = Fake(faker=Faker(locale='ru_RU'))    # ru_RU
 
