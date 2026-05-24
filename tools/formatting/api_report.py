@@ -44,9 +44,9 @@ class Report:
         print(f'{ANSI.B_CYAN}├╴{ANSI.RESET}Status code:\t  {color}{code}-{reason}{ANSI.RESET}')
 
     # Response time
-    def api_response_time(self, max_sec=5.0):            # Max sec limit = ⚠️default value
-        response_time = self.response.elapsed.total_seconds()     # 0.12345
-        round_response_time = round(response_time, 3)        # 0.12345 —> 0.123 (округление)
+    def api_response_time(self, max_sec=5.0):                    # Max sec limit = ⚠️default value
+        response_time = self.response.elapsed.total_seconds()    # 0.12345
+        round_response_time = round(response_time, 3)            # 0.12345 —> 0.123 (округление)
         if round_response_time < max_sec:
             color = ANSI.DARK_GREEN
         else:
@@ -59,12 +59,15 @@ class Report:
     def api_request_body(self):
         print(f'\n{ANSI.GREEN} REQUEST Body{ANSI.GRAY}: ⮕')
 
-        if self.response.request.content:
-            request_body = json.loads(self.response.request.content)
-            request_body_json = json.dumps(request_body, indent=4, ensure_ascii=False)
-            print(request_body_json)
-        else:
-            print(f'{{\n\t<None>\n}}')
+        try:
+            if self.response.request.content:
+                request_body = json.loads(self.response.request.content)
+                request_body_json = json.dumps(request_body, indent=4, ensure_ascii=False)
+                print(request_body_json)
+            else:
+                print(f'{{\n\t<None>\n}}')
+        except Exception:
+            print(f'{{\n\t<multipart/stream>\n}}')
 
     # RESPONSE Body ⬅︎
     def api_response_body(self):

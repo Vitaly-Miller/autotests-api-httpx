@@ -33,7 +33,7 @@ files_client = get_files_client(auth_data=auth_data)
 
 # Инициализация Pydantic-model с данными о файле
 create_file_data = CreateFileRequestSchema(
-    upload_path="../../../testdata/my_files/my_image.png"
+    upload_path="../../../testdata/files/test_image.png"
 )
 # 🟨POST запрос на создание файла методом create_file
 create_file_response = files_client.create_file(create_file_data=create_file_data)

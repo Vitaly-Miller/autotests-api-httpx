@@ -75,4 +75,16 @@ def test_multi_param(comp: str, os: str):   # <- передаем парамет
                                             # [Linux-hComputer-3] PASSED
                                             # [Linux-Computer-4] PASSED
 
+#================================================= Parametrize Class ===================================================
+@pytest.mark.parametrize('user', ['User 1', 'User 2'])  # 👈
+class TestClass2:
+    # Hi
+    def test_hi(self, user: str):                           # передаем класс-параметр (по очереди)
+        print(f'Hi, {user}!')                               # [User 1] PASSED   Hi, User 1!
+                                                            # [User 2] PASSED   Hi, User 2!
+    # Hello
+    def test_hello(self,user: str):                         # передаем класс-параметр (по очереди)
+        print(f'Hello, {user}!')                            # [User 1] PASSED   Hello, User 1!
+                                                            # [User 2] PASSED   Hello, User 2!
+
 #=======================================================================================================================

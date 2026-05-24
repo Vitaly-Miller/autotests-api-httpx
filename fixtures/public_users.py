@@ -23,9 +23,9 @@ def public_users_client() -> PublicUsersClient:
 @pytest.fixture
 def create_user_api(public_users_client: PublicUsersClient) -> httpx.Response:
     """
-    API-фикстура СОЗДАНИЯ ПОЛЬЗОВАТЕЛЯ (Create User)
+    API-фикстура создания пользователя
 
-    :param public_users_client: Вложенная фикстура Public Users Client
+    :param public_users_client: Вложенная фикстура Public Users Client (с Base URL)
     :return: httpx.Response
     """
     create_user_data = CreateUserRequestSchema()          # Инициализация модели с fake-данными нового пользователя по Pydantic-схеме
@@ -38,14 +38,14 @@ def create_user_api(public_users_client: PublicUsersClient) -> httpx.Response:
 @pytest.fixture
 def create_user(public_users_client: PublicUsersClient) -> UserFullSchema:
     """
-    Фикстура СОЗДАНИЯ ПОЛЬЗОВАТЕЛЯ (Create User)
+    Фикстура создания пользователя
 
-    :param public_users_client: Вложенная фикстура Public Users Client
-    :return: ✨Pydantic-model: UserFullSchema с объединенными данными пользователя <Request + Response>
+    :param public_users_client: Вложенная фикстура Public Users Client (с Base URL)
+    :return: Pydantic-model: UserFullSchema с объединенными данными пользователя <Request + Response>
     """
-    create_user_data = CreateUserRequestSchema()                         # Инициализация модели с fake-данными нового пользователя по Pydantic-схеме
-    response = public_users_client.create_user(create_user_data=create_user_data) # ︎▶ Запрос на создание пользователя. Передаем fake-данные нового пользователя.
-    return UserFullSchema(request=create_user_data, response=response)   # Pydantic-model: UserFullSchema ✨с объединенными данными пользователя <Request + Response>
+    create_user_data = CreateUserRequestSchema()                         # Инициализация модели с Default data нового пользователя по Pydantic-схеме
+    response = public_users_client.create_user(create_user_data=create_user_data) # ︎▶ Запрос на создание пользователя. Передаем данные нового пользователя
+    return UserFullSchema(request=create_user_data, response=response)   # Pydantic-model: UserFullSchema ✨с объединенными данными <Request + Response>
 
 
 #-----------------------------------------------------------------------------------------------------------------------
