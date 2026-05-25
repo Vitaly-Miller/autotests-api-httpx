@@ -6,7 +6,7 @@
 import httpx
 from clients.api_client import APIClient
 from schemas.auth import AuthUserSchema
-from clients.httpx_private_client import get_private_httpx_client
+from clients.httpx_private_client import get_httpx_private_client
 from schemas.users import (
     UpdateUserRequestSchema,
     GetUserResponseSchema,
@@ -128,7 +128,7 @@ def get_private_users_client(auth_data: AuthUserSchema) -> PrivateUsersClient:
     :param auth_data: Pydantic-model с данными для аутентификации пользователя (Email, Password)
     :return: Экземпляр PrivateUsersClient
     """
-    private_users_client = PrivateUsersClient(client=get_private_httpx_client(auth_data))
+    private_users_client = PrivateUsersClient(client=get_httpx_private_client(auth_data))
     return private_users_client
 
 #-----------------------------------------------------------------------------------------------------------------------

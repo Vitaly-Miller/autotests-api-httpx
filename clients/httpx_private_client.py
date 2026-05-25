@@ -1,5 +1,5 @@
 """
-🔒PRIVATE httpx.Client Builder
+🔒Private httpx.Client builder
 (Для методов, требующих авторизации)
 """
 import httpx
@@ -9,7 +9,7 @@ from schemas.auth import AuthUserSchema
 #================================================ httpx.Client (Private) ================================================
 BASE_URL = 'http://localhost:8000/api/v1'
 
-def get_private_httpx_client(auth_data: AuthUserSchema) -> httpx.Client:
+def get_httpx_private_client(auth_data: AuthUserSchema) -> httpx.Client:
     """
     Функция создаёт экземпляр httpx.Client (с Авторизацией)
 

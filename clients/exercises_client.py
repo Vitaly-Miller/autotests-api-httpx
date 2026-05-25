@@ -3,7 +3,7 @@ Exercises Client
 """
 import httpx
 from clients.api_client import APIClient
-from clients.httpx_private_client import get_private_httpx_client
+from clients.httpx_private_client import get_httpx_private_client
 from schemas.auth import AuthUserSchema
 from schemas.exercises import (
     CreateExerciseRequestSchema,
@@ -101,5 +101,5 @@ def get_exercises_client(auth_data: AuthUserSchema) -> ExercisesClient:
     :param auth_data: Pydantic-model c данными для аутентификации пользователя (Email, Password)
     :return: Экземпляр ExercisesClient (с Авторизацией)
     """
-    exercises_client = ExercisesClient(client=get_private_httpx_client(auth_data))
+    exercises_client = ExercisesClient(client=get_httpx_private_client(auth_data))
     return exercises_client

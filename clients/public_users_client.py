@@ -5,7 +5,7 @@ PUBLIC Users Client
 """
 import httpx
 from clients.api_client import APIClient
-from clients.httpx_public_client import get_public_httpx_client
+from clients.httpx_public_client import get_httpx_public_client
 from schemas.users import CreateUserRequestSchema, CreateUserResponseSchema
 
 #================================================= Public Users Client =================================================
@@ -46,7 +46,7 @@ def get_public_users_client() -> PublicUsersClient:
 
     :return: Экземпляр PrivateUsersClient (с Base URL)
     """
-    public_users_client = PublicUsersClient(client=get_public_httpx_client())
+    public_users_client = PublicUsersClient(client=get_httpx_public_client())
     return public_users_client
 
 #-----------------------------------------------------------------------------------------------------------------------

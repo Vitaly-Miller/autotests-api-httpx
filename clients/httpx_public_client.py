@@ -1,5 +1,5 @@
 """
-PUBLIC http.Client Builder
+Public httpx.Client builder
 (Для методов, НЕ требующих авторизации)
 """
 import httpx
@@ -7,7 +7,7 @@ import httpx
 #============================================= httpx.Client Builder (Public)  ===========================================
 BASE_URL = 'http://localhost:8000/api/v1'
 
-def get_public_httpx_client() -> httpx.Client:
+def get_httpx_public_client() -> httpx.Client:
     """
     Функия создает экземпляр httpx.Client (с Base URL)
 

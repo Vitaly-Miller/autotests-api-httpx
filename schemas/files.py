@@ -7,8 +7,8 @@ from tools.data_generator import fake
 
 #=======================================================================================================================
 # Путь к файлу относительно текущего файла.
-# .parents[2] - на 2 уровня вверх
-file_path = Path(__file__).parents[2]/'testdata'/'files'/'test_image.png'
+# .parents[1] - на 1 уровня вверх
+file_path = Path(__file__).parents[1]/'testdata'/'files'/'test_image.png'
 print(file_path)   # ▶︎ проверка корректности пути (optional)
 
 
