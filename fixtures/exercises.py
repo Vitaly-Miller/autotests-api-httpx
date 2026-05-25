@@ -4,7 +4,7 @@ Exercises fixtures
 import httpx
 import pytest
 from clients.exercises.exercises_client import ExercisesClient, get_exercises_client
-from clients.users.users_schema import UserFullSchema
+from schemas.users import UserFullSchema
 
 #================================================== Exercises Client ===================================================
 # Exercises Client

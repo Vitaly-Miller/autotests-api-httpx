@@ -5,8 +5,8 @@ Files Client
 """
 import httpx
 from clients.api_client import APIClient
-from clients.auth.auth_schema import AuthUserSchema
-from clients.files.files_schema import CreateFileRequestSchema, CreateFileResponseSchema
+from schemas.auth import AuthUserSchema
+from schemas.files import CreateFileRequestSchema, CreateFileResponseSchema
 from clients.private_httpx_client_builder import get_private_httpx_client
 
 

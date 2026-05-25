@@ -7,7 +7,7 @@ Test Get User Me
 import http
 import pytest
 from clients.users.private_users_client import PrivateUsersClient
-from clients.users.users_schema import GetUserMeResponseSchema
+from schemas.users import GetUserMeResponseSchema
 from tools.assertions.base_assert import assert_status_code, assert_method
 from tools.assertions.get_user_me_assert import assert_get_user_me_response_fields
 from tools.assertions.schema_assert import validation_json_schema

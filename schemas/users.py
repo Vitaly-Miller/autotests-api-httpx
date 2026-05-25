@@ -2,7 +2,7 @@
 Authentication Pydantic Schema
 """
 from pydantic import BaseModel, Field, EmailStr
-from clients.auth.auth_schema import AuthUserSchema
+from schemas.auth import AuthUserSchema
 from tools.data_generator import fake
 
 """================================================ ⬆︎REQUEST Schema ================================================"""

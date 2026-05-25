@@ -5,8 +5,8 @@ Courses Client
 import httpx
 from clients.api_client import APIClient
 from clients.private_httpx_client_builder import get_private_httpx_client
-from clients.auth.auth_schema import AuthUserSchema
-from clients.courses.courses_schema import (
+from schemas.auth import AuthUserSchema
+from schemas.courses import (
     GetCoursesRequestSchema,
     CreateCourseRequestSchema,
     UpdateCourseRequestSchema,

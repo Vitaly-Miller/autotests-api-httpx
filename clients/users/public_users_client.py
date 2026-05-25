@@ -6,7 +6,7 @@ PUBLIC Users Client
 import httpx
 from clients.api_client import APIClient
 from clients.public_httpx_client_builder import get_public_httpx_client
-from clients.users.users_schema import CreateUserRequestSchema, CreateUserResponseSchema
+from schemas.users import CreateUserRequestSchema, CreateUserResponseSchema
 
 #================================================= Public Users Client =================================================
 class PublicUsersClient(APIClient):

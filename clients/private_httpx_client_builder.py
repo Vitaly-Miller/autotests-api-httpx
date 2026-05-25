@@ -4,7 +4,7 @@
 """
 import httpx
 from clients.auth.auth_client import get_auth_client
-from clients.auth.auth_schema import AuthUserSchema
+from schemas.auth import AuthUserSchema
 
 #================================================ httpx.Client (Private) ================================================
 BASE_URL = 'http://localhost:8000/api/v1'

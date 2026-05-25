@@ -6,7 +6,7 @@ Test User Authentication (Log in)
 """
 import pytest
 from httpx import Response
-from clients.auth.auth_schema import AuthUserResponseSchema
+from schemas.auth import AuthUserResponseSchema
 from http import HTTPStatus, HTTPMethod
 from tools.assertions.auth_assert import assert_auth_response_fields
 from tools.assertions.base_assert import assert_status_code, assert_method

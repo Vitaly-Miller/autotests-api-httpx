@@ -2,8 +2,8 @@
 Courses Pydantic Schema
 """
 from pydantic import BaseModel, Field
-from clients.files.files_schema import FileSchema
-from clients.users.users_schema import UserSchema
+from schemas.files import FileSchema
+from schemas.users import UserSchema
 from tools.data_generator import fake
 
 #================================================== ⬆︎REQUEST Schema ===================================================

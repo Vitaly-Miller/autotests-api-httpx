@@ -2,7 +2,7 @@
 Authentication (Log in) assertions
 """
 import httpx
-from clients.auth.auth_schema import AuthUserResponseSchema
+from schemas.auth import AuthUserResponseSchema
 from tools.assertions.base_assert import assert_value_equal, assert_value_len, assert_is_value
 
 #=======================================================================================================================

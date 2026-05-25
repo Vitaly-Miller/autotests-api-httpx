@@ -7,10 +7,10 @@ Test Get User Me 0
 from http import HTTPMethod, HTTPStatus
 import jsonschema
 import pytest
-from clients.auth.auth_schema import AuthUserSchema
+from schemas.auth import AuthUserSchema
 from clients.users.private_users_client import get_private_users_client
 from clients.users.public_users_client import get_public_users_client
-from clients.users.users_schema import CreateUserRequestSchema, CreateUserResponseSchema
+from schemas.users import CreateUserRequestSchema, CreateUserResponseSchema
 
 #=======================================================================================================================
 @pytest.mark.smoke            # маркировка smoke
