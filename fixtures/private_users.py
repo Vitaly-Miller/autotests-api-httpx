@@ -11,37 +11,37 @@ from clients.users.users_schema import UserFullSchema, GetUserMeResponseSchema
 @pytest.fixture
 def private_users_client(create_user: UserFullSchema) -> PrivateUsersClient:
     """
-    Фикстура вызова Private Users Client (c Base URL + АВТОРИЗАЦИЯ)
+    Фикстура получения экземпляра PrivateUsersClient (c Авторизацией)
 
-    :param create_user: Вложенная фикстура создания пользователя
-    :return: Экземпляр класса PrivateUsersClient (c Base URL + АВТОРИЗАЦИЯ)
+    :param create_user: Вложенная Pydantic-фикстура создания пользователя
+    :return: Экземпляр PrivateUsersClient (c Авторизацией)
     """
-    return get_private_users_client(auth_data=create_user.auth_data)
-
+    client = get_private_users_client(auth_data=create_user.auth_data)
+    return client
 
 #----------------------------------------------------- Get User Me -----------------------------------------------------
 # API
 @pytest.fixture
 def get_user_me_api(private_users_client: PrivateUsersClient) -> httpx.Response:
     """
-    Фикстура получения данных ТЕКУЩЕГО пользователя
+    API-фикстура получения данных текущего пользователя
 
-    :param private_users_client: Экземпляр класса PrivateUsersClient (c Base URL + Auth)
+    :param private_users_client: Фикстура вызова экземпляра PrivateUsersClient (с Авторизацией)
     :return: httpx.Response
     """
-    response = private_users_client.get_user_me_api()   # ▶ Запрос на получение данных ТЕКУЩЕГО пользователя через API-метод
+    response = private_users_client.get_user_me_api()   # ▶ Запрос
     return response                                     # httpx.Response
 
 # Pydantic-model
 @pytest.fixture
 def get_user_me(private_users_client: PrivateUsersClient) -> GetUserMeResponseSchema:
     """
-    Фикстура получения данных ТЕКУЩЕГО пользователя в формате Pydantic-model
+    Pydantic-фикстура получения данных текущего пользователя
 
-    :param private_users_client: Экземпляр класса PrivateUsersClient (c Base URL + Auth)
-    :return: Pydantic-model: GetUserMeResponseSchema
+    :param private_users_client: Экземпляр PrivateUsersClient (c Авторизацией)
+    :return: Pydantic-model (GetUserMeResponseSchema)
     """
-    response = private_users_client.get_user_me()       # ▶ Запрос на получение данных ТЕКУЩЕГО пользователя
-    return response                                     # Pydantic-model: GetUserMeResponseSchema
+    model = private_users_client.get_user_me()       # ▶ Запрос
+    return model                                     # Pydantic-model (GetUserMeResponseSchema)
 
 #-----------------------------------------------------------------------------------------------------------------------

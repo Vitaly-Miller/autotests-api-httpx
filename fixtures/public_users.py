@@ -3,20 +3,20 @@ Public Users fixtures
 """
 import httpx
 import pytest
-
 from clients.users.public_users_client import get_public_users_client, PublicUsersClient
 from clients.users.users_schema import UserFullSchema, CreateUserRequestSchema
 
 #================================================= Public Users Client =================================================
 # Public Users Client
-@pytest.fixture   # scope='function' by Default
+@pytest.fixture
 def public_users_client() -> PublicUsersClient:
     """
-    Фикстура вызова класса Public Users Client (c Base URL)
+    Фикстура получения экземпляра PublicUsersClient (c Base URL)
 
-    :return: Экземпляр класса PublicUsersClient (c Base URL)
+    :return: Экземпляр PublicUsersClient (c Base URL)
     """
-    return get_public_users_client()
+    client = get_public_users_client()
+    return client
 
 #----------------------------------------------------- Create User -----------------------------------------------------
 # API
@@ -25,27 +25,28 @@ def create_user_api(public_users_client: PublicUsersClient) -> httpx.Response:
     """
     API-фикстура создания пользователя
 
-    :param public_users_client: Вложенная фикстура Public Users Client (с Base URL)
+    :param public_users_client: Вложенная фикстура получения экземпляра PublicUsersClient (с Base URL)
     :return: httpx.Response
     """
-    create_user_data = CreateUserRequestSchema()          # Инициализация модели с fake-данными нового пользователя по Pydantic-схеме
+    create_user_data = CreateUserRequestSchema()          # Инициализация модели с Default fake-data нового пользователя нового пользователя по Pydantic-схеме
     response = public_users_client.create_user_api(create_user_data=create_user_data)  # ▶ Запрос на создание пользователя через API-метод. Передаем fake-данные нового пользователя.
     return response                                       # httpx.Response
-                                                          # ❗️Если нужно добраться до Request c 'password' - через парсинг JSON —> {dict}:
+                                                          # ❗️Если тут нужно добраться до Request c 'password' - через парсинг JSON —> {dict}:
                                                           # request_body = json.loads(response.request.content)
                                                           # password = request_body["password"]
 # Pydantic-model
 @pytest.fixture
 def create_user(public_users_client: PublicUsersClient) -> UserFullSchema:
     """
-    Фикстура создания пользователя
+    Pydantic-фикстура создания пользователя
 
-    :param public_users_client: Вложенная фикстура Public Users Client (с Base URL)
-    :return: Pydantic-model: UserFullSchema с объединенными данными пользователя <Request + Response>
+    :param public_users_client: Вложенная фикстура получения экземпляра PublicUsersClient (с Base URL)
+    :return: Pydantic-model (UserFullSchema) ✨<Request + Response>
     """
-    create_user_data = CreateUserRequestSchema()                         # Инициализация модели с Default data нового пользователя по Pydantic-схеме
-    response = public_users_client.create_user(create_user_data=create_user_data) # ︎▶ Запрос на создание пользователя. Передаем данные нового пользователя
-    return UserFullSchema(request=create_user_data, response=response)   # Pydantic-model: UserFullSchema ✨с объединенными данными <Request + Response>
+    create_user_data = CreateUserRequestSchema()                                   # Инициализация модели с Default fake-data нового пользователя по Pydantic-схеме
+    response = public_users_client.create_user(create_user_data=create_user_data)  # ︎▶ Запрос
+    model = UserFullSchema(request=create_user_data, response=response)             # Pydantic-model (UserFullSchema) ✨с объединенными данными <Request + Response>
+    return model
 
 
 #-----------------------------------------------------------------------------------------------------------------------

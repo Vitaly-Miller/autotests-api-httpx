@@ -12,37 +12,40 @@ from clients.users.users_schema import CreateUserRequestSchema, CreateUserRespon
 class PublicUsersClient(APIClient):
     ENDPOINT = '/users'
     #------------------------------------------------- Create User  ----------------------------------------------------
-    # API 🟨
+    # API
     def create_user_api(self, create_user_data: CreateUserRequestSchema) -> httpx.Response:
         """
-        Метод для СОЗДАНИЯ нового пользователя
+        API-метод создания нового пользователя
 
-        :param create_user_data: (payload) Данные для создания пользователя в формате Pydantic-модели
+        :param create_user_data: Pydantic-model c данными для создания пользователя
         :return: httpx.Response
         """
-        return self.post(
+        response = self.post(
             url=self.ENDPOINT,
-            json=create_user_data.model_dump(by_alias=True))                # Serialize Model —> Dict
+            json=create_user_data.model_dump(by_alias=True))                 # Pydantic-model —> Dict (serialize)
+        return response
 
     # Pydantic-model
     def create_user(self, create_user_data: CreateUserRequestSchema) -> CreateUserResponseSchema:
         """
-        Метод для СОЗДАНИЯ нового пользователя с получением данных созданного пользователя в формате Pydantic-model
+        Pydantic-метод для создания нового пользователя
 
-        :param create_user_data: (payload) Данные для создания нового пользователя в формате Pydantic-модели
-        :return: Данные созданного пользователя в формате Pydantic-model
+        :param create_user_data: Pydantic-model c данными для создания пользователя
+        :return: Pydantic-model (CreateUserResponseSchema)
         """
-        response = self.create_user_api(create_user_data)                   # Используем API-метод
-        return CreateUserResponseSchema.model_validate_json(response.text)  # Валидируем ответ (любой) —> Model
+        response = self.create_user_api(create_user_data)                    # Используем API-метод
+        model = CreateUserResponseSchema.model_validate_json(response.text)  # Response —> Pydantic-model (deserialize)
+        return model
 
 
 #================================================= Client (✨Helper) ===================================================
 def get_public_users_client() -> PublicUsersClient:
     """
-    Функция создаёт экземпляр класса PrivateUsersClient с уже настроенным HTTP-клиентом
+    Функция получения экземпляра PrivateUsersClient с уже настроенным HTTP-клиентом (c Base URL)
 
-    :return: Готовый к использованию экземпляр класса PrivateUsersClient с уже настроенным HTTP-клиентом
+    :return: Экземпляр PrivateUsersClient (с Base URL)
     """
-    return PublicUsersClient(client=get_public_http_client())
+    public_users_client = PublicUsersClient(client=get_public_http_client())
+    return public_users_client
 
 #-----------------------------------------------------------------------------------------------------------------------

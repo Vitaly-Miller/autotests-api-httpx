@@ -18,81 +18,88 @@ class ExercisesClient(APIClient):
     # API
     def get_exercises_api(self, query_course_id: GetExercisesRequestSchema) -> httpx.Response:
         """
-        Метод получения списка заданий для определенного курса Course ID (?query).
+        API-метод получения списка заданий для определенного курса Course ID (?query)
 
-        :param query_course_id: Словарь с Course ID
-        :return: Ответ от сервера в виде объекта httpx.Response
+        :param query_course_id: Pydantic-model с Course ID (?query)
+        :return: httpx.Response
         """
-        return self.get(url=self.ENDPOINT, params=query_course_id)  # NOQA
+        response = self.get(url=self.ENDPOINT, params=query_course_id)  # NOQA   # ▶ Запрос
+        return response
 
     #------------------------------------------------ Get Exercise -----------------------------------------------------
     # API
     def get_exercise_api(self, exercise_id: str) -> httpx.Response:
         """
-        Метод получение информации о задании по Exercise ID.
+        API-метод получения информации о задании по Exercise ID
 
         :param exercise_id: Exercise ID
-        :return: Ответ от сервера в виде объекта httpx.Response
+        :return: httpx.Response
         """
-        return self.get(url=f'{self.ENDPOINT}/{exercise_id}')
+        response = self.get(url=f'{self.ENDPOINT}/{exercise_id}')                # ▶ Запрос
+        return response
 
     #---------------------------------------------- Create Exercise ----------------------------------------------------
     # API
     def create_exercise_api(self, create_exercise_data: CreateExerciseRequestSchema) -> httpx.Response:
         """
-        Метод создания задания.
+        API-метод создания задания
 
-        :param create_exercise_data: Данные о задании в формате Pydantic-model
+        :param create_exercise_data: Pydantic-model с данными о задании
         :return: httpx.Response
         """
-        return self.post(
+        response = self.post(                                                    # ▶ Запрос
             url=self.ENDPOINT,
-            json=create_exercise_data.model_dump(by_alias=True)    # + ⚠ сериализация Model -> Dict (т.к. payload - Pydantic-модель)
+            json=create_exercise_data.model_dump(by_alias=True)                  # Pydantic-model —> Dict (serialize)
         )
+        return response
 
     # Pydantic-model
     def create_exercise(self, create_exercise_data: CreateExerciseRequestSchema) -> CreateExerciseResponseSchema:
         """
-        Метод получения валидированной Pydantic-модели с данными о созданном задании.
+        Pydantic-метод создания задания
 
-        :param create_exercise_data: Данные о задании в формате Pydantic-model
-        :return: Pydantic-модель
+        :param create_exercise_data: Pydantic-model с данными о задании
+        :return: Pydantic-model (CreateExerciseResponseSchema)
         """
-        response = self.create_exercise_api(create_exercise_data)
-        return CreateExerciseResponseSchema.model_validate_json(response.text)
+        response = self.create_exercise_api(create_exercise_data)                # ▶ Запрос через API-метод
+        model = CreateExerciseResponseSchema.model_validate_json(response.text)  # Response —> Pydantic-model (deserialize)
+        return model
 
     #---------------------------------------------- Update Exercise ----------------------------------------------------
     # API
     def update_exercise_api(self, exercise_id: str, json: UpdateExerciseRequestSchema) -> httpx.Response:
         """
-        Метод частичного обновления данных задания.
+        API-метод частичного обновления данных задания
 
         :param exercise_id: Exercise ID
-        :param json: Обновляемые данные в формате JSON
-        :return: Ответ от сервера в виде объекта httpx.Response
+        :param json: Pydantic-model данными, которые необходимо обновить
+        :return: httpx.Response
         """
-        return self.patch(
+        response = self.patch(                                                   # ▶ Запрос
             url=f'{self.ENDPOINT}/{exercise_id}',
-            json=json.model_dump(by_alias=True))      # + ⚠ сериализация Model -> Dict (т.к. payload - Pydantic-модель)
+            json=json.model_dump(by_alias=True))                                 # Pydantic-model —> Dict (serialize)
+        return response
 
     #---------------------------------------------- Delete Exercise ----------------------------------------------------
     # API
     def delete_exercise_api(self, exercise_id: str) -> httpx.Response:
         """
-        Метод удаление задания.
+        Метод удаление задания по Exercise ID
 
         :param exercise_id: Exercise ID
-        :return: Ответ от сервера в виде объекта httpx.Response
+        :return: httpx.Response
         """
-        return self.delete(url=f'{self.ENDPOINT}/{exercise_id}')
+        response = self.delete(url=f'{self.ENDPOINT}/{exercise_id}')             # ▶ Запрос
+        return response
 
 
 #================================================= Client (✨Helper) ===================================================
 def get_exercises_client(auth_data: AuthUserSchema) -> ExercisesClient:
     """
-    Функция создаёт экземпляр ExercisesClient с уже настроенным HTTP-клиентом.
+    Функция получения экземпляра ExercisesClient с уже настроенным HTTP-клиентом (с Авторизацией)
 
-    :param auth_data: Данные для аутентификации пользователя (Email, Password)
-    :return: Готовый к использованию ExercisesClient.
+    :param auth_data: Pydantic-model c данными для аутентификации пользователя (Email, Password)
+    :return: Экземпляр ExercisesClient (с Авторизацией)
     """
-    return ExercisesClient(client=get_private_http_client(auth_data))
+    exercises_client = ExercisesClient(client=get_private_http_client(auth_data))
+    return exercises_client

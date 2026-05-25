@@ -77,3 +77,21 @@ class CreateCourseResponseSchema(BaseModel):
 
 
 #-----------------------------------------------------------------------------------------------------------------------
+"""===================================== Courses Full Schema (⬆︎Request + ⬇Response) ✨================================="""
+class CoursesFullSchema(BaseModel):
+    """
+    Объединенная схема о курсе из Request + Response в формате Pydantic-model
+
+    Request  -> Данные о курсе из Request  (запрос)
+    Response -> Данные о курсе из Response (ответ)
+    """
+    request: CreateCourseRequestSchema
+    response: CreateCourseResponseSchema
+    #------------------------------------- Методы для прямого доступа к данным -----------------------------------------
+    # Course ID
+    @property
+    def course_id(self):
+        return self.response.course.id
+
+
+#-----------------------------------------------------------------------------------------------------------------------

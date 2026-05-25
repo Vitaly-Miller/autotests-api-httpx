@@ -13,90 +13,95 @@ from clients.courses.courses_schema import (
     CreateCourseResponseSchema
 )
 
-
 #=================================================== Courses Client ====================================================
 class CoursesClient(APIClient):
     ENDPOINT = '/courses'
     #------------------------------------------------- Get Courses -----------------------------------------------------
-    # API 🟩
+    # API
     def get_courses_api(self, query_user_id: GetCoursesRequestSchema) -> httpx.Response:
         """
-        Метод для получения СПИСКА курсов по User ID (?query)
+        API-метод получения списка курсов по User ID (?query)
 
-        :param query_user_id: User ID в формате Pydantic-модели
+        :param query_user_id: Pydantic-model c User ID (?query)
         :return: httpx.Response
         """
-        return self.get(url=self.ENDPOINT, params=query_user_id)  # NOQA
+        response = self.get(url=self.ENDPOINT, params=query_user_id)  # NOQA  # ▶ Запрос
+        return response
 
     #-------------------------------------------------- Get Course -----------------------------------------------------
-    # API 🟩
+    # API
     def get_course_api(self, course_id: str) -> httpx.Response:
         """
-        Метод для получения курса по его Course ID
+        API-метод получения курса по Course ID
 
         :param course_id: Course ID
         :return: httpx.Response
         """
-        return self.get(url=f'{self.ENDPOINT}/{course_id}')
+        response = self.get(url=f'{self.ENDPOINT}/{course_id}')               # ▶ Запрос
+        return response
 
     #------------------------------------------------- Create Course ---------------------------------------------------
-    # API 🟨
+    # API
     def create_course_api(self, create_course_data: CreateCourseRequestSchema) -> httpx.Response:
         """
-        Метод для СОЗДАНИЯ курса
+        API-метод создания курса
 
-        :param create_course_data: Данные для создания курса в формате Pydantic-model
+        :param create_course_data: Pydantic-model c данными для создания курса
         :return: httpx.Response
         """
-        return self.post(
+        response = self.post(                                                 # ▶ Запрос
             url=self.ENDPOINT,
-            json=create_course_data.model_dump(by_alias=True)    # ⚠ сериализация Model —> Dict (т.к. payload - Pydantic-модель)
+            json=create_course_data.model_dump(by_alias=True)                 # Pydantic-model —> Dict (serialize)
         )
+        return response
 
     # Pydantic-model
     def create_course(self, create_course_data: CreateCourseRequestSchema) -> CreateCourseResponseSchema:
         """
-        Метод для СОЗДАНИЯ курса с получением данных о созданном курсе в формате Pydantic-model
+        Pydantic-метод создания курса
 
-        :param create_course_data: Данные для создания курса в формате Pydantic-model
-        :return: Pydantic-model: CreateCourseResponseSchema
+        :param create_course_data: Pydantic-model с данными для создания курса
+        :return: Pydantic-model (CreateCourseResponseSchema)
         """
-        response = self.create_course_api(create_course_data)
-        return CreateCourseResponseSchema.model_validate_json(response.text)  # Валидируем ответ (любой) —> Model
+        response = self.create_course_api(create_course_data)                 # ▶ Запрос через API-метод
+        model = CreateCourseResponseSchema.model_validate_json(response.text) # Response —> Pydantic-model (deserialize)
+        return model
 
     #------------------------------------------------- Update Course ---------------------------------------------------
-    # API 🟪
+    # API
     def update_course_api(self, course_id: str, update_course_data: UpdateCourseRequestSchema) -> httpx.Response:
         """
-        Метод для частичного ОБНОВЛЕНИЯ курса по Course ID
+        API-метод частичного обновления курса по Course ID
 
         :param course_id: Course ID
-        :param update_course_data: Данными, которые необходимо обновить в формате Pydantic-model
+        :param update_course_data: Pydantic-model c данными, которые необходимо обновить
         :return: httpx.Response
         """
-        return self.patch(
+        response = self.patch(                                                # ▶ Запрос
             url=f'{self.ENDPOINT}/{course_id}',
-            json=update_course_data.model_dump(by_alias=True)     # сериализация Model —> Dict (т.к. payload - Pydantic-модель)
+            json=update_course_data.model_dump(by_alias=True)                 # Pydantic-model —> Dict (serialize)
         )
-
+        return response
     #------------------------------------------------- Delete Course ---------------------------------------------------
-    # API 🟥
+    # API
     def delete_course_api(self, course_id: str) -> httpx.Response:
         """
-        Метод для УДАЛЕНИЯ курса по его Course ID
+        API-метод удаления курса по Course ID
 
         :param course_id: Course ID
         :return: httpx.Response
         """
-        return self.delete(url=f'{self.ENDPOINT}/{course_id}')
+        response = self.delete(url=f'{self.ENDPOINT}/{course_id}')            # ▶ Запрос
+        return response
 
 
 #================================================= Client (✨Helper) ===================================================
 def get_courses_client(auth_data: AuthUserSchema) -> CoursesClient:
     """
-    Функция создаёт экземпляр CoursesClient с уже настроенным HTTP-клиентом
+    Функция получения экземпляра CoursesClient с уже настроенным HTTP-клиентом
 
-    :param auth_data: Данные для аутентификации (log in) пользователя (Email, Password) в формате Pydantic-model
-    :return: Готовый к использованию CoursesClient
+    :param auth_data: Pydantic-model c данными для аутентификации пользователя (Email, Password)
+    :return: Экземпляр CoursesClient
     """
-    return CoursesClient(client=get_private_http_client(auth_data))
+    courses_client = CoursesClient(client=get_private_http_client(auth_data))
+    return courses_client

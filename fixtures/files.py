@@ -27,7 +27,7 @@ def create_file_api(files_client: FilesClient) -> httpx.Response:
     """
     API-фикстура создания файла
 
-    :param files_client: Вложенная фикстура Files Client (c Base URL + АВТОРИЗАЦИЯ)
+    :param files_client: Вложенная фикстура Files Client (с Авторизацией)
     :return: httpx.Response
     """
     create_file_data = CreateFileRequestSchema()                                # Инициализация модели c Default data по Pydantic-схеме
@@ -40,8 +40,8 @@ def create_file(files_client: FilesClient) -> FileFullSchema:
     """
     Фикстура создания файла
 
-    :param files_client: Вложенная фикстура Files Client (c Base URL + АВТОРИЗАЦИЯ)
-    :return: Pydantic-model: FileFullSchema - объединенные данные о файле из Request + Response
+    :param files_client: Вложенная фикстура Files Client (с Авторизацией)
+    :return: Pydantic-model: FileFullSchema
     """
     create_file_data = CreateFileRequestSchema()                            # Инициализация модели c Default data по Pydantic-схеме
     response = files_client.create_file(create_file_data=create_file_data)  # ▶ Запрос на создание на создание файла. Передаем данные файла

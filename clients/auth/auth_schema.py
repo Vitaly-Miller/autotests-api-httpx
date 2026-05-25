@@ -10,7 +10,7 @@ class AuthUserSchema(BaseModel):
     """
     Схема запроса на Authentication (Auth) пользователя
 
-    ⚠️Default fake.value for NEGATIVE test ONLY
+    ⚠️ Default fake.value for NEGATIVE test ONLY
     """
     email: str = Field(default_factory=fake.email)
     password: str = Field(default_factory=fake.password)
@@ -19,7 +19,7 @@ class LoginRequestSchema(BaseModel):
     """
     Схема запроса на Log in пользователя
 
-    ⚠️Default fake.value for NEGATIVE test ONLY
+    ⚠️ Default fake.value for NEGATIVE test ONLY
     """
     email: str = Field(default_factory=fake.email)
     password: str = Field(default_factory=fake.password)
@@ -30,7 +30,7 @@ class RefreshRequestSchema(BaseModel):
     """
     Схема запроса на обновления токена
 
-    ⚠️Default fake.value for NEGATIVE test ONLY
+    ⚠️ Default fake.value for NEGATIVE test ONLY
     """
     refresh_token: str = Field(alias='refreshToken', default_factory=fake.uuid4)
 
