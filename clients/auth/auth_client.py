@@ -5,7 +5,7 @@ Authentication Client
 import httpx
 from clients.api_client import APIClient
 from clients.auth.auth_schema import RefreshRequestSchema, AuthUserSchema, AuthUserResponseSchema
-from clients.public_http_client_builder import get_public_http_client
+from clients.public_httpx_client_builder import get_public_httpx_client
 
 #==================================================== Auth Client ======================================================
 class AuthClient(APIClient):
@@ -61,7 +61,7 @@ def get_auth_client() -> AuthClient:
 
     :return: Экземпляр AuthClient с (Base URL)
     """
-    auth_client = AuthClient(client=get_public_http_client())
+    auth_client = AuthClient(client=get_public_httpx_client())
     return auth_client
 
 #-----------------------------------------------------------------------------------------------------------------------

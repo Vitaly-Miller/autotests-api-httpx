@@ -3,7 +3,7 @@ Exercises Client
 """
 import httpx
 from clients.api_client import APIClient
-from clients.private_http_client_builder import get_private_http_client
+from clients.private_httpx_client_builder import get_private_httpx_client
 from clients.auth.auth_schema import AuthUserSchema
 from clients.exercises.exercises_schema import (
     CreateExerciseRequestSchema,
@@ -24,7 +24,7 @@ class ExercisesClient(APIClient):
         :return: httpx.Response
         """
         response = self.get(url=self.ENDPOINT, params=query_course_id)  # NOQA   # ▶ Запрос
-        return response
+        return response                                                          # httpx.Response
 
     #------------------------------------------------ Get Exercise -----------------------------------------------------
     # API
@@ -36,7 +36,7 @@ class ExercisesClient(APIClient):
         :return: httpx.Response
         """
         response = self.get(url=f'{self.ENDPOINT}/{exercise_id}')                # ▶ Запрос
-        return response
+        return response                                                          # httpx.Response
 
     #---------------------------------------------- Create Exercise ----------------------------------------------------
     # API
@@ -51,7 +51,7 @@ class ExercisesClient(APIClient):
             url=self.ENDPOINT,
             json=create_exercise_data.model_dump(by_alias=True)                  # Pydantic-model —> Dict (serialize)
         )
-        return response
+        return response                                                          # httpx.Response
 
     # Pydantic-model
     def create_exercise(self, create_exercise_data: CreateExerciseRequestSchema) -> CreateExerciseResponseSchema:
@@ -63,7 +63,7 @@ class ExercisesClient(APIClient):
         """
         response = self.create_exercise_api(create_exercise_data)                # ▶ Запрос через API-метод
         model = CreateExerciseResponseSchema.model_validate_json(response.text)  # Response —> Pydantic-model (deserialize)
-        return model
+        return model                                                             # Pydantic-model (CreateExerciseResponseSchema)
 
     #---------------------------------------------- Update Exercise ----------------------------------------------------
     # API
@@ -78,7 +78,7 @@ class ExercisesClient(APIClient):
         response = self.patch(                                                   # ▶ Запрос
             url=f'{self.ENDPOINT}/{exercise_id}',
             json=json.model_dump(by_alias=True))                                 # Pydantic-model —> Dict (serialize)
-        return response
+        return response                                                          # httpx.Response
 
     #---------------------------------------------- Delete Exercise ----------------------------------------------------
     # API
@@ -90,7 +90,7 @@ class ExercisesClient(APIClient):
         :return: httpx.Response
         """
         response = self.delete(url=f'{self.ENDPOINT}/{exercise_id}')             # ▶ Запрос
-        return response
+        return response                                                          # httpx.Response
 
 
 #================================================= Client (✨Helper) ===================================================
@@ -101,5 +101,5 @@ def get_exercises_client(auth_data: AuthUserSchema) -> ExercisesClient:
     :param auth_data: Pydantic-model c данными для аутентификации пользователя (Email, Password)
     :return: Экземпляр ExercisesClient (с Авторизацией)
     """
-    exercises_client = ExercisesClient(client=get_private_http_client(auth_data))
+    exercises_client = ExercisesClient(client=get_private_httpx_client(auth_data))
     return exercises_client

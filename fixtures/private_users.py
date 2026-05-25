@@ -29,7 +29,7 @@ def get_user_me_api(private_users_client: PrivateUsersClient) -> httpx.Response:
     :param private_users_client: Фикстура вызова экземпляра PrivateUsersClient (с Авторизацией)
     :return: httpx.Response
     """
-    response = private_users_client.get_user_me_api()   # ▶ Запрос
+    response = private_users_client.get_user_me_api()   # ▶ Запрос через API-метод
     return response                                     # httpx.Response
 
 # Pydantic-model
@@ -41,7 +41,7 @@ def get_user_me(private_users_client: PrivateUsersClient) -> GetUserMeResponseSc
     :param private_users_client: Экземпляр PrivateUsersClient (c Авторизацией)
     :return: Pydantic-model (GetUserMeResponseSchema)
     """
-    model = private_users_client.get_user_me()       # ▶ Запрос
-    return model                                     # Pydantic-model (GetUserMeResponseSchema)
+    model = private_users_client.get_user_me()          # ▶ Запрос через Pydantic-метод
+    return model                                        # Pydantic-model (GetUserMeResponseSchema)
 
 #-----------------------------------------------------------------------------------------------------------------------

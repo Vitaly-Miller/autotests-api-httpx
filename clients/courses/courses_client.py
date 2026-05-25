@@ -4,7 +4,7 @@ Courses Client
 """
 import httpx
 from clients.api_client import APIClient
-from clients.private_http_client_builder import get_private_http_client
+from clients.private_httpx_client_builder import get_private_httpx_client
 from clients.auth.auth_schema import AuthUserSchema
 from clients.courses.courses_schema import (
     GetCoursesRequestSchema,
@@ -26,7 +26,7 @@ class CoursesClient(APIClient):
         :return: httpx.Response
         """
         response = self.get(url=self.ENDPOINT, params=query_user_id)  # NOQA  # ▶ Запрос
-        return response
+        return response                                                       # httpx.Response
 
     #-------------------------------------------------- Get Course -----------------------------------------------------
     # API
@@ -38,7 +38,7 @@ class CoursesClient(APIClient):
         :return: httpx.Response
         """
         response = self.get(url=f'{self.ENDPOINT}/{course_id}')               # ▶ Запрос
-        return response
+        return response                                                       # httpx.Response
 
     #------------------------------------------------- Create Course ---------------------------------------------------
     # API
@@ -53,7 +53,7 @@ class CoursesClient(APIClient):
             url=self.ENDPOINT,
             json=create_course_data.model_dump(by_alias=True)                 # Pydantic-model —> Dict (serialize)
         )
-        return response
+        return response                                                       # httpx.Response
 
     # Pydantic-model
     def create_course(self, create_course_data: CreateCourseRequestSchema) -> CreateCourseResponseSchema:
@@ -65,7 +65,7 @@ class CoursesClient(APIClient):
         """
         response = self.create_course_api(create_course_data)                 # ▶ Запрос через API-метод
         model = CreateCourseResponseSchema.model_validate_json(response.text) # Response —> Pydantic-model (deserialize)
-        return model
+        return model                                                          # Pydantic-model (CreateCourseResponseSchema)
 
     #------------------------------------------------- Update Course ---------------------------------------------------
     # API
@@ -81,7 +81,7 @@ class CoursesClient(APIClient):
             url=f'{self.ENDPOINT}/{course_id}',
             json=update_course_data.model_dump(by_alias=True)                 # Pydantic-model —> Dict (serialize)
         )
-        return response
+        return response                                                       # httpx.Response
     #------------------------------------------------- Delete Course ---------------------------------------------------
     # API
     def delete_course_api(self, course_id: str) -> httpx.Response:
@@ -92,16 +92,16 @@ class CoursesClient(APIClient):
         :return: httpx.Response
         """
         response = self.delete(url=f'{self.ENDPOINT}/{course_id}')            # ▶ Запрос
-        return response
+        return response                                                       # httpx.Response
 
 
 #================================================= Client (✨Helper) ===================================================
 def get_courses_client(auth_data: AuthUserSchema) -> CoursesClient:
     """
-    Функция получения экземпляра CoursesClient с уже настроенным HTTP-клиентом
+    Функция получения экземпляра CoursesClient (с Авторизацией)
 
     :param auth_data: Pydantic-model c данными для аутентификации пользователя (Email, Password)
     :return: Экземпляр CoursesClient
     """
-    courses_client = CoursesClient(client=get_private_http_client(auth_data))
+    courses_client = CoursesClient(client=get_private_httpx_client(auth_data))
     return courses_client

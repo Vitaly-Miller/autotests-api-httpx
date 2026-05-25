@@ -7,7 +7,7 @@ import httpx
 from clients.api_client import APIClient
 from clients.auth.auth_schema import AuthUserSchema
 from clients.files.files_schema import CreateFileRequestSchema, CreateFileResponseSchema
-from clients.private_http_client_builder import get_private_http_client
+from clients.private_httpx_client_builder import get_private_httpx_client
 
 
 #====================================================== Files Client ===================================================
@@ -22,8 +22,8 @@ class FilesClient(APIClient):
         :param file_id: File ID
         :return: httpx.Response
         """
-        response = self.get(url=f'{self.ENDPOINT}/{file_id}')   # ▶ Запрос
-        return response
+        response = self.get(url=f'{self.ENDPOINT}/{file_id}')       # ▶ Запрос
+        return response                                             # httpx.Response
 
     #--------------------------------------------------- Create File ---------------------------------------------------
     # API
@@ -35,13 +35,13 @@ class FilesClient(APIClient):
         :return: httpx.Response
         """
         with open(create_file_data.upload_path, 'rb') as f:
-            response = self.post(         # ▶ Запрос:
-                url=self.ENDPOINT,        # URL запроса
+            response = self.post(                                   # ▶ Запрос:
+                url=self.ENDPOINT,                                  # URL запроса
                 # data=create_file_data,  # <- ⚠️проверить - create_file_data целиком -> Сервер получит лишние поля: 'filename' и 'directory' (✔️ничего страшного)
                 data={'filename': create_file_data.filename, 'directory': create_file_data.directory}, # Имя сохранения файла,  Директория сохранения
-                files={'upload_file': f}  # f - переменная прочитанного файла
+                files={'upload_file': f}                            # f - переменная прочитанного файла
             )
-            return response
+            return response                                         # httpx.Response
 
     # Pydantic-model
     def create_file(self, create_file_data: CreateFileRequestSchema) -> CreateFileResponseSchema:
@@ -53,7 +53,7 @@ class FilesClient(APIClient):
         """
         response = self.create_file_api(create_file_data)                    # ▶ Запрос через API-метод
         model = CreateFileResponseSchema.model_validate_json(response.text)  # Response —> Pydantic-model (deserialize)
-        return model
+        return model                                                         # Pydantic-model (CreateFileResponseSchema)
 
     #--------------------------------------------------- Delete File ---------------------------------------------------
     # API
@@ -77,5 +77,5 @@ def get_files_client(auth_data: AuthUserSchema) -> FilesClient:
     :param auth_data: Pydantic-model c данными для аутентификации пользователя (Email, Password)
     :return: Экземпляр FilesClient (с Авторизацией)
     """
-    files_client = FilesClient(client=get_private_http_client(auth_data))
+    files_client = FilesClient(client=get_private_httpx_client(auth_data))
     return files_client

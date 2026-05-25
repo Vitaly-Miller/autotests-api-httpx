@@ -11,18 +11,20 @@ from clients.users.users_schema import UserFullSchema
 @pytest.fixture
 def exercises_client(create_user: UserFullSchema) -> ExercisesClient:
     """
-    Фикстура вызова экземпляра ExercisesClient (c Авторизацией)
+    Фикстура получения экземпляра ExercisesClient (c Авторизацией)
 
     :param create_user: Вложенная Pydantic-фикстура создания пользователя
     :return: Экземпляр ExercisesClient (c Авторизацией)
     """
-    return get_exercises_client(auth_data=create_user.auth_data)
+    exercises_client = get_exercises_client(auth_data=create_user.auth_data)
+    return exercises_client
 
 
 
-#-----------------------------------------------------------------------------------------------------------------------
+#-------------------------------------------------- Create exercise ----------------------------------------------------
 # API
-
+def create_exercise() -> httpx.Response:
+    ...
 
 # Pydantic-model
 
