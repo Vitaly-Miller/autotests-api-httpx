@@ -2,7 +2,7 @@
 Валидация JSON Schema - create_user_response.json()
 Validate JSON Schema - create_user_response.json()
 """
-from clients.users.public_users_client import get_public_users_client
+from clients.public_users_client import get_public_users_client
 from schemas.users import CreateUserRequestSchema, CreateUserResponseSchema
 from tools.data_generator import fake
 import jsonschema

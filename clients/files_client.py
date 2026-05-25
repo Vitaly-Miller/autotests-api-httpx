@@ -7,7 +7,7 @@ import httpx
 from clients.api_client import APIClient
 from schemas.auth import AuthUserSchema
 from schemas.files import CreateFileRequestSchema, CreateFileResponseSchema
-from clients.private_httpx_client_builder import get_private_httpx_client
+from clients.httpx_private_client import get_private_httpx_client
 
 
 #====================================================== Files Client ===================================================

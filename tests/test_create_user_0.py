@@ -5,7 +5,7 @@ Test Create User 0
 - Без фикстур (Manual) 
 """
 import jsonschema
-from clients.users.public_users_client import get_public_users_client
+from clients.public_users_client import get_public_users_client
 from schemas.users import CreateUserRequestSchema, CreateUserResponseSchema
 from http import HTTPStatus, HTTPMethod
 

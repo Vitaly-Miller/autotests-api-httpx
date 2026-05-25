@@ -6,7 +6,7 @@ Test Create User 1
 - Передача create_user_data в assert
 """
 import pytest
-from clients.users.public_users_client import PublicUsersClient
+from clients.public_users_client import PublicUsersClient
 from schemas.users import CreateUserRequestSchema, CreateUserResponseSchema
 from http import HTTPStatus, HTTPMethod
 from tools.assertions.base_assert import assert_status_code, assert_method

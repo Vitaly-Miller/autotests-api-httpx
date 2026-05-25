@@ -3,7 +3,7 @@
 """
 import httpx
 import pytest
-from clients.users.private_users_client import PrivateUsersClient, get_private_users_client
+from clients.private_users_client import PrivateUsersClient, get_private_users_client
 from schemas.users import UserFullSchema, GetUserMeResponseSchema
 
 #================================================ Private Users Client =================================================

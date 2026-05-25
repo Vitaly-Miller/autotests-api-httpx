@@ -7,7 +7,7 @@ Test Create User
 - Create User data забирается из response.REQUEST.content на уровне assert-фунции.
 """
 import pytest
-from clients.users.public_users_client import PublicUsersClient
+from clients.public_users_client import PublicUsersClient
 from schemas.users import CreateUserRequestSchema, CreateUserResponseSchema
 from http import HTTPStatus, HTTPMethod
 from tools.assertions.base_assert import assert_status_code, assert_method

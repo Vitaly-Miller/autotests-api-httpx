@@ -3,7 +3,7 @@
 (Для методов, требующих авторизации)
 """
 import httpx
-from clients.auth.auth_client import get_auth_client
+from clients.auth_client import get_auth_client
 from schemas.auth import AuthUserSchema
 
 #================================================ httpx.Client (Private) ================================================

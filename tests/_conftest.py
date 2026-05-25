@@ -9,13 +9,13 @@ conftest.py
 """
 import httpx
 import pytest
-from clients.auth.auth_client import get_auth_client, AuthClient
+from clients.auth_client import get_auth_client, AuthClient
 from schemas.auth import AuthUserResponseSchema
-from clients.courses.courses_client import CoursesClient, get_courses_client
-from clients.exercises.exercises_client import ExercisesClient, get_exercises_client
-from clients.files.files_client import get_files_client, FilesClient
-from clients.users.private_users_client import PrivateUsersClient, get_private_users_client
-from clients.users.public_users_client import get_public_users_client, PublicUsersClient
+from clients.courses_client import CoursesClient, get_courses_client
+from clients.exercises_client import ExercisesClient, get_exercises_client
+from clients.files_client import get_files_client, FilesClient
+from clients.private_users_client import PrivateUsersClient, get_private_users_client
+from clients.public_users_client import get_public_users_client, PublicUsersClient
 from schemas.users import CreateUserRequestSchema, GetUserMeResponseSchema, UserFullSchema
 
 #=======================================================================================================================

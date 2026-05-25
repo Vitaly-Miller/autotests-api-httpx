@@ -3,7 +3,7 @@ Public Users fixtures
 """
 import httpx
 import pytest
-from clients.users.public_users_client import get_public_users_client, PublicUsersClient
+from clients.public_users_client import get_public_users_client, PublicUsersClient
 from schemas.users import UserFullSchema, CreateUserRequestSchema
 
 #================================================= Public Users Client =================================================

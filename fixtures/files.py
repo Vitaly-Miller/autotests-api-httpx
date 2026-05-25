@@ -3,7 +3,7 @@ Files fixtures
 """
 import httpx
 import pytest
-from clients.files.files_client import FilesClient, get_files_client
+from clients.files_client import FilesClient, get_files_client
 from schemas.files import CreateFileRequestSchema, FileFullSchema
 from schemas.users import UserFullSchema
 

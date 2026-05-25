@@ -6,7 +6,7 @@ Test User Authentication (Log in)
 Фикстуры: create_user, auth_client
 """
 import pytest
-from clients.auth.auth_client import AuthClient
+from clients.auth_client import AuthClient
 from schemas.auth import AuthUserResponseSchema, AuthUserSchema
 from schemas.users import UserFullSchema
 from tools.assertions.auth_assert import assert_auth_response_fields

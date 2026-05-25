@@ -3,7 +3,7 @@ Courses fixtures
 """
 import httpx
 import pytest
-from clients.courses.courses_client import get_courses_client, CoursesClient
+from clients.courses_client import get_courses_client, CoursesClient
 from schemas.courses import CreateCourseRequestSchema, CoursesFullSchema
 from schemas.users import UserFullSchema
 

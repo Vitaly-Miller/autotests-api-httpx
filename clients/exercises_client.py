@@ -3,7 +3,7 @@ Exercises Client
 """
 import httpx
 from clients.api_client import APIClient
-from clients.private_httpx_client_builder import get_private_httpx_client
+from clients.httpx_private_client import get_private_httpx_client
 from schemas.auth import AuthUserSchema
 from schemas.exercises import (
     CreateExerciseRequestSchema,
