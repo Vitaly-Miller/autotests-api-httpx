@@ -22,7 +22,7 @@ def auth_client() -> AuthClient:
 #------------------------------------------------ Auth (Authentication) ------------------------------------------------
 # API
 @pytest.fixture
-def auth_user_api(create_user: UserFullSchema, auth_client: AuthClient) -> httpx.Response:
+def auth_api(create_user: UserFullSchema, auth_client: AuthClient) -> httpx.Response:
     """
     API-фикстура авторизации пользователя (Log in)
 
@@ -36,7 +36,7 @@ def auth_user_api(create_user: UserFullSchema, auth_client: AuthClient) -> httpx
 
 # Pydantic-model
 @pytest.fixture
-def auth_user(create_user: UserFullSchema, auth_client: AuthClient) -> AuthUserResponseSchema:
+def auth(create_user: UserFullSchema, auth_client: AuthClient) -> AuthUserResponseSchema:
     """
     Pydantic-фикстура авторизации пользователя (Log in)
 
