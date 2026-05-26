@@ -50,10 +50,10 @@ class APIClient:
               url: httpx.URL | str,
               json: Any | None = None) -> httpx.Response:
         """
-        PATCH-запрос (Частичное обновление ресурса, передавая только измененные данные)
+        PATCH-запрос (Частичное обновление)
 
         :param url: URL-адрес эндпоинта
-        :param json: Данные для обновления в формате JSON
+        :param json: Данные для частичного обновления в формате JSON
         :return: httpx.Response
         """
         return self.client.patch(url=url, json=json)
@@ -63,7 +63,7 @@ class APIClient:
             url: httpx.URL | str,
             json: Any | None = None) -> httpx.Response:
         """
-        PUT-запрос (Полное обновление данных)
+        PUT-запрос (Полное обновление)
 
         :param url: URL-адрес эндпоинта
         :param json: Данные для обновления в формате JSON

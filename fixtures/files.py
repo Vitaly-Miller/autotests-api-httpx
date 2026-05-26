@@ -35,6 +35,7 @@ def create_file_api(files_client: FilesClient) -> httpx.Response:
     response = files_client.create_file_api(create_file_data=create_file_data)  # ▶ Запрос через API-метод
     return response                                                             # httpx.Response
 
+
 # Pydantic-model
 @pytest.fixture
 def create_file(files_client: FilesClient) -> FileFullSchema:
