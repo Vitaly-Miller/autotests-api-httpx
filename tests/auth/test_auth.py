@@ -16,13 +16,12 @@ from tools.tool import Tool
 @pytest.mark.smoke
 @pytest.mark.auth
 class TestAuth:
-    #===================================================================================================================
     """Через фикстуру авторизации"""
     def test_auth_1(self, auth_api: httpx.Response):
-        response = auth_api                # Сохраняем ответ работы фикстуры в переменную...
-                                           # ...✨НО можно фикстуру сразу загонять в ассерты. (если scope='function')
+        response = auth_api        # Сохраняем ответ фикстуры, но не обязательно
+                                   # Исполняемую API-фикстуру можно сразу передавать в Assertions в качестве параметра
 
-        # ----------------------------------------------- Assertions ---------------------------------------------------
+        #------------------------ Assertions ------------------------
         # Base API assertions
         assert_status_code(response, HTTPStatus.OK)
         assert_method(response, HTTPMethod.POST)
@@ -35,16 +34,15 @@ class TestAuth:
 
 
 
-    #===================================================================================================================
     """Через фикстуры: Создания пользователя, Авторизации пользователя"""
     def test_auth_2(self, create_user: UserFullSchema, auth_client: AuthClient):
         auth_data = AuthUserSchema(             # Инициализация Pydantic-model с авторизационными данными пользователя (Email и Password)
             email=create_user.email,            # Вытаскиваем Email из модели фикстуры
             password=create_user.password       # Вытаскиваем Password из модели фикстуры
         )
-        response = auth_client.login_api(auth_data)   # ▶ Запрос на Authentication (Login) через API-метод
+        response = auth_client.login_api(auth_data)   # ▶ Запрос через API-метод
 
-        #------------------------------------------------ Assertions ---------------------------------------------------
+        #------------------------ Assertions ------------------------
         # Base API assertions
         assert_status_code(response, HTTPStatus.OK)
         assert_method(response, HTTPMethod.POST)
