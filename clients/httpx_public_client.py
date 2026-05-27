@@ -4,7 +4,7 @@ Public httpx.Client builder
 """
 import httpx
 
-#============================================= httpx.Client Builder (Public)  ===========================================
+#============================================= Public httpx.Client (Builder) ===========================================
 BASE_URL = 'http://localhost:8000/api/v1'
 
 def get_httpx_public_client() -> httpx.Client:
@@ -13,7 +13,7 @@ def get_httpx_public_client() -> httpx.Client:
 
     :return: httpx.Client (с Base URL)
     """
-    public_httpx_client = httpx.Client(base_url=BASE_URL)        # Создаём экземпляр httpx.Client с Base URL
-    return public_httpx_client
+    public_httpx_client = httpx.Client(base_url=BASE_URL)       # Создаём экземпляр httpx.Client() с передачей Base URL
+    return public_httpx_client                                  # httpx.Client (с Base URL)
 
 #-----------------------------------------------------------------------------------------------------------------------
