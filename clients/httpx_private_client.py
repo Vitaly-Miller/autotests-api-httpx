@@ -10,7 +10,7 @@ from schemas.auth import AuthUserSchema
 #============================================== Private httpx.Client (Private) =========================================
 BASE_URL = 'http://localhost:8000/api/v1'
 
-@lru_cache()  # ✨Кэшируем (требуется frozen=True для Schema)
+#@lru_cache()  # ✨Кэшируем (требуется frozen=True для Schema)
 def get_httpx_private_client(auth_data: AuthUserSchema) -> httpx.Client:
     """
     Функция создаёт экземпляр httpx.Client (с Base URL + Token)

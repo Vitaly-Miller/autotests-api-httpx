@@ -77,7 +77,7 @@ class CreateCourseResponseSchema(BaseModel):
 
 
 #-----------------------------------------------------------------------------------------------------------------------
-"""===================================== Courses Full Schema (⬆︎Request + ⬇Response) ✨================================="""
+"""================================== Courses Full Schema (⬆︎Request + ⬇Response) ✨================================"""
 class CoursesFullSchema(BaseModel):
     """
     Объединенная схема о курсе из Request + Response в формате Pydantic-model
