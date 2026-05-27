@@ -57,10 +57,10 @@ class CreateFileResponseSchema(BaseModel):
 """===================================== File Full Schema (⬆︎Request + ⬇Response) ✨================================="""
 class FileFullSchema(BaseModel):
     """
-    Объединенная схема с данными о файле из Request + Response в формате Pydantic-model
+    Объединенная схема с данными о файле из ⬆︎Request + ⬇Response
 
-    Request  -> Данные о файле из Request  (запрос)
-    Response -> Данные о файле из Response (ответ)
+    Request  -> Data from CreateFileRequestSchema
+    Response -> Data from CreateFileResponseSchema
     """
     request: CreateFileRequestSchema
     response: CreateFileResponseSchema

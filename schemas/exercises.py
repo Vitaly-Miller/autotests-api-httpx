@@ -80,3 +80,21 @@ class CreateExerciseResponseSchema(BaseModel):
 
 
 #-----------------------------------------------------------------------------------------------------------------------
+"""================================= Exercise Full Schema (⬆︎Request + ⬇Response) ✨================================"""
+class ExerciseFullSchema(BaseModel):
+    """
+    Объединенная схема задания из ⬆︎Request + ⬇Response
+
+    Request  -> Data from CreateExerciseRequestSchema
+    Response -> Data from CreateExerciseResponseSchema
+    """
+    request: CreateExerciseRequestSchema
+    response: CreateExerciseResponseSchema
+    #------------------------------------- Методы для прямого доступа к данным -----------------------------------------
+    # Exercise ID
+    @property
+    def exercise_id(self):
+        return self.response.exercise.id
+
+
+#-----------------------------------------------------------------------------------------------------------------------

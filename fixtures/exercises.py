@@ -4,6 +4,8 @@ Exercises fixtures
 import httpx
 import pytest
 from clients.exercises_client import ExercisesClient, get_exercises_client
+from schemas.courses import CoursesFullSchema
+from schemas.exercises import CreateExerciseRequestSchema, ExerciseFullSchema
 from schemas.users import UserFullSchema
 
 #================================================== Exercises Client ===================================================
@@ -23,10 +25,36 @@ def exercises_client(create_user: UserFullSchema) -> ExercisesClient:
 
 #-------------------------------------------------- Create exercise ----------------------------------------------------
 # API
-def create_exercise() -> httpx.Response:
-    ...
+def create_exercise_api(exercises_client: ExercisesClient, create_course: CoursesFullSchema) -> httpx.Response:
+    """
+    API-фикстура создания задания
+
+    :param exercises_client: Вложенная Pydantic-фикстура получения экземпляра ExercisesClient (с Авторизацией)
+    :param create_course: Вложенная Pydantic-фикстура создания курса (для получения Course ID)
+    :return: httpx.Response
+    """
+    create_exercise_data = CreateExerciseRequestSchema(    # Инициализация Pydantic-модели c default fake-data
+        courseId=create_course.course_id                   # Заменяем default на реальный Course ID
+    )
+    response = exercises_client.create_exercise_api(create_exercise_data=create_exercise_data)  # ▶ Запрос через API-метод
+    return response                                        # httpx.Response
+
 
 # Pydantic-model
+def create_exercise(exercises_client: ExercisesClient, create_course: CoursesFullSchema) -> ExerciseFullSchema:
+    """
+    Pydantic-фикстура создания задания
+
+    :param exercises_client: Вложенная Pydantic-фикстура получения экземпляра ExercisesClient (с Авторизацией)
+    :param create_course: Вложенная Pydantic-фикстура создания курса (для получения Course ID)
+    :return: httpx.Response
+    """
+    create_exercise_data = CreateExerciseRequestSchema(    # Инициализация Pydantic-модели c default fake-data
+        courseId=create_course.course_id                   # Заменяем default на реальный Course ID
+    )
+    response = exercises_client.create_exercise(create_exercise_data=create_exercise_data)   # ▶ Запрос через Pydantic-метод
+    model = ExerciseFullSchema(request=create_exercise_data, response=response)              # Инициализация Pydantic-model (CoursesFullSchema) ✨<Request + Response>
+    return model                                           # Pydantic-model (CoursesFullSchema) ✨<Request + Response>
 
 
 #-----------------------------------------------------------------------------------------------------------------------

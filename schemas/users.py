@@ -93,10 +93,10 @@ class UserUpdateResponseSchema(UserResponseSchema):
 """===================================== User Full Schema (⬆︎Request + ⬇Response) ✨================================="""
 class UserFullSchema(BaseModel):
     """
-    Объединенная схема с данными о пользователе из Request + Response в формате Pydantic-model
+    Объединенная схема с User data из ⬆︎Request + ⬇Response
 
-    Request  -> Данные о пользователе (первичные)
-    Response -> Данные о пользователе (первичные, КРОМЕ password) + User ID и еще...
+    Request  -> Data from CreateUserRequestSchema
+    Response -> Data from CreateUserResponseSchema
     """
     request: CreateUserRequestSchema
     response: CreateUserResponseSchema

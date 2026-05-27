@@ -80,10 +80,10 @@ class CreateCourseResponseSchema(BaseModel):
 """================================== Courses Full Schema (⬆︎Request + ⬇Response) ✨================================"""
 class CoursesFullSchema(BaseModel):
     """
-    Объединенная схема о курсе из Request + Response в формате Pydantic-model
+    Объединенная схема курса из ⬆︎Request + ⬇Response
 
-    Request  -> Данные о курсе из Request  (запрос)
-    Response -> Данные о курсе из Response (ответ)
+    Request  -> Data from CreateCourseRequestSchema
+    Response -> Data from CreateCourseResponseSchema
     """
     request: CreateCourseRequestSchema
     response: CreateCourseResponseSchema

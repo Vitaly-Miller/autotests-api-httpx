@@ -41,9 +41,9 @@ def create_course_api(
     :param create_file:    Вложенная Pydantic-фикстура создания файла
     :return: httpx.Response
     """
-    create_course_data = CreateCourseRequestSchema(  # Инициализация Pydantic-модели c default fake-data, кроме: ...
-        previewFileId=create_file.file_id,           # Берем File ID из FileFullSchema
-        createdByUserId=create_user.user_id          # Берем User ID из UserFullSchema
+    create_course_data = CreateCourseRequestSchema(  # Инициализация Pydantic-модели c default fake-data
+        previewFileId=create_file.file_id,           # Заменяем default на реальный File ID
+        createdByUserId=create_user.user_id          # Заменяем default на реальный User ID
     )
     response = courses_client.create_course_api(create_course_data=create_course_data)   # ▶ Запрос через API-метод
     return response                                  # httpx.Response
@@ -69,8 +69,8 @@ def create_course(
     :return: Pydantic-model (CoursesFullSchema) ✨<Request + Response>
     """
     create_course_data = CreateCourseRequestSchema(  # Инициализация Pydantic-модели c default fake-data, кроме: ...
-        previewFileId=create_file.file_id,           # Берем File ID из FileFullSchema
-        createdByUserId=create_user.user_id          # Берем User ID из UserFullSchema
+        previewFileId=create_file.file_id,           # Заменяем default на реальный File ID
+        createdByUserId=create_user.user_id          # Заменяем default на реальный User ID
     )
     response = courses_client.create_course(create_course_data=create_course_data)  # ▶ Запрос через Pydantic-метод
     model = CoursesFullSchema(request=create_course_data, response=response)        # Инициализация Pydantic-model (CoursesFullSchema) ✨<Request + Response>
