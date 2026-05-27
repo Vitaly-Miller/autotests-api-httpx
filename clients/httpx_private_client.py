@@ -1,14 +1,16 @@
 """
-🔒Private httpx.Client builder
+🔒Private httpx.Client builder (Кэшированный)
 (Для методов, требующих авторизации)
 """
 import httpx
+from functools import lru_cache
 from clients.auth_client import get_auth_client
 from schemas.auth import AuthUserSchema
 
 #============================================== Private httpx.Client (Private) =========================================
 BASE_URL = 'http://localhost:8000/api/v1'
 
+@lru_cache()  # ✨Кэшируем (требуется frozen=True для Schema)
 def get_httpx_private_client(auth_data: AuthUserSchema) -> httpx.Client:
     """
     Функция создаёт экземпляр httpx.Client (с Base URL + Token)

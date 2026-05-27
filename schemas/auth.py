@@ -6,7 +6,7 @@ from tools.data_generator import fake
 
 """================================================ ⬆︎REQUEST Schema ================================================"""
 #------------------------------------------------------Auth/Login ------------------------------------------------------
-class AuthUserSchema(BaseModel):
+class AuthUserSchema(BaseModel, frozen=True):       # ✨← frozen делает модель иммутабельной и хэшируемой для lru_cache
     """
     Схема запроса на Authentication (Auth) пользователя
 
