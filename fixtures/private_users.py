@@ -16,7 +16,7 @@ def private_users_client(create_user: UserFullSchema) -> PrivateUsersClient:
     :param create_user: Вложенная Pydantic-фикстура создания пользователя
     :return: Экземпляр PrivateUsersClient (c Авторизацией)
     """
-    client = get_private_users_client(auth_data=create_user.auth_data)
+    client = get_private_users_client(create_user.auth_data)
     return client
 
 #----------------------------------------------------- Get User Me -----------------------------------------------------

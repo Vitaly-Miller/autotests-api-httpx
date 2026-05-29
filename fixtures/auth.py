@@ -30,8 +30,8 @@ def auth_api(create_user: UserFullSchema, auth_client: AuthClient) -> httpx.Resp
     :param auth_client: Вложенная фикстура получения экземпляра AuthClient (c Base URL)
     :return: httpx.Response
     """
-    response = auth_client.login_api(auth_data=create_user.auth_data)   # ▶ Запрос через API-метод
-    return response                                                     # httpx.Response
+    response = auth_client.login_api(create_user.auth_data)   # ▶ Запрос через API-метод
+    return response                                           # httpx.Response
 
 
 # Pydantic-model
@@ -44,7 +44,7 @@ def auth(create_user: UserFullSchema, auth_client: AuthClient) -> AuthUserRespon
     :param auth_client: Вложенная фикстура получения экземпляра AuthClient (c Base URL)
     :return: Pydantic-model (AuthUserResponseSchema)
     """
-    model = auth_client.login(auth_data=create_user.auth_data)          # ▶ Запрос через Pydantic-метод
-    return model                                                        # Pydantic-model (AuthUserResponseSchema)
+    model = auth_client.login(create_user.auth_data)          # ▶ Запрос через Pydantic-метод
+    return model                                              # Pydantic-model (AuthUserResponseSchema)
 
 #-----------------------------------------------------------------------------------------------------------------------

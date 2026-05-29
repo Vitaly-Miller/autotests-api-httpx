@@ -18,9 +18,8 @@ def exercises_client(create_user: UserFullSchema) -> ExercisesClient:
     :param create_user: Вложенная Pydantic-фикстура создания пользователя
     :return: Экземпляр ExercisesClient (c Авторизацией)
     """
-    exercises_client = get_exercises_client(auth_data=create_user.auth_data)
+    exercises_client = get_exercises_client(create_user.auth_data)
     return exercises_client
-
 
 
 #-------------------------------------------------- Create exercise ----------------------------------------------------
@@ -36,8 +35,8 @@ def create_exercise_api(exercises_client: ExercisesClient, create_course: Course
     create_exercise_data = CreateExerciseRequestSchema(    # Инициализация Pydantic-модели c default fake-data
         courseId=create_course.course_id                   # Заменяем default на реальный Course ID
     )
-    response = exercises_client.create_exercise_api(create_exercise_data=create_exercise_data)  # ▶ Запрос через API-метод
-    return response                                        # httpx.Response
+    response = exercises_client.create_exercise_api(create_exercise_data)  # ▶ Запрос через API-метод
+    return response                                                        # httpx.Response
 
 
 # Pydantic-model
@@ -52,9 +51,9 @@ def create_exercise(exercises_client: ExercisesClient, create_course: CoursesFul
     create_exercise_data = CreateExerciseRequestSchema(    # Инициализация Pydantic-модели c default fake-data
         courseId=create_course.course_id                   # Заменяем default на реальный Course ID
     )
-    response = exercises_client.create_exercise(create_exercise_data=create_exercise_data)   # ▶ Запрос через Pydantic-метод
-    model = ExerciseFullSchema(request=create_exercise_data, response=response)              # Инициализация Pydantic-model (CoursesFullSchema) ✨<Request + Response>
-    return model                                           # Pydantic-model (CoursesFullSchema) ✨<Request + Response>
+    response = exercises_client.create_exercise(create_exercise_data)             # ▶ Запрос через Pydantic-метод
+    model = ExerciseFullSchema(request=create_exercise_data, response=response)   # Инициализация Pydantic-model (CoursesFullSchema) ✨<Request + Response>
+    return model                                                                  # Pydantic-model (CoursesFullSchema) ✨<Request + Response>
 
 
 #-----------------------------------------------------------------------------------------------------------------------

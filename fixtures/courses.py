@@ -18,7 +18,7 @@ def courses_client(create_user: UserFullSchema) -> CoursesClient:
     :param create_user: Вложенная Pydantic-фикстура создания пользователя
     :return: Экземпляр CoursesClient (с Авторизацией)
     """
-    courses_client = get_courses_client(auth_data=create_user.auth_data)
+    courses_client = get_courses_client(create_user.auth_data)
     return courses_client
 
 
@@ -45,8 +45,8 @@ def create_course_api(
         previewFileId=create_file.file_id,           # Заменяем default на реальный File ID
         createdByUserId=create_user.user_id          # Заменяем default на реальный User ID
     )
-    response = courses_client.create_course_api(create_course_data=create_course_data)   # ▶ Запрос через API-метод
-    return response                                  # httpx.Response
+    response = courses_client.create_course_api(create_course_data)   # ▶ Запрос через API-метод
+    return response                                                   # httpx.Response
 
 
 
@@ -72,8 +72,8 @@ def create_course(
         previewFileId=create_file.file_id,           # Заменяем default на реальный File ID
         createdByUserId=create_user.user_id          # Заменяем default на реальный User ID
     )
-    response = courses_client.create_course(create_course_data=create_course_data)  # ▶ Запрос через Pydantic-метод
-    model = CoursesFullSchema(request=create_course_data, response=response)        # Инициализация Pydantic-model (CoursesFullSchema) ✨<Request + Response>
-    return model                                                                    # Pydantic-model (CoursesFullSchema) ✨<Request + Response>
+    response = courses_client.create_course(create_course_data)                # ▶ Запрос через Pydantic-метод
+    model = CoursesFullSchema(request=create_course_data, response=response)   # Инициализация Pydantic-model (CoursesFullSchema) ✨<Request + Response>
+    return model                                                               # Pydantic-model (CoursesFullSchema) ✨<Request + Response>
 
 #-----------------------------------------------------------------------------------------------------------------------
