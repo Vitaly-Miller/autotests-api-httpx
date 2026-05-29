@@ -5,7 +5,7 @@
 
 from clients.public_users_client import get_public_users_client
 from schemas.users import CreateUserRequestSchema, CreateUserResponseSchema
-from tools.assertions.schema_assert import validation_json_schema
+from tools.assertions.schema_assert import validate_json_schema
 from tools.data_generator import fake
 
 #=======================================================================================================================
@@ -26,12 +26,12 @@ create_user_response = users_client.create_user_api(create_user_data=create_user
 
 
 #---------------------------------------------- 5. Генерация JSON-схемы ------------------------------------------------
-# ПРОПУСКАЮ - Генерацию встроил в функцию валидации JSON-схемы - validation_json_schema() (см. ниже)
+# ПРОПУСКАЮ - Генерацию встроил в функцию валидации JSON-схемы - validate_json_schema() (см. ниже)
 
 
 #------------------------------------------------- 3. Валидация JSON ---------------------------------------------------
 # Через свою функцию валидации
-validation_json_schema(
+validate_json_schema(
     instance=create_user_response,
     schema=CreateUserResponseSchema
 )                                                       # ✅JSON-response schema. Validation success.
@@ -44,7 +44,7 @@ create_user_response_data['user']['email'] = 'hello'    # Меняем в отв
 
 #------------------------------------------------ Валидация JSON (invalid)  --------------------------------------------
 #Через свою функцию валидации
-validation_json_schema(
+validate_json_schema(
     instance=create_user_response_data,
     schema=CreateUserResponseSchema
 )                                                       # ❌JSON-response schema. Validation error: ['hello' is not a 'email']

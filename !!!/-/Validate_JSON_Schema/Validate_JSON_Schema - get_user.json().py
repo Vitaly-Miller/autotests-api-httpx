@@ -6,7 +6,7 @@ from schemas.auth import AuthUserSchema
 from clients.private_users_client import get_private_users_client
 from clients.public_users_client import get_public_users_client
 from schemas.users import CreateUserRequestSchema, GetUserResponseSchema
-from tools.assertions.schema_assert import validation_json_schema
+from tools.assertions.schema_assert import validate_json_schema
 from tools.data_generator import fake
 
 #=======================================================================================================================
@@ -54,12 +54,12 @@ get_user_response_user_id = get_user_response_json['user']['id']    # 👈 Об�
 print(get_user_response_user_id)                  # 4848865f-bcb5-49c2-8351-bf5c040247bd
 
 #---------------------------------------------- 5. Генерация JSON-схемы ------------------------------------------------
-# ПРОПУСКАЮ - Генерацию встроил в функцию валидации JSON-схемы - validation_json_schema() (см. ниже)
+# ПРОПУСКАЮ - Генерацию встроил в функцию валидации JSON-схемы - validate_json_schema() (см. ниже)
 
 
 #---------------------------------------------- 6. Валидация JSON-схемы -----------------------------------------------
 # Через свою функцию валидации
-validation_json_schema(
+validate_json_schema(
     instance=get_user_response_json,
     schema=GetUserResponseSchema
 )                                                # ✅JSON-response schema. Validation success.
@@ -68,7 +68,7 @@ validation_json_schema(
 #============================================ ❌Invalid JSON (NO 'id' key) =============================================
 del get_user_response_json['user']['id']        # Удаляем ключ 'id' из JSON-ответа
 
-validation_json_schema(
+validate_json_schema(
     instance=get_user_response_json,
     schema=GetUserResponseSchema
 )                                                # ❌JSON-response schema. Validation error: ['id' is a required property]

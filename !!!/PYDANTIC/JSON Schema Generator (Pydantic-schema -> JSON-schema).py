@@ -22,7 +22,7 @@ json_schema = TokenSchema.model_json_schema()
 
 
 #------------------------------------------------------- Output --------------------------------------------------------
-print(json_schema)  # {'description': 'Схема ключа "token": {}', 'properties': {'tokenType': {'title': 'Tokentype', 'type': 'string'}, 'accessToken': {'title': 'Accesstoken', 'type': 'string'}, 'refreshToken': {'title': 'Refreshtoken', 'type': 'string'}}, 'required': ['tokenType', 'accessToken', 'refreshToken'], 'title': 'TokenSchema', 'type': 'object'}
+print(json_schema)
 """ ✨
 {
     'description': 'Схема ключа "token": {}',
