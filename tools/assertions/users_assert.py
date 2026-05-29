@@ -8,7 +8,7 @@ from tools.assertions.base_assert import assert_value_equal
 #=======================================================================================================================
 def assert_create_user_data_equal(response: httpx.Response, request_model: CreateUserRequestSchema | None = None):
     """
-    4-in-1 | Create User Data = Created User Data
+    4-in-1 | Request Data = Response Data
 
     - email
     - last_name
@@ -31,7 +31,7 @@ def assert_create_user_data_equal(response: httpx.Response, request_model: Creat
         request_model = CreateUserRequestSchema.model_validate_json(response.request.content)  # Request —> Pydantic-model (Deserialize for Assertions)
 
 
-    # Create User Data = Created User Data:
+    # Request Data = Response Data:
     assert_value_equal(
         response_model.user.email,
         'email',

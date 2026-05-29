@@ -24,7 +24,7 @@ class TestCreateUser:
         # Assertions
         assert_status_code(response, HTTPStatus.OK)          # Status code
         assert_method(response, HTTPMethod.POST)           # Method
-        assert_create_user_data_equal(response)                                    # Create User Data = Created User Data (4-in-1)
+        assert_create_user_data_equal(response)                                    # 4-in-1 | Request Data = Response Data
         validate_json_schema(response, CreateUserResponseSchema)   # Validation JSON schema
 
 
@@ -37,7 +37,7 @@ class TestCreateUser:
         # Assertions
         assert_status_code(response, HTTPStatus.OK)          # Status code
         assert_method(response, HTTPMethod.POST)           # Method
-        assert_create_user_data_equal(response)                                    # 4-in-1 | Create User Data = Created User Data
+        assert_create_user_data_equal(response)                                    # 4-in-1 | Request Data = Response Data
         validate_json_schema(response, CreateUserResponseSchema)   # Validation JSON schema
 
 
@@ -58,7 +58,7 @@ class TestCreateUser:
         # Assertions
         assert_status_code(response, HTTPStatus.OK)         # Status code
         assert_method(response, HTTPMethod.POST)          # Method
-        assert_create_user_data_equal(response)                                   # 4-in-1 | Create User Data = Created User Data
+        assert_create_user_data_equal(response)                                   # 4-in-1 | Request Data = Response Data
         validate_json_schema(response, CreateUserResponseSchema)  # Validation JSON schema
 
 

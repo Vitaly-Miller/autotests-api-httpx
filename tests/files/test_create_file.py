@@ -8,7 +8,11 @@ from clients.files_client import FilesClient
 from schemas.files import CreateFileResponseSchema, CreateFileRequestSchema
 from tools.assertions.base_assert import assert_status_code, assert_method
 from tools.assertions.schema_assert import validate_json_schema
-from tools.assertions.files_assert import assert_create_file_id_length, assert_create_file_values_non_empty
+from tools.assertions.files_assert import (
+    assert_create_file_id_length,
+    assert_create_file_values_non_empty,
+    assert_create_file_data_equal
+)
 from tools.tool import Tool
 #=======================================================================================================================
 @pytest.mark.regression
@@ -25,6 +29,8 @@ class TestCreateFile:
         assert_create_file_id_length(response)                                     # File ID length = 36 chars
         validate_json_schema(response, CreateFileResponseSchema)   # Validation JSON schema
 
+        # API Report (optional)
+        #Tool.api_report(response)
 
 
     """v.2 - Через фикстуру получения экземпляра FilesClient"""
@@ -37,10 +43,11 @@ class TestCreateFile:
         assert_method(response, http.HTTPMethod.POST)      # Method
         assert_create_file_values_non_empty(response)                              # 4-in-1 | NON-empty response values
         assert_create_file_id_length(response)                                     # File ID length = 36 chars
+        assert_create_file_data_equal(response,create_file_data)  # 3-in-1 | Request File Data = Response File Data
         validate_json_schema(response, CreateFileResponseSchema)   # Validation JSON schema
 
 
         # API Report (optional)
-        # Tool.api_report(response)
+        Tool.api_report(response)
 
 #=======================================================================================================================

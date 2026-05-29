@@ -65,7 +65,7 @@ def assert_value_equal(actual_obj: Any, obj_name: str, expected_obj: Any | str):
     """
     assert actual_obj == expected_obj, f"""
 {error_title}
-⚠️Values are not equal in "{obj_name}"
+⚠️Values are NOT equal in "{obj_name}"
 {exp} "{obj_name}": {expected_obj}
 {act} "{obj_name}": {actual_obj}
 """
