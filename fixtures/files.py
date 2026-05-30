@@ -46,9 +46,9 @@ def create_file(files_client: FilesClient) -> CreateFileSchema:
     :return: Pydantic-model (CreateFileSchema) ✨<Request + Response>
     """
     create_file_data = CreateFileRequestSchema()                   # Инициализация Pydantic-model c default fake-data
-    response = files_client.create_file(create_file_data)          # ▶ Запрос через Pydantic-метод
-    response_model = CreateFileSchema(request=create_file_data, response=response) # Инициализация Pydantic-model (CreateFileSchema) ✨<Request + Response>
-    return response_model                                          # Pydantic-model (CreateFileSchema) ✨<Request + Response>
+    response_model = files_client.create_file(create_file_data)    # ▶ Запрос через Pydantic-метод
+    response_full_model = CreateFileSchema(request=create_file_data, response=response_model) # Инициализация Pydantic-model (CreateFileSchema) ✨<Request + Response>
+    return response_full_model                                     # Pydantic-model (CreateFileSchema) ✨<Request + Response>
 
 #------------------------------------------------------- Get File ------------------------------------------------------
 # API
@@ -65,4 +65,14 @@ def get_file_api(files_client: FilesClient, create_file: CreateFileSchema) -> ht
     return response                                                # httpx.Response
 
 # Pydantic-model
+def get_file(files_client: FilesClient, create_file: CreateFileSchema) -> GetFileResponseSchema:
+    """
+    Pydantic-фикстура получения файла
+
+    :param files_client: Вложенная фикстура получения экземпляра FilesClient (c Авторизацией)
+    :param create_file: Вложенная Pydantic-фикстура создания файла
+    :return: httpx.Response
+    """
+    response_model = files_client.get_file(create_file.file_id)    # ▶ Запрос через Pydantic-метод
+    return response_model                                          # Pydantic-model (CreateFileSchema)
 #-----------------------------------------------------------------------------------------------------------------------
