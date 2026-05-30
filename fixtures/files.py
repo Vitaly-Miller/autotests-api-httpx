@@ -47,7 +47,7 @@ def create_file(files_client: FilesClient) -> CreateFileSchema:
     """
     create_file_data = CreateFileRequestSchema()                          # Инициализация Pydantic-model c default fake-data
     response = files_client.create_file(create_file_data)                 # ▶ Запрос через Pydantic-метод
-    model = CreateFileSchema(request=create_file_data, response=response)   # Инициализация Pydantic-model (CreateFileSchema) ✨<Request + Response>
+    model = CreateFileSchema(request=create_file_data, response=response) # Инициализация Pydantic-model (CreateFileSchema) ✨<Request + Response>
     return model                                                          # Pydantic-model (CreateFileSchema) ✨<Request + Response>
 
 #-----------------------------------------------------------------------------------------------------------------------

@@ -2,7 +2,7 @@
 Files Assertions
 """
 import httpx
-from schemas.files import CreateFileResponseSchema, CreateFileRequestSchema
+from schemas.files import CreateFileResponseSchema, CreateFileRequestSchema, FileSchema
 from tools.assertions.base_assert import assert_value_len, assert_is_value, assert_value_equal
 
 #=======================================================================================================================
@@ -74,7 +74,8 @@ def assert_create_file_id_length(response: httpx.Response):
     :return: AssertionError
     """
     response_model = CreateFileResponseSchema.model_validate_json(response.text)        # Response —> Pydantic-model (Deserialize for Assertions)
-
     assert_value_len(response_model.file.id,'id', 36)  # Длина File ID = 36 знаков
+
+
 
 #-----------------------------------------------------------------------------------------------------------------------
