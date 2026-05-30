@@ -4,8 +4,8 @@ Auth (Authentication) fixtures
 import httpx
 import pytest
 from clients.auth_client import AuthClient, get_auth_client
-from schemas.auth import AuthUserResponseSchema
-from schemas.users import UserFullSchema
+from schemas.auth import AuthResponseSchema
+from schemas.users import CreateUserSchema
 
 #===================================================== Auth Client =====================================================
 # Auth Client
@@ -22,7 +22,7 @@ def auth_client() -> AuthClient:
 #------------------------------------------------ Auth (Authentication) ------------------------------------------------
 # API
 @pytest.fixture
-def auth_api(create_user: UserFullSchema, auth_client: AuthClient) -> httpx.Response:
+def auth_api(create_user: CreateUserSchema, auth_client: AuthClient) -> httpx.Response:
     """
     API-фикстура авторизации пользователя (Log in)
 
@@ -36,15 +36,15 @@ def auth_api(create_user: UserFullSchema, auth_client: AuthClient) -> httpx.Resp
 
 # Pydantic-model
 @pytest.fixture
-def auth(create_user: UserFullSchema, auth_client: AuthClient) -> AuthUserResponseSchema:
+def auth(create_user: CreateUserSchema, auth_client: AuthClient) -> AuthResponseSchema:
     """
     Pydantic-фикстура авторизации пользователя (Log in)
 
     :param create_user: Вложенная Pydantic-фикстура создания пользователя
     :param auth_client: Вложенная фикстура получения экземпляра AuthClient (c Base URL)
-    :return: Pydantic-model (AuthUserResponseSchema)
+    :return: Pydantic-model (AuthResponseSchema)
     """
     model = auth_client.login(create_user.auth_data)          # ▶ Запрос через Pydantic-метод
-    return model                                              # Pydantic-model (AuthUserResponseSchema)
+    return model                                              # Pydantic-model (AuthResponseSchema)
 
 #-----------------------------------------------------------------------------------------------------------------------

@@ -4,8 +4,8 @@ Test User Auth (Log in)
 import httpx
 import pytest
 from clients.auth_client import AuthClient
-from schemas.users import UserFullSchema
-from schemas.auth import AuthUserResponseSchema, AuthUserSchema
+from schemas.users import CreateUserSchema
+from schemas.auth import AuthResponseSchema, AuthDataSchema
 from http import HTTPStatus, HTTPMethod
 from tools.assertions.auth_assert import assert_auth_token, assert_auth_values_non_empty
 from tools.assertions.base_assert import assert_status_code, assert_method
@@ -25,15 +25,15 @@ class TestAuth:
         assert_method(response, HTTPMethod.POST)           # Method
         assert_auth_values_non_empty(response)                                     # 3-in-1 | Non-empty response values
         assert_auth_token(response)                                                # 4-in-1 | Token
-        validate_json_schema(response, AuthUserResponseSchema)     # Validation JSON schema
+        validate_json_schema(response, AuthResponseSchema)     # Validation JSON schema
 
         # API Report (optional)
         #Tool.api_report(response)
 
 
     """v.2 - Через фикстуры: Создания пользователя, Авторизации пользователя"""
-    def test_auth_2(self, create_user: UserFullSchema, auth_client: AuthClient):
-        auth_data = AuthUserSchema(             # Инициализация Pydantic-model с авторизационными данными пользователя (Email и Password)
+    def test_auth_2(self, create_user: CreateUserSchema, auth_client: AuthClient):
+        auth_data = AuthDataSchema(             # Инициализация Pydantic-model с авторизационными данными пользователя (Email и Password)
             email=create_user.email,            # Вытаскиваем Email из модели фикстуры
             password=create_user.password       # Вытаскиваем Password из модели фикстуры
         )
@@ -44,7 +44,7 @@ class TestAuth:
         assert_method(response, HTTPMethod.POST)           # Method
         assert_auth_values_non_empty(response)                                     # 3-in-1 | Non-empty response values
         assert_auth_token(response)                                                # 4-in-1 | Token
-        validate_json_schema(response, AuthUserResponseSchema)     # Validation JSON schema
+        validate_json_schema(response, AuthResponseSchema)     # Validation JSON schema
 
         # API Report (optional)
         # Tool.api_report(response)

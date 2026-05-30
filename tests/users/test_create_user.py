@@ -27,6 +27,9 @@ class TestCreateUser:
         assert_create_user_data_equal(response)                                    # 4-in-1 | Request Data = Response Data
         validate_json_schema(response, CreateUserResponseSchema)   # Validation JSON schema
 
+        # API Report (optional)
+        #Tool.api_report(response)
+
 
 
     """v.2 - Через фикстуру получения экземпляра PublicUsersClient"""
@@ -39,6 +42,9 @@ class TestCreateUser:
         assert_method(response, HTTPMethod.POST)           # Method
         assert_create_user_data_equal(response)                                    # 4-in-1 | Request Data = Response Data
         validate_json_schema(response, CreateUserResponseSchema)   # Validation JSON schema
+
+        # API Report (optional)
+        #Tool.api_report(response)
 
 
 
@@ -61,14 +67,17 @@ class TestCreateUser:
         assert_create_user_data_equal(response)                                   # 4-in-1 | Request Data = Response Data
         validate_json_schema(response, CreateUserResponseSchema)  # Validation JSON schema
 
+        # API Report (optional)
+        #Tool.api_report(response)
+
 
 
     """v.4 - All manual"""
     def test_create_user_4_manual(self):
         public_users_client = get_public_users_client()  # Получение экземпляра PublicUsersClient
         create_user_data = CreateUserRequestSchema()     # Инициализация Pydantic-model с default fake-data нового пользователя
-        response = public_users_client.create_user_api(create_user_data=create_user_data)  # ▶ Запрос через API-метод
-        response_model = CreateUserResponseSchema.model_validate_json(response.text)       # Response —> Pydantic-model (deserialize for Assertions)
+        response = public_users_client.create_user_api(create_user_data)              # ▶ Запрос через API-метод
+        response_model = CreateUserResponseSchema.model_validate_json(response.text)  # Response —> Pydantic-model (deserialize for Assertions)
 
         # Assertions:
         # Base API assertions

@@ -4,7 +4,7 @@ Exercises Client
 import httpx
 from clients.api_client import APIClient
 from clients.httpx_private_client import get_httpx_private_client
-from schemas.auth import AuthUserSchema
+from schemas.auth import AuthDataSchema
 from schemas.exercises import (
     CreateExerciseRequestSchema,
     UpdateExerciseRequestSchema,
@@ -94,7 +94,7 @@ class ExercisesClient(APIClient):
 
 
 #================================================= Client (✨Helper) ===================================================
-def get_exercises_client(auth_data: AuthUserSchema) -> ExercisesClient:
+def get_exercises_client(auth_data: AuthDataSchema) -> ExercisesClient:
     """
     Функция получения экземпляра ExercisesClient с уже настроенным HTTP-клиентом (с Авторизацией)
 

@@ -6,7 +6,7 @@ import pytest
 import jsonschema
 from clients.private_users_client import get_private_users_client, PrivateUsersClient
 from clients.public_users_client import get_public_users_client
-from schemas.auth import AuthUserSchema
+from schemas.auth import AuthDataSchema
 from schemas.users import CreateUserRequestSchema, CreateUserResponseSchema, GetUserMeResponseSchema
 from http import HTTPStatus, HTTPMethod
 from tools.assertions.base_assert import assert_status_code, assert_method
@@ -30,6 +30,8 @@ class TestGetUserMe:
         assert_get_user_me_user_id_len(response)                                # User ID length = 36 chars
         validate_json_schema(response, GetUserMeResponseSchema) # Validation JSON schema
 
+        # API Report (optional)
+        #Tool.api_report(response)
 
 
     """v.2 - Через фикстуру получения экземпляра PrivateUsersClient"""
@@ -43,6 +45,8 @@ class TestGetUserMe:
         assert_get_user_me_user_id_len(response)                                # User ID length = 36 chars
         validate_json_schema(response, GetUserMeResponseSchema) # Validation JSON schema
 
+        # API Report (optional)
+        #Tool.api_report(response)
 
 
     """v.3 - All manual"""
@@ -52,7 +56,7 @@ class TestGetUserMe:
         public_users_client = get_public_users_client()   # Получаем экземпляр PublicUsersClient (с Base URL)
         create_user_data = CreateUserRequestSchema()      # Инициализация Pydantic-модели с default fake-data нового пользователя
         public_users_client.create_user(create_user_data) # ▶ Запрос через Pydantic-метод
-        auth_data = AuthUserSchema(                       # Инициализируем модель с данными для авторизации
+        auth_data = AuthDataSchema(                       # Инициализируем модель с данными для авторизации
             email=create_user_data.email,                 # Вытаскиваем Email из Pydantic-модели
             password=create_user_data.password            # Вытаскиваем Password из Pydantic-модели
         )
@@ -83,7 +87,6 @@ class TestGetUserMe:
             schema=CreateUserResponseSchema.model_json_schema(),  # JSON-схема, сгенерированная из Pidantic-схемы
             format_checker=jsonschema.FormatChecker()             # Проверка форматов
         )
-
 
         # API Report (optional)
         # Tool.api_report(response)

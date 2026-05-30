@@ -4,7 +4,7 @@ Public Users fixtures
 import httpx
 import pytest
 from clients.public_users_client import get_public_users_client, PublicUsersClient
-from schemas.users import UserFullSchema, CreateUserRequestSchema
+from schemas.users import CreateUserSchema, CreateUserRequestSchema
 
 #================================================= Public Users Client =================================================
 # Public Users Client
@@ -36,17 +36,17 @@ def create_user_api(public_users_client: PublicUsersClient) -> httpx.Response:
                                    # password = request_body["password"]
 # Pydantic-model
 @pytest.fixture
-def create_user(public_users_client: PublicUsersClient) -> UserFullSchema:
+def create_user(public_users_client: PublicUsersClient) -> CreateUserSchema:
     """
     Pydantic-фикстура создания пользователя
 
     :param public_users_client: Вложенная фикстура получения экземпляра PublicUsersClient (с Base URL)
-    :return: Pydantic-model (UserFullSchema) ✨<Request + Response>
+    :return: Pydantic-model (CreateUserSchema) ✨<Request + Response>
     """
     create_user_data = CreateUserRequestSchema()                         # Инициализация модели с Default fake-data нового пользователя по Pydantic-схеме
     response = public_users_client.create_user(create_user_data)         # ︎▶ Запрос через Pydantic-метод
-    model = UserFullSchema(request=create_user_data, response=response)  # Инициализация Pydantic-model (UserFullSchema) ✨<Request + Response>
-    return model                                                         # Pydantic-model (UserFullSchema) ✨<Request + Response>
+    model = CreateUserSchema(request=create_user_data, response=response)  # Инициализация Pydantic-model (CreateUserSchema) ✨<Request + Response>
+    return model                                                         # Pydantic-model (CreateUserSchema) ✨<Request + Response>
 
 
 #-----------------------------------------------------------------------------------------------------------------------

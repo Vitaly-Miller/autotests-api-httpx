@@ -5,7 +5,7 @@ Courses Client
 import httpx
 from clients.api_client import APIClient
 from clients.httpx_private_client import get_httpx_private_client
-from schemas.auth import AuthUserSchema
+from schemas.auth import AuthDataSchema
 from schemas.courses import (
     GetCoursesRequestSchema,
     CreateCourseRequestSchema,
@@ -96,7 +96,7 @@ class CoursesClient(APIClient):
 
 
 #================================================= Client (✨Helper) ===================================================
-def get_courses_client(auth_data: AuthUserSchema) -> CoursesClient:
+def get_courses_client(auth_data: AuthDataSchema) -> CoursesClient:
     """
     Функция получения экземпляра CoursesClient (с Авторизацией)
 

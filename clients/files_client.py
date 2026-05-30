@@ -5,7 +5,7 @@ Files Client
 """
 import httpx
 from clients.api_client import APIClient
-from schemas.auth import AuthUserSchema
+from schemas.auth import AuthDataSchema
 from schemas.files import CreateFileRequestSchema, CreateFileResponseSchema
 from clients.httpx_private_client import get_httpx_private_client
 
@@ -70,7 +70,7 @@ class FilesClient(APIClient):
 
 
 #================================================= Client (✨Helper) ===================================================
-def get_files_client(auth_data: AuthUserSchema) -> FilesClient:
+def get_files_client(auth_data: AuthDataSchema) -> FilesClient:
     """
     Функция получения экземпляра FilesClient с уже настроенным HTTP-клиентом (с Авторизацией)
 

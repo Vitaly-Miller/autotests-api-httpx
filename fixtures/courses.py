@@ -4,14 +4,14 @@ Courses fixtures
 import httpx
 import pytest
 from clients.courses_client import get_courses_client, CoursesClient
-from schemas.courses import CreateCourseRequestSchema, CoursesFullSchema
-from schemas.files import FileFullSchema
-from schemas.users import UserFullSchema
+from schemas.courses import CreateCourseRequestSchema, CreateCoursesSchema
+from schemas.files import CreateFileSchema
+from schemas.users import CreateUserSchema
 
 #=================================================== Courses Client ====================================================
 # Courses Client
 @pytest.fixture
-def courses_client(create_user: UserFullSchema) -> CoursesClient:
+def courses_client(create_user: CreateUserSchema) -> CoursesClient:
     """
     Фикстура получения экземпляра CoursesClient (с Авторизацией)
 
@@ -27,8 +27,8 @@ def courses_client(create_user: UserFullSchema) -> CoursesClient:
 @pytest.fixture
 def create_course_api(
     courses_client: CoursesClient, # ┐ ✨ДЕДУПЛИКАЦИЯ внутри одного теста — это фундаментальное свойство Pytest.
-    create_user: UserFullSchema,   # ┘ ✨Один и тоже User! Несмотря на то, что обе фикстуры создают пользователя.
-    create_file: FileFullSchema
+    create_user: CreateUserSchema,   # ┘ ✨Один и тоже User! Несмотря на то, что обе фикстуры создают пользователя.
+    create_file: CreateFileSchema
 ) -> httpx.Response:
     """
     API-фикстура создания курса
@@ -54,9 +54,9 @@ def create_course_api(
 @pytest.fixture
 def create_course(
     courses_client: CoursesClient, # ┐ ✨ДЕДУПЛИКАЦИЯ внутри одного теста — это фундаментальное свойство Pytest.
-    create_user: UserFullSchema,   # ┘ ✨Один и тоже User! Несмотря на то, что обе фикстуры создают пользователя.
-    create_file: FileFullSchema
-) -> CoursesFullSchema:
+    create_user: CreateUserSchema,   # ┘ ✨Один и тоже User! Несмотря на то, что обе фикстуры создают пользователя.
+    create_file: CreateFileSchema
+) -> CreateCoursesSchema:
     """
     Pydantic-фикстура создания курса
 
@@ -73,7 +73,7 @@ def create_course(
         createdByUserId=create_user.user_id          # Заменяем default на реальный User ID
     )
     response = courses_client.create_course(create_course_data)                # ▶ Запрос через Pydantic-метод
-    model = CoursesFullSchema(request=create_course_data, response=response)   # Инициализация Pydantic-model (CoursesFullSchema) ✨<Request + Response>
+    model = CreateCoursesSchema(request=create_course_data, response=response)   # Инициализация Pydantic-model (CoursesFullSchema) ✨<Request + Response>
     return model                                                               # Pydantic-model (CoursesFullSchema) ✨<Request + Response>
 
 #-----------------------------------------------------------------------------------------------------------------------

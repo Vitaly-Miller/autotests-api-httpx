@@ -2,105 +2,72 @@
 Authentication Pydantic Schema
 """
 from pydantic import BaseModel, Field, EmailStr
-from schemas.auth import AuthUserSchema
+from schemas.auth import AuthDataSchema
 from tools.data_generator import fake
 
 """================================================ ⬆︎REQUEST Schema ================================================"""
 #----------------------------------------------------- Create User -----------------------------------------------------
 class CreateUserRequestSchema(BaseModel):
-    """
-    Схема payload для запроса на создание нового пользователя
-
-    .
-    """
-    email: EmailStr = Field(default_factory=fake.email)
+    email: EmailStr = Field(default_factory=fake.email)  # ⚠️Возможно придется заменить на str. А то будут падать негативные тесты при валидации Email
     password: str = Field(default_factory=fake.password)
     last_name: str = Field(alias='lastName', default_factory=fake.last_name)
     first_name: str = Field(alias='firstName', default_factory=fake.first_name)
     middle_name: str = Field(alias='middleName', default_factory=fake.middle_name)
 
+#------------------------------------------------------ Get User -------------------------------------------------------
+
+
+
+
 #----------------------------------------------------- Update User -----------------------------------------------------
 class UpdateUserRequestSchema(BaseModel):
-    """
-    Схема payload для запроса на обновления данных пользователя
-
-    .
-    """
-    email: EmailStr | None = Field(default_factory=fake.email)
+    email: EmailStr | None = Field(default_factory=fake.email) # ⚠️Возможно придется заменить на str. А то будут падать негативные тесты при валидации Email
     last_name: str | None = Field(alias='lastName', default_factory=fake.last_name)
     first_name: str | None = Field(alias='firstName', default_factory=fake.first_name)
     middle_name: str | None = Field(alias='middleName', default_factory=fake.middle_name)
 
 
+#-----------------------------------------------------------------------------------------------------------------------
 
 """=============================================== ⬇︎RESPONSE Schema ================================================"""
-#------------------------------------------------------ Base -----------------------------------------------------------
+#---------------------------------------------------- Create User ------------------------------------------------------
 class UserSchema(BaseModel):
-    """
-    Базовая схема ключа "user": {}
-
-    .
-    """
     id: str
-    email: EmailStr
+    email: EmailStr   # ⚠️Возможно придется заменить на str. А то будут падать негативные тесты при валидации Email
     last_name: str = Field(alias='lastName')
     first_name: str = Field(alias='firstName')
     middle_name: str = Field(alias='middleName')
 
-class UserResponseSchema(BaseModel):
-    """
-    Базовая схема API ответа при работе с пользователями
-
-    .
-    """
+class CreateUserResponseSchema(BaseModel):
     user: UserSchema
 
-#---------------------------------------------------- Create User ------------------------------------------------------
-class CreateUserResponseSchema(UserResponseSchema):
-    """
-    Схема ответа при создании нового пользователя
 
-    Наследуется: UserResponseSchema
-    """
-    pass
 #------------------------------------------------------ Get User -------------------------------------------------------
-class GetUserResponseSchema(UserResponseSchema):
-    """
-    Схема ответа при получении данных пользователя по User ID
+class GetUserResponseSchema(BaseModel):
+    user: UserSchema
 
-    Наследуется: UserResponseSchema
-    """
-    pass
+
+#------------------------------------------------------- Get User ------------------------------------------------------
+
+
+
 #----------------------------------------------------- Get User Me -----------------------------------------------------
-class GetUserMeResponseSchema(UserResponseSchema):
-    """
-    Схема ответа при получении данных ТЕКУЩЕГО пользователя
+class GetUserMeResponseSchema(BaseModel):
+    user: UserSchema
 
-    Наследуется: UserResponseSchema
-    """
-    pass
+
 #----------------------------------------------------- Update User -----------------------------------------------------
-class UserUpdateResponseSchema(UserResponseSchema):
-    """
-    Схема ответа при обновлении данных пользователя
-
-    Наследуется: UserResponseSchema
-    """
-    pass
+class UserUpdateResponseSchema(BaseModel):
+    user: UserSchema
 
 
+#-----------------------------------------------------------------------------------------------------------------------
+"""====================================== Full Schema (⬆︎Request + ⬇Response) ✨====================================="""
+class CreateUserSchema(BaseModel):
+    request: CreateUserRequestSchema    # ┐
+    response: CreateUserResponseSchema  # ┘
 
-"""===================================== User Full Schema (⬆︎Request + ⬇Response) ✨================================="""
-class UserFullSchema(BaseModel):
-    """
-    Объединенная схема с User data из ⬆︎Request + ⬇Response
-
-    Request  -> Data from CreateUserRequestSchema
-    Response -> Data from CreateUserResponseSchema
-    """
-    request: CreateUserRequestSchema
-    response: CreateUserResponseSchema
-    #------------------------------------- Методы для прямого доступа к данным -----------------------------------------
+    # --- Методы прямого доступа к данным ---
     # Email
     @property
     def email(self) -> str:
@@ -116,12 +83,12 @@ class UserFullSchema(BaseModel):
     def user_id(self) -> str:
         return self.response.user.id
 
-   # User Auth Data
+    # User Auth Data (Email + Password)
     @property
-    def auth_data(self) -> AuthUserSchema:
-        return AuthUserSchema(
-            email=self.email,                # Email     ┐
-            password=self.password           # Password  ┘
+    def auth_data(self) -> AuthDataSchema:
+        return AuthDataSchema(
+            email=self.email,       # Email     ┐
+            password=self.password  # Password  ┘
         )
 
 #-----------------------------------------------------------------------------------------------------------------------

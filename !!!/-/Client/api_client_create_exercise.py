@@ -1,7 +1,7 @@
 """
 API Client Create Exercise
 """
-from schemas.auth import AuthUserSchema
+from schemas.auth import AuthDataSchema
 from clients.courses_client import get_courses_client
 from schemas.courses import CreateCourseRequestSchema
 from clients.exercises_client import get_exercises_client
@@ -23,7 +23,7 @@ public_users_client = get_public_users_client()
 create_user_response = public_users_client.create_user(create_user_data=create_user_data)
 
 # Авторизационные данные
-auth_data = AuthUserSchema(                  # Инициализация модели / Валидация данных через схему
+auth_data = AuthDataSchema(                  # Инициализация модели / Валидация данных через схему
     email=create_user_data.email,            # Вытаскиваем email из create_user_data модели
     password=create_user_data.password       # Вытаскиваем password из create_user_data модели
 )

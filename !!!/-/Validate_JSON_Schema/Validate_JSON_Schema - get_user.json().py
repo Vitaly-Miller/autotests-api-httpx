@@ -2,7 +2,7 @@
 Валидация JSON Schema - get_user.json()
 Validate JSON Schema - get_user.json()
 """
-from schemas.auth import AuthUserSchema
+from schemas.auth import AuthDataSchema
 from clients.private_users_client import get_private_users_client
 from clients.public_users_client import get_public_users_client
 from schemas.users import CreateUserRequestSchema, GetUserResponseSchema
@@ -34,7 +34,7 @@ print(create_user_id)                            # 4848865f-bcb5-49c2-8351-bf5c0
 
 #---------------------------------------------- 2. Get User (API-метод) ------------------------------------------------
 # Инициализация Pydantic Model
-auth_data = AuthUserSchema(                      # Валидация данных через схему
+auth_data = AuthDataSchema(                      # Валидация данных через схему
     email=create_user_payload.email,             # Берем email из create_user_payload модели
     password=create_user_payload.password        # Берем password из create_user_payload модели
 )

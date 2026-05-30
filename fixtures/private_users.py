@@ -4,12 +4,12 @@
 import httpx
 import pytest
 from clients.private_users_client import PrivateUsersClient, get_private_users_client
-from schemas.users import UserFullSchema, GetUserMeResponseSchema
+from schemas.users import CreateUserSchema, GetUserMeResponseSchema
 
 #================================================ Private Users Client =================================================
 # Private Users Client
 @pytest.fixture
-def private_users_client(create_user: UserFullSchema) -> PrivateUsersClient:
+def private_users_client(create_user: CreateUserSchema) -> PrivateUsersClient:
     """
     Фикстура получения экземпляра PrivateUsersClient (c Авторизацией)
 

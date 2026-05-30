@@ -5,7 +5,7 @@
 """
 import httpx
 from clients.api_client import APIClient
-from schemas.auth import AuthUserSchema
+from schemas.auth import AuthDataSchema
 from clients.httpx_private_client import get_httpx_private_client
 from schemas.users import (
     UpdateUserRequestSchema,
@@ -121,7 +121,7 @@ class PrivateUsersClient(APIClient):
 
 
 #================================================= Client (✨Helper) ===================================================
-def get_private_users_client(auth_data: AuthUserSchema) -> PrivateUsersClient:
+def get_private_users_client(auth_data: AuthDataSchema) -> PrivateUsersClient:
     """
     Функция получения экземпляра PrivateUsersClient с уже настроенным HTTP-клиентом (с Авторизацией)
 

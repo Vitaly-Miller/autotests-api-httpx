@@ -4,14 +4,14 @@ Exercises fixtures
 import httpx
 import pytest
 from clients.exercises_client import ExercisesClient, get_exercises_client
-from schemas.courses import CoursesFullSchema
-from schemas.exercises import CreateExerciseRequestSchema, ExerciseFullSchema
-from schemas.users import UserFullSchema
+from schemas.courses import CreateCoursesSchema
+from schemas.exercises import CreateExerciseRequestSchema, CreateExerciseSchema
+from schemas.users import CreateUserSchema
 
 #================================================== Exercises Client ===================================================
 # Exercises Client
 @pytest.fixture
-def exercises_client(create_user: UserFullSchema) -> ExercisesClient:
+def exercises_client(create_user: CreateUserSchema) -> ExercisesClient:
     """
     Фикстура получения экземпляра ExercisesClient (c Авторизацией)
 
@@ -24,7 +24,7 @@ def exercises_client(create_user: UserFullSchema) -> ExercisesClient:
 
 #-------------------------------------------------- Create exercise ----------------------------------------------------
 # API
-def create_exercise_api(exercises_client: ExercisesClient, create_course: CoursesFullSchema) -> httpx.Response:
+def create_exercise_api(exercises_client: ExercisesClient, create_course: CreateCoursesSchema) -> httpx.Response:
     """
     API-фикстура создания задания
 
@@ -40,7 +40,7 @@ def create_exercise_api(exercises_client: ExercisesClient, create_course: Course
 
 
 # Pydantic-model
-def create_exercise(exercises_client: ExercisesClient, create_course: CoursesFullSchema) -> ExerciseFullSchema:
+def create_exercise(exercises_client: ExercisesClient, create_course: CreateCoursesSchema) -> CreateExerciseSchema:
     """
     Pydantic-фикстура создания задания
 
@@ -52,7 +52,7 @@ def create_exercise(exercises_client: ExercisesClient, create_course: CoursesFul
         courseId=create_course.course_id                   # Заменяем default на реальный Course ID
     )
     response = exercises_client.create_exercise(create_exercise_data)             # ▶ Запрос через Pydantic-метод
-    model = ExerciseFullSchema(request=create_exercise_data, response=response)   # Инициализация Pydantic-model (CoursesFullSchema) ✨<Request + Response>
+    model = CreateExerciseSchema(request=create_exercise_data, response=response)   # Инициализация Pydantic-model (CoursesFullSchema) ✨<Request + Response>
     return model                                                                  # Pydantic-model (CoursesFullSchema) ✨<Request + Response>
 
 

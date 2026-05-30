@@ -4,7 +4,7 @@ Authentication Client
 """
 import httpx
 from clients.api_client import APIClient
-from schemas.auth import RefreshRequestSchema, AuthUserSchema, AuthUserResponseSchema
+from schemas.auth import RefreshRequestSchema, AuthDataSchema, AuthResponseSchema
 from clients.httpx_public_client import get_httpx_public_client
 
 #==================================================== Auth Client ======================================================
@@ -12,7 +12,7 @@ class AuthClient(APIClient):
     ENDPOINT = '/authentication'
     #--------------------------------------------------- Login ---------------------------------------------------------
     # API
-    def login_api(self, auth_data: AuthUserSchema) -> httpx.Response:
+    def login_api(self, auth_data: AuthDataSchema) -> httpx.Response:
         """
         API-метод аутентификации пользователя (Log in)
 
@@ -26,7 +26,7 @@ class AuthClient(APIClient):
         return response
 
     # Pydantic-model
-    def login(self, auth_data: AuthUserSchema) -> AuthUserResponseSchema:
+    def login(self, auth_data: AuthDataSchema) -> AuthResponseSchema:
         """
         Pydantic-метод аутентификации пользователя (Log in)
 
@@ -34,7 +34,7 @@ class AuthClient(APIClient):
         :return: Ответ с данными об авторизации пользователя в формате Pydantic-model
         """
         response = self.login_api(auth_data)                               # ▶ Запрос через API-метод
-        model = AuthUserResponseSchema.model_validate_json(response.text)  # Response —> Pydantic-model (deserialize)
+        model = AuthResponseSchema.model_validate_json(response.text)  # Response —> Pydantic-model (deserialize)
         return model
 
 

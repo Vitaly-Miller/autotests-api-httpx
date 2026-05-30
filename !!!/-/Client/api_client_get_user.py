@@ -1,7 +1,7 @@
 """
 API Client - Get User
 """
-from schemas.auth import AuthUserSchema
+from schemas.auth import AuthDataSchema
 from clients.private_users_client import get_private_users_client
 from clients.public_users_client import get_public_users_client
 from schemas.users import CreateUserRequestSchema
@@ -20,7 +20,7 @@ create_user_response = public_users_client.create_user(create_user_data=create_u
 user_id = create_user_response.user.id       # Сохранение User ID для последующего использования
 
 # Авторизационные данные
-auth_data = AuthUserSchema(                  # Инициализация модели / Валидация данных через схему
+auth_data = AuthDataSchema(                  # Инициализация модели / Валидация данных через схему
     email=create_user_data.email,            # Вытаскиваем email из create_user_data модели
     password=create_user_data.password       # Вытаскиваем password из create_user_data модели
 )

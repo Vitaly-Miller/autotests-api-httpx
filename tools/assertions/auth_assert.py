@@ -2,7 +2,7 @@
 Auth (Log in) assertions
 """
 import httpx
-from schemas.auth import AuthUserResponseSchema
+from schemas.auth import AuthResponseSchema
 from tools.assertions.base_assert import (
     assert_value_equal,
     assert_value_len,
@@ -25,7 +25,7 @@ def assert_auth_values_non_empty(response: httpx.Response):
     :param response: httpx.Response
     :raise AssertionError
     """
-    response_model = AuthUserResponseSchema.model_validate_json(response.text)  # Response —> Pydantic-model (Deserialize for Assertions)
+    response_model = AuthResponseSchema.model_validate_json(response.text)  # Response —> Pydantic-model (Deserialize for Assertions)
 
     assert_is_value(response_model.token.token_type, 'token_type')           # Поле не пустое ┐
     assert_is_value(response_model.token.access_token, 'access_token')       # Поле не пустое ├╴⚠️Бессмысленно, т.к. в следующих проверках проверяем значения и длину (Оставлено для примера)
@@ -43,6 +43,7 @@ def assert_auth_token(response: httpx.Response):
     - Access token ≠ Refresh token
 
     Actions:
+
     httpx.Response —> Pydantic-model (Deserialize for Assertions)
 
     :param response: httpx.Response
@@ -50,7 +51,7 @@ def assert_auth_token(response: httpx.Response):
     """
 
     # httpx.Response —> Pydantic-model (Deserialize for Assertions)
-    response_model = AuthUserResponseSchema.model_validate_json(response.text)
+    response_model = AuthResponseSchema.model_validate_json(response.text)
 
     # Token type - 'bearer'
     assert_value_equal(

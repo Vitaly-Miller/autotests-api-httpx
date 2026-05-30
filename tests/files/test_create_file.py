@@ -5,7 +5,7 @@ import http
 import httpx
 import pytest
 from clients.files_client import FilesClient
-from schemas.files import CreateFileResponseSchema, CreateFileRequestSchema
+from schemas.files import CreateFileResponseSchema, CreateFileRequestSchema, CreateFileSchema
 from tools.assertions.base_assert import assert_status_code, assert_method
 from tools.assertions.schema_assert import validate_json_schema
 from tools.assertions.files_assert import (
@@ -48,6 +48,15 @@ class TestCreateFile:
 
 
         # API Report (optional)
-        Tool.api_report(response)
+        #Tool.api_report(response)
 
+    def test_is_file(self, files_client: FilesClient, create_file: CreateFileSchema):
+        response = files_client.get_file_api(create_file.file_id)                # ▶ Запрос через API-метод
+
+        # Assertions
+        assert_status_code(response, http.HTTPStatus.OK)   # Status code
+        assert_method(response, http.HTTPMethod.GET)     # Method
+
+        # API Report (optional)
+        #Tool.api_report(response)
 #=======================================================================================================================

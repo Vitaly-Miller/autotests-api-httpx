@@ -4,38 +4,25 @@ Exercises Pydantic Schema
 from pydantic import BaseModel, Field
 from tools.data_generator import fake
 
-"""================================================== ⬆︎REQUEST Schema =============================================="""
-#---------------------------------------------------- Get Exercises ----------------------------------------------------
-class GetExercisesRequestSchema(BaseModel):
-    """
-    Схема запроса на получение списка заданий для определенного курса по Course ID (?query)
-
-    .
-    """
-    course_id: str = Field(alias='courseId')
-
+"""================================================ ⬆︎REQUEST Schema ================================================"""
 #--------------------------------------------------- Create Exercise ---------------------------------------------------
 class CreateExerciseRequestSchema(BaseModel):
-    """
-    Схема запроса на создание нового задания
-
-    .
-    """
     title: str = Field(default_factory=fake.sentence)
-    course_id: str = Field(alias='courseId', default_factory=fake.uuid4)    # ⚠️Default value for NEGATIVE tests only (Но сервер не проверяет наличие course_id в системе. Валидация только по формату UUID)
+    course_id: str = Field(alias='courseId', default_factory=fake.uuid4)    # ⚠️Default value for NEGATIVE tests only    (Но сервер не проверяет наличие course_id в системе. Валидация только по формату UUID)
     max_score: int = Field(alias='maxScore', strict=True, default_factory=fake.max_score)
     min_score: int = Field(alias='minScore', strict=True, default_factory=fake.min_score)
     order_index: int = Field(alias='orderIndex', default_factory=fake.random_int)
     description: str = Field(default_factory=fake.text)
     estimated_time: str = Field(alias='estimatedTime', default_factory=fake.estimated_time)
 
+
+#---------------------------------------------------- Get Exercises ----------------------------------------------------
+class GetExercisesRequestSchema(BaseModel):
+    course_id: str = Field(alias='courseId')  # (?query)
+
+
 #--------------------------------------------------- Update Exercise ---------------------------------------------------
 class UpdateExerciseRequestSchema(BaseModel):
-    """
-    Схема для запроса на частичное обновление задания
-
-    .
-    """
     title: str | None = Field(default_factory=fake.sentence)
     course_id: str | None = Field(alias='courseId', default_factory=fake.uuid4)
     max_score: int | None = Field(alias='maxScore', default_factory=fake.max_score)
@@ -45,17 +32,11 @@ class UpdateExerciseRequestSchema(BaseModel):
     estimated_time: str | None = Field(alias='estimatedTime', default_factory=fake.estimated_time)
 
 
+#-----------------------------------------------------------------------------------------------------------------------
+
 """================================================ ⬇︎RESPONSE Schema ==============================================="""
-#---------------------------------------------------- Get Exercises ----------------------------------------------------
-
-
 #--------------------------------------------------- Create Exercise ---------------------------------------------------
 class ExerciseSchema(BaseModel):
-    """
-    Схема ключа "exercise": {}
-
-    .
-    """
     id: str
     title: str
     course_id: str = Field(alias='courseId')
@@ -66,31 +47,21 @@ class ExerciseSchema(BaseModel):
     estimated_time: str = Field(alias='estimatedTime')
 
 class CreateExerciseResponseSchema(BaseModel):
-    """
-    Схема ответа на создание нового задания
-
-    .
-    """
     exercise: ExerciseSchema
+
+#---------------------------------------------------- Get Exercises ----------------------------------------------------
 
 #--------------------------------------------------- Update Exercise ---------------------------------------------------
 
-
 #--------------------------------------------------- Delete Exercise ---------------------------------------------------
 
-
 #-----------------------------------------------------------------------------------------------------------------------
-"""================================= Exercise Full Schema (⬆︎Request + ⬇Response) ✨================================"""
-class ExerciseFullSchema(BaseModel):
-    """
-    Объединенная схема задания из ⬆︎Request + ⬇Response
+"""====================================== Full Schema (⬆︎Request + ⬇Response) ✨====================================="""
+class CreateExerciseSchema(BaseModel):
+    request: CreateExerciseRequestSchema    # ┐
+    response: CreateExerciseResponseSchema  # ┘
 
-    Request  -> Data from CreateExerciseRequestSchema
-    Response -> Data from CreateExerciseResponseSchema
-    """
-    request: CreateExerciseRequestSchema
-    response: CreateExerciseResponseSchema
-    #------------------------------------- Методы для прямого доступа к данным -----------------------------------------
+    #--- Методы прямого доступа к данным ---
     # Exercise ID
     @property
     def exercise_id(self):
