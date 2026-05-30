@@ -64,8 +64,8 @@ class CoursesClient(APIClient):
         :return: Pydantic-model (CreateCourseResponseSchema)
         """
         response = self.create_course_api(create_course_data)                 # ▶ Запрос через API-метод
-        model = CreateCourseResponseSchema.model_validate_json(response.text) # Response —> Pydantic-model (deserialize)
-        return model                                                          # Pydantic-model (CreateCourseResponseSchema)
+        response_model = CreateCourseResponseSchema.model_validate_json(response.text) # Response —> Pydantic-model (deserialize)
+        return response_model                                                          # Pydantic-model (CreateCourseResponseSchema)
 
     #------------------------------------------------- Update Course ---------------------------------------------------
     # API

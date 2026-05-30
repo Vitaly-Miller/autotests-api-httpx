@@ -61,9 +61,9 @@ class ExercisesClient(APIClient):
         :param create_exercise_data: Pydantic-model с данными о задании
         :return: Pydantic-model (CreateExerciseResponseSchema)
         """
-        response = self.create_exercise_api(create_exercise_data)                # ▶ Запрос через API-метод
-        model = CreateExerciseResponseSchema.model_validate_json(response.text)  # Response —> Pydantic-model (deserialize)
-        return model                                                             # Pydantic-model (CreateExerciseResponseSchema)
+        response = self.create_exercise_api(create_exercise_data)                         # ▶ Запрос через API-метод
+        response_model = CreateExerciseResponseSchema.model_validate_json(response.text)  # Response —> Pydantic-model (deserialize)
+        return response_model                                                             # Pydantic-model (CreateExerciseResponseSchema)
 
     #---------------------------------------------- Update Exercise ----------------------------------------------------
     # API

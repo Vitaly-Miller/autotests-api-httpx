@@ -6,7 +6,7 @@ Files Client
 import httpx
 from clients.api_client import APIClient
 from schemas.auth import AuthDataSchema
-from schemas.files import CreateFileRequestSchema, CreateFileResponseSchema
+from schemas.files import CreateFileRequestSchema, CreateFileResponseSchema, CreateFileSchema, GetFileResponseSchema
 from clients.httpx_private_client import get_httpx_private_client
 
 
@@ -24,6 +24,18 @@ class FilesClient(APIClient):
         """
         response = self.get(url=f'{self.ENDPOINT}/{file_id}')       # ▶ Запрос
         return response                                             # httpx.Response
+
+    # Pydantic-model
+    def get_file(self, file_id: str) -> GetFileResponseSchema:
+        """
+        Pydantic-метод получения файла (Download) по File ID
+
+        :param file_id: File ID
+        :return: httpx.Response
+        """
+        response = self.get_file_api(file_id)                                      # ▶ Запрос через API-метод
+        response_model = GetFileResponseSchema.model_validate_json(response.text)  # Response —> Pydantic-model (deserialize)
+        return response_model                                                      # Pydantic-model (GetFileResponseSchema)
 
     #--------------------------------------------------- Create File ---------------------------------------------------
     # API
@@ -51,9 +63,9 @@ class FilesClient(APIClient):
         :param create_file_data: Данные о создаваемом файле в формате Pydantic-model
         :return: Pydantic-model (CreateFileResponseSchema)
         """
-        response = self.create_file_api(create_file_data)                    # ▶ Запрос через API-метод
-        model = CreateFileResponseSchema.model_validate_json(response.text)  # Response —> Pydantic-model (deserialize)
-        return model                                                         # Pydantic-model (CreateFileResponseSchema)
+        response = self.create_file_api(create_file_data)                             # ▶ Запрос через API-метод
+        response_model = CreateFileResponseSchema.model_validate_json(response.text)  # Response —> Pydantic-model (deserialize)
+        return response_model                                                         # Pydantic-model (CreateFileResponseSchema)
 
     #--------------------------------------------------- Delete File ---------------------------------------------------
     # API

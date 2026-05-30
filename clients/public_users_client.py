@@ -34,9 +34,9 @@ class PublicUsersClient(APIClient):
         :param create_user_data: Pydantic-model c данными для создания пользователя
         :return: Pydantic-model (CreateUserResponseSchema)
         """
-        response = self.create_user_api(create_user_data)                    # ▶ Запрос через API-метод
-        model = CreateUserResponseSchema.model_validate_json(response.text)  # Response —> Pydantic-model (deserialize)
-        return model                                                         # Pydantic-model (CreateUserResponseSchema)
+        response = self.create_user_api(create_user_data)                             # ▶ Запрос через API-метод
+        response_model = CreateUserResponseSchema.model_validate_json(response.text)  # Response —> Pydantic-model (deserialize)
+        return response_model                                                         # Pydantic-model (CreateUserResponseSchema)
 
 
 #================================================= Client (✨Helper) ===================================================

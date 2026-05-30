@@ -35,9 +35,9 @@ class PrivateUsersClient(APIClient):
 
         :return: Pydantic-model (GetUserMeResponseSchema)
         """
-        response = self.get_user_me_api()                                      # ▶ Запрос через API-метод
-        model = GetUserMeResponseSchema.model_validate_json(response.text)     # Response —> Pydantic-model (deserialize)
-        return model
+        response = self.get_user_me_api()                                             # ▶ Запрос через API-метод
+        response_model = GetUserMeResponseSchema.model_validate_json(response.text)   # Response —> Pydantic-model (deserialize)
+        return response_model                                                         # Pydantic-model (GetUserMeResponseSchema)
 
 
     #-------------------------------------------------- Get User -------------------------------------------------------
@@ -60,9 +60,9 @@ class PrivateUsersClient(APIClient):
         :param user_id: User ID
         :return: Pydantic-model (GetUserResponseSchema)
         """
-        response = self.get_user_api(user_id)                                  # ▶ Запрос через API-метод
-        model = GetUserResponseSchema.model_validate_json(response.text)       # Response —> Pydantic-model (deserialize)
-        return model
+        response = self.get_user_api(user_id)                                        # ▶ Запрос через API-метод
+        response_model = GetUserResponseSchema.model_validate_json(response.text)    # Response —> Pydantic-model (deserialize)
+        return response_model                                                        # Pydantic-model (GetUserResponseSchema)
 
 
     #------------------------------------------------- Update User -----------------------------------------------------
@@ -75,11 +75,11 @@ class PrivateUsersClient(APIClient):
         :param update_data: Pydantic-model c данными, которые необходимо обновить
         :return: httpx.Response
         """
-        response = self.patch(                                                 # ▶ Запрос
+        response = self.patch(                                    # ▶ Запрос
             url=f'{self.ENDPOINT}/{user_id}',
-            json=update_data.model_dump(by_alias=True)                         # Pydantic-model —> Dict (serialize)
+            json=update_data.model_dump(by_alias=True)            # Pydantic-model —> Dict (serialize)
         )
-        return response                                                        # httpx.Response
+        return response                                           # httpx.Response
 
     # Pydantic-model
     def update_user(self, user_id: str, update_data: UpdateUserRequestSchema) -> UserUpdateResponseSchema:
@@ -90,9 +90,9 @@ class PrivateUsersClient(APIClient):
         :param update_data: Pydantic-model c данными, которые необходимо обновить
         :return: Pydantic-model (UserUpdateResponseSchema)
         """
-        response = self.update_user_api(user_id, update_data)  # ▶ Запрос через API-метод
-        model = UserUpdateResponseSchema.model_validate_json(response.text)      # Response —> Pydantic-model (deserialize)
-        return model                                                             # Pydantic-model (UserUpdateResponseSchema)
+        response = self.update_user_api(user_id, update_data)           # ▶ Запрос через API-метод
+        response_model = UserUpdateResponseSchema.model_validate_json(response.text)      # Response —> Pydantic-model (deserialize)
+        return response_model                                                             # Pydantic-model (UserUpdateResponseSchema)
 
 
     #------------------------------------------------- Delete User -----------------------------------------------------
@@ -115,9 +115,9 @@ class PrivateUsersClient(APIClient):
     #     :param user_id: User ID
     #     :return: Pydantic-model (DeleteUserResponseSchem)
     #     """
-    #     response = self.delete_user_api(user_id)                             # ▶ Запрос через API-метод
-    #     model = DeleteUserResponseSchema.model_validate_json(response.text)  # Response —> Pydantic-model (deserialize)
-    #     return model                                                         # Pydantic-model (DeleteUserResponseSchem)
+    #     response = self.delete_user_api(user_id)                                      # ▶ Запрос через API-метод
+    #     response_model = DeleteUserResponseSchema.model_validate_json(response.text)  # Response —> Pydantic-model (deserialize)
+    #     return response_model                                                         # Pydantic-model (DeleteUserResponseSchem)
 
 
 #================================================= Client (✨Helper) ===================================================
