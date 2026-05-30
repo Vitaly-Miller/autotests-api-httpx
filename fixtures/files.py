@@ -71,8 +71,8 @@ def get_file(files_client: FilesClient, create_file: CreateFileSchema) -> GetFil
 
     :param files_client: Вложенная фикстура получения экземпляра FilesClient (c Авторизацией)
     :param create_file: Вложенная Pydantic-фикстура создания файла
-    :return: httpx.Response
+    :return: Pydantic-model (GetFileResponseSchema)
     """
     response_model = files_client.get_file(create_file.file_id)    # ▶ Запрос через Pydantic-метод
-    return response_model                                          # Pydantic-model (CreateFileSchema)
+    return response_model                                          # Pydantic-model (GetFileResponseSchema)
 #-----------------------------------------------------------------------------------------------------------------------
