@@ -5,13 +5,14 @@ import http
 import httpx
 import pytest
 from clients.files_client import FilesClient
+from schemas.error import ResponseErrorSchema
 from schemas.files import CreateFileResponseSchema, CreateFileRequestSchema, CreateFileSchema
 from tools.assertions.base_assert import assert_status_code, assert_method
 from tools.assertions.schema_assert import validate_json_schema
 from tools.assertions.files_assert import (
     assert_create_file_id_length,
     assert_create_file_values_non_empty,
-    assert_create_file_data_equal
+    assert_create_file_data_equal, assert_create_file_empty_filename, assert_create_file_empty_directory
 )
 from tools.tool import Tool
 #=======================================================================================================================
@@ -23,7 +24,7 @@ class TestCreateFile:
         response = create_file_api   # Сохраняем ответ фикстуры, но не обязательно
                                      # Исполняемую API-фикстуру можно сразу передавать в Assertions в качестве параметра
         # Assertions
-        assert_status_code(response, http.HTTPStatus.OK)     # Status code
+        assert_status_code(response, http.HTTPStatus.OK)     # Status code: 200
         assert_method(response, http.HTTPMethod.POST)      # Method
         assert_create_file_values_non_empty(response)                              # 4-in-1 | NON-empty response values
         assert_create_file_id_length(response)                                     # File ID length = 36 chars
@@ -39,7 +40,7 @@ class TestCreateFile:
         response = files_client.create_file_api(create_file_data)                  # ▶ Запрос через API-метод
 
         # Assertions
-        assert_status_code(response, http.HTTPStatus.OK)     # Status code
+        assert_status_code(response, http.HTTPStatus.OK)     # Status code: 200
         assert_method(response, http.HTTPMethod.POST)      # Method
         assert_create_file_values_non_empty(response)                              # 4-in-1 | NON-empty response values
         assert_create_file_id_length(response)                                     # File ID length = 36 chars
@@ -54,9 +55,35 @@ class TestCreateFile:
         response = files_client.get_file_api(create_file.file_id)                # ▶ Запрос через API-метод
 
         # Assertions
-        assert_status_code(response, http.HTTPStatus.OK)   # Status code
+        assert_status_code(response, http.HTTPStatus.OK)   # Status code: 200
         assert_method(response, http.HTTPMethod.GET)     # Method
 
         # API Report (optional)
         #Tool.api_report(response)
-#=======================================================================================================================
+
+    #==================================================== Negative =====================================================
+    # Empty 'filename'
+    def test_create_file_empty_filename(self, files_client: FilesClient):
+        create_file_data = CreateFileRequestSchema(                         # Инициализация Pydantic-модели c default fake-data
+           filename=''                                                     # Default —> "" (empty string)
+        )
+        response = files_client.create_file_api(create_file_data)           # ▶ Запрос через API-метод
+        Tool.api_report(response)
+        # Assertions
+        assert_status_code(response, http.HTTPStatus.UNPROCESSABLE_ENTITY) # Status code: 422
+        assert_method(response, http.HTTPMethod.POST)                    # Method: POST
+        assert_create_file_empty_filename(response)                                               # 👈
+        validate_json_schema(response, ResponseErrorSchema)   # Validation JSON schema
+
+    # Empty 'directory'
+    def test_create_file_empty_directory(self, files_client: FilesClient):
+        create_file_data = CreateFileRequestSchema(                         # Инициализация Pydantic-модели c default fake-data
+           directory=''                                                     # Default —> "" (empty string)
+        )
+        response = files_client.create_file_api(create_file_data)           # ▶ Запрос через API-метод
+
+        # Assertions
+        assert_status_code(response, http.HTTPStatus.UNPROCESSABLE_ENTITY) # Status code: 422
+        assert_method(response, http.HTTPMethod.POST)                    # Method: POST
+        assert_create_file_empty_directory(response)                                             # 👈
+        validate_json_schema(response, ResponseErrorSchema)  # Validation JSON schema

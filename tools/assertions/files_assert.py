@@ -2,8 +2,11 @@
 Files Assertions
 """
 import httpx
+
+from schemas.error import ResponseErrorSchema, ErrorSchema
 from schemas.files import CreateFileResponseSchema, CreateFileRequestSchema
 from tools.assertions.base_assert import assert_length_is, assert_is_value, assert_equal
+from tools.assertions.errors_assert import assert_validate_error_response
 
 #=======================================================================================================================
 def assert_create_file_values_non_empty(response: httpx.Response):
@@ -80,3 +83,33 @@ def assert_create_file_id_length(response: httpx.Response):
 
 
 #-----------------------------------------------------------------------------------------------------------------------
+#====================================================== Negative =======================================================
+# Create file - empty 'filename'
+def assert_create_file_empty_filename(actual: httpx.Response):
+    expected_model = ResponseErrorSchema(
+        detail=[
+            ErrorSchema(
+                type='missing',
+                loc=['body', 'filename'],
+                msg='Field required',
+                input=None,
+                ctx=None
+            )
+        ]
+    )
+    assert_validate_error_response(actual, expected_model)
+
+
+# Create file - empty 'directory'
+def assert_create_file_empty_directory(actual: httpx.Response):
+    expected_model = ResponseErrorSchema(
+        detail=[
+            ErrorSchema(
+                type='missing',
+                loc=['body', 'directory'],
+                msg='Field required',
+                input=None
+            )
+        ]
+    )
+    assert_validate_error_response(actual, expected_model)

@@ -1,5 +1,5 @@
 """
- ❌ Error Schema
+❌ Validation Error Schema
 """
 """
 Единая схема API-ошибок для всех Endpoints
@@ -8,24 +8,29 @@ from pydantic import BaseModel, Field
 from typing import Any
 
 #=======================================================================================================================
-class DetailErrorSchema(BaseModel):
-    type: str
-    location: list[str] = Field(alias='loc')
-    message: str = Field(alias='msg')
-    input: Any
-    context: dict[str, Any] = Field(alias='ctx')
-
 class ErrorSchema(BaseModel):
-    detail: list[DetailErrorSchema]
+    type: str
+    loc: list[str]
+    msg: str = Field
+    input: Any
+    ctx: dict[str, Any] | None = None
+
+class ResponseErrorSchema(BaseModel):
+    detail: list[ErrorSchema]
 
 #-----------------------------------------------------------------------------------------------------------------------
-example = {
+
+
+
+#====================================================== Examples =======================================================
+# Example Response Body for create user with empty 'first_name'
+create_user_empty_first_name = {
   "detail": [
     {
       "type": "string_too_short",
       "loc": [
         "body",
-        "middleName"
+        "firstName"
       ],
       "msg": "String should have at least 1 character",
       "input": "",
@@ -34,5 +39,20 @@ example = {
       }
     }
   ]
+}
+#-----------------------------------------------------------------------------------------------------------------------
+# Example Response Body for create user with empty 'filename'
+create_file_empty_filename = {
+    "detail": [
+        {
+            "type": "missing",
+            "loc": [
+                "body",
+                "filename"
+            ],
+            "msg": "Field required",
+            "input": None   # null
+        }
+    ]
 }
 #-----------------------------------------------------------------------------------------------------------------------
