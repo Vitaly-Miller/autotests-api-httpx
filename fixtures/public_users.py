@@ -18,6 +18,7 @@ def public_users_client() -> PublicUsersClient:
     public_users_client = get_public_users_client()
     return public_users_client
 
+
 #----------------------------------------------------- Create User -----------------------------------------------------
 # API
 @pytest.fixture

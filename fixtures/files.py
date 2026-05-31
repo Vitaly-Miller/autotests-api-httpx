@@ -50,6 +50,7 @@ def create_file(files_client: FilesClient) -> CreateFileSchema:
     response_full_model = CreateFileSchema(request=create_file_data, response=response_model) # Инициализация Pydantic-model (CreateFileSchema) ✨<Request + Response>
     return response_full_model                                     # Pydantic-model (CreateFileSchema) ✨<Request + Response>
 
+
 #------------------------------------------------------- Get File ------------------------------------------------------
 # API
 @pytest.fixture
@@ -64,6 +65,7 @@ def get_file_api(files_client: FilesClient, create_file: CreateFileSchema) -> ht
     response = files_client.get_file_api(create_file.file_id)      # ▶ Запрос через API-метод
     return response                                                # httpx.Response
 
+
 # Pydantic-model
 def get_file(files_client: FilesClient, create_file: CreateFileSchema) -> GetFileResponseSchema:
     """
@@ -75,4 +77,5 @@ def get_file(files_client: FilesClient, create_file: CreateFileSchema) -> GetFil
     """
     response_model = files_client.get_file(create_file.file_id)    # ▶ Запрос через Pydantic-метод
     return response_model                                          # Pydantic-model (GetFileResponseSchema)
+
 #-----------------------------------------------------------------------------------------------------------------------

@@ -49,7 +49,6 @@ def create_course_api(
     return response                                                   # httpx.Response
 
 
-
 # Pydantic-model
 @pytest.fixture
 def create_course(
@@ -72,8 +71,8 @@ def create_course(
         previewFileId=create_file.file_id,           # Заменяем default на реальный File ID
         createdByUserId=create_user.user_id          # Заменяем default на реальный User ID
     )
-    response_model = courses_client.create_course(create_course_data)      # ▶ Запрос через Pydantic-метод
+    response_model = courses_client.create_course(create_course_data)    # ▶ Запрос через Pydantic-метод
     response_full_model = CreateCoursesSchema(request=create_course_data, response=response_model)   # Инициализация Pydantic-model (CoursesFullSchema) ✨<Request + Response>
-    return response_full_model                                             # Pydantic-model (CoursesFullSchema) ✨<Request + Response>
+    return response_full_model                                           # Pydantic-model (CoursesFullSchema) ✨<Request + Response>
 
 #-----------------------------------------------------------------------------------------------------------------------

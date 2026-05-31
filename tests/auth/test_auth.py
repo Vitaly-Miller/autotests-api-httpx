@@ -25,7 +25,7 @@ class TestAuth:
         assert_method(response, HTTPMethod.POST)           # Method
         assert_auth_values_non_empty(response)                                     # 3-in-1 | Non-empty response values
         assert_auth_token(response)                                                # 4-in-1 | Token
-        validate_json_schema(response, AuthResponseSchema)     # Validation JSON schema
+        validate_json_schema(response, AuthResponseSchema)         # Validation JSON schema
 
         # API Report (optional)
         #Tool.api_report(response)
@@ -44,7 +44,7 @@ class TestAuth:
         assert_method(response, HTTPMethod.POST)           # Method
         assert_auth_values_non_empty(response)                                     # 3-in-1 | Non-empty response values
         assert_auth_token(response)                                                # 4-in-1 | Token
-        validate_json_schema(response, AuthResponseSchema)     # Validation JSON schema
+        validate_json_schema(response, AuthResponseSchema)         # Validation JSON schema
 
         # API Report (optional)
         # Tool.api_report(response)

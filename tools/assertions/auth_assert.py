@@ -4,10 +4,10 @@ Auth (Log in) assertions
 import httpx
 from schemas.auth import AuthResponseSchema
 from tools.assertions.base_assert import (
-    assert_value_equal,
-    assert_value_len,
+    assert_equal,
+    assert_length_is,
     assert_is_value,
-    assert_value_not_equal
+    assert_not_equal
 )
 #=======================================================================================================================
 def assert_auth_values_non_empty(response: httpx.Response):
@@ -54,28 +54,29 @@ def assert_auth_token(response: httpx.Response):
     response_model = AuthResponseSchema.model_validate_json(response.text)
 
     # Token type - 'bearer'
-    assert_value_equal(
+    assert_equal(
         response_model.token.token_type,
-        'token_type',
-        'bearer')
-
-    # Access token length = 199 chars
-    assert_value_len(
-        response_model.token.access_token,
-        'access_token',
-        199)
-
-    # Refresh token length = 199 chars
-    assert_value_len(
-        response_model.token.refresh_token,
-        'refresh_token',
-        199)
+        'bearer',
+        'token_type')
 
     # Access token ≠ Refresh token:
-    assert_value_not_equal(
+    assert_not_equal(
         response_model.token.access_token,
         'access_token',
         response_model.token.refresh_token,
         'refresh_token')
+
+    # Access token length = 199 chars
+    assert_length_is(
+        response_model.token.access_token,
+        199,
+        'access_token')
+
+    # Refresh token length = 199 chars
+    assert_length_is(
+        response_model.token.refresh_token,
+        199,
+        'refresh_token')
+
 
 #-----------------------------------------------------------------------------------------------------------------------

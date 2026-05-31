@@ -19,6 +19,7 @@ def private_users_client(create_user: CreateUserSchema) -> PrivateUsersClient:
     client = get_private_users_client(create_user.auth_data)
     return client
 
+
 #----------------------------------------------------- Get User Me -----------------------------------------------------
 # API
 @pytest.fixture
@@ -29,8 +30,8 @@ def get_user_me_api(private_users_client: PrivateUsersClient) -> httpx.Response:
     :param private_users_client: Фикстура вызова экземпляра PrivateUsersClient (с Авторизацией)
     :return: httpx.Response
     """
-    response = private_users_client.get_user_me_api()   # ▶ Запрос через API-метод
-    return response                                     # httpx.Response
+    response = private_users_client.get_user_me_api()     # ▶ Запрос через API-метод
+    return response                                       # httpx.Response
 
 
 # Pydantic-model
@@ -42,7 +43,8 @@ def get_user_me(private_users_client: PrivateUsersClient) -> GetUserMeResponseSc
     :param private_users_client: Экземпляр PrivateUsersClient (c Авторизацией)
     :return: Pydantic-model (GetUserMeResponseSchema)
     """
-    response_model = private_users_client.get_user_me()          # ▶ Запрос через Pydantic-метод
-    return response_model                                        # Pydantic-model (GetUserMeResponseSchema)
+    response_model = private_users_client.get_user_me()    # ▶ Запрос через Pydantic-метод
+    return response_model                                  # Pydantic-model (GetUserMeResponseSchema)
+
 
 #-----------------------------------------------------------------------------------------------------------------------
