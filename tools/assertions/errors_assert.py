@@ -8,7 +8,7 @@ from tools.assertions.base_assert import assert_equal, assert_length_equal
 #=======================================================================================================================
 def assert_validate_error(actual: httpx.Response, expected: httpx.Response):
     """
-    Check API-Response Validation fields errors
+   5-in-1 | Check API-Response Validation fields errors
 
     Actions:
 
@@ -16,7 +16,7 @@ def assert_validate_error(actual: httpx.Response, expected: httpx.Response):
 
     :param actual: Actual response
     :param expected: Expected response
-    :return:
+    :return: ValidationError
     """
     actual_model = ErrorSchema.model_validate_json(actual.text)       # actual_Response  —> Pydantic-model (Deserialize for Assertions)
     expected_model = ErrorSchema.model_validate_json(expected.text)   # expecte_Response —> Pydantic-model (Deserialize for Assertions)
@@ -29,27 +29,23 @@ def assert_validate_error(actual: httpx.Response, expected: httpx.Response):
 
 
 
-def assert_validate_error_response(actual: httpx.Response, expected: httpx.Response | ResponseErrorSchema):
+def assert_validate_error_response(actual: httpx.Response, expected_model: ResponseErrorSchema):
     """
-    Проверка длин ключа "detail" from Response and Request
+    2-in-1 | Проверка Error Response (длина, значения)
 
-    :param actual:
-    :param expected:
-    :return:
+    - Сравнивает количество элементов в объекте "detail"
+    - Сравнивает значения элементов в объекте "detail"
+    Actions:
+
+    - Response —> Pydantic-model (Deserialize for Assertions)
+
+    :param actual: Actual Response (for deserialize httpx.Response —> Pydantic-model)
+    :param expected_model: Pydantic-model (ResponseErrorSchema)
+    :return: ValidationError
     """
-    actual_model = ResponseErrorSchema.model_validate_json(actual.text)       # actual_Response  —> Pydantic-model (Deserialize for Assertions)
+    actual_model = ResponseErrorSchema.model_validate_json(actual.text)   # Response  —> Pydantic-model (Deserialize for Assertions)
 
-    # Если expected — Pydantic-model (ResponseErrorSchema), то ...
-    if isinstance(expected, ResponseErrorSchema):
-        expected_model = expected
-    else:
-        expected_model = ResponseErrorSchema.model_validate_json(expected.text)   # expecte_Response —> Pydantic-model (Deserialize for Assertions)
+    assert_length_equal(actual_model.detail, expected_model.detail, 'detail') # Сравниваем количество элементов в объекте "detail"
+    assert_equal(actual_model.detail, expected_model.detail, 'detail')    # Сравниваем значения элементов в объекте "detail"
 
-
-    assert_length_equal(actual_model.detail, expected_model.detail, 'detail')
-    #assert_equal(actual_model.detail, expected_model.detail, 'detail')       # <— выводит большой tracelog при падении
-    #      ⬇︎
-    # Альтернатива assert_equal, для меньшего tracelog при падении (удобнее для allure-отчетов):
-    for index, detail in enumerate(expected_model.detail):
-        assert actual_model.detail[index] == detail
 #-----------------------------------------------------------------------------------------------------------------------

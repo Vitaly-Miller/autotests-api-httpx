@@ -83,9 +83,17 @@ def assert_create_file_id_length(response: httpx.Response):
 
 
 #-----------------------------------------------------------------------------------------------------------------------
+
+
 #====================================================== Negative =======================================================
 # Create file - empty 'filename'
 def assert_create_file_empty_filename(actual: httpx.Response):
+    """
+    Сравнивает Error Response при пустом 'filename' при создании файла с ожидаемой Pydantic-model (ResponseErrorSchema)
+
+    :param actual: Response
+    :return: AssertionError
+    """
     expected_model = ResponseErrorSchema(
         detail=[
             ErrorSchema(
@@ -97,19 +105,28 @@ def assert_create_file_empty_filename(actual: httpx.Response):
             )
         ]
     )
-    assert_validate_error_response(actual, expected_model)
+    assert_validate_error_response(actual, expected_model) #
 
-
+#-----------------------------------------------------------------------------------------------------------------------
 # Create file - empty 'directory'
 def assert_create_file_empty_directory(actual: httpx.Response):
+    """
+    Сравнивает Error Response при пустом 'directory' при создании файла с ожидаемой Pydantic-model (ResponseErrorSchema)
+
+    :param actual: Response
+    :return: AssertionError
+    """
     expected_model = ResponseErrorSchema(
         detail=[
             ErrorSchema(
                 type='missing',
                 loc=['body', 'directory'],
                 msg='Field required',
-                input=None
+                input=None,
+                ctx=None
             )
         ]
     )
     assert_validate_error_response(actual, expected_model)
+
+#-----------------------------------------------------------------------------------------------------------------------
