@@ -2,24 +2,20 @@
 Errors assertions
 """
 import httpx
-from schemas.errors_schema import ErrorSchema, ResponseErrorSchema
+from schemas.errors_schema import ErrorSchema, ResponseErrorSchema, NotFoundErrorSchema
 from tools.assertions.base_assert import assert_equal, assert_length_equal
 
 #=======================================================================================================================
 def assert_validate_error(actual: httpx.Response, expected: httpx.Response):
     """
-   5-in-1 | Check API-Response Validation fields errors
+    5-in-1 | Check API-Response Validation fields errors
 
-    Actions:
-
-    - Response —> Pydantic-model (Deserialize for Assertions)
-
-    :param actual: Actual response
-    :param expected: Expected response
+    :param actual: Response
+    :param expected: Response
     :return: ValidationError
     """
     actual_model = ErrorSchema.model_validate_json(actual.text)       # actual_Response  —> Pydantic-model (Deserialize for Assertions)
-    expected_model = ErrorSchema.model_validate_json(expected.text)   # expecte_Response —> Pydantic-model (Deserialize for Assertions)
+    expected_model = ErrorSchema.model_validate_json(expected.text)   # expected_Response —> Pydantic-model (Deserialize for Assertions)
 
     assert_equal(actual_model.type, expected_model.type, 'type')
     assert_equal(actual_model.loc, expected_model.loc, 'loc')
@@ -35,11 +31,8 @@ def assert_validate_error_response(actual: httpx.Response, expected_model: Respo
 
     - Сравнивает количество элементов в объекте "detail"
     - Сравнивает значения элементов в объекте "detail"
-    Actions:
 
-    - Response —> Pydantic-model (Deserialize for Assertions)
-
-    :param actual: Actual Response (for deserialize httpx.Response —> Pydantic-model)
+    :param actual: Response (for deserialize httpx.Response —> Pydantic-model)
     :param expected_model: Pydantic-model (ResponseErrorSchema)
     :return: ValidationError
     """
@@ -47,5 +40,19 @@ def assert_validate_error_response(actual: httpx.Response, expected_model: Respo
 
     assert_length_equal(actual_model.detail, expected_model.detail, 'detail') # Сравниваем количество элементов в объекте "detail"
     assert_equal(actual_model.detail, expected_model.detail, 'detail')    # Сравниваем значения элементов в объекте "detail"
+
+
+
+def assert_not_found_response(actual: httpx.Response, expected_model: NotFoundErrorSchema):
+    """
+    Сравнивает Error Response с Pydantic-model (NotFoundErrorSchema) при попытке получить несуществующую сущность
+
+    :param actual: Response (for deserialize httpx.Response —> Pydantic-model)
+    :param expected_model: Pydantic-model (NotFoundErrorSchema)
+    :return:
+    """
+    actual_model = NotFoundErrorSchema.model_validate_json(actual.text)    # actual_Response  —> Pydantic-model (Deserialize for Assertions)
+
+    assert_equal(actual_model.detail, expected_model.detail, 'detail')
 
 #-----------------------------------------------------------------------------------------------------------------------

@@ -51,7 +51,7 @@ def create_file(files_client: FilesClient) -> CreateFileSchema:
     return response_full_model                                     # Pydantic-model (CreateFileSchema) ✨<Request + Response>
 
 
-#------------------------------------------------------- Get File ------------------------------------------------------
+#------------------------------------------------------ Get File -------------------------------------------------------
 # API
 @pytest.fixture
 def get_file_api(files_client: FilesClient, create_file: CreateFileSchema) -> httpx.Response:
@@ -67,6 +67,7 @@ def get_file_api(files_client: FilesClient, create_file: CreateFileSchema) -> ht
 
 
 # Pydantic-model
+@pytest.fixture
 def get_file(files_client: FilesClient, create_file: CreateFileSchema) -> GetFileResponseSchema:
     """
     Pydantic-фикстура получения файла
@@ -77,5 +78,22 @@ def get_file(files_client: FilesClient, create_file: CreateFileSchema) -> GetFil
     """
     response_model = files_client.get_file(create_file.file_id)    # ▶ Запрос через Pydantic-метод
     return response_model                                          # Pydantic-model (GetFileResponseSchema)
+
+
+#----------------------------------------------------- Delete File -----------------------------------------------------
+# API
+@pytest.fixture
+def delete_file_api(files_client: FilesClient, create_file: CreateFileSchema) -> httpx.Response:
+    """
+    API-фикстура удаления файла
+
+    :param files_client: Вложенная фикстура получения экземпляра FilesClient (c Авторизацией)
+    :param create_file: Вложенная Pydantic-фикстура создания файла
+    :return: httpx.Response
+    """
+    response = files_client.delete_file_api(create_file.file_id)   # ▶ Запрос через API-метод
+    return response                                                # httpx.Response
+
+
 
 #-----------------------------------------------------------------------------------------------------------------------

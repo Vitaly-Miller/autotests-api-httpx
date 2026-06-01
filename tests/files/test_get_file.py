@@ -21,6 +21,7 @@ class TestGetFile:
         assert_method(response, http.HTTPMethod.GET)     # Method
         validate_json_schema(response, CreateFileResponseSchema) # Validation JSON schema
 
-        # API Report (optional)
-        #Tool.api_report(response)
+
 #=======================================================================================================================
+        # API Report (optional)
+        # Tool.api_report(response)

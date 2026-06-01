@@ -2,6 +2,8 @@
 🅰🅿︎🅸 🆁🅴🅿︎🅾🆁🆃 to console (✨Pretty)
 """
 import json
+from urllib import response
+
 from tools.formatting.colors import ANSI
 
 #=======================================================================================================================
@@ -58,7 +60,6 @@ class Report:
     # REQUEST Body ⮕
     def api_request_body(self):
         print(f'\n{ANSI.GREEN} REQUEST Body{ANSI.GRAY}: ⮕')
-
         try:
             if self.response.request.content:
                 request_body = json.loads(self.response.request.content)
@@ -69,12 +70,16 @@ class Report:
         except Exception:
             print(f'{{\n\t<multipart/stream>\n}}')
 
+
     # RESPONSE Body ⬅︎
     def api_response_body(self):
         print(f'\n{ANSI.BLUE} RESPONSE Body{ANSI.GRAY}: ⬅︎')
-        response_body = self.response.json()
-        response_body_json = json.dumps(response_body, indent=4, ensure_ascii=False)
-        print(response_body_json)
+        if self.response.json():
+            response_body = self.response.json()
+            response_body_json = json.dumps(response_body, indent=4, ensure_ascii=False)
+            print(response_body_json)
+        else:
+            print(f'{{\n\t<None>\n}}')
 
 
     # REQUEST Headers ⮕
@@ -83,6 +88,7 @@ class Report:
         request_headers = dict(self.response.request.headers)
         request_headers_json = json.dumps(request_headers, indent=4, ensure_ascii=False)
         print(request_headers_json)
+
 
     # RESPONSE Headers ⬅︎
     def api_response_headers(self):

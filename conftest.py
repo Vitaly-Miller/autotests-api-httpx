@@ -10,12 +10,12 @@ from pathlib import Path            # for <Auto Plugins path>
 #================================================ Plugins path (Manual) ================================================
 # Ручной путь к plugins (модулям-файлам с фикстурами) ⚠ БЕЗ расширения .py
 pytest_plugins = (
-    'fixtures.public_users',
-    'fixtures.private_users',
-    'fixtures.auth',
-    'fixtures.files',
-    'fixtures.courses',
-    'fixtures.exercises',
+    'fixtures.public_users_fixtures',
+    'fixtures.private_users_fixtures',
+    'fixtures.auth_fixtures',
+    'fixtures.files_fixtures',
+    'fixtures.courses_fixtures',
+    'fixtures.exercises_fixtures',
 )
 
 #================================================ Plugins path (✨Auto) ================================================
