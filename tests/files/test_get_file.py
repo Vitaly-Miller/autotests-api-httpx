@@ -4,7 +4,7 @@ Test Get File
 import http
 import pytest
 from clients.files_client import FilesClient
-from schemas.files import CreateFileSchema, CreateFileResponseSchema
+from schemas.files_schema import CreateFileSchema, CreateFileResponseSchema
 from tools.assertions.base_assert import assert_status_code, assert_method
 from tools.assertions.schema_assert import validate_json_schema
 from tools.tool import Tool

@@ -4,9 +4,9 @@ Exercises fixtures
 import httpx
 import pytest
 from clients.exercises_client import ExercisesClient, get_exercises_client
-from schemas.courses import CreateCoursesSchema
-from schemas.exercises import CreateExerciseRequestSchema, CreateExerciseSchema
-from schemas.users import CreateUserSchema
+from schemas.courses_schema import CreateCoursesSchema
+from schemas.exercises_schema import CreateExerciseRequestSchema, CreateExerciseSchema
+from schemas.users_schema import CreateUserSchema
 
 #================================================== Exercises Client ===================================================
 # Exercises Client

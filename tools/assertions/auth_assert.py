@@ -2,7 +2,7 @@
 Auth (Log in) assertions
 """
 import httpx
-from schemas.auth import AuthResponseSchema
+from schemas.auth_schema import AuthResponseSchema
 from tools.assertions.base_assert import (
     assert_equal,
     assert_length_is,

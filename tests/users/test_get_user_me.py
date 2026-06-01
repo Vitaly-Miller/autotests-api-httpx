@@ -6,8 +6,8 @@ import pytest
 import jsonschema
 from clients.private_users_client import get_private_users_client, PrivateUsersClient
 from clients.public_users_client import get_public_users_client
-from schemas.auth import AuthDataSchema
-from schemas.users import CreateUserRequestSchema, CreateUserResponseSchema, GetUserMeResponseSchema
+from schemas.auth_schema import AuthDataSchema
+from schemas.users_schema import CreateUserRequestSchema, CreateUserResponseSchema, GetUserMeResponseSchema
 from http import HTTPStatus, HTTPMethod
 from tools.assertions.base_assert import assert_status_code, assert_method
 from tools.assertions.get_user_me_assert import assert_get_user_me_user_id_len, assert_get_user_me_values_non_empty

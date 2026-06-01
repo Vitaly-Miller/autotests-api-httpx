@@ -4,8 +4,8 @@ Files fixtures
 import httpx
 import pytest
 from clients.files_client import FilesClient, get_files_client
-from schemas.files import CreateFileRequestSchema, CreateFileSchema, GetFileResponseSchema
-from schemas.users import CreateUserSchema
+from schemas.files_schema import CreateFileRequestSchema, CreateFileSchema, GetFileResponseSchema
+from schemas.users_schema import CreateUserSchema
 
 #==================================================== Files Client =====================================================
 # Files Client

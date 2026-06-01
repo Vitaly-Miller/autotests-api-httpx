@@ -1,15 +1,15 @@
 """
 API Client Create Exercise
 """
-from schemas.auth import AuthDataSchema
+from schemas.auth_schema import AuthDataSchema
 from clients.courses_client import get_courses_client
-from schemas.courses import CreateCourseRequestSchema
+from schemas.courses_schema import CreateCourseRequestSchema
 from clients.exercises_client import get_exercises_client
-from schemas.exercises import CreateExerciseRequestSchema
+from schemas.exercises_schema import CreateExerciseRequestSchema
 from clients.files_client import get_files_client
-from schemas.files import CreateFileRequestSchema
+from schemas.files_schema import CreateFileRequestSchema
 from clients.public_users_client import get_public_users_client
-from schemas.users import CreateUserRequestSchema
+from schemas.users_schema import CreateUserRequestSchema
 
 #===================================================== [PRECONDITION] ==================================================
 #---------------------------------------------------- 1. Create User ---------------------------------------------------

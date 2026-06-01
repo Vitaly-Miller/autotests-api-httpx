@@ -2,7 +2,7 @@
 Users assertions
 """
 import httpx
-from schemas.users import CreateUserRequestSchema, CreateUserResponseSchema
+from schemas.users_schema import CreateUserRequestSchema, CreateUserResponseSchema
 from tools.assertions.base_assert import assert_equal
 
 #=======================================================================================================================

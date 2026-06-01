@@ -3,8 +3,8 @@ Files Assertions
 """
 import httpx
 
-from schemas.error import ResponseErrorSchema, ErrorSchema
-from schemas.files import CreateFileResponseSchema, CreateFileRequestSchema
+from schemas.errors_schema import ResponseErrorSchema, ErrorSchema
+from schemas.files_schema import CreateFileResponseSchema, CreateFileRequestSchema
 from tools.assertions.base_assert import assert_length_is, assert_is_value, assert_equal
 from tools.assertions.errors_assert import assert_validate_error_response
 

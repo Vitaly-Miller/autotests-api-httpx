@@ -5,7 +5,7 @@
 import httpx
 from functools import lru_cache
 from clients.auth_client import get_auth_client
-from schemas.auth import AuthDataSchema
+from schemas.auth_schema import AuthDataSchema
 
 #============================================== Private httpx.Client (Private) =========================================
 BASE_URL = 'http://localhost:8000/api/v1'

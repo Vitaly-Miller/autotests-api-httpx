@@ -4,7 +4,7 @@
 import httpx
 import pytest
 from clients.private_users_client import PrivateUsersClient, get_private_users_client
-from schemas.users import CreateUserSchema, GetUserMeResponseSchema
+from schemas.users_schema import CreateUserSchema, GetUserMeResponseSchema
 
 #================================================ Private Users Client =================================================
 # Private Users Client

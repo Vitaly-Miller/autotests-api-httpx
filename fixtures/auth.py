@@ -4,8 +4,8 @@ Auth (Authentication) fixtures
 import httpx
 import pytest
 from clients.auth_client import AuthClient, get_auth_client
-from schemas.auth import AuthResponseSchema
-from schemas.users import CreateUserSchema
+from schemas.auth_schema import AuthResponseSchema
+from schemas.users_schema import CreateUserSchema
 
 #===================================================== Auth Client =====================================================
 # Auth Client

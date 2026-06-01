@@ -5,9 +5,9 @@
 """
 import httpx
 from clients.api_client import APIClient
-from schemas.auth import AuthDataSchema
+from schemas.auth_schema import AuthDataSchema
 from clients.httpx_private_client import get_httpx_private_client
-from schemas.users import (
+from schemas.users_schema import (
     UpdateUserRequestSchema,
     GetUserResponseSchema,
     GetUserMeResponseSchema,

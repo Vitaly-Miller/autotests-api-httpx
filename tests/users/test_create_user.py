@@ -5,7 +5,7 @@ import httpx
 import pytest
 import jsonschema
 from clients.public_users_client import PublicUsersClient, get_public_users_client
-from schemas.users import CreateUserRequestSchema, CreateUserResponseSchema
+from schemas.users_schema import CreateUserRequestSchema, CreateUserResponseSchema
 from http import HTTPStatus, HTTPMethod
 from tools.assertions.base_assert import assert_status_code, assert_method
 from tools.assertions.schema_assert import validate_json_schema

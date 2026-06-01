@@ -4,8 +4,8 @@ Exercises Client
 import httpx
 from clients.api_client import APIClient
 from clients.httpx_private_client import get_httpx_private_client
-from schemas.auth import AuthDataSchema
-from schemas.exercises import (
+from schemas.auth_schema import AuthDataSchema
+from schemas.exercises_schema import (
     CreateExerciseRequestSchema,
     UpdateExerciseRequestSchema,
     GetExercisesRequestSchema, CreateExerciseResponseSchema

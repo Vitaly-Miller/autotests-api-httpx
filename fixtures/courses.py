@@ -4,9 +4,9 @@ Courses fixtures
 import httpx
 import pytest
 from clients.courses_client import get_courses_client, CoursesClient
-from schemas.courses import CreateCourseRequestSchema, CreateCoursesSchema
-from schemas.files import CreateFileSchema
-from schemas.users import CreateUserSchema
+from schemas.courses_schema import CreateCourseRequestSchema, CreateCoursesSchema
+from schemas.files_schema import CreateFileSchema
+from schemas.users_schema import CreateUserSchema
 
 #=================================================== Courses Client ====================================================
 # Courses Client

@@ -4,7 +4,7 @@
 
 
 from clients.public_users_client import get_public_users_client
-from schemas.users import CreateUserRequestSchema, CreateUserResponseSchema
+from schemas.users_schema import CreateUserRequestSchema, CreateUserResponseSchema
 from tools.assertions.schema_assert import validate_json_schema
 from tools.data_generator import fake
 

@@ -2,7 +2,7 @@
 Errors assertions
 """
 import httpx
-from schemas.error import ErrorSchema, ResponseErrorSchema
+from schemas.errors_schema import ErrorSchema, ResponseErrorSchema
 from tools.assertions.base_assert import assert_equal, assert_length_equal
 
 #=======================================================================================================================

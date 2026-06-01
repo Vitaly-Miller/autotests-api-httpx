@@ -4,8 +4,8 @@ Test User Auth (Log in)
 import httpx
 import pytest
 from clients.auth_client import AuthClient
-from schemas.users import CreateUserSchema
-from schemas.auth import AuthResponseSchema, AuthDataSchema
+from schemas.users_schema import CreateUserSchema
+from schemas.auth_schema import AuthResponseSchema, AuthDataSchema
 from http import HTTPStatus, HTTPMethod
 from tools.assertions.auth_assert import assert_auth_token, assert_auth_values_non_empty
 from tools.assertions.base_assert import assert_status_code, assert_method

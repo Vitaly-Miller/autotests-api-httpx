@@ -4,7 +4,7 @@ Authentication Client
 """
 import httpx
 from clients.api_client import APIClient
-from schemas.auth import RefreshRequestSchema, AuthDataSchema, AuthResponseSchema
+from schemas.auth_schema import RefreshRequestSchema, AuthDataSchema, AuthResponseSchema
 from clients.httpx_public_client import get_httpx_public_client
 
 #==================================================== Auth Client ======================================================

@@ -2,7 +2,7 @@
 Get User Me assertions
 """
 import httpx
-from schemas.users import GetUserMeResponseSchema
+from schemas.users_schema import GetUserMeResponseSchema
 from tools.assertions.base_assert import assert_length_is, assert_is_value
 
 #=======================================================================================================================

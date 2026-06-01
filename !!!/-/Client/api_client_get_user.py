@@ -1,10 +1,10 @@
 """
 API Client - Get User
 """
-from schemas.auth import AuthDataSchema
+from schemas.auth_schema import AuthDataSchema
 from clients.private_users_client import get_private_users_client
 from clients.public_users_client import get_public_users_client
-from schemas.users import CreateUserRequestSchema
+from schemas.users_schema import CreateUserRequestSchema
 
 #=======================================================================================================================
 #-----------------------------------------------  Create User [PRECONDITION] -------------------------------------------
