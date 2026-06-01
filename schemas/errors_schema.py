@@ -2,14 +2,14 @@
 ❌ Validation Error Schema
 """
 
-from pydantic import BaseModel, Field
+from pydantic import BaseModel
 from typing import Any
 
 #======================================================= Create ========================================================
 class ErrorSchema(BaseModel):
     type: str
     loc: list[str]
-    msg: str = Field
+    msg: str
     input: Any
     ctx: dict[str, Any] | None = None
 

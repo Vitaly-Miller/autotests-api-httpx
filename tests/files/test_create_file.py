@@ -60,7 +60,7 @@ class TestCreateFile:
            filename=''                                                      # 👈default —> "" (empty)
         )
         response = files_client.create_file_api(create_file_data)           # ▶ Запрос через API-метод
-        Tool.api_report(response)
+
         # Assertions
         assert_status_code(response, http.HTTPStatus.UNPROCESSABLE_ENTITY) # Status code: 422
         assert_method(response, http.HTTPMethod.POST)                    # Method: POST
