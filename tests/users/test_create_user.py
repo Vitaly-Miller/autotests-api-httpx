@@ -19,17 +19,13 @@ from tools.tool import Tool
 class TestCreateUser:
     """v.1 - Через фикстуру создания пользователя"""
     def test_create_user_1(self, create_user_api: httpx.Response):
-        response = create_user_api            # Сохраняем ответ фикстуры, но не обязательно
+        response = create_user_api            # Сохраняем ответ фикстуры, но не обязательно...,
                                               # Исполняемую API-фикстуру можно сразу передавать в Assertions в качестве параметра
         # Assertions
         assert_status_code(response, HTTPStatus.OK)          # Status code
         assert_method(response, HTTPMethod.POST)           # Method
         assert_create_user_data_equal(response)                                    # 4-in-1 | Request Data = Response Data
         validate_json_schema(response, CreateUserResponseSchema)   # Validation JSON schema
-
-        # API Report (optional)
-        #Tool.api_report(response)
-
 
 
     """v.2 - Через фикстуру получения экземпляра PublicUsersClient"""
@@ -43,13 +39,9 @@ class TestCreateUser:
         assert_create_user_data_equal(response)                                    # 4-in-1 | Request Data = Response Data
         validate_json_schema(response, CreateUserResponseSchema)   # Validation JSON schema
 
-        # API Report (optional)
-        #Tool.api_report(response)
-
-
 
     """v.3 - Через фикстуру получения экземпляра PublicUsersClient + Параметризация"""
-    @pytest.mark.parametrize(                                             # email parametrize (3-in-1)
+    @pytest.mark.parametrize(                             # email parametrize (3-in-1)
         'email', [
             fake.email('amazon.com'),
             fake.email('gmail.com'),
@@ -66,10 +58,6 @@ class TestCreateUser:
         assert_method(response, HTTPMethod.POST)          # Method
         assert_create_user_data_equal(response)                                   # 4-in-1 | Request Data = Response Data
         validate_json_schema(response, CreateUserResponseSchema)  # Validation JSON schema
-
-        # API Report (optional)
-        #Tool.api_report(response)
-
 
 
     """v.4 - All manual"""
@@ -101,7 +89,7 @@ class TestCreateUser:
         )
 
 
-        # API Report (optional)
-        # Tool.api_report(response)
 
 #=======================================================================================================================
+        # API Report
+        # Tool.api_report(response)

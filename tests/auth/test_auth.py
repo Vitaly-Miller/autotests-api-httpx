@@ -27,8 +27,6 @@ class TestAuth:
         assert_auth_token(response)                                                # 4-in-1 | Token
         validate_json_schema(response, AuthResponseSchema)         # Validation JSON schema
 
-        # API Report (optional)
-        #Tool.api_report(response)
 
 
     """v.2 - Через фикстуры: Создания пользователя, Авторизации пользователя"""
@@ -46,7 +44,8 @@ class TestAuth:
         assert_auth_token(response)                                                # 4-in-1 | Token
         validate_json_schema(response, AuthResponseSchema)         # Validation JSON schema
 
-        # API Report (optional)
-        # Tool.api_report(response)
+
 
 #=======================================================================================================================
+        # API Report
+        # Tool.api_report(response)

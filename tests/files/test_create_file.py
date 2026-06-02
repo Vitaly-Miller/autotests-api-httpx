@@ -29,7 +29,7 @@ class TestCreateFile:
         assert_method(response, http.HTTPMethod.POST)      # Method POST
         assert_create_file_values_non_empty(response)                              # 4-in-1 | NON-empty response values
         assert_create_file_id_length(response)                                     # File ID length = 36 chars
-        assert_create_file_data_equal(response,create_file_data)  # 3-in-1 | Request  Data = Response Data
+        assert_create_file_data_equal(response,create_file_data)  # 3-in-1 | Request Data = Response Data
         validate_json_schema(response, CreateFileResponseSchema)   # Validation JSON schema
 
 
@@ -46,20 +46,20 @@ class TestCreateFile:
 
 
     def test_is_file(self, files_client: FilesClient, create_file: CreateFileSchema):
-        response = files_client.get_file_api(create_file.file_id)                # ▶ Запрос через API-метод
+        response = files_client.get_file_api(create_file.file_id)                  # ▶ Запрос через API-метод
 
         # Assertions
-        assert_status_code(response, http.HTTPStatus.OK)   # Status code: 200
-        assert_method(response, http.HTTPMethod.GET)     # Method GET
+        assert_status_code(response, http.HTTPStatus.OK)     # Status code: 200
+        assert_method(response, http.HTTPMethod.GET)       # Method GET
 
 
     #==================================================== Negative =====================================================
     # Empty 'filename'
     def test_negative_create_file_empty_filename(self, files_client: FilesClient):
-        create_file_data = CreateFileRequestSchema(                         # Инициализация Pydantic-модели c default fake-data
-           filename=''                                                      # 👈default —> "" (empty)
+        create_file_data = CreateFileRequestSchema(                  # Инициализация Pydantic-модели c default fake-data
+           filename=''                                               # 👈default —> "" (empty)
         )
-        response = files_client.create_file_api(create_file_data)           # ▶ Запрос через API-метод
+        response = files_client.create_file_api(create_file_data)    # ▶ Запрос через API-метод
 
         # Assertions
         assert_status_code(response, http.HTTPStatus.UNPROCESSABLE_ENTITY) # Status code: 422
@@ -70,10 +70,10 @@ class TestCreateFile:
 
     # Empty 'directory'
     def test__negative_create_file_empty_directory(self, files_client: FilesClient):
-        create_file_data = CreateFileRequestSchema(                         # Инициализация Pydantic-модели c default fake-data
-           directory=''                                                     # 👈default —> "" (empty)
+        create_file_data = CreateFileRequestSchema(                  # Инициализация Pydantic-модели c default fake-data
+           directory=''                                              # 👈default —> "" (empty)
         )
-        response = files_client.create_file_api(create_file_data)           # ▶ Запрос через API-метод
+        response = files_client.create_file_api(create_file_data)    # ▶ Запрос через API-метод
 
         # Assertions
         assert_status_code(response, http.HTTPStatus.UNPROCESSABLE_ENTITY) # Status code: 422
@@ -83,5 +83,5 @@ class TestCreateFile:
 
 
 #=======================================================================================================================
-        # API Report (optional)
+        # API Report
         #Tool.api_report(response)

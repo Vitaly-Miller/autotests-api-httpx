@@ -20,7 +20,7 @@ from tools.tool import Tool
 class TestGetUserMe:
     """v.1 - Через фикстуру получения данных текущего пользователя"""
     def test_get_user_me_1(self, get_user_me_api: httpx.Response):
-        response = get_user_me_api      # Сохраняем ответ фикстуры, но не обязательно
+        response = get_user_me_api      # Сохраняем ответ фикстуры, но не обязательно...,
                                         # Исполняемую API-фикстуру можно сразу передавать в Assertions в качестве параметра
 
         # Assertions
@@ -30,13 +30,10 @@ class TestGetUserMe:
         assert_get_user_me_user_id_len(response)                                # User ID length = 36 chars
         validate_json_schema(response, GetUserMeResponseSchema) # Validation JSON schema
 
-        # API Report (optional)
-        #Tool.api_report(response)
-
 
     """v.2 - Через фикстуру получения экземпляра PrivateUsersClient"""
     def test_get_user_me_3(self, private_users_client: PrivateUsersClient):
-        response = private_users_client.get_user_me_api()   # ▶ Запрос через API-метод
+        response = private_users_client.get_user_me_api()                       # ▶ Запрос через API-метод
 
         # Assertions
         assert_status_code(response, HTTPStatus.OK)       # Status code
@@ -44,9 +41,6 @@ class TestGetUserMe:
         assert_get_user_me_values_non_empty(response)                           # 5-in-1 | NON-Empty values
         assert_get_user_me_user_id_len(response)                                # User ID length = 36 chars
         validate_json_schema(response, GetUserMeResponseSchema) # Validation JSON schema
-
-        # API Report (optional)
-        #Tool.api_report(response)
 
 
     """v.3 - All manual"""
@@ -61,21 +55,21 @@ class TestGetUserMe:
             password=create_user_data.password            # Вытаскиваем Password из Pydantic-модели
         )
         #------------------------ Get User Me -----------------------
-        get_user_me_client = get_private_users_client(auth_data)  # Получаем экземпляр PrivateUsersClient
-        response = get_user_me_client.get_user_me_api()           # ▶ Запрос через API-метод
+        get_user_me_client = get_private_users_client(auth_data)     # Получаем экземпляр PrivateUsersClient
+        response = get_user_me_client.get_user_me_api()              # ▶ Запрос через API-метод
 
         response_model = CreateUserResponseSchema.model_validate_json(response.text)  # Response —> Pydantic-model (Deserialize for Assertions)
 
         #------------------------ Assertions ------------------------
-        # Base API assertions (⚠️Hard coding не рекомендуется)
+        # v.1 - Base API assertions (⚠️Hard coding не рекомендуется)
         assert response.status_code == 200, '❌Status code is incorrect!'           # проверка статус-кода    (Hard coding)
         assert response.request.method == 'GET', '❌Request Method is incorrect!'   # проверка метода запроса (Hard coding)
 
-        # Base API assertions (через HTTPStatus и HTTPMethod)
+        # v.2 - Base API assertions (через HTTPStatus и HTTPMethod)
         assert response.status_code == HTTPStatus.OK, '❌Incorrect status code!'         # проверка статус-кода    (через HTTPStatus)
         assert response.request.method == HTTPMethod.GET, '❌Incorrect Request Method!'  # проверка метода запроса (через HTTPMethod)
 
-        # Fields values assertions
+        # Fields values assertions:
         assert response_model.user.email == create_user_data.email, '❌Разные Email!'                    # проверка отправленного и полученного Email
         assert response_model.user.last_name == create_user_data.last_name, '❌Разные Last Name!'        # проверка отправленного и полученного Last Name
         assert response_model.user.first_name == create_user_data.first_name, '❌Разные First Name!'     # проверка отправленного и полученного First Name
@@ -88,7 +82,7 @@ class TestGetUserMe:
             format_checker=jsonschema.FormatChecker()             # Проверка форматов
         )
 
-        # API Report (optional)
-        # Tool.api_report(response)
 
     #=======================================================================================================================
+        # API Report
+        # Tool.api_report(response)

@@ -24,7 +24,7 @@ class TestGetFile:
         validate_json_schema(response, CreateFileResponseSchema) # Validation JSON schema
 
 
-    #==================================================== Negative =====================================================
+    #=================================================== Negative ======================================================
     # Get File by invalid File ID (non-UUID format)
     def test_negative_get_file_by_invalid_file_id(self, files_client: FilesClient):
         invalid_file_id = 'invalid_File_ID'                            # Invalid File ID (non-UUID format)
@@ -37,5 +37,5 @@ class TestGetFile:
         validate_json_schema(response, ResponseErrorSchema)                      # Validation JSON schema
 
 #=======================================================================================================================
-        # API Report (optional)
+        # API Report
         #Tool.api_report(response)
