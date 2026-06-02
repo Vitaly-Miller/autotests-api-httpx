@@ -12,7 +12,7 @@ from tools.assertions.schema_assert import validate_json_schema
 from tools.assertions.files_assert import (
     assert_create_file_id_length,
     assert_create_file_values_non_empty,
-    assert_create_file_data_equal, assert_create_file_empty_filename, assert_create_file_empty_directory
+    assert_create_file_data_equal, assert_create_file_empty_filename_error_response, assert_create_file_empty_directory_error_response
 )
 from tools.tool import Tool
 #=======================================================================================================================
@@ -55,7 +55,7 @@ class TestCreateFile:
 
     #==================================================== Negative =====================================================
     # Empty 'filename'
-    def test_create_file_empty_filename(self, files_client: FilesClient):
+    def test_negative_create_file_empty_filename(self, files_client: FilesClient):
         create_file_data = CreateFileRequestSchema(                         # Инициализация Pydantic-модели c default fake-data
            filename=''                                                      # 👈default —> "" (empty)
         )
@@ -64,12 +64,12 @@ class TestCreateFile:
         # Assertions
         assert_status_code(response, http.HTTPStatus.UNPROCESSABLE_ENTITY) # Status code: 422
         assert_method(response, http.HTTPMethod.POST)                    # Method: POST
-        assert_create_file_empty_filename(response)                                              # 2-in-1 | Проверка Error Response (длина, значения)
-        validate_json_schema(response, ResponseErrorSchema)  # Validation JSON schema
+        assert_create_file_empty_filename_error_response(response)                               # Validation Error Response data
+        validate_json_schema(response, ResponseErrorSchema)                      # Validation JSON schema
 
 
     # Empty 'directory'
-    def test_create_file_empty_directory(self, files_client: FilesClient):
+    def test__negative_create_file_empty_directory(self, files_client: FilesClient):
         create_file_data = CreateFileRequestSchema(                         # Инициализация Pydantic-модели c default fake-data
            directory=''                                                     # 👈default —> "" (empty)
         )
@@ -78,7 +78,7 @@ class TestCreateFile:
         # Assertions
         assert_status_code(response, http.HTTPStatus.UNPROCESSABLE_ENTITY) # Status code: 422
         assert_method(response, http.HTTPMethod.POST)                    # Method: POST
-        assert_create_file_empty_directory(response)                                             # 2-in-1 | Проверка Error Response (длина, значения)
+        assert_create_file_empty_directory_error_response(response)                              # Validation Error Response data
         validate_json_schema(response, ResponseErrorSchema)                      # Validation JSON schema
 
 

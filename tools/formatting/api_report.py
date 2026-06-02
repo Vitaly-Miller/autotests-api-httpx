@@ -63,7 +63,7 @@ class Report:
         try:
             if self.response.request.content:
                 request_body = json.loads(self.response.request.content)
-                request_body_json = json.dumps(request_body, indent=4, ensure_ascii=False)
+                request_body_json = json.dumps(request_body, indent=2, ensure_ascii=False)
                 print(request_body_json)
             else:
                 print(f'{{\n\t<None>\n}}')
@@ -76,7 +76,7 @@ class Report:
         print(f'\n{ANSI.BLUE} RESPONSE Body{ANSI.GRAY}: ⬅︎')
         if self.response.json():
             response_body = self.response.json()
-            response_body_json = json.dumps(response_body, indent=4, ensure_ascii=False)
+            response_body_json = json.dumps(response_body, indent=2, ensure_ascii=False)
             print(response_body_json)
         else:
             print(f'{{\n\t<None>\n}}')
@@ -86,7 +86,7 @@ class Report:
     def api_request_headers(self):
         print(f'\n{ANSI.BROWN} REQUEST Headers{ANSI.GRAY}: ⮕')
         request_headers = dict(self.response.request.headers)
-        request_headers_json = json.dumps(request_headers, indent=4, ensure_ascii=False)
+        request_headers_json = json.dumps(request_headers, indent=2, ensure_ascii=False)
         print(request_headers_json)
 
 
@@ -94,7 +94,7 @@ class Report:
     def api_response_headers(self):
         print(f'\n{ANSI.BROWN_ORANGE} RESPONSE Headers{ANSI.GRAY}: ⬅︎')
         response_headers = dict(self.response.headers)
-        response_headers_json = json.dumps(response_headers, indent=4, ensure_ascii=False)
+        response_headers_json = json.dumps(response_headers, indent=2, ensure_ascii=False)
         print(response_headers_json)
         print(f'{'—'*36}{ANSI.RESET}')
 

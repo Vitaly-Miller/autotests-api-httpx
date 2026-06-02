@@ -1,6 +1,8 @@
 """
 Files Assertions
 """
+from typing import Any
+
 import httpx
 
 from schemas.errors_schema import ResponseErrorSchema, ErrorSchema, NotFoundErrorSchema
@@ -87,9 +89,9 @@ def assert_create_file_id_length(response: httpx.Response):
 
 #====================================================== Negative =======================================================
 # Create file - empty 'filename'
-def assert_create_file_empty_filename(actual: httpx.Response):
+def assert_create_file_empty_filename_error_response(actual: httpx.Response):
     """
-    Проверка Error Response
+    Проверка Error Response при создании файла с пустым 'filename'
 
     Сравнивает Error Response с ожидаемой Pydantic-model (ResponseErrorSchema) при создании файла с пустым 'filename'
 
@@ -109,11 +111,11 @@ def assert_create_file_empty_filename(actual: httpx.Response):
     )
     assert_validate_error_response(actual, expected_model) #
 
-#-----------------------------------------------------------------------------------------------------------------------
+
 # Create file - empty 'directory'
-def assert_create_file_empty_directory(actual: httpx.Response):
+def assert_create_file_empty_directory_error_response(actual: httpx.Response):
     """
-    Проверка Error Response
+    Проверка Error Response при создании файла с пустым 'directory'
 
     Сравнивает Error Response с ожидаемой Pydantic-model (ResponseErrorSchema) при создании файла с пустым 'directory'
 
@@ -133,11 +135,11 @@ def assert_create_file_empty_directory(actual: httpx.Response):
     )
     assert_validate_error_response(actual, expected_model)
 
-#-----------------------------------------------------------------------------------------------------------------------
+
 # File not found
-def assert_file_not_found(actual: httpx.Response):
+def assert_file_not_found_error_response(actual: httpx.Response):
     """
-    Проверка Error Response
+    Проверка Error Response при попытке получить несуществующий файл
 
     Сравнивает Error Response с Pydantic-model (NotFoundErrorSchema) при попытке получить несуществующий файл
 
@@ -149,4 +151,25 @@ def assert_file_not_found(actual: httpx.Response):
     )
     assert_not_found_response(actual, expected_model)
 
-#---------------------------------------------------------------- -------------------------------------------------------
+# Get File by invalid File ID (non-UUID format)
+def assert_get_file_by_invalid_file_id_error_response(actual: httpx.Response):
+    """
+    Проверка Error Response при получении файла с невалидным File ID (non-UUID format)
+
+    Сравнивает Error Response с ожидаемой Pydantic-model (ResponseErrorSchema) при создании файла с невалидным File ID (non-UUID format)
+
+    :param actual: Response
+    :return: AssertionError
+    """
+    expected_model = ResponseErrorSchema(             # Ожидаемая Pydantic-model (ResponseErrorSchema)
+        detail=[
+            ErrorSchema(
+                type='uuid_parsing',
+                loc=['path', 'file_id'],
+                msg='Input should be a valid UUID, invalid character: found `i` at 1',
+                input=actual.json()['detail'][0]['input'],     # 👈 тут 'invalid File ID' при передаче (пока решил так)
+                ctx={"error": 'invalid character: found `i` at 1'}
+            )
+        ]
+    )
+    assert_validate_error_response(actual, expected_model)

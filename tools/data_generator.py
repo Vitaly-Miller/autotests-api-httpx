@@ -133,11 +133,11 @@ class Fake:
     #------------------------------------------------------ Files ------------------------------------------------------
     def png_file_name(self) -> str:
         """
-        Генерация имени файла .png при сохранении на сервере (Upload)
+        Генерация имени файла .png при сохранении файла на сервере (Upload)
 
         :return: Срока формата file_1234.png
         """
-        number = self.faker.random_int()
+        number = self.faker.random_int(1000, 9999)
         return f'file_{number}.png'
 
 

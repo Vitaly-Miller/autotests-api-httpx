@@ -1,10 +1,15 @@
 """
 Files fixtures
 """
+from typing import Any, Generator
+
 import httpx
 import pytest
+from httpx import Response
+
 from clients.files_client import FilesClient, get_files_client
-from schemas.files_schema import CreateFileRequestSchema, CreateFileSchema, GetFileResponseSchema
+from schemas.files_schema import CreateFileRequestSchema, CreateFileSchema, GetFileResponseSchema, \
+    CreateFileResponseSchema
 from schemas.users_schema import CreateUserSchema
 
 #==================================================== Files Client =====================================================
@@ -49,6 +54,26 @@ def create_file(files_client: FilesClient) -> CreateFileSchema:
     response_model = files_client.create_file(create_file_data)    # ▶ Запрос через Pydantic-метод
     response_full_model = CreateFileSchema(request=create_file_data, response=response_model) # Инициализация Pydantic-model (CreateFileSchema) ✨<Request + Response>
     return response_full_model                                     # Pydantic-model (CreateFileSchema) ✨<Request + Response>
+
+
+# Pydantic-model ✨
+@pytest.fixture
+def create_file_delete(files_client: FilesClient, delete: bool = True) -> Generator[CreateFileSchema]:
+    """
+    Pydantic-фикстура создания файла + удаления после теста
+
+
+
+    :param files_client: Вложенная фикстура получения экземпляра FilesClient (c Авторизация)
+    :param delete: Опция удаления файла после теста (default = True)
+    :return: httpx.Response
+    """
+    create_file_data = CreateFileRequestSchema()                   # Инициализация Pydantic-модели c default fake-data
+    response_model = files_client.create_file(create_file_data)    # ▶ Запрос через Pydantic-метод
+    response_full_model = CreateFileSchema(request=create_file_data, response=response_model)  # Инициализация Pydantic-model (CreateFileSchema) ✨<Request + Response>
+    yield response_full_model                                      # Pydantic-model (CreateFileSchema) ✨<Request + Response>
+    if delete:
+        files_client.delete_file_api(response_full_model.file_id)  # Удаление файла после теста
 
 
 #------------------------------------------------------ Get File -------------------------------------------------------

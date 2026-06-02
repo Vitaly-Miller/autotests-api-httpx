@@ -5,7 +5,7 @@
 from pydantic import BaseModel
 from typing import Any
 
-#======================================================= Create ========================================================
+#======================================================== Main =========================================================
 class ErrorSchema(BaseModel):
     type: str
     loc: list[str]
@@ -21,28 +21,28 @@ class ResponseErrorSchema(BaseModel):
     """
     detail: list[ErrorSchema]
 
-#------------------------------------------------------ Examples -------------------------------------------------------
-# Create User error
-create_user_empty_first_name = \
+# Examples
+"""
+---- Create User with empty 'first_name' ----
+{
+  "detail": [
     {
-      "detail": [
-        {
-          "type": "string_too_short",
-          "loc": [
-            "body",
-            "firstName"
-          ],
-          "msg": "String should have at least 1 character",
-          "input": "",
-          "ctx": {
-            "min_length": 1
-          }
-        }
-      ]
+      "type": "string_too_short",
+      "loc": [
+        "body",
+        "firstName"
+      ],
+      "msg": "String should have at least 1 character",
+      "input": "",
+      "ctx": {
+        "min_length": 1
+      }
     }
+  ]
+}
 
-# Create File error
-create_file_empty_filename = \
+--- Create File with empty 'filename' ----
+
     {
       "detail": [
         {
@@ -56,9 +56,29 @@ create_file_empty_filename = \
         }
       ]
     }
+    
+
+---- Get File with incorrect File ID ----
+{
+  "detail": [
+    {
+      "type": "uuid_parsing",
+      "loc": [
+        "path",
+        "file_id"
+      ],
+      "msg": "Input should be a valid UUID, invalid character: expected an optional prefix of `urn:uuid:` followed by [0-9a-fA-F-], found `i` at 1",
+      "input": "incorrect-file-id",
+      "ctx": {
+        "error": "invalid character: expected an optional prefix of `urn:uuid:` followed by [0-9a-fA-F-], found `i` at 1"
+      }
+    }
+  ]
+}
+"""
 
 
-#========================================================= Get =========================================================
+#---------------------------------------------------- NON-exist entity -------------------------------------------------
 class NotFoundErrorSchema(BaseModel):
     """
     Схема ошибки при попытке получения несуществующей сущности (User, File, Exercise, etc.)
@@ -67,11 +87,4 @@ class NotFoundErrorSchema(BaseModel):
     """
     detail: str
 
-#------------------------------------------------------ Examples -------------------------------------------------------
-get_file_by_incorrect_file_id = \
-    {
-      "detail": "File not found"
-    }
-
-
-#======================================================= Delete ========================================================
+#-----------------------------------------------------------------------------------------------------------------------
