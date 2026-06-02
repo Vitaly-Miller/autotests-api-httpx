@@ -15,11 +15,7 @@ def assert_create_file_values_non_empty(response: httpx.Response):
     """
     4-in-1 | NON-empty response values
 
-    Actions:
-
-    - Response —> Pydantic-model (Deserialize for Assertions)
-
-    :param response: httpx.Response
+    :param response: httpx.Response (for deserialize —> Pydantic-model)
     :raise AssertionError
     """
     response_model = CreateFileResponseSchema.model_validate_json(response.text)   # Response —> Pydantic-model (Deserialize for Assertions)
@@ -38,11 +34,7 @@ def assert_create_file_data_equal(response: httpx.Response, request_model: Creat
     - directory
     - url
 
-    Actions:
-
-    - Response —> Pydantic-model (Deserialize for Assertions)
-
-    :param response: httpx.Response with File data
+    :param response: httpx.Response with File data (for deserialize —> Pydantic-model)
     :param request_model: Pydantic-model with File data
     :raise AssertionError
     """
@@ -69,11 +61,8 @@ def assert_create_file_id_length(response: httpx.Response):
     """
     File ID length = 36 chars
 
-    Actions:
 
-    - Response —> Pydantic-model (Deserialize for Assertions)
-
-    :param response: httpx.Response
+    :param response: httpx.Response (for deserialize —> Pydantic-model)
     :return: AssertionError
     """
     response_model = CreateFileResponseSchema.model_validate_json(response.text)    # Response —> Pydantic-model (Deserialize for Assertions)

@@ -10,8 +10,8 @@ def assert_validate_error(actual: httpx.Response, expected: httpx.Response):
     """
     5-in-1 | Check API-Response Validation fields errors
 
-    :param actual: Response
-    :param expected: Response
+    :param actual: Response (for deserialize —> Pydantic-model)
+    :param expected: Response (for deserialize —> Pydantic-model)
     :return: ValidationError
     """
     actual_model = ErrorSchema.model_validate_json(actual.text)       # actual_Response  —> Pydantic-model (Deserialize for Assertions)
@@ -32,7 +32,7 @@ def assert_validate_error_response(actual: httpx.Response, expected_model: Respo
     - Сравнивает количество элементов в объекте "detail"
     - Сравнивает значения элементов в объекте "detail"
 
-    :param actual: Response (for deserialize httpx.Response —> Pydantic-model)
+    :param actual: Response (for deserialize —> Pydantic-model)
     :param expected_model: Pydantic-model (ResponseErrorSchema)
     :return: ValidationError
     """
@@ -47,7 +47,7 @@ def assert_not_found_response(actual: httpx.Response, expected_model: NotFoundEr
     """
     Сравнивает Error Response с Pydantic-model (NotFoundErrorSchema) при попытке получить несуществующую сущность
 
-    :param actual: Response (for deserialize httpx.Response —> Pydantic-model)
+    :param actual: Response (for deserialize —> Pydantic-model)
     :param expected_model: Pydantic-model (NotFoundErrorSchema)
     :return:
     """

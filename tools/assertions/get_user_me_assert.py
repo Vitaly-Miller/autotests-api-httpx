@@ -16,11 +16,7 @@ def assert_get_user_me_values_non_empty(response: httpx.Response):
     - middle_name
     - last_name
 
-    Actions:
-
-    - Response —> Pydantic-model (Deserialize for Assertions)
-
-    :param response: httpx.Response
+    :param response: httpx.Response (for deserialize —> Pydantic-model)
     :raise AssertionError
     """
     response_model = GetUserMeResponseSchema.model_validate_json(response.text)    # Response —> Pydantic-model (Deserialize for Assertions)
@@ -34,13 +30,9 @@ def assert_get_user_me_values_non_empty(response: httpx.Response):
 
 def assert_get_user_me_user_id_len(response: httpx.Response):
     """
-    Check User ID length = 36 chars:
+    Check User ID length = 36 chars
 
-    Actions:
-
-    - Response —> Pydantic-model (Deserialize for Assertions)
-
-    :param response: httpx.Response
+    :param response: httpx.Response (for deserialize —> Pydantic-model)
     :raise AssertionError
     """
     response_model = GetUserMeResponseSchema.model_validate_json(response.text)    # Response —> Pydantic-model (Deserialize for Assertions)

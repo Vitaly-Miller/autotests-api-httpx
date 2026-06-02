@@ -18,11 +18,7 @@ def assert_auth_values_non_empty(response: httpx.Response):
     - access_token
     - refresh_token
 
-    Actions:
-
-    - Response —> Pydantic-model (Deserialize for Assertions)
-
-    :param response: httpx.Response
+    :param response: httpx.Response (for deserialize —> Pydantic-model)
     :raise AssertionError
     """
     response_model = AuthResponseSchema.model_validate_json(response.text)  # Response —> Pydantic-model (Deserialize for Assertions)
@@ -42,11 +38,7 @@ def assert_auth_token(response: httpx.Response):
     - Refresh token length = 199 chars
     - Access token ≠ Refresh token
 
-    Actions:
-
-    httpx.Response —> Pydantic-model (Deserialize for Assertions)
-
-    :param response: httpx.Response
+    :param response: httpx.Response (for deserialize —> Pydantic-model)
     :raise AssertionError
     """
 

@@ -53,7 +53,8 @@ class CreateCourseResponseSchema(BaseModel):
 
 
 #--------------------------------------------------- Update Course -----------------------------------------------------
-
+class UpdateCourseResponseSchema(BaseModel):
+    course: CourseSchema
 
 
 #-----------------------------------------------------------------------------------------------------------------------
