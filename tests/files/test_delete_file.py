@@ -16,19 +16,19 @@ from tools.tool import Tool
 @pytest.mark.files
 class TestDeleteFile:
     def test_delete_file(self, files_client: FilesClient, create_file: CreateFileSchema):
-        delete_file_response = files_client.delete_file_api(create_file.file_id)   # ▶ Запрос на удаление через API-метод
-        get_file_response = files_client.get_file_api(create_file.file_id)         # ▶ Запрос получение уже несуществующего файла через API-метод
+        delete_file_response = files_client.delete_file_api(create_file.file_id)          # ▶ Запрос на удаление файла через API-метод
+        get_non_existent_file_response = files_client.get_file_api(create_file.file_id)   # ▶ Get request for a NON-existent File через API-метод
 
         # Delete File assertions
         assert_status_code(delete_file_response, http.HTTPStatus.OK)   # Status code: 200
         assert_method(delete_file_response, http.HTTPMethod.DELETE)  # Method DELETE
 
         # Get File assertions
-        assert_status_code(get_file_response, http.HTTPStatus.NOT_FOUND)   # Status code: 404
-        assert_method(get_file_response, http.HTTPMethod.GET)            # Method GET
-        assert_file_not_found_error_response(get_file_response)                                                 # Проверка Error Response ("detail": "File not found")
-        validate_json_schema(get_file_response, NotFoundErrorSchema)             # Validation JSON schema
+        assert_status_code(get_non_existent_file_response, http.HTTPStatus.NOT_FOUND)   # Status code: 404
+        assert_method(get_non_existent_file_response, http.HTTPMethod.GET)            # Method GET
+        assert_file_not_found_error_response(get_non_existent_file_response)                                  # Проверка Error Response ("detail": "File not found")
+        validate_json_schema(get_non_existent_file_response, NotFoundErrorSchema)             # Validation JSON schema
 #=======================================================================================================================
         # API Report (optional)
         #Tool.api_report(delete_file_response)
-        #Tool.api_report(get_file_response)
+        #Tool.api_report(get_non_existent_file_response)

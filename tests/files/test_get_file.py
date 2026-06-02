@@ -28,7 +28,7 @@ class TestGetFile:
     # Get File by invalid File ID (non-UUID format)
     def test_negative_get_file_by_invalid_file_id(self, files_client: FilesClient):
         invalid_file_id = 'invalid_File_ID'                            # Invalid File ID (non-UUID format)
-        response = files_client.get_file_api(invalid_file_id)          # ▶ Запрос через API-метод с invalid file_id
+        response = files_client.get_file_api(invalid_file_id)          # ▶ Запрос через API-метод с invalid File ID
 
         # Assertions
         assert_status_code(response, http.HTTPStatus.UNPROCESSABLE_ENTITY) # Status code: 422

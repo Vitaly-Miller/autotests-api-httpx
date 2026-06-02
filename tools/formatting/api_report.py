@@ -74,12 +74,12 @@ class Report:
     # RESPONSE Body ⬅︎
     def api_response_body(self):
         print(f'\n{ANSI.BLUE} RESPONSE Body{ANSI.GRAY}: ⬅︎')
-        if self.response.json():
+        try:
             response_body = self.response.json()
             response_body_json = json.dumps(response_body, indent=2, ensure_ascii=False)
             print(response_body_json)
-        else:
-            print(f'{{\n\t<None>\n}}')
+        except Exception as e:
+            print(f' ⚠️ {e}')
 
 
     # REQUEST Headers ⮕
