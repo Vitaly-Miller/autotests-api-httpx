@@ -15,7 +15,7 @@ from tools.tool import Tool
 @pytest.mark.regression
 class TestUpdateCourse:
     def test_update_course(self, courses_client:  CoursesClient, create_course: CreateCourseSchema):
-        update_course_data = UpdateCourseRequestSchema()
+        update_course_data = UpdateCourseRequestSchema()                            # Pydantic-model with fake-data
         response = courses_client.update_course_api(create_course.response.course.id, update_course_data)
 
         # Assertions

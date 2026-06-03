@@ -24,8 +24,8 @@ class TestGetUserMe:
                                         # Исполняемую API-фикстуру можно сразу передавать в Assertions в качестве параметра
 
         # Assertions
-        assert_status_code(response, HTTPStatus.OK)       # Status code
-        assert_method(response, HTTPMethod.GET)         # Method
+        assert_status_code(response, HTTPStatus.OK)       # Status code: 200
+        assert_method(response, HTTPMethod.GET)         # Method: GET
         assert_get_user_me_values_non_empty(response)                           # 5-in-1 | NON-Empty values
         assert_get_user_me_user_id_len(response)                                # User ID length = 36 chars
         validate_json_schema(response, GetUserMeResponseSchema) # Validation JSON schema
@@ -36,8 +36,8 @@ class TestGetUserMe:
         response = private_users_client.get_user_me_api()                       # ▶ Запрос через API-метод
 
         # Assertions
-        assert_status_code(response, HTTPStatus.OK)       # Status code
-        assert_method(response, HTTPMethod.GET)         # Method
+        assert_status_code(response, HTTPStatus.OK)       # Status code: 200
+        assert_method(response, HTTPMethod.GET)         # Method: GET
         assert_get_user_me_values_non_empty(response)                           # 5-in-1 | NON-Empty values
         assert_get_user_me_user_id_len(response)                                # User ID length = 36 chars
         validate_json_schema(response, GetUserMeResponseSchema) # Validation JSON schema
@@ -50,9 +50,9 @@ class TestGetUserMe:
         public_users_client = get_public_users_client()   # Получаем экземпляр PublicUsersClient (с Base URL)
         create_user_data = CreateUserRequestSchema()      # Инициализация Pydantic-модели с default fake-data нового пользователя
         public_users_client.create_user(create_user_data) # ▶ Запрос через Pydantic-метод
-        auth_data = AuthDataSchema(                       # Инициализируем модель с данными для авторизации
-            email=create_user_data.email,                 # Вытаскиваем Email из Pydantic-модели
-            password=create_user_data.password            # Вытаскиваем Password из Pydantic-модели
+        auth_data = AuthDataSchema(                       # Инициализируем модель с default-данными для авторизации
+            email=create_user_data.email,                 # Замена default на —> реальное значение
+            password=create_user_data.password            # Замена default на —> реальное значение
         )
         #------------------------ Get User Me -----------------------
         get_user_me_client = get_private_users_client(auth_data)     # Получаем экземпляр PrivateUsersClient

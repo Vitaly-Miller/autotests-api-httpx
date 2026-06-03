@@ -19,8 +19,8 @@ class TestGetFile:
         response = files_client.get_file_api(create_file.file_id)                # ▶ Запрос через API-метод
 
         # Assertions
-        assert_status_code(response, http.HTTPStatus.OK)   # Status code
-        assert_method(response, http.HTTPMethod.GET)     # Method
+        assert_status_code(response, http.HTTPStatus.OK)   # Status code: 200
+        assert_method(response, http.HTTPMethod.GET)     # Method: GET
         validate_json_schema(response, CreateFileResponseSchema) # Validation JSON schema
 
 

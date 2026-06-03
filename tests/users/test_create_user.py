@@ -22,26 +22,26 @@ class TestCreateUser:
         response = create_user_api            # Сохраняем ответ фикстуры, но не обязательно...,
                                               # Исполняемую API-фикстуру можно сразу передавать в Assertions в качестве параметра
         # Assertions
-        assert_status_code(response, http.HTTPStatus.OK)     # Status code: 200
-        assert_method(response, http.HTTPMethod.POST)      # Method POST
-        assert_create_user_data_equal(response)                                    # 4-in-1 | Request Data = Response Data
-        validate_json_schema(response, CreateUserResponseSchema)   # Validation JSON schema
+        assert_status_code(response, http.HTTPStatus.OK)    # Status code: 200
+        assert_method(response, http.HTTPMethod.POST)     # Method POST
+        assert_create_user_data_equal(response)                                   # 4-in-1 | Request Data = Response Data
+        validate_json_schema(response, CreateUserResponseSchema)  # Validation JSON schema
 
 
     """v.2 - Через фикстуру получения экземпляра PublicUsersClient"""
     def test_create_user_2(self, public_users_client: PublicUsersClient):
-        create_user_data = CreateUserRequestSchema()                       # Инициализация Pydantic-модели с генерацией fake User data нового пользователя
-        response = public_users_client.create_user_api(create_user_data)   # ▶ Запрос через API-метод
+        create_user_data = CreateUserRequestSchema()                              # # Pydantic-model with fake-data
+        response = public_users_client.create_user_api(create_user_data)          # ▶ Запрос через API-метод
 
         # Assertions
-        assert_status_code(response, http.HTTPStatus.OK)     # Status code: 200
-        assert_method(response, http.HTTPMethod.POST)      # Method POST
-        assert_create_user_data_equal(response)                                    # 4-in-1 | Request Data = Response Data
-        validate_json_schema(response, CreateUserResponseSchema)   # Validation JSON schema
+        assert_status_code(response, http.HTTPStatus.OK)    # Status code: 200
+        assert_method(response, http.HTTPMethod.POST)     # Method POST
+        assert_create_user_data_equal(response)                                   # 4-in-1 | Request Data = Response Data
+        validate_json_schema(response, CreateUserResponseSchema)  # Validation JSON schema
 
 
     """v.3 - Через фикстуру получения экземпляра PublicUsersClient + Параметризация"""
-    @pytest.mark.parametrize(                             # email parametrize (3-in-1)
+    @pytest.mark.parametrize(                                                     # parametrize 'email' (3-in-1)
         'email', [
             fake.email('amazon.com'),
             fake.email('gmail.com'),
@@ -49,9 +49,10 @@ class TestCreateUser:
         ]
     )
     def test_create_user_3_param(self, email: str, public_users_client: PublicUsersClient):
-        create_user_data = CreateUserRequestSchema(email=email)           # Инициализация Pydantic-модели с default-генерацией fake User data нового пользователя, ...
-                                                                          # ... c заменой сгенерированного email на значение из parametrize
-        response = public_users_client.create_user_api(create_user_data)  # ▶ Запрос через API-метод
+        create_user_data = CreateUserRequestSchema(                               # Pydantic-model with fake-data, ...
+            email=email                                                           # ... c заменой сгенерированного email на значение из parametrize
+        )
+        response = public_users_client.create_user_api(create_user_data)          # ▶ Запрос через API-метод
 
         # Assertions
         assert_status_code(response, http.HTTPStatus.OK)    # Status code: 200

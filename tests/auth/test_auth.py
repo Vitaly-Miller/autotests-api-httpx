@@ -18,11 +18,11 @@ from tools.tool import Tool
 class TestAuth:
     """v.1 - Через фикстуру авторизации пользователя"""
     def test_auth_1(self, auth_api: httpx.Response):
-        response = auth_api        # Сохраняем ответ фикстуры, но не обязательно
+        response = auth_api        # Сохраняем ответ фикстуры, но не обязательно,...
                                    # Исполняемую API-фикстуру можно сразу передавать в Assertions в качестве параметра
         # Assertions
-        assert_status_code(response, HTTPStatus.OK)          # Status code
-        assert_method(response, HTTPMethod.POST)           # Method
+        assert_status_code(response, HTTPStatus.OK)          # Status code: 200
+        assert_method(response, HTTPMethod.POST)           # Method: POST
         assert_auth_values_non_empty(response)                                     # 3-in-1 | Non-empty response values
         assert_auth_token(response)                                                # 4-in-1 | Token
         validate_json_schema(response, AuthResponseSchema)         # Validation JSON schema
@@ -31,15 +31,15 @@ class TestAuth:
 
     """v.2 - Через фикстуры: Создания пользователя, Авторизации пользователя"""
     def test_auth_2(self, create_user: CreateUserSchema, auth_client: AuthClient):
-        auth_data = AuthDataSchema(             # Инициализация Pydantic-model с авторизационными данными пользователя (Email и Password)
-            email=create_user.email,            # Вытаскиваем Email из модели фикстуры
-            password=create_user.password       # Вытаскиваем Password из модели фикстуры
+        auth_data = AuthDataSchema(                      # Pydantic-model with fake-data (Email и Password),...
+            email=create_user.email,                     # Замена default на —> реальное значение
+            password=create_user.password                # Замена default на —> реальное значение
         )
         response = auth_client.login_api(auth_data)                                # ▶ Запрос через API-метод
 
         # Assertions
-        assert_status_code(response, HTTPStatus.OK)          # Status code
-        assert_method(response, HTTPMethod.POST)           # Method
+        assert_status_code(response, HTTPStatus.OK)          # Status code: 200
+        assert_method(response, HTTPMethod.POST)           # Method: POST
         assert_auth_values_non_empty(response)                                     # 3-in-1 | Non-empty response values
         assert_auth_token(response)                                                # 4-in-1 | Token
         validate_json_schema(response, AuthResponseSchema)         # Validation JSON schema
