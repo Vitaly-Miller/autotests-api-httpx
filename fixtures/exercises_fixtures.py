@@ -4,7 +4,7 @@ Exercises fixtures
 import httpx
 import pytest
 from clients.exercises_client import ExercisesClient, get_exercises_client
-from schemas.courses_schema import CreateCoursesSchema
+from schemas.courses_schema import CreateCourseSchema
 from schemas.exercises_schema import CreateExerciseRequestSchema, CreateExerciseSchema
 from schemas.users_schema import CreateUserSchema
 
@@ -24,7 +24,7 @@ def exercises_client(create_user: CreateUserSchema) -> ExercisesClient:
 
 #-------------------------------------------------- Create exercise ----------------------------------------------------
 # API
-def create_exercise_api(exercises_client: ExercisesClient, create_course: CreateCoursesSchema) -> httpx.Response:
+def create_exercise_api(exercises_client: ExercisesClient, create_course: CreateCourseSchema) -> httpx.Response:
     """
     API-фикстура создания задания
 
@@ -40,7 +40,7 @@ def create_exercise_api(exercises_client: ExercisesClient, create_course: Create
 
 
 # Pydantic-model
-def create_exercise(exercises_client: ExercisesClient, create_course: CreateCoursesSchema) -> CreateExerciseSchema:
+def create_exercise(exercises_client: ExercisesClient, create_course: CreateCourseSchema) -> CreateExerciseSchema:
     """
     Pydantic-фикстура создания задания
 

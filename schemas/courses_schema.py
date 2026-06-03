@@ -9,7 +9,6 @@ from tools.data_generator import fake
 """================================================ ⬆︎REQUEST Schema ================================================"""
 #---------------------------------------------------- Create Course ----------------------------------------------------
 class CreateCourseRequestSchema(BaseModel):
-
     title: str = Field(default_factory=fake.sentence)
     max_score: int = Field(alias='maxScore', strict=True, default_factory=fake.max_score)
     min_score: int = Field(alias='minScore', strict=True, default_factory=fake.min_score)
@@ -59,14 +58,14 @@ class UpdateCourseResponseSchema(BaseModel):
 
 #-----------------------------------------------------------------------------------------------------------------------
 """====================================== Full Schema (⬆︎Request + ⬇Response) ✨====================================="""
-class CreateCoursesSchema(BaseModel):
+class CreateCourseSchema(BaseModel):
     request: CreateCourseRequestSchema    # ┐
     response: CreateCourseResponseSchema  # ┘
 
-    #--- Методы прямого доступа к данным ---
-    # Course ID
-    @property
-    def course_id(self):
-        return self.response.course.id
+
+class UpdateCourseSchema(BaseModel):
+    request: UpdateCourseRequestSchema    # ┐
+    response: UpdateCourseResponseSchema  # ┘
+
 
 #-----------------------------------------------------------------------------------------------------------------------

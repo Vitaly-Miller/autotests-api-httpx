@@ -4,7 +4,7 @@ Courses fixtures
 import httpx
 import pytest
 from clients.courses_client import get_courses_client, CoursesClient
-from schemas.courses_schema import CreateCourseRequestSchema, CreateCoursesSchema
+from schemas.courses_schema import CreateCourseRequestSchema, CreateCourseResponseSchema, CreateCourseSchema
 from schemas.files_schema import CreateFileSchema
 from schemas.users_schema import CreateUserSchema
 
@@ -55,7 +55,7 @@ def create_course(
     courses_client: CoursesClient, # ┐ ✨ДЕДУПЛИКАЦИЯ внутри одного теста — это фундаментальное свойство Pytest.
     create_user: CreateUserSchema, # ┘ ✨Один и тоже User! Несмотря на то, что обе фикстуры создают пользователя.
     create_file: CreateFileSchema
-) -> CreateCoursesSchema:
+) -> CreateCourseSchema:
     """
     Pydantic-фикстура создания курса
 
@@ -72,7 +72,7 @@ def create_course(
         createdByUserId=create_user.user_id          # Заменяем default на реальный User ID
     )
     response_model = courses_client.create_course(create_course_data)    # ▶ Запрос через Pydantic-метод
-    response_full_model = CreateCoursesSchema(request=create_course_data, response=response_model)   # Инициализация Pydantic-model (CoursesFullSchema) ✨<Request + Response>
+    response_full_model = CreateCourseSchema(request=create_course_data, response=response_model)   # Инициализация Pydantic-model (CoursesFullSchema) ✨<Request + Response>
     return response_full_model                                           # Pydantic-model (CoursesFullSchema) ✨<Request + Response>
 
 #-----------------------------------------------------------------------------------------------------------------------

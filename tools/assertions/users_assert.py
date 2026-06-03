@@ -17,7 +17,7 @@ def assert_create_user_data_equal(response: httpx.Response, request_model: Creat
 
     Если не передать Pydantic-model with User data, то вытащит из response.REQUEST.content и deserialize в —> Pydantic-model (for Assertions)
 
-    :param response:Response with User data (for deserialize —> Pydantic-model)
+    :param response: Response with User data (for deserialize —> Pydantic-model)
     :param request_model: Pydantic-model with User data / None
     :raise AssertionError
     """
@@ -28,24 +28,9 @@ def assert_create_user_data_equal(response: httpx.Response, request_model: Creat
         request_model = CreateUserRequestSchema.model_validate_json(response.request.content)  # Request —> Pydantic-model (Deserialize for Assertions)
 
     # Request Data = Response Data:
-    assert_equal(
-        response_model.user.email,
-        request_model.email,
-        'email')
-
-    assert_equal(
-        response_model.user.last_name,
-        request_model.last_name,
-        'last_name')
-
-    assert_equal(
-        response_model.user.first_name,
-        request_model.first_name,
-        'first_name')
-
-    assert_equal(
-        response_model.user.middle_name,
-        request_model.middle_name,
-        'middle_ame')
+    assert_equal(response_model.user.email,request_model.email,'email')
+    assert_equal(response_model.user.last_name,request_model.last_name,'last_name')
+    assert_equal(response_model.user.first_name, request_model.first_name,'first_name')
+    assert_equal(response_model.user.middle_name,request_model.middle_name,'middle_ame')
 
 #-----------------------------------------------------------------------------------------------------------------------
