@@ -28,5 +28,5 @@ def validate_json_schema(instance: httpx.Response | dict, schema: type[pydantic.
 
     except jsonschema.ValidationError as e:                                 # Сохранить полное описание ошибки валидации в переменной <e>
         print(f'❌JSON-Response schema. Validation error: [{e.message}]')   # Вывод краткого описания ошибки (только текст без кода)
-        raise AssertionError(e.message)                                                               # Упасть с полным описанием ошибки (Traceback)
+        raise AssertionError(e.message)                                     # Упасть с полным описанием ошибки (Traceback)
 #-----------------------------------------------------------------------------------------------------------------------

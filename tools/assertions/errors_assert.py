@@ -17,6 +17,7 @@ def assert_validate_error(actual: httpx.Response, expected: httpx.Response):
     actual_model = ErrorSchema.model_validate_json(actual.text)       # actual_Response  —> Pydantic-model (Deserialize for Assertions)
     expected_model = ErrorSchema.model_validate_json(expected.text)   # expected_Response —> Pydantic-model (Deserialize for Assertions)
 
+    # Request data = Response data:
     assert_equal(actual_model.type, expected_model.type, 'type')
     assert_equal(actual_model.loc, expected_model.loc, 'loc')
     assert_equal(actual_model.msg, expected_model.msg, 'msg')
@@ -52,7 +53,6 @@ def assert_not_found_response(actual: httpx.Response, expected_model: NotFoundEr
     :return:
     """
     actual_model = NotFoundErrorSchema.model_validate_json(actual.text)    # actual_Response  —> Pydantic-model (Deserialize for Assertions)
-
     assert_equal(actual_model.detail, expected_model.detail, 'detail')
 
 #-----------------------------------------------------------------------------------------------------------------------

@@ -20,10 +20,12 @@ def assert_create_file_values_non_empty(response: httpx.Response):
     """
     response_model = CreateFileResponseSchema.model_validate_json(response.text)   # Response —> Pydantic-model (Deserialize for Assertions)
 
+    # NON-empty Response values:
     assert_is_value(response_model.file.id, 'id')                # Поле не пустое
     assert_is_value(response_model.file.filename, 'filename')    # Поле не пустое
     assert_is_value(response_model.file.directory, 'directory')  # Поле не пустое
     assert_is_value(response_model.file.url, 'url')              # Поле не пустое
+
 
 
 def assert_create_file_data_equal(response: httpx.Response, request_model: CreateFileRequestSchema):
@@ -41,20 +43,10 @@ def assert_create_file_data_equal(response: httpx.Response, request_model: Creat
     response_model = CreateFileResponseSchema.model_validate_json(response.text)   # Response —> Pydantic-model (Deserialize for Assertions)
 
     # Create File Data = Created File Data:
-    assert_equal(
-        response_model.file.filename,
-        request_model.filename,
-        'filename')
+    assert_equal(response_model.file.filename,request_model.filename,'filename')
+    assert_equal(response_model.file.directory,request_model.directory,'directory')
+    assert_equal(response_model.file.url,f'http://localhost:8000/static/{request_model.directory}/{request_model.filename}','url')
 
-    assert_equal(
-        response_model.file.directory,
-        request_model.directory,
-        'directory')
-
-    assert_equal(
-        response_model.file.url,
-        f'http://localhost:8000/static/{request_model.directory}/{request_model.filename}',
-        'url')
 
 
 def assert_create_file_id_length(response: httpx.Response):
@@ -66,11 +58,8 @@ def assert_create_file_id_length(response: httpx.Response):
     :return: AssertionError
     """
     response_model = CreateFileResponseSchema.model_validate_json(response.text)    # Response —> Pydantic-model (Deserialize for Assertions)
-
-    assert_length_is(
-        response_model.file.id,
-        36,
-        'id')
+    # File ID length = 36 chars
+    assert_length_is(response_model.file.id,36,'id')
 
 
 #-----------------------------------------------------------------------------------------------------------------------
@@ -101,6 +90,7 @@ def assert_create_file_empty_filename_error_response(actual: httpx.Response):
     assert_validate_error_response(actual, expected_model) #
 
 
+
 # Create file - empty 'directory'
 def assert_create_file_empty_directory_error_response(actual: httpx.Response):
     """
@@ -123,6 +113,7 @@ def assert_create_file_empty_directory_error_response(actual: httpx.Response):
         ]
     )
     assert_validate_error_response(actual, expected_model)
+
 
 
 # File not found

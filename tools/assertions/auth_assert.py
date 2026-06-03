@@ -41,9 +41,7 @@ def assert_auth_token(response: httpx.Response):
     :param response: httpx.Response (for deserialize —> Pydantic-model)
     :raise AssertionError
     """
-
-    # httpx.Response —> Pydantic-model (Deserialize for Assertions)
-    response_model = AuthResponseSchema.model_validate_json(response.text)
+    response_model = AuthResponseSchema.model_validate_json(response.text) # Response —> Pydantic-model (Deserialize for Assertions)
 
     # Token type - 'bearer'
     assert_equal(

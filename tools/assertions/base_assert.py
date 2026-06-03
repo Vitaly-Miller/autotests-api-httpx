@@ -96,7 +96,7 @@ def assert_not_equal(obj_1: Any, obj_1_name: str, obj_2: Any, obj_2_name: str):
 
 
 #-------------------------------------------------------- Empty --------------------------------------------------------
-# Value is NOT empty
+# NON-empty values
 def assert_is_value(obj: Any, name: str):
     """
     Проверяет, что значение не пустое

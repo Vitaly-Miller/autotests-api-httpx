@@ -69,7 +69,7 @@ class TestCreateFile:
 
 
     # Empty 'directory'
-    def test__negative_create_file_empty_directory(self, files_client: FilesClient):
+    def test_negative_create_file_empty_directory(self, files_client: FilesClient):
         create_file_data = CreateFileRequestSchema(                  # Инициализация Pydantic-модели c default fake-data
            directory=''                                              # 👈default —> "" (empty)
         )

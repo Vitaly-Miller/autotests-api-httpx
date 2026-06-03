@@ -8,7 +8,7 @@ from tools.assertions.base_assert import assert_equal
 #=======================================================================================================================
 def assert_update_course_data_equal(response: httpx.Response, request_model: UpdateCourseRequestSchema | None = None):
     """
-    5-in-1 | Request Data = Response Data
+    5-in-1 | Request data = Response data
 
     Если не передать Pydantic-model with Update Course data, то вытащит из response.REQUEST.content и deserialize в —> Pydantic-model (for Assertions)
 
@@ -20,8 +20,7 @@ def assert_update_course_data_equal(response: httpx.Response, request_model: Upd
 
     # Условие, если не передать request_model, то ...
     if not request_model:
-        request_model = UpdateCourseRequestSchema.model_validate_json(
-            response.request.content)  # Request —> Pydantic-model (Deserialize for Assertions)
+        request_model = UpdateCourseRequestSchema.model_validate_json(response.request.content)  # Request —> Pydantic-model (Deserialize for Assertions)
 
     # Request Data = Response Data:
     assert_equal(response_model.course.title, request_model.title, 'title')

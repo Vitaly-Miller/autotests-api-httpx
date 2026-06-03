@@ -21,7 +21,7 @@ class TestUpdateCourse:
         # Assertions
         assert_status_code(response, http.HTTPStatus.OK)      # Status code: 200
         assert_method(response, http.HTTPMethod.PATCH)      # Method PATCH
-        assert_update_course_data_equal(response, update_course_data) # Request Data = Response Data
+        assert_update_course_data_equal(response, update_course_data) # Request data = Response data
         validate_json_schema(response, UpdateCourseResponseSchema)  # Validation JSON schema
 
 
