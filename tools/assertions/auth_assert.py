@@ -31,7 +31,7 @@ def assert_auth_values_non_empty(response: httpx.Response):
 
 #-----------------------------------------------------------------------------------------------------------------------
 # Token validation
-def assert_auth_token(response: httpx.Response):
+def assert_token(response: httpx.Response):
     """
     Token validation
 

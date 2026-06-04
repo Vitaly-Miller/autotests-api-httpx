@@ -9,7 +9,7 @@ from tools.assertions.base_assert import assert_equal, assert_length_equal
 # Validation Error
 def assert_validate_error(actual: httpx.Response, expected: httpx.Response):
     """
-    Validation Response Error
+    Validation Error
 
     :param actual: Response (for deserialize —> Pydantic-model)
     :param expected: Response (for deserialize —> Pydantic-model)
@@ -47,11 +47,11 @@ def assert_validate_error_response(actual: httpx.Response, expected_model: Respo
 
 def assert_not_found_response(actual: httpx.Response, expected_model: NotFoundErrorSchema):
     """
-    Сравнивает Error Response с Pydantic-model (NotFoundErrorSchema) при попытке получить несуществующую сущность
+    Error Response при попытке получить несуществующую сущность
 
     :param actual: Response (for deserialize —> Pydantic-model)
     :param expected_model: Pydantic-model (NotFoundErrorSchema)
-    :return:
+    :return: ValidationError
     """
     actual_model = NotFoundErrorSchema.model_validate_json(actual.text)    # Response  —> Pydantic-model
     assert_equal(actual_model.detail, expected_model.detail, 'detail')

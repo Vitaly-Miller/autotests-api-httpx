@@ -10,7 +10,7 @@ from tools.assertions.base_assert import assert_equal, assert_is_value, assert_l
 # Request data = Response data
 def assert_create_user_data_equal(response: httpx.Response, request_model: CreateUserRequestSchema | None = None):
     """
-    4-in-1 | Request data = Response data
+    Request data = Response data
 
     - Email
     - Last Name

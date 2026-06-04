@@ -32,6 +32,7 @@ class TestGetUserMe:
         validate_json_schema(response, GetUserMeResponseSchema) # Validation JSON schema
 
 
+
     """v.2 - Через фикстуру получения экземпляра PrivateUsersClient"""
     def test_get_user_me_3(self, private_users_client: PrivateUsersClient):
         response = private_users_client.get_user_me_api()                       # ▶ Запрос через API-метод
@@ -85,5 +86,4 @@ class TestGetUserMe:
 
 
     #=======================================================================================================================
-        # API Report
         # Tool.api_report(response)

@@ -47,6 +47,7 @@ class TestCreateFile:
         validate_json_schema(response, CreateFileResponseSchema)   # Validation JSON schema
 
 
+
     def test_is_file(self, files_client: FilesClient, create_file: CreateFileSchema):
         response = files_client.get_file_api(create_file.file_id)                  # ▶ Запрос через API-метод
 
@@ -59,7 +60,7 @@ class TestCreateFile:
     # Empty 'filename'
     def test_negative_create_file_empty_filename(self, files_client: FilesClient):
         create_file_data = CreateFileRequestSchema(                  # Pydantic-model with fake-data
-           filename=''                                               # 👈default —> "" (empty)
+           filename=''                                               # 👈fake-data —> "" (empty)
         )
         response = files_client.create_file_api(create_file_data)    # ▶ Запрос через API-метод
 
@@ -70,11 +71,10 @@ class TestCreateFile:
         validate_json_schema(response, ResponseErrorSchema)                      # Validation JSON schema
 
 
-
     # Empty 'directory'
     def test_negative_create_file_empty_directory(self, files_client: FilesClient):
         create_file_data = CreateFileRequestSchema(                  # Pydantic-model with fake-data
-           directory=''                                              # 👈default —> "" (empty)
+           directory=''                                              # 👈fake-data —> "" (empty)
         )
         response = files_client.create_file_api(create_file_data)    # ▶ Запрос через API-метод
 
@@ -86,5 +86,4 @@ class TestCreateFile:
 
 
 #=======================================================================================================================
-        # API Report
         #Tool.api_report(response)

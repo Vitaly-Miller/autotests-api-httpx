@@ -24,7 +24,7 @@ class TestCreateUser:
         # Assertions
         assert_status_code(response, http.HTTPStatus.OK)    # Status code: 200
         assert_method(response, http.HTTPMethod.POST)     # Method: POST
-        assert_create_user_data_equal(response)                                   # 4-in-1 | Request data = Response data
+        assert_create_user_data_equal(response)                                   # Request data = Response data
         assert_user_id(response)                                                  # 2-in-1 | User ID validation
         validate_json_schema(response, CreateUserResponseSchema)  # Validation JSON schema
 
@@ -37,8 +37,8 @@ class TestCreateUser:
         # Assertions
         assert_status_code(response, http.HTTPStatus.OK)    # Status code: 200
         assert_method(response, http.HTTPMethod.POST)     # Method: POST
-        assert_create_user_data_equal(response)                                   # 4-in-1 | Request data = Response data
-        assert_user_id(response)                                                  # 2-in-1 | User ID validation
+        assert_create_user_data_equal(response)                                   # Request data = Response data
+        assert_user_id(response)                                                  # User ID validation
         validate_json_schema(response, CreateUserResponseSchema)  # Validation JSON schema
 
 
@@ -59,8 +59,8 @@ class TestCreateUser:
         # Assertions
         assert_status_code(response, http.HTTPStatus.OK)    # Status code: 200
         assert_method(response, http.HTTPMethod.POST)     # Method: POST
-        assert_create_user_data_equal(response)                                   # 4-in-1 | Request data = Response data
-        assert_user_id(response)                                                  # 2-in-1 | User ID validation
+        assert_create_user_data_equal(response)                                   # Request data = Response data
+        assert_user_id(response)                                                  # User ID validation
         validate_json_schema(response, CreateUserResponseSchema)  # Validation JSON schema
 
 
@@ -99,5 +99,4 @@ class TestCreateUser:
 
 
 #=======================================================================================================================
-        # API Report
         # Tool.api_report(response)

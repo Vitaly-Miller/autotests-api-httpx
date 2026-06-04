@@ -9,7 +9,7 @@ from tools.assertions.base_assert import assert_is_value
 # NON-Empty Response values
 def assert_get_user_me_values_non_empty(response: httpx.Response):
     """
-    5-in-1 | NON-Empty Response values:
+    NON-Empty Response values:
 
     - id
     - email
@@ -30,7 +30,7 @@ def assert_get_user_me_values_non_empty(response: httpx.Response):
 
 
 # User ID validation
-# - Use <assert_user_id> from /users_assert.py
+# - Use <def assert_user_id> from /users_assert.py
 
 
 #-----------------------------------------------------------------------------------------------------------------------
