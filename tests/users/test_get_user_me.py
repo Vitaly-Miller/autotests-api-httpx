@@ -10,8 +10,9 @@ from schemas.auth_schema import AuthDataSchema
 from schemas.users_schema import CreateUserRequestSchema, CreateUserResponseSchema, GetUserMeResponseSchema
 from http import HTTPStatus, HTTPMethod
 from tools.assertions.base_assert import assert_status_code, assert_method
-from tools.assertions.get_user_me_assert import assert_get_user_me_user_id_len, assert_get_user_me_values_non_empty
+from tools.assertions.get_user_me_assert import assert_get_user_me_values_non_empty
 from tools.assertions.schema_assert import validate_json_schema
+from tools.assertions.users_assert import assert_user_id
 from tools.tool import Tool
 
 #=======================================================================================================================
@@ -26,8 +27,8 @@ class TestGetUserMe:
         # Assertions
         assert_status_code(response, HTTPStatus.OK)       # Status code: 200
         assert_method(response, HTTPMethod.GET)         # Method: GET
-        assert_get_user_me_values_non_empty(response)                           # 5-in-1 | NON-Empty values
-        assert_get_user_me_user_id_len(response)                                # User ID length = 36 chars
+        assert_get_user_me_values_non_empty(response)                           # NON-Empty Response values
+        assert_user_id(response)                                                # User ID validation
         validate_json_schema(response, GetUserMeResponseSchema) # Validation JSON schema
 
 
@@ -38,8 +39,8 @@ class TestGetUserMe:
         # Assertions
         assert_status_code(response, HTTPStatus.OK)       # Status code: 200
         assert_method(response, HTTPMethod.GET)         # Method: GET
-        assert_get_user_me_values_non_empty(response)                           # 5-in-1 | NON-Empty values
-        assert_get_user_me_user_id_len(response)                                # User ID length = 36 chars
+        assert_get_user_me_values_non_empty(response)                           # NON-Empty Response values
+        assert_user_id(response)                                                # User ID validation
         validate_json_schema(response, GetUserMeResponseSchema) # Validation JSON schema
 
 

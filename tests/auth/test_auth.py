@@ -23,8 +23,8 @@ class TestAuth:
         # Assertions
         assert_status_code(response, HTTPStatus.OK)          # Status code: 200
         assert_method(response, HTTPMethod.POST)           # Method: POST
-        assert_auth_values_non_empty(response)                                     # 3-in-1 | Non-empty response values
-        assert_auth_token(response)                                                # 4-in-1 | Token
+        assert_auth_values_non_empty(response)                                     # Non-empty Response values
+        assert_auth_token(response)                                                # Token validation
         validate_json_schema(response, AuthResponseSchema)         # Validation JSON schema
 
 
@@ -32,16 +32,16 @@ class TestAuth:
     """v.2 - Через фикстуры: Создания пользователя, Авторизации пользователя"""
     def test_auth_2(self, create_user: CreateUserSchema, auth_client: AuthClient):
         auth_data = AuthDataSchema(                      # Pydantic-model with fake-data (Email и Password),...
-            email=create_user.email,                     # Замена default на —> реальное значение
-            password=create_user.password                # Замена default на —> реальное значение
+            email=create_user.email,                     # Замена default на —> реальное значение из фикстуры
+            password=create_user.password                # Замена default на —> реальное значение из фикстуры
         )
         response = auth_client.login_api(auth_data)                                # ▶ Запрос через API-метод
 
         # Assertions
         assert_status_code(response, HTTPStatus.OK)          # Status code: 200
         assert_method(response, HTTPMethod.POST)           # Method: POST
-        assert_auth_values_non_empty(response)                                     # 3-in-1 | Non-empty response values
-        assert_auth_token(response)                                                # 4-in-1 | Token
+        assert_auth_values_non_empty(response)                                     # Non-empty Response values
+        assert_auth_token(response)                                                # Token validation
         validate_json_schema(response, AuthResponseSchema)         # Validation JSON schema
 
 

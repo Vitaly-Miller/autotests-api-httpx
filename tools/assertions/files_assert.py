@@ -1,33 +1,35 @@
 """
 Files Assertions
 """
-from typing import Any
-
 import httpx
-
 from schemas.errors_schema import ResponseErrorSchema, ErrorSchema, NotFoundErrorSchema
 from schemas.files_schema import CreateFileResponseSchema, CreateFileRequestSchema
-from tools.assertions.base_assert import assert_length_is, assert_is_value, assert_equal
+from tools.assertions.base_assert import assert_length, assert_is_value, assert_equal
 from tools.assertions.errors_assert import assert_validate_error_response, assert_not_found_response
 
 #=======================================================================================================================
+# NON-empty Response values
 def assert_create_file_values_non_empty(response: httpx.Response):
     """
-    4-in-1 | NON-empty response values
+    4-in-1 | NON-empty Response values
+
+    - id
+    - filename
+    - directory
+    - url
 
     :param response: httpx.Response (for deserialize —> Pydantic-model)
     :raise AssertionError
     """
-    response_model = CreateFileResponseSchema.model_validate_json(response.text)   # Response —> Pydantic-model (Deserialize for Assertions)
+    response_model = CreateFileResponseSchema.model_validate_json(response.text)   # Response —> Pydantic-model
 
-    # NON-empty Response values:
-    assert_is_value(response_model.file.id, 'id')                # Поле не пустое
-    assert_is_value(response_model.file.filename, 'filename')    # Поле не пустое
-    assert_is_value(response_model.file.directory, 'directory')  # Поле не пустое
-    assert_is_value(response_model.file.url, 'url')              # Поле не пустое
-
+    assert_is_value(response_model.file.id, 'id')
+    assert_is_value(response_model.file.filename, 'filename')
+    assert_is_value(response_model.file.directory, 'directory')
+    assert_is_value(response_model.file.url, 'url')
 
 
+# Request Data = Response Data
 def assert_create_file_data_equal(response: httpx.Response, request_model: CreateFileRequestSchema):
     """
     3-in-1 | Request Data = Response Data
@@ -40,36 +42,37 @@ def assert_create_file_data_equal(response: httpx.Response, request_model: Creat
     :param request_model: Pydantic-model with File data
     :raise AssertionError
     """
-    response_model = CreateFileResponseSchema.model_validate_json(response.text)   # Response —> Pydantic-model (Deserialize for Assertions)
+    response_model = CreateFileResponseSchema.model_validate_json(response.text)   # Response —> Pydantic-model
 
-    # Create File Data = Created File Data:
     assert_equal(response_model.file.filename,request_model.filename,'filename')
     assert_equal(response_model.file.directory,request_model.directory,'directory')
     assert_equal(response_model.file.url,f'http://localhost:8000/static/{request_model.directory}/{request_model.filename}','url')
 
 
-
-def assert_create_file_id_length(response: httpx.Response):
+# File ID
+def assert_file_id(response: httpx.Response):
     """
-    File ID length = 36 chars
+    2-in-1 | File ID validation
 
+    - File ID is NON-empty
+    - File ID length = 36 chars
 
     :param response: httpx.Response (for deserialize —> Pydantic-model)
     :return: AssertionError
     """
-    response_model = CreateFileResponseSchema.model_validate_json(response.text)    # Response —> Pydantic-model (Deserialize for Assertions)
-    # File ID length = 36 chars
-    assert_length_is(response_model.file.id,36,'id')
+    response_model = CreateFileResponseSchema.model_validate_json(response.text)    # Response —> Pydantic-model
+    assert_is_value(response_model.file.id, 'id')                        # NON-empty File ID
+    assert_length(response_model.file.id,36,'id')          # File ID length = 36 chars
 
 
 #-----------------------------------------------------------------------------------------------------------------------
 
 
 #====================================================== Negative =======================================================
-# Create file - empty 'filename'
+# Create file by filename="" (empty)
 def assert_create_file_empty_filename_error_response(actual: httpx.Response):
     """
-    Проверка Error Response при создании файла с пустым 'filename'
+    Проверка Error Response при создании файла с пустым filename=""
 
     Сравнивает Error Response с ожидаемой Pydantic-model (ResponseErrorSchema) при создании файла с пустым 'filename'
 
@@ -91,10 +94,10 @@ def assert_create_file_empty_filename_error_response(actual: httpx.Response):
 
 
 
-# Create file - empty 'directory'
+# Create file by filename="" (empty)
 def assert_create_file_empty_directory_error_response(actual: httpx.Response):
     """
-    Проверка Error Response при создании файла с пустым 'directory'
+    Проверка Error Response при создании файла с пустым directory=""
 
     Сравнивает Error Response с ожидаемой Pydantic-model (ResponseErrorSchema) при создании файла с пустым 'directory'
 
@@ -130,6 +133,8 @@ def assert_file_not_found_error_response(actual: httpx.Response):
         detail='File not found'
     )
     assert_not_found_response(actual, expected_model)
+
+
 
 # Get File by invalid File ID (non-UUID format)
 def assert_get_file_by_invalid_file_id_error_response(actual: httpx.Response):

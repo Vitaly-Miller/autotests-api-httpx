@@ -10,9 +10,11 @@ from schemas.files_schema import CreateFileResponseSchema, CreateFileRequestSche
 from tools.assertions.base_assert import assert_status_code, assert_method
 from tools.assertions.schema_assert import validate_json_schema
 from tools.assertions.files_assert import (
-    assert_create_file_id_length,
+    assert_file_id,
     assert_create_file_values_non_empty,
-    assert_create_file_data_equal, assert_create_file_empty_filename_error_response, assert_create_file_empty_directory_error_response
+    assert_create_file_data_equal,
+    assert_create_file_empty_filename_error_response,
+    assert_create_file_empty_directory_error_response
 )
 from tools.tool import Tool
 #=======================================================================================================================
@@ -21,15 +23,15 @@ from tools.tool import Tool
 class TestCreateFile:
     """v.1 - Через фикстуру получения экземпляра FilesClient"""
     def test_create_file_1(self, files_client: FilesClient):
-        create_file_data = CreateFileRequestSchema()                               # Pydantic-model with fake-data
-        response = files_client.create_file_api(create_file_data)                  # ▶ Запрос через API-метод
+        file_data = CreateFileRequestSchema()                                      # Pydantic-model with fake-data
+        response = files_client.create_file_api(file_data)                         # ▶ Запрос через API-метод
 
         # Assertions
         assert_status_code(response, http.HTTPStatus.OK)     # Status code: 200
         assert_method(response, http.HTTPMethod.POST)      # Method: POST
-        assert_create_file_values_non_empty(response)                              # 4-in-1 | NON-empty response values
-        assert_create_file_id_length(response)                                     # File ID length = 36 chars
-        assert_create_file_data_equal(response,create_file_data)  # 3-in-1 | Request Data = Response Data
+        assert_create_file_values_non_empty(response)                              # NON-empty Response values
+        assert_file_id(response)                                                   # File ID validation
+        assert_create_file_data_equal(response,file_data)    # Request Data = Response Data
         validate_json_schema(response, CreateFileResponseSchema)   # Validation JSON schema
 
 
@@ -40,8 +42,8 @@ class TestCreateFile:
         # Assertions
         assert_status_code(response, http.HTTPStatus.OK)     # Status code: 200
         assert_method(response, http.HTTPMethod.POST)      # Method: POST
-        assert_create_file_values_non_empty(response)                              # 4-in-1 | NON-empty response values
-        assert_create_file_id_length(response)                                     # File ID length = 36 chars
+        assert_create_file_values_non_empty(response)                              # NON-empty Response values
+        assert_file_id(response)                                                   # File ID validation
         validate_json_schema(response, CreateFileResponseSchema)   # Validation JSON schema
 
 

@@ -20,7 +20,7 @@ def assert_status_code(response: httpx.Response, expected_code: int):
     """
     Проверка Status Code
 
-    :param response: httpx.Response
+    :param response: Response
     :param expected_code: Expected Status Code
     :raise AssertionError - если значения не совпадают
     """
@@ -115,19 +115,19 @@ def assert_is_value(obj: Any, name: str):
 
 #------------------------------------------------------- Length --------------------------------------------------------
 # Length = ...
-def assert_length_is(obj: Sized, expected: int, name: str):
+def assert_length(obj: Sized, expected_length: int, name: str):
     """
     Проверяет длину объекта (Manual length)
 
     :param obj: Object (например: response_model.user.id)
-    :param expected: Ожидаемая длина (manual)
+    :param expected_length: Ожидаемая длина (manual)
     :param name: Object name (для вывода в ошибке)
     :raise AssertionError
     """
-    assert len(obj) == expected, f"""
+    assert len(obj) == expected_length, f"""
 {error_title}
 ⚠️ Incorrect "{name}" value length!
-{exp} {expected}
+{exp} {expected_length}
 {act} {len(obj)}
 """
 
