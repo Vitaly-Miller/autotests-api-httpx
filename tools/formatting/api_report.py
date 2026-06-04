@@ -1,9 +1,7 @@
 """
-🅰🅿︎🅸 🆁🅴🅿︎🅾🆁🆃 to console (✨Pretty)
+API REPORT to console (✨Pretty)
 """
 import json
-from urllib import response
-
 from tools.formatting.colors import ANSI
 
 #=======================================================================================================================
@@ -16,10 +14,12 @@ class Report:
     def api_title():
         print(f'\n\n{ANSI.GRAY}{'—'*12}{ANSI.B_CYAN} API REPORT {ANSI.GRAY}{'—'*12}{ANSI.RESET}')
 
+
     # URL
     def api_url(self):
         url = self.response.request.url
         print(f'\n{ANSI.B_CYAN}┌╴{ANSI.RESET}Request URL:\t  {url}{ANSI.RESET}')
+
 
     # Method
     def api_method(self):
@@ -33,6 +33,7 @@ class Report:
         else: color = ANSI.RESET
         print(f'{ANSI.B_CYAN}├╴{ANSI.RESET}HTTP Method:\t  {color}{method}{ANSI.RESET}')
 
+
     # Status code
     def api_status_code(self):
         code = self.response.status_code            # Код            (например: 200)
@@ -45,6 +46,7 @@ class Report:
         else: color = ANSI.RESET
         print(f'{ANSI.B_CYAN}├╴{ANSI.RESET}Status code:\t  {color}{code}-{reason}{ANSI.RESET}')
 
+
     # Response time
     def api_response_time(self, max_sec=5.0):                    # Max sec limit = ⚠️default value
         response_time = self.response.elapsed.total_seconds()    # 0.12345
@@ -56,7 +58,7 @@ class Report:
         print(f'{ANSI.B_CYAN}└╴{ANSI.RESET}Response time:  {color}{round_response_time}{ANSI.GRAY}/{max_sec} sec{ANSI.RESET}\n')
 
 
-    #---------------------------------------------- REQUEST / RESPONSE -------------------------------------------------
+    #------------------------------------------------- Body (Content) --------------------------------------------------
     # REQUEST Body ⮕
     def api_request_body(self):
         print(f'\n{ANSI.GREEN} REQUEST Body{ANSI.GRAY}: ⮕')
@@ -67,7 +69,7 @@ class Report:
                 print(request_body_json)
             else:
                 print(f'{{\n\t<None>\n}}')
-        except Exception:
+        except Exception:  # NOQA
             print(f'{{\n\t<multipart/stream>\n}}')
 
 
@@ -81,7 +83,7 @@ class Report:
         except Exception as e:
             print(f' ⚠️ {e}')
 
-
+    #----------------------------------------------------- Headers -----------------------------------------------------
     # REQUEST Headers ⮕
     def api_request_headers(self):
         print(f'\n{ANSI.BROWN} REQUEST Headers{ANSI.GRAY}: ⮕')
@@ -98,4 +100,4 @@ class Report:
         print(response_headers_json)
         print(f'{'—'*36}{ANSI.RESET}')
 
-#-----------------------------------------------------------------------------------------------------------------------
+#=======================================================================================================================
