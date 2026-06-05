@@ -27,7 +27,7 @@ class TestDeleteFile:
         assert_status_code(get_non_existent_file_response, http.HTTPStatus.NOT_FOUND)   # Status code: 404
         assert_method(get_non_existent_file_response, http.HTTPMethod.GET)            # Method: GET
         assert_file_not_found_error_response(get_non_existent_file_response)                                  # Error Response ("detail": "File not found")
-        validate_json_schema(get_non_existent_file_response, NotFoundErrorResponseSchema)             # Validation JSON schema
+        validate_json_schema(get_non_existent_file_response, NotFoundErrorResponseSchema)     # Validation JSON schema
 
 
 #=======================================================================================================================

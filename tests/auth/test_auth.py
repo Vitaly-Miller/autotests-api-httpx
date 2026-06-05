@@ -23,7 +23,7 @@ class TestAuth:
         # Assertions
         assert_status_code(response, HTTPStatus.OK)          # Status code: 200
         assert_method(response, HTTPMethod.POST)           # Method: POST
-        assert_auth_response_values_non_empty(response)                                     # Non-empty Response values
+        assert_auth_response_values_non_empty(response)                            # Non-empty Response values
         assert_token(response)                                                     # Token validation
         validate_json_schema(response, AuthResponseSchema)         # Validation JSON schema
 
@@ -40,7 +40,7 @@ class TestAuth:
         # Assertions
         assert_status_code(response, HTTPStatus.OK)          # Status code: 200
         assert_method(response, HTTPMethod.POST)           # Method: POST
-        assert_auth_response_values_non_empty(response)                                     # Non-empty Response values
+        assert_auth_response_values_non_empty(response)                            # Non-empty Response values
         assert_token(response)                                                     # Token validation
         validate_json_schema(response, AuthResponseSchema)         # Validation JSON schema
 
