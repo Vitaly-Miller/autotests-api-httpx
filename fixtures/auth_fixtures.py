@@ -1,5 +1,5 @@
 """
-Auth (Authentication) fixtures
+Auth (Authentication) (Fixtures)
 """
 import httpx
 import pytest
@@ -12,12 +12,12 @@ from schemas.users_schema import CreateUserSchema
 @pytest.fixture
 def auth_client() -> AuthClient:
     """
-    Фикстура получения экземпляра AuthClient (c Base URL)
+    Фикстура получения экземпляра AuthClient() (c Base URL)
 
-    :return: Экземпляр AuthClient (c Base URL)
+    :return: Экземпляр AuthClient() (c Base URL)
     """
     auth_client = get_auth_client()
-    return auth_client
+    return auth_client                                          # AuthClient()
 
 #-------------------------------------------------------- Auth ---------------------------------------------------------
 # API

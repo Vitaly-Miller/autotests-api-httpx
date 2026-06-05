@@ -1,5 +1,5 @@
 """
-Authentication Pydantic Schema
+Authentication (Pydantic Schema)
 """
 from pydantic import BaseModel, Field, EmailStr
 from schemas.auth_schema import AuthDataSchema

@@ -1,5 +1,5 @@
 """
-Courses Pydantic Schema
+Courses (Pydantic Schema)
 """
 from pydantic import BaseModel, Field
 from schemas.files_schema import FileSchema

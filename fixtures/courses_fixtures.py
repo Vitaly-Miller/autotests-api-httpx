@@ -1,5 +1,5 @@
 """
-Courses fixtures
+Courses (Fixtures)
 """
 import httpx
 import pytest
@@ -13,13 +13,13 @@ from schemas.users_schema import CreateUserSchema
 @pytest.fixture
 def courses_client(create_user: CreateUserSchema) -> CoursesClient:
     """
-    Фикстура получения экземпляра CoursesClient (с Авторизацией)
+    Фикстура получения экземпляра CoursesClient() (с Авторизацией)
 
     :param create_user: Вложенная Pydantic-фикстура создания пользователя
-    :return: Экземпляр CoursesClient (с Авторизацией)
+    :return: Экземпляр CoursesClient() (с Авторизацией)
     """
     courses_client = get_courses_client(create_user.auth_data)
-    return courses_client
+    return courses_client                            # CoursesClient()
 
 
 #---------------------------------------------------- Create course ----------------------------------------------------

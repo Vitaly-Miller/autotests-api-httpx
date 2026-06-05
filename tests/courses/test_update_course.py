@@ -1,5 +1,5 @@
 """
-Test Update Course
+TEST Update Course
 """
 import http
 import pytest

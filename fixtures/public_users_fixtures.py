@@ -1,5 +1,5 @@
 """
-Public Users fixtures
+Public Users (Fixtures)
 """
 import httpx
 import pytest
@@ -11,12 +11,12 @@ from schemas.users_schema import CreateUserSchema, CreateUserRequestSchema
 @pytest.fixture
 def public_users_client() -> PublicUsersClient:
     """
-    Фикстура получения экземпляра PublicUsersClient (c Base URL)
+    Фикстура получения экземпляра PublicUsersClient() (c Base URL)
 
-    :return: Экземпляр PublicUsersClient (c Base URL)
+    :return: Экземпляр PublicUsersClient() (c Base URL)
     """
     public_users_client = get_public_users_client()
-    return public_users_client
+    return public_users_client                                        # PublicUsersClient()
 
 
 #----------------------------------------------------- Create User -----------------------------------------------------

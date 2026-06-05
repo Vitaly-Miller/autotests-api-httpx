@@ -1,5 +1,5 @@
 """
-Exercises fixtures
+Exercises (Fixtures)
 """
 import httpx
 import pytest
@@ -13,13 +13,13 @@ from schemas.users_schema import CreateUserSchema
 @pytest.fixture
 def exercises_client(create_user: CreateUserSchema) -> ExercisesClient:
     """
-    Фикстура получения экземпляра ExercisesClient (c Авторизацией)
+    Фикстура получения экземпляра ExercisesClient() (c Авторизацией)
 
     :param create_user: Вложенная Pydantic-фикстура создания пользователя
-    :return: Экземпляр ExercisesClient (c Авторизацией)
+    :return: Экземпляр ExercisesClient() (c Авторизацией)
     """
     exercises_client = get_exercises_client(create_user.auth_data)
-    return exercises_client
+    return exercises_client                                # ExercisesClient()
 
 
 #-------------------------------------------------- Create exercise ----------------------------------------------------

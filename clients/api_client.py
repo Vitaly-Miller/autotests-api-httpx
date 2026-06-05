@@ -28,6 +28,7 @@ class APIClient:
         """
         return self.client.get(url=url, params=params)
 
+
     # 🟨POST -----------------------------------------------------------------------------------------------------------
     def post(self,
              url: httpx.URL | str,
@@ -45,6 +46,7 @@ class APIClient:
         """
         return self.client.post(url=url, json=json, data=data, files=files)
 
+
     # 🟪PATCH ----------------------------------------------------------------------------------------------------------
     def patch(self,
               url: httpx.URL | str,
@@ -58,6 +60,7 @@ class APIClient:
         """
         return self.client.patch(url=url, json=json)
 
+
     # 🟦PUT ------------------------------------------------------------------------------------------------------------
     def put(self,
             url: httpx.URL | str,
@@ -70,6 +73,7 @@ class APIClient:
         :return: httpx.Response
         """
         return self.client.put(url=url, json=json)
+
 
     # 🟥DELETE ---------------------------------------------------------------------------------------------------------
     def delete(self,

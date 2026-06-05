@@ -1,5 +1,5 @@
 """
-Test Get User Me
+TEST Get User Me
 """
 import httpx
 import pytest

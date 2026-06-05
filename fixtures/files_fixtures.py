@@ -1,5 +1,5 @@
 """
-Files fixtures
+Files (Fixtures)
 """
 from typing import Any, Generator
 
@@ -17,13 +17,13 @@ from schemas.users_schema import CreateUserSchema
 @pytest.fixture
 def files_client(create_user: CreateUserSchema) -> FilesClient:
     """
-    Фикстура получения экземпляра FilesClient (c Авторизацией)
+    Фикстура получения экземпляра FilesClient() (c Авторизацией)
 
     :param create_user: Вложенная Pydantic-фикстура создания пользователя
-    :return: Экземпляр класса class FilesClient (c Base URL + АВТОРИЗАЦИЯ)
+    :return: Экземпляр класса class FilesClient() (c Base URL + АВТОРИЗАЦИЯ)
     """
     files_client = get_files_client(create_user.auth_data)
-    return files_client
+    return files_client                                        # FilesClient()
 
 
 #----------------------------------------------------- Create File -----------------------------------------------------

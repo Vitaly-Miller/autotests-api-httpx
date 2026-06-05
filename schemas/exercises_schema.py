@@ -1,5 +1,5 @@
 """
-Exercises Pydantic Schema
+Exercises (Pydantic Schema)
 """
 from pydantic import BaseModel, Field
 from tools.data_generator import fake

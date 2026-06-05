@@ -1,5 +1,5 @@
 """
-Files Pydantic Schema
+Files (Pydantic Schema)
 """
 from pathlib import Path
 from pydantic import BaseModel, Field

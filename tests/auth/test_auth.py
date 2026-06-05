@@ -1,5 +1,5 @@
 """
-Test User Auth (Log in)
+TEST User Auth (Log in)
 """
 import httpx
 import pytest

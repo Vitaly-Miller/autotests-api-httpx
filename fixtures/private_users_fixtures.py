@@ -1,5 +1,5 @@
 """
-🔒Private Users fixtures
+🔒Private Users (Fixtures)
 """
 import httpx
 import pytest
@@ -11,13 +11,13 @@ from schemas.users_schema import CreateUserSchema, GetUserMeResponseSchema
 @pytest.fixture
 def private_users_client(create_user: CreateUserSchema) -> PrivateUsersClient:
     """
-    Фикстура получения экземпляра PrivateUsersClient (c Авторизацией)
+    Фикстура получения экземпляра PrivateUsersClient() (c Авторизацией)
 
     :param create_user: Вложенная Pydantic-фикстура создания пользователя
-    :return: Экземпляр PrivateUsersClient (c Авторизацией)
+    :return: Экземпляр PrivateUsersClient() (c Авторизацией)
     """
     client = get_private_users_client(create_user.auth_data)
-    return client
+    return client                                          # PrivateUsersClient()
 
 
 #----------------------------------------------------- Get User Me -----------------------------------------------------
