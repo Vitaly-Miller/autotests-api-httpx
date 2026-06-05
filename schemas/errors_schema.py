@@ -13,7 +13,7 @@ class ErrorSchema(BaseModel):
     input: Any
     ctx: dict[str, Any] | None = None
 
-class ResponseErrorSchema(BaseModel):
+class ErrorResponseSchema(BaseModel):
     """
     Схема ошибки при создании сущности (User, File, Exercise, etc.)
 
@@ -79,7 +79,7 @@ class ResponseErrorSchema(BaseModel):
 
 
 #---------------------------------------------------- NON-exist entity -------------------------------------------------
-class NotFoundErrorSchema(BaseModel):
+class NotFoundErrorResponseSchema(BaseModel):
     """
     Схема ошибки при попытке получения несуществующей сущности (User, File, Exercise, etc.)
 

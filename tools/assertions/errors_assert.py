@@ -2,7 +2,7 @@
 Errors assertions
 """
 import httpx
-from schemas.errors_schema import ErrorSchema, ResponseErrorSchema, NotFoundErrorSchema
+from schemas.errors_schema import ErrorSchema, ErrorResponseSchema, NotFoundErrorResponseSchema
 from tools.assertions.base_assert import assert_equal, assert_length_equal
 
 #=======================================================================================================================
@@ -27,7 +27,7 @@ def assert_validate_error(actual: httpx.Response, expected: httpx.Response):
 
 
 # Validation Response Error
-def assert_validate_error_response(actual: httpx.Response, expected_model: ResponseErrorSchema):
+def assert_validate_error_response(actual: httpx.Response, expected_model: ErrorResponseSchema):
     """
     Validation Response Error
 
@@ -35,25 +35,25 @@ def assert_validate_error_response(actual: httpx.Response, expected_model: Respo
     - Сравнивает значения полей в объекте "detail"
 
     :param actual: Response (for deserialize —> Pydantic-model)
-    :param expected_model: Pydantic-model (ResponseErrorSchema)
+    :param expected_model: Pydantic-model (ErrorResponseSchema)
     :return: ValidationError
     """
-    actual_model = ResponseErrorSchema.model_validate_json(actual.text)   # Response  —> Pydantic-model
+    actual_model = ErrorResponseSchema.model_validate_json(actual.text)   # Response  —> Pydantic-model
 
     assert_length_equal(actual_model.detail, expected_model.detail, 'detail') # Сравниваем количество элементов в объекте "detail"
     assert_equal(actual_model.detail, expected_model.detail, 'detail')    # Сравниваем значения элементов в объекте "detail"
 
 
 
-def assert_not_found_response(actual: httpx.Response, expected_model: NotFoundErrorSchema):
+def assert_not_found_response(actual: httpx.Response, expected_model: NotFoundErrorResponseSchema):
     """
     Error Response при попытке получить несуществующую сущность
 
     :param actual: Response (for deserialize —> Pydantic-model)
-    :param expected_model: Pydantic-model (NotFoundErrorSchema)
+    :param expected_model: Pydantic-model (NotFoundErrorResponseSchema)
     :return: ValidationError
     """
-    actual_model = NotFoundErrorSchema.model_validate_json(actual.text)    # Response  —> Pydantic-model
+    actual_model = NotFoundErrorResponseSchema.model_validate_json(actual.text)    # Response  —> Pydantic-model
     assert_equal(actual_model.detail, expected_model.detail, 'detail')
 
 #-----------------------------------------------------------------------------------------------------------------------
