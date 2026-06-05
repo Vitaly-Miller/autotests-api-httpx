@@ -7,7 +7,7 @@ from tools.assertions.base_assert import assert_is_value
 
 #=======================================================================================================================
 # NON-Empty Response values
-def assert_get_user_me_values_non_empty(response: httpx.Response):
+def assert_get_user_me_response_values_non_empty(response: httpx.Response):
     """
     NON-Empty Response values:
 

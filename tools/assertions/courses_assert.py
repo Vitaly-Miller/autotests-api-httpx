@@ -7,7 +7,7 @@ from tools.assertions.base_assert import assert_equal
 
 #=======================================================================================================================
 # Request Data = Response Data:
-def assert_update_course_data_equal(response: httpx.Response, request_model: UpdateCourseRequestSchema | None = None):
+def assert_update_course_response_equal(response: httpx.Response, request_model: UpdateCourseRequestSchema | None = None):
     """
     Request data = Response data
 

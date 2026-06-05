@@ -11,7 +11,7 @@ from tools.assertions.base_assert import (
 )
 #=======================================================================================================================
 # NON-Empty Response values
-def assert_auth_values_non_empty(response: httpx.Response):
+def assert_auth_response_values_non_empty(response: httpx.Response):
     """
     Non-empty Response values
 

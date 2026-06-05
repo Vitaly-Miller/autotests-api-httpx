@@ -81,9 +81,12 @@ class ErrorResponseSchema(BaseModel):
 #---------------------------------------------------- NON-exist entity -------------------------------------------------
 class NotFoundErrorResponseSchema(BaseModel):
     """
-    Схема ошибки при попытке получения несуществующей сущности (User, File, Exercise, etc.)
+    Схема ошибки при попытке получения несуществующей сущности
 
-    .
+   - User
+   - File
+   - Course
+   - Exercise
     """
     detail: str
 

@@ -7,7 +7,7 @@ from clients.auth_client import AuthClient
 from schemas.users_schema import CreateUserSchema
 from schemas.auth_schema import AuthResponseSchema, AuthDataSchema
 from http import HTTPStatus, HTTPMethod
-from tools.assertions.auth_assert import assert_token, assert_auth_values_non_empty
+from tools.assertions.auth_assert import assert_token, assert_auth_response_values_non_empty
 from tools.assertions.base_assert import assert_status_code, assert_method
 from tools.assertions.schema_assert import validate_json_schema
 from tools.tool import Tool
@@ -23,7 +23,7 @@ class TestAuth:
         # Assertions
         assert_status_code(response, HTTPStatus.OK)          # Status code: 200
         assert_method(response, HTTPMethod.POST)           # Method: POST
-        assert_auth_values_non_empty(response)                                     # Non-empty Response values
+        assert_auth_response_values_non_empty(response)                                     # Non-empty Response values
         assert_token(response)                                                     # Token validation
         validate_json_schema(response, AuthResponseSchema)         # Validation JSON schema
 
@@ -40,7 +40,7 @@ class TestAuth:
         # Assertions
         assert_status_code(response, HTTPStatus.OK)          # Status code: 200
         assert_method(response, HTTPMethod.POST)           # Method: POST
-        assert_auth_values_non_empty(response)                                     # Non-empty Response values
+        assert_auth_response_values_non_empty(response)                                     # Non-empty Response values
         assert_token(response)                                                     # Token validation
         validate_json_schema(response, AuthResponseSchema)         # Validation JSON schema
 

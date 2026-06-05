@@ -6,9 +6,8 @@ from schemas.users_schema import CreateUserRequestSchema, CreateUserResponseSche
 from tools.assertions.base_assert import assert_equal, assert_is_value, assert_length
 
 #=======================================================================================================================
-
 # Request data = Response data
-def assert_create_user_data_equal(response: httpx.Response, request_model: CreateUserRequestSchema | None = None):
+def assert_create_user_response_equal(response: httpx.Response, request_model: CreateUserRequestSchema | None = None):
     """
     Request data = Response data
 

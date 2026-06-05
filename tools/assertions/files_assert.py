@@ -9,7 +9,7 @@ from tools.assertions.errors_assert import assert_validate_error_response, asser
 
 #=======================================================================================================================
 # NON-empty Response values
-def assert_create_file_values_non_empty(response: httpx.Response):
+def assert_create_file_response_values_non_empty(response: httpx.Response):
     """
     NON-empty Response values
 
@@ -30,7 +30,7 @@ def assert_create_file_values_non_empty(response: httpx.Response):
 
 
 # Request Data = Response Data
-def assert_create_file_data_equal(response: httpx.Response, request_model: CreateFileRequestSchema):
+def assert_create_file_response_equal(response: httpx.Response, request_model: CreateFileRequestSchema):
     """
     Request Data = Response Data
 
