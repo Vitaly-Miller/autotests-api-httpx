@@ -14,10 +14,12 @@ from tools.tool import Tool
 @pytest.mark.courses
 @pytest.mark.regression
 class TestUpdateCourse:
-    def test_update_course(self, courses_client:  CoursesClient, create_course: CreateCourseSchema):
+    def test_update_course(self, courses_client: CoursesClient, create_course: CreateCourseSchema):
         update_course_data = UpdateCourseRequestSchema()                            # Pydantic-model with fake-data
-        response = courses_client.update_course_api(create_course.response.course.id, update_course_data)
-
+        response = courses_client.update_course_api(                                # ▶ Запрос через API-метод
+            create_course.response.course.id,
+            update_course_data
+        )
         # Assertions
         assert_status_code(response, http.HTTPStatus.OK)      # Status code: 200
         assert_method(response, http.HTTPMethod.PATCH)      # Method: PATCH
