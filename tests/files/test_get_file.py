@@ -7,9 +7,9 @@ from clients.files_client import FilesClient
 from schemas.errors_schema import ErrorResponseSchema
 from schemas.files_schema import CreateFileSchema, CreateFileResponseSchema
 from tools.assertions.base_assert import assert_status_code, assert_method
-from tools.assertions.files_assert import assert_file_not_found_error_response, assert_invalid_file_id_error_response
 from tools.assertions.schema_assert import validate_json_schema
 from tools.data_generator import fake
+from tools.assertions.files_assert import assert_file_id, assert_file_not_found_error_response, assert_invalid_file_id_error_response
 from tools.tool import Tool
 
 #=======================================================================================================================
@@ -22,6 +22,7 @@ class TestGetFile:
         # Assertions
         assert_status_code(response, http.HTTPStatus.OK)   # Status code: 200
         assert_method(response, http.HTTPMethod.GET)     # Method: GET
+        assert_file_id(response, create_file.file_id)             # File ID validation
         validate_json_schema(response, CreateFileResponseSchema) # Validation JSON schema
 
 

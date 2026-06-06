@@ -1,5 +1,5 @@
 """
-❌ Validation Error (Pydantic Schema)
+Validation Error ❌ (Pydantic Schema)
 """
 
 from pydantic import BaseModel

@@ -7,7 +7,7 @@ from clients.api_client import APIClient
 from clients.httpx_private_client import get_httpx_private_client
 from schemas.auth_schema import AuthDataSchema
 from schemas.courses_schema import (
-    GetCoursesRequestSchema,
+    GetCoursesQwerySchema,
     CreateCourseRequestSchema,
     UpdateCourseRequestSchema,
     CreateCourseResponseSchema, UpdateCourseResponseSchema
@@ -18,14 +18,14 @@ class CoursesClient(APIClient):
     ENDPOINT = '/courses'
     #------------------------------------------------- Get Courses -----------------------------------------------------
     # API
-    def get_courses_api(self, query_user_id: GetCoursesRequestSchema) -> httpx.Response:
+    def get_courses_api(self, query_user_id: GetCoursesQwerySchema) -> httpx.Response:
         """
         API-метод получения списка курсов по User ID (?query)
 
         :param query_user_id: Pydantic-model c User ID (?query)
         :return: httpx.Response
         """
-        response = self.get(url=self.ENDPOINT, params=query_user_id)  # NOQA  # ▶ Запрос
+        response = self.get(url=self.ENDPOINT, params=query_user_id.model_dump(by_alias=True))  # ▶ Запрос c Query-параметром
         return response                                                       # httpx.Response
 
     #-------------------------------------------------- Get Course -----------------------------------------------------

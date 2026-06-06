@@ -51,11 +51,16 @@ class CreateFileSchema(BaseModel):
     # File name (Новое имя файла при сохранении на сервере)
     @property
     def file_mame(self):
-        return self.response.file.filename
+        return self.request.filename
 
     # Directory (Директория сохранения файла на сервере)
     @property
     def directory(self):
-        return self.response.file.directory
+        return self.request.directory
+
+    # URL (Адрес файла на сервере)
+    @property
+    def url(self):
+        return self.request.upload_path
 
 #-----------------------------------------------------------------------------------------------------------------------

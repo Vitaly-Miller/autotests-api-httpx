@@ -17,10 +17,13 @@ class CreateCourseRequestSchema(BaseModel):
     preview_file_id: str = Field(alias='previewFileId', default_factory=fake.uuid4)           # ⚠️Default value for NEGATIVE test ONLY
     created_by_user_id: str = Field(alias='createdByUserId', default_factory=fake.user_id)    # ⚠️️Default value for NEGATIVE test ONLY
 
+#---------------------------------------------------- Get Course -------------------------------------------------------
+
+
 
 #----------------------------------------------------- Get Courses -----------------------------------------------------
-class GetCoursesRequestSchema(BaseModel):
-    user_id: str = Field(alias='userId')  # (?qwery)
+class GetCoursesQwerySchema(BaseModel):  # (?qwery)
+    user_id: str = Field(alias='userId')
 
 
 #---------------------------------------------------- Update Course ----------------------------------------------------
@@ -40,15 +43,20 @@ class CourseSchema(BaseModel):
     max_score: int = Field(alias='maxScore')
     min_score: int = Field(alias='minScore')
     description: str
-    preview_file: FileSchema = Field(alias='previewFile')
+    preview_file: FileSchema = Field(alias='previewFile')       # {}
     estimated_time: str = Field(alias='estimatedTime')
-    created_by_user: UserSchema = Field(alias='createdByUser')
+    created_by_user: UserSchema = Field(alias='createdByUser')  # {}
 
 class CreateCourseResponseSchema(BaseModel):
     course: CourseSchema
 
-#---------------------------------------------------- Get Courses ------------------------------------------------------
+#---------------------------------------------------- Get Course -------------------------------------------------------
 
+
+
+#---------------------------------------------------- Get Courses ------------------------------------------------------
+class GetCoursesResponseSchema(BaseModel):
+    courses: list[CourseSchema]
 
 
 #--------------------------------------------------- Update Course -----------------------------------------------------
@@ -58,11 +66,12 @@ class UpdateCourseResponseSchema(BaseModel):
 
 #-----------------------------------------------------------------------------------------------------------------------
 """====================================== Full Schema (⬆︎Request + ⬇Response) ✨====================================="""
+#---------------------------------------------------- Create Course ----------------------------------------------------
 class CreateCourseSchema(BaseModel):
     request: CreateCourseRequestSchema    # ┐
     response: CreateCourseResponseSchema  # ┘
 
-
+#---------------------------------------------------- Update Course ----------------------------------------------------
 class UpdateCourseSchema(BaseModel):
     request: UpdateCourseRequestSchema    # ┐
     response: UpdateCourseResponseSchema  # ┘
