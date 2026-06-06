@@ -21,7 +21,6 @@ def assert_create_course_response_equal(response: httpx.Response, request_model:
     :param request_model: Pydantic-model with Create Course data / None
     :raise AssertionError
     """
-
     response_model = CreateCourseResponseSchema.model_validate_json(response.text).course    # Response  —> Pydantic-model.course
 
     if not request_model:                                                                     # Условие, если не передать request_model, то ...
@@ -36,7 +35,7 @@ def assert_create_course_response_equal(response: httpx.Response, request_model:
     assert_equal(response_model.created_by_user.id, request_model.created_by_user_id, 'created_by_user_id')
 
 
-
+# Request Data = Response Data
 def assert_get_courses_responses_equal(get_courses_response: httpx.Response, create_course_responses: list[CreateCourseResponseSchema]):
     """
     Проверка получения [списка] курсов с созданными курсами
