@@ -23,8 +23,8 @@ class TestGetCourses:
             create_course: CreateCourseSchema
     ):
 
-        qwery = GetCoursesQwerySchema(userId=create_user.user_id)                 # Инициализация QWERY c User ID
-        response = courses_client.get_courses_api(qwery)                          # ▶ Запрос через API-метод
+        qwery_user_id = GetCoursesQwerySchema(userId=create_user.user_id)                 # Инициализация QWERY c User ID
+        response = courses_client.get_courses_api(qwery_user_id)                          # ▶ Запрос через API-метод
 
         # Assertions
         assert_status_code(response, http.HTTPStatus.OK)    # Status Code: 200
