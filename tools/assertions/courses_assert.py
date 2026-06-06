@@ -2,46 +2,38 @@
 Courses Assertions
 """
 import httpx
-from schemas.courses_schema import CreateCourseResponseSchema, GetCoursesResponseSchema, UpdateCourseRequestSchema, \
-    UpdateCourseResponseSchema
+from schemas.courses_schema import (
+    CreateCourseRequestSchema, CreateCourseResponseSchema,
+    UpdateCourseRequestSchema, UpdateCourseResponseSchema,
+    GetCoursesResponseSchema
+)
 from tools.assertions.base_assert import assert_equal, assert_length_equal
 
 #=======================================================================================================================
 # Request Data = Response Data
-def assert_create_course_response_equal(response: httpx.Response, request_model: CreateCourseResponseSchema | None = None):
+def assert_create_course_response_equal(response: httpx.Response, request_model: CreateCourseRequestSchema | None = None):
     """
     Request data = Response data
 
     Если не передать Pydantic-model, то вытащит из response.REQUEST.content и deserialize в —> Pydantic-model (for Assertions)
 
     :param response: Response (for deserialize —> Pydantic-model)
-    :param request_model: Pydantic-model with Update Course data / None
+    :param request_model: Pydantic-model with Create Course data / None
     :raise AssertionError
     """
-    if isinstance(response, httpx.Response):
-        response_model = CreateCourseResponseSchema.model_validate_json(response.text).course    # Response  —> Pydantic-model.course (CreateCourseResponseSchema)
 
-    if not request_model:                                                                        # Условие, если не передать request_model, то ...
-        request_model = CreateCourseResponseSchema.model_validate_json(response.request.content) # Request —> Pydantic-model (CreateCourseResponseSchema)
+    response_model = CreateCourseResponseSchema.model_validate_json(response.text).course    # Response  —> Pydantic-model.course
 
-    assert_equal(response_model.id, request_model.course.id, 'id')
-    assert_equal(response_model.title, request_model.course.title, 'title')
-    assert_equal(response_model.max_score, request_model.course.max_score, 'max_score')
-    assert_equal(response_model.min_score, request_model.course.min_score, 'min_score')
-    assert_equal(response_model.description, request_model.course.description, 'description')
-    assert_equal(response_model.estimated_time, request_model.course.estimated_time, 'estimated_time')
+    if not request_model:                                                                     # Условие, если не передать request_model, то ...
+        request_model = CreateCourseRequestSchema.model_validate_json(response.request.content)  # Request —> Pydantic-model
 
-    # .preview_file{}
-    assert_equal(response_model.preview_file.id, request_model.course.preview_file.id, 'file.id')
-    assert_equal(response_model.preview_file.filename, request_model.course.preview_file.filename, 'file.filename')
-    assert_equal(response_model.preview_file.directory, request_model.course.preview_file.directory, 'file.directory')
-    assert_equal(response_model.preview_file.url, request_model.course.preview_file.url, 'file.url')
-    # .created_by_user{}
-    assert_equal(response_model.created_by_user.id, request_model.course.created_by_user.id, 'created_by_user.id')
-    assert_equal(response_model.created_by_user.email, request_model.course.created_by_user.email, 'email.username')
-    assert_equal(response_model.created_by_user.first_name, request_model.course.created_by_user.first_name, 'first_name')
-    assert_equal(response_model.created_by_user.last_name, request_model.course.created_by_user.last_name, 'last_name')
-    assert_equal(response_model.created_by_user.middle_name, request_model.course.created_by_user.middle_name, 'middle_name')
+    assert_equal(response_model.title, request_model.title, 'title')
+    assert_equal(response_model.max_score, request_model.max_score, 'max_score')
+    assert_equal(response_model.min_score, request_model.min_score, 'min_score')
+    assert_equal(response_model.description, request_model.description, 'description')
+    assert_equal(response_model.estimated_time, request_model.estimated_time, 'estimated_time')
+    assert_equal(response_model.preview_file.id, request_model.preview_file_id, 'preview_file_id')
+    assert_equal(response_model.created_by_user.id, request_model.created_by_user_id, 'created_by_user_id')
 
 
 

@@ -43,8 +43,8 @@ class CourseSchema(BaseModel):
     max_score: int = Field(alias='maxScore')
     min_score: int = Field(alias='minScore')
     description: str
-    preview_file: FileSchema = Field(alias='previewFile')       # {}
     estimated_time: str = Field(alias='estimatedTime')
+    preview_file: FileSchema = Field(alias='previewFile')       # {}
     created_by_user: UserSchema = Field(alias='createdByUser')  # {}
 
 class CreateCourseResponseSchema(BaseModel):
@@ -70,6 +70,70 @@ class UpdateCourseResponseSchema(BaseModel):
 class CreateCourseSchema(BaseModel):
     request: CreateCourseRequestSchema    # ┐
     response: CreateCourseResponseSchema  # ┘
+
+    # --- Методы прямого доступа к данным ---
+    @property
+    def course_id(self) -> str:
+        return self.response.course.id
+
+    @property
+    def title(self) -> str:
+        return self.request.title
+
+    @property
+    def max_score(self) -> int:
+        return self.request.max_score
+
+    @property
+    def min_score(self) -> int:
+        return self.request.min_score
+
+    @property
+    def description(self) -> str:
+        return self.request.description
+
+    @property
+    def estimated_time(self) -> str:
+        return self.request.estimated_time
+
+    # preview_file{}
+    @property
+    def file_id(self) -> str:
+        return self.response.course.preview_file.id
+
+    @property
+    def filename(self) -> str:
+        return self.response.course.preview_file.filename
+
+    @property
+    def directory(self) -> str:
+        return self.response.course.preview_file.directory
+
+    @property
+    def url(self) -> str:
+        return self.response.course.preview_file.url
+
+    # created_by_user{}
+    @property
+    def user_id(self) -> str:
+        return self.response.course.created_by_user.id
+
+    @property
+    def email(self) -> str:
+        return self.response.course.created_by_user.email
+
+    @property
+    def last_name(self) -> str:
+        return self.response.course.created_by_user.last_name
+
+    @property
+    def first_name(self) -> str:
+        return self.response.course.created_by_user.first_name
+
+    @property
+    def middle_name(self) -> str:
+        return self.response.course.created_by_user.middle_name
+
 
 #---------------------------------------------------- Update Course ----------------------------------------------------
 class UpdateCourseSchema(BaseModel):

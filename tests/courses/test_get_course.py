@@ -3,7 +3,6 @@ TEST Get Courses
 """
 import http
 import pytest
-
 from clients.courses_client import CoursesClient
 from schemas.courses_schema import CreateCourseSchema, GetCoursesQwerySchema, GetCoursesResponseSchema
 from schemas.users_schema import CreateUserSchema
@@ -23,8 +22,8 @@ class TestGetCourses:
             create_course: CreateCourseSchema
     ):
 
-        qwery_user_id = GetCoursesQwerySchema(userId=create_user.user_id)                 # Инициализация QWERY c User ID
-        response = courses_client.get_courses_api(qwery_user_id)                          # ▶ Запрос через API-метод
+        qwery_user_id_model = GetCoursesQwerySchema(userId=create_user.user_id)                 # Инициализация QWERY c User ID
+        response = courses_client.get_courses_api(qwery_user_id_model)                          # ▶ Запрос через API-метод
 
         # Assertions
         assert_status_code(response, http.HTTPStatus.OK)    # Status Code: 200
