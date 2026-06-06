@@ -33,4 +33,3 @@ class TestGetCourses:
         validate_json_schema(response, GetCoursesResponseSchema)  # Validate JSON Schema
 #=======================================================================================================================
         # Tool.api_report(response)
-1
