@@ -25,7 +25,9 @@ class CoursesClient(APIClient):
         :param query_user_id: Pydantic-model c User ID (?query)
         :return: httpx.Response
         """
-        response = self.get(url=self.ENDPOINT, params=query_user_id.model_dump(by_alias=True))  # ▶ Запрос c Query-параметром
+        response = self.get(                                                  # ▶ Запрос c Query-параметром
+            url=self.ENDPOINT,
+            params=query_user_id.model_dump(by_alias=True))                   # Pydantic-model —> Dict (serialize)
         return response                                                       # httpx.Response
 
     #-------------------------------------------------- Get Course -----------------------------------------------------

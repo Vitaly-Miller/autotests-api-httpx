@@ -1,5 +1,5 @@
 """
-JSON Schema Validation # ⚠️Разобраться НЕ ПАДАЕТ КАК НАДО!
+JSON Schema Validation
 """
 import httpx
 import jsonschema
@@ -17,14 +17,14 @@ def validate_json_schema(instance: httpx.Response | dict, schema: type[pydantic.
     :raise: ValidationError - если instance ≠ schema
     """
     # Если передали сырой httpx.Response
-    if isinstance(instance, httpx.Response):                   # Проверка на тип данных <instance>
-        instance = instance.json()                             # httpx.Response –> Dict
+    if isinstance(instance, httpx.Response):           # Проверка на тип данных <instance>
+        instance = instance.json()                     # httpx.Response –> Dict
 
     try:
         jsonschema.validate(
-            instance=instance,                                 # Словарь (dict) для валидации
-            schema=schema.model_json_schema(),                 # JSON-схема (dict), сгенерированная из Pidantic-схемы
-            format_checker=jsonschema.FormatChecker()          # Валидация форматов (default) (⚠️НЕ ЗАБУДЬ! - в схеме ответа - email: EmailStr, ...)
+            instance=instance,                         # Словарь (dict) для валидации
+            schema=schema.model_json_schema(),         # JSON-схема (dict), сгенерированная из Pidantic-схемы
+            format_checker=jsonschema.FormatChecker()  # Валидация форматов (default) (⚠️НЕ ЗАБУДЬ! - в схеме ответа - email: EmailStr, ...)
         )
     except jsonschema.ValidationError as e:                                 # Сохранить полное описание ошибки валидации в переменной <e>
         print(f'❌JSON-Response schema. Validation error: [{e.message}]')   # Вывод краткого описания ошибки (только текст без кода)

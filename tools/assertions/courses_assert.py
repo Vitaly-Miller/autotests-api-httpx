@@ -10,33 +10,29 @@ from schemas.courses_schema import (
 from tools.assertions.base_assert import assert_equal, assert_length_equal
 
 #=======================================================================================================================
-# Request Data = Response Data
-def assert_create_course_response_equal(response: httpx.Response, request_model: CreateCourseRequestSchema | None = None):
+# Response data = Request data
+def assert_create_course_response(response: httpx.Response):
     """
-    Request data = Response data
-
-    Если не передать Pydantic-model, то вытащит из response.REQUEST.content и deserialize в —> Pydantic-model (for Assertions)
+    Response data = Request data
 
     :param response: Response (for deserialize —> Pydantic-model)
-    :param request_model: Pydantic-model with Create Course data / None
     :raise AssertionError
     """
-    response_model = CreateCourseResponseSchema.model_validate_json(response.text).course    # Response  —> Pydantic-model.course
+    response_model = CreateCourseResponseSchema.model_validate_json(response.text)           # Response —> Pydantic-model
+    request_model = CreateCourseRequestSchema.model_validate_json(response.request.content)  # Request —> Pydantic-model
 
-    if not request_model:                                                                     # Условие, если не передать request_model, то ...
-        request_model = CreateCourseRequestSchema.model_validate_json(response.request.content)  # Request —> Pydantic-model
-
-    assert_equal(response_model.title, request_model.title, 'title')
-    assert_equal(response_model.max_score, request_model.max_score, 'max_score')
-    assert_equal(response_model.min_score, request_model.min_score, 'min_score')
-    assert_equal(response_model.description, request_model.description, 'description')
-    assert_equal(response_model.estimated_time, request_model.estimated_time, 'estimated_time')
-    assert_equal(response_model.preview_file.id, request_model.preview_file_id, 'preview_file_id')
-    assert_equal(response_model.created_by_user.id, request_model.created_by_user_id, 'created_by_user_id')
+    assert_equal(response_model.course.title, request_model.title, 'title')
+    assert_equal(response_model.course.max_score, request_model.max_score, 'max_score')
+    assert_equal(response_model.course.min_score, request_model.min_score, 'min_score')
+    assert_equal(response_model.course.description, request_model.description, 'description')
+    assert_equal(response_model.course.estimated_time, request_model.estimated_time, 'estimated_time')
+    assert_equal(response_model.course.preview_file.id, request_model.preview_file_id, 'preview_file_id')
+    assert_equal(response_model.course.created_by_user.id, request_model.created_by_user_id, 'created_by_user_id')
 
 
-# Request Data = Response Data
-def assert_get_courses_responses_equal(get_courses_response: httpx.Response, create_course_responses: list[CreateCourseResponseSchema]):
+
+# Response data = Request data
+def assert_get_courses_responses(get_courses_response: httpx.Response, create_course_responses: list[CreateCourseResponseSchema]):
     """
     Проверка получения [списка] курсов с созданными курсами
 
@@ -54,11 +50,10 @@ def assert_get_courses_responses_equal(get_courses_response: httpx.Response, cre
 
 
 
-
-# Request Data = Response Data
-def assert_update_course_response_equal(response: httpx.Response, request_model: UpdateCourseRequestSchema | None = None):
+# Response data = Request data
+def assert_update_course_response(response: httpx.Response):
     """
-    Request data = Response data
+    Response data = Request data
 
     - title
     - max_score
@@ -72,10 +67,8 @@ def assert_update_course_response_equal(response: httpx.Response, request_model:
     :param request_model: Pydantic-model with Update Course data / None
     :raise AssertionError
     """
-    response_model = UpdateCourseResponseSchema.model_validate_json(response.text)  # Response —> Pydantic-model
-
-    if not request_model:                                                                        # Условие, если не передать request_model, то ...
-        request_model = UpdateCourseRequestSchema.model_validate_json(response.request.content)  # Request —> Pydantic-model
+    response_model = UpdateCourseResponseSchema.model_validate_json(response.text)           # Response —> Pydantic-model                                                                # Условие, если не передать request_model, то ...
+    request_model = UpdateCourseRequestSchema.model_validate_json(response.request.content)  # Request —> Pydantic-model
 
     assert_equal(response_model.course.title, request_model.title, 'title')
     assert_equal(response_model.course.max_score, request_model.max_score, 'max_score')

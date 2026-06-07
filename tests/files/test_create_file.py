@@ -9,9 +9,8 @@ from schemas.files_schema import CreateFileResponseSchema, CreateFileRequestSche
 from tools.assertions.base_assert import assert_status_code, assert_method
 from tools.assertions.schema_assert import validate_json_schema
 from tools.assertions.files_assert import (
-    assert_file_id,
-    assert_create_file_response_values_non_empty,
-    assert_create_file_response_equal,
+    assert_create_file_response_non_empty, assert_file_id,
+    assert_create_file_response,
     assert_create_file_empty_filename_error_response,
     assert_create_file_empty_directory_error_response
 )
@@ -27,9 +26,9 @@ class TestCreateFile:
         # Assertions
         assert_status_code(response, http.HTTPStatus.OK)     # Status code: 200
         assert_method(response, http.HTTPMethod.POST)      # Method: POST
-        assert_create_file_response_values_non_empty(response)                     # NON-empty Response values
+        assert_create_file_response_non_empty(response)                     # Response data is NON-empty
         assert_file_id(response)                                                   # File ID validation
-        assert_create_file_response_equal(response,file_data)    # Request Data = Response Data
+        assert_create_file_response(response,file_data) # Response data = Request data  (multipart/form-data)
         validate_json_schema(response, CreateFileResponseSchema)   # Validation JSON schema
 
 

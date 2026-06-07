@@ -10,14 +10,10 @@ from tools.assertions.base_assert import (
     assert_not_equal
 )
 #=======================================================================================================================
-# NON-Empty Response values
-def assert_auth_response_values_non_empty(response: httpx.Response):
+# Response data is NON-empty
+def assert_auth_response_non_empty(response: httpx.Response):
     """
-    Non-empty Response values
-
-    - token_type
-    - access_token
-    - refresh_token
+    Response data is NON-empty
 
     :param response: Response (for deserialize —> Pydantic-model)
     :raise AssertionError

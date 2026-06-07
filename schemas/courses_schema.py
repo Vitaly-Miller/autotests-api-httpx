@@ -22,7 +22,7 @@ class CreateCourseRequestSchema(BaseModel):
 
 
 #----------------------------------------------------- Get Courses -----------------------------------------------------
-class GetCoursesQwerySchema(BaseModel):  # (?qwery)
+class GetCoursesQwerySchema(BaseModel):  # ?qwery
     user_id: str = Field(alias='userId')
 
 

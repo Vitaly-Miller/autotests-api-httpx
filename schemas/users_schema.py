@@ -83,6 +83,21 @@ class CreateUserSchema(BaseModel):
     def user_id(self) -> str:
         return self.response.user.id
 
+    # First name
+    @property
+    def first_name(self) -> str:
+        return self.request.first_name
+
+    # Last name
+    @property
+    def last_name(self) -> str:
+        return self.request.last_name
+
+    # Middle name
+    @property
+    def middle_name(self) -> str:
+        return self.request.middle_name
+
     # User Auth Data (Email + Password)
     @property
     def auth_data(self) -> AuthDataSchema:
@@ -90,5 +105,7 @@ class CreateUserSchema(BaseModel):
             email=self.email,       # Email     ┐
             password=self.password  # Password  ┘
         )
+
+
 
 #-----------------------------------------------------------------------------------------------------------------------

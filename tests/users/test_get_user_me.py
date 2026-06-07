@@ -11,7 +11,7 @@ from schemas.users_schema import CreateUserRequestSchema, CreateUserResponseSche
 from http import HTTPStatus, HTTPMethod
 from tools.assertions.base_assert import assert_status_code, assert_method
 from tools.assertions.schema_assert import validate_json_schema
-from tools.assertions.users_assert import assert_create_user_response_values_non_empty, assert_user_id
+from tools.assertions.users_assert import assert_create_user_response_non_empty, assert_user_id
 from tools.tool import Tool
 
 #=======================================================================================================================
@@ -25,7 +25,7 @@ class TestGetUserMe:
         # Assertions
         assert_status_code(response, HTTPStatus.OK)       # Status code: 200
         assert_method(response, HTTPMethod.GET)         # Method: GET
-        assert_create_user_response_values_non_empty(response)                           # NON-Empty Response values
+        assert_create_user_response_non_empty(response)                           # Response data is NON-empty
         assert_user_id(response)                                                # User ID validation
         validate_json_schema(response, GetUserMeResponseSchema) # Validation JSON schema
 
@@ -38,7 +38,7 @@ class TestGetUserMe:
         # Assertions
         assert_status_code(response, HTTPStatus.OK)       # Status code: 200
         assert_method(response, HTTPMethod.GET)         # Method: GET
-        assert_create_user_response_values_non_empty(response)                           # NON-Empty Response values
+        assert_create_user_response_non_empty(response)                           # Response data is NON-empty
         assert_user_id(response)                                                # User ID validation
         validate_json_schema(response, GetUserMeResponseSchema) # Validation JSON schema
 
