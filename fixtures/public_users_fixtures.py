@@ -35,7 +35,7 @@ def create_user_api(public_users_client: PublicUsersClient) -> httpx.Response:
                                    # ❗️Если тут нужно добраться до Request c 'password' - через парсинг JSON —> {dict}:
                                    # request_body = json.loads(response.request.content)
                                    # password = request_body["password"]
-# Pydantic-model
+# Pydantic-model (full)
 @pytest.fixture
 def create_user(public_users_client: PublicUsersClient) -> CreateUserSchema:
     """

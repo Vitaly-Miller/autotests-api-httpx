@@ -39,7 +39,7 @@ def create_exercise_api(exercises_client: ExercisesClient, create_course: Create
     return response                                                        # httpx.Response
 
 
-# Pydantic-model
+# Pydantic-model (full)
 def create_exercise(exercises_client: ExercisesClient, create_course: CreateCourseSchema) -> CreateExerciseSchema:
     """
     Pydantic-фикстура создания задания

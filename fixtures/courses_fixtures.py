@@ -49,7 +49,7 @@ def create_course_api(
     return response                                                   # httpx.Response
 
 
-# Pydantic-model
+# Pydantic-model (full)
 @pytest.fixture
 def create_course(
     courses_client: CoursesClient, # ┐ ✨ДЕДУПЛИКАЦИЯ внутри одного теста — это фундаментальное свойство Pytest.

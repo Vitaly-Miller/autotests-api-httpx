@@ -56,24 +56,20 @@ def create_file(files_client: FilesClient) -> CreateFileSchema:
     return response_full_model                                     # Pydantic-model (CreateFileSchema) ✨<Request + Response>
 
 
-# Pydantic-model ✨
+# Pydantic-model (full) + ✨delete
 @pytest.fixture
-def create_file_delete(files_client: FilesClient, delete: bool = True) -> Generator[CreateFileSchema]:
+def create_file_temp(files_client: FilesClient) -> Generator[CreateFileSchema]:
     """
     Pydantic-фикстура создания файла + удаления после теста
 
-
-
     :param files_client: Вложенная фикстура получения экземпляра FilesClient (c Авторизация)
-    :param delete: Опция удаления файла после теста (default = True)
     :return: httpx.Response
     """
     create_file_data = CreateFileRequestSchema()                   # Инициализация Pydantic-модели c default fake-data
     response_model = files_client.create_file(create_file_data)    # ▶ Запрос через Pydantic-метод
     response_full_model = CreateFileSchema(request=create_file_data, response=response_model)  # Инициализация Pydantic-model (CreateFileSchema) ✨<Request + Response>
     yield response_full_model                                      # Pydantic-model (CreateFileSchema) ✨<Request + Response>
-    if delete:
-        files_client.delete_file_api(response_full_model.file_id)  # Удаление файла после теста
+    files_client.delete_file_api(response_full_model.file_id)      # Удаление файла после теста
 
 
 #------------------------------------------------------ Get File -------------------------------------------------------
