@@ -21,13 +21,13 @@ class TestGetCourses:
             create_user: CreateUserSchema,
             create_course: CreateCourseSchema
     ):
-        user_id_qwery_model = GetCoursesQwerySchema(userId=create_user.user_id)         # Инициализация  qwery-User-ID (GetCoursesQwerySchema)
+        user_id_qwery_model = GetCoursesQwerySchema(userId=create_user.user_id)         # Pydantic-model  qwery-User-ID
         response = courses_client.get_courses_api(user_id_qwery_model)                  # ▶ Запрос через API-метод
 
         # Assertions
         assert_status_code(response, http.HTTPStatus.OK)        # Status Code: 200
         assert_method(response, http.HTTPMethod.GET)          # Method: GET
-        assert_get_courses_responses(response, [create_course.response])
+        assert_get_courses_responses(response, [create_course.response]) # Список курсов соответствует созданным курсам
         validate_json_schema(response, GetCoursesResponseSchema)      # Validate JSON Schema
 #=======================================================================================================================
         # Tool.api_report(response)

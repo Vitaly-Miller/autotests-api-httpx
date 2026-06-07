@@ -28,7 +28,7 @@ def assert_create_exercise_response_non_empty(response: httpx.Response):
 
 
 # Response data = Request data
-def assert_create_exercise_response_data(response: httpx.Response):
+def assert_create_exercise_response(response: httpx.Response):
     """
     Response data = Request data
 
