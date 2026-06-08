@@ -71,31 +71,31 @@ class CoursesClient(APIClient):
 
     #------------------------------------------------- Update Course ---------------------------------------------------
     # API
-    def update_course_api(self, course_id: str, update_course_data: UpdateCourseRequestSchema) -> httpx.Response:
+    def update_course_api(self, course_id: str, new_course_data: UpdateCourseRequestSchema) -> httpx.Response:
         """
         API-метод частичного обновления курса по Course ID
 
         :param course_id: Course ID
-        :param update_course_data: Pydantic-model c данными, которые необходимо обновить
+        :param new_course_data: Pydantic-model c данными, которые необходимо обновить
         :return: httpx.Response
         """
         response = self.patch(                                                # ▶ Запрос
             url=f'{self.ENDPOINT}/{course_id}',
-            json=update_course_data.model_dump(by_alias=True)                 # Pydantic-model —> Dict (serialize)
+            json=new_course_data.model_dump(by_alias=True)                    # Pydantic-model —> Dict (serialize)
         )
         return response                                                       # httpx.Response
 
 
     # Pydantic-model
-    def update_course(self, course_id: str, update_course_data: UpdateCourseRequestSchema) -> UpdateCourseResponseSchema:
+    def update_course(self, course_id: str, new_course_data: UpdateCourseRequestSchema) -> UpdateCourseResponseSchema:
         """
         Pydantic-метод частичного обновления курса по Course ID
 
         :param course_id: Course ID
-        :param update_course_data: Pydantic-model c данными, которые необходимо обновить
+        :param new_course_data: Pydantic-model c данными, которые необходимо обновить
         :return: Pydantic-model (UpdateCourseResponseSchema)
         """
-        response = self.update_course_api(course_id, update_course_data)  # ▶ Запрос через API-метод
+        response = self.update_course_api(course_id, new_course_data)  # ▶ Запрос через API-метод
         response_model = UpdateCourseResponseSchema.model_validate_json(response.text) # Response —> Pydantic-model (deserialize)
         return response_model                                                          # Pydantic-model (UpdateCourseResponseSchema)
 

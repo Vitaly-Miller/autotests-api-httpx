@@ -53,12 +53,16 @@ class ExerciseSchema(BaseModel):
 class CreateExerciseResponseSchema(BaseModel):
     exercise: ExerciseSchema
 
+#---------------------------------------------------- Get Exercise -----------------------------------------------------
+class GetExerciseResponseSchema(BaseModel):
+    exercise: ExerciseSchema
+
 #---------------------------------------------------- Get Exercises ----------------------------------------------------
 class GetExercisesResponseSchema(BaseModel):
     exercise: ExerciseSchema
 
 #--------------------------------------------------- Update Exercise ---------------------------------------------------
-class UpdateExercisesResponseSchema(BaseModel):
+class UpdateExerciseResponseSchema(BaseModel):
     exercise: ExerciseSchema
 
 #--------------------------------------------------- Delete Exercise ---------------------------------------------------

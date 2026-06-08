@@ -2,10 +2,7 @@
 Exercises assertions
 """
 import httpx
-from schemas.exercises_schema import (
-    CreateExerciseRequestSchema, CreateExerciseResponseSchema,
-    GetExerciseRequestSchema, GetExercisesResponseSchema
-)
+from schemas.exercises_schema import CreateExerciseRequestSchema, CreateExerciseResponseSchema
 from tools.assertions.base_assert import assert_equal, assert_is_value, assert_length
 
 #=======================================================================================================================

@@ -7,8 +7,8 @@ from clients.httpx_private_client import get_httpx_private_client
 from schemas.auth_schema import AuthDataSchema
 from schemas.exercises_schema import (
     CreateExerciseRequestSchema,
-    GetExercisesResponseSchema, UpdateExerciseRequestSchema,
-    GetExercisesRequestSchema, CreateExerciseResponseSchema
+    GetExerciseResponseSchema, UpdateExerciseRequestSchema,
+    GetExercisesRequestSchema, CreateExerciseResponseSchema, UpdateExerciseResponseSchema
 )
 
 #================================================== Exercises Client ===================================================
@@ -55,16 +55,16 @@ class ExercisesClient(APIClient):
         return response                                                    # httpx.Response
 
     # Pydantic-model
-    def get_exercise(self, exercise_id: str) -> GetExercisesResponseSchema:
+    def get_exercise(self, exercise_id: str) -> GetExerciseResponseSchema:
         """
         Pydantic-метод получения информации о задании по Exercise ID
 
         :param exercise_id: Exercise ID
-        :return: Pydantic-model (GetExercisesResponseSchema)
+        :return: Pydantic-model (GetExerciseResponseSchema)
         """
         response = self.get_exercise_api(exercise_id)                                  # ▶ Запрос через API-метод
-        response_model = GetExercisesResponseSchema.model_validate_json(response.text) # Response —> Pydantic-model (deserialize)
-        return response_model                                                          # Pydantic-model (GetExercisesResponseSchema)
+        response_model = GetExerciseResponseSchema.model_validate_json(response.text) # Response —> Pydantic-model (deserialize)
+        return response_model                                                          # Pydantic-model (GetExerciseResponseSchema)
 
 
     #------------------------------------------------ Get Exercises ----------------------------------------------------
@@ -82,19 +82,36 @@ class ExercisesClient(APIClient):
 
     #---------------------------------------------- Update Exercise ----------------------------------------------------
     # API
-    def update_exercise_api(self, exercise_id: str, json: UpdateExerciseRequestSchema) -> httpx.Response:
+    def update_exercise_api(self, exercise_id: str, new_exercise_data: UpdateExerciseRequestSchema) -> httpx.Response:
         """
         API-метод частичного обновления данных задания
 
         :param exercise_id: Exercise ID
-        :param json: Pydantic-model данными, которые необходимо обновить
+        :param new_exercise_data: Pydantic-model c данными, которые необходимо обновить
         :return: httpx.Response
         """
         response = self.patch(                                    # ▶ Запрос
             url=f'{self.ENDPOINT}/{exercise_id}',
-            json=json.model_dump(by_alias=True)                   # Pydantic-model —> Dict (serialize)
+            json=new_exercise_data.model_dump(by_alias=True)      # Pydantic-model —> Dict (serialize)
         )
         return response                                           # httpx.Response
+
+
+    # Pydantic-model
+    def update_exercise(self, exercise_id: str, new_exercise_data: UpdateExerciseRequestSchema) -> UpdateExerciseResponseSchema:
+        """
+        Pydantic-метод частичного обновления данных задания
+
+        :param exercise_id: Exercise ID
+        :param new_exercise_data: Pydantic-model c данными, которые необходимо обновить
+        :return: Pydantic-model (UpdateExerciseResponseSchema)
+        """
+        response = self.update_exercise_api(                      # ▶ Запрос через API-метод
+            exercise_id,                                # Передаем  Exercise ID
+            new_exercise_data                     # Передаем Pydantic-model данными, которые необходимо обновить
+        )
+        response_model = UpdateExerciseResponseSchema.model_validate_json(response.text) # Response —> Pydantic-model (deserialize)
+        return response_model                                      # Pydantic-model (UpdateExerciseResponseSchema)
 
     #---------------------------------------------- Delete Exercise ----------------------------------------------------
     # API
@@ -105,8 +122,8 @@ class ExercisesClient(APIClient):
         :param exercise_id: Exercise ID
         :return: httpx.Response
         """
-        response = self.delete(url=f'{self.ENDPOINT}/{exercise_id}')             # ▶ Запрос
-        return response                                                          # httpx.Response
+        response = self.delete(url=f'{self.ENDPOINT}/{exercise_id}')    # ▶ Запрос
+        return response                                                 # httpx.Response
 
 
 #================================================= Client (✨Helper) ===================================================
