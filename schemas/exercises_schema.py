@@ -15,6 +15,9 @@ class CreateExerciseRequestSchema(BaseModel):
     description: str = Field(default_factory=fake.text)
     estimated_time: str = Field(alias='estimatedTime', default_factory=fake.estimated_time)
 
+#---------------------------------------------------- Get Exercise ----------------------------------------------------
+class GetExerciseRequestSchema(BaseModel):
+    exercise_id: str
 
 #---------------------------------------------------- Get Exercises ----------------------------------------------------
 class GetExercisesRequestSchema(BaseModel):

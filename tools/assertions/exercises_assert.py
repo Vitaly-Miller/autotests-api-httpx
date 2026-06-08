@@ -2,14 +2,17 @@
 Exercises assertions
 """
 import httpx
-from schemas.exercises_schema import CreateExerciseRequestSchema, CreateExerciseResponseSchema
+from schemas.exercises_schema import (
+    CreateExerciseRequestSchema, CreateExerciseResponseSchema,
+    GetExerciseRequestSchema, GetExercisesResponseSchema
+)
 from tools.assertions.base_assert import assert_equal, assert_is_value, assert_length
 
 #=======================================================================================================================
-# Response data is NON-empty
-def assert_create_exercise_response_non_empty(response: httpx.Response):
+# Exercise Response data is NON-empty
+def assert_exercise_response_non_empty(response: httpx.Response):
     """
-    Response data is NON-empty
+    Exercise Response data is NON-empty
 
     :param response: httpx.Response (for deserialize —> Pydantic-model)
     :raise AssertionError
@@ -26,9 +29,8 @@ def assert_create_exercise_response_non_empty(response: httpx.Response):
     assert_is_value(response_model.exercise.estimated_time, 'estimated_time')
 
 
-
-# Response data = Request data
-def assert_create_exercise_response(response: httpx.Response):
+# Exercise Response data = Exercise Request data
+def assert_exercise_response(response: httpx.Response):
     """
     Response data = Request data
 
@@ -46,19 +48,22 @@ def assert_create_exercise_response(response: httpx.Response):
     assert_equal(response_model.exercise.description, request_model.description, 'description')
 
 
-
 # Exercise ID validation
-def assert_exercise_id(response: httpx.Response):
+def assert_exercise_id(response: httpx.Response, exercise_id: str | None = None):
     """
     Exercise ID validation
 
     - NON-empty Exercise ID
     - Exercise ID length = 36 chars
+    - Exercise ID = expected Exercise ID (optional)
 
     :param response: httpx.Response with File data (for deserialize —> Pydantic-model)
+    :param exercise_id: Exercise ID / None
     :raise AssertionError
     """
-    response_model = CreateExerciseResponseSchema.model_validate_json(response.text)  # Response —> Pydantic-model
+    response_model = CreateExerciseResponseSchema.model_validate_json(response.text)      # Response —> Pydantic-model
 
-    assert_is_value(response_model.exercise.id, 'id')                       # NON-empty File ID
-    assert_length(response_model.exercise.id, 36, 'id')       # File ID length = 36 chars
+    assert_is_value(response_model.exercise.id, 'exercise_id')                  # NON-empty File ID
+    assert_length(response_model.exercise.id, 36, 'exercise_id')  # File ID length = 36 chars
+    if exercise_id:
+        assert_equal(response_model.exercise.id, exercise_id, 'exercise_id') # Response Exercise ID = expected Exercise ID (optional)

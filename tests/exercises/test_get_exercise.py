@@ -8,6 +8,8 @@ import pytest
 from clients.exercises_client import ExercisesClient
 from schemas.exercises_schema import CreateExerciseSchema, GetExercisesResponseSchema
 from tools.assertions.base_assert import assert_method, assert_status_code
+from tools.assertions.exercises_assert import assert_exercise_id, assert_exercise_response, \
+    assert_exercise_response_non_empty
 from tools.assertions.schema_assert import validate_json_schema
 from tools.tool import Tool
 
@@ -21,7 +23,8 @@ class TestGetExercise:
         # Assertions
         assert_status_code(response, http.HTTPStatus.OK)      # Status Code: 200
         assert_method(response, http.HTTPMethod.GET)        # Method: GET
-
+        assert_exercise_response_non_empty(response)
+        assert_exercise_id(response)
         validate_json_schema(response, GetExercisesResponseSchema)  # JSON Schema validation
 
 
@@ -36,7 +39,8 @@ class TestGetExercise:
         # Assertions
         assert_status_code(response, http.HTTPStatus.OK)      # Status Code: 200
         assert_method(response, http.HTTPMethod.GET)        # Method: GET
-
+        assert_exercise_response_non_empty(response)
+        assert_exercise_id(response)
         validate_json_schema(response, GetExercisesResponseSchema)  # JSON Schema validation
 
 #=======================================================================================================================
