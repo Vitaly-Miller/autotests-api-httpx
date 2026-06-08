@@ -2,27 +2,42 @@
 TEST Get Exercise
 """
 import http
+
+import httpx
 import pytest
 from clients.exercises_client import ExercisesClient
-from schemas.exercises_schema import CreateExerciseSchema
+from schemas.exercises_schema import CreateExerciseSchema, GetExercisesResponseSchema
 from tools.assertions.base_assert import assert_method, assert_status_code
+from tools.assertions.schema_assert import validate_json_schema
 from tools.tool import Tool
 
 #=======================================================================================================================
 @pytest.mark.exercises
 @pytest.mark.regression
 class TestGetExercise:
-    def test_get_exercise(
+    def test_get_exercise_1(self, get_exercise_api: httpx.Response):   # Через API-фикстуру полного цикла
+        response = get_exercise_api                                    # Сохраняем ответ API-фикстуры
+
+        # Assertions
+        assert_status_code(response, http.HTTPStatus.OK)      # Status Code: 200
+        assert_method(response, http.HTTPMethod.GET)        # Method: GET
+
+        validate_json_schema(response, GetExercisesResponseSchema)  # JSON Schema validation
+
+
+
+    def test_get_exercise_2(
             self,
             exercises_client: ExercisesClient,                        # Фикстура получения экземпляра ExercisesClient()
             create_exercise: CreateExerciseSchema                     # Pydantic-фикстура создания задания
     ):
-        response = exercises_client.get_exercise_api(create_exercise.exercise_id)  # ▶ Запрос через API-метод (Получение задания)
+        response = exercises_client.get_exercise_api(create_exercise.exercise_id)   # ▶ Запрос через API-метод
 
         # Assertions
-        assert_status_code(response, http.HTTPStatus.OK)        # Status Code: 200
-        assert_method(response, http.HTTPMethod.GET)          # Method: GET
+        assert_status_code(response, http.HTTPStatus.OK)      # Status Code: 200
+        assert_method(response, http.HTTPMethod.GET)        # Method: GET
 
+        validate_json_schema(response, GetExercisesResponseSchema)  # JSON Schema validation
 
 #=======================================================================================================================
         # Tool.api_report(response)

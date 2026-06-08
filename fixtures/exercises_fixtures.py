@@ -1,11 +1,13 @@
 """
 Exercises (Fixtures)
 """
+from urllib import response
+
 import httpx
 import pytest
 from clients.exercises_client import ExercisesClient, get_exercises_client
 from schemas.courses_schema import CreateCourseSchema
-from schemas.exercises_schema import CreateExerciseRequestSchema, CreateExerciseSchema
+from schemas.exercises_schema import CreateExerciseRequestSchema, CreateExerciseSchema, GetExercisesResponseSchema
 from schemas.users_schema import CreateUserSchema
 
 #================================================== Exercises Client ===================================================
@@ -29,7 +31,7 @@ def create_exercise_api(exercises_client: ExercisesClient, create_course: Create
     """
     API-фикстура создания задания
 
-    :param exercises_client: Вложенная Pydantic-фикстура получения экземпляра ExercisesClient (с Авторизацией)
+    :param exercises_client: Вложенная Pydantic-фикстура получения экземпляра ExercisesClient() (с Авторизацией)
     :param create_course: Вложенная Pydantic-фикстура создания курса (для получения Course ID)
     :return: httpx.Response
     """
@@ -46,16 +48,43 @@ def create_exercise(exercises_client: ExercisesClient, create_course: CreateCour
     """
     Pydantic-фикстура создания задания
 
-    :param exercises_client: Вложенная Pydantic-фикстура получения экземпляра ExercisesClient (с Авторизацией)
+    :param exercises_client: Вложенная Pydantic-фикстура получения экземпляра ExercisesClient() (с Авторизацией)
     :param create_course: Вложенная Pydantic-фикстура создания курса (для получения Course ID)
     :return: httpx.Response
     """
-    create_exercise_data = CreateExerciseRequestSchema(    # Инициализация Pydantic-модели c default fake-data
+    exercise_data = CreateExerciseRequestSchema(           # Инициализация Pydantic-модели c default fake-data
         courseId=create_course.course_id                   # Default —> реальный Course ID из фикстуры
     )
-    response_model = exercises_client.create_exercise(create_exercise_data)   # ▶ Запрос через Pydantic-метод
-    response_full_model = CreateExerciseSchema(request=create_exercise_data, response=response_model)   # Инициализация Pydantic-model (CoursesFullSchema) ✨<Request + Response>
-    return response_full_model                                                # Pydantic-model (CoursesFullSchema) ✨<Request + Response>
+    response_model = exercises_client.create_exercise(exercise_data)   # ▶ Запрос через Pydantic-метод
+    response_full_model = CreateExerciseSchema(request=exercise_data, response=response_model)   # Инициализация Pydantic-model (CoursesFullSchema) ✨<Request + Response>
+    return response_full_model                                         # Pydantic-model (CoursesFullSchema) ✨<Request + Response>
 
+#---------------------------------------------------- Get exercise -----------------------------------------------------
+# API
+@pytest.fixture
+def get_exercise_api(exercises_client: ExercisesClient, create_exercise: CreateExerciseSchema) -> httpx.Response:
+    """
+    API-фикстура получения задания
+
+    :param exercises_client: Вложенная Pydantic-фикстура получения экземпляра ExercisesClient() (с Авторизацией)
+    :param create_exercise: Вложенная Pydantic-фикстура создания задания (для получения Exercise ID)
+    :return: httpx.Response
+    """
+    response = exercises_client.get_exercise_api(create_exercise.exercise_id)     # ▶ Запрос через API-метод
+    return response                                                               # httpx.Response
+
+
+# Pydantic-model
+@pytest.fixture
+def get_exercise(exercises_client: ExercisesClient, create_exercise: CreateExerciseSchema) -> GetExercisesResponseSchema:
+    """
+    Pydantic-фикстура получения задания
+
+    :param exercises_client: Вложенная Pydantic-фикстура получения экземпляра ExercisesClient() (с Авторизацией)
+    :param create_exercise: Вложенная Pydantic-фикстура создания задания (для получения Exercise ID)
+    :return: Pydantic-model (GetExercisesResponseSchema)
+    """
+    response_model = exercises_client.get_exercise(create_exercise.exercise_id)   # ▶ Запрос через Pydantic-метод
+    return response_model                                                         # Pydantic-model (GetExercisesResponseSchema)
 
 #-----------------------------------------------------------------------------------------------------------------------
