@@ -1,6 +1,6 @@
 """
 Валидация JSON Schema - get_user.json()
-Validate JSON Schema - get_user.json()
+JSON Schema validation - get_user.json()
 """
 from schemas.auth_schema import AuthDataSchema
 from clients.private_users_client import get_private_users_client

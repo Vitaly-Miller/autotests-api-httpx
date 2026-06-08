@@ -21,8 +21,8 @@ class CreateCourseRequestSchema(BaseModel):
 
 
 
-#----------------------------------------------------- Get Courses -----------------------------------------------------
-class GetCoursesQwerySchema(BaseModel):  # ?qwery
+#---------------------------------------------------- Get Courses ------------------------------------------------------
+class GetCoursesQwerySchema(BaseModel):                                   # ?qwery
     user_id: str = Field(alias='userId', default_factory=fake.user_id)    # ⚠️️Default value for NEGATIVE test ONLY)
 
 
@@ -36,7 +36,7 @@ class UpdateCourseRequestSchema(BaseModel):
 
 
 """=============================================== ⬆︎RESPONSE Schema ================================================"""
-#--------------------------------------------------- Create Course -----------------------------------------------------
+#--------------------------------------------------- "course": {} ------------------------------------------------------
 class CourseSchema(BaseModel):
     id: str
     title: str
@@ -47,17 +47,17 @@ class CourseSchema(BaseModel):
     preview_file: FileSchema = Field(alias='previewFile')       # {}
     created_by_user: UserSchema = Field(alias='createdByUser')  # {}
 
+#--------------------------------------------------- Create Course -----------------------------------------------------
 class CreateCourseResponseSchema(BaseModel):
     course: CourseSchema
 
 #---------------------------------------------------- Get Course -------------------------------------------------------
-
-
+class GetCourseResponseSchema(BaseModel):
+    courses: CourseSchema
 
 #---------------------------------------------------- Get Courses ------------------------------------------------------
 class GetCoursesResponseSchema(BaseModel):
     courses: list[CourseSchema]
-
 
 #--------------------------------------------------- Update Course -----------------------------------------------------
 class UpdateCourseResponseSchema(BaseModel):

@@ -24,6 +24,7 @@ def exercises_client(create_user: CreateUserSchema) -> ExercisesClient:
 
 #-------------------------------------------------- Create exercise ----------------------------------------------------
 # API
+@pytest.fixture
 def create_exercise_api(exercises_client: ExercisesClient, create_course: CreateCourseSchema) -> httpx.Response:
     """
     API-фикстура создания задания
@@ -33,13 +34,14 @@ def create_exercise_api(exercises_client: ExercisesClient, create_course: Create
     :return: httpx.Response
     """
     create_exercise_data = CreateExerciseRequestSchema(    # Инициализация Pydantic-модели c default fake-data
-        courseId=create_course.course_id                   # Заменяем default на реальный Course ID
+        courseId=create_course.course_id                   # Default —> реальный Course ID из фикстуры
     )
     response = exercises_client.create_exercise_api(create_exercise_data)  # ▶ Запрос через API-метод
     return response                                                        # httpx.Response
 
 
 # Pydantic-model (full)
+@pytest.fixture
 def create_exercise(exercises_client: ExercisesClient, create_course: CreateCourseSchema) -> CreateExerciseSchema:
     """
     Pydantic-фикстура создания задания
@@ -49,7 +51,7 @@ def create_exercise(exercises_client: ExercisesClient, create_course: CreateCour
     :return: httpx.Response
     """
     create_exercise_data = CreateExerciseRequestSchema(    # Инициализация Pydantic-модели c default fake-data
-        courseId=create_course.course_id                   # Заменяем default на реальный Course ID
+        courseId=create_course.course_id                   # Default —> реальный Course ID из фикстуры
     )
     response_model = exercises_client.create_exercise(create_exercise_data)   # ▶ Запрос через Pydantic-метод
     response_full_model = CreateExerciseSchema(request=create_exercise_data, response=response_model)   # Инициализация Pydantic-model (CoursesFullSchema) ✨<Request + Response>

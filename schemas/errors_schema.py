@@ -6,6 +6,7 @@ from pydantic import BaseModel
 from typing import Any
 
 #======================================================== Main =========================================================
+#---------------------------------------------------- "detail": {} -----------------------------------------------------
 class ErrorSchema(BaseModel):
     type: str
     loc: list[str]
@@ -13,6 +14,7 @@ class ErrorSchema(BaseModel):
     input: Any
     ctx: dict[str, Any] | None = None
 
+#-----------------------------------------------------------------------------------------------------------------------
 class ErrorResponseSchema(BaseModel):
     """
     Схема ошибки при создании сущности (User, File, Exercise, etc.)

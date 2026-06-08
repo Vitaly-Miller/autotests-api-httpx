@@ -26,8 +26,8 @@ def courses_client(create_user: CreateUserSchema) -> CoursesClient:
 # API
 @pytest.fixture
 def create_course_api(
-    courses_client: CoursesClient, # ┐ ✨ДЕДУПЛИКАЦИЯ внутри одного теста — это фундаментальное свойство Pytest.
-    create_user: CreateUserSchema, # ┘ ✨Один и тоже User! Несмотря на то, что обе фикстуры создают пользователя.
+    courses_client: CoursesClient, # ┐  ✨ДЕДУПЛИКАЦИЯ внутри одного теста — это фундаментальное свойство Pytest.
+    create_user: CreateUserSchema, # ┘  ✨Один и тоже User! Несмотря на то, что обе фикстуры создают пользователя.
     create_file: CreateFileSchema
 ) -> httpx.Response:
     """
@@ -52,8 +52,8 @@ def create_course_api(
 # Pydantic-model (full)
 @pytest.fixture
 def create_course(
-    courses_client: CoursesClient, # ┐ ✨ДЕДУПЛИКАЦИЯ внутри одного теста — это фундаментальное свойство Pytest.
-    create_user: CreateUserSchema, # ┘ ✨Один и тоже User! Несмотря на то, что обе фикстуры создают пользователя.
+    courses_client: CoursesClient, # ┐  ✨ДЕДУПЛИКАЦИЯ внутри одного теста — это фундаментальное свойство Pytest.
+    create_user: CreateUserSchema, # ┘  ✨Один и тоже User! Несмотря на то, что обе фикстуры создают пользователя.
     create_file: CreateFileSchema
 ) -> CreateCourseSchema:
     """
