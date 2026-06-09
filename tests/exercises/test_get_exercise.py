@@ -2,7 +2,6 @@
 TEST Get Exercise
 """
 import http
-
 import httpx
 import pytest
 from clients.exercises_client import ExercisesClient
