@@ -5,8 +5,10 @@ import http
 import httpx
 import pytest
 from clients.exercises_client import ExercisesClient
-from schemas.exercises_schema import CreateExerciseSchema, UpdateExerciseRequestSchema
+from schemas.exercises_schema import CreateExerciseSchema, UpdateExerciseRequestSchema, UpdateExerciseResponseSchema
 from tools.assertions.base_assert import assert_method, assert_status_code
+from tools.assertions.exercises_assert import assert_update_exercise_response
+from tools.assertions.schema_assert import validate_json_schema
 from tools.tool import Tool
 
 #=======================================================================================================================
@@ -17,21 +19,25 @@ class TestUpdateExercise:
         response = update_exercise_api                                        # Сохраняем ответ API-фикстуры
 
         # Assertions
-        assert_status_code(response, http.HTTPStatus.OK)     # Status code: 200
-        assert_method(response, http.HTTPMethod.PATCH)     # Method: PATCH
+        assert_status_code(response, http.HTTPStatus.OK)       # Status code: 200
+        assert_method(response, http.HTTPMethod.PATCH)       # Method: PATCH
+        assert_update_exercise_response(response)                                    # Response data = Request data
+        validate_json_schema(response, UpdateExerciseResponseSchema) # Validate JSON schema
 
 
 
     def test_update_exercise_2(self, exercises_client: ExercisesClient, create_exercise: CreateExerciseSchema):
-        new_exercise_data = UpdateExerciseRequestSchema()                  # Pydantic-model with fake-data (Update ALL)
+        new_exercise_data = UpdateExerciseRequestSchema()                  # Pydantic-model with fake-data (Update ALL data)
         response = exercises_client.update_exercise_api(                   # ▶ Запрос через API-метод
-            create_exercise.exercise_id,
-            new_exercise_data
+            create_exercise.exercise_id,                         # Передаем Exercise ID
+            new_exercise_data                              # Передаем Pydantic-model c данными, которые необходимо обновить
         )
-        # Assertions
-        assert_status_code(response, http.HTTPStatus.OK)     # Status code: 200
-        assert_method(response, http.HTTPMethod.PATCH)     # Method: PATCH
 
+        # Assertions
+        assert_status_code(response, http.HTTPStatus.OK)       # Status code: 200
+        assert_method(response, http.HTTPMethod.PATCH)       # Method: PATCH
+        assert_update_exercise_response(response)                                    # Response data = Request data
+        validate_json_schema(response, UpdateExerciseResponseSchema) # Validate JSON schema
 
 #=======================================================================================================================
-        #Tool.api_report(response)
+        # Tool.api_report(response)

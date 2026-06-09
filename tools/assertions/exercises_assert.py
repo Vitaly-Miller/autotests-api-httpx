@@ -6,10 +6,10 @@ from schemas.exercises_schema import CreateExerciseRequestSchema, CreateExercise
 from tools.assertions.base_assert import assert_equal, assert_is_value, assert_length
 
 #=======================================================================================================================
-# Exercise Response data is NON-empty
-def assert_exercise_response_non_empty(response: httpx.Response):
+# Create Exercise Response data is NON-empty
+def assert_create_exercise_response_non_empty(response: httpx.Response):
     """
-    Exercise Response data is NON-empty
+    Create Exercise Response data is NON-empty
 
     :param response: httpx.Response (for deserialize —> Pydantic-model)
     :raise AssertionError
@@ -26,8 +26,8 @@ def assert_exercise_response_non_empty(response: httpx.Response):
     assert_is_value(response_model.exercise.estimated_time, 'estimated_time')
 
 
-# Exercise Response data = Exercise Request data
-def assert_exercise_response(response: httpx.Response):
+# Create Exercise Response data = Create Exercise Request data
+def assert_create_exercise_response(response: httpx.Response):
     """
     Response data = Request data
 
@@ -43,6 +43,41 @@ def assert_exercise_response(response: httpx.Response):
     assert_equal(response_model.exercise.min_score, request_model.min_score, 'min_score')
     assert_equal(response_model.exercise.order_index, request_model.order_index, 'order_index')
     assert_equal(response_model.exercise.description, request_model.description, 'description')
+
+
+
+# Get Exercise Response data is NON-empty
+def assert_get_exercise_response_non_empty(response: httpx.Response):
+    """
+    Get Exercise Response data is NON-empty
+
+    Используется: assert_create_exercise_response_non_empty()
+
+    :param response: httpx.Response (for deserialize —> Pydantic-model)
+    :raise AssertionError
+    """
+    assert_create_exercise_response_non_empty(response)
+
+
+
+# Update Exercise Response data = Update Exercise Request data
+def assert_update_exercise_response(response: httpx.Response):
+    """
+    Update Response data = Update Request data (without course_id)
+
+    :param response: httpx.Response with Exercise data (for deserialize —> Pydantic-model)
+    :raise AssertionError
+    """
+    from schemas.exercises_schema import UpdateExerciseRequestSchema, UpdateExerciseResponseSchema
+    response_model = UpdateExerciseResponseSchema.model_validate_json(response.text)           # Response —> Pydantic-model
+    request_model = UpdateExerciseRequestSchema.model_validate_json(response.request.content)  # Request —> Pydantic-model
+
+    assert_equal(response_model.exercise.title, request_model.title, 'title')
+    assert_equal(response_model.exercise.max_score, request_model.max_score, 'max_score')
+    assert_equal(response_model.exercise.min_score, request_model.min_score, 'min_score')
+    assert_equal(response_model.exercise.order_index, request_model.order_index, 'order_index')
+    assert_equal(response_model.exercise.description, request_model.description, 'description')
+    assert_equal(response_model.exercise.estimated_time, request_model.estimated_time, 'estimated_time')
 
 
 # Exercise ID validation

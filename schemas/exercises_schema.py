@@ -27,7 +27,6 @@ class GetExercisesRequestSchema(BaseModel):
 #--------------------------------------------------- Update Exercise ---------------------------------------------------
 class UpdateExerciseRequestSchema(BaseModel):
     title: str | None = Field(default_factory=fake.sentence)
-    course_id: str | None = Field(alias='courseId', default_factory=fake.uuid4)
     max_score: int | None = Field(alias='maxScore', default_factory=fake.max_score)
     min_score: int | None = Field(alias='minScore', default_factory=fake.min_score)
     order_index: int | None = Field(alias='orderIndex', default_factory=fake.random_int)

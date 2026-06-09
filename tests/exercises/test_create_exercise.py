@@ -10,8 +10,8 @@ from schemas.courses_schema import CreateCourseSchema
 from schemas.exercises_schema import CreateExerciseRequestSchema, CreateExerciseResponseSchema
 from tools.assertions.base_assert import assert_method, assert_status_code
 from tools.assertions.exercises_assert import (
-    assert_exercise_response,
-    assert_exercise_response_non_empty, assert_exercise_id
+    assert_create_exercise_response,
+    assert_create_exercise_response_non_empty, assert_exercise_id
 )
 from tools.assertions.schema_assert import validate_json_schema
 from tools.tool import Tool
@@ -26,8 +26,8 @@ class TestCreateExercise:
         # Assertions
         assert_status_code(response, http.HTTPStatus.OK)        # Status Code: 200
         assert_method(response, http.HTTPMethod.POST)         # Method: POST
-        assert_exercise_response_non_empty(response)                           # Response data is NON-empty
-        assert_exercise_response(response)                                     # Response data = Request data
+        assert_create_exercise_response_non_empty(response)                           # Response data is NON-empty
+        assert_create_exercise_response(response)                                     # Response data = Request data
         assert_exercise_id(response)                                                  # Exercise ID validation
         validate_json_schema(response, CreateExerciseResponseSchema)  # JSON Schema validation
 
@@ -46,8 +46,8 @@ class TestCreateExercise:
         # Assertions
         assert_status_code(response, http.HTTPStatus.OK)        # Status Code: 200
         assert_method(response, http.HTTPMethod.POST)         # Method: POST
-        assert_exercise_response_non_empty(response)                                  # Response data is NON-empty
-        assert_exercise_response(response)                                            # Response data = Request data
+        assert_create_exercise_response_non_empty(response)                           # Response data is NON-empty
+        assert_create_exercise_response(response)                                     # Response data = Request data
         assert_exercise_id(response)                                                  # Exercise ID validation
         validate_json_schema(response, CreateExerciseResponseSchema)  # JSON Schema validation
 
