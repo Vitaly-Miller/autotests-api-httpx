@@ -52,8 +52,8 @@ def create_file(files_client: FilesClient) -> CreateFileSchema:
     """
     create_file_data = CreateFileRequestSchema()                   # Инициализация Pydantic-model c default fake-data
     response_model = files_client.create_file(create_file_data)    # ▶ Запрос через Pydantic-метод
-    response_full_model = CreateFileSchema(request=create_file_data, response=response_model) # Инициализация Pydantic-model (CreateFileSchema) ✨<Request + Response>
-    return response_full_model                                     # Pydantic-model (CreateFileSchema) ✨<Request + Response>
+    response_model_full = CreateFileSchema(request=create_file_data, response=response_model) # Инициализация Pydantic-model (CreateFileSchema) ✨<Request + Response>
+    return response_model_full                                     # Pydantic-model (CreateFileSchema) ✨<Request + Response>
 
 
 # Pydantic-model (full) + ✨delete
@@ -67,9 +67,9 @@ def create_file_temp(files_client: FilesClient) -> Generator[CreateFileSchema]:
     """
     create_file_data = CreateFileRequestSchema()                   # Инициализация Pydantic-модели c default fake-data
     response_model = files_client.create_file(create_file_data)    # ▶ Запрос через Pydantic-метод
-    response_full_model = CreateFileSchema(request=create_file_data, response=response_model)  # Инициализация Pydantic-model (CreateFileSchema) ✨<Request + Response>
-    yield response_full_model                                      # Pydantic-model (CreateFileSchema) ✨<Request + Response>
-    files_client.delete_file_api(response_full_model.file_id)      # Удаление файла после теста
+    response_model_full = CreateFileSchema(request=create_file_data, response=response_model)  # Инициализация Pydantic-model (CreateFileSchema) ✨<Request + Response>
+    yield response_model_full                                      # Pydantic-model (CreateFileSchema) ✨<Request + Response>
+    files_client.delete_file_api(response_model_full.file_id)      # Удаление файла после теста
 
 
 #------------------------------------------------------ Get File -------------------------------------------------------

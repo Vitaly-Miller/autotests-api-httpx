@@ -23,7 +23,7 @@ class APIClient:
         GET-запрос
 
         :param url: URL-адрес эндпоинта
-        :param params: Параметры запроса (например, ?key=value)
+        :param params: Параметры запроса в формате qwery (например, ?key=value) / None
         :return: httpx.Response
         """
         return self.client.get(url=url, params=params)
@@ -39,8 +39,8 @@ class APIClient:
         POST-запрос
 
         :param url: URL-адрес эндпоинта
-        :param json: Данные в формате JSON
-        :param data: Форматированные данные формы (например, application/x-www-form-urlencoded)
+        :param json: Данные
+        :param data: Данные
         :param files: Файлы для загрузки на сервер
         :return: httpx.Response
         """
@@ -55,7 +55,7 @@ class APIClient:
         PATCH-запрос (Частичное обновление)
 
         :param url: URL-адрес эндпоинта
-        :param json: Данные для частичного обновления в формате JSON
+        :param json: Данные для частичного обновления
         :return: httpx.Response
         """
         return self.client.patch(url=url, json=json)

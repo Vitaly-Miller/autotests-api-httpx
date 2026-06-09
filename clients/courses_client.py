@@ -1,6 +1,5 @@
 """
 Courses Client
-/courses
 """
 import httpx
 from clients.api_client import APIClient

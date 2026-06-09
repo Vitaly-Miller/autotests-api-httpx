@@ -1,6 +1,5 @@
 """
 Authentication Client
-/authentication
 """
 import httpx
 from clients.api_client import APIClient

@@ -1,7 +1,5 @@
 """
 Files Client
-/files
-(Клиент для работы с файлами)
 """
 import httpx
 from clients.api_client import APIClient

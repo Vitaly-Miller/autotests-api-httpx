@@ -46,8 +46,8 @@ def create_user(public_users_client: PublicUsersClient) -> CreateUserSchema:
     """
     create_user_data = CreateUserRequestSchema()                         # Инициализация модели с Default fake-data нового пользователя по Pydantic-схеме
     response_model = public_users_client.create_user(create_user_data)   # ︎▶ Запрос через Pydantic-метод
-    response_full_model = CreateUserSchema(request=create_user_data, response=response_model)  # Инициализация Pydantic-model (CreateUserSchema) ✨<Request + Response>
-    return response_full_model                                           # Pydantic-model (CreateUserSchema) ✨<Request + Response>
+    response_model_full = CreateUserSchema(request=create_user_data, response=response_model)  # Инициализация Pydantic-model (CreateUserSchema) ✨<Request + Response>
+    return response_model_full                                           # Pydantic-model (CreateUserSchema) ✨<Request + Response>
 
 
 #-----------------------------------------------------------------------------------------------------------------------

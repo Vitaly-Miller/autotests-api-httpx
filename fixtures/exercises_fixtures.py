@@ -59,8 +59,8 @@ def create_exercise(exercises_client: ExercisesClient, create_course: CreateCour
         courseId=create_course.course_id                   # Default —> реальный Course ID из фикстуры
     )
     response_model = exercises_client.create_exercise(exercise_data)   # ▶ Запрос через Pydantic-метод
-    response_full_model = CreateExerciseSchema(request=exercise_data, response=response_model)   # Инициализация Pydantic-model (CoursesFullSchema) ✨<Request + Response>
-    return response_full_model                                         # Pydantic-model (CreateExerciseSchema) ✨<Request + Response>
+    response_model_full = CreateExerciseSchema(request=exercise_data, response=response_model)   # Инициализация Pydantic-model (CoursesFullSchema) ✨<Request + Response>
+    return response_model_full                                         # Pydantic-model (CreateExerciseSchema) ✨<Request + Response>
 
 
 #---------------------------------------------------- Get exercise -----------------------------------------------------

@@ -1,11 +1,11 @@
 """
-🔒Private httpx.Client builder (Кэшированный)
+🔒Private httpx.Client builder
 (Для методов, требующих авторизации)
 """
 import httpx
-from functools import lru_cache
 from clients.auth_client import get_auth_client
 from schemas.auth_schema import AuthDataSchema
+from functools import lru_cache
 
 #============================================== Private httpx.Client (Private) =========================================
 BASE_URL = 'http://localhost:8000/api/v1'

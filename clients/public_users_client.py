@@ -1,7 +1,6 @@
 """
 PUBLIC Users Client
 (Для методов, НЕ требующих авторизации)
-/users
 """
 import httpx
 from clients.api_client import APIClient
