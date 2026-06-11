@@ -106,12 +106,12 @@ class ExercisesClient(APIClient):
         :param new_exercise_data: Pydantic-model c данными, которые необходимо обновить
         :return: Pydantic-model (UpdateExerciseResponseSchema)
         """
-        response = self.update_exercise_api(                      # ▶ Запрос через API-метод
-            exercise_id,                                # Передаем  Exercise ID
-            new_exercise_data                     # Передаем Pydantic-model данными, которые необходимо обновить
+        response = self.update_exercise_api(             # ▶ Запрос через API-метод
+            exercise_id,                       # Передаем  Exercise ID
+            new_exercise_data            # Передаем Pydantic-model данными, которые необходимо обновить
         )
         response_model = UpdateExerciseResponseSchema.model_validate_json(response.text) # Response —> Pydantic-model (deserialize)
-        return response_model                                      # Pydantic-model (UpdateExerciseResponseSchema)
+        return response_model                            # Pydantic-model (UpdateExerciseResponseSchema)
 
     #---------------------------------------------- Delete Exercise ----------------------------------------------------
     # API

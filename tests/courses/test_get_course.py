@@ -29,5 +29,6 @@ class TestGetCourses:
         assert_method(response, http.HTTPMethod.GET)          # Method: GET
         assert_get_courses_responses(response, [create_course.response]) # Список курсов соответствует созданным курсам
         validate_json_schema(response, GetCoursesResponseSchema)      # JSON Schema validation
+
 #=======================================================================================================================
         # Tool.api_report(response)

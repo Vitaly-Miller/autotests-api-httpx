@@ -128,4 +128,17 @@ def update_exercise(exercises_client: ExercisesClient, create_exercise: CreateEx
     )
     return response_model                                             # Pydantic-model (UpdateExerciseResponseSchema)
 
+#--------------------------------------------------- Delete exercise ---------------------------------------------------
+# API
+@pytest.fixture
+def delete_exercise_api(exercises_client: ExercisesClient, create_exercise: CreateExerciseSchema) -> httpx.Response:
+    """
+    API-фикстура удаления задания
+
+    :param exercises_client: Вложенная Pydantic-фикстура получения экземпляра ExercisesClient() (с Авторизацией)
+    :param create_exercise: Вложенная Pydantic-фикстура создания задания (для получения Exercise ID)
+    :return: httpx.Response
+    """
+    response = exercises_client.delete_exercise_api(create_exercise.exercise_id) # ▶ Запрос через API-метод
+    return response                                                              # httpx.Response
 #-----------------------------------------------------------------------------------------------------------------------

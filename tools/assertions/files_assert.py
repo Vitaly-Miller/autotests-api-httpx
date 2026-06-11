@@ -69,7 +69,7 @@ def assert_file_id(response: httpx.Response, file_id: str | None = None):
 #-----------------------------------------------------------------------------------------------------------------------
 
 
-#====================================================== Negative =======================================================
+#====================================================== NEGATIVE =======================================================
 #----------------------------------------------------- Create File -----------------------------------------------------
 # Create file by filename="" (empty)
 def assert_create_file_empty_filename_error_response(actual: httpx.Response):
@@ -120,8 +120,20 @@ def assert_create_file_empty_directory_error_response(actual: httpx.Response):
 
 
 #------------------------------------------------------- Get File ------------------------------------------------------
-# Get File by invalid File ID (non-UUID format)
-def assert_invalid_file_id_error_response(actual: httpx.Response):
+def assert_file_not_found_error_response(response: httpx.Response):
+    """
+    Get NON-existent File / Error Response message
+
+    Сравнивает Error Response с Pydantic-model (NotFoundErrorResponseSchema)
+
+    :param response: Response
+    :return: AssertionError
+    """
+    expected_model = NotFoundErrorResponseSchema(detail='File not found')    # Expected error message
+    assert_not_found_response(response, expected_model)  # "detail": "File not found"
+
+
+def assert_get_file_invalid_id_error_response(actual: httpx.Response):
     """
     Проверка Error Response при получении файла с невалидным File ID (non-UUID format)
 
@@ -144,19 +156,6 @@ def assert_invalid_file_id_error_response(actual: httpx.Response):
     assert_validate_error_response(actual, expected_model)
 
 
-# Get Non-existent File
-def assert_file_not_found_error_response(actual: httpx.Response):
-    """
-    Проверка Error Response при попытке получить несуществующий файл
 
-    Сравнивает Error Response с Pydantic-model (NotFoundErrorResponseSchema) при попытке получить несуществующий файл
-
-    :param actual: Response
-    :return: AssertionError
-    """
-    expected_model = NotFoundErrorResponseSchema(
-        detail='File not found'
-    )
-    assert_not_found_response(actual, expected_model)
 
 #-----------------------------------------------------------------------------------------------------------------------

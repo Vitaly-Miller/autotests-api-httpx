@@ -66,7 +66,7 @@ class Fake:
         :return: Строка формата: User-1234
         """
         number = self.faker.random_int()
-        return f'Test_User-{number}'
+        return f'Test_User_ID-{number}'
 
     def uuid4(self) -> str:
         """

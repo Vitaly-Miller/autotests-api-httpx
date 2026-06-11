@@ -9,7 +9,11 @@ from schemas.files_schema import CreateFileSchema, CreateFileResponseSchema
 from tools.assertions.base_assert import assert_status_code, assert_method
 from tools.assertions.schema_assert import validate_json_schema
 from tools.data_generator import fake
-from tools.assertions.files_assert import assert_file_id, assert_file_not_found_error_response, assert_invalid_file_id_error_response
+from tools.assertions.files_assert import (
+    assert_file_id,
+    assert_file_not_found_error_response,
+    assert_get_file_invalid_id_error_response
+)
 from tools.tool import Tool
 
 #=======================================================================================================================
@@ -40,7 +44,7 @@ class TestGetFileNegative:
         # Assertions
         assert_status_code(response, http.HTTPStatus.UNPROCESSABLE_ENTITY) # Status code: 422
         assert_method(response, http.HTTPMethod.GET)                     # Method: GET
-        assert_invalid_file_id_error_response(response)                                          # Validation Error Response data
+        assert_get_file_invalid_id_error_response(response)                                          # Validation Error Response data
         validate_json_schema(response, ErrorResponseSchema)                      # Validation JSON schema
 
 

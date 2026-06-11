@@ -1,12 +1,19 @@
 """
 Exercises assertions
 """
+import http
+
 import httpx
+
+from clients.exercises_client import ExercisesClient
+from schemas.errors_schema import NotFoundErrorResponseSchema
 from schemas.exercises_schema import (
     CreateExerciseRequestSchema, CreateExerciseResponseSchema,
-    UpdateExerciseRequestSchema, UpdateExerciseResponseSchema
+    GetExerciseResponseSchema, UpdateExerciseRequestSchema, UpdateExerciseResponseSchema
 )
-from tools.assertions.base_assert import assert_equal, assert_is_value, assert_length
+from tools.assertions.base_assert import assert_equal, assert_is_value, assert_length, assert_method, assert_status_code
+from tools.assertions.errors_assert import assert_not_found_response
+from tools.tool import Tool
 
 #=======================================================================================================================
 #--------------------------------------------------------- Base --------------------------------------------------------
@@ -58,7 +65,7 @@ def assert_create_exercise_response_non_empty(response: httpx.Response):
     :param response: httpx.Response (for deserialize —> Pydantic-model)
     :raise AssertionError
     """
-    assert_exercise_response_non_empty(response)    # Base assert
+    assert_exercise_response_non_empty(response)
 
 
 def assert_create_exercise_response(response: httpx.Response):
@@ -90,11 +97,10 @@ def assert_get_exercise_response_non_empty(response: httpx.Response):
     :param response: httpx.Response (for deserialize —> Pydantic-model)
     :raise AssertionError
     """
-    assert_create_exercise_response_non_empty(response)   # Base assert
+    assert_create_exercise_response_non_empty(response)
 
 
 #--------------------------------------------------- Update exercise ---------------------------------------------------
-# Update Exercise Response data = Update Exercise Request data
 def assert_update_exercise_response(response: httpx.Response):
     """
     Update Response data = Update Request data (without course_id)
@@ -112,4 +118,21 @@ def assert_update_exercise_response(response: httpx.Response):
     assert_equal(response_model.exercise.description, request_model.description, 'description')
     assert_equal(response_model.exercise.estimated_time, request_model.estimated_time, 'estimated_time')
 
-#----------------------------------------------------- Exercise ID -----------------------------------------------------
+
+
+#====================================================== NEGATIVE =======================================================
+#---------------------------------------------------- Get exercise -----------------------------------------------------
+def assert_exercise_not_found_error_response(response: httpx.Response):
+    """
+    Get NON-existent Exercise / Error Response message
+
+    Сравнивает Error Response с Pydantic-model (NotFoundErrorResponseSchema)
+
+    :param response: Response
+    :return: AssertionError
+    """
+    expected_model = NotFoundErrorResponseSchema(detail='Exercise not found')  # Expected error message
+    assert_not_found_response(response, expected_model)   # "detail": "Exercise not found"
+
+
+#-----------------------------------------------------------------------------------------------------------------------
