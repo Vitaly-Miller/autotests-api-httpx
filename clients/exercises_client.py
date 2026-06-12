@@ -7,8 +7,8 @@ from clients.httpx_private_client import get_httpx_private_client
 from schemas.auth_schema import AuthDataSchema
 from schemas.exercises_schema import (
     CreateExerciseRequestSchema,
-    GetExerciseResponseSchema, UpdateExerciseRequestSchema,
-    GetExercisesRequestSchema, CreateExerciseResponseSchema, UpdateExerciseResponseSchema
+    GetExerciseResponseSchema, GetExercisesQwerySchema, UpdateExerciseRequestSchema,
+    CreateExerciseResponseSchema, UpdateExerciseResponseSchema
 )
 
 #================================================== Exercises Client ===================================================
@@ -69,15 +69,17 @@ class ExercisesClient(APIClient):
 
     #------------------------------------------------ Get Exercises ----------------------------------------------------
     # API
-    def get_exercises_api(self, query_course_id: GetExercisesRequestSchema) -> httpx.Response:
+    def get_exercises_api(self, query_course_id: GetExercisesQwerySchema) -> httpx.Response:
         """
-        API-метод получения списка заданий для определенного курса Course ID (?query)
+        API-метод получения списка заданий по Course ID (?query)
 
         :param query_course_id: Pydantic-model с Course ID (?query)
         :return: httpx.Response
         """
-        response = self.get(url=self.ENDPOINT, params=query_course_id)  # NOQA   # ▶ Запрос
-        return response                                                          # httpx.Response
+        response = self.get(                                      # ▶ Запрос c Query-параметром
+            url=self.ENDPOINT,
+            params=query_course_id.model_dump(by_alias=True))     # Pydantic-model —> Dict (serialize)
+        return response                                           # httpx.Response
 
 
     #---------------------------------------------- Update Exercise ----------------------------------------------------

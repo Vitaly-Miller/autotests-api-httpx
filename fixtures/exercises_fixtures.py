@@ -9,7 +9,7 @@ from clients.exercises_client import ExercisesClient, get_exercises_client
 from schemas.courses_schema import CreateCourseSchema
 from schemas.exercises_schema import (
     CreateExerciseRequestSchema, CreateExerciseSchema,
-    GetExerciseResponseSchema, UpdateExerciseRequestSchema, UpdateExerciseResponseSchema
+    GetExerciseResponseSchema, GetExercisesQwerySchema, UpdateExerciseRequestSchema, UpdateExerciseResponseSchema
 )
 from schemas.users_schema import CreateUserSchema
 
@@ -68,7 +68,7 @@ def create_exercise(exercises_client: ExercisesClient, create_course: CreateCour
 @pytest.fixture
 def get_exercise_api(exercises_client: ExercisesClient, create_exercise: CreateExerciseSchema) -> httpx.Response:
     """
-    API-фикстура получения задания
+    API-фикстура получения задания по Exercise ID
 
     :param exercises_client: Вложенная Pydantic-фикстура получения экземпляра ExercisesClient() (с Авторизацией)
     :param create_exercise: Вложенная Pydantic-фикстура создания задания (для с Exercise ID)
@@ -82,15 +82,30 @@ def get_exercise_api(exercises_client: ExercisesClient, create_exercise: CreateE
 @pytest.fixture
 def get_exercise(exercises_client: ExercisesClient, create_exercise: CreateExerciseSchema) -> GetExerciseResponseSchema:
     """
-    Pydantic-фикстура получения задания
+    Pydantic-фикстура получения задания по Exercise ID
 
     :param exercises_client: Вложенная Pydantic-фикстура получения экземпляра ExercisesClient() (с Авторизацией)
-    :param create_exercise: Вложенная Pydantic-фикстура создания задания (для получения Exercise ID)
+    :param create_exercise: Вложенная Pydantic-фикстура создания задания (для получения Exercise-ID)
     :return: Pydantic-model (GetExerciseResponseSchema)
     """
     response_model = exercises_client.get_exercise(create_exercise.exercise_id)   # ▶ Запрос через Pydantic-метод
     return response_model                                                         # Pydantic-model (GetExercisesResponseSchema)
 
+
+#---------------------------------------------------- Get exercises ----------------------------------------------------
+# API
+@pytest.fixture
+def get_exercises_api(exercises_client: ExercisesClient, create_course: CreateCourseSchema) -> httpx.Response:
+    """
+    API-фикстура получения списка заданий по Course ID
+    :param exercises_client: Вложенная Pydantic-фикстура получения экземпляра ExercisesClient() (с Авторизацией)
+    :param create_course: Вложенная Pydantic-фикстура создания курса (для получения Course-ID)
+    :return: httpx.Response
+    """
+    course_id_qwery_model = GetExercisesQwerySchema(courseId=create_course.course_id) # Pydantic-model
+
+    response = exercises_client.get_exercises_api(course_id_qwery_model)              # ▶ Запрос через API-метод
+    return response                                                                   # httpx.Response
 
 #--------------------------------------------------- Update exercise ---------------------------------------------------
 # API

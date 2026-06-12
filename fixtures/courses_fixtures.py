@@ -4,7 +4,7 @@ Courses (Fixtures)
 import httpx
 import pytest
 from clients.courses_client import get_courses_client, CoursesClient
-from schemas.courses_schema import CreateCourseRequestSchema, CreateCourseResponseSchema, CreateCourseSchema
+from schemas.courses_schema import CreateCourseRequestSchema, CreateCourseSchema
 from schemas.files_schema import CreateFileSchema
 from schemas.users_schema import CreateUserSchema
 

@@ -18,11 +18,11 @@ class TestGetCourses:
     def test_get_courses(
             self,
             courses_client: CoursesClient,
-            create_user: CreateUserSchema,
+            create_user: CreateUserSchema,                                            # Для User-ID
             create_course: CreateCourseSchema
     ):
-        user_id_qwery_model = GetCoursesQwerySchema(userId=create_user.user_id)         # Pydantic-model  qwery-User-ID
-        response = courses_client.get_courses_api(user_id_qwery_model)                  # ▶ Запрос через API-метод
+        user_id_qwery_model = GetCoursesQwerySchema(userId=create_user.user_id)       # Pydantic-model
+        response = courses_client.get_courses_api(user_id_qwery_model)                # ▶ Запрос через API-метод
 
         # Assertions
         assert_status_code(response, http.HTTPStatus.OK)        # Status Code: 200

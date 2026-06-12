@@ -48,7 +48,9 @@ class Fake:
         :param: domain: - Custom domain ['custom-domain.com'] Default —> ...@example.com
         :return: email
         """
-        return self.faker.email(domain=domain)
+        unique_id = self.faker.uuid4()[:8]
+        domain_part = domain or 'example.com'
+        return f'test_{unique_id}@{domain_part}'
 
     def password(self) -> str:
         """
