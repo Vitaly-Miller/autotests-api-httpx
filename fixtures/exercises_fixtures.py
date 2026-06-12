@@ -98,6 +98,7 @@ def get_exercise(exercises_client: ExercisesClient, create_exercise: CreateExerc
 def get_exercises_api(exercises_client: ExercisesClient, create_course: CreateCourseSchema) -> httpx.Response:
     """
     API-фикстура получения списка заданий по Course ID
+
     :param exercises_client: Вложенная Pydantic-фикстура получения экземпляра ExercisesClient() (с Авторизацией)
     :param create_course: Вложенная Pydantic-фикстура создания курса (для получения Course-ID)
     :return: httpx.Response

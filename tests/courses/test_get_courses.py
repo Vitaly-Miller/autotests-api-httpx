@@ -2,6 +2,8 @@
 TEST Get Courses
 """
 import http
+
+import httpx
 import pytest
 from clients.courses_client import CoursesClient
 from schemas.courses_schema import CreateCourseSchema, GetCoursesQwerySchema, GetCoursesResponseSchema
@@ -15,7 +17,17 @@ from tools.tool import Tool
 @pytest.mark.courses
 @pytest.mark.regression
 class TestGetCourses:
-    def test_get_courses(
+    def test_get_courses_1(self,create_course: CreateCourseSchema, get_courses_api: httpx.Response):
+
+        # Assertions
+        assert_status_code(get_courses_api, http.HTTPStatus.OK) # Status Code: 200
+        assert_method(get_courses_api, http.HTTPMethod.GET)   # Method: GET
+        assert_get_courses_responses(get_courses_api, [create_course.response]) # Список курсов соответствует созданным курсам
+        validate_json_schema(get_courses_api, GetCoursesResponseSchema)      # JSON Schema validation
+
+
+
+    def test_get_courses_2(
             self,
             courses_client: CoursesClient,
             create_user: CreateUserSchema,                                            # Для User-ID
