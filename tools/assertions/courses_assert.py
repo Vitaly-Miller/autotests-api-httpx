@@ -43,7 +43,7 @@ def assert_get_courses_responses(get_courses_response: httpx.Response, create_co
     """
     get_courses_response_model = GetCoursesResponseSchema.model_validate_json(get_courses_response.text)  # Response —> Pydantic-model
 
-    expected_courses = [r.course for r in create_course_responses]                                        # CreateCourseResponseSchema —> CourseSchema
+    expected_courses = [r.course for r in create_course_responses]                                        #
 
     assert_length_equal(get_courses_response_model.courses, expected_courses, 'courses') # Сравниваем количество элементов в объекте "courses"
     assert_equal(get_courses_response_model.courses, expected_courses, 'courses')    # Сравниваем значения элементов в объекте "courses"

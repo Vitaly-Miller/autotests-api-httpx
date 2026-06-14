@@ -18,7 +18,6 @@ class TestGetExercises:
         assert_method(get_exercises_api, http.HTTPMethod.GET)    # Method: GET
 
 
-
 #=======================================================================================================================
-        Tool.api_report(create_exercise_api)
-        Tool.api_report(get_exercises_api)
+        # Tool.api_report(create_exercise_api)
+        # Tool.api_report(get_exercises_api)

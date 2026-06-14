@@ -12,7 +12,7 @@ from tools.assertions.schema_assert import validate_json_schema
 from tools.tool import Tool
 
 #=======================================================================================================================
-@pytest.mark.exercise
+@pytest.mark.exercises
 @pytest.mark.regression
 class TestUpdateExercise:
     def test_update_exercise_1(self, update_exercise_api: httpx.Response):    # Через API-фикстуру полного цикла
