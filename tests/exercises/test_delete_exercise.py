@@ -20,14 +20,14 @@ class TestDeleteExercise:
         get_response = exercises_client.get_exercise_api(create_exercise.exercise_id)       # ▶ Запрос через API-метод
 
         # Assertions (Delete Exercise)
-        assert_status_code(delete_response, http.HTTPStatus.OK)      # Status code: 200
-        assert_method(delete_response, 'DELETE')                   # Method: DELETE
+        assert_status_code(delete_response, http.HTTPStatus.OK)       # Status code: 200
+        assert_method(delete_response, 'DELETE')                    # Method: DELETE
 
         # Assertions (Get Non-existent Exercise)
-        assert_status_code(get_response, http.HTTPStatus.NOT_FOUND)  # Status code: 404
-        assert_method(get_response, 'GET')                         # Method: GET
-        assert_exercise_not_found_error_response(get_response)                             # Error message: "Exercise not found"
-        validate_json_schema(get_response, NotFoundErrorResponseSchema)    # Validation JSON schema
+        assert_status_code(get_response, http.HTTPStatus.NOT_FOUND)   # Status code: 404
+        assert_method(get_response, 'GET')                          # Method: GET
+        assert_exercise_not_found_error_response(get_response)                              # Error message: "Exercise not found"
+        validate_json_schema(get_response, NotFoundErrorResponseSchema)     # Validation JSON schema
 
 
 

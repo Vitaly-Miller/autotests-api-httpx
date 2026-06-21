@@ -1,34 +1,45 @@
 # Allure Cheat Sheet
 
 ## Установка
+-   **allure-pytest** — Python-плагин для pytest, который собирает
+    результаты тестов в папку `allure-results`.
+-   **Allure CLI** — инструмент для генерации и просмотра
+    HTML-отчётов.
 
-``` bash
+```
 pip install allure-pytest
 brew install allure
 ```
 
--   **allure-pytest** --- Python-плагин для pytest, который собирает
-    результаты тестов в папку `allure-results`.
--   **Allure CLI** --- инструмент для генерации и просмотра
-    HTML-отчётов.
+Проверка версии
+```
+allure --version
+```
 
+Обновление
+```
+brew upgrade allure
+```
 ------------------------------------------------------------------------
 
-## Запуск тестов с Allure
+## ▶️ + 📁 allure-results
+
 
 Запуск всех тестов + Очистка старых результатов:
 ``` bash
 python -m pytest -s -v --alluredir=allure-results --clean-alluredir
 ```
 
-------------------------------------------------------------------------
-
-## HTML-отчёт
 
 Открыть временный отчёт:
 ``` bash
 allure serve allure-results
 ```
+
+------------------------------------------------------------------------
+
+## 📁 ⮕ 🗂️ allure-report
+
 
 Сгенерировать постоянный отчёт + Очистка старых результатов:
 ``` bash
@@ -37,28 +48,16 @@ allure generate allure-results -o allure-report --clean
 
 Открыть готовый отчёт:
 ``` bash
-allure open allure-report 
+allure open allure-report
 ```
 
 ------------------------------------------------------------------------
 
-## Проверка версии
-
-``` bash
-allure --version
-```
-
-## Обновление
-
-``` bash
-brew upgrade allure
-```
-
 ------------------------------------------------------------------------
 
-# Декораторы
+# @Декораторы
 
-## Заголовок теста
+### Заголовок теста
 
 ``` python
 @allure.title('Create new user')
@@ -66,7 +65,7 @@ def test_create_user():
     ...
 ```
 
-## Описание теста
+### Описание теста
 
 ``` python
 @allure.description('Verify user creation with valid data')
@@ -74,7 +73,7 @@ def test_create_user():
     ...
 ```
 
-## Severity
+### Severity
 
 ``` python
 @allure.severity(allure.severity_level.CRITICAL)
@@ -90,7 +89,7 @@ def test_create_user():
 
 ------------------------------------------------------------------------
 
-## Иерархия
+### Иерархия
 
 ``` python
 @allure.epic('API')
@@ -100,7 +99,7 @@ def test_create_user():
 
 ------------------------------------------------------------------------
 
-## Теги
+### Теги
 
 ``` python
 @allure.tag('smoke')
@@ -187,9 +186,7 @@ allure.attach(
 ------------------------------------------------------------------------
 
 # API Testing
-
 ## Request Body
-
 ``` python
 allure.attach(
     str(payload),
@@ -199,7 +196,6 @@ allure.attach(
 ```
 
 ## Response Body
-
 ``` python
 allure.attach(
     response.text,
@@ -209,7 +205,6 @@ allure.attach(
 ```
 
 ## Response Headers
-
 ``` python
 allure.attach(
     str(response.headers),
@@ -221,14 +216,13 @@ allure.attach(
 ------------------------------------------------------------------------
 
 # Полезные команды
-
+Удаление папок вместе со всем содержимым:
 ``` bash
 rm -rf allure-results
 rm -rf allure-report
 ```
 
 Запустить тесты и открыть отчёт:
-
 ``` bash
 python -m pytest --alluredir=allure-results
 allure serve allure-results
@@ -240,19 +234,19 @@ allure serve allure-results
 
 ## В чём разница между `allure serve` и `allure generate`?
 
--   `allure serve` --- временно генерирует отчёт и сразу открывает
+-   `allure serve` — временно генерирует отчёт и сразу открывает
     браузер.
--   `allure generate` --- создаёт постоянную папку `allure-report`.
--   `allure open` --- открывает ранее сгенерированный отчёт.
+-   `allure generate` — создаёт постоянную папку `allure-report`.
+-   `allure open` — открывает ранее сгенерированный отчёт `allure-report`.
 
 ## Как работает Allure?
 
 ``` text
-pytest
-   ↓
-allure-results
-   ↓
-allure generate / allure serve
-   ↓
-HTML Report
+    pytest
+      ⬇︎
+allure-results  ⮕  allure serve
+      ⬇︎        
+allure generate
+      ⬇︎
+ allure open
 ```

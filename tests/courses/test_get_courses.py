@@ -20,8 +20,8 @@ class TestGetCourses:
     def test_get_courses_1(self,create_course: CreateCourseSchema, get_courses_api: httpx.Response):
 
         # Assertions
-        assert_status_code(get_courses_api, http.HTTPStatus.OK) # Status Code: 200
-        assert_method(get_courses_api, http.HTTPMethod.GET)   # Method: GET
+        assert_status_code(get_courses_api, http.HTTPStatus.OK)        # Status Code: 200
+        assert_method(get_courses_api, http.HTTPMethod.GET)          # Method: GET
         assert_get_courses_responses(get_courses_api, [create_course.response]) # Список курсов соответствует созданным курсам
         validate_json_schema(get_courses_api, GetCoursesResponseSchema)      # JSON Schema validation
 

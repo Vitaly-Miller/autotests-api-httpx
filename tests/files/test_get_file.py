@@ -17,23 +17,23 @@ from tools.assertions.files_assert import (
 from tools.tool import Tool
 
 #=======================================================================================================================
-@pytest.mark.regression
 @pytest.mark.files
+@pytest.mark.regression
 class TestGetFile:
     def test_get_file(self, files_client: FilesClient, create_file: CreateFileSchema):
-        response = files_client.get_file_api(create_file.file_id)                # ▶ Запрос через API-метод
+        response = files_client.get_file_api(create_file.file_id)                       # ▶ Запрос через API-метод
 
         # Assertions
-        assert_status_code(response, http.HTTPStatus.OK)   # Status code: 200
-        assert_method(response, http.HTTPMethod.GET)     # Method: GET
-        assert_file_id(response, create_file.file_id)             # File ID validation
-        validate_json_schema(response, CreateFileResponseSchema) # Validation JSON schema
+        assert_status_code(response, http.HTTPStatus.OK)          # Status code: 200
+        assert_method(response, http.HTTPMethod.GET)            # Method: GET
+        assert_file_id(response, create_file.file_id)                    # File ID validation
+        validate_json_schema(response, CreateFileResponseSchema)        # Validation JSON schema
 
 
 
 #------------------------------------------------------ Negative -------------------------------------------------------
-@pytest.mark.regression
 @pytest.mark.files
+@pytest.mark.regression
 @pytest.mark.negative
 class TestGetFileNegative:
     # Get File by invalid File ID (non-UUID format)
@@ -44,7 +44,7 @@ class TestGetFileNegative:
         # Assertions
         assert_status_code(response, http.HTTPStatus.UNPROCESSABLE_ENTITY) # Status code: 422
         assert_method(response, http.HTTPMethod.GET)                     # Method: GET
-        assert_get_file_invalid_id_error_response(response)                                          # Validation Error Response data
+        assert_get_file_invalid_id_error_response(response)                                      # Validation Error Response data
         validate_json_schema(response, ErrorResponseSchema)                      # Validation JSON schema
 
 
@@ -59,4 +59,4 @@ class TestGetFileNegative:
         assert_file_not_found_error_response(response)                                 # Validation Error Response data
 
 #=======================================================================================================================
-        #Tool.api_report(response)
+        # Tool.api_report(response)

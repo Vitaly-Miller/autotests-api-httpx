@@ -14,22 +14,23 @@ from tools.data_generator import fake
 from tools.tool import Tool
 
 #=======================================================================================================================
-@pytest.mark.smoke
 @pytest.mark.users
+@pytest.mark.smoke
 class TestCreateUser:
-    """v.1 - Через фикстуру создания пользователя"""
+    # v.1 - Через фикстуру создания пользователя
     def test_create_user_1(self, create_user_api: httpx.Response):
         response = create_user_api  # Сохраняем ответ фикстуры, но не обязательно...,
                                     # Исполняемую API-фикстуру можно сразу передавать в Assertions в качестве параметра
         # Assertions
         assert_status_code(response, http.HTTPStatus.OK)    # Status code: 200
         assert_method(response, http.HTTPMethod.POST)     # Method: POST
-        assert_create_user_response(response)                                   # Response data = Request data
+        assert_create_user_response(response)                                     # Response data = Request data
         assert_user_id(response)                                                  # 2-in-1 | User ID validation
         validate_json_schema(response, CreateUserResponseSchema)  # Validation JSON schema
 
 
-    """v.2 - Через фикстуру получения экземпляра PublicUsersClient"""
+
+    # v.2 - Через фикстуру получения экземпляра PublicUsersClient
     def test_create_user_2(self, public_users_client: PublicUsersClient):
         create_user_data = CreateUserRequestSchema()                              # # Pydantic-model with fake-data
         response = public_users_client.create_user_api(create_user_data)          # ▶ Запрос через API-метод
@@ -37,12 +38,13 @@ class TestCreateUser:
         # Assertions
         assert_status_code(response, http.HTTPStatus.OK)    # Status code: 200
         assert_method(response, http.HTTPMethod.POST)     # Method: POST
-        assert_create_user_response(response)                                   # Response data = Request data
+        assert_create_user_response(response)                                     # Response data = Request data
         assert_user_id(response)                                                  # User ID validation
         validate_json_schema(response, CreateUserResponseSchema)  # Validation JSON schema
 
 
-    """v.3 - Через фикстуру получения экземпляра PublicUsersClient + Параметризация"""
+
+    # v.3 - Через фикстуру получения экземпляра PublicUsersClient + Параметризация
     @pytest.mark.parametrize(                                                     # parametrize 'email' (3-in-1)
         'email', [
             fake.email('amazon.com'),
@@ -64,7 +66,8 @@ class TestCreateUser:
         validate_json_schema(response, CreateUserResponseSchema)  # Validation JSON schema
 
 
-    """v.4 - All manual"""
+
+    # v.4 - All manual
     def test_create_user_4_manual(self):
         public_users_client = get_public_users_client()                               # Получение экземпляра PublicUsersClient
         create_user_data = CreateUserRequestSchema()                                  # Инициализация Pydantic-model с default fake-data нового пользователя

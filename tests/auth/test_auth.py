@@ -13,8 +13,8 @@ from tools.assertions.schema_assert import validate_json_schema
 from tools.tool import Tool
 
 #=======================================================================================================================
-@pytest.mark.smoke
 @pytest.mark.auth
+@pytest.mark.smoke
 class TestAuth:
     """v.1 - Через фикстуру авторизации пользователя"""
     def test_auth_1(self, auth_api: httpx.Response):
@@ -23,10 +23,9 @@ class TestAuth:
         # Assertions
         assert_status_code(response, HTTPStatus.OK)          # Status code: 200
         assert_method(response, HTTPMethod.POST)           # Method: POST
-        assert_auth_response_non_empty(response)                            # Response data is NON-empty
+        assert_auth_response_non_empty(response)                                   # Response data is NON-empty
         assert_token(response)                                                     # Token validation
         validate_json_schema(response, AuthResponseSchema)         # Validation JSON schema
-
 
 
     """v.2 - Через фикстуры: Создания пользователя, Авторизации пользователя"""
@@ -40,7 +39,7 @@ class TestAuth:
         # Assertions
         assert_status_code(response, HTTPStatus.OK)          # Status code: 200
         assert_method(response, HTTPMethod.POST)           # Method: POST
-        assert_auth_response_non_empty(response)                            # Response data is NON-empty
+        assert_auth_response_non_empty(response)                                   # Response data is NON-empty
         assert_token(response)                                                     # Token validation
         validate_json_schema(response, AuthResponseSchema)         # Validation JSON schema
 

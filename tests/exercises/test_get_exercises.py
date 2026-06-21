@@ -14,8 +14,8 @@ class TestGetExercises:
     def test_get_exercises(self, create_exercise_api: httpx.Response, get_exercises_api: httpx.Response):
 
         # Assertions
-        assert_status_code(get_exercises_api, http.HTTPStatus.OK)  # Status code: 200
-        assert_method(get_exercises_api, http.HTTPMethod.GET)    # Method: GET
+        assert_status_code(get_exercises_api, http.HTTPStatus.OK)    # Status code: 200
+        assert_method(get_exercises_api, http.HTTPMethod.GET)      # Method: GET
 
 
 #=======================================================================================================================

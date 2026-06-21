@@ -12,8 +12,9 @@ from tools.assertions.schema_assert import validate_json_schema
 from tools.tool import Tool
 
 #=======================================================================================================================
-@pytest.mark.regression
 @pytest.mark.files
+@pytest.mark.regression
+
 class TestDeleteFile:
     def test_delete_file(self, files_client: FilesClient, create_file: CreateFileSchema):
         delete_file_response = files_client.delete_file_api(create_file.file_id)          # ▶ Запрос на удаление File через API-метод
