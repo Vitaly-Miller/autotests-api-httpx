@@ -1,6 +1,7 @@
 """
 TEST User Auth (Log in)
 """
+import allure
 import httpx
 import pytest
 from clients.auth_client import AuthClient
@@ -16,7 +17,7 @@ from tools.tool import Tool
 @pytest.mark.auth
 @pytest.mark.smoke
 class TestAuth:
-    """v.1 - Через фикстуру авторизации пользователя"""
+    @allure.title('Auth (v.1 - Через API-фикстуру полного цикла)')
     def test_auth_1(self, auth_api: httpx.Response):
         response = auth_api        # Сохраняем ответ фикстуры, но не обязательно,...
                                    # Исполняемую API-фикстуру можно сразу передавать в Assertions в качестве параметра
@@ -28,7 +29,8 @@ class TestAuth:
         validate_json_schema(response, AuthResponseSchema)         # Validation JSON schema
 
 
-    """v.2 - Через фикстуры: Создания пользователя, Авторизации пользователя"""
+
+    @allure.title('Auth (v.2 - Через фикстуры: Создания пользователя + Авторизации пользователя)')
     def test_auth_2(self, create_user: CreateUserSchema, auth_client: AuthClient):
         auth_data = AuthDataSchema(                      # Pydantic-model with fake-data (Email и Password),...
             email=create_user.email,                     # Замена default на —> реальное значение из фикстуры

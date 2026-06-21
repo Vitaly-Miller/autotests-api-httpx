@@ -2,6 +2,7 @@
 TEST Delete Exercise
 """
 import http
+import allure
 import pytest
 from clients.exercises_client import ExercisesClient
 from schemas.errors_schema import NotFoundErrorResponseSchema
@@ -15,6 +16,7 @@ from tools.tool import Tool
 @pytest.mark.exercises
 @pytest.mark.regression
 class TestDeleteExercise:
+    @allure.title('Delete Exercise')
     def test_delete_exercise(self, exercises_client: ExercisesClient, create_exercise: CreateExerciseSchema):
         delete_response = exercises_client.delete_exercise_api(create_exercise.exercise_id) # ▶ Запрос через API-метод
         get_response = exercises_client.get_exercise_api(create_exercise.exercise_id)       # ▶ Запрос через API-метод

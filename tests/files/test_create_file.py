@@ -2,6 +2,7 @@
 TEST Create File
 """
 import http
+import allure
 import pytest
 from clients.files_client import FilesClient
 from schemas.errors_schema import ErrorResponseSchema
@@ -19,6 +20,7 @@ from tools.tool import Tool
 @pytest.mark.files
 @pytest.mark.regression
 class TestCreateFile:
+    @allure.title('Create File')
     def test_create_file(self, files_client: FilesClient):
         file_data = CreateFileRequestSchema()                                      # Pydantic-model with fake-data
         response = files_client.create_file_api(file_data)                         # ▶ Запрос через API-метод
@@ -36,8 +38,9 @@ class TestCreateFile:
 @pytest.mark.files
 @pytest.mark.regression
 @pytest.mark.negative
+@allure.title('Create File (Negative)')
 class TestCreateFileNegative:
-    # Empty 'filename'
+    @allure.title('Create File with empty file name')
     def test_negative_create_file_empty_filename(self, files_client: FilesClient):
         create_file_data = CreateFileRequestSchema(                  # Pydantic-model with fake-data
            filename=''                                               # 👈fake-data —> "" (empty)
@@ -52,7 +55,8 @@ class TestCreateFileNegative:
 
 
 
-    # Empty 'directory'
+    @allure.title('Create File')
+    @allure.description('Create File with empty directory')
     def test_negative_create_file_empty_directory(self, files_client: FilesClient):
         create_file_data = CreateFileRequestSchema(                  # Pydantic-model with fake-data
            directory=''                                              # 👈fake-data —> "" (empty)

@@ -4,6 +4,7 @@ TEST Create User
 import http
 import httpx
 import pytest
+import allure
 import jsonschema
 from clients.public_users_client import PublicUsersClient, get_public_users_client
 from schemas.users_schema import CreateUserRequestSchema, CreateUserResponseSchema
@@ -17,7 +18,7 @@ from tools.tool import Tool
 @pytest.mark.users
 @pytest.mark.smoke
 class TestCreateUser:
-    # v.1 - Через фикстуру создания пользователя
+    @allure.title('Create User (v.1 - Через фикстуру полного цикла)')
     def test_create_user_1(self, create_user_api: httpx.Response):
         response = create_user_api  # Сохраняем ответ фикстуры, но не обязательно...,
                                     # Исполняемую API-фикстуру можно сразу передавать в Assertions в качестве параметра
@@ -30,7 +31,7 @@ class TestCreateUser:
 
 
 
-    # v.2 - Через фикстуру получения экземпляра PublicUsersClient
+    @allure.title('Create User (v.2 - Через фикстуру получения экземпляра PublicUsersClient)')
     def test_create_user_2(self, public_users_client: PublicUsersClient):
         create_user_data = CreateUserRequestSchema()                              # # Pydantic-model with fake-data
         response = public_users_client.create_user_api(create_user_data)          # ▶ Запрос через API-метод
@@ -44,30 +45,30 @@ class TestCreateUser:
 
 
 
-    # v.3 - Через фикстуру получения экземпляра PublicUsersClient + Параметризация
+    @allure.title('Create User (v.3 - Через фикстуру получения экземпляра PublicUsersClient + Param)')
     @pytest.mark.parametrize(                                                     # parametrize 'email' (3-in-1)
         'email', [
-            fake.email('amazon.com'),
-            fake.email('gmail.com'),
-            fake.email('yahoo.com')
+            'amazon.com',
+            'gmail.com',
+            'yahoo.com'
         ]
     )
     def test_create_user_3_param(self, email: str, public_users_client: PublicUsersClient):
         create_user_data = CreateUserRequestSchema(                               # Pydantic-model with fake-data, ...
-            email=email                                                           # ... значения из parametrize (3-in-1)
+            email=fake.email(domain=email)                                        # ... значения Email-домена из parametrize (3-in-1)
         )
         response = public_users_client.create_user_api(create_user_data)          # ▶ Запрос через API-метод
 
         # Assertions
         assert_status_code(response, http.HTTPStatus.OK)    # Status code: 200
         assert_method(response, http.HTTPMethod.POST)     # Method: POST
-        assert_create_user_response(response)                                   # Response data = Request data
+        assert_create_user_response(response)                                     # Response data = Request data
         assert_user_id(response)                                                  # User ID validation
         validate_json_schema(response, CreateUserResponseSchema)  # Validation JSON schema
 
 
 
-    # v.4 - All manual
+    @allure.title('Create User (v.4 - All manual)')
     def test_create_user_4_manual(self):
         public_users_client = get_public_users_client()                               # Получение экземпляра PublicUsersClient
         create_user_data = CreateUserRequestSchema()                                  # Инициализация Pydantic-model с default fake-data нового пользователя

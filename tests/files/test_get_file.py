@@ -2,6 +2,7 @@
 TEST Get File
 """
 import http
+import allure
 import pytest
 from clients.files_client import FilesClient
 from schemas.errors_schema import ErrorResponseSchema
@@ -20,6 +21,7 @@ from tools.tool import Tool
 @pytest.mark.files
 @pytest.mark.regression
 class TestGetFile:
+    @allure.title('Get File')
     def test_get_file(self, files_client: FilesClient, create_file: CreateFileSchema):
         response = files_client.get_file_api(create_file.file_id)                       # ▶ Запрос через API-метод
 
@@ -36,7 +38,7 @@ class TestGetFile:
 @pytest.mark.regression
 @pytest.mark.negative
 class TestGetFileNegative:
-    # Get File by invalid File ID (non-UUID format)
+    @allure.title('Get File by invalid File ID (non-UUID format)')
     def test_get_file_by_invalid_file_id(self, files_client: FilesClient):
         invalid_file_id = 'invalid_File_ID'                            # Invalid File ID (NON-UUID format)
         response = files_client.get_file_api(invalid_file_id)          # ▶ Запрос через API-метод с invalid File ID
@@ -48,7 +50,8 @@ class TestGetFileNegative:
         validate_json_schema(response, ErrorResponseSchema)                      # Validation JSON schema
 
 
-    # Get NON-existent File
+
+    @allure.title('Get File by Non-existent File ID')
     def test_get_non_existent_file(self, files_client: FilesClient):
         non_existent_file_id = fake.uuid4()                           # Non-existent File ID (UUID format)
         response = files_client.get_file_api(non_existent_file_id)    # ▶ Запрос через API-метод с Non-existent File ID

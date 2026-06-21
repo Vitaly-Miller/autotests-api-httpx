@@ -2,6 +2,7 @@
 TEST Create Exercise
 """
 import http
+import allure
 import httpx
 import pytest
 from clients.exercises_client import ExercisesClient
@@ -20,6 +21,7 @@ from tools.tool import Tool
 @pytest.mark.exercises
 @pytest.mark.regression
 class TestCreateExercise:
+    @allure.title('Create Exercise (v.1 - Через API-фикстуру полного цикла)')
     def test_create_exercise_1(self, create_exercise_api: httpx.Response):     # Через API-фикстуру полного цикла        ─┐
         response = create_exercise_api                                         # Сохраняем ответ API-фикстуры            ─┘
 
@@ -33,6 +35,7 @@ class TestCreateExercise:
 
 
 
+    @allure.title('Create Exercise (v.2 - Через фикстуры: exercises_client, create_course)')
     def test_create_exercise_2(                                       #                                                  ─┐
             self,                                                     #                                                   │
             exercises_client: ExercisesClient,                        # Фикстура получения экземпляра ExercisesClient()   │

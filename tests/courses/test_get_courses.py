@@ -2,7 +2,7 @@
 TEST Get Courses
 """
 import http
-
+import allure
 import httpx
 import pytest
 from clients.courses_client import CoursesClient
@@ -17,6 +17,7 @@ from tools.tool import Tool
 @pytest.mark.courses
 @pytest.mark.regression
 class TestGetCourses:
+    @allure.title('Get Courses (v.1 - Через фикстуру полного цикла)')
     def test_get_courses_1(self,create_course: CreateCourseSchema, get_courses_api: httpx.Response):
 
         # Assertions
@@ -27,6 +28,7 @@ class TestGetCourses:
 
 
 
+    @allure.title('Get Courses (v.1 - Через фикстуры: courses_client, create_user, create_course)')
     def test_get_courses_2(
             self,
             courses_client: CoursesClient,

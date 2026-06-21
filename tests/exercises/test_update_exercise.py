@@ -2,6 +2,8 @@
 TEST Update Exercise
 """
 import http
+
+import allure
 import httpx
 import pytest
 from clients.exercises_client import ExercisesClient
@@ -15,6 +17,7 @@ from tools.tool import Tool
 @pytest.mark.exercises
 @pytest.mark.regression
 class TestUpdateExercise:
+    @allure.title('Update Exercise (v.1 - Через API-фикстуру полного цикла)')
     def test_update_exercise_1(self, update_exercise_api: httpx.Response):    # Через API-фикстуру полного цикла
         response = update_exercise_api                                        # Сохраняем ответ API-фикстуры
 
@@ -26,6 +29,7 @@ class TestUpdateExercise:
 
 
 
+    @allure.title('Update Exercise (v.2 - Через фикстуры: exercises_client, create_exercise)')
     def test_update_exercise_2(self, exercises_client: ExercisesClient, create_exercise: CreateExerciseSchema):
         new_exercise_data = UpdateExerciseRequestSchema()       # Pydantic-model with fake-data (Update ALL data)
         response = exercises_client.update_exercise_api(        # ▶ Запрос через API-метод

@@ -2,6 +2,7 @@
 TEST Update Course
 """
 import http
+import allure
 import pytest
 from clients.courses_client import CoursesClient
 from schemas.courses_schema import CreateCourseSchema, UpdateCourseRequestSchema, UpdateCourseResponseSchema
@@ -14,6 +15,7 @@ from tools.tool import Tool
 @pytest.mark.courses
 @pytest.mark.regression
 class TestUpdateCourse:
+    @allure.title('Update Course')
     def test_update_course(self, courses_client: CoursesClient, create_course: CreateCourseSchema):
         new_course_data = UpdateCourseRequestSchema()                  # Pydantic-model with fake-data (Update ALL)
         response = courses_client.update_course_api(                   # ▶ Запрос через API-метод

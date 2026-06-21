@@ -77,6 +77,8 @@ def test_create_user():
 
 ``` python
 @allure.severity(allure.severity_level.CRITICAL)
+def test_create_user():
+    ...
 ```
 
 Уровни:

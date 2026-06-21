@@ -1,6 +1,7 @@
 """
 TEST Get User Me
 """
+import allure
 import httpx
 import pytest
 import jsonschema
@@ -18,7 +19,7 @@ from tools.tool import Tool
 @pytest.mark.users
 @pytest.mark.smoke
 class TestGetUserMe:
-    # v.1 - Через фикстуру получения данных текущего пользователя
+    @allure.title('Get User Me (v.1 - Через фикстуру полного цикла)')
     def test_get_user_me_1(self, get_user_me_api: httpx.Response):
         response = get_user_me_api      # Сохраняем ответ фикстуры, но не обязательно...,
                                         # Исполняемую API-фикстуру можно сразу передавать в Assertions в качестве параметра
@@ -31,8 +32,8 @@ class TestGetUserMe:
 
 
 
-    # v.2 - Через фикстуру получения экземпляра PrivateUsersClient
-    def test_get_user_me_3(self, private_users_client: PrivateUsersClient):
+    @allure.title('Get User Me (v.2 - Через фикстуру получения экземпляра PrivateUsersClient)')
+    def test_get_user_me_2(self, private_users_client: PrivateUsersClient):
         response = private_users_client.get_user_me_api()                       # ▶ Запрос через API-метод
 
         # Assertions
@@ -43,8 +44,9 @@ class TestGetUserMe:
         validate_json_schema(response, GetUserMeResponseSchema) # Validation JSON schema
 
 
-    # v.3 - All manual
-    def test_get_user_me_4_manual(self):
+
+    @allure.title('Get User Me (v.3 - All manual)')
+    def test_get_user_me_3_manual(self):
         #----------------------- Pre-conditions --------------------
         # Create User
         public_users_client = get_public_users_client()   # Получаем экземпляр PublicUsersClient (с Base URL)

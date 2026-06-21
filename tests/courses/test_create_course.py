@@ -2,10 +2,9 @@
 TEST Create Course
 """
 import http
-
+import allure
 import httpx
 import pytest
-
 from clients.courses_client import CoursesClient
 from schemas.courses_schema import CreateCourseRequestSchema, CreateCourseResponseSchema
 from schemas.files_schema import CreateFileSchema
@@ -13,13 +12,13 @@ from schemas.users_schema import CreateUserSchema
 from tools.assertions.base_assert import assert_method, assert_status_code
 from tools.assertions.courses_assert import assert_create_course_response
 from tools.assertions.schema_assert import validate_json_schema
-
 from tools.tool import Tool
 
 #=======================================================================================================================
 @pytest.mark.courses
 @pytest.mark.regression
 class TestCreateCourse:
+    @allure.title('Create Course (v.1 - Через API-фикстуру полного цикла)')
     def test_create_course_1(self, create_course_api: httpx.Response):              # Через API-фикстуру полного цикла
         response = create_course_api                                                # Сохраняем ответ API-фикстуры
 
@@ -31,6 +30,7 @@ class TestCreateCourse:
 
 
 
+    @allure.title('Create Course (v.2 - Через фикстуры: CoursesClient + CreateUser + CreateFile)')
     def test_create_course_2(
             self,
             courses_client: CoursesClient,                           # Фикстура получения экземпляра CoursesClient()

@@ -5,3 +5,4 @@ Faker
 pytest
 loguru
 python-dotenv
+allure-python-commons
