@@ -1,5 +1,5 @@
 """
-Allure tag
+Allure Tag
 
 Для создания перечислений — наборов именованных констант
 """
@@ -16,11 +16,13 @@ class Tag(str, Enum):
     REGRESSION = 'REGRESSION'
     SMOKE = 'SMOKE'
     NEGATIVE = 'NEGATIVE'
+    VALIDATE = 'VALIDATE'
     # -----------------------
     CREATE = 'CREATE'
     GET = 'GET'
     UPDATE = 'UPDATE'
     DELETE = 'DELETE'
-    VALIDATE = 'VALIDATE'
     # -----------------------
     PARAMETRIZE = 'PARAMETRIZE'
+
+#=======================================================================================================================
