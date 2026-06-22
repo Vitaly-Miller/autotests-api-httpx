@@ -3,10 +3,10 @@ Allure Tag
 
 Для создания перечислений — наборов именованных констант
 """
-from enum import Enum
+from enum import Enum, StrEnum
 
 #=======================================================================================================================
-class Tag(str, Enum):
+class Tag(str, Enum):                    # ⚠️Python 3.11+ ⮕ class Tag(StrEnum):
     USERS = 'USERS'
     AUTHENTICATION = 'AUTHENTICATION'    # Auth (Login)
     FILES = 'FILES'
