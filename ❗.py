@@ -17,7 +17,7 @@ def create_user_api(self, request: CreateUserRequestSchema) -> Response:
                               ⬇︎
 def create_user_api(self, create_user_payload: CreateUserRequestSchema) -> Response:
 ------------------------------------------------------------------------------------------------------------------------
-4. Попробывать прописать а главном api_client - json=json.model_dump(by_alias=True), чтоб убрать из методов клиентов
+4. Попробовать прописать а главном api_client - json=json.model_dump(by_alias=True), чтоб убрать из методов клиентов
 
 ------------------------------------------------------------------------------------------------------------------------
 5. 
