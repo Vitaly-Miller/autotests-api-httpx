@@ -57,12 +57,27 @@ allure open allure-report
 
 # @Декораторы
 
-### Заголовок теста
+### Заголовок теста (статический)
 
 ``` python
-@allure.title('Create new user')
+@allure.title('Create user')
 def test_create_user():
     ...
+```
+### Заголовок теста (динамический)
+
+``` python
+# @allure.title('Create user')  <– ⚠️ статический title - игнорируется при наличии динамического
+@pytest.mark.parametrize(       # parametrize 'email' (3-in-1)
+    'email', [
+        'email_1@amazon.com',
+        'email_2gmail.com',
+        'email_3yahoo.com'
+    ]
+)
+def test_create_user():
+   allure.dynamic.title(f'Create user with Email: {email}')     # 👈 динамический title внутри теста без-@
+   ...
 ```
 
 ### Описание теста

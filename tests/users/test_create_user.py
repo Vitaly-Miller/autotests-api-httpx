@@ -8,6 +8,7 @@ import allure
 import jsonschema
 from clients.public_users_client import PublicUsersClient, get_public_users_client
 from schemas.users_schema import CreateUserRequestSchema, CreateUserResponseSchema
+from tools.allure.tags import Tag
 from tools.assertions.base_assert import assert_status_code, assert_method
 from tools.assertions.schema_assert import validate_json_schema
 from tools.assertions.users_assert import assert_create_user_response, assert_user_id
@@ -16,7 +17,8 @@ from tools.tool import Tool
 
 #=======================================================================================================================
 @pytest.mark.users
-@pytest.mark.smoke
+@pytest.mark.regression
+@allure.tag(Tag.USERS, Tag.REGRESSION, Tag.CREATE)                         # Через Enum
 class TestCreateUser:
     @allure.title('Create User (v.1 - Через фикстуру полного цикла)')
     def test_create_user_1(self, create_user_api: httpx.Response):
@@ -31,7 +33,7 @@ class TestCreateUser:
 
 
 
-    @allure.title('Create User (v.2 - Через фикстуру получения экземпляра PublicUsersClient)')
+    @allure.title('Create User (v.2 - Через фикстуру PublicUsersClient)')
     def test_create_user_2(self, public_users_client: PublicUsersClient):
         create_user_data = CreateUserRequestSchema()                              # # Pydantic-model with fake-data
         response = public_users_client.create_user_api(create_user_data)          # ▶ Запрос через API-метод
@@ -45,15 +47,17 @@ class TestCreateUser:
 
 
 
-    @allure.title('Create User (v.3 - Через фикстуру получения экземпляра PublicUsersClient + Param)')
-    @pytest.mark.parametrize(                                                     # parametrize 'email' (3-in-1)
+    @allure.tag(Tag.PARAMETRIZE)                                   # Через Enum
+    @allure.title('Create User (v.3 - Email parametrize 3-in-1)')  # ⚠️Статический title - игнорируется при наличии динамического
+    @pytest.mark.parametrize(                                      # parametrize 'email' (3-in-1)
         'email', [
             'amazon.com',
             'gmail.com',
             'yahoo.com'
         ]
     )
-    def test_create_user_3_param(self, email: str, public_users_client: PublicUsersClient):
+    def test_create_user_3_params(self, email: str, public_users_client: PublicUsersClient):
+        allure.dynamic.title(f'Create User (v.3 - Email domain: ...@{email})')    # 👈 Динамический title (без-@)
         create_user_data = CreateUserRequestSchema(                               # Pydantic-model with fake-data, ...
             email=fake.email(domain=email)                                        # ... значения Email-домена из parametrize (3-in-1)
         )

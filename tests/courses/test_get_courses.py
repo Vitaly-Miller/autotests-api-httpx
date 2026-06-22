@@ -8,6 +8,7 @@ import pytest
 from clients.courses_client import CoursesClient
 from schemas.courses_schema import CreateCourseSchema, GetCoursesQwerySchema, GetCoursesResponseSchema
 from schemas.users_schema import CreateUserSchema
+from tools.allure.tags import Tag
 from tools.assertions.base_assert import assert_method, assert_status_code
 from tools.assertions.courses_assert import assert_get_courses_responses
 from tools.assertions.schema_assert import validate_json_schema
@@ -16,6 +17,7 @@ from tools.tool import Tool
 #=======================================================================================================================
 @pytest.mark.courses
 @pytest.mark.regression
+@allure.tag(Tag.COURSES, Tag.GET, Tag.REGRESSION)                                     # Через Enum
 class TestGetCourses:
     @allure.title('Get Courses (v.1 - Через фикстуру полного цикла)')
     def test_get_courses_1(self,create_course: CreateCourseSchema, get_courses_api: httpx.Response):

@@ -2,12 +2,12 @@
 TEST Update Exercise
 """
 import http
-
 import allure
 import httpx
 import pytest
 from clients.exercises_client import ExercisesClient
 from schemas.exercises_schema import CreateExerciseSchema, UpdateExerciseRequestSchema, UpdateExerciseResponseSchema
+from tools.allure.tags import Tag
 from tools.assertions.base_assert import assert_method, assert_status_code
 from tools.assertions.exercises_assert import assert_update_exercise_response
 from tools.assertions.schema_assert import validate_json_schema
@@ -16,6 +16,7 @@ from tools.tool import Tool
 #=======================================================================================================================
 @pytest.mark.exercises
 @pytest.mark.regression
+@allure.tag(Tag.EXERCISES, Tag.UPDATE, Tag.REGRESSION)                  # Через Enum
 class TestUpdateExercise:
     @allure.title('Update Exercise (v.1 - Через API-фикстуру полного цикла)')
     def test_update_exercise_1(self, update_exercise_api: httpx.Response):    # Через API-фикстуру полного цикла

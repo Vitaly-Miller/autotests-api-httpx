@@ -8,6 +8,7 @@ from clients.auth_client import AuthClient
 from schemas.users_schema import CreateUserSchema
 from schemas.auth_schema import AuthResponseSchema, AuthDataSchema
 from http import HTTPStatus, HTTPMethod
+from tools.allure.tags import Tag
 from tools.assertions.auth_assert import assert_token, assert_auth_response_non_empty
 from tools.assertions.base_assert import assert_status_code, assert_method
 from tools.assertions.schema_assert import validate_json_schema
@@ -16,6 +17,8 @@ from tools.tool import Tool
 #=======================================================================================================================
 @pytest.mark.auth
 @pytest.mark.smoke
+@pytest.mark.regression
+@allure.tag(Tag.AUTHENTICATION, Tag.REGRESSION, Tag.SMOKE, Tag.SMOKE)        # Через Enum
 class TestAuth:
     @allure.title('Auth (v.1 - Через API-фикстуру полного цикла)')
     def test_auth_1(self, auth_api: httpx.Response):

@@ -6,6 +6,7 @@ import allure
 import pytest
 from clients.courses_client import CoursesClient
 from schemas.courses_schema import CreateCourseSchema, UpdateCourseRequestSchema, UpdateCourseResponseSchema
+from tools.allure.tags import Tag
 from tools.assertions.base_assert import assert_method, assert_status_code
 from tools.assertions.courses_assert import assert_update_course_response
 from tools.assertions.schema_assert import validate_json_schema
@@ -14,6 +15,7 @@ from tools.tool import Tool
 #=======================================================================================================================
 @pytest.mark.courses
 @pytest.mark.regression
+@allure.tag(Tag.COURSES, Tag.UPDATE, Tag.REGRESSION)             # Через Enum
 class TestUpdateCourse:
     @allure.title('Update Course')
     def test_update_course(self, courses_client: CoursesClient, create_course: CreateCourseSchema):
@@ -23,11 +25,11 @@ class TestUpdateCourse:
             new_course_data
         )
         # Assertions
-        assert_status_code(response, http.HTTPStatus.OK)      # Status code: 200
-        assert_method(response, http.HTTPMethod.PATCH)      # Method: PATCH
-        assert_update_course_response(response)                                     # Response data = Request data
-        validate_json_schema(response, UpdateCourseResponseSchema)  # Validation JSON schema
+        assert_status_code(response, http.HTTPStatus.OK)       # Status code: 200
+        assert_method(response, http.HTTPMethod.PATCH)       # Method: PATCH
+        assert_update_course_response(response)                                      # Response data = Request data
+        validate_json_schema(response, UpdateCourseResponseSchema)   # Validation JSON schema
 
 
 #=======================================================================================================================
-        #Tool.api_report(response)
+        # Tool.api_report(response)

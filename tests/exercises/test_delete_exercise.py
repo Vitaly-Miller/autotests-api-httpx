@@ -7,6 +7,7 @@ import pytest
 from clients.exercises_client import ExercisesClient
 from schemas.errors_schema import NotFoundErrorResponseSchema
 from schemas.exercises_schema import CreateExerciseSchema
+from tools.allure.tags import Tag
 from tools.assertions.base_assert import assert_method, assert_status_code
 from tools.assertions.exercises_assert import assert_exercise_not_found_error_response
 from tools.assertions.schema_assert import validate_json_schema
@@ -15,6 +16,7 @@ from tools.tool import Tool
 #=======================================================================================================================
 @pytest.mark.exercises
 @pytest.mark.regression
+@allure.tag(Tag.EXERCISES, Tag.DELETE, Tag.REGRESSION)                                # Через Enum
 class TestDeleteExercise:
     @allure.title('Delete Exercise')
     def test_delete_exercise(self, exercises_client: ExercisesClient, create_exercise: CreateExerciseSchema):

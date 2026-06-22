@@ -6,7 +6,8 @@ import allure
 import pytest
 from clients.files_client import FilesClient
 from schemas.errors_schema import ErrorResponseSchema
-from schemas.files_schema import CreateFileResponseSchema, CreateFileRequestSchema, CreateFileSchema
+from schemas.files_schema import CreateFileResponseSchema, CreateFileRequestSchema
+from tools.allure.tags import Tag
 from tools.assertions.base_assert import assert_status_code, assert_method
 from tools.assertions.schema_assert import validate_json_schema
 from tools.assertions.files_assert import (
@@ -19,6 +20,7 @@ from tools.tool import Tool
 #=======================================================================================================================
 @pytest.mark.files
 @pytest.mark.regression
+@allure.tag(Tag.FILES, Tag.CREATE, Tag.REGRESSION)                           # Через Enum
 class TestCreateFile:
     @allure.title('Create File')
     def test_create_file(self, files_client: FilesClient):
@@ -38,14 +40,14 @@ class TestCreateFile:
 @pytest.mark.files
 @pytest.mark.regression
 @pytest.mark.negative
-@allure.title('Create File (Negative)')
+@allure.tag(Tag.FILES, Tag.CREATE, Tag.REGRESSION, Tag.NEGATIVE)    # Через Enum
 class TestCreateFileNegative:
     @allure.title('Create File with empty file name')
     def test_negative_create_file_empty_filename(self, files_client: FilesClient):
-        create_file_data = CreateFileRequestSchema(                  # Pydantic-model with fake-data
-           filename=''                                               # 👈fake-data —> "" (empty)
+        create_file_data = CreateFileRequestSchema(                       # Pydantic-model with fake-data
+           filename=''                                                    # 👈fake-data —> "" (empty)
         )
-        response = files_client.create_file_api(create_file_data)    # ▶ Запрос через API-метод
+        response = files_client.create_file_api(create_file_data)         # ▶ Запрос через API-метод
 
         # Assertions
         assert_status_code(response, http.HTTPStatus.UNPROCESSABLE_ENTITY) # Status code: 422
@@ -55,8 +57,7 @@ class TestCreateFileNegative:
 
 
 
-    @allure.title('Create File')
-    @allure.description('Create File with empty directory')
+    @allure.title('Create File with empty directory')
     def test_negative_create_file_empty_directory(self, files_client: FilesClient):
         create_file_data = CreateFileRequestSchema(                  # Pydantic-model with fake-data
            directory=''                                              # 👈fake-data —> "" (empty)
@@ -71,4 +72,4 @@ class TestCreateFileNegative:
 
 
 #=======================================================================================================================
-        #Tool.api_report(response)
+        # Tool.api_report(response)

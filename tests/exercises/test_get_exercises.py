@@ -2,16 +2,17 @@
 TEST Get Exercises
 """
 import http
-
 import allure
 import httpx
 import pytest
+from tools.allure.tags import Tag
 from tools.assertions.base_assert import assert_method, assert_status_code
 from tools.tool import Tool
 
 #=======================================================================================================================
 @pytest.mark.exercises
 @pytest.mark.regression
+@allure.tag(Tag.EXERCISES, Tag.GET, Tag.REGRESSION)                                  # Через Enum
 class TestGetExercises:
     @allure.title('Get Exercises (v.1 - Через API-фикстуры: exercises_client, create_exercise)')
     def test_get_exercises(self, create_exercise_api: httpx.Response, get_exercises_api: httpx.Response):

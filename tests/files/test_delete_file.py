@@ -7,6 +7,7 @@ import pytest
 from clients.files_client import FilesClient
 from schemas.errors_schema import NotFoundErrorResponseSchema
 from schemas.files_schema import CreateFileSchema
+from tools.allure.tags import Tag
 from tools.assertions.base_assert import assert_status_code, assert_method
 from tools.assertions.files_assert import assert_file_not_found_error_response
 from tools.assertions.schema_assert import validate_json_schema
@@ -15,6 +16,7 @@ from tools.tool import Tool
 #=======================================================================================================================
 @pytest.mark.files
 @pytest.mark.regression
+@allure.tag(Tag.FILES, Tag.DELETE, Tag.REGRESSION)                                  # Через Enum
 class TestDeleteFile:
     @allure.title('Delete File')
     def test_delete_file(self, files_client: FilesClient, create_file: CreateFileSchema):
@@ -33,5 +35,5 @@ class TestDeleteFile:
 
 
 #=======================================================================================================================
-        #Tool.api_report(delete_file_response)
-        #Tool.api_report(get_non_existent_file_response)
+        # Tool.api_report(delete_file_response)
+        # Tool.api_report(get_non_existent_file_response)
