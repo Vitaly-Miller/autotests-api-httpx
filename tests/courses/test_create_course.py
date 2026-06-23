@@ -9,7 +9,7 @@ from clients.courses_client import CoursesClient
 from schemas.courses_schema import CreateCourseRequestSchema, CreateCourseResponseSchema
 from schemas.files_schema import CreateFileSchema
 from schemas.users_schema import CreateUserSchema
-from tools.allure.tags import Tag
+from tools.allure.annotations import Epic, Feature, Story, Tag
 from tools.assertions.base_assert import assert_method, assert_status_code
 from tools.assertions.courses_assert import assert_create_course_response
 from tools.assertions.schema_assert import validate_json_schema
@@ -19,6 +19,10 @@ from tools.tool import Tool
 @pytest.mark.courses
 @pytest.mark.regression
 @allure.tag(Tag.COURSES, Tag.CREATE, Tag.REGRESSION)                          # Через Enum
+@allure.epic(Epic.API)
+@allure.feature(Feature.COURSES)
+@allure.story(Story.CREATE)
+@allure.severity(allure.severity_level.NORMAL)
 class TestCreateCourse:
     @allure.title('Create Course (v.1 - Через API-фикстуру полного цикла)')
     def test_create_course_1(self, create_course_api: httpx.Response):              # Через API-фикстуру полного цикла

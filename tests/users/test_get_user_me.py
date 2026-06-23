@@ -10,7 +10,7 @@ from clients.public_users_client import get_public_users_client
 from schemas.auth_schema import AuthDataSchema
 from schemas.users_schema import CreateUserRequestSchema, CreateUserResponseSchema, GetUserMeResponseSchema
 from http import HTTPStatus, HTTPMethod
-from tools.allure.tags import Tag
+from tools.allure.annotations import Tag, Epic, Feature, Story
 from tools.assertions.base_assert import assert_status_code, assert_method
 from tools.assertions.schema_assert import validate_json_schema
 from tools.assertions.users_assert import assert_create_user_response_non_empty, assert_user_id
@@ -20,6 +20,10 @@ from tools.tool import Tool
 @pytest.mark.users
 @pytest.mark.smoke
 @allure.tag(Tag.USERS, Tag.SMOKE, Tag.GET)                              # Через Enum
+@allure.epic(Epic.API)
+@allure.feature(Feature.USERS)
+@allure.story(Story.GET)
+@allure.severity(allure.severity_level.NORMAL)
 class TestGetUserMe:
     @allure.title('Get User Me (v.1 - Через фикстуру полного цикла)')
     def test_get_user_me_1(self, get_user_me_api: httpx.Response):

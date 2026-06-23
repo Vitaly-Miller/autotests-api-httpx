@@ -8,7 +8,7 @@ import pytest
 from clients.exercises_client import ExercisesClient
 from schemas.courses_schema import CreateCourseSchema
 from schemas.exercises_schema import CreateExerciseRequestSchema, CreateExerciseResponseSchema
-from tools.allure.tags import Tag
+from tools.allure.annotations import Epic, Feature, Story, Tag
 from tools.assertions.base_assert import assert_method, assert_status_code
 from tools.assertions.schema_assert import validate_json_schema
 from tools.assertions.exercises_assert import (
@@ -22,6 +22,10 @@ from tools.tool import Tool
 @pytest.mark.exercises
 @pytest.mark.regression
 @allure.tag(Tag.EXERCISES, Tag.CREATE, Tag.REGRESSION)                   # Через Enum
+@allure.epic(Epic.API)
+@allure.feature(Feature.EXERCISES)
+@allure.story(Story.CREATE)
+@allure.severity(allure.severity_level.NORMAL)
 class TestCreateExercise:
     @allure.title('Create Exercise (v.1 - Через API-фикстуру полного цикла)')
     def test_create_exercise_1(self, create_exercise_api: httpx.Response):     # Через API-фикстуру полного цикла        ─┐

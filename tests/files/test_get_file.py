@@ -7,7 +7,7 @@ import pytest
 from clients.files_client import FilesClient
 from schemas.errors_schema import ErrorResponseSchema
 from schemas.files_schema import CreateFileSchema, CreateFileResponseSchema
-from tools.allure.tags import Tag
+from tools.allure.annotations import Epic, Feature, Story, Tag
 from tools.assertions.base_assert import assert_status_code, assert_method
 from tools.assertions.schema_assert import validate_json_schema
 from tools.data_generator import fake
@@ -22,6 +22,10 @@ from tools.tool import Tool
 @pytest.mark.files
 @pytest.mark.regression
 @allure.tag(Tag.GET, Tag.REGRESSION)                                              # Через Enum
+@allure.epic(Epic.API)
+@allure.feature(Feature.FILES)
+@allure.story(Story.GET)
+@allure.severity(allure.severity_level.NORMAL)
 class TestGetFile:
     @allure.title('Get File')
     def test_get_file(self, files_client: FilesClient, create_file: CreateFileSchema):
@@ -40,6 +44,10 @@ class TestGetFile:
 @pytest.mark.regression
 @pytest.mark.negative
 @allure.tag(Tag.GET, Tag.REGRESSION, Tag.NEGATIVE)               # Через Enum
+@allure.epic(Epic.API)
+@allure.feature(Feature.FILES)
+@allure.story(Story.GET, Story.NEGATIVE)
+@allure.severity(allure.severity_level.NORMAL)
 class TestGetFileNegative:
     @allure.title('Get File by invalid File ID (non-UUID format)')
     def test_get_file_by_invalid_file_id(self, files_client: FilesClient):

@@ -8,7 +8,7 @@ import allure
 import jsonschema
 from clients.public_users_client import PublicUsersClient, get_public_users_client
 from schemas.users_schema import CreateUserRequestSchema, CreateUserResponseSchema
-from tools.allure.tags import Tag
+from tools.allure.annotations import Epic, Feature, Story, Tag
 from tools.assertions.base_assert import assert_status_code, assert_method
 from tools.assertions.schema_assert import validate_json_schema
 from tools.assertions.users_assert import assert_create_user_response, assert_user_id
@@ -19,6 +19,10 @@ from tools.tool import Tool
 @pytest.mark.users
 @pytest.mark.regression
 @allure.tag(Tag.USERS, Tag.REGRESSION, Tag.CREATE)                         # Через Enum
+@allure.epic(Epic.API)
+@allure.feature(Feature.USERS)
+@allure.story(Story.CREATE)
+@allure.severity(allure.severity_level.CRITICAL)
 class TestCreateUser:
     @allure.title('Create User (v.1 - Через фикстуру полного цикла)')
     def test_create_user_1(self, create_user_api: httpx.Response):

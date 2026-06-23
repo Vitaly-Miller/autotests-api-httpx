@@ -7,7 +7,7 @@ import httpx
 import pytest
 from clients.exercises_client import ExercisesClient
 from schemas.exercises_schema import CreateExerciseSchema, GetExerciseResponseSchema
-from tools.allure.tags import Tag
+from tools.allure.annotations import Epic, Feature, Story, Tag
 from tools.assertions.base_assert import assert_method, assert_status_code
 from tools.assertions.exercises_assert import assert_exercise_id, assert_get_exercise_response_non_empty
 from tools.assertions.schema_assert import validate_json_schema
@@ -17,6 +17,10 @@ from tools.tool import Tool
 @pytest.mark.exercises
 @pytest.mark.regression
 @allure.tag(Tag.EXERCISES, Tag.GET, Tag.REGRESSION)                          # Через Enum
+@allure.epic(Epic.API)
+@allure.feature(Feature.EXERCISES)
+@allure.story(Story.GET)
+@allure.severity(allure.severity_level.NORMAL)
 class TestGetExercise:
     @allure.title('Get Exercise (v.1 - Через API-фикстуру полного цикла)')
     def test_get_exercise_1(self, get_exercise_api: httpx.Response):   # Через API-фикстуру полного цикла

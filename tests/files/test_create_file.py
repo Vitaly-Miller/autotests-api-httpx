@@ -7,7 +7,7 @@ import pytest
 from clients.files_client import FilesClient
 from schemas.errors_schema import ErrorResponseSchema
 from schemas.files_schema import CreateFileResponseSchema, CreateFileRequestSchema
-from tools.allure.tags import Tag
+from tools.allure.annotations import Epic, Feature, Story, Tag
 from tools.assertions.base_assert import assert_status_code, assert_method
 from tools.assertions.schema_assert import validate_json_schema
 from tools.assertions.files_assert import (
@@ -21,6 +21,10 @@ from tools.tool import Tool
 @pytest.mark.files
 @pytest.mark.regression
 @allure.tag(Tag.FILES, Tag.CREATE, Tag.REGRESSION)                           # Через Enum
+@allure.epic(Epic.API)
+@allure.feature(Feature.FILES)
+@allure.story(Story.CREATE)
+@allure.severity(allure.severity_level.NORMAL)
 class TestCreateFile:
     @allure.title('Create File')
     def test_create_file(self, files_client: FilesClient):
@@ -41,6 +45,10 @@ class TestCreateFile:
 @pytest.mark.regression
 @pytest.mark.negative
 @allure.tag(Tag.FILES, Tag.CREATE, Tag.REGRESSION, Tag.NEGATIVE)    # Через Enum
+@allure.epic(Epic.API)
+@allure.feature(Feature.FILES)
+@allure.story(Story.CREATE, Story.NEGATIVE)
+@allure.severity(allure.severity_level.NORMAL)
 class TestCreateFileNegative:
     @allure.title('Create File with empty file name')
     def test_negative_create_file_empty_filename(self, files_client: FilesClient):
