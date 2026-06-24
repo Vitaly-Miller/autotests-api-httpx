@@ -1,14 +1,17 @@
 """
 Allure Annotations + Enum
 """
-from enum import Enum, StrEnum
+from enum import StrEnum
 
 #=======================================================================================================================
+# ⚠️Python 3.11- ⮕ class ...(str, Enum):
+# ⚠️Python 3.11+ ⮕ class ...(StrEnum):
 
-#------------------------------------------------------- Suites --------------------------------------------------------
-class Tag(str, Enum):                    # ⚠️Python 3.11+ ⮕ class Tag(StrEnum):
+#-------------------------------------------------------- Tags ---------------------------------------------------------
+# @allure.tag()
+class Tag(StrEnum):
     USERS = 'USERS'
-    AUTHENTICATION = 'AUTHENTICATION'    # Auth (Login)
+    AUTH = 'AUTHENTICATION'      # Authentication, Auth, Login
     FILES = 'FILES'
     COURSES = 'COURSES'
     EXERCISES = 'EXERCISES'
@@ -17,29 +20,33 @@ class Tag(str, Enum):                    # ⚠️Python 3.11+ ⮕ class Tag(StrE
     SMOKE = 'SMOKE'
     NEGATIVE = 'NEGATIVE'
     VALIDATE = 'VALIDATE'
-    # -----------------------
+    #-----------------------
     CREATE = 'CREATE'
     GET = 'GET'
     UPDATE = 'UPDATE'
     DELETE = 'DELETE'
-    # -----------------------
+    #-----------------------
     PARAMETRIZE = 'PARAMETRIZE'
 
-#------------------------------------------------------ Behaviors ------------------------------------------------------
+
+#------------------------------------------------ Behaviors / Suites ---------------------------------------------------
+# @allure.epic() = @allure.parent_suite()
 class Epic(StrEnum):
     API = 'API'
     STUDENT = 'Student service'
     ADMIN = 'Admin service'
 
+# @allure.feature() = @allure.suite()
 class Feature(StrEnum):
     USERS = 'Users'
-    AUTHENTICATION = 'Authentication'    # Auth (Login)
+    AUTH = 'Authentication'      # Authentication, Auth, Login
     FILES = 'Files'
     COURSES = 'Courses'
     EXERCISES = 'Exercises'
 
+# @allure.story() = @allure.sub_suite()
 class Story(StrEnum):
-    LOGIN = 'Login'                      # Auth (Authentication)
+    LOGIN = 'Login'                        # Authentication, Auth, Login
     CREATE = 'Create'
     GET = 'Get'
     UPDATE = 'Update'

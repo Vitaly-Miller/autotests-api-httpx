@@ -5,6 +5,7 @@ import allure
 import httpx
 import pytest
 import jsonschema
+from allure_commons.types import Severity
 from clients.private_users_client import get_private_users_client, PrivateUsersClient
 from clients.public_users_client import get_public_users_client
 from schemas.auth_schema import AuthDataSchema
@@ -17,41 +18,46 @@ from tools.assertions.users_assert import assert_create_user_response_non_empty,
 from tools.tool import Tool
 
 #=======================================================================================================================
-@pytest.mark.users
-@pytest.mark.smoke
-@allure.tag(Tag.USERS, Tag.SMOKE, Tag.GET)                              # Через Enum
-@allure.epic(Epic.API)
-@allure.feature(Feature.USERS)
-@allure.story(Story.GET)
-@allure.severity(allure.severity_level.NORMAL)
+# Class annotations
+@pytest.mark.users                                   # ┐ Pytest Marks
+@pytest.mark.smoke                                   # ┘
+@allure.tag(Tag.USERS, Tag.SMOKE, Tag.GET)     # ] Allure Tags
+@allure.epic(Epic.API)                               # ┐
+@allure.feature(Feature.USERS)                       # │ Allure Behaviors
+@allure.sub_suite(Story.GET)                         # ┘
+@allure.parent_suite(Epic.API)                       # ┐
+@allure.suite(Feature.USERS)                         # │ Allure Suites
+@allure.sub_suite(Story.GET)                         # ┘
+@allure.severity(Severity.NORMAL)                    # ] Allure Severity
+#-----------------------------------------------------------------------------------------------------------------------
 class TestGetUserMe:
-    @allure.title('Get User Me (v.1 - Через фикстуру полного цикла)')
+    @allure.title('Get User Me (v.1 - Через фикстуру полного цикла)')           # — Allure Title
     def test_get_user_me_1(self, get_user_me_api: httpx.Response):
         response = get_user_me_api      # Сохраняем ответ фикстуры, но не обязательно...,
                                         # Исполняемую API-фикстуру можно сразу передавать в Assertions в качестве параметра
         # Assertions
         assert_status_code(response, HTTPStatus.OK)       # Status code: 200
         assert_method(response, HTTPMethod.GET)         # Method: GET
-        assert_create_user_response_non_empty(response)                           # Response data is NON-empty
+        assert_create_user_response_non_empty(response)                         # Response data is NON-empty
         assert_user_id(response)                                                # User ID validation
         validate_json_schema(response, GetUserMeResponseSchema) # Validation JSON schema
 
 
 
-    @allure.title('Get User Me (v.2 - Через фикстуру получения экземпляра PrivateUsersClient)')
+    @allure.title('Get User Me (v.2 - Через фикстуру получения экземпляра PrivateUsersClient)')  # — Allure Title
     def test_get_user_me_2(self, private_users_client: PrivateUsersClient):
         response = private_users_client.get_user_me_api()                       # ▶ Запрос через API-метод
 
         # Assertions
         assert_status_code(response, HTTPStatus.OK)       # Status code: 200
         assert_method(response, HTTPMethod.GET)         # Method: GET
-        assert_create_user_response_non_empty(response)                           # Response data is NON-empty
+        assert_create_user_response_non_empty(response)                         # Response data is NON-empty
         assert_user_id(response)                                                # User ID validation
         validate_json_schema(response, GetUserMeResponseSchema) # Validation JSON schema
 
 
 
-    @allure.title('Get User Me (v.3 - All manual)')
+    @allure.title('Get User Me (v.3 - All manual)')       # — Allure Title
     def test_get_user_me_3_manual(self):
         #----------------------- Pre-conditions --------------------
         # Create User

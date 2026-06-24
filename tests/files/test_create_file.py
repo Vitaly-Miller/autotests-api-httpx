@@ -4,6 +4,7 @@ TEST Create File
 import http
 import allure
 import pytest
+from allure_commons.types import Severity
 from clients.files_client import FilesClient
 from schemas.errors_schema import ErrorResponseSchema
 from schemas.files_schema import CreateFileResponseSchema, CreateFileRequestSchema
@@ -18,13 +19,18 @@ from tools.assertions.files_assert import (
 from tools.tool import Tool
 
 #=======================================================================================================================
-@pytest.mark.files
-@pytest.mark.regression
-@allure.tag(Tag.FILES, Tag.CREATE, Tag.REGRESSION)                           # Через Enum
-@allure.epic(Epic.API)
-@allure.feature(Feature.FILES)
-@allure.story(Story.CREATE)
-@allure.severity(allure.severity_level.NORMAL)
+# Class annotations
+@pytest.mark.files                                              # ┐ Pytest Marks
+@pytest.mark.regression                                         # ┘
+@allure.tag(Tag.FILES, Tag.CREATE, Tag.REGRESSION)        # ] Allure Tags
+@allure.epic(Epic.API)                                          # ┐
+@allure.feature(Feature.FILES)                                  # │ Allure Behaviors
+@allure.story(Story.CREATE)                                     # ┘
+@allure.parent_suite(Epic.API)                                  # ┐
+@allure.suite(Feature.FILES)                                    # │ Allure Suites
+@allure.sub_suite(Story.CREATE)                                 # ┘
+@allure.severity(Severity.BLOCKER)                              # ] Allure Severity
+#-----------------------------------------------------------------------------------------------------------------------
 class TestCreateFile:
     @allure.title('Create File')
     def test_create_file(self, files_client: FilesClient):
@@ -41,16 +47,21 @@ class TestCreateFile:
 
 
 #------------------------------------------------------ Negative -------------------------------------------------------
-@pytest.mark.files
-@pytest.mark.regression
-@pytest.mark.negative
-@allure.tag(Tag.FILES, Tag.CREATE, Tag.REGRESSION, Tag.NEGATIVE)    # Через Enum
-@allure.epic(Epic.API)
-@allure.feature(Feature.FILES)
-@allure.story(Story.CREATE, Story.NEGATIVE)
-@allure.severity(allure.severity_level.NORMAL)
+# Class annotations
+@pytest.mark.files                                                        # ┐
+@pytest.mark.regression                                                   # │ Pytest Marks
+@pytest.mark.negative                                                     # ┘
+@allure.tag(Tag.FILES, Tag.CREATE, Tag.REGRESSION, Tag.NEGATIVE)    # ] Allure Tags
+@allure.epic(Epic.API)                                                    # ┐
+@allure.feature(Feature.FILES)                                            # │ Allure Behaviors
+@allure.story(Story.CREATE, Story.NEGATIVE)                        # ┘
+@allure.parent_suite(Epic.API)                                            # ┐
+@allure.suite(Feature.FILES)                                              # │ Allure Suites
+@allure.sub_suite(Story.CREATE)                                           # ┘
+@allure.severity(Severity.NORMAL)                                         # ] Allure Severity
+#-----------------------------------------------------------------------------------------------------------------------
 class TestCreateFileNegative:
-    @allure.title('Create File with empty file name')
+    @allure.title('Create File with empty file name')                     # — Allure Title
     def test_negative_create_file_empty_filename(self, files_client: FilesClient):
         create_file_data = CreateFileRequestSchema(                       # Pydantic-model with fake-data
            filename=''                                                    # 👈fake-data —> "" (empty)

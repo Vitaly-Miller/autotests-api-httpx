@@ -5,6 +5,7 @@ import http
 import allure
 import httpx
 import pytest
+from allure_commons.types import Severity
 from clients.exercises_client import ExercisesClient
 from schemas.courses_schema import CreateCourseSchema
 from schemas.exercises_schema import CreateExerciseRequestSchema, CreateExerciseResponseSchema
@@ -19,15 +20,20 @@ from tools.assertions.exercises_assert import (
 from tools.tool import Tool
 
 #=======================================================================================================================
-@pytest.mark.exercises
-@pytest.mark.regression
-@allure.tag(Tag.EXERCISES, Tag.CREATE, Tag.REGRESSION)                   # Через Enum
-@allure.epic(Epic.API)
-@allure.feature(Feature.EXERCISES)
-@allure.story(Story.CREATE)
-@allure.severity(allure.severity_level.NORMAL)
+# Class annotations
+@pytest.mark.exercises                                        # ┐ Pytest Marks
+@pytest.mark.regression                                       # ┘
+@allure.tag(Tag.EXERCISES, Tag.CREATE, Tag.REGRESSION)  # ] Allure Tags
+@allure.epic(Epic.API)                                        # ┐
+@allure.feature(Feature.EXERCISES)                            # │ Allure Behaviors
+@allure.story(Story.CREATE)                                   # ┘
+@allure.parent_suite(Epic.API)                                # ┐
+@allure.suite(Feature.EXERCISES)                              # │ Allure Suites
+@allure.sub_suite(Story.CREATE)                               # ┘
+@allure.severity(Severity.NORMAL)                             # ] Allure Severity
+#-----------------------------------------------------------------------------------------------------------------------
 class TestCreateExercise:
-    @allure.title('Create Exercise (v.1 - Через API-фикстуру полного цикла)')
+    @allure.title('Create Exercise (v.1 - Через API-фикстуру полного цикла)')  # — Allure Title
     def test_create_exercise_1(self, create_exercise_api: httpx.Response):     # Через API-фикстуру полного цикла        ─┐
         response = create_exercise_api                                         # Сохраняем ответ API-фикстуры            ─┘
 
@@ -41,7 +47,7 @@ class TestCreateExercise:
 
 
 
-    @allure.title('Create Exercise (v.2 - Через фикстуры: exercises_client, create_course)')
+    @allure.title('Create Exercise (v.2 - Через фикстуры: exercises_client, create_course)')  # — Allure Title
     def test_create_exercise_2(                                       #                                                  ─┐
             self,                                                     #                                                   │
             exercises_client: ExercisesClient,                        # Фикстура получения экземпляра ExercisesClient()   │

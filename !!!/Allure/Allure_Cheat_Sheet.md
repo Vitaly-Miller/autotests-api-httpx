@@ -52,86 +52,115 @@ allure open allure-report
 ```
 
 ------------------------------------------------------------------------
+## @Декораторы
+
+### `Tags`
+
+``` python
+@allure.tag('SMOKE')
+@allure.tag('NEGATIVE')
+
+@allure.tag('SMOKE', 'NEGATIVE')        # Поддерживаетс несколько аннотаций
+```
+
+``` python
+# Enum:
+@allure.tag(Tag.SMOKE)
+@allure.tag(Tag.NEGATIVE)
+
+@allure.tag(Tag.SMOKE, Tag.NEGATIVE)    # Поддерживаетс несколько аннотаций
+```
 
 ------------------------------------------------------------------------
-
-# @Декораторы
-
-### Заголовок теста (статический)
+### `Title` - заголовок теста (статический)
 
 ``` python
 @allure.title('Create user')
 def test_create_user():
     ...
 ```
-### Заголовок теста (динамический)
+
+### `Title` - заголовок теста (динамический)
 
 ``` python
-# @allure.title('Create user')  <– ⚠️ статический title - игнорируется при наличии динамического
-@pytest.mark.parametrize(       # parametrize 'email' (3-in-1)
-    'email', [
-        'email_1@amazon.com',
-        'email_2gmail.com',
-        'email_3yahoo.com'
-    ]
-)
+@allure.title('Create user')      # <– ⚠️ Статический title - игнорируется при наличии динамического
+@pytest.mark.parametrize(           # ┐
+    'email', [                      # │
+        'email_1@amazon.com',       # │
+        'email_2gmail.com',         # │ Pytest parametrize 'email' (3-in-1)
+        'email_3yahoo.com'          # │
+    ]                               # │
+)                                   # ┘
 def test_create_user():
-   allure.dynamic.title(f'Create user with Email: {email}')     # 👈 динамический title внутри теста без-@
+   allure.dynamic.title(f'Create user with Email: {email}')     # 👈 Динамический title внутри теста (без-@)
    ...
+   
 ```
 
-### Описание теста
+------------------------------------------------------------------------
+### `Description` - описание теста
 
 ``` python
-@allure.description('Verify user creation with valid data')
+@allure.description('Сreate User with invalid data')
+def test_create_user():
+    ...
+```
+------------------------------------------------------------------------
+### `Severity` - серьезность
+
+``` python
+from allure_commons.types import Severity
+#----------------------------------------
+@allure.severity(Severity.CRITICAL)
 def test_create_user():
     ...
 ```
 
-### Severity
+`Уровни Severity:`
 
-``` python
-@allure.severity(allure.severity_level.CRITICAL)
-def test_create_user():
-    ...
-```
-
-Уровни:
-
--   BLOCKER
--   CRITICAL
--   NORMAL
--   MINOR
--   TRIVIAL
+-   ⚫️`BLOCKER`
+-   🔴`CRITICAL`
+-   🟠`NORMAL`
+-   🟡`MINOR`
+-   ⚪️`TRIVIAL`
 
 ------------------------------------------------------------------------
 
-### Иерархия
+
+## Иерархия 
+### - Behaviors
 
 ``` python
 @allure.epic('API')             # Epic    — это крупная часть продукта, объединяющая функциональные блоки, которые решают крупные задачи системы. Это уровень самого высокого абстрактного представления, например, проект или модуль в системе.
 @allure.feature('Orders')       # Feature — это функциональная возможность продукта, более конкретная, чем epic, но всё ещё широкого охвата. Feature описывает отдельные аспекты системы, такие как конкретные модули или крупные функции.
-@allure.story('Create order')   # Story   — это конкретный пользовательский сценарий или задача, описывающая конкретные действия, которые может совершать пользователь или система. Story является самой детализированной аннотацией, используемой для описания автотестов.
+@allure.story('Create')         # Story   — это конкретный пользовательский сценарий или задача, описывающая конкретные действия, которые может совершать пользователь или система. Story является самой детализированной аннотацией, используемой для описания автотестов.
+```
+``` python
+# Enum:
+@allure.epic(Epic.API)
+@allure.feature(Feature.ORDER)
+@allure.story(Story.CREATE)
+
+@allure.story(Story.CREATE, Story.NEGATIVE)
 ```
 
-------------------------------------------------------------------------
-
-### Теги
+### - Suites
 
 ``` python
-@allure.tag('smoke')
-@allure.tag('regression')
+@allure.parent_suite('API')         # = @allure.epic
+@allure.suite('Orders')             # = @allure.feature
+@allure.sub_suite('Create')         # = @allure.story
 ```
-
-------------------------------------------------------------------------
-
-## Issue
 
 ``` python
-@allure.issue('BUG-123')
+# Enum:
+@allure.parent_suite(Epic.API)
+@allure.suite(Feature.ORDER)
+@allure.sub_suite(Story.CREATE)
 ```
-
 ------------------------------------------------------------------------
+
+
 
 ## Test Case
 
@@ -168,6 +197,13 @@ def create_user(email):
 
 ------------------------------------------------------------------------
 
+## Issue
+
+``` python
+@allure.issue('BUG-123')
+```
+
+------------------------------------------------------------------------
 # Attachments
 
 ## JSON

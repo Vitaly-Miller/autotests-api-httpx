@@ -6,6 +6,7 @@ import httpx
 import pytest
 import allure
 import jsonschema
+from allure_commons.types import Severity
 from clients.public_users_client import PublicUsersClient, get_public_users_client
 from schemas.users_schema import CreateUserRequestSchema, CreateUserResponseSchema
 from tools.allure.annotations import Epic, Feature, Story, Tag
@@ -16,15 +17,20 @@ from tools.data_generator import fake
 from tools.tool import Tool
 
 #=======================================================================================================================
-@pytest.mark.users
-@pytest.mark.regression
-@allure.tag(Tag.USERS, Tag.REGRESSION, Tag.CREATE)                         # Через Enum
-@allure.epic(Epic.API)
-@allure.feature(Feature.USERS)
-@allure.story(Story.CREATE)
-@allure.severity(allure.severity_level.CRITICAL)
+# Class annotations
+@pytest.mark.users                                         # ┐ Pytest Marks
+@pytest.mark.regression                                    # ┘
+@allure.tag(Tag.USERS, Tag.REGRESSION, Tag.CREATE)   # ] Allure Tags
+@allure.epic(Epic.API)                                     # ┐
+@allure.feature(Feature.USERS)                             # │ Allure Behaviors
+@allure.story(Story.CREATE)                                # ┘
+@allure.parent_suite(Epic.API)                             # ┐
+@allure.suite(Feature.USERS)                               # │ Allure Suites
+@allure.sub_suite(Story.CREATE)                            # ┘
+@allure.severity(Severity.BLOCKER)                         # ] Allure Severity
+#-----------------------------------------------------------------------------------------------------------------------
 class TestCreateUser:
-    @allure.title('Create User (v.1 - Через фикстуру полного цикла)')
+    @allure.title('Create User (v.1 - Через фикстуру полного цикла)')             # — Allure Title
     def test_create_user_1(self, create_user_api: httpx.Response):
         response = create_user_api  # Сохраняем ответ фикстуры, но не обязательно...,
                                     # Исполняемую API-фикстуру можно сразу передавать в Assertions в качестве параметра
@@ -37,7 +43,7 @@ class TestCreateUser:
 
 
 
-    @allure.title('Create User (v.2 - Через фикстуру PublicUsersClient)')
+    @allure.title('Create User (v.2 - Через фикстуру PublicUsersClient)')         # — Allure Title
     def test_create_user_2(self, public_users_client: PublicUsersClient):
         create_user_data = CreateUserRequestSchema()                              # # Pydantic-model with fake-data
         response = public_users_client.create_user_api(create_user_data)          # ▶ Запрос через API-метод
@@ -51,8 +57,8 @@ class TestCreateUser:
 
 
 
-    @allure.tag(Tag.PARAMETRIZE)                                   # Через Enum
-    @allure.title('Create User (v.3 - Email parametrize 3-in-1)')  # ⚠️Статический title - игнорируется при наличии динамического
+    @allure.tag(Tag.PARAMETRIZE)                                   # — Allure Tags
+    @allure.title('Create User (v.3 - Email parametrize 3-in-1)')  # — Allure Title (⚠️Статический)- игнорируется при наличии динамического
     @pytest.mark.parametrize(                                      # parametrize 'email' (3-in-1)
         'email', [
             'amazon.com',
@@ -61,7 +67,7 @@ class TestCreateUser:
         ]
     )
     def test_create_user_3_params(self, email: str, public_users_client: PublicUsersClient):
-        allure.dynamic.title(f'Create User (v.3 - Email domain: ...@{email})')    # 👈 Динамический title (без-@)
+        allure.dynamic.title(f'Create User (v.3 - Email domain: ...@{email})')    # — Allure Title (⚠️Динамический - без-@)
         create_user_data = CreateUserRequestSchema(                               # Pydantic-model with fake-data, ...
             email=fake.email(domain=email)                                        # ... значения Email-домена из parametrize (3-in-1)
         )
@@ -76,7 +82,7 @@ class TestCreateUser:
 
 
 
-    @allure.title('Create User (v.4 - All manual)')
+    @allure.title('Create User (v.4 - All manual)')                                   # — Allure Title
     def test_create_user_4_manual(self):
         public_users_client = get_public_users_client()                               # Получение экземпляра PublicUsersClient
         create_user_data = CreateUserRequestSchema()                                  # Инициализация Pydantic-model с default fake-data нового пользователя

@@ -5,6 +5,7 @@ import http
 import allure
 import httpx
 import pytest
+from allure_commons.types import Severity
 from clients.courses_client import CoursesClient
 from schemas.courses_schema import CreateCourseSchema, GetCoursesQwerySchema, GetCoursesResponseSchema
 from schemas.users_schema import CreateUserSchema
@@ -15,15 +16,20 @@ from tools.assertions.schema_assert import validate_json_schema
 from tools.tool import Tool
 
 #=======================================================================================================================
-@pytest.mark.courses
-@pytest.mark.regression
-@allure.tag(Tag.COURSES, Tag.GET, Tag.REGRESSION)                                     # Через Enum
-@allure.epic(Epic.API)
-@allure.feature(Feature.COURSES)
-@allure.story(Story.GET)
-@allure.severity(allure.severity_level.NORMAL)
+# Class annotations
+@pytest.mark.courses                                          # ┐ Pytest Marks
+@pytest.mark.regression                                       # ┘
+@allure.tag(Tag.COURSES, Tag.GET, Tag.REGRESSION)       # ] Allure Tags
+@allure.epic(Epic.API)                                        # ┐
+@allure.feature(Feature.COURSES)                              # │ Allure Behaviors
+@allure.story(Story.GET)                                      # ┘
+@allure.parent_suite(Epic.API)                                # ┐
+@allure.suite(Feature.COURSES)                                # │ Allure Suites
+@allure.sub_suite(Story.GET)                                  # ┘
+@allure.severity(Severity.NORMAL)                             # ] Allure Severity
+#-----------------------------------------------------------------------------------------------------------------------
 class TestGetCourses:
-    @allure.title('Get Courses (v.1 - Через фикстуру полного цикла)')
+    @allure.title('Get Courses (v.1 - Через фикстуру полного цикла)')                        # — Allure Title
     def test_get_courses_1(self,create_course: CreateCourseSchema, get_courses_api: httpx.Response):
 
         # Assertions
@@ -34,7 +40,7 @@ class TestGetCourses:
 
 
 
-    @allure.title('Get Courses (v.1 - Через фикстуры: courses_client, create_user, create_course)')
+    @allure.title('Get Courses (v.1 - Через фикстуры: courses_client, create_user, create_course)')  # — Allure Title
     def test_get_courses_2(
             self,
             courses_client: CoursesClient,

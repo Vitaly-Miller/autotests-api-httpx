@@ -5,6 +5,7 @@ import http
 import allure
 import httpx
 import pytest
+from allure_commons.types import Severity
 from clients.courses_client import CoursesClient
 from schemas.courses_schema import CreateCourseRequestSchema, CreateCourseResponseSchema
 from schemas.files_schema import CreateFileSchema
@@ -16,15 +17,20 @@ from tools.assertions.schema_assert import validate_json_schema
 from tools.tool import Tool
 
 #=======================================================================================================================
-@pytest.mark.courses
-@pytest.mark.regression
-@allure.tag(Tag.COURSES, Tag.CREATE, Tag.REGRESSION)                          # Через Enum
-@allure.epic(Epic.API)
-@allure.feature(Feature.COURSES)
-@allure.story(Story.CREATE)
-@allure.severity(allure.severity_level.NORMAL)
+# Class annotations
+@pytest.mark.courses                                          # ┐ Pytest Marks
+@pytest.mark.regression                                       # ┘
+@allure.tag(Tag.COURSES, Tag.CREATE, Tag.REGRESSION)    # ] Allure Tags
+@allure.epic(Epic.API)                                        # ┐
+@allure.feature(Feature.COURSES)                              # │ Allure Behaviors
+@allure.story(Story.CREATE)                                   # ┘
+@allure.parent_suite(Epic.API)                                # ┐
+@allure.suite(Feature.COURSES)                                # │ Allure Suites
+@allure.sub_suite(Story.CREATE)                               # ┘
+@allure.severity(Severity.NORMAL)                             # ] Allure Severity
+#-----------------------------------------------------------------------------------------------------------------------
 class TestCreateCourse:
-    @allure.title('Create Course (v.1 - Через API-фикстуру полного цикла)')
+    @allure.title('Create Course (v.1 - Через API-фикстуру полного цикла)')         # — Allure Title
     def test_create_course_1(self, create_course_api: httpx.Response):              # Через API-фикстуру полного цикла
         response = create_course_api                                                # Сохраняем ответ API-фикстуры
 
@@ -36,7 +42,7 @@ class TestCreateCourse:
 
 
 
-    @allure.title('Create Course (v.2 - Через фикстуры: CoursesClient + CreateUser + CreateFile)')
+    @allure.title('Create Course (v.2 - Через фикстуры: CoursesClient + CreateUser + CreateFile)')   # — Allure Title
     def test_create_course_2(
             self,
             courses_client: CoursesClient,                           # Фикстура получения экземпляра CoursesClient()
@@ -54,7 +60,6 @@ class TestCreateCourse:
         assert_method(response, http.HTTPMethod.POST)       # Method: POST
         assert_create_course_response(response)                                     # Response data = Request data
         validate_json_schema(response, CreateCourseResponseSchema)  # JSON Schema validation
-
 
 
 #=======================================================================================================================

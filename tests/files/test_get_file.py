@@ -4,6 +4,7 @@ TEST Get File
 import http
 import allure
 import pytest
+from allure_commons.types import Severity
 from clients.files_client import FilesClient
 from schemas.errors_schema import ErrorResponseSchema
 from schemas.files_schema import CreateFileSchema, CreateFileResponseSchema
@@ -19,13 +20,18 @@ from tools.assertions.files_assert import (
 from tools.tool import Tool
 
 #=======================================================================================================================
-@pytest.mark.files
-@pytest.mark.regression
-@allure.tag(Tag.GET, Tag.REGRESSION)                                              # Через Enum
-@allure.epic(Epic.API)
-@allure.feature(Feature.FILES)
-@allure.story(Story.GET)
-@allure.severity(allure.severity_level.NORMAL)
+# Class annotations
+@pytest.mark.files                                         # ┐ Pytest Marks
+@pytest.mark.regression                                    # ┘
+@allure.tag(Tag.GET, Tag.REGRESSION)                 # ] Allure Tags
+@allure.epic(Epic.API)                                     # ┐
+@allure.feature(Feature.FILES)                             # │ Allure Behaviors
+@allure.story(Story.GET)                                   # ┘
+@allure.parent_suite(Epic.API)                             # ┐
+@allure.suite(Feature.FILES)                               # │ Allure Suite
+@allure.story(Story.GET)                                   # ┘
+@allure.severity(Severity.NORMAL)                          # ] Allure Severity
+#-----------------------------------------------------------------------------------------------------------------------
 class TestGetFile:
     @allure.title('Get File')
     def test_get_file(self, files_client: FilesClient, create_file: CreateFileSchema):
@@ -40,16 +46,21 @@ class TestGetFile:
 
 
 #------------------------------------------------------ Negative -------------------------------------------------------
-@pytest.mark.files
-@pytest.mark.regression
-@pytest.mark.negative
-@allure.tag(Tag.GET, Tag.REGRESSION, Tag.NEGATIVE)               # Через Enum
-@allure.epic(Epic.API)
-@allure.feature(Feature.FILES)
-@allure.story(Story.GET, Story.NEGATIVE)
-@allure.severity(allure.severity_level.NORMAL)
+# Class annotations
+@pytest.mark.files                                         # ┐
+@pytest.mark.regression                                    # │ Pytest Marks
+@pytest.mark.negative                                      # ┘
+@allure.tag(Tag.GET, Tag.REGRESSION, Tag.NEGATIVE)   # ]Allure Tags
+@allure.epic(Epic.API)                                     # ┐
+@allure.feature(Feature.FILES)                             # │ Allure Behaviors
+@allure.story(Story.GET, Story.NEGATIVE)           # ┘
+@allure.parent_suite(Epic.API)                             # ┐
+@allure.suite(Feature.FILES)                               # │ Allure Suites
+@allure.sub_suite(Story.GET)                               # ┘
+@allure.severity(Severity.NORMAL)                          # ] Allure Severity
+#-----------------------------------------------------------------------------------------------------------------------
 class TestGetFileNegative:
-    @allure.title('Get File by invalid File ID (non-UUID format)')
+    @allure.title('Get File by invalid File ID (non-UUID format)')     # — Allure Title
     def test_get_file_by_invalid_file_id(self, files_client: FilesClient):
         invalid_file_id = 'invalid_File_ID'                            # Invalid File ID (NON-UUID format)
         response = files_client.get_file_api(invalid_file_id)          # ▶ Запрос через API-метод с invalid File ID
@@ -62,7 +73,7 @@ class TestGetFileNegative:
 
 
 
-    @allure.title('Get File by Non-existent File ID')
+    @allure.title('Get File by Non-existent File ID')                 # — Allure Title
     def test_get_non_existent_file(self, files_client: FilesClient):
         non_existent_file_id = fake.uuid4()                           # Non-existent File ID (UUID format)
         response = files_client.get_file_api(non_existent_file_id)    # ▶ Запрос через API-метод с Non-existent File ID

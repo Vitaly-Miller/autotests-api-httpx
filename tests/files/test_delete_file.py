@@ -4,6 +4,7 @@ TEST Delete File
 import http
 import allure
 import pytest
+from allure_commons.types import Severity
 from clients.files_client import FilesClient
 from schemas.errors_schema import NotFoundErrorResponseSchema
 from schemas.files_schema import CreateFileSchema
@@ -14,15 +15,20 @@ from tools.assertions.schema_assert import validate_json_schema
 from tools.tool import Tool
 
 #=======================================================================================================================
-@pytest.mark.files
-@pytest.mark.regression
-@allure.tag(Tag.FILES, Tag.DELETE, Tag.REGRESSION)                                  # Через Enum
-@allure.epic(Epic.API)
-@allure.feature(Feature.FILES)
-@allure.story(Story.DELETE)
-@allure.severity(allure.severity_level.NORMAL)
+# Class annotations
+@pytest.mark.files                                         # ┐ Pytest Marks
+@pytest.mark.regression                                    # ┘
+@allure.tag(Tag.FILES, Tag.DELETE, Tag.REGRESSION)   # ] Allure Tags
+@allure.epic(Epic.API)                                     # ┐
+@allure.feature(Feature.FILES)                             # │ Allure Behaviors
+@allure.story(Story.DELETE)                                # ┘
+@allure.parent_suite(Epic.API)                             # ┐
+@allure.suite(Feature.FILES)                               # │ Allure Suites
+@allure.sub_suite(Story.DELETE)                            # ┘
+@allure.severity(Severity.NORMAL)                          # ] Allure Severity
+#-----------------------------------------------------------------------------------------------------------------------
 class TestDeleteFile:
-    @allure.title('Delete File')
+    @allure.title('Delete File')                                                          # — Allure Title
     def test_delete_file(self, files_client: FilesClient, create_file: CreateFileSchema):
         delete_file_response = files_client.delete_file_api(create_file.file_id)          # ▶ Запрос на удаление File через API-метод
         get_non_existent_file_response = files_client.get_file_api(create_file.file_id)   # ▶ Запрос на получение NON-existent File через API-метод
