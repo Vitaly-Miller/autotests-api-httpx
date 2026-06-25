@@ -45,7 +45,7 @@ class TestGetFile:
 
 
 
-#------------------------------------------------------ Negative -------------------------------------------------------
+#====================================================== Negative =======================================================
 # Class annotations
 @pytest.mark.files                                         # ┐
 @pytest.mark.regression                                    # │ Pytest Marks
@@ -82,6 +82,7 @@ class TestGetFileNegative:
         assert_status_code(response, http.HTTPStatus.NOT_FOUND)  # Status code: 404
         assert_method(response, http.HTTPMethod.GET)           # Method: GET
         assert_file_not_found_error_response(response)                                 # Validation Error Response data
+
 
 #=======================================================================================================================
         # Tool.api_report(response)

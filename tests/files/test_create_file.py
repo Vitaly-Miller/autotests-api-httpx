@@ -46,7 +46,8 @@ class TestCreateFile:
         validate_json_schema(response, CreateFileResponseSchema)   # Validation JSON schema
 
 
-#------------------------------------------------------ Negative -------------------------------------------------------
+
+#====================================================== Negative =======================================================
 # Class annotations
 @pytest.mark.files                                                        # ┐
 @pytest.mark.regression                                                   # │ Pytest Marks
