@@ -26,7 +26,7 @@ from tools.tool import Tool
 @allure.feature(Feature.USERS)                       # │ Allure Behaviors
 @allure.sub_suite(Story.GET)                         # ┘
 @allure.parent_suite(Epic.API)                       # ┐
-@allure.suite(Feature.USERS)                         # │ Allure Suites
+@allure.suite(Feature.USERS)                         # │ Allure Suites (optional)
 @allure.sub_suite(Story.GET)                         # ┘
 @allure.severity(Severity.NORMAL)                    # ] Allure Severity
 #-----------------------------------------------------------------------------------------------------------------------

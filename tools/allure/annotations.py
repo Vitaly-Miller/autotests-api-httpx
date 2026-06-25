@@ -39,7 +39,7 @@ class Epic(StrEnum):
 # @allure.feature() = @allure.suite()
 class Feature(StrEnum):
     USERS = 'Users'
-    AUTH = 'Authentication'      # Authentication, Auth, Login
+    AUTH = 'Authentication'                # Authentication, Auth, Login
     FILES = 'Files'
     COURSES = 'Courses'
     EXERCISES = 'Exercises'
@@ -51,7 +51,7 @@ class Story(StrEnum):
     GET = 'Get'
     UPDATE = 'Update'
     DELETE = 'Delete'
-    NEGATIVE = 'Negative'
+    NEGATIVE = '❌Negative'
     VALIDATE = 'Validate'
 
 

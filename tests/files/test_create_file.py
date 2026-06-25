@@ -27,7 +27,7 @@ from tools.tool import Tool
 @allure.feature(Feature.FILES)                                  # │ Allure Behaviors
 @allure.story(Story.CREATE)                                     # ┘
 @allure.parent_suite(Epic.API)                                  # ┐
-@allure.suite(Feature.FILES)                                    # │ Allure Suites
+@allure.suite(Feature.FILES)                                    # │ Allure Suites (optional)
 @allure.sub_suite(Story.CREATE)                                 # ┘
 @allure.severity(Severity.BLOCKER)                              # ] Allure Severity
 #-----------------------------------------------------------------------------------------------------------------------
@@ -56,7 +56,7 @@ class TestCreateFile:
 @allure.feature(Feature.FILES)                                            # │ Allure Behaviors
 @allure.story(Story.CREATE, Story.NEGATIVE)                        # ┘
 @allure.parent_suite(Epic.API)                                            # ┐
-@allure.suite(Feature.FILES)                                              # │ Allure Suites
+@allure.suite(Feature.FILES)                                              # │ Allure Suites (optional)
 @allure.sub_suite(Story.CREATE)                                           # ┘
 @allure.severity(Severity.NORMAL)                                         # ] Allure Severity
 #-----------------------------------------------------------------------------------------------------------------------

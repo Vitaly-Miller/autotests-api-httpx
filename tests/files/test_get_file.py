@@ -28,8 +28,8 @@ from tools.tool import Tool
 @allure.feature(Feature.FILES)                             # │ Allure Behaviors
 @allure.story(Story.GET)                                   # ┘
 @allure.parent_suite(Epic.API)                             # ┐
-@allure.suite(Feature.FILES)                               # │ Allure Suite
-@allure.story(Story.GET)                                   # ┘
+@allure.suite(Feature.FILES)                               # │ Allure Suites (optional)
+@allure.sub_suite(Story.GET)                               # ┘
 @allure.severity(Severity.NORMAL)                          # ] Allure Severity
 #-----------------------------------------------------------------------------------------------------------------------
 class TestGetFile:
@@ -55,7 +55,7 @@ class TestGetFile:
 @allure.feature(Feature.FILES)                             # │ Allure Behaviors
 @allure.story(Story.GET, Story.NEGATIVE)           # ┘
 @allure.parent_suite(Epic.API)                             # ┐
-@allure.suite(Feature.FILES)                               # │ Allure Suites
+@allure.suite(Feature.FILES)                               # │ Allure Suites (optional)
 @allure.sub_suite(Story.GET)                               # ┘
 @allure.severity(Severity.NORMAL)                          # ] Allure Severity
 #-----------------------------------------------------------------------------------------------------------------------

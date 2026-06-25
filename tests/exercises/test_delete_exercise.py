@@ -23,7 +23,7 @@ from tools.tool import Tool
 @allure.feature(Feature.EXERCISES)                            # │ Allure Behaviors
 @allure.story(Story.DELETE)                                   # ┘
 @allure.parent_suite(Epic.API)                                # ┐
-@allure.suite(Feature.EXERCISES)                              # │ Allure Suites
+@allure.suite(Feature.EXERCISES)                              # │ Allure Suites (optional)
 @allure.sub_suite(Story.DELETE)                               # ┘
 @allure.severity(Severity.NORMAL)                             # ] Allure Severity
 #-----------------------------------------------------------------------------------------------------------------------
