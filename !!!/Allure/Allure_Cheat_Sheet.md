@@ -118,22 +118,24 @@ def test_create_user():
 
 `Уровни Severity:`
 
--   ⚫️`BLOCKER`
--   🔴`CRITICAL`
--   🟠`NORMAL`
--   🟡`MINOR`
--   ⚪️`TRIVIAL`
+-   ⚫️️`BLOCKER`
+-   🟤`CRITICAL`
+-   🔴`NORMAL`
+-   🟠`MINOR`
+-   🟡`TRIVIAL`
 
 ------------------------------------------------------------------------
 
 
 ## Иерархия 
-### - Behaviors
+### Behaviors
 
 ``` python
 @allure.epic('API')             # Epic    — это крупная часть продукта, объединяющая функциональные блоки, которые решают крупные задачи системы. Это уровень самого высокого абстрактного представления, например, проект или модуль в системе.
 @allure.feature('Orders')       # Feature — это функциональная возможность продукта, более конкретная, чем epic, но всё ещё широкого охвата. Feature описывает отдельные аспекты системы, такие как конкретные модули или крупные функции.
 @allure.story('Create')         # Story   — это конкретный пользовательский сценарий или задача, описывающая конкретные действия, которые может совершать пользователь или система. Story является самой детализированной аннотацией, используемой для описания автотестов.
+
+@allure.story('Create', 'Negative')   # Поддерживается несколько аннотаций
 ```
 ``` python
 # Enum:
@@ -141,18 +143,16 @@ def test_create_user():
 @allure.feature(Feature.ORDER)
 @allure.story(Story.CREATE)
 
-@allure.story(Story.CREATE, Story.NEGATIVE)
+@allure.story(Story.CREATE, Story.NEGATIVE)   # Поддерживается несколько аннотаций
 ```
 
-### - Suites
+### Suites
 
 ``` python
 @allure.parent_suite('API')         # = @allure.epic
 @allure.suite('Orders')             # = @allure.feature
 @allure.sub_suite('Create')         # = @allure.story
-```
 
-``` python
 # Enum:
 @allure.parent_suite(Epic.API)
 @allure.suite(Feature.ORDER)
