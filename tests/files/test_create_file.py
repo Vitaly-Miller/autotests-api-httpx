@@ -55,7 +55,7 @@ class TestCreateFile:
 @allure.tag(Tag.FILES, Tag.CREATE, Tag.REGRESSION, Tag.NEGATIVE)    # ] Allure Tags
 @allure.epic(Epic.API)                                                    # ┐
 @allure.feature(Feature.FILES)                                            # │ Allure Behaviors
-@allure.story(Story.CREATE, Story.NEGATIVE)                        # ┘
+@allure.story(Story.CREATE, Story.NEGATIVE)                       # ┘
 @allure.parent_suite(Epic.API)                                            # ┐
 @allure.suite(Feature.FILES)                                              # │ Allure Suites (optional)
 @allure.sub_suite(Story.CREATE)                                           # ┘

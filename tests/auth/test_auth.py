@@ -22,7 +22,7 @@ from tools.tool import Tool
 @pytest.mark.regression                                   # ┘
 @allure.tag(Tag.AUTH, Tag.REGRESSION, Tag.SMOKE)    # ] Allure Tags
 @allure.epic(Epic.API)                                    # ┐
-@allure.feature(Feature.AUTH)                            # │ Allure Behaviors
+@allure.feature(Feature.AUTH)                             # │ Allure Behaviors
 @allure.story(Story.LOGIN)                                # ┘
 @allure.parent_suite(Epic.API)                            # ┐
 @allure.suite(Feature.AUTH)                               # │ Allure Suites (optional)
