@@ -73,7 +73,7 @@ class TestGetFileNegative:
 
 
 
-    @allure.title('Get File by Non-existent File ID')                 # — Allure Title
+    @allure.title('Get File by NON-EXISTENT File ID')                 # — Allure Title
     def test_get_non_existent_file(self, files_client: FilesClient):
         non_existent_file_id = fake.uuid4()                           # Non-existent File ID (UUID format)
         response = files_client.get_file_api(non_existent_file_id)    # ▶ Запрос через API-метод с Non-existent File ID
