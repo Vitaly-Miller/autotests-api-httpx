@@ -22,7 +22,7 @@ from tools.tool import Tool
 # Class annotations
 @pytest.mark.files                                              # ┐ Pytest Marks
 @pytest.mark.regression                                         # ┘
-@allure.tag(Tag.FILES, Tag.CREATE, Tag.REGRESSION)        # ] Allure Tags
+@allure.tag(Tag.REGRESSION, Tag.FILES, Tag.CREATE)        # ] Allure Tags
 @allure.epic(Epic.API)                                          # ┐
 @allure.feature(Feature.FILES)                                  # │ Allure Behaviors
 @allure.story(Story.CREATE)                                     # ┘
@@ -52,7 +52,7 @@ class TestCreateFile:
 @pytest.mark.files                                                        # ┐
 @pytest.mark.regression                                                   # │ Pytest Marks
 @pytest.mark.negative                                                     # ┘
-@allure.tag(Tag.FILES, Tag.CREATE, Tag.REGRESSION, Tag.NEGATIVE)    # ] Allure Tags
+@allure.tag(Tag.REGRESSION, Tag.FILES, Tag.CREATE, Tag.NEGATIVE)    # ] Allure Tags
 @allure.epic(Epic.API)                                                    # ┐
 @allure.feature(Feature.FILES)                                            # │ Allure Behaviors
 @allure.story(Story.CREATE, Story.NEGATIVE)                       # ┘
@@ -62,7 +62,7 @@ class TestCreateFile:
 @allure.severity(Severity.NORMAL)                                         # ] Allure Severity
 #-----------------------------------------------------------------------------------------------------------------------
 class TestCreateFileNegative:
-    @allure.title('Create File with empty file name')                     # — Allure Title
+    @allure.title('Create File with EMPTY FILE NAME')                     # — Allure Title
     def test_negative_create_file_empty_filename(self, files_client: FilesClient):
         create_file_data = CreateFileRequestSchema(                       # Pydantic-model with fake-data
            filename=''                                                    # 👈fake-data —> "" (empty)
@@ -77,7 +77,7 @@ class TestCreateFileNegative:
 
 
 
-    @allure.title('Create File with empty directory')
+    @allure.title('Create File with EMPTY DIRECTORY')
     def test_negative_create_file_empty_directory(self, files_client: FilesClient):
         create_file_data = CreateFileRequestSchema(                  # Pydantic-model with fake-data
            directory=''                                              # 👈fake-data —> "" (empty)

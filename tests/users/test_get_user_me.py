@@ -21,7 +21,7 @@ from tools.tool import Tool
 # Class annotations
 @pytest.mark.users                                   # ┐ Pytest Marks
 @pytest.mark.smoke                                   # ┘
-@allure.tag(Tag.USERS, Tag.SMOKE, Tag.GET)     # ] Allure Tags
+@allure.tag(Tag.SMOKE, Tag.USERS, Tag.GET)     # ] Allure Tags
 @allure.epic(Epic.API)                               # ┐
 @allure.feature(Feature.USERS)                       # │ Allure Behaviors
 @allure.sub_suite(Story.GET)                         # ┘

@@ -18,7 +18,7 @@ from tools.tool import Tool
 # Class annotations
 @pytest.mark.exercises                                        # ┐ Pytest Marks
 @pytest.mark.regression                                       # ┘
-@allure.tag(Tag.EXERCISES, Tag.UPDATE, Tag.REGRESSION)  # ] Allure Tags
+@allure.tag(Tag.REGRESSION, Tag.EXERCISES, Tag.UPDATE)  # ] Allure Tags
 @allure.epic(Epic.API)                                        # ┐
 @allure.feature(Feature.EXERCISES)                            # │ Allure Behaviors
 @allure.story(Story.UPDATE)                                   # ┘
@@ -53,6 +53,7 @@ class TestUpdateExercise:
         assert_method(response, http.HTTPMethod.PATCH)        # Method: PATCH
         assert_update_exercise_response(response)                                     # Response data = Request data
         validate_json_schema(response, UpdateExerciseResponseSchema)  # Validate JSON schema
+
 
 #=======================================================================================================================
         # Tool.api_report(response)

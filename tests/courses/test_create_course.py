@@ -20,7 +20,7 @@ from tools.tool import Tool
 # Class annotations
 @pytest.mark.courses                                          # ┐ Pytest Marks
 @pytest.mark.regression                                       # ┘
-@allure.tag(Tag.COURSES, Tag.CREATE, Tag.REGRESSION)    # ] Allure Tags
+@allure.tag(Tag.REGRESSION, Tag.COURSES, Tag.CREATE)    # ] Allure Tags
 @allure.epic(Epic.API)                                        # ┐
 @allure.feature(Feature.COURSES)                              # │ Allure Behaviors
 @allure.story(Story.CREATE)                                   # ┘

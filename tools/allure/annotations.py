@@ -18,7 +18,7 @@ class Tag(StrEnum):
     #-----------------------
     REGRESSION = 'REGRESSION'
     SMOKE = 'SMOKE'
-    NEGATIVE = 'NEGATIVE'
+    NEGATIVE = '🚫NEGATIVE'
     VALIDATE = 'VALIDATE'
     #-----------------------
     CREATE = 'CREATE'
@@ -30,13 +30,13 @@ class Tag(StrEnum):
 
 
 #------------------------------------------------ Behaviors / Suites ---------------------------------------------------
-# @allure.epic() = @allure.parent_suite()
+# @allure.epic() / @allure.parent_suite()
 class Epic(StrEnum):
     API = 'API'
     STUDENT = 'Student service'
     ADMIN = 'Admin service'
 
-# @allure.feature() = @allure.suite()
+# @allure.feature() / @allure.suite()
 class Feature(StrEnum):
     USERS = 'Users'
     AUTH = 'Authentication'                # Authentication, Auth, Login
@@ -44,14 +44,14 @@ class Feature(StrEnum):
     COURSES = 'Courses'
     EXERCISES = 'Exercises'
 
-# @allure.story() = @allure.sub_suite()
+# @allure.story() / @allure.sub_suite()
 class Story(StrEnum):
     LOGIN = 'Login'                        # Authentication, Auth, Login
     CREATE = 'Create'
     GET = 'Get'
     UPDATE = 'Update'
     DELETE = 'Delete'
-    NEGATIVE = '❌Negative'
+    NEGATIVE = 'Negative 🚫'
     VALIDATE = 'Validate'
 
 

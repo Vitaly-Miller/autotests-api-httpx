@@ -18,7 +18,7 @@ from tools.tool import Tool
 # Class annotations
 @pytest.mark.files                                         # ┐ Pytest Marks
 @pytest.mark.regression                                    # ┘
-@allure.tag(Tag.FILES, Tag.DELETE, Tag.REGRESSION)   # ] Allure Tags
+@allure.tag(Tag.REGRESSION, Tag.FILES, Tag.DELETE)   # ] Allure Tags
 @allure.epic(Epic.API)                                     # ┐
 @allure.feature(Feature.FILES)                             # │ Allure Behaviors
 @allure.story(Story.DELETE)                                # ┘

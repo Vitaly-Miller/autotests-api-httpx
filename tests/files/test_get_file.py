@@ -23,7 +23,7 @@ from tools.tool import Tool
 # Class annotations
 @pytest.mark.files                                         # ┐ Pytest Marks
 @pytest.mark.regression                                    # ┘
-@allure.tag(Tag.GET, Tag.REGRESSION)                 # ] Allure Tags
+@allure.tag(Tag.REGRESSION, Tag.FILES, Tag.GET)        # ] Allure Tags
 @allure.epic(Epic.API)                                     # ┐
 @allure.feature(Feature.FILES)                             # │ Allure Behaviors
 @allure.story(Story.GET)                                   # ┘
@@ -47,20 +47,20 @@ class TestGetFile:
 
 #====================================================== Negative =======================================================
 # Class annotations
-@pytest.mark.files                                         # ┐
-@pytest.mark.regression                                    # │ Pytest Marks
-@pytest.mark.negative                                      # ┘
-@allure.tag(Tag.GET, Tag.REGRESSION, Tag.NEGATIVE)   # ]Allure Tags
-@allure.epic(Epic.API)                                     # ┐
-@allure.feature(Feature.FILES)                             # │ Allure Behaviors
-@allure.story(Story.GET, Story.NEGATIVE)           # ┘
-@allure.parent_suite(Epic.API)                             # ┐
-@allure.suite(Feature.FILES)                               # │ Allure Suites (optional)
-@allure.sub_suite(Story.GET)                               # ┘
-@allure.severity(Severity.NORMAL)                          # ] Allure Severity
+@pytest.mark.files                                                  # ┐
+@pytest.mark.regression                                             # │ Pytest Marks
+@pytest.mark.negative                                               # ┘
+@allure.tag(Tag.REGRESSION, Tag.FILES, Tag.GET, Tag.NEGATIVE)  # ]Allure Tags
+@allure.epic(Epic.API)                                              # ┐
+@allure.feature(Feature.FILES)                                      # │ Allure Behaviors
+@allure.story(Story.GET, Story.NEGATIVE)                    # ┘
+@allure.parent_suite(Epic.API)                                      # ┐
+@allure.suite(Feature.FILES)                                        # │ Allure Suites (optional)
+@allure.sub_suite(Story.GET)                                        # ┘
+@allure.severity(Severity.NORMAL)                                   # ] Allure Severity
 #-----------------------------------------------------------------------------------------------------------------------
 class TestGetFileNegative:
-    @allure.title('Get File by invalid File ID (non-UUID format)')     # — Allure Title
+    @allure.title('Get File by INVALID File ID (non-UUID format)')     # — Allure Title
     def test_get_file_by_invalid_file_id(self, files_client: FilesClient):
         invalid_file_id = 'invalid_File_ID'                            # Invalid File ID (NON-UUID format)
         response = files_client.get_file_api(invalid_file_id)          # ▶ Запрос через API-метод с invalid File ID

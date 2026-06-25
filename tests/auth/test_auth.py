@@ -20,7 +20,7 @@ from tools.tool import Tool
 @pytest.mark.auth                                         # ┐
 @pytest.mark.smoke                                        # │ Pytest Marks
 @pytest.mark.regression                                   # ┘
-@allure.tag(Tag.AUTH, Tag.REGRESSION, Tag.SMOKE)    # ] Allure Tags
+@allure.tag(Tag.REGRESSION, Tag.SMOKE, Tag.AUTH)    # ] Allure Tags
 @allure.epic(Epic.API)                                    # ┐
 @allure.feature(Feature.AUTH)                             # │ Allure Behaviors
 @allure.story(Story.LOGIN)                                # ┘
