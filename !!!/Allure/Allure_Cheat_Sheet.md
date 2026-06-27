@@ -137,6 +137,7 @@ def test_create_user():
 
 @allure.story('Create', 'Negative')   # Поддерживается несколько аннотаций
 ```
+
 ``` python
 # Enum:
 @allure.epic(Epic.API)
@@ -152,7 +153,9 @@ def test_create_user():
 @allure.parent_suite('API')         # = @allure.epic
 @allure.suite('Orders')             # = @allure.feature
 @allure.sub_suite('Create')         # = @allure.story
+```
 
+``` python
 # Enum:
 @allure.parent_suite(Epic.API)
 @allure.suite(Feature.ORDER)
@@ -172,27 +175,82 @@ def test_create_user():
 
 # Steps
 
-## Контекстный менеджер
+## Контекстный менеджер `with`
+— используется для описания НЕСКОЛЬКО шагов в функции
 
 ``` python
-with allure.step('Create user'):
-    ...
+#------------------------------------------ v.1 Описание каждого шага теста --------------------------------------------
+# Test
+def test_step_in_test_with():
+    with allure.step('Create User'):      # Описание шага 1 теста (через контекст-менеджер <with>)
+        ...                               # ▶ Actions
+    with allure.step('Delete User'):      # Описание шага 2 теста (через контекст-менеджер <with>)
+        ...                               # ▶ Actions
 ```
 
-## Декоратор
-
 ``` python
-@allure.step('Create user')
-def create_user():
-    ...
+#--------------------------------------------- v.2 Описание шага в функции ---------------------------------------------
+# Отдельные функции
+def get_user():                        # Функция-1
+    with allure.step('Get User'):      # Описание шага Функции-1 (через контекст-менеджер <with>)
+        ...                            # ▶ Actions
+
+def update_user():                     # Функция-2
+    with allure.step('Update User'):   # Описание шага Функции-2 (через контекст-менеджер <with>)
+        ...                            # ▶ Actions
+
+
+# Test
+def test_step_in_func_with():
+    get_user()                         # Вызываем Функцию-1
+    update_user()                      # Вызываем Функцию-2
 ```
 
-С параметрами:
+## Декоратор `@allure.step()`
+— используется для описания ОДНОГО/ОБЩЕГО шага
 
 ``` python
-@allure.step('Create user: {email}')
-def create_user(email):
-    ...
+# Отдельные функции:
+@allure.step('Get User')               # Описание шага Функции-1 (через @декоратор)
+def get_user():                        # Функция 1
+    ...                                # ▶ Actions
+
+@allure.step('Update User')            # Описание шага Функции-2 (через @декоратор)
+def update_user():                     # Функция 2
+    ...                                # ▶ Actions
+
+
+# Test
+def test_step_in_func_decorator():
+    get_user()                         # Вызываем Функцию-1 (со встроенным описанием шага)
+    update_user()                      # Вызываем Функцию-2 (со встроенным описанием шага)
+```
+
+С параметром:
+
+``` python
+# Функция и шаг с параметром
+name = 'John Connor'                      # Переменная (параметр)
+
+@allure.step(f'Get User: {name}')         # Описание шага Функции-1 (через @декоратор) + параметр
+def get_user():                           # Функция 1 (принимает параметр)
+    ...  
+```
+
+
+## `@allure.step()` + `with`
+``` python
+# Функция
+@allure.step(f'Build API-Client')               # Описание ОБЩЕГО шага функции (через @декоратор)
+def build_api_client():
+    with allure.step('Get Auth-token'):         # Описание 1-го внутреннего шага функции (через with)
+        ...
+    with allure.step('Create new API-client'):  # Описание 2-го внутреннего шага функции (через with)
+        ...
+
+# Test
+def test_create_file():
+    build_api_client()                          # Вызываем Функцию
 ```
 
 ------------------------------------------------------------------------
