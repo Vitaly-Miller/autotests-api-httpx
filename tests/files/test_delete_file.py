@@ -2,9 +2,8 @@
 TEST Delete File
 """
 import http
-import allure
 import pytest
-from allure_commons.types import Severity
+import allure
 from clients.files_client import FilesClient
 from schemas.errors_schema import NotFoundErrorResponseSchema
 from schemas.files_schema import CreateFileSchema
@@ -25,7 +24,7 @@ from tools.tool import Tool
 @allure.parent_suite(Epic.API)                             # ┐
 @allure.suite(Feature.FILES)                               # │ Allure Suites (optional)
 @allure.sub_suite(Story.DELETE)                            # ┘
-@allure.severity(Severity.NORMAL)                          # ] Allure Severity
+@allure.severity(allure.severity_level.NORMAL)             # ] Allure Severity
 #-----------------------------------------------------------------------------------------------------------------------
 class TestDeleteFile:
     @allure.title('Delete File')                                                          # — Allure Title

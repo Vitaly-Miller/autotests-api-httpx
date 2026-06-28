@@ -1,11 +1,10 @@
 """
 TEST Get Courses
 """
-import http
-import allure
 import httpx
+import http
 import pytest
-from allure_commons.types import Severity
+import allure
 from clients.courses_client import CoursesClient
 from schemas.courses_schema import CreateCourseSchema, GetCoursesQwerySchema, GetCoursesResponseSchema
 from schemas.users_schema import CreateUserSchema
@@ -26,7 +25,7 @@ from tools.tool import Tool
 @allure.parent_suite(Epic.API)                                # ┐
 @allure.suite(Feature.COURSES)                                # │ Allure Suites (optional)
 @allure.sub_suite(Story.GET)                                  # ┘
-@allure.severity(Severity.NORMAL)                             # ] Allure Severity
+@allure.severity(allure.severity_level.NORMAL)                # ] Allure Severity
 #-----------------------------------------------------------------------------------------------------------------------
 class TestGetCourses:
     @allure.title('Get Courses (v.1 - Через фикстуру полного цикла)')                        # — Allure Title

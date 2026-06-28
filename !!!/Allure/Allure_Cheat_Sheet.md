@@ -109,13 +109,23 @@ def test_create_user():
 ### `Severity` - серьезность
 
 ``` python
-from allure_commons.types import Severity
-#----------------------------------------
-@allure.severity(Severity.CRITICAL)
+# v.1 
+import allure
+
+#-----------------------------------------------
+@allure.severity(allure.severity_level.CRITICAL)
 def test_create_user():
     ...
 ```
+``` python
+# v.2
+from allure_commons.types import Severity
 
+#----------------------------------------
+@allure.severity(allure.severity_level.CRITICAL)
+def test_create_user():
+    ...
+```
 `Уровни Severity:`
 
 -   ⚫️️`BLOCKER`
@@ -245,7 +255,7 @@ def test_step_in_func_decorator_with_sub_steps():
     build_api_client()                            # Вызываем функцию (c ОБЩИМ step + SUB-steps)
 ```
 
-## `@allure.step()` + `with` {динамические}
+## `@allure.step()` + `with`  - {динамические}
 ``` python
 # Функция
 @allure.step('Update to: {last_name}')                     # ДИНАМИЧЕСКИЙ ОБЩИЙ step функции с {Allure-placeholder} <— из параметра функции

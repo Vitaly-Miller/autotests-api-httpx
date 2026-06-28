@@ -1,10 +1,9 @@
 """
 TEST User Auth (Log in)
 """
-import allure
 import httpx
 import pytest
-from allure_commons.types import Severity
+import allure
 from clients.auth_client import AuthClient
 from schemas.users_schema import CreateUserSchema
 from schemas.auth_schema import AuthResponseSchema, AuthDataSchema
@@ -27,7 +26,7 @@ from tools.tool import Tool
 @allure.parent_suite(Epic.API)                            # ┐
 @allure.suite(Feature.AUTH)                               # │ Allure Suites (optional)
 @allure.sub_suite(Story.LOGIN)                            # ┘
-@allure.severity(Severity.BLOCKER)                        # ] Allure Severity
+@allure.severity(allure.severity_level.BLOCKER)           # ] Allure Severity
 #-----------------------------------------------------------------------------------------------------------------------
 class TestAuth:
     @allure.title('Auth (v.1 - Через API-фикстуру полного цикла)')    # — Allure Title

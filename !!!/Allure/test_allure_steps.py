@@ -79,6 +79,7 @@ def func_decorator_param_with_param(last_name: str):       # Функция (п�
 
 #------------------------------------------------------
 # Test
+@allure.severity(allure.severity_level.NORMAL)
 def test_step_in_func_decorator_with_sub_steps_param():
     func_decorator_param_with_param('Connor')              # Вызываем функцию (со встроенными ДИНАМИЧЕСКИМИ steps)
     func_decorator_param_with_param('Smith')               # Вызываем функцию (со встроенными ДИНАМИЧЕСКИМИ steps)

@@ -2,9 +2,8 @@
 TEST Get File
 """
 import http
-import allure
 import pytest
-from allure_commons.types import Severity
+import allure
 from clients.files_client import FilesClient
 from schemas.errors_schema import ErrorResponseSchema
 from schemas.files_schema import CreateFileSchema, CreateFileResponseSchema
@@ -30,7 +29,7 @@ from tools.tool import Tool
 @allure.parent_suite(Epic.API)                             # ┐
 @allure.suite(Feature.FILES)                               # │ Allure Suites (optional)
 @allure.sub_suite(Story.GET)                               # ┘
-@allure.severity(Severity.NORMAL)                          # ] Allure Severity
+@allure.severity(allure.severity_level.NORMAL)             # ] Allure Severity
 #-----------------------------------------------------------------------------------------------------------------------
 class TestGetFile:
     @allure.title('Get File')
@@ -57,13 +56,13 @@ class TestGetFile:
 @allure.parent_suite(Epic.API)                                      # ┐
 @allure.suite(Feature.FILES)                                        # │ Allure Suites (optional)
 @allure.sub_suite(Story.GET)                                        # ┘
-@allure.severity(Severity.NORMAL)                                   # ] Allure Severity
+@allure.severity(allure.severity_level.NORMAL)                      # ] Allure Severity
 #-----------------------------------------------------------------------------------------------------------------------
 class TestGetFileNegative:
-    @allure.title('Get File by INVALID File ID (non-UUID format)')     # — Allure Title
+    @allure.title('Get File by INVALID File ID (non-UUID format)')    # — Allure Title
     def test_get_file_by_invalid_file_id(self, files_client: FilesClient):
-        invalid_file_id = 'invalid_File_ID'                            # Invalid File ID (NON-UUID format)
-        response = files_client.get_file_api(invalid_file_id)          # ▶ Запрос через API-метод с invalid File ID
+        invalid_file_id = 'invalid_File_ID'                           # Invalid File ID (NON-UUID format)
+        response = files_client.get_file_api(invalid_file_id)         # ▶ Запрос через API-метод с invalid File ID
 
         # Assertions
         assert_status_code(response, http.HTTPStatus.UNPROCESSABLE_ENTITY) # Status code: 422

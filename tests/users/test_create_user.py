@@ -6,7 +6,6 @@ import httpx
 import pytest
 import allure
 import jsonschema
-from allure_commons.types import Severity
 from clients.public_users_client import PublicUsersClient, get_public_users_client
 from schemas.users_schema import CreateUserRequestSchema, CreateUserResponseSchema
 from tools.allure.annotations import Epic, Feature, Story, Tag
@@ -27,7 +26,7 @@ from tools.tool import Tool
 @allure.parent_suite(Epic.API)                             # ┐
 @allure.suite(Feature.USERS)                               # │ Allure Suites (optional)
 @allure.sub_suite(Story.CREATE)                            # ┘
-@allure.severity(Severity.BLOCKER)                         # ] Allure Severity
+@allure.severity(allure.severity_level.BLOCKER)            # ] Allure Severity
 #-----------------------------------------------------------------------------------------------------------------------
 class TestCreateUser:
     @allure.title('Create User (v.1 - Через фикстуру полного цикла)')             # — Allure Title

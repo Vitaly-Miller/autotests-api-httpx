@@ -1,11 +1,10 @@
 """
 TEST Get Exercise
 """
-import http
-import allure
 import httpx
+import http
 import pytest
-from allure_commons.types import Severity
+import allure
 from clients.exercises_client import ExercisesClient
 from schemas.exercises_schema import CreateExerciseSchema, GetExerciseResponseSchema
 from tools.allure.annotations import Epic, Feature, Story, Tag
@@ -25,7 +24,7 @@ from tools.tool import Tool
 @allure.parent_suite(Epic.API)                                # ┐
 @allure.suite(Feature.EXERCISES)                              # │ Allure Suites (optional)
 @allure.sub_suite(Story.GET)                                  # ┘
-@allure.severity(Severity.NORMAL)                             # ] Allure Severity
+@allure.severity(allure.severity_level.NORMAL)                # ] Allure Severity
 #-----------------------------------------------------------------------------------------------------------------------
 class TestGetExercise:
     @allure.title('Get Exercise (v.1 - Через API-фикстуру полного цикла)')  # — Allure Title
@@ -43,8 +42,8 @@ class TestGetExercise:
     @allure.title('Get Exercise (v.2 - Через фикстуры: exercises_client, create_exercise)')   # — Allure Title
     def test_get_exercise_2(
             self,
-            exercises_client: ExercisesClient,                        # Фикстура получения экземпляра ExercisesClient()
-            create_exercise: CreateExerciseSchema                     # Pydantic-фикстура создания задания
+            exercises_client: ExercisesClient,               # Фикстура получения экземпляра ExercisesClient()
+            create_exercise: CreateExerciseSchema            # Pydantic-фикстура создания задания
     ):
         response = exercises_client.get_exercise_api(create_exercise.exercise_id)   # ▶ Запрос через API-метод
 

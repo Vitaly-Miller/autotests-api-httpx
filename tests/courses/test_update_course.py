@@ -2,9 +2,8 @@
 TEST Update Course
 """
 import http
-import allure
 import pytest
-from allure_commons.types import Severity
+import allure
 from clients.courses_client import CoursesClient
 from schemas.courses_schema import CreateCourseSchema, UpdateCourseRequestSchema, UpdateCourseResponseSchema
 from tools.allure.annotations import Epic, Feature, Story, Tag
@@ -24,7 +23,7 @@ from tools.tool import Tool
 @allure.parent_suite(Epic.API)                                # ┐
 @allure.suite(Feature.COURSES)                                # │ Allure Suites (optional)
 @allure.sub_suite(Story.UPDATE)                               # ┘
-@allure.severity(Severity.NORMAL)                             # ] Allure Severity
+@allure.severity(allure.severity_level.NORMAL)                # ] Allure Severity
 #-----------------------------------------------------------------------------------------------------------------------
 class TestUpdateCourse:
     @allure.title('Update Course')                            # — Allure Title

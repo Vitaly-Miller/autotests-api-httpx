@@ -1,11 +1,10 @@
 """
 TEST Create Course
 """
-import http
-import allure
 import httpx
+import http
 import pytest
-from allure_commons.types import Severity
+import allure
 from clients.courses_client import CoursesClient
 from schemas.courses_schema import CreateCourseRequestSchema, CreateCourseResponseSchema
 from schemas.files_schema import CreateFileSchema
@@ -27,7 +26,7 @@ from tools.tool import Tool
 @allure.parent_suite(Epic.API)                                # ┐
 @allure.suite(Feature.COURSES)                                # │ Allure Suites (optional)
 @allure.sub_suite(Story.CREATE)                               # ┘
-@allure.severity(Severity.NORMAL)                             # ] Allure Severity
+@allure.severity(allure.severity_level.NORMAL)   # ] Allure Severity
 #-----------------------------------------------------------------------------------------------------------------------
 class TestCreateCourse:
     @allure.title('Create Course (v.1 - Через API-фикстуру полного цикла)')         # — Allure Title

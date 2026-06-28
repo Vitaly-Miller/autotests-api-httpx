@@ -1,11 +1,10 @@
 """
 TEST Update Exercise
 """
-import http
-import allure
 import httpx
+import http
 import pytest
-from allure_commons.types import Severity
+import allure
 from clients.exercises_client import ExercisesClient
 from schemas.exercises_schema import CreateExerciseSchema, UpdateExerciseRequestSchema, UpdateExerciseResponseSchema
 from tools.allure.annotations import Epic, Feature, Story, Tag
@@ -25,7 +24,7 @@ from tools.tool import Tool
 @allure.parent_suite(Epic.API)                                # ┐
 @allure.suite(Feature.EXERCISES)                              # │ Allure Suites (optional)
 @allure.sub_suite(Story.UPDATE)                               # ┘
-@allure.severity(Severity.NORMAL)                             # ] Allure Severity
+@allure.severity(allure.severity_level.NORMAL)                # ] Allure Severity
 #-----------------------------------------------------------------------------------------------------------------------
 class TestUpdateExercise:
     @allure.title('Update Exercise (v.1 - Через API-фикстуру полного цикла)') # — Allure Title

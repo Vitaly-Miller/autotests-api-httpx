@@ -1,11 +1,10 @@
 """
 TEST Get User Me
 """
-import allure
 import httpx
 import pytest
+import allure
 import jsonschema
-from allure_commons.types import Severity
 from clients.private_users_client import get_private_users_client, PrivateUsersClient
 from clients.public_users_client import get_public_users_client
 from schemas.auth_schema import AuthDataSchema
@@ -28,7 +27,7 @@ from tools.tool import Tool
 @allure.parent_suite(Epic.API)                       # ┐
 @allure.suite(Feature.USERS)                         # │ Allure Suites (optional)
 @allure.sub_suite(Story.GET)                         # ┘
-@allure.severity(Severity.NORMAL)                    # ] Allure Severity
+@allure.severity(allure.severity_level.NORMAL)       # ] Allure Severity
 #-----------------------------------------------------------------------------------------------------------------------
 class TestGetUserMe:
     @allure.title('Get User Me (v.1 - Через фикстуру полного цикла)')           # — Allure Title

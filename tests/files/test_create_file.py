@@ -2,9 +2,8 @@
 TEST Create File
 """
 import http
-import allure
 import pytest
-from allure_commons.types import Severity
+import allure
 from clients.files_client import FilesClient
 from schemas.errors_schema import ErrorResponseSchema
 from schemas.files_schema import CreateFileResponseSchema, CreateFileRequestSchema
@@ -29,7 +28,7 @@ from tools.tool import Tool
 @allure.parent_suite(Epic.API)                                  # ┐
 @allure.suite(Feature.FILES)                                    # │ Allure Suites (optional)
 @allure.sub_suite(Story.CREATE)                                 # ┘
-@allure.severity(Severity.BLOCKER)                              # ] Allure Severity
+@allure.severity(allure.severity_level.BLOCKER)                 # ] Allure Severity
 #-----------------------------------------------------------------------------------------------------------------------
 class TestCreateFile:
     @allure.title('Create File')
@@ -59,7 +58,7 @@ class TestCreateFile:
 @allure.parent_suite(Epic.API)                                            # ┐
 @allure.suite(Feature.FILES)                                              # │ Allure Suites (optional)
 @allure.sub_suite(Story.CREATE)                                           # ┘
-@allure.severity(Severity.NORMAL)                                         # ] Allure Severity
+@allure.severity(allure.severity_level.NORMAL)                            # ] Allure Severity
 #-----------------------------------------------------------------------------------------------------------------------
 class TestCreateFileNegative:
     @allure.title('Create File with EMPTY FILE NAME')                     # — Allure Title
@@ -79,10 +78,10 @@ class TestCreateFileNegative:
 
     @allure.title('Create File with EMPTY DIRECTORY')
     def test_negative_create_file_empty_directory(self, files_client: FilesClient):
-        create_file_data = CreateFileRequestSchema(                  # Pydantic-model with fake-data
-           directory=''                                              # 👈fake-data —> "" (empty)
+        create_file_data = CreateFileRequestSchema(                       # Pydantic-model with fake-data
+           directory=''                                                   # 👈fake-data —> "" (empty)
         )
-        response = files_client.create_file_api(create_file_data)    # ▶ Запрос через API-метод
+        response = files_client.create_file_api(create_file_data)         # ▶ Запрос через API-метод
 
         # Assertions
         assert_status_code(response, http.HTTPStatus.UNPROCESSABLE_ENTITY) # Status code: 422

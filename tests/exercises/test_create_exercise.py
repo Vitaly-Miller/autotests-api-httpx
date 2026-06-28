@@ -1,11 +1,10 @@
 """
 TEST Create Exercise
 """
-import http
-import allure
 import httpx
+import http
 import pytest
-from allure_commons.types import Severity
+import allure
 from clients.exercises_client import ExercisesClient
 from schemas.courses_schema import CreateCourseSchema
 from schemas.exercises_schema import CreateExerciseRequestSchema, CreateExerciseResponseSchema
@@ -30,7 +29,7 @@ from tools.tool import Tool
 @allure.parent_suite(Epic.API)                                # ┐
 @allure.suite(Feature.EXERCISES)                              # │ Allure Suites (optional)
 @allure.sub_suite(Story.CREATE)                               # ┘
-@allure.severity(Severity.NORMAL)                             # ] Allure Severity
+@allure.severity(allure.severity_level.NORMAL)                # ] Allure Severity
 #-----------------------------------------------------------------------------------------------------------------------
 class TestCreateExercise:
     @allure.title('Create Exercise (v.1 - Через API-фикстуру полного цикла)')  # — Allure Title

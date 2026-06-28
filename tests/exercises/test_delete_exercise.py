@@ -2,9 +2,8 @@
 TEST Delete Exercise
 """
 import http
-import allure
 import pytest
-from allure_commons.types import Severity
+import allure
 from clients.exercises_client import ExercisesClient
 from schemas.errors_schema import NotFoundErrorResponseSchema
 from schemas.exercises_schema import CreateExerciseSchema
@@ -25,7 +24,7 @@ from tools.tool import Tool
 @allure.parent_suite(Epic.API)                                # ┐
 @allure.suite(Feature.EXERCISES)                              # │ Allure Suites (optional)
 @allure.sub_suite(Story.DELETE)                               # ┘
-@allure.severity(Severity.NORMAL)                             # ] Allure Severity
+@allure.severity(allure.severity_level.NORMAL)                # ] Allure Severity
 #-----------------------------------------------------------------------------------------------------------------------
 class TestDeleteExercise:
     @allure.title('Delete Exercise')                          # — Allure Title
