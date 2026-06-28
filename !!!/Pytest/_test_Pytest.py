@@ -49,15 +49,15 @@ python -m python -m pytest -h              - info (help)
 
 #======================================================= Структура =====================================================
 # Тест
-def test_user_login():
+def test_user_login_pydantic():
     pass
 
 # Тестовый класс
 class TestUserAuth:               # NO __init__ конструктор! Допускаются только атрибуты класса (a = 100, ...)
-    def test_create_user(self):   # Тестовый .метод
+    def test_create_user_pydantic(self):   # Тестовый .метод
         pass
 
-    def test_update_user(self):   # Тестовый .метод
+    def test_update_user_pydantic(self):   # Тестовый .метод
         pass
 
 

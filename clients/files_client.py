@@ -1,6 +1,7 @@
 """
 Files Client
 """
+import allure
 import httpx
 from clients.api_client import APIClient
 from schemas.auth_schema import AuthDataSchema
@@ -13,6 +14,7 @@ class FilesClient(APIClient):
     ENDPOINT = '/files'
     #---------------------------------------------------- Get File -----------------------------------------------------
     # API
+    @allure.step('Get File by ID: {file_id}')
     def get_file_api(self, file_id: str) -> httpx.Response:
         """
         API-метод получения файла (Download) по File ID
@@ -24,7 +26,8 @@ class FilesClient(APIClient):
         return response                                             # httpx.Response
 
     # Pydantic-model
-    def get_file(self, file_id: str) -> GetFileResponseSchema:
+    @allure.step('Get File by ID: {file_id} (Pydantic)')
+    def get_file_pydantic(self, file_id: str) -> GetFileResponseSchema:
         """
         Pydantic-метод получения файла (Download) по File ID
 
@@ -37,6 +40,7 @@ class FilesClient(APIClient):
 
     #--------------------------------------------------- Create File ---------------------------------------------------
     # API
+    @allure.step('Create File')
     def create_file_api(self, create_file_data: CreateFileRequestSchema) -> httpx.Response:
         """
         API-метод создания файла (Upload) через with-контекстный менеджер (для закрытия после выполнения запроса)
@@ -54,7 +58,8 @@ class FilesClient(APIClient):
             return response                                         # httpx.Response
 
     # Pydantic-model
-    def create_file(self, create_file_data: CreateFileRequestSchema) -> CreateFileResponseSchema:
+    @allure.step('Create File (Pydantic)')
+    def create_file_pydantic(self, create_file_data: CreateFileRequestSchema) -> CreateFileResponseSchema:
         """
         Pydantic-метод создания файла (Upload)
 
@@ -67,6 +72,7 @@ class FilesClient(APIClient):
 
     #--------------------------------------------------- Delete File ---------------------------------------------------
     # API
+    @allure.step('Delete File by ID: {file_id}')
     def delete_file_api(self, file_id: str) -> httpx.Response:
         """
         API-метод удаления файла

@@ -39,13 +39,13 @@ class TestGetExercise:
         validate_json_schema(response, GetExerciseResponseSchema)   # JSON Schema validation
 
 
-    @allure.title('Get Exercise (v.2 - Через фикстуры: exercises_client, create_exercise)')   # — Allure Title
+    @allure.title('Get Exercise (v.2 - Через фикстуры: exercises_client, create_exercise_pydantic)')   # — Allure Title
     def test_get_exercise_2(
             self,
             exercises_client: ExercisesClient,               # Фикстура получения экземпляра ExercisesClient()
-            create_exercise: CreateExerciseSchema            # Pydantic-фикстура создания задания
+            create_exercise_pydantic: CreateExerciseSchema            # Pydantic-фикстура создания задания
     ):
-        response = exercises_client.get_exercise_api(create_exercise.exercise_id)   # ▶ Запрос через API-метод
+        response = exercises_client.get_exercise_api(create_exercise_pydantic.exercise_id)   # ▶ Запрос через API-метод
 
         # Assertions
         assert_status_code(response, http.HTTPStatus.OK)      # Status Code: 200

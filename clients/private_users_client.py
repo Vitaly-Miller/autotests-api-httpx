@@ -3,6 +3,7 @@
 (Для методов, требующих авторизации)
 """
 import httpx
+import allure
 from clients.api_client import APIClient
 from schemas.auth_schema import AuthDataSchema
 from clients.httpx_private_client import get_httpx_private_client
@@ -18,6 +19,7 @@ class PrivateUsersClient(APIClient):
     ENDPOINT = '/users'
     #------------------------------------------------- Get User Me -----------------------------------------------------
     # API
+    @allure.step('Get User Me')
     def get_user_me_api(self) -> httpx.Response:
         """
         API-метод получения данных текущего пользователя
@@ -28,7 +30,8 @@ class PrivateUsersClient(APIClient):
         return response                                                        # httpx.Response
 
     # Pydantic-model
-    def get_user_me(self) -> GetUserMeResponseSchema:
+    @allure.step('Get User Me (Pydantic)')
+    def get_user_me_pydantic(self) -> GetUserMeResponseSchema:
         """
         Pydantic-метод получения данных текущего пользователя
 
@@ -41,6 +44,7 @@ class PrivateUsersClient(APIClient):
 
     #-------------------------------------------------- Get User -------------------------------------------------------
     # API
+    @allure.step('Get User by ID: {user_id}')
     def get_user_api(self, user_id: str) -> httpx.Response:
         """
         API-метод получения данных пользователя по User ID
@@ -52,7 +56,8 @@ class PrivateUsersClient(APIClient):
         return response                                                        # httpx.Response
 
     # Pydantic-model
-    def get_user(self, user_id: str) -> GetUserResponseSchema:
+    @allure.step('Get User by ID: {user_id} (Pydantic)')
+    def get_user_pydantic(self, user_id: str) -> GetUserResponseSchema:
         """
         Pydantic-метод получения данных пользователя по User ID
 
@@ -66,6 +71,7 @@ class PrivateUsersClient(APIClient):
 
     #------------------------------------------------- Update User -----------------------------------------------------
     # API
+    @allure.step('Update User by ID: {user_id}')
     def update_user_api(self, user_id: str, update_data: UpdateUserRequestSchema) -> httpx.Response:
         """
         API-метод частичного обновления данных пользователя по User ID
@@ -81,7 +87,8 @@ class PrivateUsersClient(APIClient):
         return response                                           # httpx.Response
 
     # Pydantic-model
-    def update_user(self, user_id: str, update_data: UpdateUserRequestSchema) -> UserUpdateResponseSchema:
+    allure.step('Update User by ID: {user_id} (Pydantic)')
+    def update_user_pydantic(self, user_id: str, update_data: UpdateUserRequestSchema) -> UserUpdateResponseSchema:
         """
         Pydantic-метод частичного обновления данных пользователя по User ID
 
@@ -96,6 +103,7 @@ class PrivateUsersClient(APIClient):
 
     #------------------------------------------------- Delete User -----------------------------------------------------
     # API
+    @allure.step('Delete User by ID: {user_id}')
     def delete_user_api(self, user_id: str) -> httpx.Response:
         """
         API-метод удаления пользователя по User ID
@@ -105,18 +113,6 @@ class PrivateUsersClient(APIClient):
         """
         response = self.delete(url=f'{self.ENDPOINT}/{user_id}')              # ▶ Запрос
         return response                                                       # httpx.Response
-
-    # Pydantic-model (⚠️Дописать Схему)
-    # def delete_user(self, user_id: str) -> DeleteUserResponseSchema:
-    #     """
-    #     Pydantic-метод удаления пользователя по User ID
-    #
-    #     :param user_id: User ID
-    #     :return: Pydantic-model (DeleteUserResponseSchem)
-    #     """
-    #     response = self.delete_user_api(user_id)                                      # ▶ Запрос через API-метод
-    #     response_model = DeleteUserResponseSchema.model_validate_json(response.text)  # Response —> Pydantic-model (deserialize)
-    #     return response_model                                                         # Pydantic-model (DeleteUserResponseSchem)
 
 
 #================================================= Client (✨Helper) ===================================================

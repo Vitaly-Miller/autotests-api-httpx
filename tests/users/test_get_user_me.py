@@ -62,7 +62,7 @@ class TestGetUserMe:
         # Create User
         public_users_client = get_public_users_client()   # Получаем экземпляр PublicUsersClient (с Base URL)
         create_user_data = CreateUserRequestSchema()      # Инициализация Pydantic-модели с default fake-data нового пользователя
-        public_users_client.create_user(create_user_data) # ▶ Запрос через Pydantic-метод
+        public_users_client.create_user_pydantic(create_user_data) # ▶ Запрос через Pydantic-метод
         auth_data = AuthDataSchema(                       # Инициализируем модель с default-данными для авторизации
             email=create_user_data.email,                 # Замена default на —> реальное значение
             password=create_user_data.password            # Замена default на —> реальное значение

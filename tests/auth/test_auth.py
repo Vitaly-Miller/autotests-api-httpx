@@ -34,28 +34,28 @@ class TestAuth:
         response = auth_api        # Сохраняем ответ фикстуры, но не обязательно,...
                                    # Исполняемую API-фикстуру можно сразу передавать в Assertions в качестве параметра
         # Assertions
-        assert_status_code(response, HTTPStatus.OK)          # Status code: 200
-        assert_method(response, HTTPMethod.POST)           # Method: POST
-        assert_auth_response_non_empty(response)                                   # Response data is NON-empty
-        assert_token(response)                                                     # Token validation
-        validate_json_schema(response, AuthResponseSchema)         # Validation JSON schema
+        assert_status_code(response, HTTPStatus.OK)        # Status code: 200
+        assert_method(response, HTTPMethod.POST)         # Method: POST
+        assert_auth_response_non_empty(response)                                 # Response data is NON-empty
+        assert_token(response)                                                   # Token validation
+        validate_json_schema(response, AuthResponseSchema)       # Validation JSON schema
 
 
 
     @allure.title('Auth (v.2 - Через фикстуры: Создания пользователя + Авторизации пользователя)')  # — Allure Title
-    def test_auth_2(self, create_user: CreateUserSchema, auth_client: AuthClient):
-        auth_data = AuthDataSchema(                      # Pydantic-model with fake-data (Email и Password),...
-            email=create_user.email,                     # Замена default на —> реальное значение из фикстуры
-            password=create_user.password                # Замена default на —> реальное значение из фикстуры
+    def test_auth_2(self, create_user_pydantic: CreateUserSchema, auth_client: AuthClient):
+        auth_data = AuthDataSchema(                             # Pydantic-model with fake-data (Email и Password),...
+            email=create_user_pydantic.email,                   # Замена default на —> реальное значение из фикстуры
+            password=create_user_pydantic.password              # Замена default на —> реальное значение из фикстуры
         )
-        response = auth_client.login_api(auth_data)                                # ▶ Запрос через API-метод
+        response = auth_client.login_api(auth_data)                              # ▶ Запрос через API-метод
 
         # Assertions
-        assert_status_code(response, HTTPStatus.OK)          # Status code: 200
-        assert_method(response, HTTPMethod.POST)           # Method: POST
-        assert_auth_response_non_empty(response)                                   # Response data is NON-empty
-        assert_token(response)                                                     # Token validation
-        validate_json_schema(response, AuthResponseSchema)         # Validation JSON schema
+        assert_status_code(response, HTTPStatus.OK)        # Status code: 200
+        assert_method(response, HTTPMethod.POST)         # Method: POST
+        assert_auth_response_non_empty(response)                                 # Response data is NON-empty
+        assert_token(response)                                                   # Token validation
+        validate_json_schema(response, AuthResponseSchema)       # Validation JSON schema
 
 
 #=======================================================================================================================

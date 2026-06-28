@@ -32,7 +32,7 @@ from tools.tool import Tool
 #-----------------------------------------------------------------------------------------------------------------------
 class TestCreateFile:
     @allure.title('Create File')
-    def test_create_file(self, files_client: FilesClient):
+    def test_create_file_pydantic(self, files_client: FilesClient):
         file_data = CreateFileRequestSchema()                                      # Pydantic-model with fake-data
         response = files_client.create_file_api(file_data)                         # ▶ Запрос через API-метод
 

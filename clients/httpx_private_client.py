@@ -19,7 +19,7 @@ def get_httpx_private_client(auth_data: AuthDataSchema) -> httpx.Client:
     :return: httpx.Client (с Base URL + Token)
     """
     auth_client = get_auth_client()                     # Получаем экземпляр AuthClient
-    response = auth_client.login(auth_data=auth_data)   # ▶ Запрос на аутентификацию через Pydantic-метод
+    response = auth_client.login_pydantic(auth_data=auth_data)   # ▶ Запрос на аутентификацию через Pydantic-метод
     headers = {'Authorization': f'Bearer {response.token.access_token}'}  # Формируем заголовок c токеном
     private_httpx_client = httpx.Client(                # Создаём экземпляр httpx.Client() с передачей Base URL + Token
         base_url=BASE_URL,

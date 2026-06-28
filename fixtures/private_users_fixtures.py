@@ -9,14 +9,14 @@ from schemas.users_schema import CreateUserSchema, GetUserMeResponseSchema
 #================================================ Private Users Client =================================================
 # Private Users Client
 @pytest.fixture
-def private_users_client(create_user: CreateUserSchema) -> PrivateUsersClient:
+def private_users_client(create_user_pydantic: CreateUserSchema) -> PrivateUsersClient:
     """
     Фикстура получения экземпляра PrivateUsersClient() (c Авторизацией)
 
-    :param create_user: Вложенная Pydantic-фикстура создания пользователя
+    :param create_user_pydantic: Вложенная Pydantic-фикстура создания пользователя
     :return: Экземпляр PrivateUsersClient() (c Авторизацией)
     """
-    client = get_private_users_client(create_user.auth_data)
+    client = get_private_users_client(create_user_pydantic.auth_data)
     return client                                          # PrivateUsersClient()
 
 
@@ -36,15 +36,15 @@ def get_user_me_api(private_users_client: PrivateUsersClient) -> httpx.Response:
 
 # Pydantic-model
 @pytest.fixture
-def get_user_me(private_users_client: PrivateUsersClient) -> GetUserMeResponseSchema:
+def get_user_me_pydantic(private_users_client: PrivateUsersClient) -> GetUserMeResponseSchema:
     """
     Pydantic-фикстура получения данных текущего пользователя
 
     :param private_users_client: Экземпляр PrivateUsersClient (c Авторизацией)
     :return: Pydantic-model (GetUserMeResponseSchema)
     """
-    response_model = private_users_client.get_user_me()    # ▶ Запрос через Pydantic-метод
-    return response_model                                  # Pydantic-model (GetUserMeResponseSchema)
+    response_model = private_users_client.get_user_me_pydantic()    # ▶ Запрос через Pydantic-метод
+    return response_model                                           # Pydantic-model (GetUserMeResponseSchema)
 
 
 #-----------------------------------------------------------------------------------------------------------------------

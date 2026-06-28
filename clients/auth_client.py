@@ -25,7 +25,7 @@ class AuthClient(APIClient):
         return response
 
     # Pydantic-model
-    def login(self, auth_data: AuthDataSchema) -> AuthResponseSchema:
+    def login_pydantic(self, auth_data: AuthDataSchema) -> AuthResponseSchema:
         """
         Pydantic-метод аутентификации пользователя (Log in)
 

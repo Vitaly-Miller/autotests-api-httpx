@@ -56,7 +56,7 @@ def assert_exercise_id(response: httpx.Response, exercise_id: str | None = None)
         assert_equal(response_model.exercise.id, exercise_id,'exercise_id') # Actual Exercise ID = Expected Exercise ID
 
 #---------------------------------------------------- Create exercise --------------------------------------------------
-def assert_create_exercise_response_non_empty(response: httpx.Response):
+def assert_create_exercise_pydantic_response_non_empty(response: httpx.Response):
     """
     Create Exercise Response data is NON-empty
 
@@ -68,7 +68,7 @@ def assert_create_exercise_response_non_empty(response: httpx.Response):
     assert_exercise_response_non_empty(response)
 
 
-def assert_create_exercise_response(response: httpx.Response):
+def assert_create_exercise_pydantic_response(response: httpx.Response):
     """
     Create Exercise Response data = Create Exercise Request data
 
@@ -97,7 +97,7 @@ def assert_get_exercise_response_non_empty(response: httpx.Response):
     :param response: httpx.Response (for deserialize —> Pydantic-model)
     :raise AssertionError
     """
-    assert_create_exercise_response_non_empty(response)
+    assert_create_exercise_pydantic_response_non_empty(response)
 
 
 #--------------------------------------------------- Update exercise ---------------------------------------------------

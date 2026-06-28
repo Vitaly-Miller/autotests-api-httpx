@@ -76,7 +76,7 @@ allure open allure-report
 
 ``` python
 @allure.title('Create user')
-def test_create_user():
+def test_create_user_pydantic():
     ...
 ```
 
@@ -91,7 +91,7 @@ def test_create_user():
         'email_3yahoo.com'          # │
     ]                               # │
 )                                   # ┘
-def test_create_user():
+def test_create_user_pydantic():
    allure.dynamic.title(f'Create user with Email: {email}')     # 👈 Динамический title внутри теста (без-@)
    ...
    
@@ -102,7 +102,7 @@ def test_create_user():
 
 ``` python
 @allure.description('Сreate User with invalid data')
-def test_create_user():
+def test_create_user_pydantic():
     ...
 ```
 ------------------------------------------------------------------------
@@ -114,7 +114,7 @@ import allure
 
 #-----------------------------------------------
 @allure.severity(allure.severity_level.CRITICAL)
-def test_create_user():
+def test_create_user_pydantic():
     ...
 ```
 ``` python
@@ -123,7 +123,7 @@ from allure_commons.types import Severity
 
 #----------------------------------------
 @allure.severity(allure.severity_level.CRITICAL)
-def test_create_user():
+def test_create_user_pydantic():
     ...
 ```
 `Уровни Severity:`

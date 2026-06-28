@@ -1,28 +1,24 @@
 """
 Files (Fixtures)
 """
-from typing import Any, Generator
-
 import httpx
 import pytest
-from httpx import Response
-
+from typing import Generator
 from clients.files_client import FilesClient, get_files_client
-from schemas.files_schema import CreateFileRequestSchema, CreateFileSchema, GetFileResponseSchema, \
-    CreateFileResponseSchema
+from schemas.files_schema import CreateFileRequestSchema, CreateFileSchema, GetFileResponseSchema
 from schemas.users_schema import CreateUserSchema
 
 #==================================================== Files Client =====================================================
 # Files Client
 @pytest.fixture
-def files_client(create_user: CreateUserSchema) -> FilesClient:
+def files_client(create_user_pydantic: CreateUserSchema) -> FilesClient:
     """
     Фикстура получения экземпляра FilesClient() (c Авторизацией)
 
-    :param create_user: Вложенная Pydantic-фикстура создания пользователя
+    :param create_user_pydantic: Вложенная Pydantic-фикстура создания пользователя
     :return: Экземпляр класса class FilesClient() (c Base URL + АВТОРИЗАЦИЯ)
     """
-    files_client = get_files_client(create_user.auth_data)
+    files_client = get_files_client(create_user_pydantic.auth_data)
     return files_client                                        # FilesClient()
 
 
@@ -43,7 +39,7 @@ def create_file_api(files_client: FilesClient) -> httpx.Response:
 
 # Pydantic-model
 @pytest.fixture
-def create_file(files_client: FilesClient) -> CreateFileSchema:
+def create_file_pydantic(files_client: FilesClient) -> CreateFileSchema:
     """
     Pydantic-фикстура создания файла
 
@@ -51,7 +47,7 @@ def create_file(files_client: FilesClient) -> CreateFileSchema:
     :return: Pydantic-model (CreateFileSchema) ✨<Request + Response>
     """
     create_file_data = CreateFileRequestSchema()                   # Инициализация Pydantic-model c default fake-data
-    response_model = files_client.create_file(create_file_data)    # ▶ Запрос через Pydantic-метод
+    response_model = files_client.create_file_pydantic(create_file_data)    # ▶ Запрос через Pydantic-метод
     response_model_full = CreateFileSchema(request=create_file_data, response=response_model) # Инициализация Pydantic-model (CreateFileSchema) ✨<Request + Response>
     return response_model_full                                     # Pydantic-model (CreateFileSchema) ✨<Request + Response>
 
@@ -66,7 +62,7 @@ def create_file_temp(files_client: FilesClient) -> Generator[CreateFileSchema]:
     :return: httpx.Response
     """
     create_file_data = CreateFileRequestSchema()                   # Инициализация Pydantic-модели c default fake-data
-    response_model = files_client.create_file(create_file_data)    # ▶ Запрос через Pydantic-метод
+    response_model = files_client.create_file_pydantic(create_file_data)    # ▶ Запрос через Pydantic-метод
     response_model_full = CreateFileSchema(request=create_file_data, response=response_model)  # Инициализация Pydantic-model (CreateFileSchema) ✨<Request + Response>
     yield response_model_full                                      # Pydantic-model (CreateFileSchema) ✨<Request + Response>
     files_client.delete_file_api(response_model_full.file_id)      # Удаление файла после теста
@@ -75,44 +71,44 @@ def create_file_temp(files_client: FilesClient) -> Generator[CreateFileSchema]:
 #------------------------------------------------------ Get File -------------------------------------------------------
 # API
 @pytest.fixture
-def get_file_api(files_client: FilesClient, create_file: CreateFileSchema) -> httpx.Response:
+def get_file_api(files_client: FilesClient, create_file_pydantic: CreateFileSchema) -> httpx.Response:
     """
     API-фикстура получения файла
 
     :param files_client: Вложенная фикстура получения экземпляра FilesClient (c Авторизацией)
-    :param create_file: Вложенная Pydantic-фикстура создания файла
+    :param create_file_pydantic: Вложенная Pydantic-фикстура создания файла
     :return: httpx.Response
     """
-    response = files_client.get_file_api(create_file.file_id)      # ▶ Запрос через API-метод
+    response = files_client.get_file_api(create_file_pydantic.file_id)      # ▶ Запрос через API-метод
     return response                                                # httpx.Response
 
 
 # Pydantic-model
 @pytest.fixture
-def get_file(files_client: FilesClient, create_file: CreateFileSchema) -> GetFileResponseSchema:
+def get_file_pydantic(files_client: FilesClient, create_file_pydantic: CreateFileSchema) -> GetFileResponseSchema:
     """
     Pydantic-фикстура получения файла
 
     :param files_client: Вложенная фикстура получения экземпляра FilesClient (c Авторизацией)
-    :param create_file: Вложенная Pydantic-фикстура создания файла
+    :param create_file_pydantic: Вложенная Pydantic-фикстура создания файла
     :return: Pydantic-model (GetFileResponseSchema)
     """
-    response_model = files_client.get_file(create_file.file_id)    # ▶ Запрос через Pydantic-метод
-    return response_model                                          # Pydantic-model (GetFileResponseSchema)
+    response_model = files_client.get_file_pydantic(create_file_pydantic.file_id)    # ▶ Запрос через Pydantic-метод
+    return response_model                                                   # Pydantic-model (GetFileResponseSchema)
 
 
 #----------------------------------------------------- Delete File -----------------------------------------------------
 # API
 @pytest.fixture
-def delete_file_api(files_client: FilesClient, create_file: CreateFileSchema) -> httpx.Response:
+def delete_file_api(files_client: FilesClient, create_file_pydantic: CreateFileSchema) -> httpx.Response:
     """
     API-фикстура удаления файла
 
     :param files_client: Вложенная фикстура получения экземпляра FilesClient (c Авторизацией)
-    :param create_file: Вложенная Pydantic-фикстура создания файла
+    :param create_file_pydantic: Вложенная Pydantic-фикстура создания файла
     :return: httpx.Response
     """
-    response = files_client.delete_file_api(create_file.file_id)   # ▶ Запрос через API-метод
+    response = files_client.delete_file_api(create_file_pydantic.file_id)   # ▶ Запрос через API-метод
     return response                                                # httpx.Response
 
 

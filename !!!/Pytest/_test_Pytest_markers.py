@@ -58,7 +58,7 @@ class TestSuite:
 class TestUserAuth:
 
     @pytest.mark.smoke            # regression and smoke
-    def test_login(self):
+    def test_login_pydantic(self):
         ...
 
     @pytest.mark.slow             # regression and slow

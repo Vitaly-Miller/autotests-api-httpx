@@ -2,6 +2,7 @@
 API Client
 """
 import httpx
+import allure
 from httpx._types import RequestData, RequestFiles   # NOQA  # для аннотации типов (работа с файлами)
 from typing import Any                                       # для аннотации типов
 
@@ -16,6 +17,7 @@ class APIClient:
         self.client = client
 
     # 🟩GET ------------------------------------------------------------------------------------------------------------
+    @allure.step('🟩GET-request to {url}')
     def get(self,
             url: httpx.URL | str,
             params: httpx.QueryParams | None = None) -> httpx.Response:
@@ -30,6 +32,7 @@ class APIClient:
 
 
     # 🟨POST -----------------------------------------------------------------------------------------------------------
+    @allure.step('🟨POST-request to {url}')
     def post(self,
              url: httpx.URL | str,
              json: Any | None = None,
@@ -48,6 +51,7 @@ class APIClient:
 
 
     # 🟪PATCH ----------------------------------------------------------------------------------------------------------
+    @allure.step('🟪PATCH-request to {url}')
     def patch(self,
               url: httpx.URL | str,
               json: Any | None = None) -> httpx.Response:
@@ -62,6 +66,7 @@ class APIClient:
 
 
     # 🟦PUT ------------------------------------------------------------------------------------------------------------
+    @allure.step('🟦PUT-request to {url}')
     def put(self,
             url: httpx.URL | str,
             json: Any | None = None) -> httpx.Response:
@@ -76,6 +81,7 @@ class APIClient:
 
 
     # 🟥DELETE ---------------------------------------------------------------------------------------------------------
+    @allure.step('🟥DELETE-request to {url}')
     def delete(self,
                url: httpx.URL | str) -> httpx.Response:
         """
