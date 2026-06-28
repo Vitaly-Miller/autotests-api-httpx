@@ -3,75 +3,82 @@ Allure Steps
 
 - Контекст-менеджер <with>  — Для описания НЕСКОЛЬКО шагов в функции
 - Декоратор @allure.step()  — Для описания ОДНОГО/ОБЩЕГО шага
-— @allure.step() + <with>     — Для описания ОБЩЕГО шага функции + ВНУТРЕННИЕ шаги (sub-steps)
+— @allure.step() + <with>   — Для описания ОБЩЕГО шага функции + ВНУТРЕННИЕ шаги (sub-steps)
 """
 import allure
 
 #=============================================== Контекст-менеджер <with> ==============================================
 
 #-----------------------------------------------------------------------------------------------------------------------
-# Test с НЕСКОЛЬКИМИ шагами
-def test_step_in_test_with():
-    with allure.step('Create User'):        # Описание шага 1 теста (через контекст-менеджер <with>)
+# Test
+def test_steps_in_test_with():
+    with allure.step('Step-1 in test'):     # Step-1 теста (через <with>)
         ...                                 # ▶ Actions
-    with allure.step('Delete User'):        # Описание шага 2 теста (через контекст-менеджер <with>)
+    with allure.step('Step-2 in test'):     # Step-2 теста (через <with>)
         ...                                 # ▶ Actions
-
 
 #-----------------------------------------------------------------------------------------------------------------------
-# Функция с ОДНИМ шагом
-def get_user_1():                           # Функция-1
-    with allure.step('Get User-1'):         # Описание шага Функции-1 (через контекст-менеджер <with>)
+# Функции:
+def func_1_with():                          # Функция-1
+    with allure.step('Step in Func-1'):     # Step функции-1 (через <with>)
         ...                                 # ▶ Actions
 
-# Функция с ОДНИМ шагом
-def update_user_1():                        # Функция-2
-    with allure.step('Update User-1'):      # Описание шага Функции-2 (через контекст-менеджер <with>)
+def func_2_with():                          # Функция-1
+    with allure.step('Step in Func-2'):     # Step функции-2 (через <with>)
         ...                                 # ▶ Actions
 
 #---------------------------
 # Test
-def test_step_in_func_with():
-    get_user_1()                            # Вызываем Функцию-1 (со встроенным описанием шагов)
-    update_user_1()                         # Вызываем Функцию-2 (со встроенным описанием шагов)
+def test_steps_in_func_with():
+    func_1_with()                           # Вызываем функцию-1 (со встроенным step)
+    func_2_with()                           # Вызываем функцию-2 (со встроенным step)
 
 
 
 
 #============================================== Декоратор @allure.step() ===============================================
-
-# Функция с ОДНИМ шагом
-@allure.step('Get User-2')                  # Описание шага Функции-1 (через @декоратор)
-def get_user_2():                           # Функция 1
+# Функции:
+@allure.step('Func-1 (decorator)')          # Step функции-1 (через @decorator)
+def func_1_decorator():                     # Функция
     ...                                     # ▶ Actions
 
-# Функция с ОДНИМ шагом + ПАРАМЕТР
-new_name = 'John Connor'                    # Переменная (параметр)
-
-@allure.step(f'Update User-2: {new_name}')  # Описание шага Функции-1 (через @декоратор) + параметр
-def update_user_2():                        # Функция 2
+@allure.step('Func-2 (decorator)')          # Step функции-2 (через @decorator)
+def func_2_decorator():                     # Функция
     ...                                     # ▶ Actions
+
 
 #--------------------------------
 # Test
 def test_step_in_func_decorator():
-    get_user_2()                            # Вызываем Функцию-1 (со встроенным описанием шагов)
-    update_user_2()                         # Вызываем Функцию-2 (со встроенным описанием шагов)
+    func_1_decorator()                      # Вызываем функцию-1 (со встроенным step)
+    func_2_decorator()                      # Вызываем функцию-2 (со встроенным step)
 
 
 #=============================================== @allure.step() + with =================================================
-
-# Функция c ВНУТРЕННИМИ шагами (sub-steps)
-@allure.step(f'Build API-Client')               # Описание ОБЩЕГО шага функции (через @декоратор)
+# Функция
+@allure.step('Build API-Client')            # ОБЩИЙ step функции (через @декоратор)
 def build_api_client():
-    with allure.step('Get Auth-token'):         # Описание 1-го внутреннего шага функции (через with)
-        ...                                     # ▶ Actions
-    with allure.step('Create new API-client'):  # Описание 2-го внутреннего шага функции (через with)
-        ...                                     # ▶ Actions
+    with allure.step('Get Auth-token'):     # SUB-step функции (через with)
+        ...                                 # ▶ Actions
+    with allure.step('Create API client'):  # SUB-step функции (через with)
+        ...                                 # ▶ Actions
 
-#-----====----------------------
+#------------------------------------------------
 # Test
-def test_create_file_sub_steps():
-    build_api_client()                          # Вызываем Функцию (со встроенным описанием шагов)
+def test_step_in_func_decorator_with_sub_steps():
+    build_api_client()                      # Вызываем функцию (c ОБЩИМ step + SUB-steps)
 
-#=======================================================================================================================
+
+
+#================================================== Динамические steps =================================================
+# Функция
+@allure.step('Update to: {last_name}')                     # ДИНАМИЧЕСКИЙ ОБЩИЙ step функции с {Allure-placeholder} <— из параметра функции
+def func_decorator_param_with_param(last_name: str):       # Функция (принимает параметр)
+    with allure.step(f'Printing Last name: {last_name}'):  # ДИНАМИЧЕСКИЙ SUB-step с f'{string}' <— из параметра функции
+        ...                                                # ▶ Actions
+
+#------------------------------------------------------
+# Test
+def test_step_in_func_decorator_with_sub_steps_param():
+    func_decorator_param_with_param('Connor')              # Вызываем функцию (со встроенными ДИНАМИЧЕСКИМИ steps)
+    func_decorator_param_with_param('Smith')               # Вызываем функцию (со встроенными ДИНАМИЧЕСКИМИ steps)
