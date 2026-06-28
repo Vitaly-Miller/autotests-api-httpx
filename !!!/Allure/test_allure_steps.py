@@ -56,17 +56,17 @@ def test_step_in_func_decorator():
 
 #=============================================== @allure.step() + with =================================================
 # Функция
-@allure.step('Build API-Client')            # ОБЩИЙ step функции (через @декоратор)
+@allure.step('Build API-Client')                  # ОБЩИЙ step функции (через @декоратор)
 def build_api_client():
-    with allure.step('Get Auth-token'):     # SUB-step функции (через with)
-        ...                                 # ▶ Actions
-    with allure.step('Create API client'):  # SUB-step функции (через with)
-        ...                                 # ▶ Actions
+    with allure.step('Get Auth-token'):           # SUB-step функции (через with)
+        ...                                       # ▶ Actions
+    with allure.step('Create API client'):        # SUB-step функции (через with)
+        ...                                       # ▶ Actions
 
 #------------------------------------------------
 # Test
 def test_step_in_func_decorator_with_sub_steps():
-    build_api_client()                      # Вызываем функцию (c ОБЩИМ step + SUB-steps)
+    build_api_client()                            # Вызываем функцию (c ОБЩИМ step + SUB-steps)
 
 
 
