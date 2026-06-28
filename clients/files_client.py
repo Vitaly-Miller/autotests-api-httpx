@@ -14,7 +14,7 @@ class FilesClient(APIClient):
     ENDPOINT = '/files'
     #---------------------------------------------------- Get File -----------------------------------------------------
     # API
-    @allure.step('Get File by ID: {file_id}')
+    @allure.step('Get file by ID: {file_id} (API)')
     def get_file_api(self, file_id: str) -> httpx.Response:
         """
         API-метод получения файла (Download) по File ID
@@ -25,8 +25,9 @@ class FilesClient(APIClient):
         response = self.get(url=f'{self.ENDPOINT}/{file_id}')       # ▶ Запрос
         return response                                             # httpx.Response
 
+
     # Pydantic-model
-    @allure.step('Get File by ID: {file_id} (Pydantic)')
+    @allure.step('Get file by ID: {file_id} (Pydantic)')
     def get_file_pydantic(self, file_id: str) -> GetFileResponseSchema:
         """
         Pydantic-метод получения файла (Download) по File ID
@@ -38,9 +39,10 @@ class FilesClient(APIClient):
         response_model = GetFileResponseSchema.model_validate_json(response.text)  # Response —> Pydantic-model (deserialize)
         return response_model                                                      # Pydantic-model (GetFileResponseSchema)
 
+
     #--------------------------------------------------- Create File ---------------------------------------------------
     # API
-    @allure.step('Create File')
+    @allure.step('Create file (API)')
     def create_file_api(self, create_file_data: CreateFileRequestSchema) -> httpx.Response:
         """
         API-метод создания файла (Upload) через with-контекстный менеджер (для закрытия после выполнения запроса)
@@ -57,8 +59,9 @@ class FilesClient(APIClient):
             )
             return response                                         # httpx.Response
 
+
     # Pydantic-model
-    @allure.step('Create File (Pydantic)')
+    @allure.step('Create file (Pydantic)')
     def create_file_pydantic(self, create_file_data: CreateFileRequestSchema) -> CreateFileResponseSchema:
         """
         Pydantic-метод создания файла (Upload)
@@ -70,9 +73,10 @@ class FilesClient(APIClient):
         response_model = CreateFileResponseSchema.model_validate_json(response.text)  # Response —> Pydantic-model (deserialize)
         return response_model                                                         # Pydantic-model (CreateFileResponseSchema)
 
+
     #--------------------------------------------------- Delete File ---------------------------------------------------
     # API
-    @allure.step('Delete File by ID: {file_id}')
+    @allure.step('Delete file by ID: {file_id} (API)')
     def delete_file_api(self, file_id: str) -> httpx.Response:
         """
         API-метод удаления файла
@@ -86,6 +90,7 @@ class FilesClient(APIClient):
 
 
 #================================================= Client (✨Helper) ===================================================
+@allure.step('Get Files Client')
 def get_files_client(auth_data: AuthDataSchema) -> FilesClient:
     """
     Функция получения экземпляра FilesClient с уже настроенным HTTP-клиентом (с Авторизацией)

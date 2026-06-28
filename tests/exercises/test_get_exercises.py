@@ -24,7 +24,7 @@ from tools.tool import Tool
 #-----------------------------------------------------------------------------------------------------------------------
 class TestGetExercises:
     @allure.title('Get Exercises (v.1 - Через API-фикстуры: exercises_client, create_exercise_pydantic)')  # — Allure Title
-    def test_get_exercises(self, create_exercise_pydantic_api: httpx.Response, get_exercises_api: httpx.Response):
+    def test_get_exercises(self, create_exercise_api: httpx.Response, get_exercises_api: httpx.Response):
 
         # Assertions
         assert_status_code(get_exercises_api, http.HTTPStatus.OK)           # Status code: 200
@@ -32,5 +32,5 @@ class TestGetExercises:
 
 
 #=======================================================================================================================
-        # Tool.api_report(create_exercise_pydantic_api)
+        # Tool.api_report(create_exercise_api)
         # Tool.api_report(get_exercises_api)

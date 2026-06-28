@@ -33,8 +33,8 @@ from tools.tool import Tool
 #-----------------------------------------------------------------------------------------------------------------------
 class TestCreateExercise:
     @allure.title('Create Exercise (v.1 - Через API-фикстуру полного цикла)')  # — Allure Title
-    def test_create_exercise_pydantic_1(self, create_exercise_pydantic_api: httpx.Response):     # Через API-фикстуру полного цикла        ─┐
-        response = create_exercise_pydantic_api                                         # Сохраняем ответ API-фикстуры            ─┘
+    def test_create_exercise_pydantic_1(self, create_exercise_api: httpx.Response):     # Через API-фикстуру полного цикла        ─┐
+        response = create_exercise_api                                         # Сохраняем ответ API-фикстуры            ─┘
 
         # Assertions
         assert_status_code(response, http.HTTPStatus.OK)        # Status Code: 200
@@ -55,7 +55,7 @@ class TestCreateExercise:
         create_exercise_pydantic_data = CreateExerciseRequestSchema(           # Pydantic-model c fake-data                        │
             courseId=create_course_pydantic.course_id                 # Fake data —> Реальное значение из фикстуры        │
         )                                                             #                                                   │
-        response = exercises_client.create_exercise_pydantic_api(create_exercise_pydantic_data)         # ▶ Запрос через API-метод         ─┘
+        response = exercises_client.create_exercise_api(create_exercise_pydantic_data)         # ▶ Запрос через API-метод         ─┘
 
         # Assertions
         assert_status_code(response, http.HTTPStatus.OK)        # Status Code: 200

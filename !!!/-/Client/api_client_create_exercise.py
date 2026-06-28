@@ -50,7 +50,7 @@ create_course_pydantic_data = CreateCourseRequestSchema(      # Модель с 
 courses_client = get_courses_client(auth_data=auth_data)
 
 # 🟨POST запрос на создание куса методом create_course_pydantic
-create_course_pydantic_response = courses_client.create_course_pydantic_pydantic(create_course_pydantic_data=create_course_pydantic_data)
+create_course_pydantic_response = courses_client.create_course_pydantic(create_course_pydantic_data=create_course_pydantic_data)
 
 #==================================================== Create Exercise ==================================================
 # Инициализация Pydantic-model с данными о задании
@@ -62,7 +62,7 @@ create_exercise_pydantic_data = CreateExerciseRequestSchema(
 exercise_client = get_exercises_client(auth_data=auth_data)
 
 # 🟨POST запрос на создание задания методом create_exercise_pydantic
-create_exercise_pydantic_response = exercise_client.create_exercise_pydantic_pydantic(create_exercise_pydantic_data=create_exercise_pydantic_data)
+create_exercise_pydantic_response = exercise_client.create_exercise_pydantic(create_exercise_pydantic_data=create_exercise_pydantic_data)
 
 
 #------------------------------------------------------ Output ---------------------------------------------------------

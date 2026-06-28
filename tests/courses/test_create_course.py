@@ -30,8 +30,8 @@ from tools.tool import Tool
 #-----------------------------------------------------------------------------------------------------------------------
 class TestCreateCourse:
     @allure.title('Create Course (v.1 - Через API-фикстуру полного цикла)')         # — Allure Title
-    def test_create_course_pydantic_1(self, create_course_pydantic_api: httpx.Response):              # Через API-фикстуру полного цикла
-        response = create_course_pydantic_api                                                # Сохраняем ответ API-фикстуры
+    def test_create_course_pydantic_1(self, create_course_api: httpx.Response):              # Через API-фикстуру полного цикла
+        response = create_course_api                                                # Сохраняем ответ API-фикстуры
 
         # Assertions
         assert_status_code(response, http.HTTPStatus.OK)      # Status Code: 200
@@ -52,7 +52,7 @@ class TestCreateCourse:
             previewFileId=create_file_pydantic.file_id,              # Fake data —> Реальные данные из фикстуры
             createdByUserId=create_user_pydantic.user_id             # Fake data —> Реальные данные из фикстуры
         )
-        response = courses_client.create_course_pydantic_api(create_course_pydantic_data_model)       # ▶ Запрос через API-метод
+        response = courses_client.create_course_api(create_course_pydantic_data_model)       # ▶ Запрос через API-метод
 
         # Assertions
         assert_status_code(response, http.HTTPStatus.OK)      # Status Code: 200

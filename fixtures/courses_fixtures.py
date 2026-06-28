@@ -26,7 +26,7 @@ def courses_client(create_user_pydantic: CreateUserSchema) -> CoursesClient:
 #---------------------------------------------------- Create course ----------------------------------------------------
 # API
 @pytest.fixture
-def create_course_pydantic_api(
+def create_course_api(
     courses_client: CoursesClient,          # ┐  ✨ДЕДУПЛИКАЦИЯ внутри одного теста — это фундаментальное свойство Pytest.
     create_user_pydantic: CreateUserSchema, # ┘  ✨Один и тоже User! Несмотря на то, что обе фикстуры создают пользователя.
     create_file_pydantic: CreateFileSchema
@@ -46,7 +46,7 @@ def create_course_pydantic_api(
         previewFileId=create_file_pydantic.file_id,           # Заменяем default на реальный File ID
         createdByUserId=create_user_pydantic.user_id          # Заменяем default на реальный User ID
     )
-    response = courses_client.create_course_pydantic_api(create_course_pydantic_data)   # ▶ Запрос через API-метод
+    response = courses_client.create_course_api(create_course_pydantic_data)   # ▶ Запрос через API-метод
     return response                                           # httpx.Response
 
 
@@ -72,7 +72,7 @@ def create_course_pydantic(
         previewFileId=create_file_pydantic.file_id,           # Заменяем default на реальный File ID
         createdByUserId=create_user_pydantic.user_id          # Заменяем default на реальный User ID
     )
-    response_model = courses_client.create_course_pydantic_pydantic(create_course_pydantic_data)             # ▶ Запрос через Pydantic-метод
+    response_model = courses_client.create_course_pydantic(create_course_pydantic_data)             # ▶ Запрос через Pydantic-метод
     response_model_full = CreateCourseSchema(request=create_course_pydantic_data, response=response_model)   # Инициализация Pydantic-model (CoursesFullSchema) ✨<Request + Response>
     return response_model_full                                # Pydantic-model (CoursesFullSchema) ✨<Request + Response>
 

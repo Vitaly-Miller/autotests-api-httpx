@@ -30,7 +30,7 @@ def exercises_client(create_user_pydantic: CreateUserSchema) -> ExercisesClient:
 #-------------------------------------------------- Create exercise ----------------------------------------------------
 # API
 @pytest.fixture
-def create_exercise_pydantic_api(exercises_client: ExercisesClient, create_course_pydantic: CreateCourseSchema) -> httpx.Response:
+def create_exercise_api(exercises_client: ExercisesClient, create_course_pydantic: CreateCourseSchema) -> httpx.Response:
     """
     API-фикстура создания задания
 
@@ -41,7 +41,7 @@ def create_exercise_pydantic_api(exercises_client: ExercisesClient, create_cours
     create_exercise_pydantic_data = CreateExerciseRequestSchema(    # Pydantic-model c default fake-data
         courseId=create_course_pydantic.course_id                   # Default —> реальный Course ID из фикстуры
     )
-    response = exercises_client.create_exercise_pydantic_api(create_exercise_pydantic_data)  # ▶ Запрос через API-метод
+    response = exercises_client.create_exercise_api(create_exercise_pydantic_data)  # ▶ Запрос через API-метод
     return response                                                        # httpx.Response
 
 
@@ -58,7 +58,7 @@ def create_exercise_pydantic(exercises_client: ExercisesClient, create_course_py
     exercise_data = CreateExerciseRequestSchema(           # Pydantic-model c default fake-data
         courseId=create_course_pydantic.course_id                   # Default —> реальный Course ID из фикстуры
     )
-    response_model = exercises_client.create_exercise_pydantic_pydantic(exercise_data)   # ▶ Запрос через Pydantic-метод
+    response_model = exercises_client.create_exercise_pydantic(exercise_data)   # ▶ Запрос через Pydantic-метод
     response_model_full = CreateExerciseSchema(request=exercise_data, response=response_model)   # Инициализация Pydantic-model (CoursesFullSchema) ✨<Request + Response>
     return response_model_full                                         # Pydantic-model (CreateExerciseSchema) ✨<Request + Response>
 

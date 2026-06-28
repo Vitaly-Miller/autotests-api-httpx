@@ -3,10 +3,12 @@ Public httpx.Client builder
 (Для методов, НЕ требующих авторизации)
 """
 import httpx
+import allure
 
 #============================================= Public httpx.Client (Builder) ===========================================
 BASE_URL = 'http://localhost:8000/api/v1'
 
+@allure.step('Get Public httpx.Client')
 def get_httpx_public_client() -> httpx.Client:
     """
     Функия создает экземпляр httpx.Client (с Base URL)

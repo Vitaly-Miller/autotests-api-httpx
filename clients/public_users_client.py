@@ -3,6 +3,7 @@ PUBLIC Users Client
 (Для методов, НЕ требующих авторизации)
 """
 import httpx
+import allure
 from clients.api_client import APIClient
 from clients.httpx_public_client import get_httpx_public_client
 from schemas.users_schema import CreateUserRequestSchema, CreateUserResponseSchema
@@ -12,6 +13,7 @@ class PublicUsersClient(APIClient):
     ENDPOINT = '/users'
     #------------------------------------------------- Create User  ----------------------------------------------------
     # API
+    @allure.step('Create user (API)')
     def create_user_api(self, create_user_data: CreateUserRequestSchema) -> httpx.Response:
         """
         API-метод создания нового пользователя
@@ -26,6 +28,7 @@ class PublicUsersClient(APIClient):
 
 
     # Pydantic-model
+    @allure.step('Create user (Pydantic)')
     def create_user_pydantic(self, create_user_data: CreateUserRequestSchema) -> CreateUserResponseSchema:
         """
         Pydantic-метод для создания нового пользователя
@@ -39,6 +42,7 @@ class PublicUsersClient(APIClient):
 
 
 #================================================= Client (✨Helper) ===================================================
+@allure.step('Get Public Users Client')
 def get_public_users_client() -> PublicUsersClient:
     """
     Функция получения экземпляра PrivateUsersClient с уже настроенным HTTP-клиентом (c Base URL)

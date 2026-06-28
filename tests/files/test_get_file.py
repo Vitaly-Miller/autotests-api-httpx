@@ -34,12 +34,12 @@ from tools.tool import Tool
 class TestGetFile:
     @allure.title('Get File')
     def test_get_file_pydantic(self, files_client: FilesClient, create_file_pydantic: CreateFileSchema):
-        response = files_client.get_file_api(create_file_pydantic.file_id)                       # ▶ Запрос через API-метод
+        response = files_client.get_file_api(create_file_pydantic.file_id)              # ▶ Запрос через API-метод
 
         # Assertions
         assert_status_code(response, http.HTTPStatus.OK)          # Status code: 200
         assert_method(response, http.HTTPMethod.GET)            # Method: GET
-        assert_file_id(response, create_file_pydantic.file_id)                    # File ID validation
+        assert_file_id(response, create_file_pydantic.file_id)           # File ID validation
         validate_json_schema(response, CreateFileResponseSchema)        # Validation JSON schema
 
 
