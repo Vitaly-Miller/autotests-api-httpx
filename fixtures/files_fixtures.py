@@ -46,10 +46,10 @@ def create_file_pydantic(files_client: FilesClient) -> CreateFileSchema:
     :param files_client: Вложенная фикстура получения экземпляра FilesClient (c Авторизацией)
     :return: Pydantic-model (CreateFileSchema) ✨<Request + Response>
     """
-    create_file_data = CreateFileRequestSchema()                   # Инициализация Pydantic-model c default fake-data
-    response_model = files_client.create_file_pydantic(create_file_data)    # ▶ Запрос через Pydantic-метод
+    create_file_data = CreateFileRequestSchema()                          # Инициализация Pydantic-model c default fake-data
+    response_model = files_client.create_file_pydantic(create_file_data)  # ▶ Запрос через Pydantic-метод
     response_model_full = CreateFileSchema(request=create_file_data, response=response_model) # Инициализация Pydantic-model (CreateFileSchema) ✨<Request + Response>
-    return response_model_full                                     # Pydantic-model (CreateFileSchema) ✨<Request + Response>
+    return response_model_full                                            # Pydantic-model (CreateFileSchema) ✨<Request + Response>
 
 
 # Pydantic-model (full) + ✨delete
@@ -61,11 +61,11 @@ def create_file_temp(files_client: FilesClient) -> Generator[CreateFileSchema]:
     :param files_client: Вложенная фикстура получения экземпляра FilesClient (c Авторизация)
     :return: httpx.Response
     """
-    create_file_data = CreateFileRequestSchema()                   # Инициализация Pydantic-модели c default fake-data
-    response_model = files_client.create_file_pydantic(create_file_data)    # ▶ Запрос через Pydantic-метод
+    create_file_data = CreateFileRequestSchema()                           # Инициализация Pydantic-модели c default fake-data
+    response_model = files_client.create_file_pydantic(create_file_data)   # ▶ Запрос через Pydantic-метод
     response_model_full = CreateFileSchema(request=create_file_data, response=response_model)  # Инициализация Pydantic-model (CreateFileSchema) ✨<Request + Response>
-    yield response_model_full                                      # Pydantic-model (CreateFileSchema) ✨<Request + Response>
-    files_client.delete_file_api(response_model_full.file_id)      # Удаление файла после теста
+    yield response_model_full                                              # Pydantic-model (CreateFileSchema) ✨<Request + Response>
+    files_client.delete_file_api(response_model_full.file_id)              # Удаление файла после теста
 
 
 #------------------------------------------------------ Get File -------------------------------------------------------
@@ -80,7 +80,7 @@ def get_file_api(files_client: FilesClient, create_file_pydantic: CreateFileSche
     :return: httpx.Response
     """
     response = files_client.get_file_api(create_file_pydantic.file_id)      # ▶ Запрос через API-метод
-    return response                                                # httpx.Response
+    return response                                                         # httpx.Response
 
 
 # Pydantic-model
@@ -94,7 +94,7 @@ def get_file_pydantic(files_client: FilesClient, create_file_pydantic: CreateFil
     :return: Pydantic-model (GetFileResponseSchema)
     """
     response_model = files_client.get_file_pydantic(create_file_pydantic.file_id)    # ▶ Запрос через Pydantic-метод
-    return response_model                                                   # Pydantic-model (GetFileResponseSchema)
+    return response_model                                                            # Pydantic-model (GetFileResponseSchema)
 
 
 #----------------------------------------------------- Delete File -----------------------------------------------------
@@ -109,7 +109,7 @@ def delete_file_api(files_client: FilesClient, create_file_pydantic: CreateFileS
     :return: httpx.Response
     """
     response = files_client.delete_file_api(create_file_pydantic.file_id)   # ▶ Запрос через API-метод
-    return response                                                # httpx.Response
+    return response                                                         # httpx.Response
 
 
 

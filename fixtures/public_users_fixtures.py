@@ -3,6 +3,7 @@ Public Users (Fixtures)
 """
 import httpx
 import pytest
+import allure
 from clients.public_users_client import get_public_users_client, PublicUsersClient
 from schemas.users_schema import CreateUserSchema, CreateUserRequestSchema
 
@@ -16,7 +17,7 @@ def public_users_client() -> PublicUsersClient:
     :return: Экземпляр PublicUsersClient() (c Base URL)
     """
     public_users_client = get_public_users_client()
-    return public_users_client                                        # PublicUsersClient()
+    return public_users_client     # PublicUsersClient()
 
 
 #----------------------------------------------------- Create User -----------------------------------------------------

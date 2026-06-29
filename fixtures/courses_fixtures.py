@@ -72,9 +72,9 @@ def create_course_pydantic(
         previewFileId=create_file_pydantic.file_id,           # Заменяем default на реальный File ID
         createdByUserId=create_user_pydantic.user_id          # Заменяем default на реальный User ID
     )
-    response_model = courses_client.create_course_pydantic(create_course_pydantic_data)             # ▶ Запрос через Pydantic-метод
+    response_model = courses_client.create_course_pydantic(create_course_pydantic_data)   # ▶ Запрос через Pydantic-метод
     response_model_full = CreateCourseSchema(request=create_course_pydantic_data, response=response_model)   # Инициализация Pydantic-model (CoursesFullSchema) ✨<Request + Response>
-    return response_model_full                                # Pydantic-model (CoursesFullSchema) ✨<Request + Response>
+    return response_model_full                                                            # Pydantic-model (CoursesFullSchema) ✨<Request + Response>
 
 #----------------------------------------------------- Get courses -----------------------------------------------------
 # API
