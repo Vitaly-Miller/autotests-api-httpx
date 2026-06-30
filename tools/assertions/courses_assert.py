@@ -18,7 +18,7 @@ def assert_create_course_pydantic_response(response: httpx.Response):
     :param response: Response (for deserialize —> Pydantic-model)
     :raise AssertionError
     """
-    response_model = CreateCourseResponseSchema.model_validate_json(response.text)          # Response —> Pydantic-model
+    response_model = CreateCourseResponseSchema.model_validate_json(response.text)          # httpx.Response —> Pydantic-model (parsing-deserialize)
     request_model = CreateCourseRequestSchema.model_validate_json(response.request.content) # Request —> Pydantic-model
 
     assert_equal(response_model.course.title, request_model.title, 'title')
@@ -40,7 +40,7 @@ def assert_get_courses_responses(get_courses_response: httpx.Response, create_co
     :param create_course_responses: create_course_pydantic_responses
     :return: AssertionError
     """
-    get_courses_response_model = GetCoursesResponseSchema.model_validate_json(get_courses_response.text)  # Response —> Pydantic-model
+    get_courses_response_model = GetCoursesResponseSchema.model_validate_json(get_courses_response.text)  # httpx.Response —> Pydantic-model (parsing-deserialize)
 
     expected_courses = [r.course for r in create_course_responses]                                        #
 
@@ -66,7 +66,7 @@ def assert_update_course_response(response: httpx.Response):
     :param request_model: Pydantic-model with Update Course data / None
     :raise AssertionError
     """
-    response_model = UpdateCourseResponseSchema.model_validate_json(response.text)          # Response —> Pydantic-model                                                                # Условие, если не передать request_model, то ...
+    response_model = UpdateCourseResponseSchema.model_validate_json(response.text)          # httpx.Response —> Pydantic-model (parsing-deserialize)                                                                # Условие, если не передать request_model, то ...
     request_model = UpdateCourseRequestSchema.model_validate_json(response.request.content) # Request —> Pydantic-model
 
     assert_equal(response_model.course.title, request_model.title, 'title')

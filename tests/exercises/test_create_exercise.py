@@ -9,7 +9,7 @@ from clients.exercises_client import ExercisesClient
 from schemas.courses_schema import CreateCourseSchema
 from schemas.exercises_schema import CreateExerciseRequestSchema, CreateExerciseResponseSchema
 from tools.allure.annotations import Epic, Feature, Story, Tag
-from tools.assertions.base_assert import assert_method, assert_status_code
+from tools.assertions.base_assert import assert_request_method, assert_status_code
 from tools.assertions.schema_assert import validate_json_schema
 from tools.assertions.exercises_assert import (
     assert_create_exercise_pydantic_response,
@@ -32,13 +32,13 @@ from tools.tool import Tool
 @allure.severity(allure.severity_level.NORMAL)                # ] Allure Severity
 #-----------------------------------------------------------------------------------------------------------------------
 class TestCreateExercise:
-    @allure.title('Create Exercise (v.1 - Через API-фикстуру полного цикла)')  # — Allure Title
+    @allure.title('Create Exercise (v.1 - Через API-фикстуру полного цикла)')  # Allure Title
     def test_create_exercise_pydantic_1(self, create_exercise_api: httpx.Response):     # Через API-фикстуру полного цикла        ─┐
         response = create_exercise_api                                         # Сохраняем ответ API-фикстуры            ─┘
 
         # Assertions
         assert_status_code(response, http.HTTPStatus.OK)        # Status Code: 200
-        assert_method(response, http.HTTPMethod.POST)         # Method: POST
+        assert_request_method(response, http.HTTPMethod.POST)         # Method: POST
         assert_create_exercise_pydantic_response_non_empty(response)                           # Response data is NON-empty
         assert_create_exercise_pydantic_response(response)                                     # Response data = Request data
         assert_exercise_id(response)                                                  # Exercise ID validation
@@ -46,7 +46,7 @@ class TestCreateExercise:
 
 
 
-    @allure.title('Create Exercise (v.2 - Через фикстуры: exercises_client, create_course_pydantic)')  # — Allure Title
+    @allure.title('Create Exercise (v.2 - Через фикстуры: exercises_client, create_course_pydantic)')  # Allure Title
     def test_create_exercise_pydantic_2(                                       #                                                  ─┐
             self,                                                     #                                                   │
             exercises_client: ExercisesClient,                        # Фикстура получения экземпляра ExercisesClient()   │
@@ -59,7 +59,7 @@ class TestCreateExercise:
 
         # Assertions
         assert_status_code(response, http.HTTPStatus.OK)        # Status Code: 200
-        assert_method(response, http.HTTPMethod.POST)         # Method: POST
+        assert_request_method(response, http.HTTPMethod.POST)         # Method: POST
         assert_create_exercise_pydantic_response_non_empty(response)                           # Response data is NON-empty
         assert_create_exercise_pydantic_response(response)                                     # Response data = Request data
         assert_exercise_id(response)                                                  # Exercise ID validation

@@ -11,7 +11,7 @@ from schemas.exercises_schema import (
     CreateExerciseRequestSchema, CreateExerciseResponseSchema,
     GetExerciseResponseSchema, UpdateExerciseRequestSchema, UpdateExerciseResponseSchema
 )
-from tools.assertions.base_assert import assert_equal, assert_is_value, assert_length, assert_method, assert_status_code
+from tools.assertions.base_assert import assert_equal, assert_is_value, assert_length, assert_request_method, assert_status_code
 from tools.assertions.errors_assert import assert_not_found_response
 from tools.tool import Tool
 
@@ -24,7 +24,7 @@ def assert_exercise_response_non_empty(response: httpx.Response):
     :param response: httpx.Response (for deserialize —> Pydantic-model)
     :raise AssertionError
     """
-    response_model = CreateExerciseResponseSchema.model_validate_json(response.text)   # Response —> Pydantic-model
+    response_model = CreateExerciseResponseSchema.model_validate_json(response.text)   # httpx.Response —> Pydantic-model (parsing-deserialize)
 
     assert_is_value(response_model.exercise.id, 'id')
     assert_is_value(response_model.exercise.title, 'title')
@@ -48,7 +48,7 @@ def assert_exercise_id(response: httpx.Response, exercise_id: str | None = None)
     :param exercise_id: Exercise ID / None
     :raise AssertionError
     """
-    response_model = CreateExerciseResponseSchema.model_validate_json(response.text)      # Response —> Pydantic-model
+    response_model = CreateExerciseResponseSchema.model_validate_json(response.text)      # httpx.Response —> Pydantic-model (parsing-deserialize)
 
     assert_is_value(response_model.exercise.id, 'exercise_id')                  # NON-empty File ID
     assert_length(response_model.exercise.id, 36, 'exercise_id')  # File ID length = 36 chars
@@ -75,7 +75,7 @@ def assert_create_exercise_pydantic_response(response: httpx.Response):
     :param response: httpx.Response with File data (for deserialize —> Pydantic-model)
     :raise AssertionError
     """
-    response_model = CreateExerciseResponseSchema.model_validate_json(response.text)           # Response —> Pydantic-model
+    response_model = CreateExerciseResponseSchema.model_validate_json(response.text)           # httpx.Response —> Pydantic-model (parsing-deserialize)
     request_model = CreateExerciseRequestSchema.model_validate_json(response.request.content)  # Request —> Pydantic-model
 
     assert_equal(response_model.exercise.title, request_model.title, 'title')
@@ -108,7 +108,7 @@ def assert_update_exercise_response(response: httpx.Response):
     :param response: httpx.Response with Exercise data (for deserialize —> Pydantic-model)
     :raise AssertionError
     """
-    response_model = UpdateExerciseResponseSchema.model_validate_json(response.text)           # Response —> Pydantic-model
+    response_model = UpdateExerciseResponseSchema.model_validate_json(response.text)           # httpx.Response —> Pydantic-model (parsing-deserialize)
     request_model = UpdateExerciseRequestSchema.model_validate_json(response.request.content)  # Request —> Pydantic-model
 
     assert_equal(response_model.exercise.title, request_model.title, 'title')

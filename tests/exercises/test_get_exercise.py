@@ -8,7 +8,7 @@ import allure
 from clients.exercises_client import ExercisesClient
 from schemas.exercises_schema import CreateExerciseSchema, GetExerciseResponseSchema
 from tools.allure.annotations import Epic, Feature, Story, Tag
-from tools.assertions.base_assert import assert_method, assert_status_code
+from tools.assertions.base_assert import assert_request_method, assert_status_code
 from tools.assertions.exercises_assert import assert_exercise_id, assert_get_exercise_response_non_empty
 from tools.assertions.schema_assert import validate_json_schema
 from tools.tool import Tool
@@ -27,19 +27,19 @@ from tools.tool import Tool
 @allure.severity(allure.severity_level.NORMAL)                # ] Allure Severity
 #-----------------------------------------------------------------------------------------------------------------------
 class TestGetExercise:
-    @allure.title('Get Exercise (v.1 - Через API-фикстуру полного цикла)')  # — Allure Title
+    @allure.title('Get Exercise (v.1 - Через API-фикстуру полного цикла)')  # Allure Title
     def test_get_exercise_1(self, get_exercise_api: httpx.Response):        # Через API-фикстуру полного цикла
         response = get_exercise_api                                         # Сохраняем ответ API-фикстуры
 
         # Assertions
         assert_status_code(response, http.HTTPStatus.OK)      # Status Code: 200
-        assert_method(response, http.HTTPMethod.GET)        # Method: GET
+        assert_request_method(response, http.HTTPMethod.GET)        # Method: GET
         assert_get_exercise_response_non_empty(response)
         assert_exercise_id(response)
         validate_json_schema(response, GetExerciseResponseSchema)   # JSON Schema validation
 
 
-    @allure.title('Get Exercise (v.2 - Через фикстуры: exercises_client, create_exercise_pydantic)')   # — Allure Title
+    @allure.title('Get Exercise (v.2 - Через фикстуры: exercises_client, create_exercise_pydantic)')   # Allure Title
     def test_get_exercise_2(
             self,
             exercises_client: ExercisesClient,               # Фикстура получения экземпляра ExercisesClient()
@@ -49,7 +49,7 @@ class TestGetExercise:
 
         # Assertions
         assert_status_code(response, http.HTTPStatus.OK)      # Status Code: 200
-        assert_method(response, http.HTTPMethod.GET)        # Method: GET
+        assert_request_method(response, http.HTTPMethod.GET)        # Method: GET
         assert_get_exercise_response_non_empty(response)
         assert_exercise_id(response)
         validate_json_schema(response, GetExerciseResponseSchema)   # JSON Schema validation

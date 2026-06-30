@@ -41,7 +41,7 @@ class ExercisesClient(APIClient):
         :return: Pydantic-model (CreateExerciseResponseSchema)
         """
         response = self.create_exercise_api(exercise_data)                                # ▶ Запрос через API-метод
-        response_model = CreateExerciseResponseSchema.model_validate_json(response.text)  # Response —> Pydantic-model (deserialize)
+        response_model = CreateExerciseResponseSchema.model_validate_json(response.text)  # httpx.Response —> Pydantic-model (parsing-deserialize) (deserialize)
         return response_model                                                             # Pydantic-model(CreateExerciseResponseSchema)
 
 
@@ -69,7 +69,7 @@ class ExercisesClient(APIClient):
         :return: Pydantic-model (GetExerciseResponseSchema)
         """
         response = self.get_exercise_api(exercise_id)                                  # ▶ Запрос через API-метод
-        response_model = GetExerciseResponseSchema.model_validate_json(response.text) # Response —> Pydantic-model (deserialize)
+        response_model = GetExerciseResponseSchema.model_validate_json(response.text) # httpx.Response —> Pydantic-model (parsing-deserialize) (deserialize)
         return response_model                                                          # Pydantic-model (GetExerciseResponseSchema)
 
 
@@ -121,7 +121,7 @@ class ExercisesClient(APIClient):
             exercise_id,                       # Передаем  Exercise ID
             new_exercise_data            # Передаем Pydantic-model данными, которые необходимо обновить
         )
-        response_model = UpdateExerciseResponseSchema.model_validate_json(response.text) # Response —> Pydantic-model (deserialize)
+        response_model = UpdateExerciseResponseSchema.model_validate_json(response.text) # httpx.Response —> Pydantic-model (parsing-deserialize) (deserialize)
         return response_model                            # Pydantic-model (UpdateExerciseResponseSchema)
 
 

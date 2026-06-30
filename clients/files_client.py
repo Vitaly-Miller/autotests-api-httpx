@@ -36,7 +36,7 @@ class FilesClient(APIClient):
         :return: httpx.Response
         """
         response = self.get_file_api(file_id)                                      # ▶ Запрос через API-метод
-        response_model = GetFileResponseSchema.model_validate_json(response.text)  # Response —> Pydantic-model (deserialize)
+        response_model = GetFileResponseSchema.model_validate_json(response.text)  # httpx.Response —> Pydantic-model (parsing-deserialize) (deserialize)
         return response_model                                                      # Pydantic-model (GetFileResponseSchema)
 
 
@@ -70,7 +70,7 @@ class FilesClient(APIClient):
         :return: Pydantic-model (CreateFileResponseSchema)
         """
         response = self.create_file_api(create_file_data)                             # ▶ Запрос через API-метод
-        response_model = CreateFileResponseSchema.model_validate_json(response.text)  # Response —> Pydantic-model (deserialize)
+        response_model = CreateFileResponseSchema.model_validate_json(response.text)  # httpx.Response —> Pydantic-model (parsing-deserialize) (deserialize)
         return response_model                                                         # Pydantic-model (CreateFileResponseSchema)
 
 

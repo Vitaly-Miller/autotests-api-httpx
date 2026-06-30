@@ -16,7 +16,7 @@ def assert_create_file_response_non_empty(response: httpx.Response):
     :param response: httpx.Response (for deserialize —> Pydantic-model)
     :raise AssertionError
     """
-    response_model = CreateFileResponseSchema.model_validate_json(response.text)    # Response —> Pydantic-model
+    response_model = CreateFileResponseSchema.model_validate_json(response.text)    # httpx.Response —> Pydantic-model (parsing-deserialize)
 
     assert_is_value(response_model.file.id, 'id')
     assert_is_value(response_model.file.filename, 'filename')
@@ -33,7 +33,7 @@ def assert_create_file_response(response: httpx.Response, request_model: CreateF
     :param request_model: Pydantic-model with File data
     :raise AssertionError
     """
-    response_model = CreateFileResponseSchema.model_validate_json(response.text)   # Response —> Pydantic-model                                                    # Условие, если не передать request_model, то ...
+    response_model = CreateFileResponseSchema.model_validate_json(response.text)   # httpx.Response —> Pydantic-model (parsing-deserialize)                                                    # Условие, если не передать request_model, то ...
 
     expected_url = f'http://localhost:8000/static/{request_model.directory}/{request_model.filename}'  # URL for comparison
 
@@ -57,7 +57,7 @@ def assert_file_id(response: httpx.Response, file_id: str | None = None):
     :param file_id: File ID / None
     :raise AssertionError
     """
-    response_model = CreateFileResponseSchema.model_validate_json(response.text)  # Response —> Pydantic-model
+    response_model = CreateFileResponseSchema.model_validate_json(response.text)  # httpx.Response —> Pydantic-model (parsing-deserialize)
 
     assert_is_value(response_model.file.id, 'id')                       # NON-empty File ID
     assert_length(response_model.file.id,36,'id')         # File ID length = 36 chars

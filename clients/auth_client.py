@@ -36,7 +36,7 @@ class AuthClient(APIClient):
         :return: Ответ с данными об авторизации пользователя в формате Pydantic-model
         """
         response = self.login_api(auth_data)                               # ▶ Запрос через API-метод
-        response_model = AuthResponseSchema.model_validate_json(response.text)  # Response —> Pydantic-model (deserialize)
+        response_model = AuthResponseSchema.model_validate_json(response.text)  # httpx.Response —> Pydantic-model (parsing-deserialize) (deserialize)
         return response_model
 
 

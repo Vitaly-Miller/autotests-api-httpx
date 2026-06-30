@@ -1,7 +1,7 @@
 """
 Auth (Log in) assertions
 """
-import httpx
+import allure
 from schemas.auth_schema import AuthResponseSchema
 from tools.assertions.base_assert import (
     assert_equal,
@@ -11,14 +11,15 @@ from tools.assertions.base_assert import (
 )
 #=======================================================================================================================
 # Response data is NON-empty
-def assert_auth_response_non_empty(response: httpx.Response):
+@allure.step('Check Response data is NON-empty')
+def assert_auth_response_non_empty(response_model: AuthResponseSchema):
     """
-    Response data is NON-empty
+    Check Response data is NON-empty
 
-    :param response: Response (for deserialize —> Pydantic-model)
+    :param response_model: Pydantic-model (AuthResponseSchem)
     :raise AssertionError
     """
-    response_model = AuthResponseSchema.model_validate_json(response.text)   # Response —> Pydantic-model
+
 
     assert_is_value(response_model.token.token_type, 'token_type')
     assert_is_value(response_model.token.access_token, 'access_token')
@@ -27,7 +28,8 @@ def assert_auth_response_non_empty(response: httpx.Response):
 
 #-----------------------------------------------------------------------------------------------------------------------
 # Token validation
-def assert_token(response: httpx.Response):
+@allure.step('Check Tokens')
+def assert_token(response_model: AuthResponseSchema):
     """
     Token validation
 
@@ -36,11 +38,9 @@ def assert_token(response: httpx.Response):
     - Refresh token length = 199 chars
     - Access token ≠ Refresh token
 
-    :param response: httpx.Response (for deserialize —> Pydantic-model)
+    :param response_model: Pydantic-model (AuthResponseSchema)
     :raise AssertionError
     """
-    response_model = AuthResponseSchema.model_validate_json(response.text)   # Response —> Pydantic-model
-
     # Token type = 'bearer'
     assert_equal(
         response_model.token.token_type,

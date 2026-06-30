@@ -6,7 +6,7 @@ import http
 import pytest
 import allure
 from tools.allure.annotations import Epic, Feature, Story, Tag
-from tools.assertions.base_assert import assert_method, assert_status_code
+from tools.assertions.base_assert import assert_request_method, assert_status_code
 from tools.tool import Tool
 
 #=======================================================================================================================
@@ -23,12 +23,12 @@ from tools.tool import Tool
 @allure.severity(allure.severity_level.NORMAL)                # ] Allure Severity
 #-----------------------------------------------------------------------------------------------------------------------
 class TestGetExercises:
-    @allure.title('Get Exercises (v.1 - Через API-фикстуры: exercises_client, create_exercise_pydantic)')  # — Allure Title
+    @allure.title('Get Exercises (v.1 - Через API-фикстуры: exercises_client, create_exercise_pydantic)')  # Allure Title
     def test_get_exercises(self, create_exercise_api: httpx.Response, get_exercises_api: httpx.Response):
 
         # Assertions
         assert_status_code(get_exercises_api, http.HTTPStatus.OK)           # Status code: 200
-        assert_method(get_exercises_api, http.HTTPMethod.GET)             # Method: GET
+        assert_request_method(get_exercises_api, http.HTTPMethod.GET)             # Method: GET
 
 
 #=======================================================================================================================
