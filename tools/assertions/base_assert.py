@@ -100,15 +100,15 @@ def assert_not_equal(obj_1: Any, obj_1_name: str, obj_2: Any, obj_2_name: str):
 #-------------------------------------------------------- Empty --------------------------------------------------------
 # NON-empty values
 @allure.step('Check <{name}> value is NON-empty')
-def assert_is_value(actual_obj: Any, name: str):
+def assert_is_value(actual: Any, name: str):
     """
     Проверяет, что значение не пустое
 
-    :param actual_obj: Actual object (ex.: response_model.user.id)
+    :param actual: Actual object (ex.: response_model.user.id)
     :param name: Object name (for Assertion Error output)
     :raises AssertionError
     """
-    assert actual_obj, f"""{error_title}
+    assert actual, f"""{error_title}
 ⚠️ "{name}" value is empty!
 {exp} "{name}": "...some value..."
 {act} "{name}": "" <— Empty/None
@@ -117,19 +117,19 @@ def assert_is_value(actual_obj: Any, name: str):
 #------------------------------------------------------- Length --------------------------------------------------------
 # Length = ...
 @allure.step('Check <{name}> length = {expected_length}')
-def assert_length(obj: Sized, expected_length: int, name: str):
+def assert_length(actual_obj: Sized, expected_length: int, name: str):
     """
     Проверяет длину объекта (Manual length)
 
-    :param obj: Object (например: response_model.user.id)
+    :param actual_obj: Actual object (ex.: response_model.user.id)
     :param expected_length: Ожидаемая длина (manual)
     :param name: Object name (для вывода в ошибке)
     :raise AssertionError
     """
-    assert len(obj) == expected_length, f"""{error_title}
+    assert len(actual_obj) == expected_length, f"""{error_title}
 ⚠️ Incorrect "{name}" value length!
 {exp} {expected_length}
-{act} {len(obj)}
+{act} {len(actual_obj)}
 """
 
 # Length_1 = Length_2

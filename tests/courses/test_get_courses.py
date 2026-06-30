@@ -28,7 +28,7 @@ from tools.tool import Tool
 @allure.severity(allure.severity_level.NORMAL)                # ] Allure Severity
 #-----------------------------------------------------------------------------------------------------------------------
 class TestGetCourses:
-    @allure.title('Get Courses (v.1 - Через фикстуру полного цикла)')                        # Allure Title
+    @allure.title('Get Courses (v.1 - Через фикстуру полного цикла)')                        # Allure step Title
     def test_get_courses_1(self,create_course_pydantic: CreateCourseSchema, get_courses_api: httpx.Response):
 
         # Assertions
@@ -39,7 +39,7 @@ class TestGetCourses:
 
 
 
-    @allure.title('Get Courses (v.1 - Через фикстуры: courses_client, create_user, create_course_pydantic)')  # Allure Title
+    @allure.title('Get Courses (v.1 - Через фикстуры: courses_client, create_user, create_course_pydantic)')  # Allure step Title
     def test_get_courses_2(
             self,
             courses_client: CoursesClient,
@@ -50,8 +50,8 @@ class TestGetCourses:
         response = courses_client.get_courses_api(user_id_qwery_model)                # ▶ Запрос через API-метод
 
         # Assertions
-        assert_status_code(response, http.HTTPStatus.OK)        # Status Code: 200
-        assert_request_method(response, http.HTTPMethod.GET)          # Method: GET
+        assert_status_code(response.status_code, http.HTTPStatus.OK)        # Status Code: 200
+        assert_request_method(response.request.method, http.HTTPMethod.GET)          # Method: GET
         assert_get_courses_responses(response, [create_course_pydantic.response]) # Список курсов соответствует созданным курсам
         validate_json_schema(response, GetCoursesResponseSchema)      # JSON Schema validation
 

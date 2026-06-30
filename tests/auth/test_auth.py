@@ -29,7 +29,7 @@ from tools.tool import Tool
 @allure.severity(allure.severity_level.BLOCKER)           # ] Allure Severity
 #-----------------------------------------------------------------------------------------------------------------------
 class TestAuth:
-    @allure.title('Auth (v.1 - Через API-фикстуру полного цикла)')               # Allure Title
+    @allure.title('Auth (v.1 - Через API-фикстуру полного цикла)')               # Allure step Title
     def test_auth_1(self, auth_api: httpx.Response):
         response = auth_api                                                      # Сохраняем ответ API-фикстуры (httpx.Response)
         response_model = AuthResponseSchema.model_validate_json(response.text)   # httpx.Response —> Pydantic-model (parsing-deserialize)
@@ -39,11 +39,11 @@ class TestAuth:
         assert_request_method(response.request.method, HTTPMethod.POST)   # Method: POST
         assert_auth_response_non_empty(response_model)                                   # Response data is NON-empty
         assert_token(response_model)                                                     # Token validation
-        validate_json_schema(response, AuthResponseSchema)               # Validation JSON schema
+        validate_json_schema(response, AuthResponseSchema)               # JSON schema validation 
 
 
 
-    @allure.title('Auth (v.2 - Через фикстуры: create_user_pydantic + auth_client)')     # Allure Title
+    @allure.title('Auth (v.2 - Через фикстуры: create_user_pydantic + auth_client)')     # Allure step Title
     def test_auth_2(self, create_user_pydantic: CreateUserSchema, auth_client: AuthClient):
         auth_data = AuthDataSchema(                             # Pydantic-model with fake-data (Email и Password),...
             email=create_user_pydantic.email,                   # Замена default на —> реальное значение из фикстуры
@@ -57,7 +57,7 @@ class TestAuth:
         assert_request_method(response.request.method, HTTPMethod.POST)   # Method: POST
         assert_auth_response_non_empty(response_model)                                   # Response data is NON-empty
         assert_token(response_model)                                                     # Token validation
-        validate_json_schema(response, AuthResponseSchema)               # Validation JSON schema
+        validate_json_schema(response, AuthResponseSchema)               # JSON schema validation 
 
 
 #=======================================================================================================================

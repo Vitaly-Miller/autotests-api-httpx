@@ -26,7 +26,7 @@ def assert_auth_response_non_empty(response_model: AuthResponseSchema):
 
 #-----------------------------------------------------------------------------------------------------------------------
 # Token validation
-@allure.step('Check Tokens')
+@allure.step('Tokens validation')
 def assert_token(response_model: AuthResponseSchema):
     """
     Token validation
@@ -39,7 +39,7 @@ def assert_token(response_model: AuthResponseSchema):
     :param response_model: Pydantic-model (AuthResponseSchema)
     :raise AssertionError
     """
-    # Token type = 'bearer'
+    # Access Token type = 'bearer'
     assert_equal(
         response_model.token.token_type,
         'bearer',

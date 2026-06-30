@@ -30,33 +30,34 @@ from tools.tool import Tool
 @allure.severity(allure.severity_level.NORMAL)       # ] Allure Severity
 #-----------------------------------------------------------------------------------------------------------------------
 class TestGetUserMe:
-    @allure.title('Get User Me (v.1 - Через фикстуру полного цикла)')           # Allure Title
+    @allure.title('Get User Me (v.1 - Через фикстуру полного цикла)')                 # Allure step Title
     def test_get_user_me_1(self, get_user_me_api: httpx.Response):
-        response = get_user_me_api      # Сохраняем ответ фикстуры, но не обязательно...,
-                                        # Исполняемую API-фикстуру можно сразу передавать в Assertions в качестве параметра
+        response = get_user_me_api                                                    # Сохраняем ответ API-фикстуры (httpx.Response)
+        response_model = CreateUserResponseSchema.model_validate_json(response.text)  # httpx.Response —> Pydantic-model (parsing-deserialize)
+
         # Assertions
-        assert_status_code(response, HTTPStatus.OK)       # Status code: 200
-        assert_request_method(response, HTTPMethod.GET)         # Method: GET
-        assert_create_user_response_non_empty(response)                         # Response data is NON-empty
-        assert_user_id(response)                                                # User ID validation
-        validate_json_schema(response, GetUserMeResponseSchema) # Validation JSON schema
+        assert_status_code(response.status_code, HTTPStatus.OK)        # Status code: 200
+        assert_request_method(response.request.method, HTTPMethod.GET) # Method: GET
+        assert_create_user_response_non_empty(response_model)                         # Response data is NON-empty
+        assert_user_id(response_model)                                                # User ID validation
+        validate_json_schema(response, GetUserMeResponseSchema)       # JSON schema validation
 
 
 
-    @allure.title('Get User Me (v.2 - Через фикстуру получения экземпляра PrivateUsersClient)')  # Allure Title
+    @allure.title('Get User Me (v.2 - Через фикстуру получения экземпляра PrivateUsersClient)')  # Allure step Title
     def test_get_user_me_2(self, private_users_client: PrivateUsersClient):
-        response = private_users_client.get_user_me_api()                       # ▶ Запрос через API-метод
+        response = private_users_client.get_user_me_api()                             # ▶ Запрос через API-метод
+        response_model = CreateUserResponseSchema.model_validate_json(response.text)  # httpx.Response —> Pydantic-model (parsing-deserialize)
 
         # Assertions
-        assert_status_code(response, HTTPStatus.OK)       # Status code: 200
-        assert_request_method(response, HTTPMethod.GET)         # Method: GET
-        assert_create_user_response_non_empty(response)                         # Response data is NON-empty
-        assert_user_id(response)                                                # User ID validation
-        validate_json_schema(response, GetUserMeResponseSchema) # Validation JSON schema
+        assert_status_code(response.status_code, HTTPStatus.OK)        # Status code: 200
+        assert_request_method(response.request.method, HTTPMethod.GET) # Method: GET
+        assert_create_user_response_non_empty(response_model)                         # Response data is NON-empty
+        assert_user_id(response_model)                                                # User ID validation
+        validate_json_schema(response, GetUserMeResponseSchema)       # JSON schema validation
 
-
-
-    @allure.title('Get User Me (v.3 - All manual)')       # Allure Title
+#------------------------------------------------ All manual (example) -------------------------------------------------
+    @allure.title('Get User Me (v.3 - All manual)')       # Allure step Title
     def test_get_user_me_3_manual(self):
         #----------------------- Pre-conditions --------------------
         # Create User
@@ -88,7 +89,7 @@ class TestGetUserMe:
         assert response_model.user.first_name == create_user_data.first_name, '❌Разные First Name!'     # проверка отправленного и полученного First Name
         assert response_model.user.middle_name == create_user_data.middle_name, '❌Разные Middle Name!'  # проверка отправленного и полученного Middle Name
 
-        # Validation JSON Schema
+        # JSON schema validation
         jsonschema.validate(
             instance=response.json(),                             # Данные для валидации
             schema=CreateUserResponseSchema.model_json_schema(),  # JSON-схема, сгенерированная из Pidantic-схемы

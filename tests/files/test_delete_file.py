@@ -27,7 +27,7 @@ from tools.tool import Tool
 @allure.severity(allure.severity_level.NORMAL)             # ] Allure Severity
 #-----------------------------------------------------------------------------------------------------------------------
 class TestDeleteFile:
-    @allure.title('Delete File')                                                          # Allure Title
+    @allure.title('Delete File')                                                          # Allure step Title
     def test_delete_file(self, files_client: FilesClient, create_file_pydantic: CreateFileSchema):
         delete_file_response = files_client.delete_file_api(create_file_pydantic.file_id)          # ▶ Запрос на удаление File через API-метод
         get_non_existent_file_response = files_client.get_file_api(create_file_pydantic.file_id)   # ▶ Запрос на получение NON-existent File через API-метод
@@ -40,7 +40,7 @@ class TestDeleteFile:
         assert_status_code(get_non_existent_file_response, http.HTTPStatus.NOT_FOUND)   # Status code: 404
         assert_request_method(get_non_existent_file_response, http.HTTPMethod.GET)            # Method: GET
         assert_file_not_found_error_response(get_non_existent_file_response)                                  # Error message: "File not found"
-        validate_json_schema(get_non_existent_file_response, NotFoundErrorResponseSchema)     # Validation JSON schema
+        validate_json_schema(get_non_existent_file_response, NotFoundErrorResponseSchema)     # JSON schema validation 
 
 
 #=======================================================================================================================

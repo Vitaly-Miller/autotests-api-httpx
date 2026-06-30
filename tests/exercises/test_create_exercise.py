@@ -32,13 +32,13 @@ from tools.tool import Tool
 @allure.severity(allure.severity_level.NORMAL)                # ] Allure Severity
 #-----------------------------------------------------------------------------------------------------------------------
 class TestCreateExercise:
-    @allure.title('Create Exercise (v.1 - Через API-фикстуру полного цикла)')  # Allure Title
+    @allure.title('Create Exercise (v.1 - Через API-фикстуру полного цикла)')  # Allure step Title
     def test_create_exercise_pydantic_1(self, create_exercise_api: httpx.Response):     # Через API-фикстуру полного цикла        ─┐
         response = create_exercise_api                                         # Сохраняем ответ API-фикстуры            ─┘
 
         # Assertions
-        assert_status_code(response, http.HTTPStatus.OK)        # Status Code: 200
-        assert_request_method(response, http.HTTPMethod.POST)         # Method: POST
+        assert_status_code(response.status_code, http.HTTPStatus.OK)        # Status Code: 200
+        assert_request_method(response.request.method, http.HTTPMethod.POST)         # Method: POST
         assert_create_exercise_pydantic_response_non_empty(response)                           # Response data is NON-empty
         assert_create_exercise_pydantic_response(response)                                     # Response data = Request data
         assert_exercise_id(response)                                                  # Exercise ID validation
@@ -46,7 +46,7 @@ class TestCreateExercise:
 
 
 
-    @allure.title('Create Exercise (v.2 - Через фикстуры: exercises_client, create_course_pydantic)')  # Allure Title
+    @allure.title('Create Exercise (v.2 - Через фикстуры: exercises_client, create_course_pydantic)')  # Allure step Title
     def test_create_exercise_pydantic_2(                                       #                                                  ─┐
             self,                                                     #                                                   │
             exercises_client: ExercisesClient,                        # Фикстура получения экземпляра ExercisesClient()   │
@@ -58,8 +58,8 @@ class TestCreateExercise:
         response = exercises_client.create_exercise_api(create_exercise_pydantic_data)         # ▶ Запрос через API-метод         ─┘
 
         # Assertions
-        assert_status_code(response, http.HTTPStatus.OK)        # Status Code: 200
-        assert_request_method(response, http.HTTPMethod.POST)         # Method: POST
+        assert_status_code(response.status_code, http.HTTPStatus.OK)        # Status Code: 200
+        assert_request_method(response.request.method, http.HTTPMethod.POST)         # Method: POST
         assert_create_exercise_pydantic_response_non_empty(response)                           # Response data is NON-empty
         assert_create_exercise_pydantic_response(response)                                     # Response data = Request data
         assert_exercise_id(response)                                                  # Exercise ID validation

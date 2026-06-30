@@ -37,12 +37,12 @@ class TestCreateFile:
         response = files_client.create_file_api(file_data)                         # ▶ Запрос через API-метод
 
         # Assertions
-        assert_status_code(response, http.HTTPStatus.OK)     # Status code: 200
-        assert_request_method(response, http.HTTPMethod.POST)      # Method: POST
+        assert_status_code(response.status_code, http.HTTPStatus.OK)     # Status code: 200
+        assert_request_method(response.request.method, http.HTTPMethod.POST)      # Method: POST
         assert_create_file_response_non_empty(response)                            # Response data is NON-empty
         assert_file_id(response)                                                   # File ID validation
         assert_create_file_response(response,file_data)      # Response data = Request data  (multipart/form-data)
-        validate_json_schema(response, CreateFileResponseSchema)   # Validation JSON schema
+        validate_json_schema(response, CreateFileResponseSchema)   # JSON schema validation 
 
 
 
@@ -61,7 +61,7 @@ class TestCreateFile:
 @allure.severity(allure.severity_level.NORMAL)                            # ] Allure Severity
 #-----------------------------------------------------------------------------------------------------------------------
 class TestCreateFileNegative:
-    @allure.title('Create File with EMPTY FILE NAME')                     # Allure Title
+    @allure.title('Create File with EMPTY FILE NAME')                     # Allure step Title
     def test_negative_create_file_empty_filename(self, files_client: FilesClient):
         create_file_data = CreateFileRequestSchema(                       # Pydantic-model with fake-data
            filename=''                                                    # 👈fake-data —> "" (empty)
@@ -69,10 +69,10 @@ class TestCreateFileNegative:
         response = files_client.create_file_api(create_file_data)         # ▶ Запрос через API-метод
 
         # Assertions
-        assert_status_code(response, http.HTTPStatus.UNPROCESSABLE_ENTITY) # Status code: 422
-        assert_request_method(response, http.HTTPMethod.POST)                    # Method: POST
+        assert_status_code(response.status_code, http.HTTPStatus.UNPROCESSABLE_ENTITY) # Status code: 422
+        assert_request_method(response.request.method, http.HTTPMethod.POST)                    # Method: POST
         assert_create_file_empty_filename_error_response(response)                               # Validation Error Response data
-        validate_json_schema(response, ErrorResponseSchema)                      # Validation JSON schema
+        validate_json_schema(response, ErrorResponseSchema)                      # JSON schema validation 
 
 
 
@@ -84,10 +84,10 @@ class TestCreateFileNegative:
         response = files_client.create_file_api(create_file_data)         # ▶ Запрос через API-метод
 
         # Assertions
-        assert_status_code(response, http.HTTPStatus.UNPROCESSABLE_ENTITY) # Status code: 422
-        assert_request_method(response, http.HTTPMethod.POST)                    # Method: POST
+        assert_status_code(response.status_code, http.HTTPStatus.UNPROCESSABLE_ENTITY) # Status code: 422
+        assert_request_method(response.request.method, http.HTTPMethod.POST)                    # Method: POST
         assert_create_file_empty_directory_error_response(response)                              # Validation Error Response data
-        validate_json_schema(response, ErrorResponseSchema)                      # Validation JSON schema
+        validate_json_schema(response, ErrorResponseSchema)                      # JSON schema validation 
 
 
 #=======================================================================================================================

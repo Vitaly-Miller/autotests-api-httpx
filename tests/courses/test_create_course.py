@@ -29,19 +29,19 @@ from tools.tool import Tool
 @allure.severity(allure.severity_level.NORMAL)   # ] Allure Severity
 #-----------------------------------------------------------------------------------------------------------------------
 class TestCreateCourse:
-    @allure.title('Create Course (v.1 - Через API-фикстуру полного цикла)')         # Allure Title
+    @allure.title('Create Course (v.1 - Через API-фикстуру полного цикла)')         # Allure step Title
     def test_create_course_pydantic_1(self, create_course_api: httpx.Response):              # Через API-фикстуру полного цикла
         response = create_course_api                                                # Сохраняем ответ API-фикстуры
 
         # Assertions
-        assert_status_code(response, http.HTTPStatus.OK)      # Status Code: 200
-        assert_request_method(response, http.HTTPMethod.POST)       # Method: POST
+        assert_status_code(response.status_code, http.HTTPStatus.OK)      # Status Code: 200
+        assert_request_method(response.request.method, http.HTTPMethod.POST)       # Method: POST
         assert_create_course_pydantic_response(response)                                     # Response data = Request data
         validate_json_schema(response, CreateCourseResponseSchema)  # JSON Schema validation
 
 
 
-    @allure.title('Create Course (v.2 - Через фикстуры: CoursesClient + CreateUser + CreateFile)')   # Allure Title
+    @allure.title('Create Course (v.2 - Через фикстуры: CoursesClient + CreateUser + CreateFile)')   # Allure step Title
     def test_create_course_pydantic_2(
             self,
             courses_client: CoursesClient,                           # Фикстура получения экземпляра CoursesClient()
@@ -55,8 +55,8 @@ class TestCreateCourse:
         response = courses_client.create_course_api(create_course_pydantic_data_model)       # ▶ Запрос через API-метод
 
         # Assertions
-        assert_status_code(response, http.HTTPStatus.OK)      # Status Code: 200
-        assert_request_method(response, http.HTTPMethod.POST)       # Method: POST
+        assert_status_code(response.status_code, http.HTTPStatus.OK)      # Status Code: 200
+        assert_request_method(response.request.method, http.HTTPMethod.POST)       # Method: POST
         assert_create_course_pydantic_response(response)                                     # Response data = Request data
         validate_json_schema(response, CreateCourseResponseSchema)  # JSON Schema validation
 

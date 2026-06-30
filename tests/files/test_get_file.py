@@ -37,10 +37,10 @@ class TestGetFile:
         response = files_client.get_file_api(create_file_pydantic.file_id)              # ▶ Запрос через API-метод
 
         # Assertions
-        assert_status_code(response, http.HTTPStatus.OK)          # Status code: 200
-        assert_request_method(response, http.HTTPMethod.GET)            # Method: GET
+        assert_status_code(response.status_code, http.HTTPStatus.OK)          # Status code: 200
+        assert_request_method(response.request.method, http.HTTPMethod.GET)            # Method: GET
         assert_file_id(response, create_file_pydantic.file_id)           # File ID validation
-        validate_json_schema(response, CreateFileResponseSchema)        # Validation JSON schema
+        validate_json_schema(response, CreateFileResponseSchema)        # JSON schema validation 
 
 
 
@@ -59,27 +59,27 @@ class TestGetFile:
 @allure.severity(allure.severity_level.NORMAL)                      # ] Allure Severity
 #-----------------------------------------------------------------------------------------------------------------------
 class TestGetFileNegative:
-    @allure.title('Get File by INVALID File ID (non-UUID format)')    # Allure Title
+    @allure.title('Get File by INVALID File ID (non-UUID format)')    # Allure step Title
     def test_get_file_by_invalid_file_id(self, files_client: FilesClient):
         invalid_file_id = 'invalid_File_ID'                           # Invalid File ID (NON-UUID format)
         response = files_client.get_file_api(invalid_file_id)         # ▶ Запрос через API-метод с invalid File ID
 
         # Assertions
-        assert_status_code(response, http.HTTPStatus.UNPROCESSABLE_ENTITY) # Status code: 422
-        assert_request_method(response, http.HTTPMethod.GET)                     # Method: GET
+        assert_status_code(response.status_code, http.HTTPStatus.UNPROCESSABLE_ENTITY) # Status code: 422
+        assert_request_method(response.request.method, http.HTTPMethod.GET)                     # Method: GET
         assert_get_file_invalid_id_error_response(response)                                      # Validation Error Response data
-        validate_json_schema(response, ErrorResponseSchema)                      # Validation JSON schema
+        validate_json_schema(response, ErrorResponseSchema)                      # JSON schema validation 
 
 
 
-    @allure.title('Get File by NON-EXISTENT File ID')                 # Allure Title
+    @allure.title('Get File by NON-EXISTENT File ID')                 # Allure step Title
     def test_get_non_existent_file(self, files_client: FilesClient):
         non_existent_file_id = fake.uuid4()                           # Non-existent File ID (UUID format)
         response = files_client.get_file_api(non_existent_file_id)    # ▶ Запрос через API-метод с Non-existent File ID
 
         # Assertions
-        assert_status_code(response, http.HTTPStatus.NOT_FOUND)  # Status code: 404
-        assert_request_method(response, http.HTTPMethod.GET)           # Method: GET
+        assert_status_code(response.status_code, http.HTTPStatus.NOT_FOUND)  # Status code: 404
+        assert_request_method(response.request.method, http.HTTPMethod.GET)           # Method: GET
         assert_file_not_found_error_response(response)                                 # Validation Error Response data
 
 

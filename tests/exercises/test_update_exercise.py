@@ -27,19 +27,19 @@ from tools.tool import Tool
 @allure.severity(allure.severity_level.NORMAL)                # ] Allure Severity
 #-----------------------------------------------------------------------------------------------------------------------
 class TestUpdateExercise:
-    @allure.title('Update Exercise (v.1 - Через API-фикстуру полного цикла)') # Allure Title
+    @allure.title('Update Exercise (v.1 - Через API-фикстуру полного цикла)') # Allure step Title
     def test_update_exercise_1(self, update_exercise_api: httpx.Response):    # Через API-фикстуру полного цикла
         response = update_exercise_api                                        # Сохраняем ответ API-фикстуры
 
         # Assertions
-        assert_status_code(response, http.HTTPStatus.OK)        # Status code: 200
-        assert_request_method(response, http.HTTPMethod.PATCH)        # Method: PATCH
+        assert_status_code(response.status_code, http.HTTPStatus.OK)        # Status code: 200
+        assert_request_method(response.request.method, http.HTTPMethod.PATCH)        # Method: PATCH
         assert_update_exercise_response(response)                                     # Response data = Request data
         validate_json_schema(response, UpdateExerciseResponseSchema)  # Validate JSON schema
 
 
 
-    @allure.title('Update Exercise (v.2 - Через фикстуры: exercises_client, create_exercise_pydantic)')  # Allure Title
+    @allure.title('Update Exercise (v.2 - Через фикстуры: exercises_client, create_exercise_pydantic)')  # Allure step Title
     def test_update_exercise_2(self, exercises_client: ExercisesClient, create_exercise_pydantic: CreateExerciseSchema):
         new_exercise_data = UpdateExerciseRequestSchema()       # Pydantic-model with fake-data (Update ALL data)
         response = exercises_client.update_exercise_api(        # ▶ Запрос через API-метод
@@ -48,8 +48,8 @@ class TestUpdateExercise:
         )
 
         # Assertions
-        assert_status_code(response, http.HTTPStatus.OK)        # Status code: 200
-        assert_request_method(response, http.HTTPMethod.PATCH)        # Method: PATCH
+        assert_status_code(response.status_code, http.HTTPStatus.OK)        # Status code: 200
+        assert_request_method(response.request.method, http.HTTPMethod.PATCH)        # Method: PATCH
         assert_update_exercise_response(response)                                     # Response data = Request data
         validate_json_schema(response, UpdateExerciseResponseSchema)  # Validate JSON schema
 

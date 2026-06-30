@@ -26,7 +26,7 @@ from tools.tool import Tool
 @allure.severity(allure.severity_level.NORMAL)                # ] Allure Severity
 #-----------------------------------------------------------------------------------------------------------------------
 class TestUpdateCourse:
-    @allure.title('Update Course')                            # Allure Title
+    @allure.title('Update Course')                            # Allure step Title
     def test_update_course_pydantic(self, courses_client: CoursesClient, create_course_pydantic: CreateCourseSchema):
         new_course_data = UpdateCourseRequestSchema()         # Pydantic-model with fake-data (Update ALL)
         response = courses_client.update_course_api(          # ▶ Запрос через API-метод
@@ -35,10 +35,10 @@ class TestUpdateCourse:
         )
 
         # Assertions
-        assert_status_code(response, http.HTTPStatus.OK)       # Status code: 200
-        assert_request_method(response, http.HTTPMethod.PATCH)       # Method: PATCH
+        assert_status_code(response.status_code, http.HTTPStatus.OK)       # Status code: 200
+        assert_request_method(response.request.method, http.HTTPMethod.PATCH)       # Method: PATCH
         assert_update_course_response(response)                                      # Response data = Request data
-        validate_json_schema(response, UpdateCourseResponseSchema)   # Validation JSON schema
+        validate_json_schema(response, UpdateCourseResponseSchema)   # JSON schema validation 
 
 
 #=======================================================================================================================

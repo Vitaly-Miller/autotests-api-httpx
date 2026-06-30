@@ -27,19 +27,19 @@ from tools.tool import Tool
 @allure.severity(allure.severity_level.NORMAL)                # ] Allure Severity
 #-----------------------------------------------------------------------------------------------------------------------
 class TestGetExercise:
-    @allure.title('Get Exercise (v.1 - Через API-фикстуру полного цикла)')  # Allure Title
+    @allure.title('Get Exercise (v.1 - Через API-фикстуру полного цикла)')  # Allure step Title
     def test_get_exercise_1(self, get_exercise_api: httpx.Response):        # Через API-фикстуру полного цикла
         response = get_exercise_api                                         # Сохраняем ответ API-фикстуры
 
         # Assertions
-        assert_status_code(response, http.HTTPStatus.OK)      # Status Code: 200
-        assert_request_method(response, http.HTTPMethod.GET)        # Method: GET
+        assert_status_code(response.status_code, http.HTTPStatus.OK)      # Status Code: 200
+        assert_request_method(response.request.method, http.HTTPMethod.GET)        # Method: GET
         assert_get_exercise_response_non_empty(response)
         assert_exercise_id(response)
         validate_json_schema(response, GetExerciseResponseSchema)   # JSON Schema validation
 
 
-    @allure.title('Get Exercise (v.2 - Через фикстуры: exercises_client, create_exercise_pydantic)')   # Allure Title
+    @allure.title('Get Exercise (v.2 - Через фикстуры: exercises_client, create_exercise_pydantic)')   # Allure step Title
     def test_get_exercise_2(
             self,
             exercises_client: ExercisesClient,               # Фикстура получения экземпляра ExercisesClient()
@@ -48,8 +48,8 @@ class TestGetExercise:
         response = exercises_client.get_exercise_api(create_exercise_pydantic.exercise_id)   # ▶ Запрос через API-метод
 
         # Assertions
-        assert_status_code(response, http.HTTPStatus.OK)      # Status Code: 200
-        assert_request_method(response, http.HTTPMethod.GET)        # Method: GET
+        assert_status_code(response.status_code, http.HTTPStatus.OK)      # Status Code: 200
+        assert_request_method(response.request.method, http.HTTPMethod.GET)        # Method: GET
         assert_get_exercise_response_non_empty(response)
         assert_exercise_id(response)
         validate_json_schema(response, GetExerciseResponseSchema)   # JSON Schema validation

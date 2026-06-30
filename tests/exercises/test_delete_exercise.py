@@ -27,7 +27,7 @@ from tools.tool import Tool
 @allure.severity(allure.severity_level.NORMAL)                # ] Allure Severity
 #-----------------------------------------------------------------------------------------------------------------------
 class TestDeleteExercise:
-    @allure.title('Delete Exercise')                          # Allure Title
+    @allure.title('Delete Exercise')                          # Allure step Title
     def test_delete_exercise(self, exercises_client: ExercisesClient, create_exercise_pydantic: CreateExerciseSchema):
         delete_response = exercises_client.delete_exercise_api(create_exercise_pydantic.exercise_id) # ▶ Запрос через API-метод
         get_response = exercises_client.get_exercise_api(create_exercise_pydantic.exercise_id)       # ▶ Запрос через API-метод
@@ -40,7 +40,7 @@ class TestDeleteExercise:
         assert_status_code(get_response, http.HTTPStatus.NOT_FOUND)   # Status code: 404
         assert_request_method(get_response, 'GET')                          # Method: GET
         assert_exercise_not_found_error_response(get_response)                              # Error message: "Exercise not found"
-        validate_json_schema(get_response, NotFoundErrorResponseSchema)     # Validation JSON schema
+        validate_json_schema(get_response, NotFoundErrorResponseSchema)     # JSON schema validation 
 
 
 #=======================================================================================================================
