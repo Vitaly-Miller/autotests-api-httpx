@@ -19,8 +19,6 @@ def assert_auth_response_non_empty(response_model: AuthResponseSchema):
     :param response_model: Pydantic-model (AuthResponseSchem)
     :raise AssertionError
     """
-
-
     assert_is_value(response_model.token.token_type, 'token_type')
     assert_is_value(response_model.token.access_token, 'access_token')
     assert_is_value(response_model.token.refresh_token, 'refresh_token')
