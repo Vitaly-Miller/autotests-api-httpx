@@ -2,7 +2,6 @@
 Base assertions
 """
 import allure
-import httpx
 from typing import Any, Sized             # Sized - объект, у которого есть длина (len)
 
 #=======================================================================================================================
@@ -117,19 +116,19 @@ def assert_is_value(actual: Any, name: str):
 #------------------------------------------------------- Length --------------------------------------------------------
 # Length = ...
 @allure.step('Check <{name}> length = {expected_length}')
-def assert_length(actual_obj: Sized, expected_length: int, name: str):
+def assert_length(actual: Sized, expected_length: int, name: str):
     """
     Проверяет длину объекта (Manual length)
 
-    :param actual_obj: Actual object (ex.: response_model.user.id)
+    :param actual: Actual object (ex.: response_model.user.id)
     :param expected_length: Ожидаемая длина (manual)
     :param name: Object name (для вывода в ошибке)
     :raise AssertionError
     """
-    assert len(actual_obj) == expected_length, f"""{error_title}
+    assert len(actual) == expected_length, f"""{error_title}
 ⚠️ Incorrect "{name}" value length!
 {exp} {expected_length}
-{act} {len(actual_obj)}
+{act} {len(actual)}
 """
 
 # Length_1 = Length_2

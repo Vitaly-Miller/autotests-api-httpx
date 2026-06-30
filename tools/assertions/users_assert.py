@@ -53,7 +53,7 @@ def assert_user_id(response_model: CreateUserResponseSchema):
     :param response_model: Pydantic-model (CreateUserResponseSchema)
     :raise AssertionError
     """
-    assert_is_value(response_model.user.id, 'id')                       # NON-Empty
+    assert_is_value(response_model.user.id, 'id')                          # NON-Empty
     assert_length(response_model.user.id, 36, 'id')       # Length = 36 chars
 
 #-----------------------------------------------------------------------------------------------------------------------
