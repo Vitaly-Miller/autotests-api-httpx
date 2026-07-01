@@ -32,33 +32,38 @@ class TestCreateCourse:
     @allure.title('Create Course (v.1 - Через API-фикстуру полного цикла)')         # Allure step Title
     def test_create_course_1(self, create_course_api: httpx.Response):              # Через API-фикстуру полного цикла
         response = create_course_api                                                # Сохраняем ответ API-фикстуры
+        response_model = CreateCourseResponseSchema.model_validate_json(response.text)           # httpx.Response —> Pydantic-model (deserialize)
+        request_model = CreateCourseRequestSchema.model_validate_json(response.request.content)  # Request —> Pydantic-model
 
         # Assertions
-        assert_status_code(response.status_code, http.HTTPStatus.OK)      # Status Code: 200
-        assert_request_method(response.request.method, http.HTTPMethod.POST)       # Method: POST
-        assert_create_course_response(response)                                     # Response data = Request data
-        validate_json_schema(response, CreateCourseResponseSchema)  # JSON Schema validation
+        assert_status_code(response.status_code, http.HTTPStatus.OK)             # Status Code: 200
+        assert_request_method(response.request.method, http.HTTPMethod.POST)     # Method: POST
+        assert_create_course_response(response_model, request_model)                                     # Response data = Request data
+        validate_json_schema(response, CreateCourseResponseSchema)              # JSON Schema validation
 
 
 
-    @allure.title('Create Course (v.2 - Через фикстуры: CoursesClient + CreateUser + CreateFile)')   # Allure step Title
+    @allure.title('Create Course (v.2 - Через Pydantic-фикстуры)')   # Allure step Title
     def test_create_course_2(
             self,
             courses_client: CoursesClient,                           # Фикстура получения экземпляра CoursesClient()
-            create_user: CreateUserSchema,                  # Pydantic-фикстура создания пользователя
-            create_file: CreateFileSchema                   # Pydantic-фикстура создания файла
+            create_user: CreateUserSchema,                           # Pydantic-фикстура создания пользователя
+            create_file: CreateFileSchema                            # Pydantic-фикстура создания файла
             ):
-        create_course_data_model = CreateCourseRequestSchema(        # Инициализация Course Data Model c Fake data
-            previewFileId=create_file.file_id,              # Fake data —> Реальные данные из фикстуры
-            createdByUserId=create_user.user_id             # Fake data —> Реальные данные из фикстуры
+
+        create_course_data_model = CreateCourseRequestSchema(        # Инициализация Pydantic-model c Fake data
+            previewFileId=create_file.file_id,                       # Fake data —> Реальные данные из фикстуры
+            createdByUserId=create_user.user_id                      # Fake data —> Реальные данные из фикстуры
         )
-        response = courses_client.create_course_api(create_course_data_model)       # ▶ Запрос через API-метод
+
+        response = courses_client.create_course_api(create_course_data_model)           # ▶ Запрос через API-метод
+        response_model = CreateCourseResponseSchema.model_validate_json(response.text)  # httpx.Response —> Pydantic-model (deserialize)
 
         # Assertions
-        assert_status_code(response.status_code, http.HTTPStatus.OK)      # Status Code: 200
-        assert_request_method(response.request.method, http.HTTPMethod.POST)       # Method: POST
-        assert_create_course_response(response)                                     # Response data = Request data
-        validate_json_schema(response, CreateCourseResponseSchema)  # JSON Schema validation
+        assert_status_code(response.status_code, http.HTTPStatus.OK)           # Status Code: 200
+        assert_request_method(response.request.method, http.HTTPMethod.POST)   # Method: POST
+        assert_create_course_response(response_model, create_course_data_model) # Response data = Request data
+        validate_json_schema(response, CreateCourseResponseSchema)            # JSON Schema validation
 
 
 #=======================================================================================================================

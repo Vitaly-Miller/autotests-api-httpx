@@ -32,32 +32,32 @@ class TestAuth:
     @allure.title('Auth (v.1 - Через API-фикстуру полного цикла)')               # Allure step Title
     def test_auth_1(self, auth_api: httpx.Response):
         response = auth_api                                                      # Сохраняем ответ API-фикстуры (httpx.Response)
-        response_model = AuthResponseSchema.model_validate_json(response.text)   # httpx.Response —> Pydantic-model (parsing-deserialize)
+        response_model = AuthResponseSchema.model_validate_json(response.text)   # httpx.Response —> Pydantic-model (deserialize)
 
         # Assertions
         assert_status_code(response.status_code, HTTPStatus.OK)           # Status code: 200
         assert_request_method(response.request.method, HTTPMethod.POST)   # Method: POST
         assert_auth_response_non_empty(response_model)                                   # Response data is NON-empty
         assert_token(response_model)                                                     # Token validation
-        validate_json_schema(response, AuthResponseSchema)               # JSON schema validation 
+        validate_json_schema(response, AuthResponseSchema)               # JSON schema validation
 
 
 
-    @allure.title('Auth (v.2 - Через фикстуры: create_user + auth_client)')     # Allure step Title
+    @allure.title('Auth (v.2 - Через фикстуры: create_user + auth_client)')              # Allure step Title
     def test_auth_2(self, create_user: CreateUserSchema, auth_client: AuthClient):
-        auth_data = AuthDataSchema(                             # Pydantic-model with fake-data (Email и Password),...
-            email=create_user.email,                   # Замена default на —> реальное значение из фикстуры
-            password=create_user.password              # Замена default на —> реальное значение из фикстуры
+        auth_data = AuthDataSchema(                            # Pydantic-model with fake-data (Email и Password),...
+            email=create_user.email,                           # ... замена default на —> реальное значение из фикстуры
+            password=create_user.password                      # ... замена default на —> реальное значение из фикстуры
         )
         response = auth_client.login_api(auth_data)                              # ▶ Запрос через API-метод
-        response_model = AuthResponseSchema.model_validate_json(response.text)   # httpx.Response —> Pydantic-model (parsing-deserialize)
+        response_model = AuthResponseSchema.model_validate_json(response.text)   # httpx.Response —> Pydantic-model (deserialize)
 
         # Assertions
         assert_status_code(response.status_code, HTTPStatus.OK)           # Status code: 200
         assert_request_method(response.request.method, HTTPMethod.POST)   # Method: POST
         assert_auth_response_non_empty(response_model)                                   # Response data is NON-empty
         assert_token(response_model)                                                     # Token validation
-        validate_json_schema(response, AuthResponseSchema)               # JSON schema validation 
+        validate_json_schema(response, AuthResponseSchema)               # JSON schema validation
 
 
 #=======================================================================================================================

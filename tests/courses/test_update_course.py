@@ -30,15 +30,16 @@ class TestUpdateCourse:
     def test_update_course_pydantic(self, courses_client: CoursesClient, create_course: CreateCourseSchema):
         new_course_data = UpdateCourseRequestSchema()         # Pydantic-model with fake-data (Update ALL)
         response = courses_client.update_course_api(          # ▶ Запрос через API-метод
-            create_course.response.course.id,
-            new_course_data
+            create_course.response.course.id,        # ID обновляемого курса
+            new_course_data                    # Обновляемые данные
         )
+        response_model = UpdateCourseResponseSchema.model_validate_json(response.text)  # httpx.Response —> Pydantic-model (deserialize)
 
         # Assertions
         assert_status_code(response.status_code, http.HTTPStatus.OK)       # Status code: 200
         assert_request_method(response.request.method, http.HTTPMethod.PATCH)       # Method: PATCH
-        assert_update_course_response(response)                                      # Response data = Request data
-        validate_json_schema(response, UpdateCourseResponseSchema)   # JSON schema validation 
+        assert_update_course_response(response_model, new_course_data)                                      # Response data = Request data
+        validate_json_schema(response, UpdateCourseResponseSchema)   # JSON schema validation
 
 
 #=======================================================================================================================

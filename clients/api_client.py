@@ -16,8 +16,8 @@ class APIClient:
         """
         self.client = client
 
-    # 🟩GET ------------------------------------------------------------------------------------------------------------
-    @allure.step('GET-request to {url}')
+    # GET ------------------------------------------------------------------------------------------------------------
+    @allure.step('🟩GET-request to {url}')
     def get(self,
             url: httpx.URL | str,
             params: httpx.QueryParams | None = None) -> httpx.Response:
@@ -31,8 +31,8 @@ class APIClient:
         return self.client.get(url=url, params=params)
 
 
-    # 🟨POST -----------------------------------------------------------------------------------------------------------
-    @allure.step('POST-request to {url}')
+    # POST -----------------------------------------------------------------------------------------------------------
+    @allure.step('🟨POST-request to {url}')
     def post(self,
              url: httpx.URL | str,
              json: Any | None = None,
@@ -50,8 +50,8 @@ class APIClient:
         return self.client.post(url=url, json=json, data=data, files=files)
 
 
-    # 🟪PATCH ----------------------------------------------------------------------------------------------------------
-    @allure.step('PATCH-request to {url}')
+    # PATCH ----------------------------------------------------------------------------------------------------------
+    @allure.step('🟪PATCH-request to {url}')
     def patch(self,
               url: httpx.URL | str,
               json: Any | None = None) -> httpx.Response:
@@ -65,8 +65,8 @@ class APIClient:
         return self.client.patch(url=url, json=json)
 
 
-    # 🟦PUT ------------------------------------------------------------------------------------------------------------
-    @allure.step('PUT-request to {url}')
+    # PUT ------------------------------------------------------------------------------------------------------------
+    @allure.step('🟦PUT-request to {url}')
     def put(self,
             url: httpx.URL | str,
             json: Any | None = None) -> httpx.Response:
@@ -80,8 +80,8 @@ class APIClient:
         return self.client.put(url=url, json=json)
 
 
-    # 🟥DELETE ---------------------------------------------------------------------------------------------------------
-    @allure.step('DELETE-request to {url}')
+    # DELETE ---------------------------------------------------------------------------------------------------------
+    @allure.step('🟥DELETE-request to {url}')
     def delete(self,
                url: httpx.URL | str) -> httpx.Response:
         """
