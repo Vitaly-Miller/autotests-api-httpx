@@ -12,55 +12,55 @@ from tools.assertions.base_assert import (
 #=======================================================================================================================
 # Response data is NON-empty
 @allure.step('Check Response data is NON-empty')
-def assert_auth_response_non_empty(response_model: AuthResponseSchema):
+def assert_auth_response_non_empty(response: AuthResponseSchema):
     """
     Check Response data is NON-empty
 
-    :param response_model: Pydantic-model (AuthResponseSchem)
+    :param response: Pydantic-model (AuthResponseSchem)
     :raise AssertionError
     """
-    assert_is_value(response_model.token.token_type, 'token_type')
-    assert_is_value(response_model.token.access_token, 'access_token')
-    assert_is_value(response_model.token.refresh_token, 'refresh_token')
+    assert_is_value(response.token.token_type, 'token_type')
+    assert_is_value(response.token.access_token, 'access_token')
+    assert_is_value(response.token.refresh_token, 'refresh_token')
 
 
 #-----------------------------------------------------------------------------------------------------------------------
-# Token validation
+# Tokens validation
 @allure.step('Tokens validation')
-def assert_token(response_model: AuthResponseSchema):
+def assert_token(response: AuthResponseSchema):
     """
-    Token validation
+    Tokens validation
 
     - Token type = 'bearer'
     - Access token length = 199 chars
     - Refresh token length = 199 chars
     - Access token ≠ Refresh token
 
-    :param response_model: Pydantic-model (AuthResponseSchema)
+    :param response: Pydantic-model (AuthResponseSchema)
     :raise AssertionError
     """
     # Access Token type = 'bearer'
     assert_equal(
-        response_model.token.token_type,
+        response.token.token_type,
         'bearer',
         'token_type')
 
     # Access token ≠ Refresh token:
     assert_not_equal(
-        response_model.token.access_token,
+        response.token.access_token,
         'access_token',
-        response_model.token.refresh_token,
+        response.token.refresh_token,
         'refresh_token')
 
     # Access token length = 199 chars
     assert_length(
-        response_model.token.access_token,
+        response.token.access_token,
         199,
         'access_token')
 
     # Refresh token length = 199 chars
     assert_length(
-        response_model.token.refresh_token,
+        response.token.refresh_token,
         199,
         'refresh_token')
 
