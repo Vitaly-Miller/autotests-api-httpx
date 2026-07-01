@@ -3,7 +3,6 @@ Public Users (Fixtures)
 """
 import httpx
 import pytest
-import allure
 from clients.public_users_client import get_public_users_client, PublicUsersClient
 from schemas.users_schema import CreateUserSchema, CreateUserRequestSchema
 
@@ -38,7 +37,7 @@ def create_user_api(public_users_client: PublicUsersClient) -> httpx.Response:
                                    # password = request_body["password"]
 # Pydantic-model (full)
 @pytest.fixture
-def create_user_pydantic(public_users_client: PublicUsersClient) -> CreateUserSchema:
+def create_user(public_users_client: PublicUsersClient) -> CreateUserSchema:
     """
     Pydantic-фикстура создания пользователя
 
@@ -46,7 +45,7 @@ def create_user_pydantic(public_users_client: PublicUsersClient) -> CreateUserSc
     :return: Pydantic-model (CreateUserSchema) ✨<Request + Response>
     """
     create_user_data = CreateUserRequestSchema()                                               # Инициализация модели с Default fake-data нового пользователя по Pydantic-схеме
-    response_model = public_users_client.create_user_pydantic(create_user_data)                # ︎▶ Запрос через Pydantic-метод
+    response_model = public_users_client.create_user(create_user_data)                # ︎▶ Запрос через Pydantic-метод
     response_model_full = CreateUserSchema(request=create_user_data, response=response_model)  # Инициализация Pydantic-model (CreateUserSchema) ✨<Request + Response>
     return response_model_full                                                                 # Pydantic-model (CreateUserSchema) ✨<Request + Response>
 

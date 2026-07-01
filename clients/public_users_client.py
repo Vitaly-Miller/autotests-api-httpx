@@ -29,7 +29,7 @@ class PublicUsersClient(APIClient):
 
     # Pydantic-model
     @allure.step('Create user (Pydantic)')
-    def create_user_pydantic(self, create_user_data: CreateUserRequestSchema) -> CreateUserResponseSchema:
+    def create_user(self, create_user_data: CreateUserRequestSchema) -> CreateUserResponseSchema:
         """
         Pydantic-метод для создания нового пользователя
 

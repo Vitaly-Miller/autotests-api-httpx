@@ -72,7 +72,7 @@ class CreateUserSchema(BaseModel):
     def password(self) -> str:
         return self.request.password
 
-    # User ID
+    # User-ID
     @property
     def user_id(self) -> str:
         return self.response.user.id

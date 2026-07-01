@@ -54,7 +54,7 @@ def test_user_login_pydantic():
 
 # Тестовый класс
 class TestUserAuth:               # NO __init__ конструктор! Допускаются только атрибуты класса (a = 100, ...)
-    def test_create_user_pydantic(self):   # Тестовый .метод
+    def test_create_user(self):   # Тестовый .метод
         pass
 
     def test_update_user_pydantic(self):   # Тестовый .метод

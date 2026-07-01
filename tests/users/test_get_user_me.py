@@ -39,7 +39,7 @@ class TestGetUserMe:
         assert_status_code(response.status_code, HTTPStatus.OK)        # Status code: 200
         assert_request_method(response.request.method, HTTPMethod.GET) # Method: GET
         assert_create_user_response_non_empty(response_model)                         # Response data is NON-empty
-        assert_user_id(response_model)                                                # User ID validation
+        assert_user_id(response_model)                                                # User-ID validation
         validate_json_schema(response, GetUserMeResponseSchema)       # JSON schema validation
 
 
@@ -53,7 +53,7 @@ class TestGetUserMe:
         assert_status_code(response.status_code, HTTPStatus.OK)        # Status code: 200
         assert_request_method(response.request.method, HTTPMethod.GET) # Method: GET
         assert_create_user_response_non_empty(response_model)                         # Response data is NON-empty
-        assert_user_id(response_model)                                                # User ID validation
+        assert_user_id(response_model)                                                # User-ID validation
         validate_json_schema(response, GetUserMeResponseSchema)       # JSON schema validation
 
 #------------------------------------------------ All manual (example) -------------------------------------------------
@@ -63,7 +63,7 @@ class TestGetUserMe:
         # Create User
         public_users_client = get_public_users_client()   # Получаем экземпляр PublicUsersClient (с Base URL)
         create_user_data = CreateUserRequestSchema()      # Инициализация Pydantic-модели с default fake-data нового пользователя
-        public_users_client.create_user_pydantic(create_user_data) # ▶ Запрос через Pydantic-метод
+        public_users_client.create_user(create_user_data) # ▶ Запрос через Pydantic-метод
         auth_data = AuthDataSchema(                       # Инициализируем модель с default-данными для авторизации
             email=create_user_data.email,                 # Замена default на —> реальное значение
             password=create_user_data.password            # Замена default на —> реальное значение

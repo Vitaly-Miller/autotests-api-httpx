@@ -12,7 +12,7 @@ from schemas.exercises_schema import (
     GetExerciseResponseSchema, UpdateExerciseRequestSchema, UpdateExerciseResponseSchema
 )
 from tools.assertions.base_assert import assert_equal, assert_is_value, assert_length, assert_request_method, assert_status_code
-from tools.assertions.errors_assert import assert_not_found_response
+from tools.assertions.errors_assert import assert_not_found_error_response
 from tools.tool import Tool
 
 #=======================================================================================================================
@@ -50,13 +50,13 @@ def assert_exercise_id(response: httpx.Response, exercise_id: str | None = None)
     """
     response_model = CreateExerciseResponseSchema.model_validate_json(response.text)      # httpx.Response —> Pydantic-model (parsing-deserialize)
 
-    assert_is_value(response_model.exercise.id, 'exercise_id')                  # NON-empty File ID
-    assert_length(response_model.exercise.id, 36, 'exercise_id')  # File ID length = 36 chars
+    assert_is_value(response_model.exercise.id, 'exercise_id')                  # NON-empty File-ID
+    assert_length(response_model.exercise.id, 36, 'exercise_id')  # File-ID length = 36 chars
     if exercise_id:                                                                       # Если передать Exercise ID, то проверяем его:
         assert_equal(response_model.exercise.id, exercise_id,'exercise_id') # Actual Exercise ID = Expected Exercise ID
 
 #---------------------------------------------------- Create exercise --------------------------------------------------
-def assert_create_exercise_pydantic_response_non_empty(response: httpx.Response):
+def assert_create_exercise_response_non_empty(response: httpx.Response):
     """
     Create Exercise Response data is NON-empty
 
@@ -68,7 +68,7 @@ def assert_create_exercise_pydantic_response_non_empty(response: httpx.Response)
     assert_exercise_response_non_empty(response)
 
 
-def assert_create_exercise_pydantic_response(response: httpx.Response):
+def assert_create_exercise_response(response: httpx.Response):
     """
     Create Exercise Response data = Create Exercise Request data
 
@@ -97,7 +97,7 @@ def assert_get_exercise_response_non_empty(response: httpx.Response):
     :param response: httpx.Response (for deserialize —> Pydantic-model)
     :raise AssertionError
     """
-    assert_create_exercise_pydantic_response_non_empty(response)
+    assert_create_exercise_response_non_empty(response)
 
 
 #--------------------------------------------------- Update exercise ---------------------------------------------------
@@ -132,7 +132,7 @@ def assert_exercise_not_found_error_response(response: httpx.Response):
     :return: AssertionError
     """
     expected_model = NotFoundErrorResponseSchema(detail='Exercise not found')  # Expected error message
-    assert_not_found_response(response, expected_model)   # "detail": "Exercise not found"
+    assert_not_found_error_response(response, expected_model)   # "detail": "Exercise not found"
 
 
 #-----------------------------------------------------------------------------------------------------------------------

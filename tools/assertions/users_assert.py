@@ -1,7 +1,6 @@
 """
 Users assertions
 """
-import httpx
 import allure
 from schemas.users_schema import CreateUserRequestSchema, CreateUserResponseSchema
 from tools.assertions.base_assert import assert_equal, assert_is_value, assert_length
@@ -41,19 +40,19 @@ def assert_create_user_response_data(response_model: CreateUserResponseSchema, r
 
 
 
-# User ID validation
-@allure.step('User ID validation')
+# User-ID validation
+@allure.step('User-ID validation')
 def assert_user_id(response_model: CreateUserResponseSchema):
     """
-    User ID validation:
+    User-ID validation:
 
-    - User ID is NOT-empty
-    - User ID length = 36 chars
+    - User-ID is NOT-empty
+    - User-ID length = 36 chars
 
     :param response_model: Pydantic-model (CreateUserResponseSchema)
     :raise AssertionError
     """
-    assert_is_value(response_model.user.id, 'id')                          # NON-Empty
+    assert_is_value(response_model.user.id, 'id')                       # NON-Empty
     assert_length(response_model.user.id, 36, 'id')       # Length = 36 chars
 
 #-----------------------------------------------------------------------------------------------------------------------

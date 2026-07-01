@@ -46,7 +46,7 @@ auth_headers = {'Authorization': f'Bearer {login_response_data['token']['accessT
 
 #--------------------------------------------------- 3. Delete User ----------------------------------------------------
 delete_user_response = httpx.delete(               # 🟥DELETE запрос на удаление пользователя
-    url=f'{BASE_URL}/users/{user_id}',             # URL + endpoint c User ID
+    url=f'{BASE_URL}/users/{user_id}',             # URL + endpoint c User-ID
     headers=auth_headers)                          # Передаем auth_headers c токеном авторизации
 
 print(delete_user_response.status_code)            # 200  <-User удален

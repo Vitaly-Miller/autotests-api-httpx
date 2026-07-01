@@ -25,7 +25,7 @@ create_user_response = httpx.post(                  # 🟨POST запрос на
 )
 
 created_user_json = create_user_response.json()     # Сохраняем JSON-ответ в переменную
-user_id = created_user_json['user']['id']           # Вытаскиваем User ID из created_user_data по индексу []
+user_id = created_user_json['user']['id']           # Вытаскиваем User-ID из created_user_data по индексу []
 
 
 #--------------------------- 2.[Pre-conditions] Authentication (Log in) для получения токена ---------------------------
@@ -60,15 +60,15 @@ with open(file_path, 'rb') as f:                                  # open('пут
 
 
 create_file_response_data = create_file_response.json()           # Сохраняем JSON-ответ в переменную
-file_id = create_file_response_data['file']['id']                 # Вытаскиваем File ID из тела ответа по индексу []
+file_id = create_file_response_data['file']['id']                 # Вытаскиваем File-ID из тела ответа по индексу []
 
 print(f"""
 Create File Response Data: {create_file_response_data}   
-                  File ID: {file_id} - - ✅ФАЙЛ ЗАЛИТ НА СЕРВЕР!'
+                  File-ID: {file_id} - - ✅ФАЙЛ ЗАЛИТ НА СЕРВЕР!'
 """)
 
 #-----------------------------------------------------------------------------------------------------------------------
-# 5. Delete file by File ID
+# 5. Delete file by File-ID
 delete_file_response = httpx.delete(                              # 🟥DELETE запрос на удаление файла
     url=f'{BASE_URL}/files/{file_id}',                            # URL (BASE_URL + endpoint с file_id)
     headers=auth_headers                                          # Передаем auth_headers с токеном
@@ -78,7 +78,7 @@ delete_file_response = httpx.delete(                              # 🟥DELETE �
 print(f"""
     User email: {create_user_data['email']}                    
 User password': {create_user_data['password']} 
-       User ID: {user_id}
+       User-ID: {user_id}
     User Token: {token}
   Auth Headers: {auth_headers}
 """)

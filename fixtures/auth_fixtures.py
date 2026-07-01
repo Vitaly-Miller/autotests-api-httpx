@@ -22,29 +22,29 @@ def auth_client() -> AuthClient:
 #-------------------------------------------------------- Auth ---------------------------------------------------------
 # API
 @pytest.fixture
-def auth_api(create_user_pydantic: CreateUserSchema, auth_client: AuthClient) -> httpx.Response:
+def auth_api(create_user: CreateUserSchema, auth_client: AuthClient) -> httpx.Response:
     """
     API-фикстура авторизации пользователя (Log in)
 
-    :param create_user_pydantic: Вложенная Pydantic-фикстура создания пользователя
+    :param create_user: Вложенная Pydantic-фикстура создания пользователя
     :param auth_client: Вложенная фикстура получения экземпляра AuthClient (c Base URL)
     :return: httpx.Response
     """
-    response = auth_client.login_api(create_user_pydantic.auth_data)     # ▶ Запрос через API-метод
+    response = auth_client.login_api(create_user.auth_data)     # ▶ Запрос через API-метод
     return response                                                      # httpx.Response
 
 
 # Pydantic-model
 @pytest.fixture
-def auth_pydantic(create_user_pydantic: CreateUserSchema, auth_client: AuthClient) -> AuthResponseSchema:
+def auth(create_user: CreateUserSchema, auth_client: AuthClient) -> AuthResponseSchema:
     """
     Pydantic-фикстура авторизации пользователя (Log in)
 
-    :param create_user_pydantic: Вложенная Pydantic-фикстура создания пользователя
+    :param create_user: Вложенная Pydantic-фикстура создания пользователя
     :param auth_client: Вложенная фикстура получения экземпляра AuthClient (c Base URL)
     :return: Pydantic-model (AuthResponseSchema)
     """
-    response_model = auth_client.login_pydantic(create_user_pydantic.auth_data)   # ▶ Запрос через Pydantic-метод
+    response_model = auth_client.login_pydantic(create_user.auth_data)   # ▶ Запрос через Pydantic-метод
     return response_model                                                         # Pydantic-model (AuthResponseSchema)
 
 #-----------------------------------------------------------------------------------------------------------------------

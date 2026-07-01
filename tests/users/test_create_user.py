@@ -45,7 +45,7 @@ class TestCreateUser:
         assert_request_method(response.request.method, http.HTTPMethod.POST)       # Method: POST
         assert_create_user_response_non_empty(response_model)                                      # Response data is NON-empty
         assert_create_user_response_data(response_model,request_model)  # Response data = Request data (request_model)
-        assert_user_id(response_model)                                                             # User ID validation
+        assert_user_id(response_model)                                                             # User-ID validation
         validate_json_schema(response, CreateUserResponseSchema)                   # JSON schema validation
 
 
@@ -61,7 +61,7 @@ class TestCreateUser:
         assert_request_method(response.request.method, http.HTTPMethod.POST)           # Method: POST
         assert_create_user_response_non_empty(response_model)                                          # Response data is NON-empty
         assert_create_user_response_data(response_model, create_user_data)  # Response data = Request data (create_user_data)
-        assert_user_id(response_model)                                                                 # User ID validation
+        assert_user_id(response_model)                                                                 # User-ID validation
         validate_json_schema(response, CreateUserResponseSchema)                       # JSON schema validation
 
 
@@ -88,7 +88,7 @@ class TestCreateUser:
         assert_request_method(response.request.method, http.HTTPMethod.POST)           # Method: POST
         assert_create_user_response_non_empty(response_model)                                          # Response data is NON-empty
         assert_create_user_response_data(response_model, create_user_data)  # Response data = Request data (create_user_data)
-        assert_user_id(response_model)                                                                 # User ID validation
+        assert_user_id(response_model)                                                                 # User-ID validation
         validate_json_schema(response, CreateUserResponseSchema)                       # JSON schema validation
 
 
@@ -115,9 +115,9 @@ class TestCreateUser:
         assert response_model.user.first_name == create_user_data.first_name, '❌Разные First Name!'     # Request First Name = Response First Name
         assert response_model.user.middle_name == create_user_data.middle_name, '❌Разные Middle Name!'  # Request Middle Name = Response Middle Name
 
-        # User ID
-        assert response_model.user.id is not None, '❌User ID is Empty!'      # User ID is NON-Empty
-        assert len(response_model.user.id) == 36, '❌Wrong User ID length'    # User ID length = 36 chars
+        # User-ID
+        assert response_model.user.id is not None, '❌User-ID is Empty!'      # User-ID is NON-Empty
+        assert len(response_model.user.id) == 36, '❌Wrong User-ID length'    # User-ID length = 36 chars
 
         # JSON schema validation
         jsonschema.validate(

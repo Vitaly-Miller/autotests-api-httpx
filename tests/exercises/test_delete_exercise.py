@@ -28,9 +28,9 @@ from tools.tool import Tool
 #-----------------------------------------------------------------------------------------------------------------------
 class TestDeleteExercise:
     @allure.title('Delete Exercise')                          # Allure step Title
-    def test_delete_exercise(self, exercises_client: ExercisesClient, create_exercise_pydantic: CreateExerciseSchema):
-        delete_response = exercises_client.delete_exercise_api(create_exercise_pydantic.exercise_id) # ▶ Запрос через API-метод
-        get_response = exercises_client.get_exercise_api(create_exercise_pydantic.exercise_id)       # ▶ Запрос через API-метод
+    def test_delete_exercise(self, exercises_client: ExercisesClient, create_exercise: CreateExerciseSchema):
+        delete_response = exercises_client.delete_exercise_api(create_exercise.exercise_id) # ▶ Запрос через API-метод
+        get_response = exercises_client.get_exercise_api(create_exercise.exercise_id)       # ▶ Запрос через API-метод
 
         # Assertions (Delete Exercise)
         assert_status_code(delete_response, http.HTTPStatus.OK)       # Status code: 200

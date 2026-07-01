@@ -39,11 +39,11 @@ class TestUpdateExercise:
 
 
 
-    @allure.title('Update Exercise (v.2 - Через фикстуры: exercises_client, create_exercise_pydantic)')  # Allure step Title
-    def test_update_exercise_2(self, exercises_client: ExercisesClient, create_exercise_pydantic: CreateExerciseSchema):
+    @allure.title('Update Exercise (v.2 - Через фикстуры: exercises_client, create_exercise)')  # Allure step Title
+    def test_update_exercise_2(self, exercises_client: ExercisesClient, create_exercise: CreateExerciseSchema):
         new_exercise_data = UpdateExerciseRequestSchema()       # Pydantic-model with fake-data (Update ALL data)
         response = exercises_client.update_exercise_api(        # ▶ Запрос через API-метод
-            create_exercise_pydantic.exercise_id,              # Передаем Exercise ID
+            create_exercise.exercise_id,              # Передаем Exercise ID
             new_exercise_data                   # Передаем Pydantic-model c данными, которые необходимо обновить
         )
 

@@ -16,12 +16,12 @@ class CoursesClient(APIClient):
     ENDPOINT = '/courses'
     #------------------------------------------------- Get Courses -----------------------------------------------------
     # API
-    @allure.step('Get courses by User ID {query_user_id} (API)')
+    @allure.step('Get courses by User-ID {query_user_id} (API)')
     def get_courses_api(self, query_user_id: GetCoursesQwerySchema) -> httpx.Response:
         """
-        API-метод получения списка курсов по User ID (?query)
+        API-метод получения списка курсов по User-ID (?query)
 
-        :param query_user_id: Pydantic-model c User ID (?query)
+        :param query_user_id: Pydantic-model c User-ID (?query)
         :return: httpx.Response
         """
         response = self.get(                                                  # ▶ Запрос c Query-параметром
@@ -47,30 +47,30 @@ class CoursesClient(APIClient):
     #------------------------------------------------- Create Course ---------------------------------------------------
     # API
     @allure.step('Create course (API)')
-    def create_course_api(self, create_course_pydantic_data: CreateCourseRequestSchema) -> httpx.Response:
+    def create_course_api(self, create_course_data: CreateCourseRequestSchema) -> httpx.Response:
         """
         API-метод создания курса
 
-        :param create_course_pydantic_data: Pydantic-model c данными для создания курса
+        :param create_course_data: Pydantic-model c данными для создания курса
         :return: httpx.Response
         """
         response = self.post(                                                 # ▶ Запрос
             url=self.ENDPOINT,
-            json=create_course_pydantic_data.model_dump(by_alias=True)        # Pydantic-model —> Dict (serialize)
+            json=create_course_data.model_dump(by_alias=True)        # Pydantic-model —> Dict (serialize)
         )
         return response                                                       # httpx.Response
 
 
     # Pydantic-model
     @allure.step('Create course (Pydantic)')
-    def create_course_pydantic(self, create_course_pydantic_data: CreateCourseRequestSchema) -> CreateCourseResponseSchema:
+    def create_course(self, create_course_data: CreateCourseRequestSchema) -> CreateCourseResponseSchema:
         """
         Pydantic-метод создания курса
 
-        :param create_course_pydantic_data: Pydantic-model с данными для создания курса
+        :param create_course_data: Pydantic-model с данными для создания курса
         :return: Pydantic-model (CreateCourseResponseSchema)
         """
-        response = self.create_course_api(create_course_pydantic_data)                 # ▶ Запрос через API-метод
+        response = self.create_course_api(create_course_data)                 # ▶ Запрос через API-метод
         response_model = CreateCourseResponseSchema.model_validate_json(response.text) # httpx.Response —> Pydantic-model (parsing-deserialize) (deserialize)
         return response_model                                                          # Pydantic-model (CreateCourseResponseSchema)
 

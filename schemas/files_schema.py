@@ -22,7 +22,7 @@ class CreateFileRequestSchema(BaseModel):
 """================================================ ⬇︎RESPONSE Schema ==============================================="""
 #----------------------------------------------------- "file": {}  -----------------------------------------------------
 class FileSchema(BaseModel):
-    id: str           # File ID
+    id: str           # File-ID
     filename: str     # Новое имя файла при сохранении на сервере
     directory: str    # Директория сохранения файла на сервере
     url: str          # URL-адрес файла на сервере
@@ -42,7 +42,7 @@ class CreateFileSchema(BaseModel):
     response: CreateFileResponseSchema  # ┘
 
     #--- Методы прямого доступа к данным ---
-    # File ID
+    # File-ID
     @property
     def file_id(self):
         return self.response.file.id

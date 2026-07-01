@@ -60,7 +60,7 @@ class ErrorResponseSchema(BaseModel):
     }
     
 
----- Get File with incorrect File ID ----
+---- Get File with incorrect File-ID ----
 {
   "detail": [
     {

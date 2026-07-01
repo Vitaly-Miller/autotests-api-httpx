@@ -29,30 +29,30 @@ from tools.tool import Tool
 #-----------------------------------------------------------------------------------------------------------------------
 class TestGetCourses:
     @allure.title('Get Courses (v.1 - Через фикстуру полного цикла)')                        # Allure step Title
-    def test_get_courses_1(self,create_course_pydantic: CreateCourseSchema, get_courses_api: httpx.Response):
+    def test_get_courses_1(self,create_course: CreateCourseSchema, get_courses_api: httpx.Response):
 
         # Assertions
         assert_status_code(get_courses_api, http.HTTPStatus.OK)        # Status Code: 200
         assert_request_method(get_courses_api, http.HTTPMethod.GET)          # Method: GET
-        assert_get_courses_responses(get_courses_api, [create_course_pydantic.response]) # Список курсов соответствует созданным курсам
+        assert_get_courses_responses(get_courses_api, [create_course.response]) # Список курсов соответствует созданным курсам
         validate_json_schema(get_courses_api, GetCoursesResponseSchema)      # JSON Schema validation
 
 
 
-    @allure.title('Get Courses (v.1 - Через фикстуры: courses_client, create_user, create_course_pydantic)')  # Allure step Title
+    @allure.title('Get Courses (v.1 - Через фикстуры: courses_client, create_user, create_course)')  # Allure step Title
     def test_get_courses_2(
             self,
             courses_client: CoursesClient,
-            create_user_pydantic: CreateUserSchema,                                            # Для User-ID
-            create_course_pydantic: CreateCourseSchema
+            create_user: CreateUserSchema,                                            # Для User-ID
+            create_course: CreateCourseSchema
     ):
-        user_id_qwery_model = GetCoursesQwerySchema(userId=create_user_pydantic.user_id)       # Pydantic-model
+        user_id_qwery_model = GetCoursesQwerySchema(userId=create_user.user_id)       # Pydantic-model
         response = courses_client.get_courses_api(user_id_qwery_model)                # ▶ Запрос через API-метод
 
         # Assertions
         assert_status_code(response.status_code, http.HTTPStatus.OK)        # Status Code: 200
         assert_request_method(response.request.method, http.HTTPMethod.GET)          # Method: GET
-        assert_get_courses_responses(response, [create_course_pydantic.response]) # Список курсов соответствует созданным курсам
+        assert_get_courses_responses(response, [create_course.response]) # Список курсов соответствует созданным курсам
         validate_json_schema(response, GetCoursesResponseSchema)      # JSON Schema validation
 
 

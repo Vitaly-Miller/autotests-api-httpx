@@ -43,11 +43,11 @@ class TestAuth:
 
 
 
-    @allure.title('Auth (v.2 - Через фикстуры: create_user_pydantic + auth_client)')     # Allure step Title
-    def test_auth_2(self, create_user_pydantic: CreateUserSchema, auth_client: AuthClient):
+    @allure.title('Auth (v.2 - Через фикстуры: create_user + auth_client)')     # Allure step Title
+    def test_auth_2(self, create_user: CreateUserSchema, auth_client: AuthClient):
         auth_data = AuthDataSchema(                             # Pydantic-model with fake-data (Email и Password),...
-            email=create_user_pydantic.email,                   # Замена default на —> реальное значение из фикстуры
-            password=create_user_pydantic.password              # Замена default на —> реальное значение из фикстуры
+            email=create_user.email,                   # Замена default на —> реальное значение из фикстуры
+            password=create_user.password              # Замена default на —> реальное значение из фикстуры
         )
         response = auth_client.login_api(auth_data)                              # ▶ Запрос через API-метод
         response_model = AuthResponseSchema.model_validate_json(response.text)   # httpx.Response —> Pydantic-model (parsing-deserialize)

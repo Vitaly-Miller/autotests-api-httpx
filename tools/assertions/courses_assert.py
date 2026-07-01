@@ -11,7 +11,7 @@ from tools.assertions.base_assert import assert_equal, assert_length_equal
 
 #=======================================================================================================================
 # Response data = Request data
-def assert_create_course_pydantic_response(response: httpx.Response):
+def assert_create_course_response(response: httpx.Response):
     """
     Response data = Request data
 
@@ -37,7 +37,7 @@ def assert_get_courses_responses(get_courses_response: httpx.Response, create_co
     Проверка получения [списка] курсов с созданными курсами
 
     :param get_courses_response: get_courses_response
-    :param create_course_responses: create_course_pydantic_responses
+    :param create_course_responses: create_course_responses
     :return: AssertionError
     """
     get_courses_response_model = GetCoursesResponseSchema.model_validate_json(get_courses_response.text)  # httpx.Response —> Pydantic-model (parsing-deserialize)

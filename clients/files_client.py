@@ -17,9 +17,9 @@ class FilesClient(APIClient):
     @allure.step('Get file by ID: {file_id} (API)')
     def get_file_api(self, file_id: str) -> httpx.Response:
         """
-        API-метод получения файла (Download) по File ID
+        API-метод получения файла (Download) по File-ID
 
-        :param file_id: File ID
+        :param file_id: File-ID
         :return: httpx.Response
         """
         response = self.get(url=f'{self.ENDPOINT}/{file_id}')       # ▶ Запрос
@@ -28,11 +28,11 @@ class FilesClient(APIClient):
 
     # Pydantic-model
     @allure.step('Get file by ID: {file_id} (Pydantic)')
-    def get_file_pydantic(self, file_id: str) -> GetFileResponseSchema:
+    def get_file(self, file_id: str) -> GetFileResponseSchema:
         """
-        Pydantic-метод получения файла (Download) по File ID
+        Pydantic-метод получения файла (Download) по File-ID
 
-        :param file_id: File ID
+        :param file_id: File-ID
         :return: httpx.Response
         """
         response = self.get_file_api(file_id)                                      # ▶ Запрос через API-метод
@@ -62,7 +62,7 @@ class FilesClient(APIClient):
 
     # Pydantic-model
     @allure.step('Create file (Pydantic)')
-    def create_file_pydantic(self, create_file_data: CreateFileRequestSchema) -> CreateFileResponseSchema:
+    def create_file(self, create_file_data: CreateFileRequestSchema) -> CreateFileResponseSchema:
         """
         Pydantic-метод создания файла (Upload)
 
@@ -81,7 +81,7 @@ class FilesClient(APIClient):
         """
         API-метод удаления файла
 
-        :param file_id: File ID
+        :param file_id: File-ID
         :return: httpx.Response
         """
         response = self.delete(url=f'{self.ENDPOINT}/{file_id}')    # ▶ Запрос

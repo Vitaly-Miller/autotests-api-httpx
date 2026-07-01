@@ -18,22 +18,22 @@ class ExercisesClient(APIClient):
     #---------------------------------------------- Create Exercise ----------------------------------------------------
     # API
     @allure.step('Create exercise (API)')
-    def create_exercise_api(self, create_exercise_pydantic_data: CreateExerciseRequestSchema) -> httpx.Response:
+    def create_exercise_api(self, create_exercise_data: CreateExerciseRequestSchema) -> httpx.Response:
         """
         API-метод создания задания
 
-        :param create_exercise_pydantic_data: Pydantic-model с данными о задании
+        :param create_exercise_data: Pydantic-model с данными о задании
         :return: httpx.Response
         """
         response = self.post(                                     # ▶ Запрос
             url=self.ENDPOINT,
-            json=create_exercise_pydantic_data.model_dump(by_alias=True)   # Pydantic-model —> Dict (serialize)
+            json=create_exercise_data.model_dump(by_alias=True)   # Pydantic-model —> Dict (serialize)
         )
         return response                                           # httpx.Response
 
     # Pydantic-model
     @allure.step('Create exercise (Pydantic)')
-    def create_exercise_pydantic(self, exercise_data: CreateExerciseRequestSchema) -> CreateExerciseResponseSchema:
+    def create_exercise(self, exercise_data: CreateExerciseRequestSchema) -> CreateExerciseResponseSchema:
         """
         Pydantic-метод создания задания
 
@@ -61,7 +61,7 @@ class ExercisesClient(APIClient):
 
     # Pydantic-model
     @allure.step('Get exercise by ID: {exercise_id} (Pydantic)')
-    def get_exercise_pydantic(self, exercise_id: str) -> GetExerciseResponseSchema:
+    def get_exercise(self, exercise_id: str) -> GetExerciseResponseSchema:
         """
         Pydantic-метод получения информации о задании по Exercise ID
 
@@ -109,7 +109,7 @@ class ExercisesClient(APIClient):
 
     # Pydantic-model
     @allure.step('Update exercise by ID: {exercise_id} (Pydantic)')
-    def update_exercise_pydantic(self, exercise_id: str, new_exercise_data: UpdateExerciseRequestSchema) -> UpdateExerciseResponseSchema:
+    def update_exercise(self, exercise_id: str, new_exercise_data: UpdateExerciseRequestSchema) -> UpdateExerciseResponseSchema:
         """
         Pydantic-метод частичного обновления данных задания
 

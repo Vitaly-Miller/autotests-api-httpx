@@ -132,7 +132,7 @@ def assert_length(actual: Sized, expected_length: int, name: str):
 """
 
 # Length_1 = Length_2
-@allure.step('Check that lengths of <Request-{name}> = <Response-{name}>')
+@allure.step('Check that lengths of <obj_1.{name}> = <obj_2.{name}>')
 def assert_length_equal(obj_1: Sized, obj_2: Sized, name: str):
     """
     Сравнивает равенства длин двух объектов
