@@ -42,7 +42,7 @@ class TestCreateExercise:
         assert_status_code(response.status_code, http.HTTPStatus.OK)          # Status Code: 200
         assert_request_method(response.request.method, http.HTTPMethod.POST)  # Method: POST
         assert_create_exercise_response_non_empty(response_model)                            # Response data is NON-empty
-        assert_create_exercise_response(response_model, request_model) # Response data = Request data
+        assert_create_exercise_response(response_model, request_model)      # Response data = Request data
         assert_exercise_id(response_model)                                                   # Exercise-ID validation
         validate_json_schema(response, CreateExerciseResponseSchema)         # JSON Schema validation
 

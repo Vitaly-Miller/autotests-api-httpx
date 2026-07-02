@@ -6,7 +6,7 @@ import pytest
 import allure
 from clients.files_client import FilesClient
 from schemas.errors_schema import ErrorResponseSchema, NotFoundErrorResponseSchema
-from schemas.files_schema import CreateFileSchema, CreateFileResponseSchema, GetFileResponseSchema
+from schemas.files_schema import CreateFileSchema, GetFileResponseSchema
 from tools.allure.annotations import Epic, Feature, Story, Tag
 from tools.assertions.base_assert import assert_status_code, assert_request_method
 from tools.assertions.schema_assert import validate_json_schema
@@ -32,7 +32,7 @@ from tools.tool import Tool
 @allure.severity(allure.severity_level.NORMAL)             # ] Allure Severity
 #-----------------------------------------------------------------------------------------------------------------------
 class TestGetFile:
-    @allure.title('Get File by ID: {create_file.file_id}')                              # Allure step Title
+    @allure.title('Get File by ID')                              # Allure step Title
     def test_get_file(self, files_client: FilesClient, create_file: CreateFileSchema):
         response = files_client.get_file_api(create_file.file_id)                       # ▶ Запрос через API-метод
         response_model = GetFileResponseSchema.model_validate_json(response.text)       # httpx.Response —> Pydantic-model (parsing-deserialize)
