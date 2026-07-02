@@ -6,7 +6,7 @@ from schemas.errors_schema import ErrorSchema, ErrorResponseSchema, NotFoundErro
 from tools.assertions.base_assert import assert_equal, assert_length_equal
 
 #=======================================================================================================================
-# Error
+# Validation Error
 @allure.step('Validation Error')
 def assert_validate_error(actual: ErrorSchema, expected: ErrorSchema):
     """
@@ -23,33 +23,35 @@ def assert_validate_error(actual: ErrorSchema, expected: ErrorSchema):
     assert_equal(actual.ctx, expected.ctx, 'ctx')
 
 
-# Error Response
-@allure.step('Validation Response Error')
+# Validation Error Response
+@allure.step('Validation Error Response')
 def assert_error_response(actual: ErrorResponseSchema, expected: ErrorResponseSchema):
     """
     Validation Error Response
 
-    - Сравнивает длину (количество полей) в объекте "detail"
-    - Сравнивает values (значения полей) в объекте "detail"
+    - Сравнивает длину (количество полей) ключа "detail:"
+    - Сравнивает values (значения) ключа "detail:"
 
     :param actual: Pydantic-model (ErrorResponseSchema)
     :param expected: Pydantic-model (ErrorResponseSchema)
     :return: ValidationError
     """
-    assert_length_equal(actual.detail, expected.detail, 'detail') # Сравниваем количество элементов в объекте "detail"
-    assert_equal(actual.detail, expected.detail, 'detail')    # Сравниваем значения элементов в объекте "detail"
+    assert_length_equal(actual.detail, expected.detail, 'detail') # Сравнивает длины ключа "detail:"
+    assert_equal(actual.detail, expected.detail, 'detail')    # Сравнивает значения ключа "detail:"
 
 
-# Not Found Error Response
-@allure.step('Validation Not Found Response Error')
+# Validation Not Found Error Response
+@allure.step('Validation Not Found Error Response')
 def assert_not_found_error_response(actual: NotFoundErrorResponseSchema, expected: NotFoundErrorResponseSchema):
     """
     Validation Not Found Error Response (при попытке получить несуществующую сущность)
+
+    Сравнивает values (значения) ключа "detail:"
 
     :param actual: Pydantic-model (NotFoundErrorResponseSchema)
     :param expected: Pydantic-model (NotFoundErrorResponseSchema)
     :return: ValidationError
     """
-    assert_equal(actual.detail, expected.detail, 'detail')  # Сравниваем значения элементов в объектах "detail"
+    assert_equal(actual.detail, expected.detail, 'detail')  # Сравнивает значения ключа "detail:"
 
 #-----------------------------------------------------------------------------------------------------------------------

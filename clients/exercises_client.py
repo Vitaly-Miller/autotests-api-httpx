@@ -50,9 +50,9 @@ class ExercisesClient(APIClient):
     @allure.step('Get exercise by ID: {exercise_id} (API)')
     def get_exercise_api(self, exercise_id: str) -> httpx.Response:
         """
-        API-метод получения информации о задании по Exercise ID
+        API-метод получения информации о задании по Exercise-ID
 
-        :param exercise_id: Exercise ID
+        :param exercise_id: Exercise-ID
         :return: httpx.Response
         """
         response = self.get(url=f'{self.ENDPOINT}/{exercise_id}')          # ▶ Запрос
@@ -63,9 +63,9 @@ class ExercisesClient(APIClient):
     @allure.step('Get exercise by ID: {exercise_id} (Pydantic)')
     def get_exercise(self, exercise_id: str) -> GetExerciseResponseSchema:
         """
-        Pydantic-метод получения информации о задании по Exercise ID
+        Pydantic-метод получения информации о задании по Exercise-ID
 
-        :param exercise_id: Exercise ID
+        :param exercise_id: Exercise-ID
         :return: Pydantic-model (GetExerciseResponseSchema)
         """
         response = self.get_exercise_api(exercise_id)                                  # ▶ Запрос через API-метод
@@ -75,12 +75,12 @@ class ExercisesClient(APIClient):
 
     #------------------------------------------------ Get Exercises ----------------------------------------------------
     # API
-    @allure.step('Get exercises by Course ID: {query_course_id} (API)')
+    @allure.step('Get exercises by Course-ID: {query_course_id} (API)')
     def get_exercises_api(self, query_course_id: GetExercisesQwerySchema) -> httpx.Response:
         """
-        API-метод получения списка заданий по Course ID (?query)
+        API-метод получения списка заданий по Course-ID (?query)
 
-        :param query_course_id: Pydantic-model с Course ID (?query)
+        :param query_course_id: Pydantic-model с Course-ID (?query)
         :return: httpx.Response
         """
         response = self.get(                                      # ▶ Запрос c Query-параметром
@@ -96,7 +96,7 @@ class ExercisesClient(APIClient):
         """
         API-метод частичного обновления данных задания
 
-        :param exercise_id: Exercise ID
+        :param exercise_id: Exercise-ID
         :param new_exercise_data: Pydantic-model c данными, которые необходимо обновить
         :return: httpx.Response
         """
@@ -113,12 +113,12 @@ class ExercisesClient(APIClient):
         """
         Pydantic-метод частичного обновления данных задания
 
-        :param exercise_id: Exercise ID
+        :param exercise_id: Exercise-ID
         :param new_exercise_data: Pydantic-model c данными, которые необходимо обновить
         :return: Pydantic-model (UpdateExerciseResponseSchema)
         """
         response = self.update_exercise_api(             # ▶ Запрос через API-метод
-            exercise_id,                       # Передаем  Exercise ID
+            exercise_id,                       # Передаем  Exercise-ID
             new_exercise_data            # Передаем Pydantic-model данными, которые необходимо обновить
         )
         response_model = UpdateExerciseResponseSchema.model_validate_json(response.text) # httpx.Response —> Pydantic-model (parsing-deserialize) (deserialize)
@@ -130,9 +130,9 @@ class ExercisesClient(APIClient):
     @allure.step('Delete exercise by ID: {exercise_id} (API)')
     def delete_exercise_api(self, exercise_id: str) -> httpx.Response:
         """
-        Метод удаление задания по Exercise ID
+        Метод удаление задания по Exercise-ID
 
-        :param exercise_id: Exercise ID
+        :param exercise_id: Exercise-ID
         :return: httpx.Response
         """
         response = self.delete(url=f'{self.ENDPOINT}/{exercise_id}')    # ▶ Запрос

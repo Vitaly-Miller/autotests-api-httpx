@@ -6,7 +6,7 @@ import pytest
 import allure
 from clients.exercises_client import ExercisesClient
 from schemas.errors_schema import NotFoundErrorResponseSchema
-from schemas.exercises_schema import CreateExerciseSchema
+from schemas.exercises_schema import CreateExerciseSchema, GetExerciseResponseSchema
 from tools.allure.annotations import Epic, Feature, Story, Tag
 from tools.assertions.base_assert import assert_request_method, assert_status_code
 from tools.assertions.exercises_assert import assert_exercise_not_found_error_response
@@ -29,18 +29,18 @@ from tools.tool import Tool
 class TestDeleteExercise:
     @allure.title('Delete Exercise')                          # Allure step Title
     def test_delete_exercise(self, exercises_client: ExercisesClient, create_exercise: CreateExerciseSchema):
-        delete_response = exercises_client.delete_exercise_api(create_exercise.exercise_id) # ▶ Запрос через API-метод
-        get_response = exercises_client.get_exercise_api(create_exercise.exercise_id)       # ▶ Запрос через API-метод
+        delete_response = exercises_client.delete_exercise_api(create_exercise.exercise_id)   # ▶ Запрос через API-метод (delete)
+        get_response = exercises_client.get_exercise_api(create_exercise.exercise_id)         # ▶ Запрос через API-метод (get)
 
         # Assertions (Delete Exercise)
-        assert_status_code(delete_response, http.HTTPStatus.OK)       # Status code: 200
-        assert_request_method(delete_response, 'DELETE')                    # Method: DELETE
+        assert_status_code(delete_response.status_code, http.HTTPStatus.OK)  # Status code: 200
+        assert_request_method(delete_response.request.method, 'DELETE')      # Method: DELETE
 
         # Assertions (Get Non-existent Exercise)
-        assert_status_code(get_response, http.HTTPStatus.NOT_FOUND)   # Status code: 404
-        assert_request_method(get_response, 'GET')                          # Method: GET
-        assert_exercise_not_found_error_response(get_response)                              # Error message: "Exercise not found"
-        validate_json_schema(get_response, NotFoundErrorResponseSchema)     # JSON schema validation 
+        assert_status_code(get_response.status_code, http.HTTPStatus.NOT_FOUND) # Status code: 404
+        assert_request_method(get_response.request.method, 'GET')               # Method: GET
+        assert_exercise_not_found_error_response(get_response)                            # Error message: "Exercise not found"
+        validate_json_schema(get_response, NotFoundErrorResponseSchema)   # JSON schema validation
 
 
 #=======================================================================================================================

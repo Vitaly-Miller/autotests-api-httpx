@@ -68,7 +68,7 @@ create_exercise_response = exercise_client.create_exercise(create_exercise_data=
 #------------------------------------------------------ Output ---------------------------------------------------------
 print(f'    User-ID: {create_user_response.user.id}')
 print(f'    File-ID: {create_file_response.file.id}')
-print(f'  Course ID: {create_course_response.course.id}')
-print(f'Exercise ID: {create_exercise_response.exercise.id}')
+print(f'  Course-ID: {create_course_response.course.id}')
+print(f'Exercise-ID: {create_exercise_response.exercise.id}')
 
 #-----------------------------------------------------------------------------------------------------------------------

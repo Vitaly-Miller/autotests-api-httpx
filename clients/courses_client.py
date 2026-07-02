@@ -35,9 +35,9 @@ class CoursesClient(APIClient):
     @allure.step('Get course by ID: {course_id} (API)')
     def get_course_api(self, course_id: str) -> httpx.Response:
         """
-        API-метод получения курса по Course ID
+        API-метод получения курса по Course-ID
 
-        :param course_id: Course ID
+        :param course_id: Course-ID
         :return: httpx.Response
         """
         response = self.get(url=f'{self.ENDPOINT}/{course_id}')               # ▶ Запрос
@@ -80,9 +80,9 @@ class CoursesClient(APIClient):
     @allure.step('Update course by ID: {course_id} (API)')
     def update_course_api(self, course_id: str, new_course_data: UpdateCourseRequestSchema) -> httpx.Response:
         """
-        API-метод частичного обновления курса по Course ID
+        API-метод частичного обновления курса по Course-ID
 
-        :param course_id: Course ID
+        :param course_id: Course-ID
         :param new_course_data: Pydantic-model c данными, которые необходимо обновить
         :return: httpx.Response
         """
@@ -97,9 +97,9 @@ class CoursesClient(APIClient):
     @allure.step('Update course by ID: {course_id} (Pydantic)')
     def update_course_pydantic(self, course_id: str, new_course_data: UpdateCourseRequestSchema) -> UpdateCourseResponseSchema:
         """
-        Pydantic-метод частичного обновления курса по Course ID
+        Pydantic-метод частичного обновления курса по Course-ID
 
-        :param course_id: Course ID
+        :param course_id: Course-ID
         :param new_course_data: Pydantic-model c данными, которые необходимо обновить
         :return: Pydantic-model (UpdateCourseResponseSchema)
         """
@@ -113,9 +113,9 @@ class CoursesClient(APIClient):
     @allure.step('Delete course by ID: {course_id} (API)')
     def delete_course_api(self, course_id: str) -> httpx.Response:
         """
-        API-метод удаления курса по Course ID
+        API-метод удаления курса по Course-ID
 
-        :param course_id: Course ID
+        :param course_id: Course-ID
         :return: httpx.Response
         """
         response = self.delete(url=f'{self.ENDPOINT}/{course_id}')            # ▶ Запрос

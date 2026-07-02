@@ -6,11 +6,11 @@ from schemas.users_schema import CreateUserRequestSchema, CreateUserResponseSche
 from tools.assertions.base_assert import assert_equal, assert_is_value, assert_length
 
 #=======================================================================================================================
-# Response data is NON-empty
-@allure.step('Check Response data is NON-empty')
+# Create User Response data is NON-empty
+@allure.step('Create User Response data is NON-empty')
 def assert_create_user_response_non_empty(response: CreateUserResponseSchema):
     """
-    Response data is NON-empty
+    Create User Response data is NON-empty
 
     :param response: Pydantic-model (CreateUserResponseSchema)
     :raise AssertionError
@@ -23,11 +23,11 @@ def assert_create_user_response_non_empty(response: CreateUserResponseSchema):
 
 
 
-# Response data = Request data
-@allure.step('Check Response user created data = Request user create data')
+# Create User Response data = Request data
+@allure.step('Create User Response data = Request data')
 def assert_create_user_response_data(response: CreateUserResponseSchema, request: CreateUserRequestSchema):
     """
-    Check Response user created data = Request user create data
+    Create User Response data = Request data
 
     :param response: Pydantic-model (CreateUserResponseSchema)
     :param request: Pydantic-model (CreateUserRequestSchema)
@@ -44,7 +44,7 @@ def assert_create_user_response_data(response: CreateUserResponseSchema, request
 @allure.step('User-ID validation')
 def assert_user_id(response: CreateUserResponseSchema):
     """
-    User-ID validation:
+    User-ID validation
 
     - User-ID is NOT-empty
     - User-ID length = 36 chars
@@ -52,7 +52,7 @@ def assert_user_id(response: CreateUserResponseSchema):
     :param response: Pydantic-model (CreateUserResponseSchema)
     :raise AssertionError
     """
-    assert_is_value(response.user.id, 'id')                       # NON-Empty
-    assert_length(response.user.id, 36, 'id')       # Length = 36 chars
+    assert_is_value(response.user.id, 'id')                       # User-ID is NOT-empty
+    assert_length(response.user.id, 36, 'id')       # User-ID length = 36 chars
 
 #-----------------------------------------------------------------------------------------------------------------------

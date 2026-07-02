@@ -9,7 +9,7 @@ from schemas.errors_schema import NotFoundErrorResponseSchema
 from schemas.files_schema import CreateFileSchema
 from tools.allure.annotations import Epic, Feature, Story, Tag
 from tools.assertions.base_assert import assert_status_code, assert_request_method
-from tools.assertions.files_assert import assert_file_not_found_error_response
+from tools.assertions.files_assert import assert_get_file_not_found_error_response
 from tools.assertions.schema_assert import validate_json_schema
 from tools.tool import Tool
 
@@ -39,7 +39,7 @@ class TestDeleteFile:
         # Assertions (Get deleted File)
         assert_status_code(get_non_existent_file_response.status_code, http.HTTPStatus.NOT_FOUND)  # Status code: 404
         assert_request_method(get_non_existent_file_response.request.method, http.HTTPMethod.GET)  # Method: GET
-        assert_file_not_found_error_response(get_non_existent_file_response)                                # Check Error message: "File not found"
+        assert_get_file_not_found_error_response(get_non_existent_file_response)                                # Error message: "File not found"
         validate_json_schema(get_non_existent_file_response, NotFoundErrorResponseSchema)   # JSON schema validation
 
 

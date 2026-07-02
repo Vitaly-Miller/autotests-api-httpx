@@ -10,11 +10,11 @@ from tools.assertions.base_assert import (
     assert_not_equal
 )
 #=======================================================================================================================
-# Response data is NON-empty
-@allure.step('Check Response data is NON-empty')
+# Auth Response data is NON-empty
+@allure.step('Auth Response data is NON-empty')
 def assert_auth_response_non_empty(response: AuthResponseSchema):
     """
-    Check Response data is NON-empty
+    Auth Response data is NON-empty
 
     :param response: Pydantic-model (AuthResponseSchem)
     :raise AssertionError
@@ -31,7 +31,7 @@ def assert_token(response: AuthResponseSchema):
     """
     Tokens validation
 
-    - Token type = 'bearer'
+    - Token type = "bearer"
     - Access token length = 199 chars
     - Refresh token length = 199 chars
     - Access token ≠ Refresh token

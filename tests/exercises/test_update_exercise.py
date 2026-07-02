@@ -32,10 +32,9 @@ class TestUpdateExercise:
         response = update_exercise_api                                        # Сохраняем ответ API-фикстуры
 
         # Assertions
-        assert_status_code(response.status_code, http.HTTPStatus.OK)        # Status code: 200
-        assert_request_method(response.request.method, http.HTTPMethod.PATCH)        # Method: PATCH
-        assert_update_exercise_response(response)                                     # Response data = Request data
-        validate_json_schema(response, UpdateExerciseResponseSchema)  # Validate JSON schema
+        assert_status_code(response.status_code, http.HTTPStatus.OK)           # Status code: 200
+        assert_request_method(response.request.method, http.HTTPMethod.PATCH)  # Method: PATCH
+        validate_json_schema(response, UpdateExerciseResponseSchema)          # Validate JSON schema
 
 
 
@@ -43,14 +42,14 @@ class TestUpdateExercise:
     def test_update_exercise_2(self, exercises_client: ExercisesClient, create_exercise: CreateExerciseSchema):
         new_exercise_data = UpdateExerciseRequestSchema()       # Pydantic-model with fake-data (Update ALL data)
         response = exercises_client.update_exercise_api(        # ▶ Запрос через API-метод
-            create_exercise.exercise_id,              # Передаем Exercise ID
+            create_exercise.exercise_id,              # Передаем Exercise-ID
             new_exercise_data                   # Передаем Pydantic-model c данными, которые необходимо обновить
         )
-
+        response_model = UpdateExerciseResponseSchema.model_validate_json(response.text)  # httpx.Response —> Pydantic-model (deserialize)
         # Assertions
-        assert_status_code(response.status_code, http.HTTPStatus.OK)        # Status code: 200
-        assert_request_method(response.request.method, http.HTTPMethod.PATCH)        # Method: PATCH
-        assert_update_exercise_response(response)                                     # Response data = Request data
+        assert_status_code(response.status_code, http.HTTPStatus.OK)           # Status code: 200
+        assert_request_method(response.request.method, http.HTTPMethod.PATCH)  # Method: PATCH
+        assert_update_exercise_response(response_model, new_exercise_data)    # Response data = Request data
         validate_json_schema(response, UpdateExerciseResponseSchema)  # Validate JSON schema
 
 

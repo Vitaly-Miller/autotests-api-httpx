@@ -10,11 +10,11 @@ from schemas.courses_schema import (
 )
 
 #=======================================================================================================================
-# Response Created course data = Request Create course data
-@allure.step('Response Created course data = Request Create course data')
+# Create Course Response data = Request data
+@allure.step('Create Course Response data = Request data')
 def assert_create_course_response(response: CreateCourseResponseSchema, request: CreateCourseRequestSchema):
     """
-    Response Created course data = Request Create course data
+    Create Course Response data = Request data
 
     :param response: Pydantic-model (CreateCourseResponseSchema)
     :param request: Pydantic-model (CreateCourseRequestSchema)
@@ -30,13 +30,13 @@ def assert_create_course_response(response: CreateCourseResponseSchema, request:
 
 
 
-# Check get List of courses = List of Created courses
-@allure.step('Check get List of courses = List of Created courses')
+# Get list of Courses = List of Created courses
+@allure.step('Get list of Courses = List of Created courses')
 def assert_get_courses_responses(
         get_courses_response: GetCoursesResponseSchema,
         create_course_responses: list[CreateCourseResponseSchema]):
     """
-    Проверка получения [списка] курсов с созданными курсами
+    Get list of Courses = List of Created courses
 
     :param get_courses_response: Pydantic-model (GetCoursesResponseSchema)
     :param create_course_responses: Pydantic-model (list[CreateCourseResponseSchema])
@@ -48,11 +48,11 @@ def assert_get_courses_responses(
 
 
 
-# Response Updated course data = Request with New course data
-@allure.step('Response Updated course data = Request with New course data')
+# Updated Course Response data = Request data
+@allure.step('Updated Course Response data = Request data')
 def assert_update_course_response(response: UpdateCourseResponseSchema, request: UpdateCourseRequestSchema):
     """
-    Response Updated course data = Request with New course data
+    Updated Course Response data = Request data
 
     :param response: Pydantic-model (UpdateCourseResponseSchema)
     :param request: Pydantic-model (UpdateCourseRequestSchema)

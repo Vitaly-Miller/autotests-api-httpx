@@ -74,7 +74,7 @@ class CreateExerciseSchema(BaseModel):
     response: CreateExerciseResponseSchema  # ┘
 
     #--- Методы прямого доступа к данным ---
-    # Exercise ID
+    # Exercise-ID
     @property
     def exercise_id(self):
         return self.response.exercise.id

@@ -1,5 +1,5 @@
 """
-TEST Get Exercises
+TEST Get Exercises [list]
 """
 import httpx
 import http
@@ -25,10 +25,11 @@ from tools.tool import Tool
 class TestGetExercises:
     @allure.title('Get Exercises (v.1 - Через API-фикстуры: exercises_client, create_exercise)')  # Allure step Title
     def test_get_exercises(self, create_exercise_api: httpx.Response, get_exercises_api: httpx.Response):
+        response = get_exercises_api                                                     # Сохраняем ответ API-фикстуры
 
         # Assertions
-        assert_status_code(get_exercises_api, http.HTTPStatus.OK)           # Status code: 200
-        assert_request_method(get_exercises_api, http.HTTPMethod.GET)             # Method: GET
+        assert_status_code(response.status_code, http.HTTPStatus.OK)          # Status code: 200
+        assert_request_method(response.request.method, http.HTTPMethod.GET)   # Method: GET
 
 
 #=======================================================================================================================

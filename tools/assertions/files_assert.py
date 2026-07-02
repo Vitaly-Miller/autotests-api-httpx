@@ -9,11 +9,11 @@ from tools.assertions.base_assert import assert_length, assert_is_value, assert_
 from tools.assertions.errors_assert import assert_error_response, assert_not_found_error_response
 
 #=======================================================================================================================
-# Response data is NON-empty
-@allure.step('Check Response data is NON-empty')
+# Create File Response data is NON-empty
+@allure.step('Create File Response data is NON-empty')
 def assert_create_file_response_non_empty(response: CreateFileResponseSchema):
     """
-    Check Response data is NON-empty
+    Create File Response data is NON-empty
 
     :param response: Pydantic-model (CreateFileResponseSchema)
     :raise AssertionError
@@ -24,11 +24,11 @@ def assert_create_file_response_non_empty(response: CreateFileResponseSchema):
     assert_is_value(response.file.url, 'url')
 
 
-# Response data = Request data
-@allure.step('Check Response created file data = Request create file data')
+# Create File Response data = Request data
+@allure.step('Create File Response data = Request data')
 def assert_create_file_response_data(response: CreateFileResponseSchema, request: CreateFileRequestSchema):
     """
-    Check Response data = Request data
+    Create File Response data = Request data
 
     :param response: Pydantic-model (CreateFileResponseSchema)
     :param request: Pydantic-model (CreateFileRequestSchema)
@@ -48,20 +48,19 @@ def assert_file_id(response: CreateFileResponseSchema | GetFileResponseSchema, f
     """
     File-ID validation
 
-    - NON-empty File-ID
+    - File-ID is NON-empty
     - File-ID length = 36 chars
-    - File-ID = expected File-ID (optional)
-
+    - Actual File-ID = Expected File-ID (optional)
 
     :param response: Pydantic-model (CreateFileResponseSchema)
     :param file_id: File-ID / None (optional)
     :raise AssertionError
     """
-    assert_is_value(response.file.id, 'id')                       # NON-empty File-ID
+    assert_is_value(response.file.id, 'id')                       # File-ID is NON-empty
     assert_length(response.file.id,36,'id')         # File-ID length = 36 chars
 
     if file_id:
-        assert_equal(response.file.id, file_id, 'id')   # File-ID = expected File-ID
+        assert_equal(response.file.id, file_id, 'id')    # Actual File-ID = Expected File-ID
 
 
 #-----------------------------------------------------------------------------------------------------------------------
@@ -69,19 +68,17 @@ def assert_file_id(response: CreateFileResponseSchema | GetFileResponseSchema, f
 
 #====================================================== NEGATIVE =======================================================
 #----------------------------------------------------- Create File -----------------------------------------------------
-# Create file by Empty File Name
+# Create File Error Response by empty "filename"
 def assert_create_file_empty_filename_error_response(response: httpx.Response):
     """
-    Validation Error Response by Empty File Name
-
-    Сравнивает Error Response с ожидаемой Pydantic-model (ErrorResponseSchema) при создании файла с пустым 'filename'
+    Create File Error Response by empty "filename"
 
     :param response: httpx.Response
     :return: AssertionError
     """
-    with allure.step('Validation create file Error Response by Empty File Name'):       # Allure step Title
-        actual_response = ErrorResponseSchema.model_validate_json(response.text)  # httpx.Response  —> Pydantic-model
-        expected_response = ErrorResponseSchema(                                  # Инициализация ожидаемой Pydantic-model
+    with allure.step('Create File Error Response by empty "filename"'):      # Allure step Title
+        actual_response = ErrorResponseSchema.model_validate_json(response.text)   # httpx.Response  —> Pydantic-model (deserialize)
+        expected_response = ErrorResponseSchema(                                   # Инициализация ожидаемой Pydantic-model
             detail=[
                 ErrorSchema(
                     type='missing',
@@ -96,19 +93,17 @@ def assert_create_file_empty_filename_error_response(response: httpx.Response):
 
 
 
-# Create file by Empty Directory
+# Create File Error Response by empty "directory"
 def assert_create_file_empty_directory_error_response(response: httpx.Response):
     """
-    Validation Error Response by Empty Directory
-
-    Сравнивает Error Response с ожидаемой Pydantic-model (ErrorResponseSchema) при создании файла с пустым 'directory'
+    Create File Error Response by empty "directory"
 
     :param response: httpx.Response
     :return: AssertionError
     """
-    with allure.step('Validation create file Error Response by Empty Directory'):       # Allure step Title
-        actual_response = ErrorResponseSchema.model_validate_json(response.text)  # httpx.Response  —> Pydantic-model
-        expected_response = ErrorResponseSchema(                                  # Инициализация ожидаемой Pydantic-model
+    with allure.step('Create File Error Response by empty "directory"'):     # Allure step Title
+        actual_response = ErrorResponseSchema.model_validate_json(response.text)   # httpx.Response —> Pydantic-model (deserialize)
+        expected_response = ErrorResponseSchema(                                   # Инициализация ожидаемой Pydantic-model
             detail=[
                 ErrorSchema(
                     type='missing',
@@ -124,12 +119,14 @@ def assert_create_file_empty_directory_error_response(response: httpx.Response):
 
 
 #------------------------------------------------------- Get File ------------------------------------------------------
-@allure.step('Validation get file Error Response by invalid File-ID (non-UUID)')
+# Get File Error Response by invalid File-ID (non-UUID)
+@allure.step('Get File Error Response by invalid File-ID (non-UUID)')
 def assert_get_file_invalid_id_error_response(response: httpx.Response):
     """
-    Проверка Error Response при получении файла с невалидным File-ID (non-UUID format)
+    Get File Error Response by invalid File-ID (non-UUID)
 
-    Сравнивает Error Response с ожидаемой Pydantic-model (ErrorResponseSchema) при создании файла с невалидным File-ID (non-UUID format)
+    - actual   - Deserialize httpx.Response —> Pydantic-model (ErrorResponseSchema)
+    - expected - Initialize (ErrorResponseSchema)
 
     :param response: httpx.Response
     :return: AssertionError
@@ -149,21 +146,23 @@ def assert_get_file_invalid_id_error_response(response: httpx.Response):
     assert_error_response(actual_response, expected_response)
 
 
-@allure.step('Validation get NON-Existent file Error Response')
-def assert_file_not_found_error_response(response: httpx.Response):
+# Get File Not Found Error Response by NON-existent file
+@allure.step('Get File Not Found Error Response by NON-existent file')
+def assert_get_file_not_found_error_response(response: httpx.Response):
     """
-    Get NON-existent File / Error Response message
+    Get File Not Found Error Response by NON-existent file
 
-    Сравнивает Error Response с Pydantic-model (NotFoundErrorResponseSchema)
+    - actual   - Deserialize httpx.Response —> Pydantic-model (NotFoundErrorResponseSchema)
+    - expected - Initialize (NotFoundErrorResponseSchema)
 
     :param response: httpx.Response
     :return: AssertionError
     """
-    actual_response = NotFoundErrorResponseSchema.model_validate_json(response.text)  # httpx.Response  —> Pydantic-model
+    actual_response = NotFoundErrorResponseSchema.model_validate_json(response.text)  # httpx.Response —> Pydantic-model (deserialize)
     expected_response = NotFoundErrorResponseSchema(
-        detail='File not found'                                                             # Expected error message
+        detail='File not found'                                                       # Expected error message
     )
-    assert_not_found_error_response(actual_response, expected_response)  # "detail": "File not found"
+    assert_not_found_error_response(actual_response, expected_response)
 
 
 

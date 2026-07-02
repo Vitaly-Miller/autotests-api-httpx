@@ -26,7 +26,7 @@ from tools.tool import Tool
 @allure.parent_suite(Epic.API)                                # ┐
 @allure.suite(Feature.COURSES)                                # │ Allure Suites (optional)
 @allure.sub_suite(Story.CREATE)                               # ┘
-@allure.severity(allure.severity_level.NORMAL)   # ] Allure Severity
+@allure.severity(allure.severity_level.NORMAL)                # ] Allure Severity
 #-----------------------------------------------------------------------------------------------------------------------
 class TestCreateCourse:
     @allure.title('Create Course (v.1 - Через API-фикстуру полного цикла)')         # Allure step Title
