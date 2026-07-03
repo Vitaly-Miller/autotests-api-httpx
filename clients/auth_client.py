@@ -5,7 +5,7 @@ import allure
 import httpx
 from clients.api_client import APIClient
 from schemas.auth_schema import RefreshRequestSchema, AuthDataSchema, AuthResponseSchema
-from clients.httpx_public_client import get_httpx_public_client
+from clients.httpx_public_builder import get_httpx_public_client
 
 #==================================================== Auth Client ======================================================
 class AuthClient(APIClient):

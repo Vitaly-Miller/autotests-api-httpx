@@ -5,7 +5,7 @@ PUBLIC Users Client
 import httpx
 import allure
 from clients.api_client import APIClient
-from clients.httpx_public_client import get_httpx_public_client
+from clients.httpx_public_builder import get_httpx_public_client
 from schemas.users_schema import CreateUserRequestSchema, CreateUserResponseSchema
 
 #================================================= Public Users Client =================================================

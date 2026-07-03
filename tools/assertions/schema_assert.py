@@ -30,16 +30,16 @@ def validate_json_schema(instance: httpx.Response | dict, schema: type[pydantic.
 
         # Allure attachment of Response JSON
         allure.attach(
-            body=instance_pretty,                          # Instance JSON-string (pretty)
-            name='Response JSON',                          # Allure attachment title (статический)
-            attachment_type=allure.attachment_type.JSON    # Allure JSON-output
+            body=instance_pretty,                          # Прикрепляемый объект
+            name='Response JSON',                          # Allure attachment title
+            attachment_type=allure.attachment_type.JSON    # Output type (Тип отображения объекта - JSON)
         )
 
         # Allure attachment of JSON Schema
         allure.attach(
-            body=json_schema_pretty,                       # JSON Schema JSON-string (pretty)
+            body=json_schema_pretty,                       # Прикрепляемый объект
             name=f'JSON Schema ({schema.__name__})',       # Allure attachment title (динамический)
-            attachment_type=allure.attachment_type.JSON    # Allure JSON-output
+            attachment_type=allure.attachment_type.JSON    # Output type (Тип отображения объекта - JSON)
         )
 
         # Validation

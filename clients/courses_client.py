@@ -4,7 +4,7 @@ Courses Client
 import allure
 import httpx
 from clients.api_client import APIClient
-from clients.httpx_private_client import get_httpx_private_client
+from clients.httpx_private_builder import get_httpx_private_client
 from schemas.auth_schema import AuthDataSchema
 from schemas.courses_schema import (
     CreateCourseRequestSchema, CreateCourseResponseSchema, GetCoursesQwerySchema,
