@@ -5,7 +5,7 @@ PUBLIC Users Client
 import httpx
 import allure
 from clients.api_client import APIClient
-from clients.httpx_public_builder import get_httpx_public_client
+from clients.public_httpx_client_builder import get_public_httpx_client
 from schemas.users_schema import CreateUserRequestSchema, CreateUserResponseSchema
 
 #================================================= Public Users Client =================================================
@@ -49,7 +49,7 @@ def get_public_users_client() -> PublicUsersClient:
 
     :return: Экземпляр PrivateUsersClient (с Base URL)
     """
-    public_users_client = PublicUsersClient(client=get_httpx_public_client())
+    public_users_client = PublicUsersClient(client=get_public_httpx_client())
     return public_users_client
 
 #-----------------------------------------------------------------------------------------------------------------------

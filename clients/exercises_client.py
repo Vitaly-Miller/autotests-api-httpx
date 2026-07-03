@@ -4,7 +4,7 @@ Exercises Client
 import httpx
 import allure
 from clients.api_client import APIClient
-from clients.httpx_private_builder import get_httpx_private_client
+from clients.private_httpx_client_builder import get_private_httpx_client
 from schemas.auth_schema import AuthDataSchema
 from schemas.exercises_schema import (
     CreateExerciseRequestSchema,
@@ -148,5 +148,5 @@ def get_exercises_client(auth_data: AuthDataSchema) -> ExercisesClient:
     :param auth_data: Pydantic-model c данными для аутентификации пользователя (Email, Password)
     :return: Экземпляр ExercisesClient (с Авторизацией)
     """
-    exercises_client = ExercisesClient(client=get_httpx_private_client(auth_data))
+    exercises_client = ExercisesClient(client=get_private_httpx_client(auth_data))
     return exercises_client
