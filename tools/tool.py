@@ -2,6 +2,7 @@
 Tools - ⚠️В РАЗРАБОТКЕ
 
 """
+import httpx
 import inspect
 import os
 import json
@@ -41,7 +42,7 @@ class Tool:
     # (⚠️НЕ ИСПОЛЬЗУЕТСЯ)
     # Saving USER DATA to .env (3-in-1)
     @staticmethod
-    def save_user_data(response):
+    def save_user_data(response: httpx.Response):
         request_body = json.loads(response.request.content)
         response_body = response.json()
         Tool.save_env(request_body['clientName'], 'CLIENT_NAME')
@@ -52,7 +53,7 @@ class Tool:
     """ ⚠️USE IN THE FINAL -> Tool.api_report(response)"""
 
     @staticmethod
-    def api_report(response):
+    def api_report(response: httpx.Response):
         report = Report(response)       # Экземпляр класса (инициализация)
         report.api_title()              # Методы класса:   (вызовы)
         report.api_url()

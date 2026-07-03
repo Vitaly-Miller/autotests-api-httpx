@@ -1,12 +1,13 @@
 """
 API REPORT to console (✨Pretty)
 """
+import httpx
 import json
 from tools.formatting.colors import ANSI
 
 #=======================================================================================================================
 class Report:
-    def __init__(self, response):
+    def __init__(self, response: httpx.Response):
         self.response = response
     #-------------------------------------------------- Base -----------------------------------------------------------
     # Title
