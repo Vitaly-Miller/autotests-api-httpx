@@ -30,29 +30,4 @@ def make_curl_from_request(request: httpx.Request) -> str:
     # Объединение списка строк result в одну строку (через склеивание .join())
     return " \\\n  ".join(result)                          # <пробел>, разделитель-<\> (экранированный), перенос сроки-<\n>, <пробел>, <пробел>
 
-
-#-------------------------------------------------------- Check --------------------------------------------------------
-body = {
-  "email": "test@email.com",
-  "password": "123456",
-  "lastName": "Connor",
-  "firstName": "Jonn",
-}
-response = httpx.post('http://localhost:8000/api/v1/users', json=body)
-print(make_curl_from_request(request=response.request))
-"""
----------------------- Example cURL --------------------------------
-curl -X "POST" \
-  "http://localhost:8000/api/v1/users" \
-  -H "host: localhost:8000" \
-  -H "accept: */*" \
-  -H "accept-encoding: gzip, deflate" \
-  -H "connection: keep-alive" \
-  -H "user-agent: python-httpx/0.28.1" \
-  -H "content-length: 85" \
-  -H "content-type: application/json" \
-  -d "{"email":"test@email.com","password":"123456","lastName":"Jonn","Connor":"Jonn"}"
---------------------------------------------------------------------
-"""
-
 #=======================================================================================================================

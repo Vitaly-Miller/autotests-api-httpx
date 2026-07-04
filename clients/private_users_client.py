@@ -45,7 +45,7 @@ class PrivateUsersClient(APIClient):
 
     #-------------------------------------------------- Get User -------------------------------------------------------
     # API
-    @allure.step('Get user by ID: {user_id} (API)')
+    @allure.step('Get user by ID (API)')
     def get_user_api(self, user_id: str) -> httpx.Response:
         """
         API-метод получения данных пользователя по User-ID
@@ -58,7 +58,7 @@ class PrivateUsersClient(APIClient):
 
 
     # Pydantic-model
-    @allure.step('Get user by ID: {user_id} (Pydantic)')
+    @allure.step('Get user by ID (Pydantic)')
     def get_user_pydantic(self, user_id: str) -> GetUserResponseSchema:
         """
         Pydantic-метод получения данных пользователя по User-ID
@@ -73,7 +73,7 @@ class PrivateUsersClient(APIClient):
 
     #------------------------------------------------- Update User -----------------------------------------------------
     # API
-    @allure.step('Update user by ID: {user_id} (API)')
+    @allure.step('Update user by ID (API)')
     def update_user_api(self, user_id: str, update_data: UpdateUserRequestSchema) -> httpx.Response:
         """
         API-метод частичного обновления данных пользователя по User-ID
@@ -90,7 +90,7 @@ class PrivateUsersClient(APIClient):
 
 
     # Pydantic-model
-    @allure.step('Update user by ID: {user_id} (Pydantic)')
+    @allure.step('Update user by ID (Pydantic)')
     def update_user_pydantic(self, user_id: str, update_data: UpdateUserRequestSchema) -> UserUpdateResponseSchema:
         """
         Pydantic-метод частичного обновления данных пользователя по User-ID
@@ -106,7 +106,7 @@ class PrivateUsersClient(APIClient):
 
     #------------------------------------------------- Delete User -----------------------------------------------------
     # API
-    @allure.step('Delete user by ID: {user_id} (API)')
+    @allure.step('Delete user by ID (API)')
     def delete_user_api(self, user_id: str) -> httpx.Response:
         """
         API-метод удаления пользователя по User-ID

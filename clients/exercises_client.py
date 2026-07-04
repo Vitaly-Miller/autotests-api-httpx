@@ -47,7 +47,7 @@ class ExercisesClient(APIClient):
 
     #------------------------------------------------ Get Exercise -----------------------------------------------------
     # API
-    @allure.step('Get exercise by ID: {exercise_id} (API)')
+    @allure.step('Get exercise by ID (API)')
     def get_exercise_api(self, exercise_id: str) -> httpx.Response:
         """
         API-метод получения информации о задании по Exercise-ID
@@ -60,7 +60,7 @@ class ExercisesClient(APIClient):
 
 
     # Pydantic-model
-    @allure.step('Get exercise by ID: {exercise_id} (Pydantic)')
+    @allure.step('Get exercise by ID (Pydantic)')
     def get_exercise(self, exercise_id: str) -> GetExerciseResponseSchema:
         """
         Pydantic-метод получения информации о задании по Exercise-ID
@@ -75,7 +75,7 @@ class ExercisesClient(APIClient):
 
     #------------------------------------------------ Get Exercises ----------------------------------------------------
     # API
-    @allure.step('Get exercises by Course-ID: {query_course_id} (API)')
+    @allure.step('Get exercises by Course-ID (API)')
     def get_exercises_api(self, query_course_id: GetExercisesQwerySchema) -> httpx.Response:
         """
         API-метод получения списка заданий по Course-ID (?query)
@@ -91,7 +91,7 @@ class ExercisesClient(APIClient):
 
     #---------------------------------------------- Update Exercise ----------------------------------------------------
     # API
-    @allure.step('Update exercise by ID: {exercise_id} (API)')
+    @allure.step('Update exercise by ID (API)')
     def update_exercise_api(self, exercise_id: str, new_exercise_data: UpdateExerciseRequestSchema) -> httpx.Response:
         """
         API-метод частичного обновления данных задания
@@ -108,7 +108,7 @@ class ExercisesClient(APIClient):
 
 
     # Pydantic-model
-    @allure.step('Update exercise by ID: {exercise_id} (Pydantic)')
+    @allure.step('Update exercise by ID (Pydantic)')
     def update_exercise(self, exercise_id: str, new_exercise_data: UpdateExerciseRequestSchema) -> UpdateExerciseResponseSchema:
         """
         Pydantic-метод частичного обновления данных задания
@@ -127,7 +127,7 @@ class ExercisesClient(APIClient):
 
     #---------------------------------------------- Delete Exercise ----------------------------------------------------
     # API
-    @allure.step('Delete exercise by ID: {exercise_id} (API)')
+    @allure.step('Delete exercise by ID (API)')
     def delete_exercise_api(self, exercise_id: str) -> httpx.Response:
         """
         Метод удаление задания по Exercise-ID

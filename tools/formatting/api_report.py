@@ -69,8 +69,8 @@ class Report:
                 request_body_json = json.dumps(request_body, indent=2, ensure_ascii=False)
                 print(request_body_json)
             else:
-                print(f'{{\n\t<None>\n}}')
-        except Exception:  # NOQA
+                print(f'{{\n\t<none>\n}}')
+        except Exception:     # NOQA <— ⚠️Заменить на except httpx.RequestNotRead:
             print(f'{{\n\t<multipart/stream>\n}}')
 
 

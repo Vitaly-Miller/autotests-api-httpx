@@ -14,7 +14,7 @@ class FilesClient(APIClient):
     ENDPOINT = '/files'
     #---------------------------------------------------- Get File -----------------------------------------------------
     # API
-    @allure.step('Get file by ID: {file_id} (API)')
+    @allure.step('Get file by ID (API)')
     def get_file_api(self, file_id: str) -> httpx.Response:
         """
         API-метод получения файла (Download) по File-ID
@@ -27,7 +27,7 @@ class FilesClient(APIClient):
 
 
     # Pydantic-model
-    @allure.step('Get file by ID: {file_id} (Pydantic)')
+    @allure.step('Get file by ID (Pydantic)')
     def get_file(self, file_id: str) -> GetFileResponseSchema:
         """
         Pydantic-метод получения файла (Download) по File-ID
@@ -76,7 +76,7 @@ class FilesClient(APIClient):
 
     #--------------------------------------------------- Delete File ---------------------------------------------------
     # API
-    @allure.step('Delete file by ID: {file_id} (API)')
+    @allure.step('Delete file by ID (API)')
     def delete_file_api(self, file_id: str) -> httpx.Response:
         """
         API-метод удаления файла

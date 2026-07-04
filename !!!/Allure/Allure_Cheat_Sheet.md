@@ -285,7 +285,7 @@ def test_step_in_func_decorator_with_sub_steps_param():
 
 ``` python
 allure.attach(
-    str(response.json()),
+    body=str(response.json()),
     name='Response',
     attachment_type=allure.attachment_type.JSON
 )
@@ -295,7 +295,7 @@ allure.attach(
 
 ``` python
 allure.attach.file(
-    'screenshot.png',
+    body='screenshot.png',
     name='Screenshot',
     attachment_type=allure.attachment_type.PNG
 )
@@ -305,7 +305,7 @@ allure.attach.file(
 
 ``` python
 allure.attach(
-    logs,
+    body=logs,
     name='Logs',
     attachment_type=allure.attachment_type.TEXT
 )
@@ -317,7 +317,7 @@ allure.attach(
 ## Request Body
 ``` python
 allure.attach(
-    str(payload),
+    body=str(payload),
     name='Request Body',
     attachment_type=allure.attachment_type.JSON
 )
@@ -326,7 +326,7 @@ allure.attach(
 ## Response Body
 ``` python
 allure.attach(
-    response.text,
+    body=response.text,
     name='Response Body',
     attachment_type=allure.attachment_type.JSON
 )
@@ -335,7 +335,7 @@ allure.attach(
 ## Response Headers
 ``` python
 allure.attach(
-    str(response.headers),
+    body=str(response.headers),
     name='Response Headers',
     attachment_type=allure.attachment_type.TEXT
 )

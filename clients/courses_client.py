@@ -16,7 +16,7 @@ class CoursesClient(APIClient):
     ENDPOINT = '/courses'
     #------------------------------------------------- Get Courses -----------------------------------------------------
     # API
-    @allure.step('Get courses by User-ID {query_user_id} (API)')
+    @allure.step('Get courses by User-ID (API)')
     def get_courses_api(self, query_user_id: GetCoursesQwerySchema) -> httpx.Response:
         """
         API-метод получения списка курсов по User-ID (?query)
@@ -32,7 +32,7 @@ class CoursesClient(APIClient):
 
     #-------------------------------------------------- Get Course -----------------------------------------------------
     # API
-    @allure.step('Get course by ID: {course_id} (API)')
+    @allure.step('Get course by ID (API)')
     def get_course_api(self, course_id: str) -> httpx.Response:
         """
         API-метод получения курса по Course-ID
@@ -77,7 +77,7 @@ class CoursesClient(APIClient):
 
     #------------------------------------------------- Update Course ---------------------------------------------------
     # API
-    @allure.step('Update course by ID: {course_id} (API)')
+    @allure.step('Update course by ID (API)')
     def update_course_api(self, course_id: str, new_course_data: UpdateCourseRequestSchema) -> httpx.Response:
         """
         API-метод частичного обновления курса по Course-ID
@@ -94,7 +94,7 @@ class CoursesClient(APIClient):
 
 
     # Pydantic-model
-    @allure.step('Update course by ID: {course_id} (Pydantic)')
+    @allure.step('Update course by ID (Pydantic)')
     def update_course_pydantic(self, course_id: str, new_course_data: UpdateCourseRequestSchema) -> UpdateCourseResponseSchema:
         """
         Pydantic-метод частичного обновления курса по Course-ID
@@ -110,7 +110,7 @@ class CoursesClient(APIClient):
 
     #------------------------------------------------- Delete Course ---------------------------------------------------
     # API
-    @allure.step('Delete course by ID: {course_id} (API)')
+    @allure.step('Delete course by ID (API)')
     def delete_course_api(self, course_id: str) -> httpx.Response:
         """
         API-метод удаления курса по Course-ID

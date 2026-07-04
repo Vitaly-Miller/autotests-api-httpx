@@ -6,7 +6,7 @@ import allure
 import httpx
 from clients.auth_client import get_auth_client
 from schemas.auth_schema import AuthDataSchema
-from tools.event_hooks import curl_event_hook
+from tools.event_hooks import curl_command, api_request_body
 from functools import lru_cache
 
 
@@ -29,7 +29,12 @@ def get_private_httpx_client(auth_data: AuthDataSchema) -> httpx.Client:  # Пр
     private_httpx_client = httpx.Client(                                  # Создаём экземпляр httpx.Client() с передачей:...
         base_url=BASE_URL,                                                # ...Base URL
         headers=headers,                                                  # ...Headers c Token
-        event_hooks={'request': [curl_event_hook]}                        # ...Event hooks (cURL command generator)
+        event_hooks={                               # Event hooks:
+            'request': [                            # ...for Request:
+                curl_command,                       # - сURL command (TEXT) - callback
+                api_request_body                    # - API Request body (JSON) - callback
+            ]
+        }
     )
     return private_httpx_client                                           # httpx.Client (с Base URL + Token + Event hooks)
 
