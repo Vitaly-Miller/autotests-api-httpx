@@ -32,7 +32,7 @@ class APIClient:
 
 
     # POST -----------------------------------------------------------------------------------------------------------
-    @allure.step('🟡POST-request to {url}')
+    @allure.step('🟡POST-request')
     def post(self,
              url: httpx.URL | str,
              json: Any | None = None,
@@ -51,7 +51,7 @@ class APIClient:
 
 
     # PATCH ----------------------------------------------------------------------------------------------------------
-    @allure.step('🟣PATCH-request to {url}')
+    @allure.step('🟣PATCH-request')
     def patch(self,
               url: httpx.URL | str,
               json: Any | None = None) -> httpx.Response:
@@ -66,7 +66,7 @@ class APIClient:
 
 
     # PUT ------------------------------------------------------------------------------------------------------------
-    @allure.step('🔵PUT-request to {url}')
+    @allure.step('🔵PUT-request')
     def put(self,
             url: httpx.URL | str,
             json: Any | None = None) -> httpx.Response:
@@ -81,7 +81,7 @@ class APIClient:
 
 
     # DELETE ---------------------------------------------------------------------------------------------------------
-    @allure.step('🔴DELETE-request to {url}')
+    @allure.step('🔴DELETE-request')
     def delete(self,
                url: httpx.URL | str) -> httpx.Response:
         """
