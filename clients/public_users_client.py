@@ -13,7 +13,7 @@ class PublicUsersClient(APIClient):
     ENDPOINT = '/users'
     #------------------------------------------------- Create User  ----------------------------------------------------
     # API
-    @allure.step('Create user (API)')
+    @allure.step('Create User (API)')
     def create_user_api(self, create_user_data: CreateUserRequestSchema) -> httpx.Response:
         """
         API-метод создания нового пользователя
@@ -28,7 +28,7 @@ class PublicUsersClient(APIClient):
 
 
     # Pydantic-model
-    @allure.step('Create user (Pydantic)')
+    @allure.step('Create User (Pydantic)')
     def create_user(self, create_user_data: CreateUserRequestSchema) -> CreateUserResponseSchema:
         """
         Pydantic-метод для создания нового пользователя

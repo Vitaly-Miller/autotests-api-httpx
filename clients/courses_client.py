@@ -62,7 +62,7 @@ class CoursesClient(APIClient):
 
 
     # Pydantic-model
-    @allure.step('Create course (Pydantic)')
+    @allure.step('Create Course (Pydantic)')
     def create_course(self, create_course_data: CreateCourseRequestSchema) -> CreateCourseResponseSchema:
         """
         Pydantic-метод создания курса
@@ -77,7 +77,7 @@ class CoursesClient(APIClient):
 
     #------------------------------------------------- Update Course ---------------------------------------------------
     # API
-    @allure.step('Update course by ID (API)')
+    @allure.step('Update Course by ID (API)')
     def update_course_api(self, course_id: str, new_course_data: UpdateCourseRequestSchema) -> httpx.Response:
         """
         API-метод частичного обновления курса по Course-ID
@@ -94,7 +94,7 @@ class CoursesClient(APIClient):
 
 
     # Pydantic-model
-    @allure.step('Update course by ID (Pydantic)')
+    @allure.step('Update Course by ID (Pydantic)')
     def update_course_pydantic(self, course_id: str, new_course_data: UpdateCourseRequestSchema) -> UpdateCourseResponseSchema:
         """
         Pydantic-метод частичного обновления курса по Course-ID
@@ -110,7 +110,7 @@ class CoursesClient(APIClient):
 
     #------------------------------------------------- Delete Course ---------------------------------------------------
     # API
-    @allure.step('Delete course by ID (API)')
+    @allure.step('Delete Course by ID (API)')
     def delete_course_api(self, course_id: str) -> httpx.Response:
         """
         API-метод удаления курса по Course-ID

@@ -12,7 +12,7 @@ class AuthClient(APIClient):
     ENDPOINT = '/authentication'
     #--------------------------------------------------- Login ---------------------------------------------------------
     # API
-    @allure.step('Login user (API)')
+    @allure.step('Login User (API)')
     def login_api(self, auth_data: AuthDataSchema) -> httpx.Response:
         """
         API-метод аутентификации пользователя (Log in)
@@ -27,7 +27,7 @@ class AuthClient(APIClient):
         return response
 
     # Pydantic-model
-    @allure.step('Login user (Pydantic)')
+    @allure.step('Login User (Pydantic)')
     def login_pydantic(self, auth_data: AuthDataSchema) -> AuthResponseSchema:
         """
         Pydantic-метод аутентификации пользователя (Log in)
@@ -42,7 +42,7 @@ class AuthClient(APIClient):
 
     #-------------------------------------------------- Refresh --------------------------------------------------------
     # API
-    @allure.step('Refresh token (API)')
+    @allure.step('Refresh Token (API)')
     def refresh_api(self, refresh_token: RefreshRequestSchema) -> httpx.Response:
         """
         API-метод обновления токена авторизации

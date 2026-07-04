@@ -6,7 +6,7 @@ import allure
 import httpx
 from clients.auth_client import get_auth_client
 from schemas.auth_schema import AuthDataSchema
-from tools.event_hooks import curl_command, api_request_body
+from tools.event_hooks import curl_command
 from functools import lru_cache
 
 

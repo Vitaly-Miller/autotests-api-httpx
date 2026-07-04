@@ -4,7 +4,7 @@ Public httpx.Client builder
 """
 import httpx
 import allure
-from tools.event_hooks import curl_command, api_request_body
+from tools.event_hooks import api_report, curl_command
 
 #============================================= Public httpx.Client (Builder) ===========================================
 BASE_URL = 'http://localhost:8000/api/v1'
@@ -19,9 +19,9 @@ def get_public_httpx_client() -> httpx.Client:
     public_httpx_client = httpx.Client(             # Создаём экземпляр httpx.Client() с передачей:
         base_url=BASE_URL,                          # Base URL
         event_hooks={                               # Event hooks:
-            'request': [                            # ...for Request:
-                curl_command,                       # - сURL command (TEXT) - callback
-                api_request_body                    # - API Request body (JSON) - callback
+            'response': [                            # ...for Request:
+                api_report,                    # - API Request body (JSON) - callback
+                curl_command                       # - сURL command (TEXT) - callback
             ]
         }
     )
