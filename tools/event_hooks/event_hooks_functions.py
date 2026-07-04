@@ -59,7 +59,7 @@ def get_api_response_body(response: httpx.Response):
             indent=2,                                        # - Отступы
             ensure_ascii=False)                              # - Не заменять не-ASCII (не-латинские) символы на Unicode
     except Exception as e:                                   # Если исключение, то сохранить описание в <e>,...
-        response_body_json = f' ⚠️ {e}'                      # ... Response Body with Exception
+        response_body_json = f'⚠️\n{e}'                      # ... Response Body with Exception
     return response_body_json
 
 #-----------------------------------------------------------------------------------------------------------------------
