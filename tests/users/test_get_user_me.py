@@ -38,7 +38,7 @@ class TestGetUserMe:
         # Assertions
         assert_status_code(response.status_code, HTTPStatus.OK)        # Status code: 200
         assert_request_method(response.request.method, HTTPMethod.GET) # Method: GET
-        assert_create_user_response_non_empty(response_model)                         # Response data is NON-empty
+        assert_create_user_response_non_empty(response_model)                         # Response data is non-empty
         assert_user_id(response_model)                                                # User-ID validation
         validate_json_schema(response, GetUserMeResponseSchema)       # JSON schema validation
 
@@ -52,7 +52,7 @@ class TestGetUserMe:
         # Assertions
         assert_status_code(response.status_code, HTTPStatus.OK)        # Status code: 200
         assert_request_method(response.request.method, HTTPMethod.GET) # Method: GET
-        assert_create_user_response_non_empty(response_model)                         # Response data is NON-empty
+        assert_create_user_response_non_empty(response_model)                         # Response data is non-empty
         assert_user_id(response_model)                                                # User-ID validation
         validate_json_schema(response, GetUserMeResponseSchema)       # JSON schema validation
 

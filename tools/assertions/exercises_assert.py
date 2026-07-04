@@ -14,10 +14,10 @@ from tools.tool import Tool
 
 #=======================================================================================================================
 #---------------------------------------------------- Exercise (base) --------------------------------------------------
-# .exercise{} is NON-empty (base)
+# .exercise{} is non-empty (base)
 def assert_exercise_non_empty(response: ExerciseSchema):
     """
-    .exercise{} is NON-empty (base)
+    .exercise{} is non-empty (base)
 
     :param response: Pydantic-model (ExerciseSchema)
     :raise AssertionError
@@ -33,11 +33,11 @@ def assert_exercise_non_empty(response: ExerciseSchema):
 
 
 #---------------------------------------------------- Create exercise --------------------------------------------------
-# Create Exercise Response data is NON-empty
-@allure.step('Response data is NON-empty')
+# Create Exercise Response data is non-empty
+@allure.step('Response data is non-empty')
 def assert_create_exercise_response_non_empty(response: CreateExerciseResponseSchema):
     """
-    Create Exercise Response data is NON-empty
+    Create Exercise Response data is non-empty
 
     - Используется: assert_exercise_non_empty()
 
@@ -72,7 +72,7 @@ def assert_exercise_id(response: CreateExerciseResponseSchema | GetExerciseRespo
     """
     Exercise-ID validation
 
-    - Exercise-ID is NON-empty
+    - Exercise-ID is non-empty
     - Exercise-ID length = 36 chars
     - Actual Exercise-ID = Expected Exercise-ID (optional)
 
@@ -88,11 +88,11 @@ def assert_exercise_id(response: CreateExerciseResponseSchema | GetExerciseRespo
 
 
 #---------------------------------------------------- Get exercise -----------------------------------------------------
-# Get Exercise Response data is NON-empty
-@allure.step('Response data is NON-empty')
+# Get Exercise Response data is non-empty
+@allure.step('Response data is non-empty')
 def assert_get_exercise_response_non_empty(response: GetExerciseResponseSchema):
     """
-    Get Exercise Response data is NON-empty
+    Get Exercise Response data is non-empty
 
     - Используется: assert_exercise_non_empty()
 

@@ -10,11 +10,11 @@ from tools.assertions.base_assert import (
     assert_not_equal
 )
 #=======================================================================================================================
-# Auth Response data is NON-empty
-@allure.step('Auth Response data is NON-empty')
+# Auth Response data is non-empty
+@allure.step('Auth Response data is non-empty')
 def assert_auth_response_non_empty(response: AuthResponseSchema):
     """
-    Auth Response data is NON-empty
+    Auth Response data is non-empty
 
     :param response: Pydantic-model (AuthResponseSchem)
     :raise AssertionError

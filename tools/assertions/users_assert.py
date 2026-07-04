@@ -6,11 +6,11 @@ from schemas.users_schema import CreateUserRequestSchema, CreateUserResponseSche
 from tools.assertions.base_assert import assert_equal, assert_is_value, assert_length
 
 #=======================================================================================================================
-# Create User Response data is NON-empty
-@allure.step('Create User Response data is NON-empty')
+# Create User Response data is non-empty
+@allure.step('Create User Response data is non-empty')
 def assert_create_user_response_non_empty(response: CreateUserResponseSchema):
     """
-    Create User Response data is NON-empty
+    Create User Response data is non-empty
 
     :param response: Pydantic-model (CreateUserResponseSchema)
     :raise AssertionError

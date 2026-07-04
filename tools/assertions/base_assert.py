@@ -16,7 +16,7 @@ act = '❌ Actual:  '
 
 #----------------------------------------------------- Base API --------------------------------------------------------
 # Status Code
-@allure.step('Status Code = {expected}')
+@allure.step('Status code = {expected}')
 def assert_status_code(actual: int, expected: int):
     """
     Status Code
@@ -33,7 +33,7 @@ def assert_status_code(actual: int, expected: int):
 
 
 # Request Method
-@allure.step('Request Method = {expected}')
+@allure.step('Request method = {expected}')
 def assert_request_method(actual: str, expected: str):
     """
     API Request Method
@@ -73,7 +73,7 @@ def assert_equal(actual: Any, expected: Any | str, name: str):
 """
 
 # Object_1 ≠ Object_2
-@allure.step('Value of {obj_1_name} ≠ Value of {obj_2_name}')
+@allure.step('Value of {obj_1_name} ≠ value of {obj_2_name}')
 def assert_not_equal(obj_1: Any, obj_1_name: str, obj_2: Any, obj_2_name: str):
     """
     Проверяет НЕсовпадение двух объектов (obj_1 ≠ obj_2)
@@ -98,7 +98,7 @@ def assert_not_equal(obj_1: Any, obj_1_name: str, obj_2: Any, obj_2_name: str):
 
 #-------------------------------------------------------- Empty --------------------------------------------------------
 # NON-empty values
-@allure.step('Value of {name} is NON-empty')
+@allure.step('Value of {name} is non-empty')
 def assert_is_value(actual: Any, name: str):
     """
     Проверяет, что значение не пустое

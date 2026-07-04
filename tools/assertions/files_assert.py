@@ -9,11 +9,11 @@ from tools.assertions.base_assert import assert_length, assert_is_value, assert_
 from tools.assertions.errors_assert import assert_error_response, assert_not_found_error_response
 
 #=======================================================================================================================
-# Create File Response data is NON-empty
-@allure.step('Create File Response data is NON-empty')
+# Create File Response data is non-empty
+@allure.step('Create File Response data is non-empty')
 def assert_create_file_response_non_empty(response: CreateFileResponseSchema):
     """
-    Create File Response data is NON-empty
+    Create File Response data is non-empty
 
     :param response: Pydantic-model (CreateFileResponseSchema)
     :raise AssertionError
@@ -48,7 +48,7 @@ def assert_file_id(response: CreateFileResponseSchema | GetFileResponseSchema, f
     """
     File-ID validation
 
-    - File-ID is NON-empty
+    - File-ID is non-empty
     - File-ID length = 36 chars
     - Actual File-ID = Expected File-ID (optional)
 
@@ -56,7 +56,7 @@ def assert_file_id(response: CreateFileResponseSchema | GetFileResponseSchema, f
     :param file_id: File-ID / None (optional)
     :raise AssertionError
     """
-    assert_is_value(response.file.id, 'id')                       # File-ID is NON-empty
+    assert_is_value(response.file.id, 'id')                       # File-ID is non-empty
     assert_length(response.file.id,36,'id')         # File-ID length = 36 chars
 
     if file_id:

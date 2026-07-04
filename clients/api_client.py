@@ -17,7 +17,7 @@ class APIClient:
         self.client = client
 
     # GET ------------------------------------------------------------------------------------------------------------
-    @allure.step('🟢GET-request to {url}')
+    @allure.step('🟢GET-request')
     def get(self,
             url: httpx.URL | str,
             params: httpx.QueryParams | None = None) -> httpx.Response:

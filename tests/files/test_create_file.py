@@ -40,7 +40,7 @@ class TestCreateFile:
         # Assertions
         assert_status_code(response.status_code, http.HTTPStatus.OK)            # Status code: 200
         assert_request_method(response.request.method, http.HTTPMethod.POST)    # Method: POST
-        assert_create_file_response_non_empty(response_model)                                   # Response data is NON-empty
+        assert_create_file_response_non_empty(response_model)                                   # Response data is non-empty
         assert_create_file_response_data(response_model,file_data)   # Response data = Request data  (multipart/form-data)
         assert_file_id(response_model)                                                          # File-ID validation
         validate_json_schema(response, CreateFileResponseSchema)               # JSON schema validation
