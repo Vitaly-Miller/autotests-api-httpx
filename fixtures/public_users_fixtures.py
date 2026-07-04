@@ -3,12 +3,14 @@ Public Users (Fixtures)
 """
 import httpx
 import pytest
+import allure
 from clients.public_users_client import get_public_users_client, PublicUsersClient
 from schemas.users_schema import CreateUserSchema, CreateUserRequestSchema
 
 #================================================= Public Users Client =================================================
 # Public Users Client
 @pytest.fixture
+@allure.title('Public Users Client (fixture)')
 def public_users_client() -> PublicUsersClient:
     """
     Фикстура получения экземпляра PublicUsersClient() (c Base URL)
@@ -22,6 +24,7 @@ def public_users_client() -> PublicUsersClient:
 #----------------------------------------------------- Create User -----------------------------------------------------
 # API
 @pytest.fixture
+@allure.title('Create User (API-fixture)')
 def create_user_api(public_users_client: PublicUsersClient) -> httpx.Response:
     """
     API-фикстура создания пользователя
@@ -37,6 +40,7 @@ def create_user_api(public_users_client: PublicUsersClient) -> httpx.Response:
                                    # password = request_body["password"]
 # Pydantic-model (full)
 @pytest.fixture
+@allure.title('Create User (Pydantic-fixture)')
 def create_user(public_users_client: PublicUsersClient) -> CreateUserSchema:
     """
     Pydantic-фикстура создания пользователя
