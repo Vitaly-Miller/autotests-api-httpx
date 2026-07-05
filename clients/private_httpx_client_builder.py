@@ -8,7 +8,7 @@ from clients.auth_client import get_auth_client
 from schemas.auth_schema import AuthDataSchema
 from tools.event_hooks.event_hooks_callback import api_report, curl_command
 
-#============================================== Private httpx.Client (Private) =========================================
+#============================================== Private httpx.Client (builder) =========================================
 BASE_URL = 'http://localhost:8000/api/v1'
 
 #@lru_cache()                                                             # Кэшируем (требуется frozen=True для Schema)

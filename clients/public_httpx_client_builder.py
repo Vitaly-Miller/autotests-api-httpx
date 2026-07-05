@@ -6,7 +6,7 @@ import httpx
 import allure
 from tools.event_hooks.event_hooks_callback import api_report, curl_command
 
-#============================================= Public httpx.Client (Builder) ===========================================
+#============================================= Public httpx.Client (builder) ===========================================
 BASE_URL = 'http://localhost:8000/api/v1'
 
 @allure.step('◉ Get Public httpx.Client')             # Allure step title
