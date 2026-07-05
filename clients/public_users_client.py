@@ -13,7 +13,7 @@ class PublicUsersClient(APIClient):
     ENDPOINT = '/users'
     #------------------------------------------------- Create User  ----------------------------------------------------
     # API
-    @allure.step('Create User (API)')
+    @allure.step('▶ Create User (API)')
     def create_user_api(self, create_user_data: CreateUserRequestSchema) -> httpx.Response:
         """
         API-метод создания нового пользователя
@@ -28,7 +28,7 @@ class PublicUsersClient(APIClient):
 
 
     # Pydantic-model
-    @allure.step('Create User (Pydantic)')
+    @allure.step('▶ Create User (Pydantic)')
     def create_user(self, create_user_data: CreateUserRequestSchema) -> CreateUserResponseSchema:
         """
         Pydantic-метод для создания нового пользователя
@@ -42,7 +42,7 @@ class PublicUsersClient(APIClient):
 
 
 #================================================= Client (✨Helper) ===================================================
-@allure.step('Get Public Users Client')
+@allure.step('◎ Get Public Users Client')
 def get_public_users_client() -> PublicUsersClient:
     """
     Функция получения экземпляра PrivateUsersClient с уже настроенным HTTP-клиентом (c Base URL)
@@ -50,6 +50,6 @@ def get_public_users_client() -> PublicUsersClient:
     :return: Экземпляр PrivateUsersClient (с Base URL)
     """
     public_users_client = PublicUsersClient(client=get_public_httpx_client())
-    return public_users_client
+    return public_users_client                                                 # PublicUsersClient()
 
 #-----------------------------------------------------------------------------------------------------------------------

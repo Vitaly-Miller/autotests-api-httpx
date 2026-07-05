@@ -12,7 +12,7 @@ class AuthClient(APIClient):
     ENDPOINT = '/authentication'
     #--------------------------------------------------- Login ---------------------------------------------------------
     # API
-    @allure.step('Login User (API)')
+    @allure.step('▶ Login User (API)')
     def login_api(self, auth_data: AuthDataSchema) -> httpx.Response:
         """
         API-метод аутентификации пользователя (Log in)
@@ -27,7 +27,7 @@ class AuthClient(APIClient):
         return response
 
     # Pydantic-model
-    @allure.step('Login User (Pydantic)')
+    @allure.step('▶ Login User (Pydantic)')
     def login_pydantic(self, auth_data: AuthDataSchema) -> AuthResponseSchema:
         """
         Pydantic-метод аутентификации пользователя (Log in)
@@ -42,7 +42,7 @@ class AuthClient(APIClient):
 
     #-------------------------------------------------- Refresh --------------------------------------------------------
     # API
-    @allure.step('Refresh Token (API)')
+    @allure.step('▶ Refresh Token (API)')
     def refresh_api(self, refresh_token: RefreshRequestSchema) -> httpx.Response:
         """
         API-метод обновления токена авторизации
@@ -58,7 +58,7 @@ class AuthClient(APIClient):
 
 
 #================================================= Client (✨Helper) ===================================================
-@allure.step('Get Auth Client')
+@allure.step('◎ Get Auth Client')
 def get_auth_client() -> AuthClient:
     """
     Функция получения экземпляра AuthClient с уже настроенным http-клиентом
@@ -66,6 +66,6 @@ def get_auth_client() -> AuthClient:
     :return: Экземпляр AuthClient с (Base URL)
     """
     auth_client = AuthClient(client=get_public_httpx_client())
-    return auth_client
+    return auth_client                                       # AuthClient()
 
 #-----------------------------------------------------------------------------------------------------------------------

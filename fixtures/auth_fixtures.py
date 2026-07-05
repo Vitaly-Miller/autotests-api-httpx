@@ -11,7 +11,7 @@ from schemas.users_schema import CreateUserSchema
 #===================================================== Auth Client =====================================================
 # Auth Client
 @pytest.fixture
-@allure.title('Auth Client (fixture)')
+@allure.title('◎ Auth Client (fixture)')
 def auth_client() -> AuthClient:
     """
     Фикстура получения экземпляра AuthClient() (c Base URL)
@@ -24,7 +24,7 @@ def auth_client() -> AuthClient:
 #-------------------------------------------------------- Auth ---------------------------------------------------------
 # API
 @pytest.fixture
-@allure.title('Auth User (API-fixture)')
+@allure.title('▷ Authenticate User (API-fixture)')
 def auth_api(create_user: CreateUserSchema, auth_client: AuthClient) -> httpx.Response:
     """
     API-фикстура авторизации пользователя (Log in)
@@ -39,7 +39,7 @@ def auth_api(create_user: CreateUserSchema, auth_client: AuthClient) -> httpx.Re
 
 # Pydantic-model
 @pytest.fixture
-@allure.title('Auth User (Pydantic-fixture)')
+@allure.title('▷ Authenticate User (Pydantic-fixture)')
 def auth(create_user: CreateUserSchema, auth_client: AuthClient) -> AuthResponseSchema:
     """
     Pydantic-фикстура авторизации пользователя (Log in)

@@ -17,7 +17,7 @@ class ExercisesClient(APIClient):
     ENDPOINT = '/exercises'
     #---------------------------------------------- Create Exercise ----------------------------------------------------
     # API
-    @allure.step('Create Exercise (API)')
+    @allure.step('▶ Create Exercise (API)')
     def create_exercise_api(self, create_exercise_data: CreateExerciseRequestSchema) -> httpx.Response:
         """
         API-метод создания задания
@@ -32,7 +32,7 @@ class ExercisesClient(APIClient):
         return response                                           # httpx.Response
 
     # Pydantic-model
-    @allure.step('Create Exercise (Pydantic)')
+    @allure.step('▶ Create Exercise (Pydantic)')
     def create_exercise(self, exercise_data: CreateExerciseRequestSchema) -> CreateExerciseResponseSchema:
         """
         Pydantic-метод создания задания
@@ -47,7 +47,7 @@ class ExercisesClient(APIClient):
 
     #------------------------------------------------ Get Exercise -----------------------------------------------------
     # API
-    @allure.step('Get Exercise by ID (API)')
+    @allure.step('▶ Get Exercise by ID (API)')
     def get_exercise_api(self, exercise_id: str) -> httpx.Response:
         """
         API-метод получения информации о задании по Exercise-ID
@@ -60,7 +60,7 @@ class ExercisesClient(APIClient):
 
 
     # Pydantic-model
-    @allure.step('Get Exercise by ID (Pydantic)')
+    @allure.step('▶ Get Exercise by ID (Pydantic)')
     def get_exercise(self, exercise_id: str) -> GetExerciseResponseSchema:
         """
         Pydantic-метод получения информации о задании по Exercise-ID
@@ -75,7 +75,7 @@ class ExercisesClient(APIClient):
 
     #------------------------------------------------ Get Exercises ----------------------------------------------------
     # API
-    @allure.step('Get Exercises by Course-ID (API)')
+    @allure.step('▶ Get Exercises by Course-ID (API)')
     def get_exercises_api(self, query_course_id: GetExercisesQwerySchema) -> httpx.Response:
         """
         API-метод получения списка заданий по Course-ID (?query)
@@ -91,7 +91,7 @@ class ExercisesClient(APIClient):
 
     #---------------------------------------------- Update Exercise ----------------------------------------------------
     # API
-    @allure.step('Update Exercise by ID (API)')
+    @allure.step('▶ Update Exercise by ID (API)')
     def update_exercise_api(self, exercise_id: str, new_exercise_data: UpdateExerciseRequestSchema) -> httpx.Response:
         """
         API-метод частичного обновления данных задания
@@ -108,7 +108,7 @@ class ExercisesClient(APIClient):
 
 
     # Pydantic-model
-    @allure.step('Update Exercise by ID (Pydantic)')
+    @allure.step('▶ Update Exercise by ID (Pydantic)')
     def update_exercise(self, exercise_id: str, new_exercise_data: UpdateExerciseRequestSchema) -> UpdateExerciseResponseSchema:
         """
         Pydantic-метод частичного обновления данных задания
@@ -127,7 +127,7 @@ class ExercisesClient(APIClient):
 
     #---------------------------------------------- Delete Exercise ----------------------------------------------------
     # API
-    @allure.step('Delete Exercise by ID (API)')
+    @allure.step('▶ Delete Exercise by ID (API)')
     def delete_exercise_api(self, exercise_id: str) -> httpx.Response:
         """
         Метод удаление задания по Exercise-ID
@@ -140,7 +140,7 @@ class ExercisesClient(APIClient):
 
 
 #================================================= Client (✨Helper) ===================================================
-@allure.step('Get Exercises Client')
+@allure.step('◎ Get Exercises Client')
 def get_exercises_client(auth_data: AuthDataSchema) -> ExercisesClient:
     """
     Функция получения экземпляра ExercisesClient с уже настроенным HTTP-клиентом (с Авторизацией)
@@ -149,4 +149,4 @@ def get_exercises_client(auth_data: AuthDataSchema) -> ExercisesClient:
     :return: Экземпляр ExercisesClient (с Авторизацией)
     """
     exercises_client = ExercisesClient(client=get_private_httpx_client(auth_data))
-    return exercises_client
+    return exercises_client                                             # ExercisesClient(

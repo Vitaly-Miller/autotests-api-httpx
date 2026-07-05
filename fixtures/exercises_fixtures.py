@@ -15,7 +15,7 @@ from schemas.exercises_schema import (
 #================================================== Exercises Client ===================================================
 # Exercises Client
 @pytest.fixture
-@allure.title('Exercises Client (fixture)')
+@allure.title('◎ Exercises Client (fixture)')
 def exercises_client(create_user: CreateUserSchema) -> ExercisesClient:
     """
     Фикстура получения экземпляра ExercisesClient() (c Авторизацией)
@@ -30,7 +30,7 @@ def exercises_client(create_user: CreateUserSchema) -> ExercisesClient:
 #-------------------------------------------------- Create exercise ----------------------------------------------------
 # API
 @pytest.fixture
-@allure.title('Create Exercise (API-fixture)')
+@allure.title('▷ Create Exercise (API-fixture)')
 def create_exercise_api(exercises_client: ExercisesClient, create_course: CreateCourseSchema) -> httpx.Response:
     """
     API-фикстура создания задания
@@ -48,7 +48,7 @@ def create_exercise_api(exercises_client: ExercisesClient, create_course: Create
 
 # Pydantic-model (full)
 @pytest.fixture
-@allure.title('Create Exercise (Pydantic-fixture)')
+@allure.title('▷ Create Exercise (Pydantic-fixture)')
 def create_exercise(exercises_client: ExercisesClient, create_course: CreateCourseSchema) -> CreateExerciseSchema:
     """
     Pydantic-фикстура создания задания
@@ -68,7 +68,7 @@ def create_exercise(exercises_client: ExercisesClient, create_course: CreateCour
 #---------------------------------------------------- Get exercise -----------------------------------------------------
 # API
 @pytest.fixture
-@allure.title('Get Exercise (API-fixture)')
+@allure.title('▷ Get Exercise (API-fixture)')
 def get_exercise_api(exercises_client: ExercisesClient, create_exercise: CreateExerciseSchema) -> httpx.Response:
     """
     API-фикстура получения Exercise по Exercise-ID
@@ -78,12 +78,12 @@ def get_exercise_api(exercises_client: ExercisesClient, create_exercise: CreateE
     :return: httpx.Response
     """
     response = exercises_client.get_exercise_api(create_exercise.exercise_id)     # ▶ Запрос через API-метод
-    return response                                                                        # httpx.Response
+    return response                                                               # httpx.Response
 
 
 # Pydantic-model
 @pytest.fixture
-@allure.title('Get Exercise (Pydantic-fixture)')
+@allure.title('▷ Get Exercise (Pydantic-fixture)')
 def get_exercise(exercises_client: ExercisesClient, create_exercise: CreateExerciseSchema) -> GetExerciseResponseSchema:
     """
     Pydantic-фикстура получения Exercise по Exercise-ID
@@ -93,13 +93,13 @@ def get_exercise(exercises_client: ExercisesClient, create_exercise: CreateExerc
     :return: Pydantic-model (GetExerciseResponseSchema)
     """
     response_model = exercises_client.get_exercise(create_exercise.exercise_id)   # ▶ Запрос через Pydantic-метод
-    return response_model                                                                           # Pydantic-model (GetExercisesResponseSchema)
+    return response_model                                                         # Pydantic-model (GetExercisesResponseSchema)
 
 
 #---------------------------------------------------- Get exercises ----------------------------------------------------
 # API
 @pytest.fixture
-@allure.title('Get Exercises (API-fixture)')
+@allure.title('▷ Get Exercises (API-fixture)')
 def get_exercises_api(exercises_client: ExercisesClient, create_course: CreateCourseSchema) -> httpx.Response:
     """
     API-фикстура получения списка Exercises by Course-ID
@@ -117,7 +117,7 @@ def get_exercises_api(exercises_client: ExercisesClient, create_course: CreateCo
 #--------------------------------------------------- Update exercise ---------------------------------------------------
 # API
 @pytest.fixture
-@allure.title('Update Exercise (API-fixture)')
+@allure.title('▷ Update Exercise (API-fixture)')
 def update_exercise_api(exercises_client: ExercisesClient, create_exercise: CreateExerciseSchema) -> httpx.Response:
     """
     API-фикстура обновления Exercise by ID
@@ -136,7 +136,7 @@ def update_exercise_api(exercises_client: ExercisesClient, create_exercise: Crea
 
 # Pydantic-model
 @pytest.fixture
-@allure.title('Update Exercise (Pydantic-fixture)')
+@allure.title('▷ Update Exercise (Pydantic-fixture)')
 def update_exercise(exercises_client: ExercisesClient, create_exercise: CreateExerciseSchema) -> UpdateExerciseResponseSchema:
     """
     Pydantic-фикстура обновления Exercise by ID
@@ -156,7 +156,7 @@ def update_exercise(exercises_client: ExercisesClient, create_exercise: CreateEx
 #--------------------------------------------------- Delete exercise ---------------------------------------------------
 # API
 @pytest.fixture
-@allure.title('Delete Exercise (API-fixture)')
+@allure.title('▷ Delete Exercise (API-fixture)')
 def delete_exercise_api(exercises_client: ExercisesClient, create_exercise: CreateExerciseSchema) -> httpx.Response:
     """
     API-фикстура удаления Exercise by ID

@@ -12,7 +12,7 @@ from schemas.users_schema import CreateUserSchema
 #=================================================== Courses Client ====================================================
 # Courses Client
 @pytest.fixture
-@allure.title('Courses Client (fixture)')
+@allure.title('◎ Courses Client (fixture)')
 def courses_client(create_user: CreateUserSchema) -> CoursesClient:
     """
     Фикстура получения экземпляра CoursesClient() (с Авторизацией)
@@ -28,7 +28,7 @@ def courses_client(create_user: CreateUserSchema) -> CoursesClient:
 #---------------------------------------------------- Create course ----------------------------------------------------
 # API
 @pytest.fixture
-@allure.title('Create Course (API-fixture)')
+@allure.title('▷ Create Course (API-fixture)')
 def create_course_api(
     courses_client: CoursesClient,     # ┐  ✨ДЕДУПЛИКАЦИЯ внутри одного теста — это фундаментальное свойство Pytest
     create_user: CreateUserSchema,     # ┘  ✨Один и тоже User! Несмотря на то, что обе фикстуры создают пользователя
@@ -55,7 +55,7 @@ def create_course_api(
 
 # Pydantic-model (full)
 @pytest.fixture
-@allure.title('Create Course (Pydantic-fixture)')
+@allure.title('▷ Create Course (Pydantic-fixture)')
 def create_course(
     courses_client: CoursesClient,      # ┐  ✨ДЕДУПЛИКАЦИЯ внутри одного теста — это фундаментальное свойство Pytest
     create_user: CreateUserSchema,      # ┘  ✨Один и тоже User! Несмотря на то, что обе фикстуры создают пользователя
@@ -84,7 +84,7 @@ def create_course(
 #----------------------------------------------------- Get courses -----------------------------------------------------
 # API
 @pytest.fixture
-@allure.title('Get Courses (API-fixture)')
+@allure.title('▷ Get Courses (API-fixture)')
 def get_courses_api(courses_client: CoursesClient, create_user: CreateUserSchema) -> httpx.Response:
     """
     API-фикстура получения списка курсов по User-ID

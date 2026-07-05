@@ -9,7 +9,7 @@ from tools.event_hooks.event_hooks_callback import api_report, curl_command
 #============================================= Public httpx.Client (Builder) ===========================================
 BASE_URL = 'http://localhost:8000/api/v1'
 
-@allure.step('Get Public httpx.Client')             # Allure step title
+@allure.step('◉ Get Public httpx.Client')             # Allure step title
 def get_public_httpx_client() -> httpx.Client:
     """
     Функия создает экземпляр httpx.Client (с Base URL)

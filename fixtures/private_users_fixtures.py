@@ -10,7 +10,7 @@ from schemas.users_schema import CreateUserSchema, GetUserMeResponseSchema
 #================================================ Private Users Client =================================================
 # Private Users Client
 @pytest.fixture
-@allure.title('Private Users Client (fixture)')
+@allure.title('◎ Private Users Client (fixture)')
 def private_users_client(create_user: CreateUserSchema) -> PrivateUsersClient:
     """
     Фикстура получения экземпляра PrivateUsersClient() (c Авторизацией)
@@ -25,7 +25,7 @@ def private_users_client(create_user: CreateUserSchema) -> PrivateUsersClient:
 #----------------------------------------------------- Get User Me -----------------------------------------------------
 # API
 @pytest.fixture
-@allure.title('Get User Me (API-fixture)')
+@allure.title('▷ Get User Me (API-fixture)')
 def get_user_me_api(private_users_client: PrivateUsersClient) -> httpx.Response:
     """
     API-фикстура получения данных текущего пользователя
@@ -39,7 +39,7 @@ def get_user_me_api(private_users_client: PrivateUsersClient) -> httpx.Response:
 
 # Pydantic-model
 @pytest.fixture
-@allure.title('Get User Me (Pydantic-fixture)')
+@allure.title('▷ Get User Me (Pydantic-fixture)')
 def get_user_me(private_users_client: PrivateUsersClient) -> GetUserMeResponseSchema:
     """
     Pydantic-фикстура получения данных текущего пользователя
@@ -48,7 +48,7 @@ def get_user_me(private_users_client: PrivateUsersClient) -> GetUserMeResponseSc
     :return: Pydantic-model (GetUserMeResponseSchema)
     """
     response_model = private_users_client.get_user_me()    # ▶ Запрос через Pydantic-метод
-    return response_model                                           # Pydantic-model (GetUserMeResponseSchema)
+    return response_model                                  # Pydantic-model (GetUserMeResponseSchema)
 
 
 #-----------------------------------------------------------------------------------------------------------------------

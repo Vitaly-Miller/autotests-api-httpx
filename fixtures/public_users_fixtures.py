@@ -10,7 +10,7 @@ from schemas.users_schema import CreateUserSchema, CreateUserRequestSchema
 #================================================= Public Users Client =================================================
 # Public Users Client
 @pytest.fixture
-@allure.title('Public Users Client (fixture)')
+@allure.title('◎ Public Users Client (fixture)')
 def public_users_client() -> PublicUsersClient:
     """
     Фикстура получения экземпляра PublicUsersClient() (c Base URL)
@@ -24,7 +24,7 @@ def public_users_client() -> PublicUsersClient:
 #----------------------------------------------------- Create User -----------------------------------------------------
 # API
 @pytest.fixture
-@allure.title('Create User (API-fixture)')
+@allure.title('▷ Create User (API-fixture)')
 def create_user_api(public_users_client: PublicUsersClient) -> httpx.Response:
     """
     API-фикстура создания пользователя
@@ -40,7 +40,7 @@ def create_user_api(public_users_client: PublicUsersClient) -> httpx.Response:
                                    # password = request_body["password"]
 # Pydantic-model (full)
 @pytest.fixture
-@allure.title('Create User (Pydantic-fixture)')
+@allure.title('▷ Create User (Pydantic-fixture)')
 def create_user(public_users_client: PublicUsersClient) -> CreateUserSchema:
     """
     Pydantic-фикстура создания пользователя
@@ -49,7 +49,7 @@ def create_user(public_users_client: PublicUsersClient) -> CreateUserSchema:
     :return: Pydantic-model (CreateUserSchema) ✨<Request + Response>
     """
     create_user_data = CreateUserRequestSchema()                                               # Инициализация модели с Default fake-data нового пользователя по Pydantic-схеме
-    response_model = public_users_client.create_user(create_user_data)                # ︎▶ Запрос через Pydantic-метод
+    response_model = public_users_client.create_user(create_user_data)                         # ︎▶ Запрос через Pydantic-метод
     response_model_full = CreateUserSchema(request=create_user_data, response=response_model)  # Инициализация Pydantic-model (CreateUserSchema) ✨<Request + Response>
     return response_model_full                                                                 # Pydantic-model (CreateUserSchema) ✨<Request + Response>
 

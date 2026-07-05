@@ -12,7 +12,7 @@ from tools.event_hooks.event_hooks_callback import api_report, curl_command
 BASE_URL = 'http://localhost:8000/api/v1'
 
 #@lru_cache()                                                             # Кэшируем (требуется frozen=True для Schema)
-@allure.step('Get Private httpx.Client')                                  # Allure step title
+@allure.step('◉ Get Private httpx.Client')                                  # Allure step title
 def get_private_httpx_client(auth_data: AuthDataSchema) -> httpx.Client:  # Принимает данные для аутентификации (Email и Password)
     """
     Функция создаёт экземпляр httpx.Client (с Base URL + Token + Event hooks)
