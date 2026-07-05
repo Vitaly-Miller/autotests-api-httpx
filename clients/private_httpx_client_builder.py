@@ -12,7 +12,7 @@ from tools.event_hooks.event_hooks_callback import api_report, curl_command
 BASE_URL = 'http://localhost:8000/api/v1'
 
 #@lru_cache()                                                             # Кэшируем (требуется frozen=True для Schema)
-@allure.step('◉ Get Private httpx.Client')                                  # Allure step title
+@allure.step('◉ Get Private httpx.Client')                                # Allure step title
 def get_private_httpx_client(auth_data: AuthDataSchema) -> httpx.Client:  # Принимает данные для аутентификации (Email и Password)
     """
     Функция создаёт экземпляр httpx.Client (с Base URL + Token + Event hooks)
@@ -22,7 +22,7 @@ def get_private_httpx_client(auth_data: AuthDataSchema) -> httpx.Client:  # Пр
     """
     auth_client = get_auth_client()                                       # Получаем экземпляр AuthClient
     response = auth_client.login_pydantic(auth_data=auth_data)            # ▶ Запрос на аутентификацию через Pydantic-метод
-    headers = {'Authorization': f'Bearer {response.token.access_token}'}  # Формируем заголовок c токеном
+    headers = {'Authorization': f'Bearer {response.token.access_token}'}  # Формируем заголовок c Bearer-токеном
     private_httpx_client = httpx.Client(                                  # Создаём экземпляр httpx.Client() с передачей:...
         base_url=BASE_URL,                                                # ...Base URL
         headers=headers,                                                  # ...Headers c Token
