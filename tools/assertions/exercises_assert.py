@@ -124,11 +124,11 @@ def assert_update_exercise_response(response: UpdateExerciseResponseSchema, requ
 
 #====================================================== NEGATIVE =======================================================
 #---------------------------------------------------- Get exercise -----------------------------------------------------
-# Get File Not Found Error Response by NON-existent exercise
-@allure.step('Get File Not Found Error Response by NON-existent exercise')
+# Get File Not Found Error Response by non-existent exercise
+@allure.step('Get File Not Found Error Response by non-existent exercise')
 def assert_exercise_not_found_error_response(response: httpx.Response):
     """
-    Get File Not Found Error Response by NON-existent exercise
+    Get File Not Found Error Response by non-existent exercise
 
     - actual   - Deserialize httpx.Response —> Pydantic-model (NotFoundErrorResponseSchema)
     - expected - Initialize (NotFoundErrorResponseSchema)

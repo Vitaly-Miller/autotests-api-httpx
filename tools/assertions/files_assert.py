@@ -146,11 +146,11 @@ def assert_get_file_invalid_id_error_response(response: httpx.Response):
     assert_error_response(actual_response, expected_response)
 
 
-# Get File Not Found Error Response by NON-existent file
-@allure.step('Get File Not Found Error Response by NON-existent file')
+# Get File Not Found Error Response by non-existent file
+@allure.step('Get File Not Found Error Response by non-existent file')
 def assert_get_file_not_found_error_response(response: httpx.Response):
     """
-    Get File Not Found Error Response by NON-existent file
+    Get File Not Found Error Response by non-existent file
 
     - actual   - Deserialize httpx.Response —> Pydantic-model (NotFoundErrorResponseSchema)
     - expected - Initialize (NotFoundErrorResponseSchema)
