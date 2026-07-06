@@ -21,9 +21,6 @@ from tools.tool import Tool
 @allure.epic(Epic.API)                                        # ┐
 @allure.feature(Feature.EXERCISES)                            # │ Allure Behaviors
 @allure.story(Story.GET)                                      # ┘
-@allure.parent_suite(Epic.API)                                # ┐
-@allure.suite(Feature.EXERCISES)                              # │ Allure Suites (optional)
-@allure.sub_suite(Story.GET)                                  # ┘
 @allure.severity(allure.severity_level.NORMAL)                # ] Allure Severity
 #-----------------------------------------------------------------------------------------------------------------------
 class TestGetExercise:

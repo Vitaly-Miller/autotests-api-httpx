@@ -1,22 +1,17 @@
 """
 Base assertions
 """
+import http
 import allure
 from typing import Any, Sized             # Sized - объект, у которого есть длина (len)
 
 #=======================================================================================================================
 # Text Constants
-error_title = """
-╭──────────────────╮
-│ Assertion ERROR! │
-╰──────────────────╯"""
 exp = '✅ Expected:'
 act = '❌ Actual:  '
 
-
 #----------------------------------------------------- Base API --------------------------------------------------------
 # Status Code
-@allure.step('Status code = {expected}')
 def assert_status_code(actual: int, expected: int):
     """
     Status Code
@@ -25,15 +20,18 @@ def assert_status_code(actual: int, expected: int):
     :param expected: Expected Response Status Code
     :raise AssertionError
     """
-    assert actual == expected, f"""{error_title}
-⚠️ Status code is incorrect!
-{exp} {expected}
-{act} {actual}
-"""
+    pretty_expected = expected
+    if isinstance(expected, http.HTTPStatus):                        # <http.HTTPStatus.OK> —>
+        pretty_expected = f'{expected.value}-{expected.phrase}'      # —> 200-OK
+    with allure.step(f'Status code = {pretty_expected}'):
+        error_message = \
+            (f'⚠️ Status code is incorrect!\n'
+             f'{exp} {expected}\n'
+             f'{act} {actual}\n')
+        assert actual == expected, error_message
 
 
 # Request Method
-@allure.step('Request method = {expected}')
 def assert_request_method(actual: str, expected: str):
     """
     API Request Method
@@ -42,16 +40,17 @@ def assert_request_method(actual: str, expected: str):
     :param expected: Expected API Request Method
     :raise AssertionError
     """
-    assert actual == expected, f"""{error_title}
-⚠️ Request Method is incorrect!
-{exp} {expected}
-{act} {actual}
-"""
+    with allure.step(f'Request method = {expected}'):
+        error_message = \
+            (f'⚠️ Request Method is incorrect!\n'
+             f'{exp} {expected}\n'
+             f'{act} {actual}\n')
+        assert actual == expected, error_message
 
 
 #-------------------------------------------------------- Equal --------------------------------------------------------
-# Object_1 = Object_2
-@allure.step('Value of {name} = {expected}')
+# Actual Object = Expected Object
+@allure.step('Value of {name}')
 def assert_equal(actual: Any, expected: Any | str, name: str):
     """
     Проверяет совпадение values двух объектов (actual_obj = expected_obj)
@@ -66,38 +65,38 @@ def assert_equal(actual: Any, expected: Any | str, name: str):
     :param name:     Object Name (для вывода в ошибке)
     :raise AssertionError
     """
-    assert actual == expected, f"""{error_title}
-⚠️ Values are NOT equal in "{name}"
-{exp} "{name}": {expected}
-{act} "{name}": {actual}
-"""
+    error_message = \
+        (f'⚠️ Values are NOT equal in "{name}"!\n'
+         f'{exp} "{name}": {expected}\n'
+         f'{act} "{name}": {actual}\n')
+    assert actual == expected, error_message
 
-# Object_1 ≠ Object_2
+
+# Object-1 ≠ Object-2
 @allure.step('Value of {obj_1_name} ≠ value of {obj_2_name}')
 def assert_not_equal(obj_1: Any, obj_1_name: str, obj_2: Any, obj_2_name: str):
     """
-    Проверяет НЕсовпадение двух объектов (obj_1 ≠ obj_2)
+    Проверяет НЕсовпадение значений двух объектов (Object-1 ≠ Object-2)
 
     Example:
     response_model.token.access_token != response_model.token.refresh_token
 
-    :param obj_1: Object_1
-    :param obj_1_name: Имя Object_1 (для вывода при ошибке)
-    :param obj_2: Object_2
-    :param obj_2_name: Имя Object_2 (для вывода при ошибке)
+    :param obj_1: Object-1
+    :param obj_1_name: Object-1 name
+    :param obj_2: Expected object
+    :param obj_2_name: Object-2 name
     :raise AssertionError
     """
-    assert obj_1 != obj_2, f"""{error_title}
-⚠️ Values are equal! 
-"{obj_1_name}": "{obj_1}"
-"{obj_2_name}": "{obj_2}"
-{exp} "{obj_1_name}" value ≠ "{obj_2_name}" value
-{act} "{obj_1_name}" value = "{obj_2_name}" value
-"""
-
+    error_message = \
+        (f'⚠️ Values are equal!\n'
+         f'"{obj_1_name}": "{obj_1}"\n'
+         f'"{obj_2_name}": "{obj_2}"\n'
+         f'{exp} "{obj_1_name}" value ≠ "{obj_2_name}" value\n'
+         f'{act} "{obj_1_name}" value = "{obj_2_name}" value\n')
+    assert obj_1 != obj_2, error_message
 
 #-------------------------------------------------------- Empty --------------------------------------------------------
-# NON-empty values
+# Value is NON-empty
 @allure.step('Value of {name} is non-empty')
 def assert_is_value(actual: Any, name: str):
     """
@@ -107,46 +106,48 @@ def assert_is_value(actual: Any, name: str):
     :param name: Object name (for Assertion Error output)
     :raises AssertionError
     """
-    assert actual, f"""{error_title}
-⚠️ "{name}" value is empty!
-{exp} "{name}": "...some value..."
-{act} "{name}": "" <— Empty/None
-"""
+    error_message = \
+        (f'⚠️ "{name}" value is empty!\n'
+         f'{exp} "{name}": "...some value..."\n'
+         f'{act} "{name}": "" <— Empty/None\n')
+    assert actual, error_message
+
 
 #------------------------------------------------------- Length --------------------------------------------------------
 # Length = ...
-@allure.step('Length of {name} = {expected_length}')
-def assert_length(actual: Sized, expected_length: int, name: str):
+@allure.step('Length of {obj_name} = {expected_length}')
+def assert_length(obj: Sized, expected_length: int, obj_name: str):
     """
-    Проверяет длину объекта (Manual length)
+    Проверяет длину объекта (manual length)
 
-    :param actual: Actual object (ex.: response_model.user.id)
-    :param expected_length: Ожидаемая длина (manual)
-    :param name: Object name (для вывода в ошибке)
+    :param obj: Actual object (ex.: response_model.user.id)
+    :param expected_length: Expected length (manual)
+    :param obj_name: Object name
     :raise AssertionError
     """
-    assert len(actual) == expected_length, f"""{error_title}
-⚠️ Incorrect "{name}" value length!
-{exp} {expected_length}
-{act} {len(actual)}
-"""
+    error_message = \
+        (f'⚠️ Incorrect "{obj_name}" value length!\n'
+         f'{exp} {expected_length}\n'
+         f'{act} {len(obj)}\n')
+    assert len(obj) == expected_length, error_message
 
-# Length_1 = Length_2
-@allure.step('Lengths of obj_1.{name} = obj_2.{name}')
-def assert_length_equal(obj_1: Sized, obj_2: Sized, name: str):
+
+# Actual Length = Expected Length
+@allure.step('Lengths of actual.{name} = expected.{name}')
+def assert_length_equal(actual: Sized, expected: Sized, name: str):
     """
     Сравнивает равенства длин двух объектов
 
-    :param obj_1: Object_1  (actual_obj.field)
-    :param obj_2: Object_2  (expected_obj.field)
-    :param name: Название объекта/поля (для вывода в ошибке)
+    :param actual: Actual object (actual.field)
+    :param expected: Expected object (expected.field)
+    :param name: Название объекта/поля
 
     :raise AssertionError
     """
-    assert len(obj_1) == len(obj_2), f"""{error_title}
-⚠️ Values "{name}" have different lengths!
-{exp} {len(obj_2)}
-{act} {len(obj_1)}
-"""
+    error_message = \
+        (f'⚠️ Values "{name}" have different lengths!\n'
+         f'{exp} {len(expected)}\n'
+         f'{act} {len(actual)}\n')
+    assert len(actual) == len(expected), error_message
 
 #-----------------------------------------------------------------------------------------------------------------------

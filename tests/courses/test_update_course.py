@@ -20,9 +20,6 @@ from tools.tool import Tool
 @allure.epic(Epic.API)                                        # ┐
 @allure.feature(Feature.COURSES)                              # │ Allure Behaviors
 @allure.story(Story.UPDATE)                                   # ┘
-@allure.parent_suite(Epic.API)                                # ┐
-@allure.suite(Feature.COURSES)                                # │ Allure Suites (optional)
-@allure.sub_suite(Story.UPDATE)                               # ┘
 @allure.severity(allure.severity_level.NORMAL)                # ] Allure Severity
 #-----------------------------------------------------------------------------------------------------------------------
 class TestUpdateCourse:
@@ -33,13 +30,13 @@ class TestUpdateCourse:
             create_course.response.course.id,        # ID обновляемого курса
             new_course_data                    # Обновляемые данные
         )
-        response_model = UpdateCourseResponseSchema.model_validate_json(response.text)  # httpx.Response —> Pydantic-model (deserialize)
+        response_model = UpdateCourseResponseSchema.model_validate_json(response.text)   # httpx.Response —> Pydantic-model (deserialize)
 
         # Assertions
-        assert_status_code(response.status_code, http.HTTPStatus.OK)       # Status code: 200
-        assert_request_method(response.request.method, http.HTTPMethod.PATCH)       # Method: PATCH
-        assert_update_course_response(response_model, new_course_data)                                      # Response data = Request data
-        validate_json_schema(response, UpdateCourseResponseSchema)   # JSON schema validation
+        assert_status_code(response.status_code, http.HTTPStatus.OK)          # Status code: 200
+        assert_request_method(response.request.method, http.HTTPMethod.PATCH) # Method: PATCH
+        assert_update_course_response(response_model, new_course_data)       # Response data = Request data
+        validate_json_schema(response, UpdateCourseResponseSchema)           # JSON schema validation
 
 
 #=======================================================================================================================

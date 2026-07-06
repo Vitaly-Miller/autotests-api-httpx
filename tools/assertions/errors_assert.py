@@ -4,6 +4,7 @@ Errors assertions
 import allure
 from schemas.errors_schema import ErrorSchema, ErrorResponseSchema, NotFoundErrorResponseSchema
 from tools.assertions.base_assert import assert_equal, assert_length_equal
+from tools.assertions.schema_assert import validate_json_schema
 
 #=======================================================================================================================
 # Validation Error
@@ -37,7 +38,8 @@ def assert_error_response(actual: ErrorResponseSchema, expected: ErrorResponseSc
     :return: ValidationError
     """
     assert_length_equal(actual.detail, expected.detail, 'detail') # Сравнивает длины ключа "detail:"
-    assert_equal(actual.detail, expected.detail, 'detail')    # Сравнивает значения ключа "detail:"
+    assert_equal(actual.detail, expected.detail, 'detail')        # Сравнивает значения ключа "detail:"
+
 
 
 # Validation Not Found Error Response

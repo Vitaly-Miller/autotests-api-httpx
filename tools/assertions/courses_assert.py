@@ -44,7 +44,7 @@ def assert_get_courses_responses(
     """
     expected_courses = [r.course for r in create_course_responses]
     assert_length_equal(get_courses_response.courses, expected_courses, 'courses') # Сравниваем количество элементов в объекте "courses"
-    assert_equal(get_courses_response.courses, expected_courses, 'courses')    # Сравниваем значения элементов в объекте "courses"
+    assert_equal(get_courses_response.courses, expected_courses, 'courses')        # Сравниваем значения элементов в объекте "courses"
 
 
 

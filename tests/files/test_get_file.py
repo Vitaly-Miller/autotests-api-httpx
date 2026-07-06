@@ -26,13 +26,10 @@ from tools.tool import Tool
 @allure.epic(Epic.API)                                     # ┐
 @allure.feature(Feature.FILES)                             # │ Allure Behaviors
 @allure.story(Story.GET)                                   # ┘
-@allure.parent_suite(Epic.API)                             # ┐
-@allure.suite(Feature.FILES)                               # │ Allure Suites (optional)
-@allure.sub_suite(Story.GET)                               # ┘
 @allure.severity(allure.severity_level.NORMAL)             # ] Allure Severity
 #-----------------------------------------------------------------------------------------------------------------------
 class TestGetFile:
-    @allure.title('Get File by ID')                              # Allure step Title
+    @allure.title('Get File by ID')                                                     # Allure step Title
     def test_get_file(self, files_client: FilesClient, create_file: CreateFileSchema):
         response = files_client.get_file_api(create_file.file_id)                       # ▶ Запрос через API-метод
         response_model = GetFileResponseSchema.model_validate_json(response.text)       # httpx.Response —> Pydantic-model (parsing-deserialize)
@@ -40,7 +37,7 @@ class TestGetFile:
         # Assertions
         assert_status_code(response.status_code, http.HTTPStatus.OK)          # Status code: 200
         assert_request_method(response.request.method, http.HTTPMethod.GET)   # Method: GET
-        assert_file_id(response_model, create_file.file_id)              # File-ID validation
+        assert_file_id(response_model, create_file.file_id)                   # File-ID validation
         validate_json_schema(response, GetFileResponseSchema)                # JSON schema validation
 
 
@@ -50,13 +47,10 @@ class TestGetFile:
 @pytest.mark.files                                                  # ┐
 @pytest.mark.regression                                             # │ Pytest Marks
 @pytest.mark.negative                                               # ┘
-@allure.tag(Tag.REGRESSION, Tag.FILES, Tag.GET, Tag.NEGATIVE) # ]Allure Tags
+@allure.tag(Tag.REGRESSION, Tag.FILES, Tag.GET, Tag.NEGATIVE) # ] Allure Tags
 @allure.epic(Epic.API)                                              # ┐
 @allure.feature(Feature.FILES)                                      # │ Allure Behaviors
 @allure.story(Story.GET, Story.NEGATIVE)                    # ┘
-@allure.parent_suite(Epic.API)                                      # ┐
-@allure.suite(Feature.FILES)                                        # │ Allure Suites (optional)
-@allure.sub_suite(Story.GET)                                        # ┘
 @allure.severity(allure.severity_level.NORMAL)                      # ] Allure Severity
 #-----------------------------------------------------------------------------------------------------------------------
 class TestGetFileNegative:
@@ -73,7 +67,7 @@ class TestGetFileNegative:
 
 
 
-    @allure.title('Get File by non-existent File-ID (negative)')           # Allure step Title
+    @allure.title('Get File by non-existent File-ID (negative)')      # Allure step Title
     def test_get_non_existent_file(self, files_client: FilesClient):
         non_existent_file_id = fake.uuid4()                           # Generate Non-Existent File-ID (UUID format)
         response = files_client.get_file_api(non_existent_file_id)    # ▶ Запрос через API-метод с Non-existent File-ID
@@ -81,8 +75,8 @@ class TestGetFileNegative:
         # Assertions
         assert_status_code(response.status_code, http.HTTPStatus.NOT_FOUND)  # Status code: 404
         assert_request_method(response.request.method, http.HTTPMethod.GET)  # Method: GET
-        assert_get_file_not_found_error_response(response)                                 # Validation Error Response data
-        validate_json_schema(response, NotFoundErrorResponseSchema)    # JSON schema validation
+        assert_get_file_not_found_error_response(response)                                  # Validation Error Response data
+        validate_json_schema(response, NotFoundErrorResponseSchema)         # JSON schema validation
 
 #=======================================================================================================================
         # Tool.api_report(response)

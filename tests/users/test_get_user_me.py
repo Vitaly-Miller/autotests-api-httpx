@@ -23,10 +23,7 @@ from tools.tool import Tool
 @allure.tag(Tag.SMOKE, Tag.USERS, Tag.GET)     # ] Allure Tags
 @allure.epic(Epic.API)                               # ┐
 @allure.feature(Feature.USERS)                       # │ Allure Behaviors
-@allure.sub_suite(Story.GET)                         # ┘
-@allure.parent_suite(Epic.API)                       # ┐
-@allure.suite(Feature.USERS)                         # │ Allure Suites (optional)
-@allure.sub_suite(Story.GET)                         # ┘
+@allure.story(Story.GET)                             # ┘
 @allure.severity(allure.severity_level.NORMAL)       # ] Allure Severity
 #-----------------------------------------------------------------------------------------------------------------------
 class TestGetUserMe:
@@ -55,6 +52,8 @@ class TestGetUserMe:
         assert_create_user_response_non_empty(response_model)                         # Response data is non-empty
         assert_user_id(response_model)                                                # User-ID validation
         validate_json_schema(response, GetUserMeResponseSchema)       # JSON schema validation
+
+
 
 #------------------------------------------------ All manual (example) -------------------------------------------------
     @allure.title('Get User Me (v.3 - All manual)')       # Allure step Title

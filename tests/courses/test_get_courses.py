@@ -22,9 +22,6 @@ from tools.tool import Tool
 @allure.epic(Epic.API)                                        # ┐
 @allure.feature(Feature.COURSES)                              # │ Allure Behaviors
 @allure.story(Story.GET)                                      # ┘
-@allure.parent_suite(Epic.API)                                # ┐
-@allure.suite(Feature.COURSES)                                # │ Allure Suites (optional)
-@allure.sub_suite(Story.GET)                                  # ┘
 @allure.severity(allure.severity_level.NORMAL)                # ] Allure Severity
 #-----------------------------------------------------------------------------------------------------------------------
 class TestGetCourses:
@@ -38,7 +35,7 @@ class TestGetCourses:
         assert_request_method(response.request.method, http.HTTPMethod.GET)  # Method: GET
         assert_get_courses_responses(
             response_model,
-            [create_course.response])                      # Список курсов соответствует созданным курсам
+            [create_course.response])                           # Список курсов соответствует созданным курсам
         validate_json_schema(response, GetCoursesResponseSchema)     # JSON Schema validation
 
 
@@ -47,7 +44,7 @@ class TestGetCourses:
     def test_get_courses_2(
             self,
             courses_client: CoursesClient,
-            create_user: CreateUserSchema,                                            # Для User-ID
+            create_user: CreateUserSchema,                                           # Для User-ID
             create_course: CreateCourseSchema
     ):
         user_id_qwery_model = GetCoursesQwerySchema(userId=create_user.user_id)       # Pydantic-model
@@ -59,9 +56,9 @@ class TestGetCourses:
         assert_request_method(response.request.method, http.HTTPMethod.GET)  # Method: GET
         assert_get_courses_responses(
             response_model,
-            [create_course.response]                         # Список курсов соответствует созданным курсам
+            [create_course.response]                              # Список курсов соответствует созданным курсам
         )
-        validate_json_schema(response, GetCoursesResponseSchema)      # JSON Schema validation
+        validate_json_schema(response, GetCoursesResponseSchema)       # JSON Schema validation
 
 
 #=======================================================================================================================

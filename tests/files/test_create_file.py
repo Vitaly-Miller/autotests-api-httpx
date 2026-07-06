@@ -25,9 +25,6 @@ from tools.tool import Tool
 @allure.epic(Epic.API)                                          # ┐
 @allure.feature(Feature.FILES)                                  # │ Allure Behaviors
 @allure.story(Story.CREATE)                                     # ┘
-@allure.parent_suite(Epic.API)                                  # ┐
-@allure.suite(Feature.FILES)                                    # │ Allure Suites (optional)
-@allure.sub_suite(Story.CREATE)                                 # ┘
 @allure.severity(allure.severity_level.BLOCKER)                 # ] Allure Severity
 #-----------------------------------------------------------------------------------------------------------------------
 class TestCreateFile:
@@ -35,15 +32,15 @@ class TestCreateFile:
     def test_create_file(self, files_client: FilesClient):
         file_data = CreateFileRequestSchema()                                         # Pydantic-model with fake-data
         response = files_client.create_file_api(file_data)                            # ▶ Запрос через API-метод
-        response_model = CreateFileResponseSchema.model_validate_json(response.text)  # httpx.Response —> Pydantic-model (parsing-deserialize)
+        response_model = CreateFileResponseSchema.model_validate_json(response.text)  # httpx.Response —> Pydantic-model (deserialize)
 
         # Assertions
-        assert_status_code(response.status_code, http.HTTPStatus.OK)            # Status code: 200
-        assert_request_method(response.request.method, http.HTTPMethod.POST)    # Method: POST
-        assert_create_file_response_non_empty(response_model)                                   # Response data is non-empty
-        assert_create_file_response_data(response_model,file_data)   # Response data = Request data  (multipart/form-data)
-        assert_file_id(response_model)                                                          # File-ID validation
-        validate_json_schema(response, CreateFileResponseSchema)               # JSON schema validation
+        assert_status_code(response.status_code, http.HTTPStatus.OK)          # Status code: 200
+        assert_request_method(response.request.method, http.HTTPMethod.POST)  # Method: POST
+        assert_create_file_response_non_empty(response_model)                                # Response data is non-empty
+        assert_create_file_response_data(response_model,file_data)           # Response data = Request data  (multipart/form-data)
+        assert_file_id(response_model)                                                       # File-ID validation
+        validate_json_schema(response, CreateFileResponseSchema)              # JSON schema validation
 
 
 
@@ -56,9 +53,6 @@ class TestCreateFile:
 @allure.epic(Epic.API)                                                    # ┐
 @allure.feature(Feature.FILES)                                            # │ Allure Behaviors
 @allure.story(Story.CREATE, Story.NEGATIVE)                       # ┘
-@allure.parent_suite(Epic.API)                                            # ┐
-@allure.suite(Feature.FILES)                                              # │ Allure Suites (optional)
-@allure.sub_suite(Story.CREATE)                                           # ┘
 @allure.severity(allure.severity_level.NORMAL)                            # ] Allure Severity
 #-----------------------------------------------------------------------------------------------------------------------
 class TestCreateFileNegative:
@@ -73,7 +67,7 @@ class TestCreateFileNegative:
         assert_status_code(response.status_code, http.HTTPStatus.UNPROCESSABLE_ENTITY) # Status code: 422
         assert_request_method(response.request.method, http.HTTPMethod.POST)           # Method: POST
         assert_create_file_empty_filename_error_response(response)                  # Validation Error Response
-        validate_json_schema(response, ErrorResponseSchema)        # JSON schema validation
+        validate_json_schema(response, ErrorResponseSchema)         # JSON schema validation
 
 
 

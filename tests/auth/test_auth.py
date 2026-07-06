@@ -23,9 +23,6 @@ from tools.tool import Tool
 @allure.epic(Epic.API)                                    # ┐
 @allure.feature(Feature.AUTH)                             # │ Allure Behaviors
 @allure.story(Story.LOGIN)                                # ┘
-@allure.parent_suite(Epic.API)                            # ┐
-@allure.suite(Feature.AUTH)                               # │ Allure Suites (optional)
-@allure.sub_suite(Story.LOGIN)                            # ┘
 @allure.severity(allure.severity_level.BLOCKER)           # ] Allure Severity
 #-----------------------------------------------------------------------------------------------------------------------
 class TestAuth:

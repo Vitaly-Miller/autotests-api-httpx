@@ -18,7 +18,7 @@ class Tag(StrEnum):
     #-----------------------
     REGRESSION = 'REGRESSION'
     SMOKE = 'SMOKE'
-    NEGATIVE = '🚫NEGATIVE'
+    NEGATIVE = 'NEGATIVE'
     VALIDATE = 'VALIDATE'
     #-----------------------
     CREATE = 'CREATE'
@@ -51,7 +51,7 @@ class Story(StrEnum):
     GET = 'Get'
     UPDATE = 'Update'
     DELETE = 'Delete'
-    NEGATIVE = 'Negative 🚫'
+    NEGATIVE = 'Negative'
     VALIDATE = 'Validate'
 
 

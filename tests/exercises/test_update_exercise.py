@@ -21,9 +21,6 @@ from tools.tool import Tool
 @allure.epic(Epic.API)                                        # ┐
 @allure.feature(Feature.EXERCISES)                            # │ Allure Behaviors
 @allure.story(Story.UPDATE)                                   # ┘
-@allure.parent_suite(Epic.API)                                # ┐
-@allure.suite(Feature.EXERCISES)                              # │ Allure Suites (optional)
-@allure.sub_suite(Story.UPDATE)                               # ┘
 @allure.severity(allure.severity_level.NORMAL)                # ] Allure Severity
 #-----------------------------------------------------------------------------------------------------------------------
 class TestUpdateExercise:
@@ -50,7 +47,7 @@ class TestUpdateExercise:
         assert_status_code(response.status_code, http.HTTPStatus.OK)           # Status code: 200
         assert_request_method(response.request.method, http.HTTPMethod.PATCH)  # Method: PATCH
         assert_update_exercise_response(response_model, new_exercise_data)    # Response data = Request data
-        validate_json_schema(response, UpdateExerciseResponseSchema)  # Validate JSON schema
+        validate_json_schema(response, UpdateExerciseResponseSchema)          # Validate JSON schema
 
 
 #=======================================================================================================================

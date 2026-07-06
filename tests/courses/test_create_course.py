@@ -23,9 +23,6 @@ from tools.tool import Tool
 @allure.epic(Epic.API)                                        # ┐
 @allure.feature(Feature.COURSES)                              # │ Allure Behaviors
 @allure.story(Story.CREATE)                                   # ┘
-@allure.parent_suite(Epic.API)                                # ┐
-@allure.suite(Feature.COURSES)                                # │ Allure Suites (optional)
-@allure.sub_suite(Story.CREATE)                               # ┘
 @allure.severity(allure.severity_level.NORMAL)                # ] Allure Severity
 #-----------------------------------------------------------------------------------------------------------------------
 class TestCreateCourse:
@@ -38,7 +35,7 @@ class TestCreateCourse:
         # Assertions
         assert_status_code(response.status_code, http.HTTPStatus.OK)             # Status Code: 200
         assert_request_method(response.request.method, http.HTTPMethod.POST)     # Method: POST
-        assert_create_course_response(response_model, request_model)                                     # Response data = Request data
+        assert_create_course_response(response_model, request_model)            # Response data = Request data
         validate_json_schema(response, CreateCourseResponseSchema)              # JSON Schema validation
 
 
@@ -60,10 +57,10 @@ class TestCreateCourse:
         response_model = CreateCourseResponseSchema.model_validate_json(response.text)  # httpx.Response —> Pydantic-model (deserialize)
 
         # Assertions
-        assert_status_code(response.status_code, http.HTTPStatus.OK)           # Status Code: 200
-        assert_request_method(response.request.method, http.HTTPMethod.POST)   # Method: POST
+        assert_status_code(response.status_code, http.HTTPStatus.OK)             # Status Code: 200
+        assert_request_method(response.request.method, http.HTTPMethod.POST)     # Method: POST
         assert_create_course_response(response_model, create_course_data_model) # Response data = Request data
-        validate_json_schema(response, CreateCourseResponseSchema)            # JSON Schema validation
+        validate_json_schema(response, CreateCourseResponseSchema)              # JSON Schema validation
 
 
 #=======================================================================================================================

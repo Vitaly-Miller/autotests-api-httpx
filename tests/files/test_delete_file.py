@@ -21,9 +21,6 @@ from tools.tool import Tool
 @allure.epic(Epic.API)                                     # ┐
 @allure.feature(Feature.FILES)                             # │ Allure Behaviors
 @allure.story(Story.DELETE)                                # ┘
-@allure.parent_suite(Epic.API)                             # ┐
-@allure.suite(Feature.FILES)                               # │ Allure Suites (optional)
-@allure.sub_suite(Story.DELETE)                            # ┘
 @allure.severity(allure.severity_level.NORMAL)             # ] Allure Severity
 #-----------------------------------------------------------------------------------------------------------------------
 class TestDeleteFile:
@@ -39,8 +36,8 @@ class TestDeleteFile:
         # Assertions (Get deleted File)
         assert_status_code(get_non_existent_file_response.status_code, http.HTTPStatus.NOT_FOUND)  # Status code: 404
         assert_request_method(get_non_existent_file_response.request.method, http.HTTPMethod.GET)  # Method: GET
-        assert_get_file_not_found_error_response(get_non_existent_file_response)                                # Error message: "File not found"
-        validate_json_schema(get_non_existent_file_response, NotFoundErrorResponseSchema)   # JSON schema validation
+        assert_get_file_not_found_error_response(get_non_existent_file_response)                                  # Error message: "File not found"
+        validate_json_schema(get_non_existent_file_response, NotFoundErrorResponseSchema)         # JSON schema validation
 
 
 #=======================================================================================================================
