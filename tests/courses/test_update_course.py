@@ -24,7 +24,7 @@ from tools.tool import Tool
 #-----------------------------------------------------------------------------------------------------------------------
 class TestUpdateCourse:
     @allure.title('Update Course')                            # Allure step Title
-    def test_update_course_pydantic(self, courses_client: CoursesClient, create_course: CreateCourseSchema):
+    def test_update_course(self, courses_client: CoursesClient, create_course: CreateCourseSchema):
         new_course_data = UpdateCourseRequestSchema()         # Pydantic-model with fake-data (Update ALL)
         response = courses_client.update_course_api(          # ▶ Запрос через API-метод
             create_course.response.course.id,        # ID обновляемого курса
