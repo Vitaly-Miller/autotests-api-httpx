@@ -30,7 +30,7 @@ class TestUpdateCourse:
             create_course.response.course.id,        # ID обновляемого курса
             new_course_data                    # Обновляемые данные
         )
-        response_model = UpdateCourseResponseSchema.model_validate_json(response.text)   # httpx.Response —> Pydantic-model (deserialize)
+        response_model = UpdateCourseResponseSchema.model_validate_json(response.text)  # httpx.Response —> Pydantic-model (deserialize)
 
         # Assertions
         assert_status_code(response.status_code, http.HTTPStatus.OK)          # Status code: 200
