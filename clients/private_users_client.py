@@ -16,7 +16,7 @@ from schemas.users_schema import (
 
 #================================================ Private Users Client =================================================
 class PrivateUsersClient(APIClient):
-    ENDPOINT = '/users'
+    ENDPOINT = '/api/v1/users'
     #------------------------------------------------- Get User Me -----------------------------------------------------
     # API
     @allure.step('▶ Get User Me')

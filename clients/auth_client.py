@@ -9,7 +9,7 @@ from clients.public_httpx_client_builder import get_public_httpx_client
 
 #==================================================== Auth Client ======================================================
 class AuthClient(APIClient):
-    ENDPOINT = '/authentication'
+    ENDPOINT = '/api/v1/authentication'
     #--------------------------------------------------- Login ---------------------------------------------------------
     # API
     @allure.step('▶ Login User (API)')

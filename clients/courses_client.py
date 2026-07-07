@@ -13,7 +13,7 @@ from schemas.courses_schema import (
 
 #=================================================== Courses Client ====================================================
 class CoursesClient(APIClient):
-    ENDPOINT = '/courses'
+    ENDPOINT = '/api/v1/courses'
     #------------------------------------------------- Get Courses -----------------------------------------------------
     # API
     @allure.step('▶ Get courses by User-ID (API)')

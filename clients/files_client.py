@@ -11,7 +11,7 @@ from clients.private_httpx_client_builder import get_private_httpx_client
 
 #====================================================== Files Client ===================================================
 class FilesClient(APIClient):
-    ENDPOINT = '/files'
+    ENDPOINT = '/api/v1/files'
     #---------------------------------------------------- Get File -----------------------------------------------------
     # API
     @allure.step('▶ Get File by ID (API)')

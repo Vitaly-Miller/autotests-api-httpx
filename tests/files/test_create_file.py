@@ -11,7 +11,7 @@ from tools.allure.annotations import Epic, Feature, Story, Tag
 from tools.assertions.base_assert import assert_status_code, assert_request_method
 from tools.assertions.schema_assert import validate_json_schema
 from tools.assertions.files_assert import (
-    assert_create_file_response_non_empty, assert_file_id, assert_create_file_response_data,
+    assert_create_file_response_non_empty, assert_file_id, assert_create_file_response,
     assert_create_file_empty_filename_error_response,
     assert_create_file_empty_directory_error_response
 )
@@ -38,7 +38,7 @@ class TestCreateFile:
         assert_status_code(response.status_code, http.HTTPStatus.OK)          # Status code: 200
         assert_request_method(response.request.method, http.HTTPMethod.POST)  # Method: POST
         assert_create_file_response_non_empty(response_model)                                # Response data is non-empty
-        assert_create_file_response_data(response_model,file_data)           # Response data = Request data  (multipart/form-data)
+        assert_create_file_response(response_model,file_data)           # Response data = Request data  (multipart/form-data)
         assert_file_id(response_model)                                                       # File-ID validation
         validate_json_schema(response, CreateFileResponseSchema)              # JSON schema validation
 

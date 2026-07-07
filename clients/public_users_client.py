@@ -10,7 +10,7 @@ from schemas.users_schema import CreateUserRequestSchema, CreateUserResponseSche
 
 #================================================= Public Users Client =================================================
 class PublicUsersClient(APIClient):
-    ENDPOINT = '/users'
+    ENDPOINT = '/api/v1/users'
     #------------------------------------------------- Create User  ----------------------------------------------------
     # API
     @allure.step('▶ Create User (API)')

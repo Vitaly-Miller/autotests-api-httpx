@@ -25,7 +25,7 @@ def assert_create_user_response_non_empty(response: CreateUserResponseSchema):
 
 # Create User Response data = Request data
 @allure.step('Create User Response data = Request data')
-def assert_create_user_response_data(response: CreateUserResponseSchema, request: CreateUserRequestSchema):
+def assert_create_user_response(response: CreateUserResponseSchema, request: CreateUserRequestSchema):
     """
     Create User Response data = Request data
 

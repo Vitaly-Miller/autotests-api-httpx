@@ -13,8 +13,8 @@ from tools.allure.annotations import Epic, Feature, Story, Tag
 from tools.assertions.base_assert import assert_status_code, assert_request_method
 from tools.assertions.schema_assert import validate_json_schema
 from tools.assertions.users_assert import (
-    assert_create_user_response_data,
     assert_create_user_response_non_empty,
+    assert_create_user_response,
     assert_user_id
 )
 
@@ -41,7 +41,7 @@ class TestCreateUser:
         assert_status_code(response.status_code, http.HTTPStatus.OK)            # Status code: 200
         assert_request_method(response.request.method, http.HTTPMethod.POST)    # Method: POST
         assert_create_user_response_non_empty(response_model)                                  # Response data is non-empty
-        assert_create_user_response_data(response_model,request_model)         # Response data = Request data (request_model)
+        assert_create_user_response(response_model,request_model)         # Response data = Request data (request_model)
         assert_user_id(response_model)                                                         # User-ID validation
         validate_json_schema(response, CreateUserResponseSchema)               # JSON schema validation
 
@@ -57,14 +57,14 @@ class TestCreateUser:
         assert_status_code(response.status_code, http.HTTPStatus.OK)            # Status code: 200
         assert_request_method(response.request.method, http.HTTPMethod.POST)    # Method: POST
         assert_create_user_response_non_empty(response_model)                                  # Response data is non-empty
-        assert_create_user_response_data(response_model, create_user_data)     # Response data = Request data (create_user_data)
+        assert_create_user_response(response_model, create_user_data)     # Response data = Request data (create_user_data)
         assert_user_id(response_model)                                                         # User-ID validation
         validate_json_schema(response, CreateUserResponseSchema)               # JSON schema validation
 
 
 
     @allure.tag(Tag.PARAMETRIZE)                                   # Allure Tag
-    @allure.title('Create User (v.3 - Email parametrize 3-in-1)')  # Allure step Title (Статический)- ⚠️игнорируется при наличии динамического
+    @allure.title('Create User (v.3 - Email parametrize 3-in-1)')  # Allure step Title
     @pytest.mark.parametrize(                                      # Parametrize Email domain (3-in-1)
         'domain', [
             'amazon.com',
@@ -73,7 +73,6 @@ class TestCreateUser:
         ]
     )
     def test_create_user_3_params(self, domain: str, public_users_client: PublicUsersClient):
-        allure.dynamic.title(f'Create User (v.3 - Email domain: ...@{domain})')    # Allure step Title (⚠️Динамический - без-@)
         create_user_data = CreateUserRequestSchema(                                # Pydantic-model with fake-data, ...
             email=fake.email(domain=domain)                                        # ... значения Email-домена из parametrize (3-in-1)
         )
@@ -84,7 +83,7 @@ class TestCreateUser:
         assert_status_code(response.status_code, http.HTTPStatus.OK)            # Status code: 200
         assert_request_method(response.request.method, http.HTTPMethod.POST)    # Method: POST
         assert_create_user_response_non_empty(response_model)                                  # Response data is non-empty
-        assert_create_user_response_data(response_model, create_user_data)     # Response data = Request data (create_user_data)
+        assert_create_user_response(response_model, create_user_data)     # Response data = Request data (create_user_data)
         assert_user_id(response_model)                                                         # User-ID validation
         validate_json_schema(response, CreateUserResponseSchema)               # JSON schema validation
 

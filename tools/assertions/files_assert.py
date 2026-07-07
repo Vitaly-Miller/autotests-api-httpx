@@ -3,6 +3,7 @@ Files Assertions
 """
 import httpx
 import allure
+from config import settings
 from schemas.errors_schema import ErrorResponseSchema, ErrorSchema, NotFoundErrorResponseSchema
 from schemas.files_schema import CreateFileResponseSchema, CreateFileRequestSchema, GetFileResponseSchema
 from tools.assertions.base_assert import assert_length, assert_is_value, assert_equal
@@ -26,7 +27,7 @@ def assert_create_file_response_non_empty(response: CreateFileResponseSchema):
 
 # Create File Response data = Request data
 @allure.step('Create File Response data = Request data')
-def assert_create_file_response_data(response: CreateFileResponseSchema, request: CreateFileRequestSchema):
+def assert_create_file_response(response: CreateFileResponseSchema, request: CreateFileRequestSchema):
     """
     Create File Response data = Request data
 
@@ -34,7 +35,7 @@ def assert_create_file_response_data(response: CreateFileResponseSchema, request
     :param request: Pydantic-model (CreateFileRequestSchema)
     :raise AssertionError
     """
-    expected_url = f'http://localhost:8000/static/{request.directory}/{request.filename}'  # URL for comparison
+    expected_url = f'{settings.httpx_client.base_url}/static/{request.directory}/{request.filename}'  # URL for comparison
 
     assert_equal(response.file.filename,request.filename,'filename')
     assert_equal(response.file.directory,request.directory,'directory')
@@ -76,7 +77,7 @@ def assert_create_file_empty_filename_error_response(response: httpx.Response):
     :param response: httpx.Response
     :return: AssertionError
     """
-    with allure.step('Create File Error Response by empty "filename"'):      # Allure step Title
+    with allure.step('Create File Error Response by empty "filename"'):           # Allure step Title
         actual_response = ErrorResponseSchema.model_validate_json(response.text)   # httpx.Response  —> Pydantic-model (deserialize)
         expected_response = ErrorResponseSchema(                                   # Инициализация ожидаемой Pydantic-model
             detail=[
@@ -101,7 +102,7 @@ def assert_create_file_empty_directory_error_response(response: httpx.Response):
     :param response: httpx.Response
     :return: AssertionError
     """
-    with allure.step('Create File Error Response by empty "directory"'):     # Allure step Title
+    with allure.step('Create File Error Response by empty "directory"'):           # Allure step Title
         actual_response = ErrorResponseSchema.model_validate_json(response.text)   # httpx.Response —> Pydantic-model (deserialize)
         expected_response = ErrorResponseSchema(                                   # Инициализация ожидаемой Pydantic-model
             detail=[

@@ -1,5 +1,5 @@
 """
-Auth (Authentication) (Fixtures)
+Authentication (Fixtures)
 """
 import httpx
 import pytest

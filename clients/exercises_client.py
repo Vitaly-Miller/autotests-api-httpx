@@ -14,7 +14,7 @@ from schemas.exercises_schema import (
 
 #================================================== Exercises Client ===================================================
 class ExercisesClient(APIClient):
-    ENDPOINT = '/exercises'
+    ENDPOINT = '/api/v1/exercises'
     #---------------------------------------------- Create Exercise ----------------------------------------------------
     # API
     @allure.step('▶ Create Exercise (API)')

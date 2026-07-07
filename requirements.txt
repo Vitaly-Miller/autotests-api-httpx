@@ -1,8 +1,9 @@
-pydantic
+pytest
 httpx
+pydantic
+pydantic-settings
 jsonschema
 Faker
-pytest
 loguru
 python-dotenv
 allure-python-commons

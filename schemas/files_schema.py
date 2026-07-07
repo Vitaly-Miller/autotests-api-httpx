@@ -1,22 +1,17 @@
 """
 Files (Pydantic Schema)
 """
-from pathlib import Path
+from config import settings
 from pydantic import BaseModel, Field
 from tools.data_generator import fake
 
 #=======================================================================================================================
-# Путь к файлу относительно текущего файла
-file_path = Path(__file__).parents[1]/'testdata'/'files'/'test_image.png'   # .parents[1] - на 1 уровня вверх
-print(file_path)                                                            # ▶︎ проверка корректности пути (optional)
-
-
 """================================================= ⬆︎REQUEST Schema ==============================================="""
 #----------------------------------------------------- Create File -----------------------------------------------------
 class CreateFileRequestSchema(BaseModel):
-    filename: str = Field(default_factory=fake.png_file_name)  # Новое имя файла при сохранении на сервере
-    directory: str = Field(default='Uploaded')                 # Директория сохранения файла на сервере
-    upload_path: str = Field(default=file_path)                # Путь к файлу
+    filename: str = Field(default_factory=fake.png_file_name)            # Новое имя файла при сохранении на сервере
+    directory: str = Field(default='Uploaded')                           # Директория сохранения файла на сервере
+    upload_path: str = Field(default=settings.test_data.image_png_file)  # Путь к файлу (from .env)
 
 
 """================================================ ⬇︎RESPONSE Schema ==============================================="""
