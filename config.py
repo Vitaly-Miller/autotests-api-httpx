@@ -31,13 +31,15 @@ class TestDataConfig(BaseModel):
 
 #----------------------------------------------------- MAIN Class ------------------------------------------------------
 class Settings(BaseSettings):
-    model_config = SettingsConfigDict(        # Config ДЛЯ файла с переменными окружения (.env)
+    model_config = SettingsConfigDict(        # CONFIG файла с переменными окружения (.env)
         env_file='.env',                      # - Название файла с переменными окружения (.env)
         env_file_encoding='utf-8',            # - Кодировка файла с переменными окружения (.env)
         env_nested_delimiter='.'              # - Разделитель вложенных моделей в .env (ex. HTTPX_CLIENT.BASE_URL='...')
     )
-    httpx_client: HTTPXClientConfig           # Вложенная Pydantic-model (HTTPXClientConfig)
-    test_data: TestDataConfig                 # Вложенная Pydantic-model (TestDataConfig)
+    # Вложенные Pydantic-models:
+    httpx_client: HTTPXClientConfig
+    test_data: TestDataConfig
+
 
 
 #========================================== Helper ✨(ГЛОБАЛЬНАЯ ПЕРЕМЕННАЯ) ===========================================
