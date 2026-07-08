@@ -3,8 +3,8 @@
 JSON Schema validation - get_user.json()
 """
 from schemas.auth_schema import AuthDataSchema
-from clients.users_private_client import get_private_users_client
-from clients.users_public_client import get_public_users_client
+from clients.users_client_private import get_users_client_private
+from clients.users_client_public import get_users_client_public
 from schemas.users_schema import CreateUserRequestSchema, GetUserResponseSchema
 from tools.assertions.schema_assert import validate_json_schema
 from tools.data_generator import fake
@@ -20,7 +20,7 @@ create_user_payload = CreateUserRequestSchema(   # Модель с данным�
     middleName=fake.middle_name()
 )
 # Инициализация клиента (public)
-users_client = get_public_users_client()
+users_client = get_users_client_public()
 
 # 🟨POST запрос на создание пользователя методом .create_user 👈 (на выходе ->  Pydantic-модель)
 create_user_response = users_client.create_user(payload=create_user_payload)  # 👈 через .метод _api, чтобы получить - raw JSON для дальнейшего использования
@@ -40,7 +40,7 @@ auth_data = AuthDataSchema(                      # Валидация данны
 )
 
 # Инициализация клиента (private)
-users_client = get_private_users_client(auth_data=auth_data)
+users_client = get_users_client_private(auth_data=auth_data)
 
 # 🟩GET запрос на получение данных пользователя методом .get_user_api 👈 (на выходе ->  http.Response)
 get_user_response = users_client.get_user_api(create_user_id)

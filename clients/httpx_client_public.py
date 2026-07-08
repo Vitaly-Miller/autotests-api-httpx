@@ -14,13 +14,13 @@ from tools.event_hooks.event_hooks import (
 
 #============================================ httpx.Client (Public) builder ============================================
 @allure.step('◉ Get httpx.Client (Public)')           # Allure step title
-def get_httpx_public_client() -> httpx.Client:
+def get_httpx_client_public() -> httpx.Client:
     """
     Функия создает настроенный экземпляр httpx.Client (Public)
 
     :return: Настроенный httpx.Client (Public)
     """
-    httpx_public_client = httpx.Client(             # Создаём экземпляр httpx.Client() с передачей:
+    httpx_client_public = httpx.Client(             # Создаём экземпляр httpx.Client() с передачей:
         base_url=settings.httpx_client.base_url,    # Base URL (from .env)
         timeout=settings.httpx_client.timeout,      # Timeout  (from .env)
         event_hooks={                               # Event hooks:
@@ -34,6 +34,6 @@ def get_httpx_public_client() -> httpx.Client:
             ]
         }
     )
-    return httpx_public_client                      # httpx.Client (настроенный)
+    return httpx_client_public                      # httpx.Client (настроенный)
 
 #-----------------------------------------------------------------------------------------------------------------------

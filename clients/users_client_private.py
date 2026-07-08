@@ -6,7 +6,7 @@ import httpx
 import allure
 from clients.api_client import APIClient
 from schemas.auth_schema import AuthDataSchema
-from clients.httpx_private_client import get_httpx_private_client
+from clients.httpx_client_private import get_httpx_client_private
 from schemas.users_schema import (
     UpdateUserRequestSchema,
     GetUserResponseSchema,
@@ -15,7 +15,7 @@ from schemas.users_schema import (
 )
 
 #============================================== Users Client (🔒Private) ===============================================
-class PrivateUsersClient(APIClient):
+class UsersClientPrivate(APIClient):
     ENDPOINT = '/api/v1/users'
     #------------------------------------------------- Get User Me -----------------------------------------------------
     # API
@@ -120,14 +120,14 @@ class PrivateUsersClient(APIClient):
 
 #=================================================== Client (Helper) ===================================================
 @allure.step('◎ Get Users Client (Private)')
-def get_private_users_client(auth_data: AuthDataSchema) -> PrivateUsersClient:
+def get_users_client_private(auth_data: AuthDataSchema) -> UsersClientPrivate:
     """
-    Функция получения экземпляра PrivateUsersClient() с уже настроенным httpx.Client (Private)
+    Функция получения экземпляра UsersClientPrivate() с уже настроенным httpx.Client (Private)
 
     :param auth_data: Pydantic-model с данными для аутентификации пользователя (Email, Password)
-    :return: Настроенный экземпляр PrivateUsersClient()
+    :return: Настроенный экземпляр UsersClientPrivate()
     """
-    private_users_client = PrivateUsersClient(client=get_httpx_private_client(auth_data))
-    return private_users_client                                                        # PrivateUsersClient()
+    users_client_private = UsersClientPrivate(client=get_httpx_client_private(auth_data))
+    return users_client_private                                                        # UsersClientPrivate()
 
 #-----------------------------------------------------------------------------------------------------------------------

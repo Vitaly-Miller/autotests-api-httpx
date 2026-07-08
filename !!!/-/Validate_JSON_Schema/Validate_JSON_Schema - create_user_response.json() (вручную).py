@@ -2,7 +2,7 @@
 Валидация JSON Schema - create_user_response.json()
 JSON Schema validation - create_user_response.json()
 """
-from clients.users_public_client import get_public_users_client
+from clients.users_client_public import get_users_client_public
 from schemas.users_schema import CreateUserRequestSchema, CreateUserResponseSchema
 from tools.data_generator import fake
 import jsonschema
@@ -18,7 +18,7 @@ create_user_data = CreateUserRequestSchema(              # Модель с да�
     middleName=fake.middle_name()
 )
 # Инициализация клиента (public)
-users_client = get_public_users_client()
+users_client = get_users_client_public()
 
 # 🟨POST запрос на создание пользователя методом create_user_api 👈 (на выходе -> http.Response)
 create_user_response = users_client.create_user_api(create_user_data=create_user_data)  # 👈 через .метод _api, чтобы получить - raw JSON для дальнейшего использования

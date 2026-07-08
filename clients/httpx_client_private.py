@@ -17,7 +17,7 @@ from tools.event_hooks.event_hooks import (
 #========================================= httpx.Client (🔒Private) (builder) ==========================================
 #@lru_cache()                                                             # Кэшируем (требуется frozen=True для Schema)
 @allure.step('◉ Get httpx.Client (Private)')                              # Allure step title
-def get_httpx_private_client(auth_data: AuthDataSchema) -> httpx.Client:  # Принимает данные для аутентификации (Email и Password)
+def get_httpx_client_private(auth_data: AuthDataSchema) -> httpx.Client:  # Принимает данные для аутентификации (Email и Password)
     """
     Функция создаёт настроенный экземпляр httpx.Client (Private)
 
@@ -27,7 +27,7 @@ def get_httpx_private_client(auth_data: AuthDataSchema) -> httpx.Client:  # Пр
     auth_client = get_auth_client()                                       # Получаем экземпляр AuthClient
     response = auth_client.login_pydantic(auth_data=auth_data)            # ▶ Запрос на аутентификацию через Pydantic-метод
     headers = {'Authorization': f'Bearer {response.token.access_token}'}  # Формируем заголовок c Bearer-токеном
-    httpx_private_client = httpx.Client(                                  # Создаём экземпляр httpx.Client() с передачей:...
+    httpx_client_private = httpx.Client(                                  # Создаём экземпляр httpx.Client() с передачей:...
         base_url=settings.httpx_client.base_url,                          # Base URL (from .env)
         timeout=settings.httpx_client.timeout,                            # Timeout  (from .env)
         headers=headers,                                                  # Headers c Token
@@ -42,6 +42,6 @@ def get_httpx_private_client(auth_data: AuthDataSchema) -> httpx.Client:  # Пр
             ]
         }
     )
-    return httpx_private_client                                           # httpx.Client (настроенный)
+    return httpx_client_private                                           # httpx.Client (настроенный)
 
 #-----------------------------------------------------------------------------------------------------------------------

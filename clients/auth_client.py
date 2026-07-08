@@ -4,12 +4,14 @@ Authentication Client
 import allure
 import httpx
 from clients.api_client import APIClient
+from clients.httpx_client_public import get_httpx_client_public
 from schemas.auth_schema import RefreshRequestSchema, AuthDataSchema, AuthResponseSchema
-from clients.httpx_public_client import get_httpx_public_client
+
 
 #==================================================== Auth Client ======================================================
 class AuthClient(APIClient):
     ENDPOINT = '/api/v1/authentication'
+
     #--------------------------------------------------- Login ---------------------------------------------------------
     # API
     @allure.step('▶ Login User (API)')
@@ -65,7 +67,7 @@ def get_auth_client() -> AuthClient:
 
     :return: Экземпляр AuthClient с (Base URL)
     """
-    auth_client = AuthClient(client=get_httpx_public_client())
+    auth_client = AuthClient(client=get_httpx_client_public())
     return auth_client                                       # AuthClient()
 
 #-----------------------------------------------------------------------------------------------------------------------

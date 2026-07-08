@@ -7,7 +7,7 @@ import pytest
 import allure
 import jsonschema
 from tools.data_generator import fake
-from clients.users_public_client import PublicUsersClient, get_public_users_client
+from clients.users_client_public import UsersClientPublic, get_users_client_public
 from schemas.users_schema import CreateUserRequestSchema, CreateUserResponseSchema
 from tools.allure.annotations import Epic, Feature, Story, Tag
 from tools.assertions.base_assert import assert_status_code, assert_request_method
@@ -47,10 +47,10 @@ class TestCreateUser:
 
 
 
-    @allure.title('Create User (v.2 - Через фикстуру PublicUsersClient)')                      # Allure step Title
-    def test_create_user_2(self, public_users_client: PublicUsersClient):
+    @allure.title('Create User (v.2 - Через фикстуру UsersClientPublic)')                      # Allure step Title
+    def test_create_user_2(self, users_client_public: UsersClientPublic):
         create_user_data = CreateUserRequestSchema()                                           # Pydantic-model with fake-data
-        response = public_users_client.create_user_api(create_user_data)                       # ▶ Запрос через API-метод
+        response = users_client_public.create_user_api(create_user_data)                       # ▶ Запрос через API-метод
         response_model = CreateUserResponseSchema.model_validate_json(response.text)           # httpx.Response —> Pydantic-model (parsing-deserialize)
 
         # Assertions
@@ -72,11 +72,11 @@ class TestCreateUser:
             'yahoo.com'
         ]
     )
-    def test_create_user_3_params(self, domain: str, public_users_client: PublicUsersClient):
+    def test_create_user_3_params(self, domain: str, users_client_public: UsersClientPublic):
         create_user_data = CreateUserRequestSchema(                                # Pydantic-model with fake-data, ...
             email=fake.email(domain=domain)                                        # ... значения Email-домена из parametrize (3-in-1)
         )
-        response = public_users_client.create_user_api(create_user_data)               # ▶ Запрос через API-метод
+        response = users_client_public.create_user_api(create_user_data)               # ▶ Запрос через API-метод
         response_model = CreateUserResponseSchema.model_validate_json(response.text)   # httpx.Response —> Pydantic-model (parsing-deserialize)
 
         # Assertions
@@ -92,9 +92,9 @@ class TestCreateUser:
 #------------------------------------------------ All manual (example) -------------------------------------------------
     @allure.title('Create User (v.4 - All manual)')                                   # Allure step Title
     def test_create_user_4_manual(self):
-        public_users_client = get_public_users_client()                               # Получение экземпляра PublicUsersClient
+        users_client_public = get_users_client_public()                               # Получение экземпляра UsersClientPublic
         create_user_data = CreateUserRequestSchema()                                  # Инициализация Pydantic-model с default fake-data нового пользователя
-        response = public_users_client.create_user_api(create_user_data)              # ▶ Запрос через API-метод
+        response = users_client_public.create_user_api(create_user_data)              # ▶ Запрос через API-метод
         response_model = CreateUserResponseSchema.model_validate_json(response.text)  # httpx.Response —> Pydantic-model (parsing-deserialize) (deserialize for Assertions)
 
         # Assertions:

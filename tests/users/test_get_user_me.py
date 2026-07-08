@@ -5,8 +5,8 @@ import httpx
 import pytest
 import allure
 import jsonschema
-from clients.users_private_client import get_private_users_client, PrivateUsersClient
-from clients.users_public_client import get_public_users_client
+from clients.users_client_private import get_users_client_private, UsersClientPrivate
+from clients.users_client_public import get_users_client_public
 from schemas.auth_schema import AuthDataSchema
 from schemas.users_schema import CreateUserRequestSchema, CreateUserResponseSchema, GetUserMeResponseSchema
 from http import HTTPStatus, HTTPMethod
@@ -41,9 +41,9 @@ class TestGetUserMe:
 
 
 
-    @allure.title('Get User Me (v.2 - Через фикстуру получения экземпляра PrivateUsersClient)')  # Allure step Title
-    def test_get_user_me_2(self, private_users_client: PrivateUsersClient):
-        response = private_users_client.get_user_me_api()                             # ▶ Запрос через API-метод
+    @allure.title('Get User Me (v.2 - Через фикстуру получения экземпляра UsersClientPrivate)')  # Allure step Title
+    def test_get_user_me_2(self, users_client_private: UsersClientPrivate):
+        response = users_client_private.get_user_me_api()                             # ▶ Запрос через API-метод
         response_model = CreateUserResponseSchema.model_validate_json(response.text)  # httpx.Response —> Pydantic-model (parsing-deserialize)
 
         # Assertions
@@ -60,15 +60,15 @@ class TestGetUserMe:
     def test_get_user_me_3_manual(self):
         #----------------------- Pre-conditions --------------------
         # Create User
-        public_users_client = get_public_users_client()   # Получаем экземпляр PublicUsersClient (с Base URL)
+        users_client_public = get_users_client_public()   # Получаем экземпляр UsersClientPublic (с Base URL)
         create_user_data = CreateUserRequestSchema()      # Инициализация Pydantic-модели с default fake-data нового пользователя
-        public_users_client.create_user(create_user_data) # ▶ Запрос через Pydantic-метод
+        users_client_public.create_user(create_user_data) # ▶ Запрос через Pydantic-метод
         auth_data = AuthDataSchema(                       # Инициализируем модель с default-данными для авторизации
             email=create_user_data.email,                 # Замена default на —> реальное значение
             password=create_user_data.password            # Замена default на —> реальное значение
         )
         #------------------------ Get User Me -----------------------
-        get_user_me_client = get_private_users_client(auth_data)     # Получаем экземпляр PrivateUsersClient
+        get_user_me_client = get_users_client_private(auth_data)     # Получаем экземпляр UsersClientPrivate
         response = get_user_me_client.get_user_me_api()              # ▶ Запрос через API-метод
 
         response_model = CreateUserResponseSchema.model_validate_json(response.text)  # httpx.Response —> Pydantic-model (parsing-deserialize) (Deserialize for Assertions)

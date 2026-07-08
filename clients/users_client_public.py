@@ -5,11 +5,11 @@ Users Client (Public)
 import httpx
 import allure
 from clients.api_client import APIClient
-from clients.httpx_public_client import get_httpx_public_client
+from clients.httpx_client_public import get_httpx_client_public
 from schemas.users_schema import CreateUserRequestSchema, CreateUserResponseSchema
 
 #================================================ Users Client (Public) ================================================
-class PublicUsersClient(APIClient):
+class UsersClientPublic(APIClient):
     ENDPOINT = '/api/v1/users'
     #------------------------------------------------- Create User  ----------------------------------------------------
     # API
@@ -43,13 +43,13 @@ class PublicUsersClient(APIClient):
 
 #=================================================== Client (Helper) ===================================================
 @allure.step('◎ Get Users Client (Public)')
-def get_public_users_client() -> PublicUsersClient:
+def get_users_client_public() -> UsersClientPublic:
     """
-    Функция получения экземпляра PublicUsersClient() с уже настроенным httpx.Client (Public)
+    Функция получения экземпляра UsersClientPublic() с уже настроенным httpx.Client (Public)
 
-    :return: Настроенный экземпляр PublicUsersClient()
+    :return: Настроенный экземпляр UsersClientPublic()
     """
-    public_users_client = PublicUsersClient(client=get_httpx_public_client())
-    return public_users_client                                                 # PublicUsersClient()
+    users_client_public = UsersClientPublic(client=get_httpx_client_public())
+    return users_client_public                                                 # UsersClientPublic()
 
 #-----------------------------------------------------------------------------------------------------------------------

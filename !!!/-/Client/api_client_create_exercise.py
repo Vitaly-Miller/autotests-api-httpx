@@ -8,7 +8,7 @@ from clients.exercises_client import get_exercises_client
 from schemas.exercises_schema import CreateExerciseRequestSchema
 from clients.files_client import get_files_client
 from schemas.files_schema import CreateFileRequestSchema
-from clients.users_public_client import get_public_users_client
+from clients.users_client_public import get_users_client_public
 from schemas.users_schema import CreateUserRequestSchema
 
 #===================================================== [PRECONDITION] ==================================================
@@ -16,11 +16,11 @@ from schemas.users_schema import CreateUserRequestSchema
 # Инициализация Pydantic Model
 create_user_data = CreateUserRequestSchema()    # Инициализация данных через схему c fake данными
 
-# Инициализация PublicUsersClient (экземпляр класса через Helper)
-public_users_client = get_public_users_client()
+# Инициализация UsersClientPublic (экземпляр класса через Helper)
+users_client_public = get_users_client_public()
 
 # 🟨POST запрос на создание пользователя методом create_user (на выходе -> Pydantic-Model)
-create_user_response = public_users_client.create_user(create_user_data=create_user_data)
+create_user_response = users_client_public.create_user(create_user_data=create_user_data)
 
 # Авторизационные данные
 auth_data = AuthDataSchema(                  # Инициализация модели / Валидация данных через схему

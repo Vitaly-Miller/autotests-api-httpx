@@ -2,8 +2,8 @@
 API Client - Get User
 """
 from schemas.auth_schema import AuthDataSchema
-from clients.users_private_client import get_private_users_client
-from clients.users_public_client import get_public_users_client
+from clients.users_client_private import get_users_client_private
+from clients.users_client_public import get_users_client_public
 from schemas.users_schema import CreateUserRequestSchema
 
 #=======================================================================================================================
@@ -11,11 +11,11 @@ from schemas.users_schema import CreateUserRequestSchema
 # Инициализация Pydantic Model
 create_user_data = CreateUserRequestSchema()    # Инициализация данных через схему c fake данными
 
-# Инициализация PublicUsersClient (экземпляр класса через Helper)
-public_users_client = get_public_users_client()
+# Инициализация UsersClientPublic (экземпляр класса через Helper)
+users_client_public = get_users_client_public()
 
 # 🟨POST запрос на создание пользователя методом create_user (на выходе -> Pydantic-Model)
-create_user_response = public_users_client.create_user(create_user_data=create_user_data)
+create_user_response = users_client_public.create_user(create_user_data=create_user_data)
 
 user_id = create_user_response.user.id       # Сохранение User-ID для последующего использования
 
@@ -25,8 +25,8 @@ auth_data = AuthDataSchema(                  # Инициализация мод
     password=create_user_data.password       # Вытаскиваем password из create_user_data модели
 )
 #------------------------------------------------------ Get User -------------------------------------------------------
-# Инициализация PrivateUsersClient (экземпляр класса через Helper)
-users_client = get_private_users_client(auth_data=auth_data)
+# Инициализация UsersClientPrivate (экземпляр класса через Helper)
+users_client = get_users_client_private(auth_data=auth_data)
 
 
 # 🟩GET запрос на получение данных пользователя методом get_user
