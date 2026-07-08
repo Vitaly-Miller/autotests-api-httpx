@@ -1,13 +1,13 @@
 """
 Event Hooks Functions
 
-events_hooks — параметр httpx.Client, позволяющий выполнять дополнительные действия перед Request запроса или после Response
+events_hooks — параметр httpx.Client, позволяющий выполнять дополнительные действия перед Request-запроса или после Response-ответа
 """
 import httpx
 import json
 
 #========================================================= API =========================================================
-# API Base <=>
+# Get API Base <=>
 def get_api_base(response: httpx.Response) -> str:
     """
     Функция для получения API-Base (URL, Method, Status Code) при выполнении HTTP-запроса
@@ -22,7 +22,7 @@ def get_api_base(response: httpx.Response) -> str:
     return api_base
 
 #-----------------------------------------------------------------------------------------------------------------------
-# API Request Body =>
+# Get API Request Body =>
 def get_api_request_body(response: httpx.Response):
     """
     Функция для получения API Request Body (pretty) при выполнении HTTP-запроса
@@ -62,7 +62,7 @@ def get_api_response_body(response: httpx.Response):
     return response_body_json
 
 #-----------------------------------------------------------------------------------------------------------------------
-# API Request Headers =>
+# Get API Request Headers =>
 def get_api_request_headers(response: httpx.Response):
     """
     Функция для получения API Request Headers (pretty) при выполнении HTTP-запроса
@@ -79,7 +79,7 @@ def get_api_request_headers(response: httpx.Response):
     return request_headers_json
 
 #-----------------------------------------------------------------------------------------------------------------------
-# API Response Headers <=
+# Get API Response Headers <=
 def get_api_response_headers(response: httpx.Response):
     """
     Функция для получения API Response Headers (pretty) при выполнении HTTP-запроса
@@ -98,13 +98,13 @@ def get_api_response_headers(response: httpx.Response):
 
 
 #========================================================= cURL ========================================================
-# cURL command generator
+# Make cURL command generator
 def make_curl_from_request(request: httpx.Request) -> str:
     """
     Функция генерирует команду cURL при выполнении HTTP-запроса
 
-    :param request: HTTP-запрос, из которого будет сформирована команда cURL.
-    :return: Строка с командой cURL, содержащая метод запроса, URL, заголовки и тело (если есть).
+    :param request: HTTP-запрос, из которого будет сформирована команда cURL
+    :return: Строка с командой cURL, содержащая метод запроса, URL, заголовки и тело (если есть)
     """
     # Создаем список с основной командой cURL, включая Метод и URL
     result: list[str] = [f'curl -X "{request.method}"', f'"{request.url}"']  # Генерируем сроковый список
@@ -124,4 +124,33 @@ def make_curl_from_request(request: httpx.Request) -> str:
     # Объединение списка строк result в одну строку (через склеивание .join())
     return " \\\n  ".join(result)                            # <пробел>, разделитель-<\> (экранированный), перенос сроки-<\n>, <пробел>, <пробел>
 
+
+
+#======================================================= Logging =======================================================
+# Log Request =>
+def get_log_request(request: httpx.Request) -> str:
+    """
+    Функция формирует строку для лога с данными из httpx.Request (Method + Request-URL)
+
+    ex. GET-request to https://wwww.example.com
+
+    :param request: httpx.Request, из которого будет сформирована строка с данными для лога
+    :return: Сформированная строка с данными для Request-лога (Method + Request-URL)
+    """
+    log_request = f'{request.method}-request to {request.url}' # Формируем сроку c данными для лога
+    return log_request
+
+
+# Log Response <=
+def get_log_response(response: httpx.Response) -> str:
+    """
+     Функция формирует строку для лога с данными из httpx.Request (Status code + Response-URL)
+
+     ex. Status code: 200-OK from https://wwww.example.com
+
+     :param response: httpx.Response, из которого будет сформирована строка с данными для лога
+     :return: Сформированная строка с данными для Response-лога (Status code + Response-URL)
+     """
+    log_response = f'Status code: {response.status_code}-{response.reason_phrase} from {response.url}' # Формируем сроку c данными для лога
+    return log_response
 #=======================================================================================================================

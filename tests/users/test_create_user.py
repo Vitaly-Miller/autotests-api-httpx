@@ -7,7 +7,7 @@ import pytest
 import allure
 import jsonschema
 from tools.data_generator import fake
-from clients.public_users_client import PublicUsersClient, get_public_users_client
+from clients.users_public_client import PublicUsersClient, get_public_users_client
 from schemas.users_schema import CreateUserRequestSchema, CreateUserResponseSchema
 from tools.allure.annotations import Epic, Feature, Story, Tag
 from tools.assertions.base_assert import assert_status_code, assert_request_method

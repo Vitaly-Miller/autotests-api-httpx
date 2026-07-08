@@ -5,8 +5,8 @@ import httpx
 import pytest
 import allure
 import jsonschema
-from clients.private_users_client import get_private_users_client, PrivateUsersClient
-from clients.public_users_client import get_public_users_client
+from clients.users_private_client import get_private_users_client, PrivateUsersClient
+from clients.users_public_client import get_public_users_client
 from schemas.auth_schema import AuthDataSchema
 from schemas.users_schema import CreateUserRequestSchema, CreateUserResponseSchema, GetUserMeResponseSchema
 from http import HTTPStatus, HTTPMethod

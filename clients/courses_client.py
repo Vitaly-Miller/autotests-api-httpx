@@ -4,7 +4,7 @@ Courses Client
 import allure
 import httpx
 from clients.api_client import APIClient
-from clients.private_httpx_client_builder import get_private_httpx_client
+from clients.httpx_private_client import get_httpx_private_client
 from schemas.auth_schema import AuthDataSchema
 from schemas.courses_schema import (
     CreateCourseRequestSchema, CreateCourseResponseSchema, GetCoursesQwerySchema,
@@ -132,5 +132,5 @@ def get_courses_client(auth_data: AuthDataSchema) -> CoursesClient:
     :param auth_data: Pydantic-model c данными для аутентификации пользователя (Email, Password)
     :return: Экземпляр CoursesClient
     """
-    courses_client = CoursesClient(client=get_private_httpx_client(auth_data))
+    courses_client = CoursesClient(client=get_httpx_private_client(auth_data))
     return courses_client                                                     # CoursesClient()

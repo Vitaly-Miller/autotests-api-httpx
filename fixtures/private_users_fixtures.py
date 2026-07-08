@@ -4,7 +4,7 @@
 import httpx
 import pytest
 import allure
-from clients.private_users_client import PrivateUsersClient, get_private_users_client
+from clients.users_private_client import PrivateUsersClient, get_private_users_client
 from schemas.users_schema import CreateUserSchema, GetUserMeResponseSchema
 
 #================================================ Private Users Client =================================================

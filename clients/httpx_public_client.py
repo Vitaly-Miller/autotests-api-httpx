@@ -1,5 +1,5 @@
 """
-Public httpx.Client builder
+httpx.Client (Public) builder
 (Для методов, НЕ требующих авторизации)
 """
 import httpx
@@ -12,15 +12,15 @@ from tools.event_hooks.event_hooks import (
     curl_command_event_hook
 )
 
-#============================================= Public httpx.Client (builder) ===========================================
-@allure.step('◉ Get Public httpx.Client')           # Allure step title
-def get_public_httpx_client() -> httpx.Client:
+#============================================ httpx.Client (Public) builder ============================================
+@allure.step('◉ Get httpx.Client (Public)')           # Allure step title
+def get_httpx_public_client() -> httpx.Client:
     """
-    Функия создает настроенный экземпляр httpx.Client
+    Функия создает настроенный экземпляр httpx.Client (Public)
 
-    :return: httpx.Client (настроенный)
+    :return: Настроенный httpx.Client (Public)
     """
-    public_httpx_client = httpx.Client(             # Создаём экземпляр httpx.Client() с передачей:
+    httpx_public_client = httpx.Client(             # Создаём экземпляр httpx.Client() с передачей:
         base_url=settings.httpx_client.base_url,    # Base URL (from .env)
         timeout=settings.httpx_client.timeout,      # Timeout  (from .env)
         event_hooks={                               # Event hooks:
@@ -34,6 +34,6 @@ def get_public_httpx_client() -> httpx.Client:
             ]
         }
     )
-    return public_httpx_client                      # httpx.Client (настроенный)
+    return httpx_public_client                      # httpx.Client (настроенный)
 
 #-----------------------------------------------------------------------------------------------------------------------

@@ -1,14 +1,14 @@
 """
-PUBLIC Users Client
+Users Client (Public)
 (Для методов, НЕ требующих авторизации)
 """
 import httpx
 import allure
 from clients.api_client import APIClient
-from clients.public_httpx_client_builder import get_public_httpx_client
+from clients.httpx_public_client import get_httpx_public_client
 from schemas.users_schema import CreateUserRequestSchema, CreateUserResponseSchema
 
-#================================================= Public Users Client =================================================
+#================================================ Users Client (Public) ================================================
 class PublicUsersClient(APIClient):
     ENDPOINT = '/api/v1/users'
     #------------------------------------------------- Create User  ----------------------------------------------------
@@ -49,7 +49,7 @@ def get_public_users_client() -> PublicUsersClient:
 
     :return: Экземпляр PrivateUsersClient (с Base URL)
     """
-    public_users_client = PublicUsersClient(client=get_public_httpx_client())
+    public_users_client = PublicUsersClient(client=get_httpx_public_client())
     return public_users_client                                                 # PublicUsersClient()
 
 #-----------------------------------------------------------------------------------------------------------------------

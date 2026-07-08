@@ -6,7 +6,7 @@ import httpx
 from clients.api_client import APIClient
 from schemas.auth_schema import AuthDataSchema
 from schemas.files_schema import CreateFileRequestSchema, CreateFileResponseSchema, CreateFileSchema, GetFileResponseSchema
-from clients.private_httpx_client_builder import get_private_httpx_client
+from clients.httpx_private_client import get_httpx_private_client
 
 
 #====================================================== Files Client ===================================================
@@ -98,5 +98,5 @@ def get_files_client(auth_data: AuthDataSchema) -> FilesClient:
     :param auth_data: Pydantic-model c данными для аутентификации пользователя (Email, Password)
     :return: Экземпляр FilesClient (с Авторизацией)
     """
-    files_client = FilesClient(client=get_private_httpx_client(auth_data))
+    files_client = FilesClient(client=get_httpx_private_client(auth_data))
     return files_client                                            # FilesClient()

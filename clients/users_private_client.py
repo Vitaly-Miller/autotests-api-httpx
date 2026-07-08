@@ -1,12 +1,12 @@
 """
-🔒Private Users Client
+Users Client (🔒Private)
 (Для методов, требующих авторизации)
 """
 import httpx
 import allure
 from clients.api_client import APIClient
 from schemas.auth_schema import AuthDataSchema
-from clients.private_httpx_client_builder import get_private_httpx_client
+from clients.httpx_private_client import get_httpx_private_client
 from schemas.users_schema import (
     UpdateUserRequestSchema,
     GetUserResponseSchema,
@@ -14,7 +14,7 @@ from schemas.users_schema import (
     UserUpdateResponseSchema
 )
 
-#================================================ Private Users Client =================================================
+#============================================== Users Client (🔒Private) ===============================================
 class PrivateUsersClient(APIClient):
     ENDPOINT = '/api/v1/users'
     #------------------------------------------------- Get User Me -----------------------------------------------------
@@ -127,7 +127,7 @@ def get_private_users_client(auth_data: AuthDataSchema) -> PrivateUsersClient:
     :param auth_data: Pydantic-model с данными для аутентификации пользователя (Email, Password)
     :return: Экземпляр PrivateUsersClient
     """
-    private_users_client = PrivateUsersClient(client=get_private_httpx_client(auth_data))
+    private_users_client = PrivateUsersClient(client=get_httpx_private_client(auth_data))
     return private_users_client                                                        # PrivateUsersClient()
 
 #-----------------------------------------------------------------------------------------------------------------------

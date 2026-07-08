@@ -9,11 +9,10 @@ import allure
 from logger import get_logger
 from tools.event_hooks.event_hooks_functions import (
     get_api_base,
-    get_api_request_body,
-    get_api_response_body,
-    get_api_request_headers,
-    get_api_response_headers,
-    make_curl_from_request
+    get_api_request_body, get_api_response_body,
+    get_api_request_headers, get_api_response_headers,
+    make_curl_from_request,
+    get_log_request, get_log_response,
 )
 #-----------------------------------------------------------------------------------------------------------------------
 # Logger initialization + Name
@@ -88,8 +87,8 @@ def curl_command_event_hook(response: httpx.Response):
     )
 
 
-#-------------------------------------------------------- Logger -------------------------------------------------------
-# Log Request
+#------------------------------------------------------- Logging -------------------------------------------------------
+# Log Request =>
 def log_request_event_hook(request: httpx.Request):
     """
     Callback-функция для event_hooks, логирующая httpx.Request
@@ -98,16 +97,17 @@ def log_request_event_hook(request: httpx.Request):
 
     :param request: httpx.Request
     """
-    logger.info(f'{request.method}-request to {request.url}')
+    logger.info(get_log_request(request))                # Вызываем соответствующую функию
 
-
-# Log Response
+# Log Response <=
 def log_response_event_hook(response: httpx.Response):
     """
+    Callback-функция для event_hooks, логирующая httpx.Response
+
     ex. Got response status code: 200-OK from https://wwww.example.com
 
     :param response: httpx.Response
     """
-    logger.info(f'Status code: {response.status_code}-{response.reason_phrase} from {response.url}')
+    logger.info(get_log_response(response))              # Вызываем соответствующую функию
 
 #=======================================================================================================================

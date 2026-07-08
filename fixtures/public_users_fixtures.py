@@ -4,7 +4,7 @@ Public Users (Fixtures)
 import httpx
 import pytest
 import allure
-from clients.public_users_client import get_public_users_client, PublicUsersClient
+from clients.users_public_client import get_public_users_client, PublicUsersClient
 from schemas.users_schema import CreateUserSchema, CreateUserRequestSchema
 
 #================================================= Public Users Client =================================================

@@ -5,7 +5,7 @@ import allure
 import httpx
 from clients.api_client import APIClient
 from schemas.auth_schema import RefreshRequestSchema, AuthDataSchema, AuthResponseSchema
-from clients.public_httpx_client_builder import get_public_httpx_client
+from clients.httpx_public_client import get_httpx_public_client
 
 #==================================================== Auth Client ======================================================
 class AuthClient(APIClient):
@@ -65,7 +65,7 @@ def get_auth_client() -> AuthClient:
 
     :return: Экземпляр AuthClient с (Base URL)
     """
-    auth_client = AuthClient(client=get_public_httpx_client())
+    auth_client = AuthClient(client=get_httpx_public_client())
     return auth_client                                       # AuthClient()
 
 #-----------------------------------------------------------------------------------------------------------------------

@@ -8,7 +8,7 @@ from clients.exercises_client import get_exercises_client
 from schemas.exercises_schema import CreateExerciseRequestSchema
 from clients.files_client import get_files_client
 from schemas.files_schema import CreateFileRequestSchema
-from clients.public_users_client import get_public_users_client
+from clients.users_public_client import get_public_users_client
 from schemas.users_schema import CreateUserRequestSchema
 
 #===================================================== [PRECONDITION] ==================================================
