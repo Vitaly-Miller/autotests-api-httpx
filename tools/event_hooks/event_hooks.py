@@ -1,10 +1,12 @@
 """
-Event Hooks Callback functions
+Event Hooks (Callback functions)
 
 events_hooks — параметр httpx.Client, позволяющий выполнять дополнительные действия перед Request запроса или после Response
 """
+
 import httpx
 import allure
+from logger import get_logger
 from tools.event_hooks.event_hooks_functions import (
     get_api_base,
     get_api_request_body,
@@ -13,11 +15,15 @@ from tools.event_hooks.event_hooks_functions import (
     get_api_response_headers,
     make_curl_from_request
 )
+#-----------------------------------------------------------------------------------------------------------------------
+# Logger initialization + Name
+logger = get_logger('HTTPX-Client')                      # for <log_request_event_hook> / <log_response_event_hook>
+
 
 #=======================================================================================================================
 #----------------------------------------------------- API-reports -----------------------------------------------------
 # API-Reports
-def api_report(response: httpx.Response):
+def api_report_event_hook(response: httpx.Response):
     """
     Callback-функция для event_hooks, прикрепляющая API-reports к Allure отчету
 
@@ -69,9 +75,9 @@ def api_report(response: httpx.Response):
 
 #---------------------------------------------------- cURL-command -----------------------------------------------------
 # cURL-command
-def curl_command(response: httpx.Response):
+def curl_command_event_hook(response: httpx.Response):
     """
-     Callback-функция для event_hooks, прикрепляющая cURL-команду к Allure отчету
+    Callback-функция для event_hooks, прикрепляющая cURL-команду к Allure отчету
 
     :param response: httpx.Response, переданный автоматически public/privet httpx-клиентом (builder)
     """
@@ -81,5 +87,27 @@ def curl_command(response: httpx.Response):
         attachment_type=allure.attachment_type.TEXT      # - Тип отображения отчете
     )
 
+
+#-------------------------------------------------------- Logger -------------------------------------------------------
+# Log Request
+def log_request_event_hook(request: httpx.Request):
+    """
+    Callback-функция для event_hooks, логирующая httpx.Request
+
+    ex. Make GET-request to https://wwww.example.com
+
+    :param request: httpx.Request
+    """
+    logger.info(f'{request.method}-request to {request.url}')
+
+
+# Log Response
+def log_response_event_hook(response: httpx.Response):
+    """
+    ex. Got response status code: 200-OK from https://wwww.example.com
+
+    :param response: httpx.Response
+    """
+    logger.info(f'Status code: {response.status_code}-{response.reason_phrase} from {response.url}')
 
 #=======================================================================================================================

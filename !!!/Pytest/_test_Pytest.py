@@ -2,6 +2,7 @@
 Pytest info
 
 """
+import pytest
 
 #===================================================== >_Terminal ========================================================
 """
@@ -45,7 +46,33 @@ python -m pytest --tb=long                 - Полный traceback
 
 ...
 python -m python -m pytest -h              - info (help)
+
+
+======== Allure ========
+python -m pytest -s -v --alluredir=allure-results --clean-alluredir   - запуск всех тестов + формирование Allure Results + Очистка старого 
+allure serve allure-results                                           - открыть Allure Results в браузере
+
+allure generate allure-results -o allure-report --clean               - сгенерировать Allure Report из Allure Result + Очистка старого 
+allure open allure-report                                             - открыть Allure Report
+
+
+=== Параллельный запуск ===   ⚠️Разница НЕ заметна на БЫСТРОМ ЖЕЛЕЗЕ!
+(pip install pytest-xdist)
+
+python -m pytest -s -v --numprocesses=5     - количество процессов (workers) = 5
+python -m pytest -s -v --numprocesses=auto  - количество процессов (workers) = auto (может падать из-за нагрузки)   
+python -m pytest -s -v -n 5                 - короткий вариант команды
+
+python -m pytest -s -v --numprocesses=5 --alluredir=allure-results --clean-alluredir   - запуск всех тестов (паралельно)+ формирование Allure Results + Очистка старого 
+
+ℹ️Маркировка созависимых тестов одной группы, чтоб на них был нащначен общий worker
+@pytest.mark.xdist_group(name='users-group')
+def test_...():
+    ...
+
 """
+
+
 
 #======================================================= Структура =====================================================
 # Тест

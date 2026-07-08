@@ -1,5 +1,5 @@
 """
-Config (Pydantic-settings)
+Config (by Pydantic-settings)
 """
 from pydantic import BaseModel, HttpUrl, FilePath
 from pydantic_settings import BaseSettings, SettingsConfigDict
@@ -29,7 +29,7 @@ class TestDataConfig(BaseModel):
     image_png_file: FilePath
 
 
-#----------------------------------------------------- MAIN Class ------------------------------------------------------
+#---------------------------------------------- MAIN Class + .env-config -----------------------------------------------
 class Settings(BaseSettings):
     model_config = SettingsConfigDict(        # CONFIG файла с переменными окружения (.env)
         env_file='.env',                      # - Название файла с переменными окружения (.env)
