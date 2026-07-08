@@ -68,9 +68,9 @@ class ExercisesClient(APIClient):
         :param exercise_id: Exercise-ID
         :return: Pydantic-model (GetExerciseResponseSchema)
         """
-        response = self.get_exercise_api(exercise_id)                                  # ▶ Запрос через API-метод
+        response = self.get_exercise_api(exercise_id)                                 # ▶ Запрос через API-метод
         response_model = GetExerciseResponseSchema.model_validate_json(response.text) # httpx.Response —> Pydantic-model (parsing-deserialize) (deserialize)
-        return response_model                                                          # Pydantic-model (GetExerciseResponseSchema)
+        return response_model                                                         # Pydantic-model (GetExerciseResponseSchema)
 
 
     #------------------------------------------------ Get Exercises ----------------------------------------------------

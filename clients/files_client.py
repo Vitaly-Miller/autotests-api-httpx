@@ -5,7 +5,7 @@ import allure
 import httpx
 from clients.api_client import APIClient
 from schemas.auth_schema import AuthDataSchema
-from schemas.files_schema import CreateFileRequestSchema, CreateFileResponseSchema, CreateFileSchema, GetFileResponseSchema
+from schemas.files_schema import CreateFileRequestSchema, CreateFileResponseSchema, GetFileResponseSchema
 from clients.httpx_private_client import get_httpx_private_client
 
 

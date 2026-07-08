@@ -118,14 +118,14 @@ class PrivateUsersClient(APIClient):
         return response                                             # httpx.Response
 
 
-#================================================= Client (✨Helper) ===================================================
-@allure.step('◎ Get Private Users Client')
+#=================================================== Client (Helper) ===================================================
+@allure.step('◎ Get Users Client (Private)')
 def get_private_users_client(auth_data: AuthDataSchema) -> PrivateUsersClient:
     """
-    Функция получения экземпляра PrivateUsersClient с уже настроенным HTTP-клиентом (с Авторизацией)
+    Функция получения экземпляра PrivateUsersClient() с уже настроенным httpx.Client (Private)
 
     :param auth_data: Pydantic-model с данными для аутентификации пользователя (Email, Password)
-    :return: Экземпляр PrivateUsersClient
+    :return: Настроенный экземпляр PrivateUsersClient()
     """
     private_users_client = PrivateUsersClient(client=get_httpx_private_client(auth_data))
     return private_users_client                                                        # PrivateUsersClient()

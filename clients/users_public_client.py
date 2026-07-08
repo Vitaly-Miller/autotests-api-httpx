@@ -41,13 +41,13 @@ class PublicUsersClient(APIClient):
         return response_model                                                         # Pydantic-model (CreateUserResponseSchema)
 
 
-#================================================= Client (✨Helper) ===================================================
-@allure.step('◎ Get Public Users Client')
+#=================================================== Client (Helper) ===================================================
+@allure.step('◎ Get Users Client (Public)')
 def get_public_users_client() -> PublicUsersClient:
     """
-    Функция получения экземпляра PrivateUsersClient с уже настроенным HTTP-клиентом (c Base URL)
+    Функция получения экземпляра PublicUsersClient() с уже настроенным httpx.Client (Public)
 
-    :return: Экземпляр PrivateUsersClient (с Base URL)
+    :return: Настроенный экземпляр PublicUsersClient()
     """
     public_users_client = PublicUsersClient(client=get_httpx_public_client())
     return public_users_client                                                 # PublicUsersClient()
