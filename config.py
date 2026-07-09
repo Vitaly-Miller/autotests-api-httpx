@@ -1,7 +1,8 @@
 """
 Config (by Pydantic-settings)
 """
-from pydantic import BaseModel, HttpUrl, FilePath
+
+from pydantic import BaseModel, HttpUrl, FilePath, DirectoryPath
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
@@ -39,10 +40,18 @@ class Settings(BaseSettings):
     # Вложенные Pydantic-models:
     httpx_client: HTTPXClientConfig
     test_data: TestDataConfig
+    allure_results_dir: DirectoryPath
 
+    #------------- Создать папку, если её нет -------------
+    @classmethod
+    def initialize(cls) -> Settings:
+        allure_results_dir = DirectoryPath('allure-results')   # Название папки
+        allure_results_dir.mkdir(exist_ok=True)                # Создает папку, если её нет
 
+        return Settings(allure_results_dir=allure_results_dir)
 
 #========================================== Helper ✨(ГЛОБАЛЬНАЯ ПЕРЕМЕННАЯ) ===========================================
-settings = Settings()                         # Инициализация класса-Pydantic-model (Settings)
+settings = Settings.initialize()              # Инициализация класса-Pydantic-model (Settings) методом .initialize
 
 #=======================================================================================================================
+print(settings)
