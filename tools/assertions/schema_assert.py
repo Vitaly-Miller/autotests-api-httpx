@@ -6,6 +6,10 @@ import httpx
 import jsonschema
 import pydantic
 import allure
+from logger import get_logger
+
+#------------- Logger --------------
+logger = get_logger('SCHEMA-ASSERT')
 
 #=======================================================================================================================
 def validate_json_schema(instance: httpx.Response | dict, schema: type[pydantic.BaseModel]) -> None:
@@ -24,9 +28,9 @@ def validate_json_schema(instance: httpx.Response | dict, schema: type[pydantic.
             instance = instance.json()                                  # httpx.Response –> Dict
 
         # Serialize for Allure attachments
-        json_schema = schema.model_json_schema()                                        # Pydantic-model –> Dict (Генерация JSON-схемы)
-        json_schema_pretty = json.dumps(json_schema, indent=2, ensure_ascii=False)  # Dict —> JSON-string    (Pretty JSON-схема)
-        instance_pretty = json.dumps(instance, indent=2, ensure_ascii=False)        # Dict —> JSON-string    (Pretty Instance)
+        json_schema = schema.model_json_schema()                                        # Генерация JSON-схемы. Pydantic-model –> Dict
+        json_schema_pretty = json.dumps(json_schema, indent=2, ensure_ascii=False)  # Dict —> JSON-string (Pretty)
+        instance_pretty = json.dumps(instance, indent=2, ensure_ascii=False)        # Dict —> JSON-string (Pretty)
 
         # Allure attachment of Response JSON
         allure.attach(
@@ -43,6 +47,7 @@ def validate_json_schema(instance: httpx.Response | dict, schema: type[pydantic.
         )
 
         # Validation
+        logger.info(f'JSON Schema validation ({schema.__name__})')    # Logger
         try:
             jsonschema.validate(
                 instance=instance,                         # = Instance (Dict) для валидации

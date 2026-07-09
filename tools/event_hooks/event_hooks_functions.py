@@ -18,7 +18,8 @@ def get_api_base(response: httpx.Response) -> str:
     api_base = \
         (f'         Request URL: {response.request.url}\n'
          f'      Request Method: {response.request.method}\n'
-         f'Response Status Code: {response.status_code}-{response.reason_phrase}')
+         f'Response Status Code: {response.status_code}-{response.reason_phrase}\n'
+         f'        Response URL: {response.url}')
     return api_base
 
 #-----------------------------------------------------------------------------------------------------------------------

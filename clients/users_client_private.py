@@ -39,7 +39,7 @@ class UsersClientPrivate(APIClient):
         :return: Pydantic-model (GetUserMeResponseSchema)
         """
         response = self.get_user_me_api()                                             # ▶ Запрос через API-метод
-        response_model = GetUserMeResponseSchema.model_validate_json(response.text)   # httpx.Response —> Pydantic-model (parsing-deserialize) (deserialize)
+        response_model = GetUserMeResponseSchema.model_validate_json(response.text)   # httpx.Response —> Pydantic-model (deserialize)
         return response_model                                                         # Pydantic-model (GetUserMeResponseSchema)
 
 
@@ -67,7 +67,7 @@ class UsersClientPrivate(APIClient):
         :return: Pydantic-model (GetUserResponseSchema)
         """
         response = self.get_user_api(user_id)                                        # ▶ Запрос через API-метод
-        response_model = GetUserResponseSchema.model_validate_json(response.text)    # httpx.Response —> Pydantic-model (parsing-deserialize) (deserialize)
+        response_model = GetUserResponseSchema.model_validate_json(response.text)    # httpx.Response —> Pydantic-model (deserialize)
         return response_model                                                        # Pydantic-model (GetUserResponseSchema)
 
 
@@ -100,7 +100,7 @@ class UsersClientPrivate(APIClient):
         :return: Pydantic-model (UserUpdateResponseSchema)
         """
         response = self.update_user_api(user_id, update_data)         # ▶ Запрос через API-метод
-        response_model = UserUpdateResponseSchema.model_validate_json(response.text)    # httpx.Response —> Pydantic-model (parsing-deserialize) (deserialize)
+        response_model = UserUpdateResponseSchema.model_validate_json(response.text)    # httpx.Response —> Pydantic-model (deserialize)
         return response_model                                                           # Pydantic-model (UserUpdateResponseSchema)
 
 

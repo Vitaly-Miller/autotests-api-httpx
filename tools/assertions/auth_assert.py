@@ -2,6 +2,7 @@
 Auth (Log in) assertions
 """
 import allure
+from logger import get_logger
 from schemas.auth_schema import AuthResponseSchema
 from tools.assertions.base_assert import (
     assert_equal,
@@ -9,9 +10,12 @@ from tools.assertions.base_assert import (
     assert_is_value,
     assert_not_equal
 )
+#------------- Logger ------------
+logger = get_logger('AUTH-ASSERT')
+
 #=======================================================================================================================
 # Auth Response data is non-empty
-@allure.step('Auth Response data is non-empty')
+@allure.step('Auth Response data is non-empty')                                 # Allure step title
 def assert_auth_response_non_empty(response: AuthResponseSchema):
     """
     Auth Response data is non-empty
@@ -19,6 +23,7 @@ def assert_auth_response_non_empty(response: AuthResponseSchema):
     :param response: Pydantic-model (AuthResponseSchem)
     :raise AssertionError
     """
+    logger.info('Auth Response data is non-empty')                              # Logger
     assert_is_value(response.token.token_type, 'token_type')
     assert_is_value(response.token.access_token, 'access_token')
     assert_is_value(response.token.refresh_token, 'refresh_token')
@@ -26,7 +31,7 @@ def assert_auth_response_non_empty(response: AuthResponseSchema):
 
 #-----------------------------------------------------------------------------------------------------------------------
 # Tokens validation
-@allure.step('Tokens validation')
+@allure.step('Tokens validation')                                               # Allure step title
 def assert_token(response: AuthResponseSchema):
     """
     Tokens validation
@@ -39,6 +44,7 @@ def assert_token(response: AuthResponseSchema):
     :param response: Pydantic-model (AuthResponseSchema)
     :raise AssertionError
     """
+    logger.info('Tokens validation')                                            # Logger
     # Access Token type = 'bearer'
     assert_equal(
         response.token.token_type,

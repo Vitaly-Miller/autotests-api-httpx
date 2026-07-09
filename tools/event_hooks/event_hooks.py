@@ -14,10 +14,8 @@ from tools.event_hooks.event_hooks_functions import (
     make_curl_from_request,
     get_log_request, get_log_response,
 )
-#-----------------------------------------------------------------------------------------------------------------------
-# Logger initialization + Name
+#------------- Logger -------------
 logger = get_logger('HTTPX-Client')                      # for <log_request_event_hook> / <log_response_event_hook>
-
 
 #=======================================================================================================================
 #----------------------------------------------------- API-reports -----------------------------------------------------
@@ -98,6 +96,7 @@ def log_request_event_hook(request: httpx.Request):
     :param request: httpx.Request
     """
     logger.info(get_log_request(request))                # Вызываем соответствующую функию
+
 
 # Log Response <=
 def log_response_event_hook(response: httpx.Response):

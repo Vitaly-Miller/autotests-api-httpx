@@ -2,16 +2,19 @@
 Courses Assertions
 """
 import allure
+from logger import get_logger
 from tools.assertions.base_assert import assert_equal, assert_length_equal
 from schemas.courses_schema import (
     CreateCourseRequestSchema, CreateCourseResponseSchema,
     UpdateCourseRequestSchema, UpdateCourseResponseSchema,
     GetCoursesResponseSchema
 )
+#--------------- Logger -------------
+logger = get_logger('COURSES-ASSERT')
 
 #=======================================================================================================================
-# Create Course Response data = Request data
-@allure.step('Create Course Response data = Request data')
+# Response data = Request data
+@allure.step('Response data = Request data')                              # Allure step title
 def assert_create_course_response(response: CreateCourseResponseSchema, request: CreateCourseRequestSchema):
     """
     Create Course Response data = Request data
@@ -20,6 +23,7 @@ def assert_create_course_response(response: CreateCourseResponseSchema, request:
     :param request: Pydantic-model (CreateCourseRequestSchema)
     :raise AssertionError
     """
+    logger.info('Response data = Request data')                           # Logger
     assert_equal(response.course.title, request.title, 'title')
     assert_equal(response.course.max_score, request.max_score, 'max_score')
     assert_equal(response.course.min_score, request.min_score, 'min_score')
@@ -30,8 +34,8 @@ def assert_create_course_response(response: CreateCourseResponseSchema, request:
 
 
 
-# Get list of Courses = List of Created courses
-@allure.step('Get list of Courses = List of Created courses')
+# List of Courses = List of Created courses
+@allure.step('List of Courses = List of Created courses')                  # Allure step title
 def assert_get_courses_responses(
         get_courses_response: GetCoursesResponseSchema,
         create_course_responses: list[CreateCourseResponseSchema]):
@@ -42,14 +46,15 @@ def assert_get_courses_responses(
     :param create_course_responses: Pydantic-model (list[CreateCourseResponseSchema])
     :return: AssertionError
     """
+    logger.info('List of Courses = List of Created courses')               # Logger
     expected_courses = [r.course for r in create_course_responses]
     assert_length_equal(get_courses_response.courses, expected_courses, 'courses') # Сравниваем количество элементов в объекте "courses"
     assert_equal(get_courses_response.courses, expected_courses, 'courses')        # Сравниваем значения элементов в объекте "courses"
 
 
 
-# Updated Course Response data = Request data
-@allure.step('Updated Course Response data = Request data')
+# Response data = Request data
+@allure.step('Response data = Request data')                               # Allure step title
 def assert_update_course_response(response: UpdateCourseResponseSchema, request: UpdateCourseRequestSchema):
     """
     Updated Course Response data = Request data
@@ -58,6 +63,7 @@ def assert_update_course_response(response: UpdateCourseResponseSchema, request:
     :param request: Pydantic-model (UpdateCourseRequestSchema)
     :raise AssertionError
     """
+    logger.info('Response data = Request data')                           # Logger
     assert_equal(response.course.title, request.title, 'title')
     assert_equal(response.course.max_score, request.max_score, 'max_score')
     assert_equal(response.course.min_score, request.min_score, 'min_score')
