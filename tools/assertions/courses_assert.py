@@ -71,4 +71,4 @@ def assert_update_course_response(response: UpdateCourseResponseSchema, request:
     assert_equal(response.course.estimated_time, request.estimated_time, 'estimated_time')
 
 
-#-----------------------------------------------------------------------------------------------------------------------
+#=======================================================================================================================

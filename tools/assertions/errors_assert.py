@@ -62,4 +62,5 @@ def assert_not_found_error_response(actual: NotFoundErrorResponseSchema, expecte
     logger.info('Validation Not Found Error Response')                           # Logger
     assert_equal(actual.detail, expected.detail, 'detail')  # Сравнивает значения ключа "detail:"
 
-#-----------------------------------------------------------------------------------------------------------------------
+
+#=======================================================================================================================

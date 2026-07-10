@@ -51,4 +51,4 @@ def get_user_me(users_client_private: UsersClientPrivate) -> GetUserMeResponseSc
     return response_model                                  # Pydantic-model (GetUserMeResponseSchema)
 
 
-#-----------------------------------------------------------------------------------------------------------------------
+#=======================================================================================================================

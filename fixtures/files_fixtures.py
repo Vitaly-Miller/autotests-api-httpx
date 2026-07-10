@@ -6,8 +6,8 @@ import pytest
 import allure
 from typing import Generator
 from clients.files_client import FilesClient, get_files_client
-from schemas.files_schema import CreateFileRequestSchema, CreateFileSchema, GetFileResponseSchema
 from schemas.users_schema import CreateUserSchema
+from schemas.files_schema import CreateFileRequestSchema, CreateFileSchema, GetFileResponseSchema
 
 #==================================================== Files Client =====================================================
 # Files Client
@@ -120,5 +120,4 @@ def delete_file_api(files_client: FilesClient, create_file: CreateFileSchema) ->
     return response                                                 # httpx.Response
 
 
-
-#-----------------------------------------------------------------------------------------------------------------------
+#=======================================================================================================================

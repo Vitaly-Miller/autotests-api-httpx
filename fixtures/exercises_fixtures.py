@@ -167,4 +167,5 @@ def delete_exercise_api(exercises_client: ExercisesClient, create_exercise: Crea
     """
     response = exercises_client.delete_exercise_api(create_exercise.exercise_id)   # ▶ Запрос через API-метод
     return response                                                                # httpx.Response
-#-----------------------------------------------------------------------------------------------------------------------
+
+#=======================================================================================================================

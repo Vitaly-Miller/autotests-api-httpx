@@ -59,4 +59,5 @@ def validate_json_schema(instance: httpx.Response | dict, schema: type[pydantic.
             allure.attach(str(e), name='Validation Error', attachment_type=allure.attachment_type.TEXT)
             raise AssertionError(e.message)
 
+
 #=======================================================================================================================

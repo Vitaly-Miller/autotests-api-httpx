@@ -96,4 +96,5 @@ def get_courses_api(courses_client: CoursesClient, create_user: CreateUserSchema
     user_id_qwery_model = GetCoursesQwerySchema(userId=create_user.user_id)       # Pydantic-model
     response = courses_client.get_courses_api(user_id_qwery_model)                # ▶ Запрос через API-метод
     return response                                                               # httpx.Response
-#-----------------------------------------------------------------------------------------------------------------------
+
+#=======================================================================================================================
