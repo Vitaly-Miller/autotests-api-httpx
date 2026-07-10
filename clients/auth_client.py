@@ -31,6 +31,7 @@ class AuthClient(APIClient):
         )
         return response
 
+
     # Pydantic-model
     @allure.step('▶ Login User (Pydantic)')
     def login_pydantic(self, auth_data: AuthDataSchema) -> AuthResponseSchema:

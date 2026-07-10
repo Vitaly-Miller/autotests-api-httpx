@@ -35,6 +35,7 @@ class ExercisesClient(APIClient):
         )
         return response                                           # httpx.Response
 
+
     # Pydantic-model
     @allure.step('▶ Create Exercise (Pydantic)')
     def create_exercise(self, exercise_data: CreateExerciseRequestSchema) -> CreateExerciseResponseSchema:
