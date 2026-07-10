@@ -3,15 +3,18 @@ Authentication Client
 """
 import allure
 import httpx
+from tools.endpoints import Endpoint
 from clients.api_client import APIClient
 from clients.httpx_client_public import get_httpx_client_public
 from schemas.auth_schema import RefreshRequestSchema, AuthDataSchema, AuthResponseSchema
 
-
-#==================================================== Auth Client ======================================================
+#===================================================== Auth Client =====================================================
 class AuthClient(APIClient):
-    ENDPOINT = '/api/v1/authentication'
+    """
+    Клиент для работы с /api/v1/authentication
 
+    .
+    """
     #--------------------------------------------------- Login ---------------------------------------------------------
     # API
     @allure.step('▶ Login User (API)')
@@ -22,9 +25,9 @@ class AuthClient(APIClient):
         :param auth_data: Pydantic-model c данными для аутентификации (Email и Password)
         :return httpx.Response
         """
-        response = self.post(                           # ▶ Запрос
-            url=f'{self.ENDPOINT}/login',
-            json=auth_data.model_dump(by_alias=True)    # Pydantic-model —> Dict (serialize)
+        response = self.post(                                # ▶ Запрос
+            url=f'{Endpoint.AUTH}/login',                    # Endpoint (by Enum)
+            json=auth_data.model_dump(by_alias=True)         # Pydantic-model —> Dict (serialize)
         )
         return response
 
@@ -53,13 +56,13 @@ class AuthClient(APIClient):
         :return: httpx.Response
         """
         response = self.post(                                # ▶ Запрос
-            url=f'{self.ENDPOINT}/refresh',
+            url=f'{Endpoint.AUTH}/refresh',                  # Endpoint (by Enum)
             json=refresh_token.model_dump(by_alias=True)     # Pydantic-model —> Dict (serialize)
         )
         return response
 
 
-#================================================= Client (✨Helper) ===================================================
+#================================================== Client (builder) ===================================================
 @allure.step('◎ Get Auth Client')
 def get_auth_client() -> AuthClient:
     """
@@ -70,4 +73,4 @@ def get_auth_client() -> AuthClient:
     auth_client = AuthClient(client=get_httpx_client_public())
     return auth_client                                       # AuthClient()
 
-#-----------------------------------------------------------------------------------------------------------------------
+#=======================================================================================================================

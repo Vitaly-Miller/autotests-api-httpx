@@ -3,6 +3,7 @@ Courses Client
 """
 import allure
 import httpx
+from tools.endpoints import Endpoint
 from clients.api_client import APIClient
 from clients.httpx_client_private import get_httpx_client_private
 from schemas.auth_schema import AuthDataSchema
@@ -10,11 +11,14 @@ from schemas.courses_schema import (
     CreateCourseRequestSchema, CreateCourseResponseSchema, GetCoursesQwerySchema,
     UpdateCourseRequestSchema, UpdateCourseResponseSchema
 )
-
 #=================================================== Courses Client ====================================================
 class CoursesClient(APIClient):
-    ENDPOINT = '/api/v1/courses'
-    #------------------------------------------------- Get Courses -----------------------------------------------------
+    """
+    Клиент для работы с /api/v1/courses
+
+    .
+    """
+    #--------------------------------------------------- Get Courses ---------------------------------------------------
     # API
     @allure.step('▶ Get courses by User-ID (API)')
     def get_courses_api(self, query_user_id: GetCoursesQwerySchema) -> httpx.Response:
@@ -24,13 +28,13 @@ class CoursesClient(APIClient):
         :param query_user_id: Pydantic-model c User-ID (?query)
         :return: httpx.Response
         """
-        response = self.get(                                                  # ▶ Запрос c Query-параметром
-            url=self.ENDPOINT,
-            params=query_user_id.model_dump(by_alias=True))                   # Pydantic-model —> Dict (serialize)
-        return response                                                       # httpx.Response
+        response = self.get(                                              # ▶ Запрос c Query-параметром
+            url=Endpoint.COURSES,                                         # Endpoint (by Enum)
+            params=query_user_id.model_dump(by_alias=True))               # Pydantic-model —> Dict (serialize)
+        return response                                                   # httpx.Response
 
 
-    #-------------------------------------------------- Get Course -----------------------------------------------------
+    #---------------------------------------------------- Get Course ---------------------------------------------------
     # API
     @allure.step('▶ Get course by ID (API)')
     def get_course_api(self, course_id: str) -> httpx.Response:
@@ -40,11 +44,11 @@ class CoursesClient(APIClient):
         :param course_id: Course-ID
         :return: httpx.Response
         """
-        response = self.get(url=f'{self.ENDPOINT}/{course_id}')               # ▶ Запрос
-        return response                                                       # httpx.Response
+        response = self.get(url=f'{Endpoint.COURSES}/{course_id}')        # ▶ Запрос
+        return response                                                   # httpx.Response
 
 
-    #------------------------------------------------- Create Course ---------------------------------------------------
+    #--------------------------------------------------- Create Course -------------------------------------------------
     # API
     @allure.step('▶ Create course (API)')
     def create_course_api(self, create_course_data: CreateCourseRequestSchema) -> httpx.Response:
@@ -54,11 +58,11 @@ class CoursesClient(APIClient):
         :param create_course_data: Pydantic-model c данными для создания курса
         :return: httpx.Response
         """
-        response = self.post(                                                 # ▶ Запрос
-            url=self.ENDPOINT,
-            json=create_course_data.model_dump(by_alias=True)                 # Pydantic-model —> Dict (serialize)
+        response = self.post(                                             # ▶ Запрос
+            url=Endpoint.COURSES,                                         # Endpoint (by Enum)
+            json=create_course_data.model_dump(by_alias=True)             # Pydantic-model —> Dict (serialize)
         )
-        return response                                                       # httpx.Response
+        return response                                                   # httpx.Response
 
 
     # Pydantic-model
@@ -70,12 +74,12 @@ class CoursesClient(APIClient):
         :param create_course_data: Pydantic-model с данными для создания курса
         :return: Pydantic-model (CreateCourseResponseSchema)
         """
-        response = self.create_course_api(create_course_data)                 # ▶ Запрос через API-метод
+        response = self.create_course_api(create_course_data)             # ▶ Запрос через API-метод
         response_model = CreateCourseResponseSchema.model_validate_json(response.text) # httpx.Response —> Pydantic-model (deserialize)
-        return response_model                                                          # Pydantic-model (CreateCourseResponseSchema)
+        return response_model                                             # Pydantic-model (CreateCourseResponseSchema)
 
 
-    #------------------------------------------------- Update Course ---------------------------------------------------
+    #--------------------------------------------------- Update Course -------------------------------------------------
     # API
     @allure.step('▶ Update Course by ID (API)')
     def update_course_api(self, course_id: str, new_course_data: UpdateCourseRequestSchema) -> httpx.Response:
@@ -86,11 +90,11 @@ class CoursesClient(APIClient):
         :param new_course_data: Pydantic-model c данными, которые необходимо обновить
         :return: httpx.Response
         """
-        response = self.patch(                                                # ▶ Запрос
-            url=f'{self.ENDPOINT}/{course_id}',
-            json=new_course_data.model_dump(by_alias=True)                    # Pydantic-model —> Dict (serialize)
+        response = self.patch(                                            # ▶ Запрос
+            url=f'{Endpoint.COURSES}/{course_id}',
+            json=new_course_data.model_dump(by_alias=True)                # Pydantic-model —> Dict (serialize)
         )
-        return response                                                       # httpx.Response
+        return response                                                   # httpx.Response
 
 
     # Pydantic-model
@@ -108,7 +112,7 @@ class CoursesClient(APIClient):
         return response_model                                                          # Pydantic-model (UpdateCourseResponseSchema)
 
 
-    #------------------------------------------------- Delete Course ---------------------------------------------------
+    #--------------------------------------------------- Delete Course -------------------------------------------------
     # API
     @allure.step('▶ Delete Course by ID (API)')
     def delete_course_api(self, course_id: str) -> httpx.Response:
@@ -118,12 +122,12 @@ class CoursesClient(APIClient):
         :param course_id: Course-ID
         :return: httpx.Response
         """
-        response = self.delete(url=f'{self.ENDPOINT}/{course_id}')            # ▶ Запрос
-        return response                                                       # httpx.Response
+        response = self.delete(url=f'{Endpoint.COURSES}/{course_id}')     # ▶ Запрос
+        return response                                                   # httpx.Response
 
 
 
-#================================================= Client (✨Helper) ===================================================
+#================================================== Client (builder) ===================================================
 @allure.step('◎ Get Courses Client')
 def get_courses_client(auth_data: AuthDataSchema) -> CoursesClient:
     """
@@ -133,4 +137,6 @@ def get_courses_client(auth_data: AuthDataSchema) -> CoursesClient:
     :return: Экземпляр CoursesClient
     """
     courses_client = CoursesClient(client=get_httpx_client_private(auth_data))
-    return courses_client                                                     # CoursesClient()
+    return courses_client                                                 # CoursesClient()
+
+#=======================================================================================================================

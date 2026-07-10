@@ -4,13 +4,18 @@ Users Client (Public)
 """
 import httpx
 import allure
+from tools.endpoints import Endpoint
 from clients.api_client import APIClient
 from clients.httpx_client_public import get_httpx_client_public
 from schemas.users_schema import CreateUserRequestSchema, CreateUserResponseSchema
 
 #================================================ Users Client (Public) ================================================
 class UsersClientPublic(APIClient):
-    ENDPOINT = '/api/v1/users'
+    """
+    Клиент для работы с /api/v1/users (Public)
+
+    .
+    """
     #------------------------------------------------- Create User  ----------------------------------------------------
     # API
     @allure.step('▶ Create User (API)')
@@ -21,10 +26,10 @@ class UsersClientPublic(APIClient):
         :param create_user_data: Pydantic-model c данными для создания пользователя
         :return: httpx.Response
         """
-        response = self.post(                                                # ▶ Запрос
-            url=self.ENDPOINT,
-            json=create_user_data.model_dump(by_alias=True))                 # Pydantic-model —> Dict (serialize)
-        return response                                                      # httpx.Response
+        response = self.post(                                         # ▶ Запрос
+            url=Endpoint.USERS,                                       # Endpoint (by Enum)
+            json=create_user_data.model_dump(by_alias=True))          # Pydantic-model —> Dict (serialize)
+        return response                                               # httpx.Response
 
 
     # Pydantic-model
@@ -41,15 +46,16 @@ class UsersClientPublic(APIClient):
         return response_model                                                         # Pydantic-model (CreateUserResponseSchema)
 
 
-#=================================================== Client (Helper) ===================================================
+
+#================================================== Client (builder) ===================================================
 @allure.step('◎ Get Users Client (Public)')
 def get_users_client_public() -> UsersClientPublic:
     """
-    Функция получения экземпляра UsersClientPublic() с уже настроенным httpx.Client (Public)
+    Функция получения экземпляра UsersClientPublic() с настроенным httpx.Client (Public)
 
     :return: Настроенный экземпляр UsersClientPublic()
     """
     users_client_public = UsersClientPublic(client=get_httpx_client_public())
-    return users_client_public                                                 # UsersClientPublic()
+    return users_client_public                                        # UsersClientPublic()
 
-#-----------------------------------------------------------------------------------------------------------------------
+#=======================================================================================================================

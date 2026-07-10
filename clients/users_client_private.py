@@ -4,6 +4,7 @@ Users Client (🔒Private)
 """
 import httpx
 import allure
+from tools.endpoints import Endpoint
 from clients.api_client import APIClient
 from schemas.auth_schema import AuthDataSchema
 from clients.httpx_client_private import get_httpx_client_private
@@ -16,8 +17,12 @@ from schemas.users_schema import (
 
 #============================================== Users Client (🔒Private) ===============================================
 class UsersClientPrivate(APIClient):
-    ENDPOINT = '/api/v1/users'
-    #------------------------------------------------- Get User Me -----------------------------------------------------
+    """
+    Клиент для работы с /api/v1/users (🔒Private)
+
+    .
+    """
+    #--------------------------------------------------- Get User Me ---------------------------------------------------
     # API
     @allure.step('▶ Get User Me')
     def get_user_me_api(self) -> httpx.Response:
@@ -26,8 +31,8 @@ class UsersClientPrivate(APIClient):
 
         :return: httpx.Response
         """
-        response = self.get(url=f'{self.ENDPOINT}/me')                               # ▶ Запрос
-        return response                                                              # httpx.Response
+        response = self.get(url=f'{Endpoint.USERS}/me')           # ▶ Запрос
+        return response                                           # httpx.Response
 
 
     # Pydantic-model
@@ -43,7 +48,7 @@ class UsersClientPrivate(APIClient):
         return response_model                                                         # Pydantic-model (GetUserMeResponseSchema)
 
 
-    #-------------------------------------------------- Get User -------------------------------------------------------
+    #---------------------------------------------------- Get User -----------------------------------------------------
     # API
     @allure.step('▶ Get User by ID (API)')
     def get_user_api(self, user_id: str) -> httpx.Response:
@@ -53,8 +58,8 @@ class UsersClientPrivate(APIClient):
         :param user_id: User-ID
         :return: httpx.Response
         """
-        response = self.get(url=f'{self.ENDPOINT}/{user_id}')        # ▶ Запрос
-        return response                                              # httpx.Response
+        response = self.get(url=f'{Endpoint.USERS}/{user_id}')     # ▶ Запрос
+        return response                                            # httpx.Response
 
 
     # Pydantic-model
@@ -71,7 +76,7 @@ class UsersClientPrivate(APIClient):
         return response_model                                                        # Pydantic-model (GetUserResponseSchema)
 
 
-    #------------------------------------------------- Update User -----------------------------------------------------
+    #--------------------------------------------------- Update User ---------------------------------------------------
     # API
     @allure.step('▶ Update User by ID (API)')
     def update_user_api(self, user_id: str, update_data: UpdateUserRequestSchema) -> httpx.Response:
@@ -83,7 +88,7 @@ class UsersClientPrivate(APIClient):
         :return: httpx.Response
         """
         response = self.patch(                                      # ▶ Запрос
-            url=f'{self.ENDPOINT}/{user_id}',
+            url=f'{Endpoint.USERS}/{user_id}',
             json=update_data.model_dump(by_alias=True)              # Pydantic-model —> Dict (serialize)
         )
         return response                                             # httpx.Response
@@ -104,7 +109,7 @@ class UsersClientPrivate(APIClient):
         return response_model                                                           # Pydantic-model (UserUpdateResponseSchema)
 
 
-    #------------------------------------------------- Delete User -----------------------------------------------------
+    #--------------------------------------------------- Delete User ---------------------------------------------------
     # API
     @allure.step('▶ Delete User by ID (API)')
     def delete_user_api(self, user_id: str) -> httpx.Response:
@@ -114,20 +119,21 @@ class UsersClientPrivate(APIClient):
         :param user_id: User-ID
         :return: httpx.Response
         """
-        response = self.delete(url=f'{self.ENDPOINT}/{user_id}')    # ▶ Запрос
+        response = self.delete(url=f'{Endpoint.USERS}/{user_id}')   # ▶ Запрос
         return response                                             # httpx.Response
 
 
-#=================================================== Client (Helper) ===================================================
+
+#================================================== Client (builder) ===================================================
 @allure.step('◎ Get Users Client (Private)')
 def get_users_client_private(auth_data: AuthDataSchema) -> UsersClientPrivate:
     """
-    Функция получения экземпляра UsersClientPrivate() с уже настроенным httpx.Client (Private)
+    Функция получения экземпляра UsersClientPrivate() с настроенным httpx.Client (Private)
 
     :param auth_data: Pydantic-model с данными для аутентификации пользователя (Email, Password)
     :return: Настроенный экземпляр UsersClientPrivate()
     """
     users_client_private = UsersClientPrivate(client=get_httpx_client_private(auth_data))
-    return users_client_private                                                        # UsersClientPrivate()
+    return users_client_private                                     # UsersClientPrivate()
 
-#-----------------------------------------------------------------------------------------------------------------------
+#=======================================================================================================================

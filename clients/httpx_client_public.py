@@ -11,9 +11,8 @@ from tools.event_hooks.event_hooks import (
     api_report_event_hook,
     curl_command_event_hook
 )
-
 #============================================ httpx.Client (Public) builder ============================================
-@allure.step('◉ Get httpx.Client (Public)')           # Allure step title
+@allure.step('◉ Get httpx.Client (Public)')         # Allure step title
 def get_httpx_client_public() -> httpx.Client:
     """
     Функия создает настроенный экземпляр httpx.Client (Public)
@@ -36,4 +35,4 @@ def get_httpx_client_public() -> httpx.Client:
     )
     return httpx_client_public                      # httpx.Client (настроенный)
 
-#-----------------------------------------------------------------------------------------------------------------------
+#=======================================================================================================================

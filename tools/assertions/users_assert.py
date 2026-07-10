@@ -8,6 +8,7 @@ from tools.assertions.base_assert import assert_equal, assert_is_value, assert_l
 
 #------------ Logger -------------
 logger = get_logger('USER-ASSERT')
+
 #=======================================================================================================================
 # Response data is non-empty
 @allure.step('Response data is non-empty')                                        # Allure step title

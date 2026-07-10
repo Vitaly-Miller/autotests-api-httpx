@@ -13,7 +13,6 @@ from tools.event_hooks.event_hooks import (
     api_report_event_hook,
     curl_command_event_hook
 )
-
 #========================================= httpx.Client (🔒Private) (builder) ==========================================
 #@lru_cache()                                                             # Кэшируем (требуется frozen=True для Schema)
 @allure.step('◉ Get httpx.Client (Private)')                              # Allure step title
@@ -44,4 +43,4 @@ def get_httpx_client_private(auth_data: AuthDataSchema) -> httpx.Client:  # Пр
     )
     return httpx_client_private                                           # httpx.Client (настроенный)
 
-#-----------------------------------------------------------------------------------------------------------------------
+#=======================================================================================================================

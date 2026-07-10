@@ -3,6 +3,7 @@ Exercises Client
 """
 import httpx
 import allure
+from tools.endpoints import Endpoint
 from clients.api_client import APIClient
 from clients.httpx_client_private import get_httpx_client_private
 from schemas.auth_schema import AuthDataSchema
@@ -11,11 +12,14 @@ from schemas.exercises_schema import (
     GetExerciseResponseSchema, GetExercisesQwerySchema, UpdateExerciseRequestSchema,
     CreateExerciseResponseSchema, UpdateExerciseResponseSchema
 )
-
-#================================================== Exercises Client ===================================================
+#================================================= Exercises Client ====================================================
 class ExercisesClient(APIClient):
-    ENDPOINT = '/api/v1/exercises'
-    #---------------------------------------------- Create Exercise ----------------------------------------------------
+    """
+    Клиент для работы с /api/v1/exericises
+
+    .
+    """
+    #------------------------------------------------- Create Exercise -------------------------------------------------
     # API
     @allure.step('▶ Create Exercise (API)')
     def create_exercise_api(self, create_exercise_data: CreateExerciseRequestSchema) -> httpx.Response:
@@ -26,7 +30,7 @@ class ExercisesClient(APIClient):
         :return: httpx.Response
         """
         response = self.post(                                     # ▶ Запрос
-            url=self.ENDPOINT,
+            url=Endpoint.EXERCISES,                               # Endpoint (by Enum)
             json=create_exercise_data.model_dump(by_alias=True)   # Pydantic-model —> Dict (serialize)
         )
         return response                                           # httpx.Response
@@ -45,7 +49,7 @@ class ExercisesClient(APIClient):
         return response_model                                                             # Pydantic-model(CreateExerciseResponseSchema)
 
 
-    #------------------------------------------------ Get Exercise -----------------------------------------------------
+    #-------------------------------------------------- Get Exercise ---------------------------------------------------
     # API
     @allure.step('▶ Get Exercise by ID (API)')
     def get_exercise_api(self, exercise_id: str) -> httpx.Response:
@@ -55,7 +59,7 @@ class ExercisesClient(APIClient):
         :param exercise_id: Exercise-ID
         :return: httpx.Response
         """
-        response = self.get(url=f'{self.ENDPOINT}/{exercise_id}')          # ▶ Запрос
+        response = self.get(url=f'{Endpoint.EXERCISES}/{exercise_id}')     # ▶ Запрос
         return response                                                    # httpx.Response
 
 
@@ -73,7 +77,7 @@ class ExercisesClient(APIClient):
         return response_model                                                         # Pydantic-model (GetExerciseResponseSchema)
 
 
-    #------------------------------------------------ Get Exercises ----------------------------------------------------
+    #-------------------------------------------------- Get Exercises --------------------------------------------------
     # API
     @allure.step('▶ Get Exercises by Course-ID (API)')
     def get_exercises_api(self, query_course_id: GetExercisesQwerySchema) -> httpx.Response:
@@ -84,12 +88,12 @@ class ExercisesClient(APIClient):
         :return: httpx.Response
         """
         response = self.get(                                      # ▶ Запрос c Query-параметром
-            url=self.ENDPOINT,
+            url=Endpoint.EXERCISES,                               # Endpoint (by Enum)
             params=query_course_id.model_dump(by_alias=True))     # Pydantic-model —> Dict (serialize)
         return response                                           # httpx.Response
 
 
-    #---------------------------------------------- Update Exercise ----------------------------------------------------
+    #------------------------------------------------- Update Exercise -------------------------------------------------
     # API
     @allure.step('▶ Update Exercise by ID (API)')
     def update_exercise_api(self, exercise_id: str, new_exercise_data: UpdateExerciseRequestSchema) -> httpx.Response:
@@ -101,7 +105,7 @@ class ExercisesClient(APIClient):
         :return: httpx.Response
         """
         response = self.patch(                                    # ▶ Запрос
-            url=f'{self.ENDPOINT}/{exercise_id}',
+            url=f'{Endpoint.EXERCISES}/{exercise_id}',
             json=new_exercise_data.model_dump(by_alias=True)      # Pydantic-model —> Dict (serialize)
         )
         return response                                           # httpx.Response
@@ -125,7 +129,7 @@ class ExercisesClient(APIClient):
         return response_model                            # Pydantic-model (UpdateExerciseResponseSchema)
 
 
-    #---------------------------------------------- Delete Exercise ----------------------------------------------------
+    #------------------------------------------------- Delete Exercise -------------------------------------------------
     # API
     @allure.step('▶ Delete Exercise by ID (API)')
     def delete_exercise_api(self, exercise_id: str) -> httpx.Response:
@@ -135,18 +139,20 @@ class ExercisesClient(APIClient):
         :param exercise_id: Exercise-ID
         :return: httpx.Response
         """
-        response = self.delete(url=f'{self.ENDPOINT}/{exercise_id}')    # ▶ Запрос
-        return response                                                 # httpx.Response
+        response = self.delete(url=f'{Endpoint.EXERCISES}/{exercise_id}')   # ▶ Запрос
+        return response                                                     # httpx.Response
 
 
-#================================================= Client (✨Helper) ===================================================
+#=================================================== Client (builder) ==================================================
 @allure.step('◎ Get Exercises Client')
 def get_exercises_client(auth_data: AuthDataSchema) -> ExercisesClient:
     """
-    Функция получения экземпляра ExercisesClient с уже настроенным HTTP-клиентом (с Авторизацией)
+    Функция получения экземпляра ExercisesClient с настроенным HTTP-клиентом (с Авторизацией)
 
     :param auth_data: Pydantic-model c данными для аутентификации пользователя (Email, Password)
     :return: Экземпляр ExercisesClient (с Авторизацией)
     """
     exercises_client = ExercisesClient(client=get_httpx_client_private(auth_data))
-    return exercises_client                                             # ExercisesClient(
+    return exercises_client                                                 # ExercisesClient()
+
+#=======================================================================================================================

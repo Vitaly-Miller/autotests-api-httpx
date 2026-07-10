@@ -3,15 +3,20 @@ Files Client
 """
 import allure
 import httpx
+from tools.endpoints import Endpoint
 from clients.api_client import APIClient
 from schemas.auth_schema import AuthDataSchema
 from schemas.files_schema import CreateFileRequestSchema, CreateFileResponseSchema, GetFileResponseSchema
 from clients.httpx_client_private import get_httpx_client_private
 
 
-#====================================================== Files Client ===================================================
+#==================================================== Files Client =====================================================
 class FilesClient(APIClient):
-    ENDPOINT = '/api/v1/files'
+    """
+    Клиент для работы с /api/v1/files
+
+    .
+    """
     #---------------------------------------------------- Get File -----------------------------------------------------
     # API
     @allure.step('▶ Get File by ID (API)')
@@ -22,7 +27,7 @@ class FilesClient(APIClient):
         :param file_id: File-ID
         :return: httpx.Response
         """
-        response = self.get(url=f'{self.ENDPOINT}/{file_id}')       # ▶ Запрос
+        response = self.get(url=f'{Endpoint.FILES}/{file_id}')      # ▶ Запрос
         return response                                             # httpx.Response
 
 
@@ -52,7 +57,7 @@ class FilesClient(APIClient):
         """
         with open(create_file_data.upload_path, 'rb') as f:
             response = self.post(                                   # ▶ Запрос:
-                url=self.ENDPOINT,                                  # URL запроса
+                url=Endpoint.FILES,                                 # URL запроса (endpoint через Enum)
                 # data=create_file_data,  # <- ⚠️проверить - create_file_data целиком -> Сервер получит лишние поля: 'filename' и 'directory' (✔️ничего страшного)
                 data={'filename': create_file_data.filename, 'directory': create_file_data.directory}, # Имя сохранения файла,  Директория сохранения
                 files={'upload_file': f}                            # f - переменная прочитанного файла
@@ -84,19 +89,21 @@ class FilesClient(APIClient):
         :param file_id: File-ID
         :return: httpx.Response
         """
-        response = self.delete(url=f'{self.ENDPOINT}/{file_id}')    # ▶ Запрос
-        return response                                             # httpx.Response:
+        response = self.delete(url=f'{Endpoint.FILES}/{file_id}')   # ▶ Запрос
+        return response                                             # httpx.Response
 
 
 
-#================================================= Client (✨Helper) ===================================================
+#================================================== Client (builder) ===================================================
 @allure.step('◎ Get Files Client')
 def get_files_client(auth_data: AuthDataSchema) -> FilesClient:
     """
-    Функция получения экземпляра FilesClient с уже настроенным HTTP-клиентом (с Авторизацией)
+    Функция получения экземпляра FilesClient с настроенным HTTP-клиентом (с Авторизацией)
 
     :param auth_data: Pydantic-model c данными для аутентификации пользователя (Email, Password)
     :return: Экземпляр FilesClient (с Авторизацией)
     """
     files_client = FilesClient(client=get_httpx_client_private(auth_data))
     return files_client                                            # FilesClient()
+
+#=======================================================================================================================
