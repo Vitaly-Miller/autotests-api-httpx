@@ -4,7 +4,7 @@ Base assertions
 import http
 import allure
 from typing import Any, Sized             # Sized - объект, у которого есть длина (len)
-from logger import get_logger
+from tools.logger import get_logger
 
 #------------- Logger ------------
 logger = get_logger('- BASE-ASSERT')

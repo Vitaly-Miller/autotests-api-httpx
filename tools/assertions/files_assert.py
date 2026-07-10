@@ -4,7 +4,7 @@ Files Assertions
 import httpx
 import allure
 from config import settings
-from logger import get_logger
+from tools.logger import get_logger
 from schemas.errors_schema import ErrorResponseSchema, ErrorSchema, NotFoundErrorResponseSchema
 from schemas.files_schema import CreateFileResponseSchema, CreateFileRequestSchema, GetFileResponseSchema
 from tools.assertions.base_assert import assert_length, assert_is_value, assert_equal

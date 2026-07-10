@@ -3,7 +3,7 @@ Exercises assertions
 """
 import httpx
 import allure
-from logger import get_logger
+from tools.logger import get_logger
 from tools.assertions.base_assert import assert_equal, assert_is_value, assert_length
 from tools.assertions.errors_assert import assert_not_found_error_response
 from schemas.errors_schema import NotFoundErrorResponseSchema
@@ -11,7 +11,6 @@ from schemas.exercises_schema import (
     ExerciseSchema, CreateExerciseRequestSchema, CreateExerciseResponseSchema,
     GetExerciseResponseSchema, UpdateExerciseRequestSchema, UpdateExerciseResponseSchema
 )
-from tools.tool import Tool
 
 #------------- Logger ----------------
 logger = get_logger('EXERCISE-ASSERT')

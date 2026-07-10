@@ -2,7 +2,7 @@
 Auth (Log in) assertions
 """
 import allure
-from logger import get_logger
+from tools.logger import get_logger
 from schemas.auth_schema import AuthResponseSchema
 from tools.assertions.base_assert import (
     assert_equal,

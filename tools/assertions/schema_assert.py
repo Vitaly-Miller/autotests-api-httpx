@@ -6,7 +6,7 @@ import httpx
 import jsonschema
 import pydantic
 import allure
-from logger import get_logger
+from tools.logger import get_logger
 
 #------------- Logger --------------
 logger = get_logger('SCHEMA-ASSERT')

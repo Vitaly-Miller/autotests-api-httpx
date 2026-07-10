@@ -2,7 +2,7 @@
 Users assertions
 """
 import allure
-from logger import get_logger
+from tools.logger import get_logger
 from schemas.users_schema import CreateUserRequestSchema, CreateUserResponseSchema
 from tools.assertions.base_assert import assert_equal, assert_is_value, assert_length
 

@@ -2,7 +2,7 @@
 Errors assertions
 """
 import allure
-from logger import get_logger
+from tools.logger import get_logger
 from schemas.errors_schema import ErrorSchema, ErrorResponseSchema, NotFoundErrorResponseSchema
 from tools.assertions.base_assert import assert_equal, assert_length_equal
 

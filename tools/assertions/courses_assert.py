@@ -2,7 +2,7 @@
 Courses Assertions
 """
 import allure
-from logger import get_logger
+from tools.logger import get_logger
 from tools.assertions.base_assert import assert_equal, assert_length_equal
 from schemas.courses_schema import (
     CreateCourseRequestSchema, CreateCourseResponseSchema,
