@@ -26,7 +26,7 @@ def assert_exercise_non_empty(response: ExerciseSchema):
     :param response: Pydantic-model (ExerciseSchema)
     :raise AssertionError
     """
-    logger.info('Exercise values in non-empty')                                  # Logger
+    logger.info('Exercise values in non-empty')                                  # Logger INFO
     assert_is_value(response.id, 'id')
     assert_is_value(response.title, 'title')
     assert_is_value(response.course_id, 'course_id')
@@ -49,7 +49,7 @@ def assert_create_exercise_response_non_empty(response: CreateExerciseResponseSc
     :param response: Pydantic-model (CreateExerciseResponseSchema)
     :raise AssertionError
     """
-    logger.info('Create Exercise Response data is non-empty')                    # Logger
+    logger.info('Create Exercise Response data is non-empty')                    # Logger INFO
     assert_exercise_non_empty(response.exercise)                                 # передаем exercise{}
 
 
@@ -63,7 +63,7 @@ def assert_create_exercise_response(response: CreateExerciseResponseSchema, requ
     :param request: Pydantic-model (CreateExerciseRequestSchema)
     :raise AssertionError
     """
-    logger.info('Response data = Request data')                                 # Logger
+    logger.info('Response data = Request data')                                 # Logger INFO
     assert_equal(response.exercise.title, request.title, 'title')
     assert_equal(response.exercise.course_id, request.course_id, 'course_id')
     assert_equal(response.exercise.max_score, request.max_score, 'max_score')
@@ -87,7 +87,7 @@ def assert_exercise_id(response: CreateExerciseResponseSchema | GetExerciseRespo
     :param exercise_id: Exercise-ID / None
     :raise AssertionError
     """
-    logger.info('Exercise-ID validation')                                                  # Logger
+    logger.info('Exercise-ID validation')                                                  # Logger INFO
     assert_is_value(response.exercise.id, 'exercise_id')                        # NON-empty File-ID
     assert_length(response.exercise.id, 36, 'exercise_id')       # File-ID length = 36 chars
     if exercise_id:                                                                        # Если передать Exercise-ID, то проверяем его:
@@ -107,7 +107,7 @@ def assert_get_exercise_response_non_empty(response: GetExerciseResponseSchema):
     :param response: Pydantic-model (GetExerciseResponseSchema)
     :raise AssertionError
     """
-    logger.info('Get Exercise Response data is non-empty')                         # Logger
+    logger.info('Get Exercise Response data is non-empty')                         # Logger INFO
     assert_exercise_non_empty(response.exercise)                                   # передаем exercise{}
 
 
@@ -122,7 +122,7 @@ def assert_update_exercise_response(response: UpdateExerciseResponseSchema, requ
     :param request: Pydantic-model (UpdateExerciseRequestSchema)
     :raise AssertionError
     """
-    logger.info('Response data = Request data')                                    # Logger
+    logger.info('Response data = Request data')                                    # Logger INFO
     assert_equal(response.exercise.title, request.title, 'title')
     assert_equal(response.exercise.max_score, request.max_score, 'max_score')
     assert_equal(response.exercise.min_score, request.min_score, 'min_score')
@@ -150,7 +150,7 @@ def assert_exercise_not_found_error_response(response: httpx.Response):
     expected_response = NotFoundErrorResponseSchema(
         detail='Exercise not found'                                                   # Expected error message
     )
-    logger.info('Get File Not Found Error Response by non-existent exercise')         # Logger
+    logger.info('Get File Not Found Error Response by non-existent exercise')         # Logger INFO
     assert_not_found_error_response(actual_response, expected_response)
 
 

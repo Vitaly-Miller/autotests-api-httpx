@@ -23,7 +23,7 @@ def assert_create_course_response(response: CreateCourseResponseSchema, request:
     :param request: Pydantic-model (CreateCourseRequestSchema)
     :raise AssertionError
     """
-    logger.info('Response data = Request data')                           # Logger
+    logger.info('Response data = Request data')                           # Logger INFO
     assert_equal(response.course.title, request.title, 'title')
     assert_equal(response.course.max_score, request.max_score, 'max_score')
     assert_equal(response.course.min_score, request.min_score, 'min_score')
@@ -46,7 +46,7 @@ def assert_get_courses_responses(
     :param create_course_responses: Pydantic-model (list[CreateCourseResponseSchema])
     :return: AssertionError
     """
-    logger.info('List of Courses = List of Created courses')               # Logger
+    logger.info('List of Courses = List of Created courses')               # Logger INFO
     expected_courses = [r.course for r in create_course_responses]
     assert_length_equal(get_courses_response.courses, expected_courses, 'courses') # Сравниваем количество элементов в объекте "courses"
     assert_equal(get_courses_response.courses, expected_courses, 'courses')        # Сравниваем значения элементов в объекте "courses"
@@ -63,7 +63,7 @@ def assert_update_course_response(response: UpdateCourseResponseSchema, request:
     :param request: Pydantic-model (UpdateCourseRequestSchema)
     :raise AssertionError
     """
-    logger.info('Response data = Request data')                           # Logger
+    logger.info('Response data = Request data')                           # Logger INFO
     assert_equal(response.course.title, request.title, 'title')
     assert_equal(response.course.max_score, request.max_score, 'max_score')
     assert_equal(response.course.min_score, request.min_score, 'min_score')

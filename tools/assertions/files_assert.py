@@ -23,7 +23,7 @@ def assert_create_file_response_non_empty(response: CreateFileResponseSchema):
     :param response: Pydantic-model (CreateFileResponseSchema)
     :raise AssertionError
     """
-    logger.info('Response data is non-empty')                                     # Logger
+    logger.info('Response data is non-empty')                                     # Logger INFO
     assert_is_value(response.file.id, 'id')
     assert_is_value(response.file.filename, 'filename')
     assert_is_value(response.file.directory, 'directory')
@@ -41,7 +41,7 @@ def assert_create_file_response(response: CreateFileResponseSchema, request: Cre
     :raise AssertionError
     """
     expected_url = f'{settings.httpx_client.base_url}/static/{request.directory}/{request.filename}'  # URL for comparison
-    logger.info('Response data = Request data')                                  # Logger
+    logger.info('Response data = Request data')                                  # Logger INFO
     assert_equal(response.file.filename,request.filename,'filename')
     assert_equal(response.file.directory,request.directory,'directory')
     assert_equal(response.file.url,expected_url,'url')
@@ -62,7 +62,7 @@ def assert_file_id(response: CreateFileResponseSchema | GetFileResponseSchema, f
     :param file_id: File-ID / None (optional)
     :raise AssertionError
     """
-    logger.info('File-ID validation')                                             # Logger
+    logger.info('File-ID validation')                                             # Logger INFO
     assert_is_value(response.file.id, 'id')                          # File-ID is non-empty
     assert_length(response.file.id,36,'id')           # File-ID length = 36 chars
 
@@ -94,7 +94,7 @@ def assert_create_file_empty_filename_error_response(response: httpx.Response):
                 )
             ]
         )
-        logger.info('Create File Error Response by empty "filename"')              # Logger
+        logger.info('Create File Error Response by empty "filename"')              # Logger INFO
         assert_error_response(actual_response, expected_response)
 
 
@@ -120,7 +120,7 @@ def assert_create_file_empty_directory_error_response(response: httpx.Response):
                 )
             ]
         )
-        logger.info('Create File Error Response by empty "directory"')              # Logger
+        logger.info('Create File Error Response by empty "directory"')              # Logger INFO
         assert_error_response(actual_response, expected_response)
 
 
@@ -150,7 +150,7 @@ def assert_get_file_invalid_id_error_response(response: httpx.Response):
             )
         ]
     )
-    logger.info('Get File Error Response by invalid File-ID (non-UUID)')              # Logger
+    logger.info('Get File Error Response by invalid File-ID (non-UUID)')              # Logger INFO
     assert_error_response(actual_response, expected_response)
 
 
@@ -171,7 +171,7 @@ def assert_get_file_not_found_error_response(response: httpx.Response):
     expected_response = NotFoundErrorResponseSchema(
         detail='File not found'                                                       # Expected error message
     )
-    logger.info('Get File Not Found Error Response by non-existent file')             # Logger
+    logger.info('Get File Not Found Error Response by non-existent file')             # Logger INFO
     assert_not_found_error_response(actual_response, expected_response)
 
 

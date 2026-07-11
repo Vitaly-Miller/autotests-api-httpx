@@ -20,7 +20,7 @@ def assert_validate_error(actual: ErrorSchema, expected: ErrorSchema):
     :param expected: Pydantic-model (ErrorSchema)
     :return: ValidationError
     """
-    logger.info('Validation Error')                                             # Logger
+    logger.info('Validation Error')                                             # Logger INFO
     assert_equal(actual.type, expected.type, 'type')
     assert_equal(actual.loc, expected.loc, 'loc')
     assert_equal(actual.msg, expected.msg, 'msg')
@@ -41,7 +41,7 @@ def assert_error_response(actual: ErrorResponseSchema, expected: ErrorResponseSc
     :param expected: Pydantic-model (ErrorResponseSchema)
     :return: ValidationError
     """
-    logger.info('Validation Error Response')                                           # Logger
+    logger.info('Validation Error Response')                                           # Logger INFO
     assert_length_equal(actual.detail, expected.detail, 'detail') # Сравнивает длины ключа "detail:"
     assert_equal(actual.detail, expected.detail, 'detail')        # Сравнивает значения ключа "detail:"
 
@@ -59,7 +59,7 @@ def assert_not_found_error_response(actual: NotFoundErrorResponseSchema, expecte
     :param expected: Pydantic-model (NotFoundErrorResponseSchema)
     :return: ValidationError
     """
-    logger.info('Validation Not Found Error Response')                           # Logger
+    logger.info('Validation Not Found Error Response')                           # Logger INFO
     assert_equal(actual.detail, expected.detail, 'detail')  # Сравнивает значения ключа "detail:"
 
 

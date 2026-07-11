@@ -23,7 +23,7 @@ def assert_auth_response_non_empty(response: AuthResponseSchema):
     :param response: Pydantic-model (AuthResponseSchem)
     :raise AssertionError
     """
-    logger.info('Auth Response data is non-empty')                              # Logger
+    logger.info('Auth Response data is non-empty')                              # Logger INFO
     assert_is_value(response.token.token_type, 'token_type')
     assert_is_value(response.token.access_token, 'access_token')
     assert_is_value(response.token.refresh_token, 'refresh_token')
@@ -44,7 +44,7 @@ def assert_token(response: AuthResponseSchema):
     :param response: Pydantic-model (AuthResponseSchema)
     :raise AssertionError
     """
-    logger.info('Tokens validation')                                            # Logger
+    logger.info('Tokens validation')                                            # Logger INFO
     # Access Token type = 'bearer'
     assert_equal(
         response.token.token_type,

@@ -1,10 +1,10 @@
 """
-Logger (settings)
+Logger (by logging)
 """
 import logging
 
 #=======================================================================================================================
-def get_logger(name: str) -> logging.Logger:
+def get_logger(name: str, console: bool = False) -> logging.Logger:
     """
     Создает и настраивает Logger
 
@@ -23,14 +23,16 @@ def get_logger(name: str) -> logging.Logger:
 
     # 4.ADD
     handler.setFormatter(formatter)          # Добавляем Handler (обработчик) в Formatter
-    logger.addHandler(handler)               # Добавляем Handler (обработчик) в Logger
 
-    return logger                            # logging.Logger
+    if console:                              # Условие, если console=True (default - False)
+        logger.addHandler(handler)           # Выводить log в консоль
+
+    return logger
 
 """
 # Example
 logger = get_logger('TEST')                           # Инициализация Logger + Имя
 logger.info('Получение клиента')                      # 2026-07-07 20:35:47,164 | TEST | INFO | Получение клиента
-logger.info('Выполнение теста')                       # 2026-07-07 20:35:47,164 | TEST | INFO | Выполнение теста
+logger.info('Выполнение теста')                       # 2026-07-07 20:35:47,167 | TEST | INFO | Выполнение теста
 """
 #=======================================================================================================================

@@ -19,7 +19,7 @@ def assert_create_user_response_non_empty(response: CreateUserResponseSchema):
     :param response: Pydantic-model (CreateUserResponseSchema)
     :raise AssertionError
     """
-    logger.info('Response data is non-empty')                                     # Logger
+    logger.info('Response data is non-empty')                                     # Logger INFO
     assert_is_value(response.user.id, 'id')
     assert_is_value(response.user.email, 'email')
     assert_is_value(response.user.first_name, 'first_name')
@@ -38,7 +38,7 @@ def assert_create_user_response(response: CreateUserResponseSchema, request: Cre
     :param request: Pydantic-model (CreateUserRequestSchema)
     :raise AssertionError
     """
-    logger.info('Response data = Request data')                                   # Logger
+    logger.info('Response data = Request data')                                   # Logger INFO
     assert_equal(response.user.email,request.email,'email')
     assert_equal(response.user.last_name,request.last_name,'last_name')
     assert_equal(response.user.first_name, request.first_name,'first_name')
@@ -57,7 +57,7 @@ def assert_user_id(response: CreateUserResponseSchema):
     :param response: Pydantic-model (CreateUserResponseSchema)
     :raise AssertionError
     """
-    logger.info('User-ID validation')                                             # Logger
+    logger.info('User-ID validation')                                             # Logger INFO
     assert_is_value(response.user.id, 'id')                           # User-ID is NOT-empty
     assert_length(response.user.id, 36, 'id')          # User-ID length = 36 chars
 

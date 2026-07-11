@@ -4,7 +4,7 @@ Logger
 import logging
 
 #=======================================================================================================================
-# Logger
+# Logger INFO
 logger = logging.getLogger('TEST')                # Создаем Logger и присваиваем ему название "TEST"
 logger.setLevel(logging.DEBUG)                    # Уровень (глубина) логирования - DEBUG и выше (все)
 

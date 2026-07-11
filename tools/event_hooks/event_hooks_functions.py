@@ -103,7 +103,7 @@ def get_api_response_headers(response: httpx.Response):
 
 #========================================================= cURL ========================================================
 # cURL-command generator (без транспортных заголовков)
-def make_curl(request: httpx.Request) -> str:
+def make_curl(request: httpx.Request, all_headers: bool = False) -> str:
     """
     Функция генерирует команду cURL при выполнении HTTP-запроса
 
@@ -115,6 +115,7 @@ def make_curl(request: httpx.Request) -> str:
 
 
     :param request: HTTP-запрос, из которого будет сформирована cURL-command
+    :param all_headers: Нужны ли автоматически вычисляемые транспортные заголовки в cURL команде (False - default)
     :return: Строка с cURL-command
     """
     # HTTP-заголовки, которые не нужно переносить в cURL.
@@ -127,9 +128,10 @@ def make_curl(request: httpx.Request) -> str:
     result: list[str] = [f'curl -X {request.method}', shlex.quote(str(request.url))]   # Генерируем сроковый список
 
     # Формируем HTTP-заголовки:
-    for header, value in request.headers.items():     # Итерация по заголовкам и значениям headers
-        if header.lower() in auto_headers:            # Если  есть автоматически вычисляемые транспортные заголовки, ...
-            continue                                  # ... проигнорировать
+    for header, value in request.headers.items():   # Итерация по заголовкам и значениям headers
+        if not all_headers:                         # Если параметр <all_headers> = False, то ...
+            if header.lower() in auto_headers:      # ... если есть автоматически вычисляемые транспортные заголовки, то ...
+                continue                            # ... проигнорировать их
 
         result.append(f'-H {shlex.quote(f"{header}: {value}")}')   # Добавление заголовков и значений в <result>
 

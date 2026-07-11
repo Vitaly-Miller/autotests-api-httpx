@@ -1,5 +1,5 @@
 """
-JSON Schema Validation
+Response JSON Schema Validation
 """
 import json
 import httpx
@@ -23,9 +23,9 @@ def validate_json_schema(instance: httpx.Response | dict, schema: type[pydantic.
     :param schema: Ожидаемая Pydantic-schema, из которой будет генерирована JSON-схема
     :raise: ValidationError - если instance ≠ Pydantic-schema
     """
-    with allure.step(f'JSON Schema validation ({schema.__name__})'):    # Allure step title + динамическое __имя__ Pydantic-схемы
-        if isinstance(instance, httpx.Response):                        # Проверка на тип данных <instance>
-            instance = instance.json()                                  # httpx.Response –> Dict
+    with allure.step(f'Response JSON Schema validation ({schema.__name__})'):    # Allure step title + динамическое __имя__ Pydantic-схемы
+        if isinstance(instance, httpx.Response):                                 # Проверка на тип данных <instance>
+            instance = instance.json()                                           # httpx.Response –> Dict
 
         # Serialize for Allure attachments
         json_schema = schema.model_json_schema()                                        # Генерация JSON-схемы. Pydantic-model –> Dict
@@ -41,13 +41,13 @@ def validate_json_schema(instance: httpx.Response | dict, schema: type[pydantic.
 
         # Allure attachment of JSON Schema
         allure.attach(
-            body=json_schema_pretty,                       # Прикрепляемый объект
-            name=f'JSON Schema ({schema.__name__})',       # Allure attachment title (динамический)
-            attachment_type=allure.attachment_type.JSON    # Output type (Тип отображения объекта - JSON)
+            body=json_schema_pretty,                           # Прикрепляемый объект
+            name=f'Response JSON Schema ({schema.__name__})',  # Allure attachment title (динамический)
+            attachment_type=allure.attachment_type.JSON        # Output type (Тип отображения объекта - JSON)
         )
 
         # Validation
-        logger.info(f'JSON Schema validation ({schema.__name__})')    # Logger
+        logger.info(f'Response JSON Schema validation ({schema.__name__})')    # Logger INFO
         try:
             jsonschema.validate(
                 instance=instance,                         # = Instance (Dict) для валидации
