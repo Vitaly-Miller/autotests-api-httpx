@@ -5,7 +5,7 @@ import httpx
 
 #=======================================================================================================================
 # cURL
-def make_curl_from_request(request: httpx.Request) -> str:
+def make_curl(request: httpx.Request) -> str:
     """
     Генерирует команду cURL из httpx.Request.
 

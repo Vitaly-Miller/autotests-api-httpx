@@ -11,7 +11,7 @@ from tools.event_hooks.event_hooks_functions import (
     get_api_base,
     get_api_request_body, get_api_response_body,
     get_api_request_headers, get_api_response_headers,
-    make_curl_from_request,
+    make_curl,
     get_log_request, get_log_response,
 )
 #------------- Logger -------------
@@ -79,7 +79,7 @@ def curl_command_event_hook(response: httpx.Response):
     :param response: httpx.Response, переданный автоматически public/privet httpx-клиентом (builder)
     """
     allure.attach(                                       # Allure attachment:
-        body=make_curl_from_request(response.request),   # - Прикрепляемый объект (функция)
+        body=make_curl(response.request),   # - Прикрепляемый объект (функция)
         name='cURL command',                             # - Allure attachment title
         attachment_type=allure.attachment_type.TEXT      # - Тип отображения отчете
     )

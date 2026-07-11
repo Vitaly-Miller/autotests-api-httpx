@@ -3,8 +3,11 @@ Event Hooks Functions
 
 events_hooks — параметр httpx.Client, позволяющий выполнять дополнительные действия перед Request-запроса или после Response-ответа
 """
+
+
 import httpx
 import json
+import shlex
 
 #========================================================= API =========================================================
 # Get API Base <=>
@@ -99,32 +102,51 @@ def get_api_response_headers(response: httpx.Response):
 
 
 #========================================================= cURL ========================================================
-# Make cURL command generator
-def make_curl_from_request(request: httpx.Request) -> str:
+# cURL-command generator (без транспортных заголовков)
+def make_curl(request: httpx.Request) -> str:
     """
     Функция генерирует команду cURL при выполнении HTTP-запроса
 
-    :param request: HTTP-запрос, из которого будет сформирована команда cURL
-    :return: Строка с командой cURL, содержащая метод запроса, URL, заголовки и тело (если есть)
+    - Request Method
+    - Request URL
+    - ⚠️БЕЗ ТРАНСПОРТНЫХ ЗАГОЛОВКОВ
+    - accept-encoding: (header)
+    - Request Body (если есть)
+
+
+    :param request: HTTP-запрос, из которого будет сформирована cURL-command
+    :return: Строка с cURL-command
     """
-    # Создаем список с основной командой cURL, включая Метод и URL
-    result: list[str] = [f'curl -X "{request.method}"', f'"{request.url}"']  # Генерируем сроковый список
+    # HTTP-заголовки, которые не нужно переносить в cURL.
+    # Они автоматически рассчитываются самим HTTP-клиентом (curl/Postman).
+    # Например, Content-Length может стать неверным после изменения тела запроса.
+    auto_headers = {'host', 'content-length', 'connection', 'accept-encoding', 'accept', 'user-agent'}
 
-    # Добавляем заголовки в формате -H "Header: Value"
-    for header, value in request.headers.items():            # Итерация по заголовкам и значениям headers
-        result.append(f'-H "{header}: {value}"')             # Добавление заголовков и значений в <result>
+    # Формируем список с основной командой cURL, включая Метод и URL:
+    # + shlex.quote() - экранирует URL для безопасного использования
+    result: list[str] = [f'curl -X {request.method}', shlex.quote(str(request.url))]   # Генерируем сроковый список
 
-    # Добавляем body, если оно есть (например, для POST, PUT, UPDATE)
+    # Формируем HTTP-заголовки:
+    for header, value in request.headers.items():     # Итерация по заголовкам и значениям headers
+        if header.lower() in auto_headers:            # Если  есть автоматически вычисляемые транспортные заголовки, ...
+            continue                                  # ... проигнорировать
+
+        result.append(f'-H {shlex.quote(f"{header}: {value}")}')   # Добавление заголовков и значений в <result>
+
+    # Формируем BODY:
     try:
-        if request.content:                                  # Если есть request.content (body), то ...  ┐ ИЛИ ОДНОЙ СТРОКОЙ —> if body := request.content:
-            body = request.content                           # ... сохраняем в <body>                    ┘
-            result.append(f'-d "{body.decode('utf-8')}"')    # Добавление body в <result> c переводом байтов в —> строку
-    except httpx.RequestNotRead:                             # Если запрос не прочитан, в случае передачи stream, ...
-        pass                                                 # ... проигнорировать
+        if request.content:                # Если запрос содержит тело (например, для POST, PUT, UPDATE)...
+            body = request.content.decode( # ... сохраняем в <body>
+                encoding='utf-8',          # bytes → str (декодируем)
+                errors='replace'           # Некорректные символы заменяем, чтобы генерация cURL не завершилась ошибкой
+            )
+            result.append(f'-d {shlex.quote(body)}')   # Добавляем тело запроса в <result>
 
-    # Объединение списка строк result в одну строку (через склеивание .join())
-    return " \\\n  ".join(result)                            # <пробел>, разделитель-<\> (экранированный), перенос сроки-<\n>, <пробел>, <пробел>
+    except httpx.RequestNotRead:                       # Для stream/multipart-запросов ...
+        pass                                           # ... пропускаем
 
+    # Объединение списка строк result в одну строку (через склеивание .join()) с разделителями
+    return ' \\\n  '.join(result)  # <пробел>, разделитель-<\> (экранированный), перенос сроки-<\n>, <пробел>, <пробел>
 
 
 #======================================================= Logging =======================================================
@@ -138,7 +160,7 @@ def get_log_request(request: httpx.Request) -> str:
     :param request: httpx.Request, из которого будет сформирована строка с данными для лога
     :return: Сформированная строка с данными для Request-лога (Method + Request-URL)
     """
-    log_request = f'{request.method}-request to {request.url}' # Формируем сроку c данными для лога
+    log_request = f'{request.method}-request to {request.url}'   # Формируем сроку c данными для лога
     return log_request
 
 
