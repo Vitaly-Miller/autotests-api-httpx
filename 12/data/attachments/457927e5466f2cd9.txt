@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEyVDA2OjQ0OjEyLjg0ODI4NiIsInVzZXJfaWQiOiI4N2EyMmQ4OS1lN2FiLTRhNzQtYmE3OC1mYTA2MDczMmQ3ZmUifQ.vLpCZqxcsp1Vii-wtHKnXRWso2Ie_33z14vkiYMYu_o' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Head house still.","courseId":"bbd3eb40-e856-4258-a919-d3455bf73dc0","maxScore":90,"minScore":15,"orderIndex":5892,"description":"Board idea into rule back same dark add.","estimatedTime":"4 weeks"}'

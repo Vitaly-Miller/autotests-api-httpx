@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEyVDA2OjQ0OjA3LjgzMzgyNyIsInVzZXJfaWQiOiJjNWJlNjhlMS02Y2ExLTQyYzEtODA2Yy1hMzgwNmFjZTMxOGEifQ.n7WB_30-zIdNlaJM1qF6YCCfxhNn7QUWi9PdskcYNFo' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Federal behavior concern human according point.","courseId":"c77c3be2-9c87-494f-a411-1a3efc1f6861","maxScore":53,"minScore":16,"orderIndex":5851,"description":"Task trial throughout hold.","estimatedTime":"3 weeks"}'

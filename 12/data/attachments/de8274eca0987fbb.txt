@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEyVDA2OjQ0OjE1LjY0NDIxMSIsInVzZXJfaWQiOiJjN2JiNThmOC1mYzVmLTRmNjItYWJlYy1mZWIzNjNhZjAwZmEifQ.slNC_eEcRkKnMf23Hc0BV0WGbT6DWEJNVXYuOQ1LuQ4' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Gun civil federal Mr material.","maxScore":75,"minScore":10,"description":"Apply none safe.","estimatedTime":"2 weeks","previewFileId":"dad37531-958d-40ca-b826-6e423530028e","createdByUserId":"c7bb58f8-fc5f-4f62-abec-feb363af00fa"}'

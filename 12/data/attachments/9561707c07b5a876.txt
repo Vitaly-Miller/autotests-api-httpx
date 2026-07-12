@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEyVDA2OjQ0OjA4LjEzNTE5MiIsInVzZXJfaWQiOiJjNWJlNjhlMS02Y2ExLTQyYzEtODA2Yy1hMzgwNmFjZTMxOGEifQ.1YtN4AxSPTHmK2ER2XESB9IiPhInJPdVpB4XcNQDYxY' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Throw try would approach firm character.","maxScore":80,"minScore":11,"description":"Far cut wrong never.","estimatedTime":"8 weeks","previewFileId":"5155819d-745b-496f-a288-228028a21419","createdByUserId":"c5be68e1-6ca1-42c1-806c-a3806ace318a"}'

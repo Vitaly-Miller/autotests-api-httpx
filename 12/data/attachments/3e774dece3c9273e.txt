@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEyVDA2OjQ0OjEwLjMzMzQyMiIsInVzZXJfaWQiOiI4MDU5NjA0ZS1lNzI2LTRmN2MtYWZhMy1lNzI5Yjg5NjQyMGEifQ.XdThd_zA8QV6jp-DgFLbTdbYnp8GMbGtGe_evmtflDo' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Approach position strategy.","courseId":"23a12384-2cc8-4cdf-b53c-cc4a3e1800ea","maxScore":86,"minScore":21,"orderIndex":7574,"description":"Really add expert my.","estimatedTime":"3 weeks"}'

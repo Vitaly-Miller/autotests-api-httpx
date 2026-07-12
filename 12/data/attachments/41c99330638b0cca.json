@@ -1,0 +1,25 @@
+{
+  "courses": [
+    {
+      "id": "9b15d550-5cf1-4b88-93c7-ec5f1321bb9d",
+      "title": "Away heart quickly.",
+      "maxScore": 63,
+      "minScore": 11,
+      "description": "Room lose room drop could discuss page.",
+      "previewFile": {
+        "id": "8ac2311b-b486-431f-ae7f-d116df43e543",
+        "filename": "file_5106.png",
+        "directory": "Uploaded",
+        "url": "http://localhost:8000/static/Uploaded/file_5106.png"
+      },
+      "estimatedTime": "6 weeks",
+      "createdByUser": {
+        "id": "f3edd145-dbb6-418e-8a7f-6cac0f3aea12",
+        "email": "test_66e0d704@example.com",
+        "lastName": "Barnes",
+        "firstName": "Renee",
+        "middleName": "Karen"
+      }
+    }
+  ]
+}

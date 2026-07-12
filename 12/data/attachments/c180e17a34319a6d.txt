@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEyVDA2OjQ0OjA2Ljg5MDY5MyIsInVzZXJfaWQiOiIyOWI3YzZmOS02MDZjLTQ1OWItYjk5OS1hZGNmZTYxMGVjMmMifQ.BebAsyVveLJKDpo2sjhWc7ss9f-yuJuO7bnEXPorPoQ' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Have drop staff professor future five.","maxScore":93,"minScore":23,"description":"Four anyone professor century serve.","estimatedTime":"9 weeks","previewFileId":"18f25ae2-1193-4a24-8332-39d793428d56","createdByUserId":"29b7c6f9-606c-459b-b999-adcfe610ec2c"}'

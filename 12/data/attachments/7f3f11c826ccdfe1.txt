@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEyVDA2OjQ0OjEzLjE0NzMxNyIsInVzZXJfaWQiOiI4N2EyMmQ4OS1lN2FiLTRhNzQtYmE3OC1mYTA2MDczMmQ3ZmUifQ.vuBqL_q0ndP4hAsnziQcKp-38hv7VTm7Y5fe5UjKpDk' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Next become road someone.","maxScore":91,"minScore":27,"description":"All really high especially low begin.","estimatedTime":"2 weeks","previewFileId":"c6aaf8f5-17de-494f-a634-bb9227c63ace","createdByUserId":"87a22d89-e7ab-4a74-ba78-fa060732d7fe"}'

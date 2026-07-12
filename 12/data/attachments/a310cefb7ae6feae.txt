@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/exercises/8bb491b1-edd8-4bf0-b0ff-12663dbf8dff \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEyVDA2OjQ0OjE2LjYwMzgwNSIsInVzZXJfaWQiOiIyNGZjZjMyZi1iNWMwLTRlNjktOTQyZC1iODRjZTQ2MjE5ZTIifQ.n0b34WujHrXBMqsaJGDrLNHHBzRFfEdJb7mT6tEoGn8' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Care national nation.","maxScore":95,"minScore":9,"orderIndex":2410,"description":"Whose entire agreement leader wide gun.","estimatedTime":"2 weeks"}'

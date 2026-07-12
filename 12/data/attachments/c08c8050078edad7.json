@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "cd246119-ddfc-4d69-beb0-c4aa0e8542ad",
+    "title": "Gun civil federal Mr material.",
+    "maxScore": 75,
+    "minScore": 10,
+    "description": "Apply none safe.",
+    "previewFile": {
+      "id": "dad37531-958d-40ca-b826-6e423530028e",
+      "filename": "file_2371.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_2371.png"
+    },
+    "estimatedTime": "2 weeks",
+    "createdByUser": {
+      "id": "c7bb58f8-fc5f-4f62-abec-feb363af00fa",
+      "email": "test_34607c21@example.com",
+      "lastName": "Valdez",
+      "firstName": "Tracy",
+      "middleName": "Joyce"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "bbd3eb40-e856-4258-a919-d3455bf73dc0",
+    "title": "Next become road someone.",
+    "maxScore": 91,
+    "minScore": 27,
+    "description": "All really high especially low begin.",
+    "previewFile": {
+      "id": "c6aaf8f5-17de-494f-a634-bb9227c63ace",
+      "filename": "file_5694.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_5694.png"
+    },
+    "estimatedTime": "2 weeks",
+    "createdByUser": {
+      "id": "87a22d89-e7ab-4a74-ba78-fa060732d7fe",
+      "email": "test_a412bbba@example.com",
+      "lastName": "Jones",
+      "firstName": "Ariel",
+      "middleName": "Theresa"
+    }
+  }
+}

@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEyVDA2OjQ0OjE2LjYwMzgwNSIsInVzZXJfaWQiOiIyNGZjZjMyZi1iNWMwLTRlNjktOTQyZC1iODRjZTQ2MjE5ZTIifQ.n0b34WujHrXBMqsaJGDrLNHHBzRFfEdJb7mT6tEoGn8' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Suggest worker the behind thousand.","courseId":"7095d3d1-25de-44de-8617-de43377994d6","maxScore":90,"minScore":15,"orderIndex":8468,"description":"From move this tell executive strategy.","estimatedTime":"3 weeks"}'

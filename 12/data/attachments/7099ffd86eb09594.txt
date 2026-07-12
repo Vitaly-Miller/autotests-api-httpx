@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEyVDA2OjQ0OjE1LjM0NDg0MyIsInVzZXJfaWQiOiJjN2JiNThmOC1mYzVmLTRmNjItYWJlYy1mZWIzNjNhZjAwZmEifQ.zsDdkSU5eOIXMNbU9aVkUbwkEwCQeYMYKTfFSsxWW6A' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Positive specific respond cell.","courseId":"cd246119-ddfc-4d69-beb0-c4aa0e8542ad","maxScore":99,"minScore":12,"orderIndex":7659,"description":"Impact animal hospital class.","estimatedTime":"7 weeks"}'

@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "0ceca120-26cf-4f0d-8bc6-15afe66f0ae6",
+    "title": "Have drop staff professor future five.",
+    "maxScore": 93,
+    "minScore": 23,
+    "description": "Four anyone professor century serve.",
+    "previewFile": {
+      "id": "18f25ae2-1193-4a24-8332-39d793428d56",
+      "filename": "file_4842.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_4842.png"
+    },
+    "estimatedTime": "9 weeks",
+    "createdByUser": {
+      "id": "29b7c6f9-606c-459b-b999-adcfe610ec2c",
+      "email": "test_6abba9f1@example.com",
+      "lastName": "Dyer",
+      "firstName": "Joshua",
+      "middleName": "Shannon"
+    }
+  }
+}
