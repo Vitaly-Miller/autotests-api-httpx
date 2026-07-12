@@ -5,10 +5,10 @@ name: API tests
 on:
   push:
     branches:
-      - master                # Запускать workflow, когда будет сделан коммит в ветку master/main
+      - main                  # Запускать workflow, когда будет сделан коммит в ветку main
   pull_request:
     branches:
-      - master                # Запускать workflow, когда будет сделан pull request в ветку master/main
+      - main                  # Запускать workflow, когда будет сделан pull request в ветку main
 
 # Определяем все шаги, которые должны быть выполнены в рамках работы с тестами
 jobs:
@@ -71,7 +71,7 @@ jobs:
       - name: Get Allure history
         uses: actions/checkout@v7    # ⚠️Опять клонируем репозиторий, чтобы получить историю отчётов
         if: always()                 # ВСЕГДА выполняем, независимо от успеха или неудачи предыдущих шагов
-        continue-on-error: true      # Если здесь возникнет ошибка, workflow всё равно продолжит выполнение
+        continue-on-error: true      # Если здесь возникнет ошибка, workflow всё равно продолжит выполнение`(s
         with:
           ref: gh-pages              # Указываем ветку gh-pages для получения отчётов
           path: gh-pages             # Указываем путь для сохранения отчётов
