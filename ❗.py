@@ -9,7 +9,6 @@
 По Response Pydantic Schemas - оставить CreateCoursesResponseSchema
 
 
-
 ------------------------------------------------------------------------------------------------------------------------
 3. Переименовать параметры <request> в актуальные:
 def create_user_api(self, request: CreateUserRequestSchema) -> Response:
