@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEyVDA2OjM5OjI2Ljk0NjQwMCIsInVzZXJfaWQiOiJiZGEyNDM1MS05Mzk1LTRhNTctYTNjNy05YjE2NzU3ZDFkNzIifQ.eWcVSWKXdYU_Hn7X3hcs7zEju2H4mUpESVpBOldfOCE' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Hair far remember.","maxScore":69,"minScore":1,"description":"Across need hotel.","estimatedTime":"9 weeks","previewFileId":"14959972-82fb-41ee-b619-8fc42243afdb","createdByUserId":"bda24351-9395-4a57-a3c7-9b16757d1d72"}'

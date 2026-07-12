@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "3e1b2b31-c61c-4932-aa42-5f45fe4c92ed",
+    "title": "Hair far remember.",
+    "maxScore": 69,
+    "minScore": 1,
+    "description": "Across need hotel.",
+    "previewFile": {
+      "id": "14959972-82fb-41ee-b619-8fc42243afdb",
+      "filename": "file_2814.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_2814.png"
+    },
+    "estimatedTime": "9 weeks",
+    "createdByUser": {
+      "id": "bda24351-9395-4a57-a3c7-9b16757d1d72",
+      "email": "test_9a3465ad@example.com",
+      "lastName": "Walker",
+      "firstName": "Emily",
+      "middleName": "Troy"
+    }
+  }
+}

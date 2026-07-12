@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "85eeee14-bfa5-4303-8501-eb3de3783783",
+    "title": "Foreign leg however.",
+    "maxScore": 77,
+    "minScore": 6,
+    "description": "Laugh notice likely style.",
+    "previewFile": {
+      "id": "247b31d1-f1aa-47b3-83e9-211f63dc0f87",
+      "filename": "file_7514.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_7514.png"
+    },
+    "estimatedTime": "8 weeks",
+    "createdByUser": {
+      "id": "0cbe16ab-cf3a-4c36-aca6-b7bb872f9712",
+      "email": "test_69889b77@example.com",
+      "lastName": "Davis",
+      "firstName": "Susan",
+      "middleName": "Jennifer"
+    }
+  }
+}

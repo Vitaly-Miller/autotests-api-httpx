@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEyVDA2OjM5OjI2LjY0NDg3MyIsInVzZXJfaWQiOiJiZGEyNDM1MS05Mzk1LTRhNTctYTNjNy05YjE2NzU3ZDFkNzIifQ.dK5ChV07P5zMXmBz6DBmfqMgVItO7zzTfVkU1WZ8P0M' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Ball environmental check.","courseId":"3e1b2b31-c61c-4932-aa42-5f45fe4c92ed","maxScore":77,"minScore":20,"orderIndex":6618,"description":"Onto themselves floor.","estimatedTime":"9 weeks"}'

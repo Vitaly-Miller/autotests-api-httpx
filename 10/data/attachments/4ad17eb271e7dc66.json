@@ -1,0 +1,25 @@
+{
+  "courses": [
+    {
+      "id": "fbeb317c-4199-4b05-81d0-b959f0d7e8da",
+      "title": "Color you pretty mother base view.",
+      "maxScore": 89,
+      "minScore": 28,
+      "description": "Want phone choice hope speech difference against.",
+      "previewFile": {
+        "id": "3b5d27e6-7849-44e6-9f27-8990bb26aba6",
+        "filename": "file_6199.png",
+        "directory": "Uploaded",
+        "url": "http://localhost:8000/static/Uploaded/file_6199.png"
+      },
+      "estimatedTime": "7 weeks",
+      "createdByUser": {
+        "id": "1618f120-664b-41bf-9ab2-7f1335a5442d",
+        "email": "test_b4fa50bf@example.com",
+        "lastName": "Banks",
+        "firstName": "Barbara",
+        "middleName": "Adrian"
+      }
+    }
+  ]
+}

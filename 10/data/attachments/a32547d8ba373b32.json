@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "e0ca67a3-e51a-4393-827b-45b7c09a2f61",
+    "title": "Cup yourself site throughout southern.",
+    "maxScore": 90,
+    "minScore": 13,
+    "description": "As step collection.",
+    "previewFile": {
+      "id": "b98f13c9-4ba7-428a-ae2e-1c5ad64846ba",
+      "filename": "file_2092.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_2092.png"
+    },
+    "estimatedTime": "4 weeks",
+    "createdByUser": {
+      "id": "064d0eba-2403-4265-8f26-4839c1b96bb9",
+      "email": "test_0e86398a@example.com",
+      "lastName": "Edwards",
+      "firstName": "Rhonda",
+      "middleName": "Meredith"
+    }
+  }
+}

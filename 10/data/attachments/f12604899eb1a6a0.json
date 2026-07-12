@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "39cdc2d6-60c3-4351-86f1-26d9b5666719",
+    "title": "National campaign left only.",
+    "maxScore": 60,
+    "minScore": 7,
+    "description": "Edge design affect lead.",
+    "previewFile": {
+      "id": "6b47a13c-991b-4667-bbce-b60b360c1f3a",
+      "filename": "file_1856.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_1856.png"
+    },
+    "estimatedTime": "3 weeks",
+    "createdByUser": {
+      "id": "b24c4251-8735-4f27-9b1f-29965c16c395",
+      "email": "test_dc7a9916@example.com",
+      "lastName": "Robinson",
+      "firstName": "Thomas",
+      "middleName": "James"
+    }
+  }
+}

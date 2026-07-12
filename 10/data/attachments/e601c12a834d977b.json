@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "a4ede784-18dd-4c84-9213-67d1925677b9",
+    "title": "Rest along ball.",
+    "maxScore": 91,
+    "minScore": 9,
+    "description": "Result end rise husband successful drive suffer.",
+    "previewFile": {
+      "id": "34d32579-ee50-412e-98ba-349ffef175e5",
+      "filename": "file_2679.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_2679.png"
+    },
+    "estimatedTime": "2 weeks",
+    "createdByUser": {
+      "id": "78204719-d2aa-4ba2-9793-6ed42e8f6cf3",
+      "email": "test_4b85e208@example.com",
+      "lastName": "Barnes",
+      "firstName": "Matthew",
+      "middleName": "Morgan"
+    }
+  }
+}

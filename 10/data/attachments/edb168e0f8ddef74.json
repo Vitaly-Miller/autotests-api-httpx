@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "bbae57f6-dbee-48ef-afdb-dc525bbe1c1f",
+    "title": "Here follow world light data.",
+    "maxScore": 78,
+    "minScore": 21,
+    "description": "Alone much point water.",
+    "previewFile": {
+      "id": "b1871279-0385-4739-b5c2-63a717ffcb58",
+      "filename": "file_1887.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_1887.png"
+    },
+    "estimatedTime": "8 weeks",
+    "createdByUser": {
+      "id": "df4e5116-0825-4d30-b163-87ebe11a85d0",
+      "email": "test_7038339b@example.com",
+      "lastName": "Williams",
+      "firstName": "Ricky",
+      "middleName": "Megan"
+    }
+  }
+}

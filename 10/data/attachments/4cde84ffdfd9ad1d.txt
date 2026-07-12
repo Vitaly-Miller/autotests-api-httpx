@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEyVDA2OjM5OjIyLjg4MjI4NyIsInVzZXJfaWQiOiI3ODIwNDcxOS1kMmFhLTRiYTItOTc5My02ZWQ0MmU4ZjZjZjMifQ.8kAxTjFVaJwo42t3wPgxJGhRxouAiGDi01P_5r75T0k' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Behavior represent gas.","courseId":"a4ede784-18dd-4c84-9213-67d1925677b9","maxScore":82,"minScore":10,"orderIndex":730,"description":"Too environmental quality professional.","estimatedTime":"8 weeks"}'
