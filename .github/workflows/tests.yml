@@ -43,13 +43,24 @@ jobs:
           JWT_SECRET_KEY: "autotests-api-server-secret-key"              # ⚠️ Секретный ключ для JWT
           JWT_ACCESS_TOKEN_EXPIRE: 1800                                  # Время жизни access token (в секундах)
           JWT_REFRESH_TOKEN_EXPIRE: 5184000                              # Время жизни refresh token (в секундах)
-        run: uvicorn master:app --host 0.0.0.0 --port 8000 --app-dir ./autotests-api-server &  # ⚠️ Запускаем сервер с указанными переменными окружения
+        run: |
+          mkdir -p storage                # Папка для файлов сервера: её нет в git, а без неё StaticFiles падает на старте
+          uvicorn main:app --host 0.0.0.0 --port 8000 --app-dir ./autotests-api-server > server.log 2>&1 &  # ⚠️ Запускаем сервер с указанными переменными окружения (лог — в server.log)
 
       # 6. Шаг для установки всех зависимостей проекта
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip         # Обновляем pip до последней версии
           pip install -r requirements.txt             # Устанавливаем зависимости проекта, указанные в requirements.txt
+
+      # 6.1. Шаг-проверка, что тестовый сервер поднялся (иначе выводим его лог и останавливаем workflow)
+      - name: Wait for test server
+        run: |
+          for i in {1..15}; do
+            curl -sf http://localhost:8000/docs > /dev/null && echo "✅ Server is up" && exit 0
+            sleep 2
+          done
+          echo "❌ Server failed to start. Log:" && cat server.log && exit 1
 
       # 7. Шаг для запуска тестов с использованием pytest и генерации отчётов Allure
       - name: Run API tests with pytest and generate Allure results
