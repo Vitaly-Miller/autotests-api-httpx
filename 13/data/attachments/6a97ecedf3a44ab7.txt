@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEyVDE2OjQ0OjUyLjQ3OTY2MiIsInVzZXJfaWQiOiI5NzkxYmNhNC00NTNhLTRjOTEtYWI2NS0yODU5YmQ2YWMzMWEifQ.G6uLaJwgTTfva5hHKQIHi3djoV35wG5n0YVdFdKeg60' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Huge record many.","maxScore":68,"minScore":23,"description":"Once usually determine style south truth.","estimatedTime":"5 weeks","previewFileId":"2df2f843-31a9-47ad-a57f-a094ba5e903d","createdByUserId":"9791bca4-453a-4c91-ab65-2859bd6ac31a"}'

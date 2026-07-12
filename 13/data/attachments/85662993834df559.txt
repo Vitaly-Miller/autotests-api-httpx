@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/courses/6fed33a4-fca1-4d82-9fbc-91d46694237f \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEyVDE2OjQ0OjU1LjMxMTQ3NyIsInVzZXJfaWQiOiI3ZjNiZDAwNi00MDU5LTRkOGUtOWY1NC1kNDAwYzU5ODBiMTUifQ.3IJeoo-Zo5v1pG2VPXswA495CEQ4nORjrvbNFE1BBd4' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Trial idea fall.","maxScore":85,"minScore":19,"description":"Central police agree become war wind.","estimatedTime":"6 weeks"}'

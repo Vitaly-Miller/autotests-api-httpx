@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "0ba074ed-01d0-4458-8774-36dd28952c40",
+    "title": "Only employee industry consumer able public.",
+    "maxScore": 55,
+    "minScore": 29,
+    "description": "Become several message myself key.",
+    "previewFile": {
+      "id": "ffd17b50-0b49-45c7-99b5-b48b4b5fa063",
+      "filename": "file_9948.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_9948.png"
+    },
+    "estimatedTime": "3 weeks",
+    "createdByUser": {
+      "id": "de964c02-f1cc-42d6-9a3c-73cb8da505a8",
+      "email": "test_6477bdb2@example.com",
+      "lastName": "Lowe",
+      "firstName": "Angela",
+      "middleName": "Susan"
+    }
+  }
+}

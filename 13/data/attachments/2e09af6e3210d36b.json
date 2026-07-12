@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "289e3951-6aab-4072-8a02-15923ccc8576",
+    "title": "Plan occur two maybe.",
+    "maxScore": 93,
+    "minScore": 22,
+    "description": "Into design food leave majority focus become.",
+    "previewFile": {
+      "id": "8171cf8f-331d-448d-ba85-e9858f486d69",
+      "filename": "file_2389.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_2389.png"
+    },
+    "estimatedTime": "3 weeks",
+    "createdByUser": {
+      "id": "99f32c13-c49b-4aa6-842c-475478a1dfd3",
+      "email": "test_c79607f1@example.com",
+      "lastName": "Howard",
+      "firstName": "James",
+      "middleName": "Patrick"
+    }
+  }
+}

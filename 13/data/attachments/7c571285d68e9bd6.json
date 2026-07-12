@@ -1,0 +1,25 @@
+{
+  "courses": [
+    {
+      "id": "b088e57c-ab3b-48ab-afa0-31aba3d61c11",
+      "title": "Respond news nature idea.",
+      "maxScore": 74,
+      "minScore": 29,
+      "description": "Than past capital its affect.",
+      "previewFile": {
+        "id": "4c30f9c1-6d16-4ad9-ae67-76d18bf16e43",
+        "filename": "file_2965.png",
+        "directory": "Uploaded",
+        "url": "http://localhost:8000/static/Uploaded/file_2965.png"
+      },
+      "estimatedTime": "6 weeks",
+      "createdByUser": {
+        "id": "dbd8942c-da94-4cba-a975-4839fcef2833",
+        "email": "test_d179fb10@example.com",
+        "lastName": "Friedman",
+        "firstName": "Carol",
+        "middleName": "David"
+      }
+    }
+  ]
+}

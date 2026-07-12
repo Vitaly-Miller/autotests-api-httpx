@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "41f0e8f5-174a-4c52-9acd-4f1f023f2541",
+    "title": "Use only a.",
+    "maxScore": 79,
+    "minScore": 14,
+    "description": "Result coach send keep.",
+    "previewFile": {
+      "id": "b7944739-0334-4a33-980f-facd5b4d823f",
+      "filename": "file_8014.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_8014.png"
+    },
+    "estimatedTime": "8 weeks",
+    "createdByUser": {
+      "id": "d6440cdd-0b09-4237-9782-a801179142ad",
+      "email": "test_cc0d2e4e@example.com",
+      "lastName": "Davis",
+      "firstName": "Samantha",
+      "middleName": "Megan"
+    }
+  }
+}

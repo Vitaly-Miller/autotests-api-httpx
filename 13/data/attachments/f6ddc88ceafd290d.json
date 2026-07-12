@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "555636a9-ec71-460b-b786-0639f1268746",
+    "title": "Away kid officer final.",
+    "maxScore": 88,
+    "minScore": 14,
+    "description": "Expect him foreign any.",
+    "previewFile": {
+      "id": "1124d989-3d98-4146-a436-52258ad698f7",
+      "filename": "file_1034.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_1034.png"
+    },
+    "estimatedTime": "4 weeks",
+    "createdByUser": {
+      "id": "eb66d420-5a36-4bf8-b033-00d37a4cf6a4",
+      "email": "test_898fe796@example.com",
+      "lastName": "Davis",
+      "firstName": "Erica",
+      "middleName": "Allen"
+    }
+  }
+}

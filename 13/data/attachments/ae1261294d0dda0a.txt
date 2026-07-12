@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEyVDE2OjQ1OjA0LjEyNTc4MSIsInVzZXJfaWQiOiJhNjQ5MDk0My0wNzY1LTRhOGMtOTY5NC01ODQ2NDgwMWYxZmEifQ.FmgrI1Nl4MZsIxZNkcepzpFoqWiMMpmIph98rwBqJOQ' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Generation reveal message even.","maxScore":62,"minScore":10,"description":"Over situation federal.","estimatedTime":"9 weeks","previewFileId":"50c82376-d3aa-4fbf-a205-2aa15ee338b2","createdByUserId":"a6490943-0765-4a8c-9694-58464801f1fa"}'

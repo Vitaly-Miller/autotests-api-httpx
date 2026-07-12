@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "2a6c59cc-4025-4eaa-861a-68433782df49",
+    "title": "Hotel share especially push onto.",
+    "maxScore": 85,
+    "minScore": 29,
+    "description": "Those color citizen doctor pick natural.",
+    "previewFile": {
+      "id": "870776b0-3104-40c5-855c-19f53cb9d48c",
+      "filename": "file_8402.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_8402.png"
+    },
+    "estimatedTime": "8 weeks",
+    "createdByUser": {
+      "id": "83b7acff-1d70-4ea2-92e8-c91f89329f69",
+      "email": "test_b878a908@example.com",
+      "lastName": "Flynn",
+      "firstName": "Melissa",
+      "middleName": "John"
+    }
+  }
+}

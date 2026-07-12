@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "6fed33a4-fca1-4d82-9fbc-91d46694237f",
+    "title": "Trial idea fall.",
+    "maxScore": 85,
+    "minScore": 19,
+    "description": "Central police agree become war wind.",
+    "previewFile": {
+      "id": "54ff1eac-730d-40fe-85e3-cdbcee80311d",
+      "filename": "file_8325.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_8325.png"
+    },
+    "estimatedTime": "6 weeks",
+    "createdByUser": {
+      "id": "7f3bd006-4059-4d8e-9f54-d400c5980b15",
+      "email": "test_2245204e@example.com",
+      "lastName": "Jensen",
+      "firstName": "Tommy",
+      "middleName": "Haley"
+    }
+  }
+}

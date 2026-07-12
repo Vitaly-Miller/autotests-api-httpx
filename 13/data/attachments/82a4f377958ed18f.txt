@@ -1,0 +1,26 @@
+INFO | HTTPX-Client: POST-request to http://localhost:8000/api/v1/users
+INFO | HTTPX-Client: Status code: 200-OK from http://localhost:8000/api/v1/users
+INFO | HTTPX-Client: POST-request to http://localhost:8000/api/v1/authentication/login
+INFO | HTTPX-Client: Status code: 200-OK from http://localhost:8000/api/v1/authentication/login
+INFO | HTTPX-Client: POST-request to http://localhost:8000/api/v1/authentication/login
+INFO | HTTPX-Client: Status code: 200-OK from http://localhost:8000/api/v1/authentication/login
+INFO | HTTPX-Client: POST-request to http://localhost:8000/api/v1/authentication/login
+INFO | HTTPX-Client: Status code: 200-OK from http://localhost:8000/api/v1/authentication/login
+INFO | HTTPX-Client: POST-request to http://localhost:8000/api/v1/files
+INFO | HTTPX-Client: Status code: 200-OK from http://localhost:8000/api/v1/files
+INFO | HTTPX-Client: POST-request to http://localhost:8000/api/v1/courses
+INFO | HTTPX-Client: Status code: 200-OK from http://localhost:8000/api/v1/courses
+INFO | HTTPX-Client: POST-request to http://localhost:8000/api/v1/exercises
+INFO | HTTPX-Client: Status code: 200-OK from http://localhost:8000/api/v1/exercises
+INFO | HTTPX-Client: PATCH-request to http://localhost:8000/api/v1/exercises/0fe22400-2121-4506-b285-117357ac0afc
+INFO | HTTPX-Client: Status code: 200-OK from http://localhost:8000/api/v1/exercises/0fe22400-2121-4506-b285-117357ac0afc
+INFO | - Base-assert: Status code = "200-OK"
+INFO | - Base-assert: Request method = "PATCH"
+INFO | EXERCISE-ASSERT: Response data = Request data
+INFO | - Base-assert: Values of "actual.title" = "expected.title"
+INFO | - Base-assert: Values of "actual.max_score" = "expected.max_score"
+INFO | - Base-assert: Values of "actual.min_score" = "expected.min_score"
+INFO | - Base-assert: Values of "actual.order_index" = "expected.order_index"
+INFO | - Base-assert: Values of "actual.description" = "expected.description"
+INFO | - Base-assert: Values of "actual.estimated_time" = "expected.estimated_time"
+INFO | SCHEMA-ASSERT: Response JSON Schema validation (UpdateExerciseResponseSchema)

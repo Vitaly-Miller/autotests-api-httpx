@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEyVDE2OjQ0OjU3LjU2MDAyOCIsInVzZXJfaWQiOiI5OWYzMmMxMy1jNDliLTRhYTYtODQyYy00NzU0NzhhMWRmZDMifQ.UVYMVm2JeyFG4oRMz0B4DgurLBgIcRU-YvTTmClb1ho' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Produce language special condition bag couple.","courseId":"289e3951-6aab-4072-8a02-15923ccc8576","maxScore":73,"minScore":11,"orderIndex":1970,"description":"Economy cell less hotel budget sea direction.","estimatedTime":"6 weeks"}'

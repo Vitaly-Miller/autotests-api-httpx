@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "e4a52560-723b-4096-bab1-ffe41f226b47",
+    "title": "Generation reveal message even.",
+    "maxScore": 62,
+    "minScore": 10,
+    "description": "Over situation federal.",
+    "previewFile": {
+      "id": "50c82376-d3aa-4fbf-a205-2aa15ee338b2",
+      "filename": "file_4399.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_4399.png"
+    },
+    "estimatedTime": "9 weeks",
+    "createdByUser": {
+      "id": "a6490943-0765-4a8c-9694-58464801f1fa",
+      "email": "test_9519bdb9@example.com",
+      "lastName": "Hurst",
+      "firstName": "Dwayne",
+      "middleName": "Laura"
+    }
+  }
+}
