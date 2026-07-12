@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "a7e2003b-32b9-4ad3-96e0-a34c3b120489",
+    "title": "Stop fund address impact.",
+    "maxScore": 74,
+    "minScore": 19,
+    "description": "Five structure kind family when manager.",
+    "previewFile": {
+      "id": "e535886e-f579-4039-bb20-7f91d6e4dba7",
+      "filename": "file_6694.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_6694.png"
+    },
+    "estimatedTime": "9 weeks",
+    "createdByUser": {
+      "id": "7453d0aa-c1ed-461a-9593-15afede13f40",
+      "email": "test_f83de6ee@example.com",
+      "lastName": "Peters",
+      "firstName": "Meghan",
+      "middleName": "Jessica"
+    }
+  }
+}

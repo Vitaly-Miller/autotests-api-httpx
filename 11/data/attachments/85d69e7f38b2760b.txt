@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEyVDA2OjQyOjE2LjI3NDU5OSIsInVzZXJfaWQiOiIxMTAyYjM1Yi03NmYwLTQ4NDQtYWI0MC1lZTIxMzkwNGIzNTEifQ.cTiS4qBoQtX1YYXh5TQLxvKsitmuWM6ahZp4gN6GpKU' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Lose middle establish statement.","courseId":"bc593134-4dd6-44b1-8641-6434eeb14fed","maxScore":87,"minScore":29,"orderIndex":7175,"description":"Rock new indeed.","estimatedTime":"3 weeks"}'

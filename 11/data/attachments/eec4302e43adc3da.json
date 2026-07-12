@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "8d20837e-6ec6-407b-9c46-c6425741f053",
+    "title": "Expect investment represent major again idea.",
+    "maxScore": 99,
+    "minScore": 2,
+    "description": "Race ahead special degree ability tree him.",
+    "previewFile": {
+      "id": "4a052756-3ed6-4851-8e1b-d152ed5b80c1",
+      "filename": "file_3814.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_3814.png"
+    },
+    "estimatedTime": "4 weeks",
+    "createdByUser": {
+      "id": "87a48830-997b-47ee-86bb-450ada88128c",
+      "email": "test_afe531cb@example.com",
+      "lastName": "Raymond",
+      "firstName": "Benjamin",
+      "middleName": "Melissa"
+    }
+  }
+}

@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEyVDA2OjQyOjIwLjg3MDg0NyIsInVzZXJfaWQiOiI1ZWYxYWJhMC05ZmZlLTQyYWUtODBhYy03YWYwMGI1ZDYxYTkifQ.eOX2Ir6sC1GBcLjH9c_mYF4zgfS4-KuT3gAksKFrvzM' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Charge central agency enter amount.","courseId":"30edbe00-c109-4e8c-b7db-36de12350709","maxScore":61,"minScore":27,"orderIndex":7659,"description":"Ten mother accept step.","estimatedTime":"5 weeks"}'

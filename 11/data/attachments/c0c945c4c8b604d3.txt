@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEyVDA2OjQyOjE3LjQxNDYyMyIsInVzZXJfaWQiOiJjYTU4ZWI4OC1jNjZlLTQwMzUtYTE2My1hOWU0ZTE4NjVlYWIifQ.jyDpJdfQ83R6CYIy77GQZZcVxiFd4kktpyshILY9rSE' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Everybody three write once.","courseId":"9617c663-76be-4a55-8613-198a2c54ab0f","maxScore":51,"minScore":20,"orderIndex":8205,"description":"Any nice cell near after admit send.","estimatedTime":"5 weeks"}'

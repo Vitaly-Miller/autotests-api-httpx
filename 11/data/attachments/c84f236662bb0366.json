@@ -1,0 +1,25 @@
+{
+  "courses": [
+    {
+      "id": "c51a5ce5-528f-4722-97f9-0eaa1e016b5c",
+      "title": "Fear live customer identify.",
+      "maxScore": 50,
+      "minScore": 21,
+      "description": "Art artist author take program every.",
+      "previewFile": {
+        "id": "cd24dec3-485e-4a67-ab80-55bbbf25c969",
+        "filename": "file_5186.png",
+        "directory": "Uploaded",
+        "url": "http://localhost:8000/static/Uploaded/file_5186.png"
+      },
+      "estimatedTime": "3 weeks",
+      "createdByUser": {
+        "id": "bee9e787-ae8b-4efe-98d3-b92a0e85c1cc",
+        "email": "test_1460ed02@example.com",
+        "lastName": "Davila",
+        "firstName": "Leslie",
+        "middleName": "Elizabeth"
+      }
+    }
+  ]
+}

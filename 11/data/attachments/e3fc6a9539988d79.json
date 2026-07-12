@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "26ecc183-da56-412b-b618-7ccc6d61a396",
+    "title": "Strong benefit teach group possible.",
+    "maxScore": 84,
+    "minScore": 21,
+    "description": "Growth do suddenly.",
+    "previewFile": {
+      "id": "56051d67-0bb5-4150-aae8-db35a25d9196",
+      "filename": "file_6797.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_6797.png"
+    },
+    "estimatedTime": "2 weeks",
+    "createdByUser": {
+      "id": "e1cb03ae-6c6a-4511-b8d2-c40fb04f504b",
+      "email": "test_2f704b22@example.com",
+      "lastName": "Lynch",
+      "firstName": "Jonathan",
+      "middleName": "Matthew"
+    }
+  }
+}

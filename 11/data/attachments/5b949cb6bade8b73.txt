@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEyVDA2OjQyOjA5LjA5NjU4NCIsInVzZXJfaWQiOiJmODJhOGVlNS1mMGYxLTQ1ZmMtODlhNi00Mzc4ZTM5MjI0ZTIifQ.21GZZz-gAfWbYyyaeL9S1oj1kOHt49CBqHp0ZY4f6Oo' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Now meet fish.","maxScore":91,"minScore":4,"description":"Spend knowledge senior throughout here two order.","estimatedTime":"8 weeks","previewFileId":"5319ba83-21e4-4b1c-8c0f-be63973d6cbd","createdByUserId":"f82a8ee5-f0f1-45fc-89a6-4378e39224e2"}'

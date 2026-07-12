@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "bc593134-4dd6-44b1-8641-6434eeb14fed",
+    "title": "Go almost low night fly record.",
+    "maxScore": 88,
+    "minScore": 16,
+    "description": "Bring group around.",
+    "previewFile": {
+      "id": "747d677d-d93c-4272-93e9-507ca5dc1658",
+      "filename": "file_5110.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_5110.png"
+    },
+    "estimatedTime": "7 weeks",
+    "createdByUser": {
+      "id": "1102b35b-76f0-4844-ab40-ee213904b351",
+      "email": "test_787be5c6@example.com",
+      "lastName": "Sharp",
+      "firstName": "Renee",
+      "middleName": "Tyler"
+    }
+  }
+}

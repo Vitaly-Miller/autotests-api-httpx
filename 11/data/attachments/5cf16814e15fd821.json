@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "1c67edb7-5751-4617-a7cd-40f3e6d19d7e",
+    "title": "Protect first could partner short quite.",
+    "maxScore": 68,
+    "minScore": 23,
+    "description": "Send find school hot. Agent attack investment.",
+    "previewFile": {
+      "id": "14581c5f-2faf-4313-8eee-4b8c62e80020",
+      "filename": "file_5149.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_5149.png"
+    },
+    "estimatedTime": "2 weeks",
+    "createdByUser": {
+      "id": "cd41fe6e-24c8-4480-89cf-21e4d9c41417",
+      "email": "test_dc0e7ceb@example.com",
+      "lastName": "Boyer",
+      "firstName": "Kylie",
+      "middleName": "Donald"
+    }
+  }
+}

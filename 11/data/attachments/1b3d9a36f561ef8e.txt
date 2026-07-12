@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/exercises/234de466-cfac-4a68-b1e7-6c2757cdb951 \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEyVDA2OjQyOjIyLjAxMjQxMyIsInVzZXJfaWQiOiJlMWNiMDNhZS02YzZhLTQ1MTEtYjhkMi1jNDBmYjA0ZjUwNGIifQ.hJGdBmu02oH5WTVOKRZGz-4X3IfwQPCheo-EK6owug0' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Today third her everybody.","maxScore":98,"minScore":7,"orderIndex":1490,"description":"Change myself Mrs hospital value property.","estimatedTime":"7 weeks"}'

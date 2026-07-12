@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEyVDA2OjQyOjE0LjMxOTQ3NyIsInVzZXJfaWQiOiIwMjBiZWVhNi1lYmQyLTRjZmEtODkxOC04ZjAzOGNlM2Q2MWUifQ.tWT-WOTAwZgxURr80NtRn1evjQTPawlT8YWVOcTOk5E' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Sometimes season guess until.","maxScore":66,"minScore":18,"description":"First year test hit. Wish speak really.","estimatedTime":"5 weeks","previewFileId":"7f6e3e73-7537-438a-af00-4ad46086a5a3","createdByUserId":"020beea6-ebd2-4cfa-8918-8f038ce3d61e"}'

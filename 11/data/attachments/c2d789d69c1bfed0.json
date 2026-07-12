@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "9617c663-76be-4a55-8613-198a2c54ab0f",
+    "title": "Determine health memory.",
+    "maxScore": 58,
+    "minScore": 29,
+    "description": "School keep medical social upon parent.",
+    "previewFile": {
+      "id": "17625fc2-7623-4122-8688-e97316fcdeca",
+      "filename": "file_8624.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_8624.png"
+    },
+    "estimatedTime": "7 weeks",
+    "createdByUser": {
+      "id": "ca58eb88-c66e-4035-a163-a9e4e1865eab",
+      "email": "test_b3c195f6@example.com",
+      "lastName": "Wise",
+      "firstName": "Caitlyn",
+      "middleName": "Savannah"
+    }
+  }
+}

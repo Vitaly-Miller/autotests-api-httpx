@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "30edbe00-c109-4e8c-b7db-36de12350709",
+    "title": "Activity hour discuss.",
+    "maxScore": 75,
+    "minScore": 12,
+    "description": "Paper range young act treat professional.",
+    "previewFile": {
+      "id": "0a29930d-9112-4951-9a62-d81882e71f6f",
+      "filename": "file_5396.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_5396.png"
+    },
+    "estimatedTime": "2 weeks",
+    "createdByUser": {
+      "id": "5ef1aba0-9ffe-42ae-80ac-7af00b5d61a9",
+      "email": "test_06dadc64@example.com",
+      "lastName": "Blackburn",
+      "firstName": "Jessica",
+      "middleName": "Amanda"
+    }
+  }
+}

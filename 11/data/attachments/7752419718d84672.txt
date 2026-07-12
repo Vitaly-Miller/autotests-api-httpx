@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEyVDA2OjQyOjE5LjcyNTE4OCIsInVzZXJfaWQiOiJjZDQxZmU2ZS0yNGM4LTQ0ODAtODljZi0yMWU0ZDljNDE0MTcifQ.z7hN-6ZTfei4X5t453xiLQI3BK0CrcZ2UEa_QM9GRU8' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Treat year student live near.","courseId":"1c67edb7-5751-4617-a7cd-40f3e6d19d7e","maxScore":88,"minScore":1,"orderIndex":6167,"description":"Son nearly tree resource police staff few.","estimatedTime":"2 weeks"}'

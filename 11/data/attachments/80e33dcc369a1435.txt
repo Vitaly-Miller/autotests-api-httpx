@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEyVDA2OjQyOjEzLjk4MzUzOCIsInVzZXJfaWQiOiIwMjBiZWVhNi1lYmQyLTRjZmEtODkxOC04ZjAzOGNlM2Q2MWUifQ.M0VvJOsx1RtCICDCPo4sDFgWFgZhiMdZGX69HYPOuLg' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Charge lead she imagine.","courseId":"80ae685e-a6db-4516-a6b3-9bca16277ed6","maxScore":51,"minScore":25,"orderIndex":8439,"description":"Serve worker add. His window himself want.","estimatedTime":"9 weeks"}'

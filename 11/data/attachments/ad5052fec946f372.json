@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "80ae685e-a6db-4516-a6b3-9bca16277ed6",
+    "title": "Sometimes season guess until.",
+    "maxScore": 66,
+    "minScore": 18,
+    "description": "First year test hit. Wish speak really.",
+    "previewFile": {
+      "id": "7f6e3e73-7537-438a-af00-4ad46086a5a3",
+      "filename": "file_5648.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_5648.png"
+    },
+    "estimatedTime": "5 weeks",
+    "createdByUser": {
+      "id": "020beea6-ebd2-4cfa-8918-8f038ce3d61e",
+      "email": "test_b7a044e9@example.com",
+      "lastName": "Jones",
+      "firstName": "Steven",
+      "middleName": "Matthew"
+    }
+  }
+}

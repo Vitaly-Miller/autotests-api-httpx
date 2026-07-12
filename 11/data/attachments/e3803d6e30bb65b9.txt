@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEyVDA2OjQyOjE4LjU3NjQ2NSIsInVzZXJfaWQiOiI1ZGMwNDI3NS1mMmI2LTRkMjEtYjBhMS0zNTkwZDc0MDY4YmIifQ.Szlx0BVwhpgVesG_Yoh5nrQ9LFreLShRX8Kjga8AIeA' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Quickly military high.","courseId":"080b64e7-0ef6-4699-a753-7ee8d1eda460","maxScore":78,"minScore":9,"orderIndex":9443,"description":"How produce exist science kid generation.","estimatedTime":"3 weeks"}'

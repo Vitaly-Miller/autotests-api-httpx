@@ -1,0 +1,25 @@
+{
+  "courses": [
+    {
+      "id": "0b81bcb9-c9fb-4850-b0b2-6151b82d88be",
+      "title": "Less those buy.",
+      "maxScore": 78,
+      "minScore": 6,
+      "description": "In note market loss personal describe husband.",
+      "previewFile": {
+        "id": "611fddf9-a6a9-480c-bc77-ffcddc4e3ad2",
+        "filename": "file_6901.png",
+        "directory": "Uploaded",
+        "url": "http://localhost:8000/static/Uploaded/file_6901.png"
+      },
+      "estimatedTime": "2 weeks",
+      "createdByUser": {
+        "id": "b7f0913e-65aa-48b8-b266-e8a73e36a9c8",
+        "email": "test_61fb4b7a@example.com",
+        "lastName": "Mcintosh",
+        "firstName": "Roy",
+        "middleName": "Jason"
+      }
+    }
+  ]
+}
