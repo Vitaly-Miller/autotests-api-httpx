@@ -45,7 +45,7 @@ class Settings(BaseSettings):
 
     #------------- Создать папку, если её нет -------------
     @classmethod
-    def initialize(cls) -> Settings:
+    def initialize(cls) -> "Settings":
         allure_results_dir = DirectoryPath('allure-results')   # Название папки
         allure_results_dir.mkdir(exist_ok=True)                # Создает папку, если её нет
 
