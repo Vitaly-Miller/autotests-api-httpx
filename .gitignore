@@ -1,8 +1,9 @@
-# PyCharm
+# PyCharm (IDE)
 .idea
 
 # Python
 .venv
+.claude
 __pycache__
 
 # Allure
