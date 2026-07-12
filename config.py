@@ -33,6 +33,7 @@ class TestDataConfig(BaseModel):
 #---------------------------------------------- MAIN Class + .env-config -----------------------------------------------
 class Settings(BaseSettings):
     model_config = SettingsConfigDict(        # CONFIG файла с переменными окружения (.env)
+        extra='allow',                        # Разрешаем дополнительные переменные (например для CI) (optional)
         env_file='.env',                      # - Название файла с переменными окружения (.env)
         env_file_encoding='utf-8',            # - Кодировка файла с переменными окружения (.env)
         env_nested_delimiter='.'              # - Разделитель вложенных моделей в .env (ex. HTTPX_CLIENT.BASE_URL='...')
