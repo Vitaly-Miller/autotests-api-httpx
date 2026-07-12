@@ -1,0 +1,13 @@
+# PyCharm
+.idea
+
+# Python
+.venv
+__pycache__
+
+# Allure
+allure-results
+allure-report
+
+# Project
+#.env (NOT secure data)
