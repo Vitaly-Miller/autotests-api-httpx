@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEzVDA0OjI4OjI5LjEwMTE2NiIsInVzZXJfaWQiOiJiZmQzNDEwMy0xMjA2LTRjOTQtYjFlMS0yZGNjOWExYTQ4NjYifQ.6abcWWDPAsAfXJsKHSbHmXg_G6QXv39ztoz8S8R7RXs' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Cost big these.","maxScore":67,"minScore":30,"description":"Fire yet child your professor.","estimatedTime":"4 weeks","previewFileId":"2c9ec67b-82c8-4c6d-9dd4-1ca1629d514c","createdByUserId":"bfd34103-1206-4c94-b1e1-2dcc9a1a4866"}'

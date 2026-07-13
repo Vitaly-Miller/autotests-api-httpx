@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEzVDA0OjI4OjMxLjYxOTQ4MSIsInVzZXJfaWQiOiJjY2NiNmQwNS0xMjllLTRlNDAtYWFhYi1lOGFjZDhhMjkxZDcifQ.Wj4QDWyKF-BRjxHxw06l8Kak2fT0au0W42wfX8l5mJA' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Suffer race fall difficult position report.","maxScore":82,"minScore":14,"description":"Sort staff fall product situation tend lose.","estimatedTime":"8 weeks","previewFileId":"17e96e18-d3cb-44de-bd2a-255f3cafc866","createdByUserId":"cccb6d05-129e-4e40-aaab-e8acd8a291d7"}'

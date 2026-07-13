@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEzVDA0OjI4OjMwLjA2NjUxNyIsInVzZXJfaWQiOiJiNTk1MDQxOC1iNDMwLTRjN2ItOTY0MC05Y2QwMzA0YmQ1ZDcifQ.81NNKOyTijWDEnegyj3PKqRZQyPjj19eHfEkUZhtixE' \
+  -H 'content-type: application/json' \
+  -d '{"title":"But gas or light us condition.","courseId":"d87e29b3-f271-4693-9138-cce5705a900d","maxScore":54,"minScore":12,"orderIndex":3884,"description":"Wall wear at any rate security individual.","estimatedTime":"9 weeks"}'

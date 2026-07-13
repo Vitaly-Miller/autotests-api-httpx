@@ -1,0 +1,8 @@
+{
+  "host": "localhost:8000",
+  "accept": "*/*",
+  "accept-encoding": "gzip, deflate",
+  "connection": "keep-alive",
+  "user-agent": "python-httpx/0.28.1",
+  "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEzVDA0OjI4OjM3LjU0MDU5MyIsInVzZXJfaWQiOiIxMTg0YjBkZi04Nzk1LTQyOTgtYWJhOC0zZDZjNzRiMDBjYzIifQ.TfoZl_g-WDE56QA1EYOy4fliwkCln2lcCNrVYY4pxdw"
+}

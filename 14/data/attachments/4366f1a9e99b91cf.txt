@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEzVDA0OjI4OjI3Ljg0NzExNCIsInVzZXJfaWQiOiI0ODQ4ZWJiMy1kODU1LTQ2MWQtOWRlZi03ZjI2OWViOWNjZGIifQ.95URg79HDUZ6jBwkTZPUE0WsDiGHWm7epiHGY9Bv0fQ' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Throughout follow finish yes.","maxScore":70,"minScore":18,"description":"Time along say pull focus maintain heavy.","estimatedTime":"3 weeks","previewFileId":"5f22ec07-7676-4587-af12-9f485de43195","createdByUserId":"4848ebb3-d855-461d-9def-7f269eb9ccdb"}'

@@ -1,0 +1,15 @@
+INFO | HTTPX-Client: POST-request to http://localhost:8000/api/v1/users
+INFO | HTTPX-Client: Status code: 200-OK from http://localhost:8000/api/v1/users
+INFO | HTTPX-Client: POST-request to http://localhost:8000/api/v1/authentication/login
+INFO | HTTPX-Client: Status code: 200-OK from http://localhost:8000/api/v1/authentication/login
+INFO | HTTPX-Client: POST-request to http://localhost:8000/api/v1/files
+INFO | HTTPX-Client: Status code: 200-OK from http://localhost:8000/api/v1/files
+INFO | HTTPX-Client: GET-request to http://localhost:8000/api/v1/files/00fff2c6-0baf-40e7-a1bf-d02863d0a279
+INFO | HTTPX-Client: Status code: 200-OK from http://localhost:8000/api/v1/files/00fff2c6-0baf-40e7-a1bf-d02863d0a279
+INFO | - Base-assert: Status code = "200-OK"
+INFO | - Base-assert: Request method = "GET"
+INFO | FILES-ASSERT: File-ID validation
+INFO | - Base-assert: Value of "id" is non-empty
+INFO | - Base-assert: Length of "id" = 36
+INFO | - Base-assert: Values of "actual.id" = "expected.id"
+INFO | SCHEMA-ASSERT: Response JSON Schema validation (GetFileResponseSchema)

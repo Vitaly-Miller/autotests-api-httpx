@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/courses/eb6c8a38-54cf-4fa0-800f-b9c70feb836c \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEzVDA0OjI4OjIyLjc4NjU2NyIsInVzZXJfaWQiOiIyY2MwYmQ0My1kYjNiLTRmNGYtYjE0NC04YzQ5NmU0YTk1NjUifQ.1xSLF8LXezmm1EfEPYcNJ24DrtstUNNld3QwJOQicSA' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Letter every herself available environmental.","maxScore":73,"minScore":5,"description":"Property yard ok.","estimatedTime":"6 weeks"}'

@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEzVDA0OjI4OjI3LjU0NzAzNSIsInVzZXJfaWQiOiI0ODQ4ZWJiMy1kODU1LTQ2MWQtOWRlZi03ZjI2OWViOWNjZGIifQ.gSlgNTvcBKqm91zpqYvOgyYoVzJgvSOtSkTq6zkCDTA' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Involve Democrat system sport.","courseId":"2661c79b-cd67-4038-962c-9f50ec190cbe","maxScore":77,"minScore":6,"orderIndex":3163,"description":"When while better unit form just.","estimatedTime":"9 weeks"}'

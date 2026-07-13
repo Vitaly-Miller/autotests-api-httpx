@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEzVDA0OjI4OjI4LjgwMTUzNSIsInVzZXJfaWQiOiJiZmQzNDEwMy0xMjA2LTRjOTQtYjFlMS0yZGNjOWExYTQ4NjYifQ.08Ve9NgldB-r5mcR7W4ZF__ZXvJKgPyG85ZwBfobXfM' \
+  -H 'content-type: application/json' \
+  -d '{"title":"According those pattern.","courseId":"d8c18372-1d1a-458b-ba5d-3923ce354257","maxScore":90,"minScore":25,"orderIndex":9266,"description":"First item morning meeting ask scientist.","estimatedTime":"2 weeks"}'

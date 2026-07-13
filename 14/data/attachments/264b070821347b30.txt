@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEzVDA0OjI4OjI0LjA0MzgyNCIsInVzZXJfaWQiOiIzMmZhNDRjYi1lZTQ5LTQ5ZmUtYjRiNC1lZDNhYmM1YWExMzYifQ.MHTbFSAEW4xSG4_QhAD-AOWooHV9m0RpXAcC7Q3ltsA' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Notice onto sometimes.","maxScore":64,"minScore":29,"description":"Subject few organization board instead.","estimatedTime":"9 weeks","previewFileId":"63b6f303-9d1b-4a7f-ba43-5b0fcf184432","createdByUserId":"32fa44cb-ee49-49fe-b4b4-ed3abc5aa136"}'

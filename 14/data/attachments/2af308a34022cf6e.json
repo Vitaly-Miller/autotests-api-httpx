@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "dbc9aa46-ff13-4288-ba01-2e1dbae4b0ca",
+    "title": "Entire Mr man finally happen group.",
+    "maxScore": 96,
+    "minScore": 9,
+    "description": "Force response respond ago kid give.",
+    "previewFile": {
+      "id": "cb5ec5a6-a813-4d40-a70b-0bbea8237c80",
+      "filename": "file_9985.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_9985.png"
+    },
+    "estimatedTime": "4 weeks",
+    "createdByUser": {
+      "id": "55ecda79-f223-4207-be75-154b9210b067",
+      "email": "test_b03cafbb@example.com",
+      "lastName": "Collins",
+      "firstName": "Jonathan",
+      "middleName": "James"
+    }
+  }
+}

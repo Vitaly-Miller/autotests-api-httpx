@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEzVDA0OjI4OjI2LjU2ODUyMSIsInVzZXJfaWQiOiJiZDU0MDc3OC0xZDRjLTRkY2QtOTdhZi1kNDM5MWUwNDY5YjkifQ.5LNOBcOP-dwCvyARdGt2izR1J3qUW_n6GsZtxn5Pwr8' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Boy something base.","maxScore":79,"minScore":18,"description":"Often expect why fill popular training.","estimatedTime":"9 weeks","previewFileId":"e104687b-0dc2-4e0e-aaa6-285776f18f87","createdByUserId":"bd540778-1d4c-4dcd-97af-d4391e0469b9"}'

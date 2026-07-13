@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "10e592e0-e070-4c27-a08c-f2f0b62d9443",
+    "title": "Suffer race fall difficult position report.",
+    "maxScore": 82,
+    "minScore": 14,
+    "description": "Sort staff fall product situation tend lose.",
+    "previewFile": {
+      "id": "17e96e18-d3cb-44de-bd2a-255f3cafc866",
+      "filename": "file_3886.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_3886.png"
+    },
+    "estimatedTime": "8 weeks",
+    "createdByUser": {
+      "id": "cccb6d05-129e-4e40-aaab-e8acd8a291d7",
+      "email": "test_b78f98bb@example.com",
+      "lastName": "Newman",
+      "firstName": "Carl",
+      "middleName": "Joshua"
+    }
+  }
+}

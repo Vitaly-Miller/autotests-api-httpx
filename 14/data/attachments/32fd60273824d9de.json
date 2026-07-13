@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "d87e29b3-f271-4693-9138-cce5705a900d",
+    "title": "We raise or evidence.",
+    "maxScore": 82,
+    "minScore": 6,
+    "description": "Executive dog somebody property defense.",
+    "previewFile": {
+      "id": "d078f370-a569-4c01-9816-81ebff988711",
+      "filename": "file_5661.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_5661.png"
+    },
+    "estimatedTime": "6 weeks",
+    "createdByUser": {
+      "id": "b5950418-b430-4c7b-9640-9cd0304bd5d7",
+      "email": "test_325828ab@example.com",
+      "lastName": "Mills",
+      "firstName": "William",
+      "middleName": "Mary"
+    }
+  }
+}

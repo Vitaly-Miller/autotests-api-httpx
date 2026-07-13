@@ -1,0 +1,25 @@
+{
+  "courses": [
+    {
+      "id": "5adac37d-e63a-4d9e-932e-b8a61928233a",
+      "title": "Inside pretty billion.",
+      "maxScore": 50,
+      "minScore": 18,
+      "description": "Page themselves about choice leg rather.",
+      "previewFile": {
+        "id": "9c2bb9d3-e7b3-4b77-9e32-a1bc745da298",
+        "filename": "file_4784.png",
+        "directory": "Uploaded",
+        "url": "http://localhost:8000/static/Uploaded/file_4784.png"
+      },
+      "estimatedTime": "7 weeks",
+      "createdByUser": {
+        "id": "5c718e74-2cd1-4972-a62b-c408f4e3b92a",
+        "email": "test_b8410837@example.com",
+        "lastName": "Pierce",
+        "firstName": "John",
+        "middleName": "Victoria"
+      }
+    }
+  ]
+}

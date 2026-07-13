@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEzVDA0OjI4OjIzLjc0MzI0MiIsInVzZXJfaWQiOiIzMmZhNDRjYi1lZTQ5LTQ5ZmUtYjRiNC1lZDNhYmM1YWExMzYifQ.RsZtn9s_pP0W8OvRpE8IdBg3B-3zTTDNDUhVNRovN0Q' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Approach help him standard fear.","courseId":"6b4b97dc-6d0c-495d-8770-6f1856fb227e","maxScore":54,"minScore":9,"orderIndex":6934,"description":"Manage none economy interest similar.","estimatedTime":"4 weeks"}'
