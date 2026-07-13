@@ -27,12 +27,12 @@ def assert_status_code(actual: int, expected: int):
     pretty_expected = expected
     if isinstance(expected, http.HTTPStatus):                          # <http.HTTPStatus.OK> —>
         pretty_expected = f'{expected.value}-{expected.phrase}'        # —> 200-OK
-    with allure.step(f'Status code = {pretty_expected}'):              # Allure step title
+    with allure.step(f'Status code: {pretty_expected}'):               # Allure step title
         error_message = \
             (f'⚠️ Status code is incorrect!\n'                         # 
              f'{exp} {expected}\n'                                     # Формируем Error Message
              f'{act} {actual}\n')                                      #
-        logger.info(f'Status code = "{pretty_expected}"')              # Logger INFO
+        logger.info(f'Status code: "{pretty_expected}"')               # Logger INFO
         assert actual == expected, error_message
 
 
@@ -45,18 +45,18 @@ def assert_request_method(actual: str, expected: str):
     :param expected: Expected API Request Method
     :raise AssertionError
     """
-    with allure.step(f'Request method = {expected}'):                  # Allure step title
+    with allure.step(f'Request method: {expected}'):                   # Allure step title
         error_message = \
             (f'⚠️ Request Method is incorrect!\n'                      #
              f'{exp} {expected}\n'                                     # Формируем Error Message
              f'{act} {actual}\n')                                      #
-        logger.info(f'Request method = "{expected}"')                  # Logger INFO
+        logger.info(f'Request method: "{expected}"')                   # Logger INFO
         assert actual == expected, error_message
 
 
 #-------------------------------------------------------- Equal --------------------------------------------------------
 # Actual Object = Expected Object
-@allure.step('Values of actual.{name} = expected.{name}')              # Allure step title
+@allure.step('Values of Actual {name} = Expected {name}')              # Allure step title
 def assert_equal(actual: Any, expected: Any | str, name: str):
     """
     Проверяет совпадение values двух объектов (actual_obj = expected_obj)
@@ -75,12 +75,12 @@ def assert_equal(actual: Any, expected: Any | str, name: str):
         (f'⚠️ Values of "{name}" are NOT equal!\n'                     #
          f'{exp} "{name}": {expected}\n'                               # Формируем Error Message
          f'{act} "{name}": {actual}\n')                                #
-    logger.info(f'Values of "actual.{name}" = "expected.{name}"')      # Logger INFO
+    logger.info(f'Values of Actual "{name}" = Expected "{name}"')      # Logger INFO
     assert actual == expected, error_message
 
 
 # Object-1 ≠ Object-2
-@allure.step('Value of {obj_1_name} ≠ value of {obj_2_name}')          # Allure step title
+@allure.step('Values of {obj_1_name} ≠ {obj_2_name}')                  # Allure step title
 def assert_not_equal(obj_1: Any, obj_1_name: str, obj_2: Any, obj_2_name: str):
     """
     Проверяет НЕсовпадение значений двух объектов (Object-1 ≠ Object-2)
@@ -95,7 +95,7 @@ def assert_not_equal(obj_1: Any, obj_1_name: str, obj_2: Any, obj_2_name: str):
     :raise AssertionError
     """
     error_message = \
-        (f'⚠️ Values are equal!\n'                                     # 
+        (f'⚠️ Values of "{obj_1_name} and "{obj_2_name}" are equal!\n'                                     # 
          f'"{obj_1_name}": "{obj_1}"\n'                                # 
          f'"{obj_2_name}": "{obj_2}"\n'                                # Формируем Error Message
          f'{exp} "{obj_1_name}" value ≠ "{obj_2_name}" value\n'        #
@@ -153,12 +153,12 @@ def assert_length_equal(actual: Sized, expected: Sized, name: str):
 
     :raise AssertionError
     """
-    with allure.step(f'Lengths of actual.{name} = expected.{name} = {len(expected)}'):      # Allure step title
+    with allure.step(f'Lengths of Actual {name} = Expected {name} = {len(expected)}'):      # Allure step title
         error_message = \
             (f'⚠️ Values "{name}" have different lengths!\n'                                #
              f'{exp} {len(expected)}\n'                                                     # Формируем Error Message
              f'{act} {len(actual)}\n')                                                      #
-        logger.info(f'Lengths of "actual.{name}" = "expected.{name}" = {len(expected)}')    # Logger INFO
+        logger.info(f'Lengths of Actual "{name}" = Expected "{name}" = {len(expected)}')    # Logger INFO
         assert len(actual) == len(expected), error_message
 
 #=======================================================================================================================
