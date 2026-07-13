@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "f929805a-b00b-4520-97fb-4911fae43d38",
+    "title": "Theory what be television minute.",
+    "maxScore": 89,
+    "minScore": 17,
+    "description": "Citizen bad medical thing last relationship.",
+    "previewFile": {
+      "id": "a1326eb7-e796-435f-a304-e68c03239ac3",
+      "filename": "file_7855.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_7855.png"
+    },
+    "estimatedTime": "8 weeks",
+    "createdByUser": {
+      "id": "b44c3ed9-a3bc-47b8-9563-ea7fd9dcb6fb",
+      "email": "test_310aa2e6@example.com",
+      "lastName": "Weeks",
+      "firstName": "Craig",
+      "middleName": "John"
+    }
+  }
+}

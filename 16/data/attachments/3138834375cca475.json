@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "6c6f2bca-e6a7-4185-b68e-ecbd86323a7d",
+    "title": "Check whether common require remember.",
+    "maxScore": 64,
+    "minScore": 18,
+    "description": "Allow compare outside onto onto.",
+    "previewFile": {
+      "id": "d7f741cc-862f-4a5d-bccd-8f262798fa2c",
+      "filename": "file_7069.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_7069.png"
+    },
+    "estimatedTime": "6 weeks",
+    "createdByUser": {
+      "id": "62c3daf1-632c-405a-800d-0e132407d705",
+      "email": "test_b9af1ca2@example.com",
+      "lastName": "Hodges",
+      "firstName": "Elizabeth",
+      "middleName": "Casey"
+    }
+  }
+}

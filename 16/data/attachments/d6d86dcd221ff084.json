@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "3a6873f2-8ab2-4427-b158-21d9ad9a46e8",
+    "title": "Side debate product season word.",
+    "maxScore": 86,
+    "minScore": 5,
+    "description": "Organization fish total central music by image.",
+    "previewFile": {
+      "id": "768f810d-6fbd-4061-a5f5-6eb817854049",
+      "filename": "file_7366.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_7366.png"
+    },
+    "estimatedTime": "2 weeks",
+    "createdByUser": {
+      "id": "559108b4-9665-4397-8358-99ae0d55b5ad",
+      "email": "test_e8f9cd80@example.com",
+      "lastName": "Barber",
+      "firstName": "Patricia",
+      "middleName": "Robert"
+    }
+  }
+}

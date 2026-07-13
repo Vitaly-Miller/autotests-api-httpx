@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "44cc2828-1404-44f6-8198-d6d7f4a273d9",
+    "title": "Region many consumer.",
+    "maxScore": 59,
+    "minScore": 2,
+    "description": "Trade yet staff then democratic cold.",
+    "previewFile": {
+      "id": "163671d3-decf-4ba9-9919-6be602595f03",
+      "filename": "file_3918.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_3918.png"
+    },
+    "estimatedTime": "2 weeks",
+    "createdByUser": {
+      "id": "57ca96c1-8bc8-416e-8fd7-6459506ee516",
+      "email": "test_59ef2813@example.com",
+      "lastName": "Schmidt",
+      "firstName": "Cassandra",
+      "middleName": "Cynthia"
+    }
+  }
+}

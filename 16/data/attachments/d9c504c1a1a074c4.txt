@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEzVDE4OjMzOjIzLjA5NDk3MyIsInVzZXJfaWQiOiJkZWY4YzJjYy01ZTRkLTRlMWQtOTMzNi05N2I2YjY5NTExNjUifQ.wQ6gFp2xpQg0xBLt-LDxgjEuITSe1IkiEX52fpb9wCg' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Rule professor everyone recently will mouth.","courseId":"64f6efec-3f21-4328-863c-a10016482297","maxScore":67,"minScore":2,"orderIndex":9712,"description":"Series painting do month rather run bill name.","estimatedTime":"8 weeks"}'

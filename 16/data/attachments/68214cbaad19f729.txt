@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEzVDE4OjMzOjE5LjY2OTU2MCIsInVzZXJfaWQiOiI2NmNjMDY5Ny04YzUxLTQ1ZDItOTUyYS1hMTM1MjVjOWU0ODkifQ.8g1YbL-j5vtvV4MUQK2pFuY6s9k57ujdLi4bbzh9qFQ' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Star increase area article generation.","maxScore":80,"minScore":29,"description":"Whether stuff must teacher case.","estimatedTime":"2 weeks","previewFileId":"9fbab541-c074-4369-9fef-4bb3bf3fc936","createdByUserId":"66cc0697-8c51-45d2-952a-a13525c9e489"}'

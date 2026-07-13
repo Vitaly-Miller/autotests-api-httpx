@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEzVDE4OjMzOjE0LjM4NzI0MiIsInVzZXJfaWQiOiI0ZmFhZGRlMy04ZGZhLTQzNGUtOWY0Zi1lZDI0ZjhkZWNhYWQifQ.PsgSKCSicwOR8HtlNqVD6msC6HWg_6PVopKRg5kqYmY' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Answer nice protect prevent.","courseId":"67ccad02-e4d8-4968-9503-f7bf68760227","maxScore":89,"minScore":12,"orderIndex":359,"description":"Upon box miss age wide process.","estimatedTime":"3 weeks"}'

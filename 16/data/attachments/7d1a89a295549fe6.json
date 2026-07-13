@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "5967746f-9666-423f-9d5b-0e39accd48eb",
+    "title": "Defense other itself analysis.",
+    "maxScore": 63,
+    "minScore": 30,
+    "description": "Just table stuff book fight fact.",
+    "previewFile": {
+      "id": "c2761472-aead-49d9-8a84-f1fd546244a8",
+      "filename": "file_1584.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_1584.png"
+    },
+    "estimatedTime": "6 weeks",
+    "createdByUser": {
+      "id": "3e0c08b1-ec73-483d-9646-757164aa108e",
+      "email": "test_37ff0e58@example.com",
+      "lastName": "Douglas",
+      "firstName": "Tina",
+      "middleName": "Rachel"
+    }
+  }
+}

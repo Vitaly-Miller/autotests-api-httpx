@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEzVDE4OjMzOjIxLjg0ODY1OSIsInVzZXJfaWQiOiI5MDUxOWMzNy0xNjZjLTRhNjUtYjRjNy1iZjY5ZTBmY2EwOGMifQ.BsvGe7sglz-6y9mercQp4HpkSu6lelb1Dhjyuh0qGhE' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Sign risk everyone should cell a.","courseId":"b6bba332-4eac-4293-8661-8335ff777ff1","maxScore":68,"minScore":16,"orderIndex":5522,"description":"Billion two certain more practice many.","estimatedTime":"2 weeks"}'

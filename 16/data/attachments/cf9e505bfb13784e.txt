@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEzVDE4OjMzOjE3LjE3MTI1NyIsInVzZXJfaWQiOiI1N2NhOTZjMS04YmM4LTQxNmUtOGZkNy02NDU5NTA2ZWU1MTYifQ.9tzrlEjPfMKmPOnLwZo9nY54_Ao7MyaCvCGIJTHQ_4k' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Region many consumer.","maxScore":59,"minScore":2,"description":"Trade yet staff then democratic cold.","estimatedTime":"2 weeks","previewFileId":"163671d3-decf-4ba9-9919-6be602595f03","createdByUserId":"57ca96c1-8bc8-416e-8fd7-6459506ee516"}'

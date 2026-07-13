@@ -1,0 +1,37 @@
+{
+  "$defs": {
+    "TokenSchema": {
+      "properties": {
+        "tokenType": {
+          "title": "Tokentype",
+          "type": "string"
+        },
+        "accessToken": {
+          "title": "Accesstoken",
+          "type": "string"
+        },
+        "refreshToken": {
+          "title": "Refreshtoken",
+          "type": "string"
+        }
+      },
+      "required": [
+        "tokenType",
+        "accessToken",
+        "refreshToken"
+      ],
+      "title": "TokenSchema",
+      "type": "object"
+    }
+  },
+  "properties": {
+    "token": {
+      "$ref": "#/$defs/TokenSchema"
+    }
+  },
+  "required": [
+    "token"
+  ],
+  "title": "AuthResponseSchema",
+  "type": "object"
+}

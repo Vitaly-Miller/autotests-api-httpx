@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEzVDE4OjMzOjE4LjQyNTYyOSIsInVzZXJfaWQiOiIzYWU5MDcyMy0xYWUwLTQ3MjYtOTRiNy01NTFlM2Y0YWIwOTcifQ.0F5A9yeUOaWJBpMb2sBkMQFDsDoew22W2MHgaqEM2UA' \
+  -H 'content-type: application/json' \
+  -d '{"title":"White idea store investment inside draw.","maxScore":56,"minScore":15,"description":"Medical just by none show meeting after manager.","estimatedTime":"3 weeks","previewFileId":"0dc6243f-6fec-49b6-bcac-6ec1f13cd934","createdByUserId":"3ae90723-1ae0-4726-94b7-551e3f4ab097"}'

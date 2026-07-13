@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "67ccad02-e4d8-4968-9503-f7bf68760227",
+    "title": "Loss thus organization.",
+    "maxScore": 92,
+    "minScore": 15,
+    "description": "Say why account news party cultural.",
+    "previewFile": {
+      "id": "a57b9c6b-bb13-4af2-bda7-3085949b1d9c",
+      "filename": "file_4126.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_4126.png"
+    },
+    "estimatedTime": "9 weeks",
+    "createdByUser": {
+      "id": "4faadde3-8dfa-434e-9f4f-ed24f8decaad",
+      "email": "test_1415d057@example.com",
+      "lastName": "Gallagher",
+      "firstName": "Ashley",
+      "middleName": "Amber"
+    }
+  }
+}

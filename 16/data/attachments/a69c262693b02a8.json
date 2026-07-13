@@ -1,0 +1,122 @@
+{
+  "$defs": {
+    "CourseSchema": {
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "title": {
+          "title": "Title",
+          "type": "string"
+        },
+        "maxScore": {
+          "title": "Maxscore",
+          "type": "integer"
+        },
+        "minScore": {
+          "title": "Minscore",
+          "type": "integer"
+        },
+        "description": {
+          "title": "Description",
+          "type": "string"
+        },
+        "estimatedTime": {
+          "title": "Estimatedtime",
+          "type": "string"
+        },
+        "previewFile": {
+          "$ref": "#/$defs/FileSchema"
+        },
+        "createdByUser": {
+          "$ref": "#/$defs/UserSchema"
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "maxScore",
+        "minScore",
+        "description",
+        "estimatedTime",
+        "previewFile",
+        "createdByUser"
+      ],
+      "title": "CourseSchema",
+      "type": "object"
+    },
+    "FileSchema": {
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "filename": {
+          "title": "Filename",
+          "type": "string"
+        },
+        "directory": {
+          "title": "Directory",
+          "type": "string"
+        },
+        "url": {
+          "title": "Url",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "filename",
+        "directory",
+        "url"
+      ],
+      "title": "FileSchema",
+      "type": "object"
+    },
+    "UserSchema": {
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "email": {
+          "format": "email",
+          "title": "Email",
+          "type": "string"
+        },
+        "lastName": {
+          "title": "Lastname",
+          "type": "string"
+        },
+        "firstName": {
+          "title": "Firstname",
+          "type": "string"
+        },
+        "middleName": {
+          "title": "Middlename",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "email",
+        "lastName",
+        "firstName",
+        "middleName"
+      ],
+      "title": "UserSchema",
+      "type": "object"
+    }
+  },
+  "properties": {
+    "course": {
+      "$ref": "#/$defs/CourseSchema"
+    }
+  },
+  "required": [
+    "course"
+  ],
+  "title": "UpdateCourseResponseSchema",
+  "type": "object"
+}
