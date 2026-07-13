@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEzVDE3OjUyOjQxLjM5ODk2MyIsInVzZXJfaWQiOiI1MGZhMjM0MS1iYzQwLTRkNDMtOTUwMS1lMDZmNGE3MTViNDUifQ.5Luroe0bb-nUIUssuPMVRObzwkKxaujgViMRqYy0aP4' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Kind mind go sound eat however.","courseId":"577d975a-08af-45f7-88c6-b080e7b07635","maxScore":77,"minScore":24,"orderIndex":4111,"description":"As until institution want road environmental.","estimatedTime":"6 weeks"}'

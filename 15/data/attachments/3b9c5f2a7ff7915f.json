@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "61a05405-89ac-4fbf-aff6-5676f73008a8",
+    "title": "Unit thus detail resource sport wonder.",
+    "maxScore": 90,
+    "minScore": 19,
+    "description": "Of staff sport.",
+    "previewFile": {
+      "id": "96800e80-9d2b-48d4-ae64-daa96f5a6a17",
+      "filename": "file_1561.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_1561.png"
+    },
+    "estimatedTime": "3 weeks",
+    "createdByUser": {
+      "id": "a3e1f038-9459-4542-a73f-34af213dfa1d",
+      "email": "test_282c6b83@example.com",
+      "lastName": "Shannon",
+      "firstName": "Christina",
+      "middleName": "Lynn"
+    }
+  }
+}

@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEzVDE3OjUyOjQxLjY5Nzg3OCIsInVzZXJfaWQiOiI1MGZhMjM0MS1iYzQwLTRkNDMtOTUwMS1lMDZmNGE3MTViNDUifQ.72H0WsCNzB22zG0l2bj8veX5d7YTxLODubRTpyUoRxM' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Drop reduce year value.","maxScore":94,"minScore":28,"description":"South economic himself not hundred.","estimatedTime":"7 weeks","previewFileId":"cf1e98af-8548-4256-9c1a-61970c757276","createdByUserId":"50fa2341-bc40-4d43-9501-e06f4a715b45"}'

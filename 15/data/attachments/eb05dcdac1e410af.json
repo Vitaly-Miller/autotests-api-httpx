@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "34b90c6f-f8cf-464c-8790-c901e25ab458",
+    "title": "Professor media his around crime sure.",
+    "maxScore": 91,
+    "minScore": 18,
+    "description": "One model listen law.",
+    "previewFile": {
+      "id": "08f28ce5-452d-436d-a428-4fb51caacb8d",
+      "filename": "file_1969.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_1969.png"
+    },
+    "estimatedTime": "4 weeks",
+    "createdByUser": {
+      "id": "f4161a42-b7a8-4985-b3e7-5f03209544bd",
+      "email": "test_9906055b@example.com",
+      "lastName": "Skinner",
+      "firstName": "Christopher",
+      "middleName": "Victoria"
+    }
+  }
+}

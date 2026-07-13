@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEzVDE3OjUyOjM4LjkwNTQxNyIsInVzZXJfaWQiOiIyYjJiN2ViMC0yZTkzLTRhNzktYTgwZC0xNzgwMTc4MGE1NjgifQ.JQjBWkH-f-4o1r00BLqgk1w9jPQ1l64hEU5Jb5FQ4MA' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Political side which.","courseId":"73f21b36-23aa-4df9-a3cb-04d0ea5e2de5","maxScore":76,"minScore":5,"orderIndex":6420,"description":"Western he he similar your member.","estimatedTime":"3 weeks"}'

@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEzVDE3OjUyOjM3LjY0NzA3MiIsInVzZXJfaWQiOiI5NTEwMjRmZi1lNDMwLTRhZjItYWQ0Zi04MTg0ZWYxNDJiMDAifQ.Z9MAfdn3JPwwm3c7x1LNi9euABPZGsbcOn-xxJUS9kM' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Career actually rich old how.","courseId":"a1a6db01-b7d1-45db-8430-827d48fe88f1","maxScore":78,"minScore":16,"orderIndex":3336,"description":"Mean near behavior town buy adult prove.","estimatedTime":"4 weeks"}'

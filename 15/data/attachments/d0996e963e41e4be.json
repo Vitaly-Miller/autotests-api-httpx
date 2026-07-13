@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "f1472b2f-fafa-48d2-9dbd-6e36e7299412",
+    "title": "Study fire herself country mother.",
+    "maxScore": 65,
+    "minScore": 20,
+    "description": "Money remain almost.",
+    "previewFile": {
+      "id": "d99f01c0-94f5-4d70-9b27-442d9b875360",
+      "filename": "file_3302.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_3302.png"
+    },
+    "estimatedTime": "9 weeks",
+    "createdByUser": {
+      "id": "3622ba18-1fa8-4554-8388-2362e911e86c",
+      "email": "test_ad898954@example.com",
+      "lastName": "Houston",
+      "firstName": "Lisa",
+      "middleName": "Tricia"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "fc7557d8-3cf7-4ac1-86ae-a16918f67641",
+    "title": "Season each mother feel democratic none.",
+    "maxScore": 55,
+    "minScore": 20,
+    "description": "Respond image goal. Tough himself onto remember.",
+    "previewFile": {
+      "id": "a8576784-36a5-4397-9a96-921572079491",
+      "filename": "file_7051.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_7051.png"
+    },
+    "estimatedTime": "2 weeks",
+    "createdByUser": {
+      "id": "24dbdaec-ebcb-4e05-8b65-7f045ae7dd9c",
+      "email": "test_5293e8b6@example.com",
+      "lastName": "Fields",
+      "firstName": "Anne",
+      "middleName": "Elizabeth"
+    }
+  }
+}

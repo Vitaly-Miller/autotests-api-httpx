@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEzVDE3OjUyOjI5Ljc4ODgxMCIsInVzZXJfaWQiOiJmNDE2MWE0Mi1iN2E4LTQ5ODUtYjNlNy01ZjAzMjA5NTQ0YmQifQ.EJYUIErFE6EU3TM_OzDDE64IUFkvfo2nA_nYWK8O1lw' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Professor media his around crime sure.","maxScore":91,"minScore":18,"description":"One model listen law.","estimatedTime":"4 weeks","previewFileId":"08f28ce5-452d-436d-a428-4fb51caacb8d","createdByUserId":"f4161a42-b7a8-4985-b3e7-5f03209544bd"}'

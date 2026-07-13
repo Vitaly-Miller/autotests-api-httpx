@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "a1a6db01-b7d1-45db-8430-827d48fe88f1",
+    "title": "Which six none laugh.",
+    "maxScore": 99,
+    "minScore": 14,
+    "description": "Effect admit sport travel husband never.",
+    "previewFile": {
+      "id": "e0dfab57-1bf4-45ba-bda5-fc420687ea7c",
+      "filename": "file_9741.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_9741.png"
+    },
+    "estimatedTime": "5 weeks",
+    "createdByUser": {
+      "id": "951024ff-e430-4af2-ad4f-8184ef142b00",
+      "email": "test_0b088cbc@example.com",
+      "lastName": "Gonzalez",
+      "firstName": "Meghan",
+      "middleName": "Larry"
+    }
+  }
+}

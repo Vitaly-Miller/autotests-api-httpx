@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEzVDE3OjUyOjMxLjY4MDc1MCIsInVzZXJfaWQiOiIzNjIyYmExOC0xZmE4LTQ1NTQtODM4OC0yMzYyZTkxMWU4NmMifQ.cyaqPV_c4cEkXN4wjUmk9unwW0hhoXSIavnCsxB344I' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Study fire herself country mother.","maxScore":65,"minScore":20,"description":"Money remain almost.","estimatedTime":"9 weeks","previewFileId":"d99f01c0-94f5-4d70-9b27-442d9b875360","createdByUserId":"3622ba18-1fa8-4554-8388-2362e911e86c"}'

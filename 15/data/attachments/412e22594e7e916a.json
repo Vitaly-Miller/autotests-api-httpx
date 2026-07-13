@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "0495478a-7141-4ad3-8bc6-d8af34087ff5",
+    "title": "Theory house nor fight game.",
+    "maxScore": 72,
+    "minScore": 25,
+    "description": "True present reach scientist officer event month.",
+    "previewFile": {
+      "id": "3ea70952-c69d-4b25-9dfe-576e22c09d79",
+      "filename": "file_4095.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_4095.png"
+    },
+    "estimatedTime": "9 weeks",
+    "createdByUser": {
+      "id": "1653def8-0b28-4299-b4aa-8f2143437dd2",
+      "email": "test_4d5dd346@example.com",
+      "lastName": "Jones",
+      "firstName": "Chelsea",
+      "middleName": "Aaron"
+    }
+  }
+}

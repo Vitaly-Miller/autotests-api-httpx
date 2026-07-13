@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/exercises/c562bdce-dd9a-4982-ab6f-9ebc161ba738 \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEzVDE3OjUyOjQwLjE0NTY2OCIsInVzZXJfaWQiOiJjN2RkZDU3OC0yMmJiLTQ4OGMtYjM4YS04MGM3MTEwYzFmNTEifQ.eWGJlLMWUtJwCEJCySEWyC5jG4suyWgibeS33yE_X5Q' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Most everything everybody improve scene.","maxScore":79,"minScore":3,"orderIndex":4757,"description":"Degree future thus under child behavior very.","estimatedTime":"5 weeks"}'

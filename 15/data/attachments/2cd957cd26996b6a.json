@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "bfe5e787-ba72-4ccd-ab45-32c88c56a294",
+    "title": "Computer recognize machine national have.",
+    "maxScore": 74,
+    "minScore": 10,
+    "description": "Nothing population his us office.",
+    "previewFile": {
+      "id": "a37f6573-ceaa-41ff-ba63-e94e123e8afa",
+      "filename": "file_4977.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_4977.png"
+    },
+    "estimatedTime": "8 weeks",
+    "createdByUser": {
+      "id": "940d2ab2-382c-4151-832d-e277b0e84065",
+      "email": "test_5c3b0905@example.com",
+      "lastName": "Evans",
+      "firstName": "Michelle",
+      "middleName": "Dawn"
+    }
+  }
+}

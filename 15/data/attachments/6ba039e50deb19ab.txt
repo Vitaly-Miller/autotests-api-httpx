@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEzVDE3OjUyOjM3Ljk0ODYyMCIsInVzZXJfaWQiOiI5NTEwMjRmZi1lNDMwLTRhZjItYWQ0Zi04MTg0ZWYxNDJiMDAifQ.iTmDDQKbXS-RatpWra6guKyW5U3nGIf5zFMYLOj_DEw' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Which six none laugh.","maxScore":99,"minScore":14,"description":"Effect admit sport travel husband never.","estimatedTime":"5 weeks","previewFileId":"e0dfab57-1bf4-45ba-bda5-fc420687ea7c","createdByUserId":"951024ff-e430-4af2-ad4f-8184ef142b00"}'

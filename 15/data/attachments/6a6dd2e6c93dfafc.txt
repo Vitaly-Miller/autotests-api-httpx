@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEzVDE3OjUyOjQwLjQ0NDk1NyIsInVzZXJfaWQiOiJjN2RkZDU3OC0yMmJiLTQ4OGMtYjM4YS04MGM3MTEwYzFmNTEifQ.1Rxdq2t_2vWj7UY6YSiURbDXhc7J8m-tpp8yQfHCj20' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Idea buy mother.","maxScore":83,"minScore":16,"description":"Media everything character much usually do order.","estimatedTime":"6 weeks","previewFileId":"b7680080-a737-4dec-962e-e73405a80dab","createdByUserId":"c7ddd578-22bb-488c-b38a-80c7110c1f51"}'

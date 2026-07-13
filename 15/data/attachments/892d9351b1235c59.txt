@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEzVDE3OjUyOjMwLjc0MzYxMCIsInVzZXJfaWQiOiI5NDBkMmFiMi0zODJjLTQxNTEtODMyZC1lMjc3YjBlODQwNjUifQ.bnIL9J4wHvaCMvMLC7jyVxOmhKDpsStRKn0GKGa1zzA' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Computer recognize machine national have.","maxScore":74,"minScore":10,"description":"Nothing population his us office.","estimatedTime":"8 weeks","previewFileId":"a37f6573-ceaa-41ff-ba63-e94e123e8afa","createdByUserId":"940d2ab2-382c-4151-832d-e277b0e84065"}'
