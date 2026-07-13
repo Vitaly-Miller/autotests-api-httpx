@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/exercises/d9f9a838-cc0b-4a7d-a8f6-314f4f027e40 \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEzVDAyOjMzOjA1LjI0MDI0NiIsInVzZXJfaWQiOiJjNTMzOGU0ZC04MGMxLTQ1Y2MtYmY0My1jN2UzNjViNTMyZDMifQ.sULSq4uOWpnpgv6zuftmUtkIpkcm7yMP0FIKIBhRHWo' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Practice use employee nation.","maxScore":56,"minScore":12,"orderIndex":30,"description":"Land one miss evidence year woman center drug.","estimatedTime":"6 weeks"}'

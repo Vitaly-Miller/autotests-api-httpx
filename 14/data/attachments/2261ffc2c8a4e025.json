@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "a46727a0-e05b-4ab6-b14d-c905197b1679",
+    "title": "Behavior describe fill yeah food.",
+    "maxScore": 78,
+    "minScore": 9,
+    "description": "Wide owner happen certainly.",
+    "previewFile": {
+      "id": "bdea86b4-a281-4ec4-b2c5-e888237b242c",
+      "filename": "file_8978.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_8978.png"
+    },
+    "estimatedTime": "2 weeks",
+    "createdByUser": {
+      "id": "f3aea2a3-ce9b-4cf4-802f-0f8a149f3822",
+      "email": "test_4d062be9@example.com",
+      "lastName": "Cabrera",
+      "firstName": "Jennifer",
+      "middleName": "Sharon"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "a67da9cc-e1ff-4447-957f-48eb4e152d37",
+    "title": "Full right if large.",
+    "maxScore": 59,
+    "minScore": 10,
+    "description": "Because recently instead more most section be.",
+    "previewFile": {
+      "id": "e0c7c5c0-56c0-47f7-ab7c-9e0732249bb2",
+      "filename": "file_9115.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_9115.png"
+    },
+    "estimatedTime": "5 weeks",
+    "createdByUser": {
+      "id": "0496e663-9e19-4e7f-acc8-33093ebcb63b",
+      "email": "test_ef0d9c32@example.com",
+      "lastName": "Reynolds",
+      "firstName": "Jennifer",
+      "middleName": "Laurie"
+    }
+  }
+}

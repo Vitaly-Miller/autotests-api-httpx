@@ -1,0 +1,25 @@
+{
+  "courses": [
+    {
+      "id": "ee191aaf-328e-42f2-8e90-b01b01b688a5",
+      "title": "Black add recently.",
+      "maxScore": 100,
+      "minScore": 30,
+      "description": "Tree kid city sound.",
+      "previewFile": {
+        "id": "af72e7e2-d38e-4770-9f3f-2178f538416a",
+        "filename": "file_5999.png",
+        "directory": "Uploaded",
+        "url": "http://localhost:8000/static/Uploaded/file_5999.png"
+      },
+      "estimatedTime": "2 weeks",
+      "createdByUser": {
+        "id": "e559357d-64df-4985-a135-83422e1b1733",
+        "email": "test_ea8c2b4a@example.com",
+        "lastName": "Perez",
+        "firstName": "Daniel",
+        "middleName": "David"
+      }
+    }
+  ]
+}

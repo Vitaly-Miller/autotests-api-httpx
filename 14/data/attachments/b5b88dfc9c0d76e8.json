@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "42ffbeb6-8297-4945-962b-14c61d8db8d1",
+    "title": "History travel successful we medical.",
+    "maxScore": 85,
+    "minScore": 20,
+    "description": "North marriage which morning.",
+    "previewFile": {
+      "id": "d74b37c6-522b-4c98-b62c-88455cda281c",
+      "filename": "file_9470.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_9470.png"
+    },
+    "estimatedTime": "3 weeks",
+    "createdByUser": {
+      "id": "c5338e4d-80c1-45cc-bf43-c7e365b532d3",
+      "email": "test_09e5f78c@example.com",
+      "lastName": "Morrison",
+      "firstName": "Brooke",
+      "middleName": "Anna"
+    }
+  }
+}

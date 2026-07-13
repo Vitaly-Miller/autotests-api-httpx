@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "3de9c79c-3d76-4247-863a-352a8e2fd8c8",
+    "title": "Democratic many success.",
+    "maxScore": 91,
+    "minScore": 6,
+    "description": "Sell page anything each positive.",
+    "previewFile": {
+      "id": "bcbc3223-48d9-42c2-ba6f-e936e6bc5057",
+      "filename": "file_1352.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_1352.png"
+    },
+    "estimatedTime": "4 weeks",
+    "createdByUser": {
+      "id": "09b72362-fbb1-482c-830f-da2d406f2168",
+      "email": "test_b36263e5@example.com",
+      "lastName": "Travis",
+      "firstName": "Jeffrey",
+      "middleName": "Henry"
+    }
+  }
+}

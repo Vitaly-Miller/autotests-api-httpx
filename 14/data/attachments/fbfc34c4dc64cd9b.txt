@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEzVDAyOjMzOjAxLjQ3MjM5MyIsInVzZXJfaWQiOiI4OTgyNjM3Mi0zNmQ3LTQzNmItYTNiYS0zNDJlYmI4ZmZkYTcifQ.8e6P0gB-1ufdwt9H9FD1Sf3_VFj2TL9h_TFvnuM9OL0' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Material no reveal citizen expert.","maxScore":51,"minScore":27,"description":"Approach everyone another.","estimatedTime":"4 weeks","previewFileId":"01409f8b-6a04-48e7-a6b0-549ce59a42d7","createdByUserId":"89826372-36d7-436b-a3ba-342ebb8ffda7"}'

@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEzVDAyOjMzOjAyLjgzNTc0OCIsInVzZXJfaWQiOiIzOTc0MWZkYi1hYTZjLTQ3ZGEtYjk4Ny1iMzQ2YzkxNzhlMTIifQ.r6OyWt8q5ddmfI6NBqsc2qakt65S0flna3NNPSJPt4k' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Claim plan whole popular position draw.","maxScore":92,"minScore":1,"description":"Fish you water season computer trip bit.","estimatedTime":"2 weeks","previewFileId":"ad81788c-5c79-438d-8979-91e0b4a1a01f","createdByUserId":"39741fdb-aa6c-47da-b987-b346c9178e12"}'

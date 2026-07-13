@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEzVDAyOjMzOjAwLjA3NzcwMSIsInVzZXJfaWQiOiI3Y2M4Y2IwMS1jN2MyLTRmYzQtYjdlYi0yNjAxMGVmZjIzMDUifQ.gNSBPjWPPitc2lLFohcwWPj8u86uOOgk_DmktODqIp0' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Star pattern site.","maxScore":97,"minScore":5,"description":"Finally field affect million because bar try.","estimatedTime":"5 weeks","previewFileId":"9de5882e-5554-4aa9-8ab1-bf80e92e4d59","createdByUserId":"7cc8cb01-c7c2-4fc4-b7eb-26010eff2305"}'

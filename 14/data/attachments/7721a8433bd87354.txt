@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEzVDAyOjMzOjA0LjIxMDkwOSIsInVzZXJfaWQiOiIwNDk2ZTY2My05ZTE5LTRlN2YtYWNjOC0zMzA5M2ViY2I2M2IifQ.K5o0p9KfHpznVWq5DE7W3TJqhtqhkKBQ0xo1LLtchVo' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Full right if large.","maxScore":59,"minScore":10,"description":"Because recently instead more most section be.","estimatedTime":"5 weeks","previewFileId":"e0c7c5c0-56c0-47f7-ab7c-9e0732249bb2","createdByUserId":"0496e663-9e19-4e7f-acc8-33093ebcb63b"}'

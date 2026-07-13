@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "d2fecba0-a305-46f5-9f65-bdd14e859e17",
+    "title": "Material no reveal citizen expert.",
+    "maxScore": 51,
+    "minScore": 27,
+    "description": "Approach everyone another.",
+    "previewFile": {
+      "id": "01409f8b-6a04-48e7-a6b0-549ce59a42d7",
+      "filename": "file_6618.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_6618.png"
+    },
+    "estimatedTime": "4 weeks",
+    "createdByUser": {
+      "id": "89826372-36d7-436b-a3ba-342ebb8ffda7",
+      "email": "test_eac0daf2@example.com",
+      "lastName": "Reed",
+      "firstName": "Nicole",
+      "middleName": "Kevin"
+    }
+  }
+}

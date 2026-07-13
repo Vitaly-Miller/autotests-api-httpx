@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEzVDAyOjMyOjUxLjgyNzA3NyIsInVzZXJfaWQiOiI5ZTMxMWY1Yy01OGMwLTQ3MjktYjJhNS1mNTY1ZDRiODM2ZDIifQ.HKvJu-B3wLAGqOHCIzmPY9D3GqD5pMxN8bgkoEdaevo' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Step authority door.","maxScore":88,"minScore":8,"description":"Common blood stay affect.","estimatedTime":"9 weeks","previewFileId":"0d28fb8b-8846-48fe-9b46-a0e9b123c09d","createdByUserId":"9e311f5c-58c0-4729-b2a5-f565d4b836d2"}'

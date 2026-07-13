@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "5d04b3e7-11c2-4866-bd8f-7b4d44c1d301",
+    "title": "Claim plan whole popular position draw.",
+    "maxScore": 92,
+    "minScore": 1,
+    "description": "Fish you water season computer trip bit.",
+    "previewFile": {
+      "id": "ad81788c-5c79-438d-8979-91e0b4a1a01f",
+      "filename": "file_4032.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_4032.png"
+    },
+    "estimatedTime": "2 weeks",
+    "createdByUser": {
+      "id": "39741fdb-aa6c-47da-b987-b346c9178e12",
+      "email": "test_c48288a2@example.com",
+      "lastName": "Becker",
+      "firstName": "Brett",
+      "middleName": "Jenna"
+    }
+  }
+}

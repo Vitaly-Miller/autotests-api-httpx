@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEzVDAyOjMzOjA1LjI0MDI0NiIsInVzZXJfaWQiOiJjNTMzOGU0ZC04MGMxLTQ1Y2MtYmY0My1jN2UzNjViNTMyZDMifQ.sULSq4uOWpnpgv6zuftmUtkIpkcm7yMP0FIKIBhRHWo' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Say card want official according.","courseId":"42ffbeb6-8297-4945-962b-14c61d8db8d1","maxScore":68,"minScore":11,"orderIndex":3829,"description":"Very pressure season but like certain person.","estimatedTime":"6 weeks"}'

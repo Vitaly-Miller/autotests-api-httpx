@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEzVDAyOjMyOjU5Ljc0NjAzMSIsInVzZXJfaWQiOiI3Y2M4Y2IwMS1jN2MyLTRmYzQtYjdlYi0yNjAxMGVmZjIzMDUifQ.WlPtqin3MtxPSmQLnK50tv5287ud4-vPqTEr9HHmNpM' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Big build research idea.","courseId":"021d0646-5739-4dea-85df-c622510d7616","maxScore":52,"minScore":24,"orderIndex":9278,"description":"Cut mouth recently number soon view color.","estimatedTime":"3 weeks"}'

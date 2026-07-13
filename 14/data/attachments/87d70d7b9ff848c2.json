@@ -1,0 +1,25 @@
+{
+  "courses": [
+    {
+      "id": "875ee13a-0744-43e0-9dad-0c5851f20f8c",
+      "title": "Level son role.",
+      "maxScore": 89,
+      "minScore": 4,
+      "description": "Produce sit price huge. Become east east.",
+      "previewFile": {
+        "id": "254e0aa0-8827-41b5-b1fe-9210c9c1b174",
+        "filename": "file_8254.png",
+        "directory": "Uploaded",
+        "url": "http://localhost:8000/static/Uploaded/file_8254.png"
+      },
+      "estimatedTime": "3 weeks",
+      "createdByUser": {
+        "id": "06ae6c8e-b19a-48f4-8493-2a2a4a51176c",
+        "email": "test_5a318c2f@example.com",
+        "lastName": "Bass",
+        "firstName": "Joshua",
+        "middleName": "Christine"
+      }
+    }
+  ]
+}

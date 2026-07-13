@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEzVDAyOjMzOjA1LjU3MDMxNCIsInVzZXJfaWQiOiJjNTMzOGU0ZC04MGMxLTQ1Y2MtYmY0My1jN2UzNjViNTMyZDMifQ.Hj-i8VHjHiQA9HZiwt-j7sAc0CsgSuGNTOuf5f8Qbv8' \
+  -H 'content-type: application/json' \
+  -d '{"title":"History travel successful we medical.","maxScore":85,"minScore":20,"description":"North marriage which morning.","estimatedTime":"3 weeks","previewFileId":"d74b37c6-522b-4c98-b62c-88455cda281c","createdByUserId":"c5338e4d-80c1-45cc-bf43-c7e365b532d3"}'

@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "d06fe8d6-58d6-4137-b716-88f4906b5971",
+    "title": "Thousand Republican bed.",
+    "maxScore": 53,
+    "minScore": 15,
+    "description": "Either since material find special sister gas.",
+    "previewFile": {
+      "id": "cf4457a1-cf09-4a8c-abba-069988708da1",
+      "filename": "file_5726.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_5726.png"
+    },
+    "estimatedTime": "3 weeks",
+    "createdByUser": {
+      "id": "a61ca68e-abfe-43f3-8a77-cf129c038b9b",
+      "email": "test_4697c8ea@example.com",
+      "lastName": "Gay",
+      "firstName": "Jamie",
+      "middleName": "Sheila"
+    }
+  }
+}
