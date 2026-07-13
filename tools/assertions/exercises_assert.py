@@ -12,8 +12,8 @@ from schemas.exercises_schema import (
     GetExerciseResponseSchema, UpdateExerciseRequestSchema, UpdateExerciseResponseSchema
 )
 
-#------------- Logger ----------------
-logger = get_logger('EXERCISE-ASSERT')
+#------------- Logger -----------------
+logger = get_logger('EXERCISES-ASSERT')
 
 #=======================================================================================================================
 #---------------------------------------------------- Exercise (base) --------------------------------------------------

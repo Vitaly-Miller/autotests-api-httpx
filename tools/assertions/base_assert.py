@@ -32,7 +32,7 @@ def assert_status_code(actual: int, expected: int):
             (f'⚠️ Status code is incorrect!\n'                         # 
              f'{exp} {expected}\n'                                     # Формируем Error Message
              f'{act} {actual}\n')                                      #
-        logger.info(f'Status code: "{pretty_expected}"')               # Logger INFO
+        logger.info(f'Status code: {pretty_expected}')                 # Logger INFO
         assert actual == expected, error_message
 
 
@@ -50,7 +50,7 @@ def assert_request_method(actual: str, expected: str):
             (f'⚠️ Request Method is incorrect!\n'                      #
              f'{exp} {expected}\n'                                     # Формируем Error Message
              f'{act} {actual}\n')                                      #
-        logger.info(f'Request method: "{expected}"')                   # Logger INFO
+        logger.info(f'Request method: {expected}')                     # Logger INFO
         assert actual == expected, error_message
 
 
