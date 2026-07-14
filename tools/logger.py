@@ -6,9 +6,11 @@ import logging
 #=======================================================================================================================
 def get_logger(name: str, console: bool = False) -> logging.Logger:
     """
-    Создает и настраивает Logger
+    Создает и настраивает Logger by logging
 
-    .
+    :param name: Logger name
+    :param console: Выводить ли log в консоль (default = False)
+    :return: logging.Logger
     """
     # 1.Logger
     logger = logging.getLogger(name)         # Создаем Logger и присваиваем ему динамическое название name (из функции)
@@ -19,7 +21,7 @@ def get_logger(name: str, console: bool = False) -> logging.Logger:
     handler.setLevel(logging.DEBUG)          # Уровень (глубина) логирования - DEBUG и выше (все)
 
     # 3.Formatter                     время        имя         уровень       сообщение
-    formatter = logging.Formatter('%(asctime)s | %(name)s | %(levelname)s | %(message)s')   # Форматирование логов
+    formatter = logging.Formatter('%(asctime)s | %(name)s | %(levelname)s | %(message)s')   # Форматирование лога
 
     # 4.ADD
     handler.setFormatter(formatter)          # Добавляем Handler (обработчик) в Formatter

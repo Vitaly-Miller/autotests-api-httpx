@@ -40,6 +40,7 @@ def create_allure_environment_file() -> None:
     что Allure не сможет нормально распарсить.
 
     """
+
     content = '\n'.join(f'{key}={value}' for key, value in properties.items())        # Итерация <properties> и склеивание в строку с переносами
     """
     Превращаем dict в текст формата key=value, по одной паре на строку —
@@ -47,12 +48,14 @@ def create_allure_environment_file() -> None:
     f'{key}={value}'  — строка вида 'base_url=https://...'
     '\n'.join(...)    — склеивает все строки через перенос строки
     """
+
     file_path = settings.allure_results_dir / 'environment.properties'
     """
     settings.allure_results_dir — это Path (DirectoryPath из pydantic),
     поэтому можно просто "делить" его на имя файла через оператор /
     (аналог os.path.join, но в стиле pathlib)
     """
+
     file_path.write_text(content, encoding='utf-8')                                   # Запись в файл
     """
     write_text() сам открывает файл на запись, пишет content и закрывает файл —

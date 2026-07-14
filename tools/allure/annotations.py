@@ -11,21 +11,21 @@ from enum import StrEnum
 # @allure.tag()
 class Tag(StrEnum):
     USERS = 'USERS'
-    AUTH = 'AUTHENTICATION'      # Authentication, Auth, Login
+    AUTH = 'AUTHENTICATION'
     FILES = 'FILES'
     COURSES = 'COURSES'
     EXERCISES = 'EXERCISES'
-    #-----------------------
+    #------------------------
     REGRESSION = 'REGRESSION'
     SMOKE = 'SMOKE'
     NEGATIVE = 'NEGATIVE'
     VALIDATE = 'VALIDATE'
-    #-----------------------
+    #-------------------
     CREATE = 'CREATE'
     GET = 'GET'
     UPDATE = 'UPDATE'
     DELETE = 'DELETE'
-    #-----------------------
+    #--------------------------
     PARAMETRIZE = 'PARAMETRIZE'
 
 
@@ -39,23 +39,20 @@ class Epic(StrEnum):
 # @allure.feature() / @allure.suite()
 class Feature(StrEnum):
     USERS = 'Users'
-    AUTH = 'Authentication'                # Authentication, Auth, Login
+    AUTH = 'Authentication'
     FILES = 'Files'
     COURSES = 'Courses'
     EXERCISES = 'Exercises'
 
 # @allure.story() / @allure.sub_suite()
 class Story(StrEnum):
-    LOGIN = 'Login'                        # Authentication, Auth, Login
+    LOGIN = 'Login'
     CREATE = 'Create'
     GET = 'Get'
     UPDATE = 'Update'
     DELETE = 'Delete'
     NEGATIVE = 'Negative'
     VALIDATE = 'Validate'
-
-
-
 
 
 #=======================================================================================================================
