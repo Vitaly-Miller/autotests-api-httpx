@@ -1,0 +1,25 @@
+{
+  "courses": [
+    {
+      "id": "933d11cd-4e1e-45ef-9147-a0d91d4d474d",
+      "title": "Agreement new score eight.",
+      "maxScore": 89,
+      "minScore": 26,
+      "description": "Tree whatever station spring sign lawyer.",
+      "previewFile": {
+        "id": "bbb37787-c9c1-406f-b806-cf1513e12995",
+        "filename": "file_4764.png",
+        "directory": "Uploaded",
+        "url": "http://localhost:8000/static/Uploaded/file_4764.png"
+      },
+      "estimatedTime": "4 weeks",
+      "createdByUser": {
+        "id": "8eaae90e-8266-4515-858f-6a27646f422f",
+        "email": "test_2e937991@example.com",
+        "lastName": "Shah",
+        "firstName": "Jake",
+        "middleName": "William"
+      }
+    }
+  ]
+}

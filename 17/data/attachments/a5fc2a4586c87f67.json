@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "19b91674-0efd-458a-82d0-b68d640b99a5",
+    "title": "Create meeting black nearly home.",
+    "maxScore": 57,
+    "minScore": 19,
+    "description": "Human mention executive wife through spring.",
+    "previewFile": {
+      "id": "d0df59c4-8425-497e-af61-9dd787e7b3fb",
+      "filename": "file_3237.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_3237.png"
+    },
+    "estimatedTime": "8 weeks",
+    "createdByUser": {
+      "id": "75fac8ca-0f5f-41b0-ad9d-49813fed7e83",
+      "email": "test_83bec6fb@example.com",
+      "lastName": "Fields",
+      "firstName": "Edward",
+      "middleName": "Cheryl"
+    }
+  }
+}

@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE0VDA0OjI2OjQyLjAxMjk0MiIsInVzZXJfaWQiOiI0ODEzNDYxYi1kNWI4LTRjOTgtOWFkYS0zOGM2ODYwYThjNzMifQ.vxg2KdG8idvvixBuvA79AVgXx2sz1iN_RRtVUuivLEA' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Reduce show scientist risk.","courseId":"7bbf5680-0a31-40a0-99d7-ac9ad4780ea7","maxScore":51,"minScore":22,"orderIndex":4751,"description":"Customer next factor.","estimatedTime":"4 weeks"}'

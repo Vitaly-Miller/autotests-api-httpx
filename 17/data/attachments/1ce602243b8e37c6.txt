@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE0VDA0OjI2OjM2LjAzMTEwMSIsInVzZXJfaWQiOiJlNTUyMGM3My0wNTllLTQwY2UtOWNmOS1iZjI1NGU5OWM0ZjEifQ.MLRZJVv0ji7mnYqrX2t65zJ-3Q-25e6F9ouc_su6aFU' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Door player role tax woman score.","maxScore":85,"minScore":22,"description":"None crime myself call nor.","estimatedTime":"7 weeks","previewFileId":"a9b1fa21-ea30-4390-9329-33ed5fb5cecc","createdByUserId":"e5520c73-059e-40ce-9cf9-bf254e99c4f1"}'

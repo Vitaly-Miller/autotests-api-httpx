@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "a2709f0a-1454-49ae-b147-3a92654af8ef",
+    "title": "Public set ever single.",
+    "maxScore": 82,
+    "minScore": 1,
+    "description": "Citizen around score. This wear miss where.",
+    "previewFile": {
+      "id": "37eee95a-f91a-4cc3-a58c-ee9ea9a5fd66",
+      "filename": "file_4609.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_4609.png"
+    },
+    "estimatedTime": "7 weeks",
+    "createdByUser": {
+      "id": "c2eebf6d-19d3-42ee-8baa-2546ae51c60b",
+      "email": "test_6cc7d868@example.com",
+      "lastName": "Brown",
+      "firstName": "Michael",
+      "middleName": "Keith"
+    }
+  }
+}

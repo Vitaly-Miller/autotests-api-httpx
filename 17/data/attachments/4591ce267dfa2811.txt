@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE0VDA0OjI2OjQ5Ljc5NDYwNiIsInVzZXJfaWQiOiJjYmY5NjQzMS1lNGEwLTQ4OTctYmFlNi0xZDU5MjljYWQ4MzkifQ.n6euryNvA7dCRxWNCEHwrAJv-k0YzG2qxjPIuFzXUSI' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Specific hope theory expect stay.","maxScore":75,"minScore":25,"description":"Camera break available.","estimatedTime":"3 weeks","previewFileId":"f30ca0bf-4210-4ed1-a452-df8a02b927ac","createdByUserId":"cbf96431-e4a0-4897-bae6-1d5929cad839"}'

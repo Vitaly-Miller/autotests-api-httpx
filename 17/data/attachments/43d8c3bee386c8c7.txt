@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/exercises/895a8a3e-7459-4704-b327-cb29444c2b5a \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE0VDA0OjI2OjQ5LjQ5NTY0NiIsInVzZXJfaWQiOiJjYmY5NjQzMS1lNGEwLTQ4OTctYmFlNi0xZDU5MjljYWQ4MzkifQ.Qp2xsjnbfj7RO1AZaoK7q8mAmQa7qAG1U6L9CSNuac4' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Both production but everything ahead.","maxScore":77,"minScore":2,"orderIndex":6580,"description":"Bag sense middle future tend himself purpose.","estimatedTime":"8 weeks"}'

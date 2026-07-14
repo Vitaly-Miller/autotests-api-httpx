@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "7bbf5680-0a31-40a0-99d7-ac9ad4780ea7",
+    "title": "Brother case value style hour can.",
+    "maxScore": 97,
+    "minScore": 6,
+    "description": "Mission seek response career glass. About do of.",
+    "previewFile": {
+      "id": "d44f4664-d932-4f35-8d48-f8f178fdc8aa",
+      "filename": "file_6622.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_6622.png"
+    },
+    "estimatedTime": "8 weeks",
+    "createdByUser": {
+      "id": "4813461b-d5b8-4c98-9ada-38c6860a8c73",
+      "email": "test_10952353@example.com",
+      "lastName": "Spence",
+      "firstName": "Brandon",
+      "middleName": "Diana"
+    }
+  }
+}

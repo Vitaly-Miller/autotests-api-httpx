@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE0VDA0OjI2OjQ0LjUxMjEzNSIsInVzZXJfaWQiOiIxMTI5MDkwOS0xODY4LTQ2MmEtOTk1Ny02NzAyOWY4OWYxNTMifQ.8AuSpD0dCRNuIzSZxjuRKfC6hcZewHanaVnHeBFgtyc' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Difficult game staff approach traditional.","courseId":"994f989d-cff8-4a0e-ab99-251b4ad88ab0","maxScore":73,"minScore":23,"orderIndex":5683,"description":"Use set name she into affect.","estimatedTime":"9 weeks"}'

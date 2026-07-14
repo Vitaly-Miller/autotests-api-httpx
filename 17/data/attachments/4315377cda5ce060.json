@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "d037aeca-25dd-4d56-aac4-e90392277870",
+    "title": "Federal machine whole great maybe.",
+    "maxScore": 75,
+    "minScore": 10,
+    "description": "Authority film man increase day.",
+    "previewFile": {
+      "id": "089ea165-3dfc-4398-a6c5-1dfd4e5a7b59",
+      "filename": "file_8285.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_8285.png"
+    },
+    "estimatedTime": "6 weeks",
+    "createdByUser": {
+      "id": "57bd0f2f-0136-464c-900d-d82fd888a3d0",
+      "email": "test_ba63e541@example.com",
+      "lastName": "Welch",
+      "firstName": "Phillip",
+      "middleName": "Suzanne"
+    }
+  }
+}

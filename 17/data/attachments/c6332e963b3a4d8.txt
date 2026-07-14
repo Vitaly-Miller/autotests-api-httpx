@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE0VDA0OjI2OjQxLjA0NjA5NCIsInVzZXJfaWQiOiI1N2JkMGYyZi0wMTM2LTQ2NGMtOTAwZC1kODJmZDg4OGEzZDAifQ.9oo-P9rmg0c_Rdv6UCK9uKGd_ZRq-iGyjlPbGhLU74c' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Federal machine whole great maybe.","maxScore":75,"minScore":10,"description":"Authority film man increase day.","estimatedTime":"6 weeks","previewFileId":"089ea165-3dfc-4398-a6c5-1dfd4e5a7b59","createdByUserId":"57bd0f2f-0136-464c-900d-d82fd888a3d0"}'

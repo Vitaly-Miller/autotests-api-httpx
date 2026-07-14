@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "30ff05d9-35da-4b2d-85c4-aaefa09847dd",
+    "title": "Himself course push such former.",
+    "maxScore": 73,
+    "minScore": 10,
+    "description": "Memory education understand effect.",
+    "previewFile": {
+      "id": "18ee55fa-6d01-46e8-afa4-01308bcddf43",
+      "filename": "file_6496.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_6496.png"
+    },
+    "estimatedTime": "6 weeks",
+    "createdByUser": {
+      "id": "5fa0463d-9b30-48e1-88d5-7ef070fe447e",
+      "email": "test_2e559b75@example.com",
+      "lastName": "Smith",
+      "firstName": "Steven",
+      "middleName": "Alicia"
+    }
+  }
+}

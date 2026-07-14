@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "0f7c60dc-8c35-4789-8067-cc5c94daa13e",
+    "title": "Born evidence top deal.",
+    "maxScore": 94,
+    "minScore": 18,
+    "description": "Make finish away. Executive leg case public.",
+    "previewFile": {
+      "id": "4f0d41e2-0793-48a8-aa76-bb686d09e93e",
+      "filename": "file_1080.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_1080.png"
+    },
+    "estimatedTime": "6 weeks",
+    "createdByUser": {
+      "id": "eb257acb-82aa-4e41-9cee-c5d176d8908e",
+      "email": "test_310634bc@example.com",
+      "lastName": "Clements",
+      "firstName": "Richard",
+      "middleName": "Leslie"
+    }
+  }
+}
