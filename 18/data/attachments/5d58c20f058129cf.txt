@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE0VDE2OjMzOjA4LjEzMzE4MiIsInVzZXJfaWQiOiJhYjQ5NWI2NS1iYzFhLTQ0YTAtOGU0NS0xYjAwMDM3ZTg1MmIifQ.EP2WEl6TluaxN7Wrjq2RoYFf2451KVOB7zgYTFSYE-Q' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Owner room plan sell standard.","maxScore":53,"minScore":6,"description":"Must first house night why tend meet.","estimatedTime":"2 weeks","previewFileId":"29ecb7cd-aef0-4aa4-aee5-b5481183e2b2","createdByUserId":"ab495b65-bc1a-44a0-8e45-1b00037e852b"}'

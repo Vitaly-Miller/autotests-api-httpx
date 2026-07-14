@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE0VDE2OjMzOjE1LjU1ODg3OCIsInVzZXJfaWQiOiI1YTZiY2IzZS00MTA4LTQ5ZDctOWMwNC03YTc0Y2MxZTY4NTUifQ.7acRGxyHNXUg6Q-aJIOWQYq0TgtChcDlbSvds-a49X8' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Expert human drug mean determine.","maxScore":59,"minScore":7,"description":"Present federal long official wall study.","estimatedTime":"7 weeks","previewFileId":"849b7e2d-f7cc-47f8-b6a3-0768ba665db3","createdByUserId":"5a6bcb3e-4108-49d7-9c04-7a74cc1e6855"}'

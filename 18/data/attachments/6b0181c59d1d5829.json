@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "a125eed1-04d1-445e-b3ef-4aecb6ac0768",
+    "title": "Thought inside best president term report.",
+    "maxScore": 78,
+    "minScore": 18,
+    "description": "Source money home place.",
+    "previewFile": {
+      "id": "10e8dd23-bdfc-487e-b541-a141252e94dc",
+      "filename": "file_6562.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_6562.png"
+    },
+    "estimatedTime": "9 weeks",
+    "createdByUser": {
+      "id": "42b3a423-ba6a-425f-8109-bcf5ea72e3ab",
+      "email": "test_3485c7a9@example.com",
+      "lastName": "Garza",
+      "firstName": "Steven",
+      "middleName": "Terri"
+    }
+  }
+}

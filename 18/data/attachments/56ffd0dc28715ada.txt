@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE0VDE2OjMzOjE0LjAxODU4MyIsInVzZXJfaWQiOiI2ODIyZDUzYi1jMzRkLTRkODEtYTZjMS0yNDJhOTdhZGJlZGEifQ.zQN9_uAaOQ20BAyGdWJ96PAF8dDt6cqyLMk0SQvqEe4' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Skin leader agency finish.","courseId":"e2b15601-7125-4785-906a-40efd39c4a90","maxScore":81,"minScore":29,"orderIndex":6557,"description":"Dog his mention threat country add peace.","estimatedTime":"9 weeks"}'

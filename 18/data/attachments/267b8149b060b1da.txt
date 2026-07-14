@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE0VDE2OjMzOjEyLjc5MjgzNyIsInVzZXJfaWQiOiJjMDlkNGY1YS00ZDRhLTRjMDYtOTE3Yy0wNmJiMTAxMzMxNTUifQ.xj0beyNguTUyRBdWRxOfTuclY78wyeAksoRTo4bhAP0' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Common truth until.","courseId":"c614b05c-b7a3-46a4-a2d2-1c6008506a02","maxScore":55,"minScore":3,"orderIndex":1977,"description":"Order almost perform free.","estimatedTime":"4 weeks"}'

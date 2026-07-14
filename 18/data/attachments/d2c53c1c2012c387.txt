@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE0VDE2OjMzOjExLjU0NzA5NCIsInVzZXJfaWQiOiJlZTVlN2JhMi0xNGJmLTQ2MTEtODUyZC1mMjY3YjgzYzdhMGEifQ.Hh4H9uH8P8jqEbtJOWs5f3zu-S28P7nJT0SmTRgs-zA' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Black think away push.","courseId":"038c7456-4b5a-4e9f-8b0e-8a971d511abf","maxScore":68,"minScore":27,"orderIndex":4391,"description":"Candidate left join the.","estimatedTime":"9 weeks"}'

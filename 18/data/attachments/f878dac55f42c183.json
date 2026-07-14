@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "3f1f975c-64cc-4275-920d-e1aaf64b4d0d",
+    "title": "Develop only here sit however.",
+    "maxScore": 52,
+    "minScore": 13,
+    "description": "Since sister region no represent.",
+    "previewFile": {
+      "id": "c70b4779-ea18-4296-b7cb-79c9ce640061",
+      "filename": "file_7010.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_7010.png"
+    },
+    "estimatedTime": "9 weeks",
+    "createdByUser": {
+      "id": "084b14f1-51d9-423c-b915-167e45ea510c",
+      "email": "test_54eee16a@example.com",
+      "lastName": "Anderson",
+      "firstName": "Deborah",
+      "middleName": "Ross"
+    }
+  }
+}

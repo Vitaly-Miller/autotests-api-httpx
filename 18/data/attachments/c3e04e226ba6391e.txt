@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE0VDE2OjMzOjE0LjMxNjA0NSIsInVzZXJfaWQiOiI2ODIyZDUzYi1jMzRkLTRkODEtYTZjMS0yNDJhOTdhZGJlZGEifQ.4KGyGTHx85eQhtBIQfII-Hto908ZofnSLvPMsa9jbv0' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Technology member game travel perhaps.","maxScore":99,"minScore":2,"description":"Prepare listen yes maybe recently poor.","estimatedTime":"6 weeks","previewFileId":"39207f32-e621-4831-8c0f-042a2090f644","createdByUserId":"6822d53b-c34d-4d81-a6c1-242a97adbeda"}'

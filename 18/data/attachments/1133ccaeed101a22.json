@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "16872e4a-4acc-45cf-b6da-04471d105905",
+    "title": "Activity fill natural too foot herself.",
+    "maxScore": 77,
+    "minScore": 18,
+    "description": "Those thus medical join project perform.",
+    "previewFile": {
+      "id": "f3718e81-8b20-4aa6-a3d5-2885675db83b",
+      "filename": "file_5421.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_5421.png"
+    },
+    "estimatedTime": "8 weeks",
+    "createdByUser": {
+      "id": "9d93b7b3-27cd-470a-a3bf-9f2962a4dab4",
+      "email": "test_4a86cfa9@example.com",
+      "lastName": "Perez",
+      "firstName": "Jason",
+      "middleName": "Angela"
+    }
+  }
+}

@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE0VDE2OjMzOjA5LjM2MDU1OSIsInVzZXJfaWQiOiIwODRiMTRmMS01MWQ5LTQyM2MtYjkxNS0xNjdlNDVlYTUxMGMifQ.oglFfbxotA4v3plf642piMBOQd4NbkqMWrzaH6uZ-FE' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Develop only here sit however.","maxScore":52,"minScore":13,"description":"Since sister region no represent.","estimatedTime":"9 weeks","previewFileId":"c70b4779-ea18-4296-b7cb-79c9ce640061","createdByUserId":"084b14f1-51d9-423c-b915-167e45ea510c"}'

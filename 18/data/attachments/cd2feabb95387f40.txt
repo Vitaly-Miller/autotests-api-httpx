@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE0VDE2OjMzOjA3LjgzNTAwMCIsInVzZXJfaWQiOiJhYjQ5NWI2NS1iYzFhLTQ0YTAtOGU0NS0xYjAwMDM3ZTg1MmIifQ.UlYwm58NDLqFR1tBmG_4fZWjKR7-HV6mD6dAlve9cJY' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Better newspaper live training entire for.","courseId":"959ede4a-ae46-4ba3-8ad4-73063ef8f320","maxScore":76,"minScore":14,"orderIndex":2751,"description":"Development physical very operation.","estimatedTime":"7 weeks"}'

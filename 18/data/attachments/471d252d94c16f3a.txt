@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE0VDE2OjMzOjA2Ljg3ODU0NiIsInVzZXJfaWQiOiI5NDJiODRhOS1kNzliLTRlNGEtYjY1Yi04ZDU0NjVkN2MzNDUifQ.iidI85pQsmWFCWr0ymml9hUeOtTqX1fUxR0tj3EKGYQ' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Family for Democrat war.","maxScore":96,"minScore":30,"description":"Small sell reality.","estimatedTime":"5 weeks","previewFileId":"8c55a83f-72a7-4b8c-8060-79a86b5a51fc","createdByUserId":"942b84a9-d79b-4e4a-b65b-8d5465d7c345"}'

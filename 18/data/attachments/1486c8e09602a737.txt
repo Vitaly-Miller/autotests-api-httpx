@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE0VDE2OjMzOjAxLjg4MTQwNCIsInVzZXJfaWQiOiI5ZDkzYjdiMy0yN2NkLTQ3MGEtYTNiZi05ZjI5NjJhNGRhYjQifQ.FctYBDlvAcItWtCcgwGJcMxMdILLYIMINKW8oLl8PJE' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Activity fill natural too foot herself.","maxScore":77,"minScore":18,"description":"Those thus medical join project perform.","estimatedTime":"8 weeks","previewFileId":"f3718e81-8b20-4aa6-a3d5-2885675db83b","createdByUserId":"9d93b7b3-27cd-470a-a3bf-9f2962a4dab4"}'

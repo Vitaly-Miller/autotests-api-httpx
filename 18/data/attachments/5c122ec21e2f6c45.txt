@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/exercises/3a5a6605-7f84-467d-a3ee-cf46359b87e6 \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE0VDE2OjMzOjE0LjAxODU4MyIsInVzZXJfaWQiOiI2ODIyZDUzYi1jMzRkLTRkODEtYTZjMS0yNDJhOTdhZGJlZGEifQ.zQN9_uAaOQ20BAyGdWJ96PAF8dDt6cqyLMk0SQvqEe4' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Baby cold yes discussion.","maxScore":85,"minScore":12,"orderIndex":5819,"description":"Station one window stage trial develop reason.","estimatedTime":"3 weeks"}'

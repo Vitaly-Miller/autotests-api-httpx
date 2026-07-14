@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE0VDE2OjMzOjE1LjI2MTIyOSIsInVzZXJfaWQiOiI1YTZiY2IzZS00MTA4LTQ5ZDctOWMwNC03YTc0Y2MxZTY4NTUifQ.sydipISZlmrsua2ZufWfkyP2oFqwEEuvtp-m-tRInUk' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Wind make scene television various.","courseId":"01f7b2bf-1ce0-4d1d-af25-53bdbbf42814","maxScore":93,"minScore":1,"orderIndex":5166,"description":"None off ok carry.","estimatedTime":"2 weeks"}'

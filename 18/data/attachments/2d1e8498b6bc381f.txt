@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE0VDE2OjMzOjEwLjMxNTA0MSIsInVzZXJfaWQiOiIyNTEwYjYyMC03MjMwLTQ1YjYtODllOC00ODYyZWJhMGY0NjcifQ.Wz7N4TlEOjEVsT3RhFj3_cZGBSuSi14ao1P9EoAxuVI' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Want Democrat line.","courseId":"524f763f-f06e-4adc-b55c-0baeae698ae8","maxScore":97,"minScore":21,"orderIndex":3065,"description":"Raise also piece.","estimatedTime":"5 weeks"}'

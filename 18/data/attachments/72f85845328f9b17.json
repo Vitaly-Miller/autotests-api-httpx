@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "c614b05c-b7a3-46a4-a2d2-1c6008506a02",
+    "title": "Vote particular low better happy.",
+    "maxScore": 95,
+    "minScore": 28,
+    "description": "Attack morning realize century.",
+    "previewFile": {
+      "id": "9622ced2-8bcd-4e7d-a5ec-b9a0f016dd19",
+      "filename": "file_2290.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_2290.png"
+    },
+    "estimatedTime": "5 weeks",
+    "createdByUser": {
+      "id": "c09d4f5a-4d4a-4c06-917c-06bb10133155",
+      "email": "test_d52f2e16@example.com",
+      "lastName": "Fischer",
+      "firstName": "Rhonda",
+      "middleName": "Denise"
+    }
+  }
+}
