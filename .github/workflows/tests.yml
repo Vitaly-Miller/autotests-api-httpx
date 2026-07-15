@@ -1,4 +1,4 @@
-# Имя вашего workflow, которое будет отображаться в интерфейсе GitHub Actions
+# Имя workflow, которое будет отображаться в интерфейсе GitHub Actions
 name: API tests
 
 # Указываем, когда будет запускаться данный workflow
@@ -12,20 +12,20 @@ on:
 
 # Определяем все джобы, которые должны быть выполнены в рамках работы с тестами
 jobs:
-  #=========================================== Джоба 1: запуск автотестов ===========================================
+  #============================================ Джоба 1: запуск автотестов =============================================
   run-tests:
     runs-on: ubuntu-latest    # Указываем, что тесты будут запускаться на последней версии Ubuntu
 
     steps:
       # 1. Шаг, который будет клонировать ваш репозиторий на машину GitHub Actions
       - name: Check out repository
-        uses: actions/checkout@v7      # Используем GitHub Action для клонирования репозитория (⚠️проверь актуальность версии https://github.com/actions/checkout)
+        uses: actions/checkout@v7      # Используем GitHub Action для клонирования репозитория ⚠️https://github.com/actions/checkout
 
       # 2. Шаг для установки Python на виртуальной машине
       - name: Set up Python
-        uses: actions/setup-python@v6  # Используем GitHub Action для установки Python (⚠️проверь актуальность версии https://github.com/actions/setup-python)
+        uses: actions/setup-python@v6  # Используем GitHub Action для установки Python ⚠️https://github.com/actions/setup-python
         with:
-          python-version: '3.13'       # Устанавливаем версию Python 3.13 (⚠️проверь актуальность версии https://github.com/actions/setup-python)
+          python-version: '3.13'       # Устанавливаем версию Python 3.13 ⚠️https://github.com/actions/setup-python
 
       # 3. Шаг для клонирования репозитория с тестовым сервером в рабочую среду
       - name: Clone test server repository
@@ -64,11 +64,11 @@ jobs:
       # 7. Шаг для запуска тестов с использованием pytest и генерации результатов Allure
       - name: Run API tests with pytest and generate Allure results
         run: |
-          pytest --alluredir=allure-results          # --numprocesses 2  # ⚠️Запускаем ВСЕ тесты, генерируем результаты для Allure
+          pytest --alluredir=allure-results          # --numprocesses 2 (откл.)  # ⚠️Запускаем ВСЕ тесты, генерируем результаты для Allure
 
       # 8. Шаг для восстановления истории покрытия (coverage-history.json) из кеша GitHub Actions
       - name: Restore Coverage history
-        uses: actions/cache/restore@v6               # ⚠️Используем GitHub Action для работы с кешем https://github.com/actions/cache
+        uses: actions/cache/restore@v6               # Используем GitHub Action для работы с кешем ⚠️https://github.com/actions/cache
         with:
           path: coverage-history.json                # Файл с историей покрытия по запускам
           key: coverage-history-${{ github.run_id }} # Уникальный ключ текущего запуска
@@ -91,7 +91,7 @@ jobs:
       # 11. Шаг для загрузки HTML-отчёта покрытия как артефакта
       - name: Upload Coverage report
         if: always()                                 # ВСЕГДА выполняем, независимо от успеха или неудачи предыдущих шагов
-        uses: actions/upload-artifact@v7             # ⚠️Используем GitHub Action для загрузки артефактов https://github.com/actions/upload-artifact
+        uses: actions/upload-artifact@v7             # Используем GitHub Action для загрузки артефактов ⚠️https://github.com/actions/upload-artifact
         with:
           name: coverage-report                      # Имя артефакта
           path: coverage.html                        # Файл HTML-отчёта покрытия
@@ -99,42 +99,43 @@ jobs:
       # 12. Шаг для сохранения папки allure-results как артефакта (для передачи в джобу publish-report)
       - name: Upload Allure results
         if: always()                                 # ВСЕГДА выполняем, независимо от успеха или неудачи предыдущих шагов
-        uses: actions/upload-artifact@v7             # ⚠️Используем GitHub Action для загрузки артефактов https://github.com/actions/upload-artifact
+        uses: actions/upload-artifact@v7             # Используем GitHub Action для загрузки артефактов ⚠️https://github.com/actions/upload-artifact
         with:
           name: allure-results                       # Имя артефакта
           path: allure-results                       # Папка с результатами тестов
 
-  #===================================== Джоба 2: публикация отчёта на GitHub Pages =====================================
+
+  #==================================== Джоба 2: публикация отчёта на GitHub Pages =====================================
   publish-report:
-    needs: [ run-tests ]      # Джоба запускается только после успешного выполнения run-tests
-    runs-on: ubuntu-latest    # Указываем, что публикация будет выполняться на последней версии Ubuntu
+    needs: [ run-tests ]                       # Джоба запускается только после успешного выполнения run-tests
+    runs-on: ubuntu-latest                     # Указываем, что публикация будет выполняться на последней версии Ubuntu
 
     steps:
       # 1. Шаг для получения истории отчётов Allure, если она существует
       - name: Get Allure history
-        uses: actions/checkout@v7    # ⚠️Клонируем репозиторий, чтобы получить историю отчётов
-        continue-on-error: true      # Если ветки gh-pages ещё нет, workflow всё равно продолжит выполнение
+        uses: actions/checkout@v7              # ⚠️Клонируем репозиторий, чтобы получить историю отчётов ⚠️https://github.com/actions/checkout
+        continue-on-error: true                # Если ветки gh-pages ещё нет, workflow всё равно продолжит выполнение
         with:
-          ref: gh-pages              # Указываем ветку gh-pages для получения отчётов
-          path: gh-pages             # Указываем путь для сохранения отчётов
+          ref: gh-pages                        # Указываем ветку gh-pages для получения отчётов
+          path: gh-pages                       # Указываем путь для сохранения отчётов
 
       # 2. Шаг для загрузки артефакта allure-results, сохранённого в джобе run-tests
       - name: Download Allure results
-        uses: actions/download-artifact@v8            # ⚠️Используем GitHub Action для скачивания артефактов https://github.com/actions/download-artifact
+        uses: actions/download-artifact@v8            # Используем GitHub Action для скачивания артефактов ⚠️ https://github.com/actions/download-artifact
         with:
           name: allure-results                        # Имя артефакта
           path: allure-results                        # Папка, в которую будут загружены результаты тестов
 
       # 3. Шаг для генерации отчёта Allure с историей
       - name: Generate Allure Report with history
-        uses: simple-elf/allure-report-action@master   # ⚠️Используем готовое решение из GitHub Marketplace https://github.com/simple-elf/allure-report-action
+        uses: simple-elf/allure-report-action@master  # Используем готовое решение из GitHub Marketplace ⚠️https://github.com/simple-elf/allure-report-action
         with:
           allure_results: allure-results              # Указываем каталог с результатами тестов
           allure_history: allure-history              # Указываем каталог для истории отчётов Allure
 
       # 4. Шаг для деплоя отчёта Allure на GitHub Pages, чтобы его можно было просматривать в браузере
       - name: Deploy report to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4           # ⚠️Используем GitHub Action для публикации отчёта на GitHub Pages https://github.com/peaceiris/actions-gh-pages
+        uses: peaceiris/actions-gh-pages@v4           # Используем GitHub Action для публикации отчёта на GitHub Pages ⚠️https://github.com/peaceiris/actions-gh-pages
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}   # Токен для аутентификации на GitHub
           publish_branch: gh-pages                    # Указываем, что отчёт будет опубликован в ветке gh-pages
