@@ -139,7 +139,7 @@ jobs:
 
       # 5. Шаг для добавления coverage-отчёта в публикуемую папку (будет доступен по ссылке .../coverage.html рядом с Allure)
       - name: Add Coverage report to GitHub Pages
-        run: cp coverage.html allure-history/coverage.html  # Копируем HTML-отчёт покрытия в папку, которая уйдёт на GitHub Pages
+        run: sudo cp coverage.html allure-history/coverage.html  # Копируем через sudo: папка allure-history создана Docker-action'ом от root
 
       # 6. Шаг для деплоя отчётов (Allure + Coverage) на GitHub Pages, чтобы их можно было просматривать в браузере
       - name: Deploy report to GitHub Pages
