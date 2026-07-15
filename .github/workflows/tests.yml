@@ -63,8 +63,7 @@ jobs:
 
       # 7. Шаг для запуска тестов с использованием pytest и генерации результатов Allure
       - name: Run API tests with pytest and generate Allure results
-        run: |
-          pytest --alluredir=allure-results          # --numprocesses 2 (откл.)  # ⚠️Запускаем ВСЕ тесты, генерируем результаты для Allure
+        run: pytest --alluredir=allure-results       # --numprocesses 2 (откл.)  # ⚠️Запускаем ВСЕ тесты, генерируем результаты для Allure
 
       # 8. Шаг для восстановления истории покрытия (coverage-history.json) из кеша GitHub Actions
       - name: Restore Coverage history
@@ -72,13 +71,11 @@ jobs:
         with:
           path: coverage-history.json                # Файл с историей покрытия по запускам
           key: coverage-history-${{ github.run_id }} # Уникальный ключ текущего запуска
-          restore-keys: |
-            coverage-history-                        # Если точного совпадения нет — берём последнюю сохранённую историю
+          restore-keys: coverage-history-            # Если точного совпадения нет — берём последнюю сохранённую историю
 
       # 9. Шаг для генерации HTML-отчёта покрытия и обновления истории (swagger-coverage-tool)
       - name: Generate Coverage report
-        run: |
-          swagger-coverage-tool save-report          # Генерируем coverage.html + coverage-report.json, обновляем coverage-history.json
+        run: swagger-coverage-tool save-report       # Генерируем coverage.html + coverage-report.json, обновляем coverage-history.json
 
       # 10. Шаг для сохранения обновлённой истории покрытия обратно в кеш
       - name: Cache Coverage history
