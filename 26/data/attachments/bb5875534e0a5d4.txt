@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/exercises/466910e4-1fc5-4311-8187-34c38187098b \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjE2OjQwLjkxNTY5OSIsInVzZXJfaWQiOiJjMDBmNjc4OC0xYWYzLTQ1YWEtOGMwOC1lMDRjYjYwZmM5NzUifQ.FfL3Tg7gDhB3CQ85bVUjVG-AhsJaSB7co0peX11qj1M' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Commercial guy no speech offer.","maxScore":69,"minScore":22,"orderIndex":3787,"description":"Among there here view figure think piece.","estimatedTime":"2 weeks"}'

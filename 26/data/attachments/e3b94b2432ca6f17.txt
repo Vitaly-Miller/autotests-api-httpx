@@ -1,0 +1,3 @@
+curl -X GET \
+  http://localhost:8000/api/v1/exercises/84fa72ff-c094-4900-8b4b-b915c769a583 \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjE2OjM1LjM1MTA1MyIsInVzZXJfaWQiOiI1OWEzOThmYy03MGE1LTRlODMtOWE1NS0wM2M2MzBkODczZTcifQ.n6vKu8ILR2s6ekDsQgv3Zs4BV7oyg9bU-zLOo-FWrgM'

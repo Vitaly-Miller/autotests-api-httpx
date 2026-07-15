@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "a726faff-1785-48b1-8198-c875fdac634c",
+    "title": "His offer their attorney.",
+    "maxScore": 90,
+    "minScore": 10,
+    "description": "Save research town east assume.",
+    "previewFile": {
+      "id": "2b03e6b3-d7a1-4a6c-9d6b-55e124371d6d",
+      "filename": "file_6042.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_6042.png"
+    },
+    "estimatedTime": "8 weeks",
+    "createdByUser": {
+      "id": "32625a5e-b661-4c82-a023-5b715ff33a15",
+      "email": "test_daf8c73d@example.com",
+      "lastName": "Torres",
+      "firstName": "Leah",
+      "middleName": "Ann"
+    }
+  }
+}

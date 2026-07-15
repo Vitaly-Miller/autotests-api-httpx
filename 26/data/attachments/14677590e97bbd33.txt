@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjE2OjQyLjMxMDUzMCIsInVzZXJfaWQiOiJiZDkwMGI5MC0zOGIwLTQ4MzEtOWI4OS0wOGE2NWEwOTdjODcifQ.6OVIkaWUtoNqMhoorutj8Gb3g9uSaDOvRlSwwUX8b2s' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Somebody live issue me.","courseId":"38fb6cfd-0e6d-4b58-bceb-136f18abf70e","maxScore":87,"minScore":29,"orderIndex":3081,"description":"Although consumer material experience heart.","estimatedTime":"8 weeks"}'

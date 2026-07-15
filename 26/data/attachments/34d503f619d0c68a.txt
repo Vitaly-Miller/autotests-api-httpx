@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjE2OjQwLjkxNTY5OSIsInVzZXJfaWQiOiJjMDBmNjc4OC0xYWYzLTQ1YWEtOGMwOC1lMDRjYjYwZmM5NzUifQ.FfL3Tg7gDhB3CQ85bVUjVG-AhsJaSB7co0peX11qj1M' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Sort space activity opportunity policy.","courseId":"b83b92de-fd44-4000-a7e3-ea3f0aee4d46","maxScore":75,"minScore":19,"orderIndex":7556,"description":"Democratic month bit middle husband.","estimatedTime":"6 weeks"}'

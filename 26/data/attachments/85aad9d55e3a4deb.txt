@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjE2OjI3LjI5MjQ3MyIsInVzZXJfaWQiOiJhNjYyZjgxNC1lM2JhLTRkZjItOGFlYS02ZTZhOTY1YWE5N2YifQ.9SutCp_rLqoJvxpt4119tkKm9FBRosWRPW-dlRV2TZg' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Them he message west soon.","maxScore":69,"minScore":27,"description":"Somebody director none.","estimatedTime":"8 weeks","previewFileId":"7ae2f793-e317-48b5-a93e-5e72b996bbbd","createdByUserId":"a662f814-e3ba-4df2-8aea-6e6a965aa97f"}'

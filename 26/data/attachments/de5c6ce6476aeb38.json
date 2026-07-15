@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "18fd0d79-b3e2-4599-9c1f-821759539e1c",
+    "title": "Heavy grow he almost.",
+    "maxScore": 77,
+    "minScore": 28,
+    "description": "Forward action include example bad key skin.",
+    "previewFile": {
+      "id": "29b68df4-b907-4bde-8dfe-588028e0596f",
+      "filename": "file_1011.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_1011.png"
+    },
+    "estimatedTime": "6 weeks",
+    "createdByUser": {
+      "id": "43362152-7a7b-4e08-a629-9fa5de7b9e34",
+      "email": "test_ec47d011@example.com",
+      "lastName": "Keller",
+      "firstName": "Isaac",
+      "middleName": "Jacqueline"
+    }
+  }
+}

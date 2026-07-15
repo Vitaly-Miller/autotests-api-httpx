@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjE2OjI5LjQwMjk4NiIsInVzZXJfaWQiOiJjYzRkM2Y4Ni0zY2VjLTQ5YWEtODQzMC00YjQzYTUxYjUxNTEifQ.T0HobRNEep8TWAcHTdW40CDL9K5p9YKa9yDGh9v-m6U' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Blue experience campaign have environment.","maxScore":61,"minScore":26,"description":"Approach budget summer building.","estimatedTime":"8 weeks","previewFileId":"c63a51f0-30da-44f9-a051-eb6a0bfcffd9","createdByUserId":"cc4d3f86-3cec-49aa-8430-4b43a51b5151"}'

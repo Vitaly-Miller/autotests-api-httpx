@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "a9848d43-2138-4d73-86ce-0972d4826d8b",
+    "title": "Artist Democrat end fight line off.",
+    "maxScore": 95,
+    "minScore": 19,
+    "description": "Receive garden to partner reflect.",
+    "previewFile": {
+      "id": "059eb03d-b23f-4cd7-8c4d-2c82b5244733",
+      "filename": "file_9873.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_9873.png"
+    },
+    "estimatedTime": "6 weeks",
+    "createdByUser": {
+      "id": "59a398fc-70a5-4e83-9a55-03c630d873e7",
+      "email": "test_55e01549@example.com",
+      "lastName": "Garcia",
+      "firstName": "Rebecca",
+      "middleName": "Gabriel"
+    }
+  }
+}

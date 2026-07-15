@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "38fb6cfd-0e6d-4b58-bceb-136f18abf70e",
+    "title": "Time what some kid better possible.",
+    "maxScore": 96,
+    "minScore": 8,
+    "description": "Per sing and us type against.",
+    "previewFile": {
+      "id": "1cb51da5-660b-4503-b379-0daf1e63ffcf",
+      "filename": "file_9974.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_9974.png"
+    },
+    "estimatedTime": "2 weeks",
+    "createdByUser": {
+      "id": "bd900b90-38b0-4831-9b89-08a65a097c87",
+      "email": "test_b2cef272@example.com",
+      "lastName": "Hill",
+      "firstName": "Aaron",
+      "middleName": "Joshua"
+    }
+  }
+}

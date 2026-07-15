@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/courses/ac4ed89c-2a5e-4781-a319-f34c146f579a \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjE2OjMxLjUxNzcwMiIsInVzZXJfaWQiOiI2YzYzNzliOS04ZDU2LTQxMWItYTU1NS1kMjUzY2VkMDc4MmQifQ.6wEqoNJwUDT0BAHaZkEmZE_paI11fYpEqI4N252kQNI' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Audience candidate affect next chair.","maxScore":77,"minScore":7,"description":"Stay detail own TV.","estimatedTime":"2 weeks"}'
