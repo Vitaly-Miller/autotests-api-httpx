@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjAyOjA3LjEwOTUzNCIsInVzZXJfaWQiOiIzMmU5NDYyNS02NTY5LTQxN2QtOTg5ZC02N2Y1ZmUzYjc2YjMifQ.DYGdr1FD1aaBVZy-QLW4-3YVHYWHejFvMIK4wgdMUNg' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Itself office say hold ahead determine series.","courseId":"71c7e8a9-045f-4c6e-9b87-cdd2c5bc4634","maxScore":85,"minScore":1,"orderIndex":5249,"description":"Indeed minute effort perhaps.","estimatedTime":"9 weeks"}'

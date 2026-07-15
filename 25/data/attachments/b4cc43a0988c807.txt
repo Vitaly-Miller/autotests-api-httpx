@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjAyOjA4LjgyNjA3MyIsInVzZXJfaWQiOiIzM2Y3OTZkYS1iZjJkLTQ0NzQtYTZiNS1iY2RjZjJjNWE2OTIifQ.Jrjku7LkCuajM9kg0FSSl3HG0g-xqy5qfAc407Xh6MM' \
+  -H 'content-type: application/json' \
+  -d '{"title":"About language may ago big.","maxScore":69,"minScore":17,"description":"Officer occur PM member.","estimatedTime":"5 weeks","previewFileId":"8346bd4e-0040-488f-974c-201f42e6a566","createdByUserId":"33f796da-bf2d-4474-a6b5-bcdcf2c5a692"}'

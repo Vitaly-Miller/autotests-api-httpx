@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "71c7e8a9-045f-4c6e-9b87-cdd2c5bc4634",
+    "title": "Task among trial through relationship blue.",
+    "maxScore": 74,
+    "minScore": 8,
+    "description": "Without long plan per tell eat.",
+    "previewFile": {
+      "id": "9170661d-15af-4dde-b448-b01d1cb9ce3b",
+      "filename": "file_1537.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_1537.png"
+    },
+    "estimatedTime": "7 weeks",
+    "createdByUser": {
+      "id": "32e94625-6569-417d-989d-67f5fe3b76b3",
+      "email": "test_142715d9@example.com",
+      "lastName": "Cox",
+      "firstName": "Alyssa",
+      "middleName": "Tyler"
+    }
+  }
+}

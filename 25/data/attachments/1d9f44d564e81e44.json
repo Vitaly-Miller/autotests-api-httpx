@@ -1,0 +1,25 @@
+{
+  "courses": [
+    {
+      "id": "80aaf211-7a97-4df2-a838-470b9b9ef5f2",
+      "title": "Store subject administration break.",
+      "maxScore": 93,
+      "minScore": 9,
+      "description": "May story those will issue.",
+      "previewFile": {
+        "id": "9c1450e2-c20c-4db8-8e5f-faa3b6a921ed",
+        "filename": "file_6624.png",
+        "directory": "Uploaded",
+        "url": "http://localhost:8000/static/Uploaded/file_6624.png"
+      },
+      "estimatedTime": "6 weeks",
+      "createdByUser": {
+        "id": "11d5bea7-07b9-48c8-8b83-f437c27f93a5",
+        "email": "test_610dfc16@example.com",
+        "lastName": "Pineda",
+        "firstName": "Denise",
+        "middleName": "Laurie"
+      }
+    }
+  ]
+}

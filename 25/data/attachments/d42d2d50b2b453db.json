@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "5e73cbaa-9537-49a6-a5d9-ee709017610f",
+    "title": "Catch return movie claim house.",
+    "maxScore": 77,
+    "minScore": 22,
+    "description": "Become wall recently same leave they show just.",
+    "previewFile": {
+      "id": "8cbcf6cb-467c-4866-b68b-4d281943af24",
+      "filename": "file_4697.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_4697.png"
+    },
+    "estimatedTime": "2 weeks",
+    "createdByUser": {
+      "id": "27d27d65-f700-4f75-bd5a-3359dee2991d",
+      "email": "test_31b48c83@example.com",
+      "lastName": "Lopez",
+      "firstName": "David",
+      "middleName": "Cynthia"
+    }
+  }
+}

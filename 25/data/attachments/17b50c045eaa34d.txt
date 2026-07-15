@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjAyOjExLjMwMjYzMyIsInVzZXJfaWQiOiI4MGQ1NDIyNC03NDM5LTQwMDgtYWY1ZS1jNWE2NWIxN2ZlYzUifQ.hnPZXLhRA5KLIr71RlL-Jalm0KJJazqFrOyPBqGpG0E' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Help vote property support this decade writer.","courseId":"893eba4d-9122-4d1a-aad9-5c787118d159","maxScore":67,"minScore":16,"orderIndex":5832,"description":"Since build maintain watch improve.","estimatedTime":"4 weeks"}'

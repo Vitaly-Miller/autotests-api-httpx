@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "893eba4d-9122-4d1a-aad9-5c787118d159",
+    "title": "Seek nature himself Congress theory relate.",
+    "maxScore": 91,
+    "minScore": 30,
+    "description": "Consumer heavy such sure.",
+    "previewFile": {
+      "id": "04bc46fa-d807-4458-aecb-6a5538aabd1e",
+      "filename": "file_4110.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_4110.png"
+    },
+    "estimatedTime": "5 weeks",
+    "createdByUser": {
+      "id": "80d54224-7439-4008-af5e-c5a65b17fec5",
+      "email": "test_a39c99ca@example.com",
+      "lastName": "Perry",
+      "firstName": "Patricia",
+      "middleName": "Brooke"
+    }
+  }
+}

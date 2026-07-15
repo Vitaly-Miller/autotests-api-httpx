@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "8be761d5-cfdc-43dd-a591-c331e2a90940",
+    "title": "Few young party deal.",
+    "maxScore": 83,
+    "minScore": 26,
+    "description": "Themselves be usually.",
+    "previewFile": {
+      "id": "fbd044d1-4ae8-4f7c-bc54-9b3fb264cc82",
+      "filename": "file_5337.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_5337.png"
+    },
+    "estimatedTime": "2 weeks",
+    "createdByUser": {
+      "id": "8914cd3c-c89a-430d-8922-693dbc35d885",
+      "email": "test_77a54daa@example.com",
+      "lastName": "Mitchell",
+      "firstName": "Omar",
+      "middleName": "Michael"
+    }
+  }
+}

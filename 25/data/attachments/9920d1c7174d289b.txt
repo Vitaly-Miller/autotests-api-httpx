@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/exercises/3266c2d8-00e8-4d27-9225-d1e0e280e7c7 \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjAyOjE0LjEwMDA5OSIsInVzZXJfaWQiOiI4OTE0Y2QzYy1jODlhLTQzMGQtODkyMi02OTNkYmMzNWQ4ODUifQ.HVNhPbJvNMsvlD8mwpgw6yBxsniP67sFiCtPym2__TU' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Design look current probably two.","maxScore":70,"minScore":15,"orderIndex":5387,"description":"Believe lead modern moment resource.","estimatedTime":"7 weeks"}'

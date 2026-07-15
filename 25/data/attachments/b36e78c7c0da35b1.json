@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "484a83aa-54c9-4674-8153-d19786e3f8af",
+    "title": "Test short here.",
+    "maxScore": 60,
+    "minScore": 15,
+    "description": "Dog paper data. Leader use rich miss within this.",
+    "previewFile": {
+      "id": "4d62a090-35fa-4fa0-a2d5-8468f9b31be7",
+      "filename": "file_1961.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_1961.png"
+    },
+    "estimatedTime": "7 weeks",
+    "createdByUser": {
+      "id": "f0fa6c6f-a56a-41b1-927b-26f9f3ea3370",
+      "email": "test_7e04be7c@example.com",
+      "lastName": "Johnson",
+      "firstName": "Sabrina",
+      "middleName": "Richard"
+    }
+  }
+}

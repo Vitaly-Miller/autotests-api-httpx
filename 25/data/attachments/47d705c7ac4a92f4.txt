@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjAyOjAyLjUyMzQyMiIsInVzZXJfaWQiOiIxMWQ1YmVhNy0wN2I5LTQ4YzgtOGI4My1mNDM3YzI3ZjkzYTUifQ.l7p6uIcEG4enr1nq58m55jEiog9_n3emiy5TeQMbmNg' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Store subject administration break.","maxScore":93,"minScore":9,"description":"May story those will issue.","estimatedTime":"6 weeks","previewFileId":"9c1450e2-c20c-4db8-8e5f-faa3b6a921ed","createdByUserId":"11d5bea7-07b9-48c8-8b83-f437c27f93a5"}'

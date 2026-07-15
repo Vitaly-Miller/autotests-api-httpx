@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "d842115d-47f1-4cf0-a034-5a55fc718a18",
+    "title": "Value rather anyone of compare.",
+    "maxScore": 94,
+    "minScore": 1,
+    "description": "Long spend again within.",
+    "previewFile": {
+      "id": "8d9a4ee5-8011-4da4-842a-363327939b18",
+      "filename": "file_3973.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_3973.png"
+    },
+    "estimatedTime": "2 weeks",
+    "createdByUser": {
+      "id": "9647a815-0ed6-4aa4-9d4f-72216a329568",
+      "email": "test_ba9483d8@example.com",
+      "lastName": "Cohen",
+      "firstName": "Megan",
+      "middleName": "Mackenzie"
+    }
+  }
+}

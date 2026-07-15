@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjAyOjExLjYzMzMyNiIsInVzZXJfaWQiOiI4MGQ1NDIyNC03NDM5LTQwMDgtYWY1ZS1jNWE2NWIxN2ZlYzUifQ.OlGeNhmd4XWm_NqqCf7vHPL5tWhEZkNCpvHp7SV673M' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Seek nature himself Congress theory relate.","maxScore":91,"minScore":30,"description":"Consumer heavy such sure.","estimatedTime":"5 weeks","previewFileId":"04bc46fa-d807-4458-aecb-6a5538aabd1e","createdByUserId":"80d54224-7439-4008-af5e-c5a65b17fec5"}'

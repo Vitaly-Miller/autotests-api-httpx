@@ -1,0 +1,25 @@
+{
+  "courses": [
+    {
+      "id": "54644377-c95b-4376-a250-b912272006c0",
+      "title": "Party outside service too middle step.",
+      "maxScore": 58,
+      "minScore": 13,
+      "description": "Line common enter red play style vote.",
+      "previewFile": {
+        "id": "025983d1-1b01-4657-b5e6-21ba727f315c",
+        "filename": "file_3222.png",
+        "directory": "Uploaded",
+        "url": "http://localhost:8000/static/Uploaded/file_3222.png"
+      },
+      "estimatedTime": "2 weeks",
+      "createdByUser": {
+        "id": "898dccdf-8ebf-4570-a9f9-6b3e74a88b07",
+        "email": "test_a093d3d0@example.com",
+        "lastName": "Simpson",
+        "firstName": "Richard",
+        "middleName": "Denise"
+      }
+    }
+  ]
+}

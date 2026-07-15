@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjAyOjAzLjU4ODY5OCIsInVzZXJfaWQiOiI4OThkY2NkZi04ZWJmLTQ1NzAtYTlmOS02YjNlNzRhODhiMDcifQ.VtMWWiJltNzKnY_2Gk1iku3UXs_XHonBwCA_yKDhn58' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Party outside service too middle step.","maxScore":58,"minScore":13,"description":"Line common enter red play style vote.","estimatedTime":"2 weeks","previewFileId":"025983d1-1b01-4657-b5e6-21ba727f315c","createdByUserId":"898dccdf-8ebf-4570-a9f9-6b3e74a88b07"}'

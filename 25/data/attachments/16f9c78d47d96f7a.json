@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "95ca415e-7276-402a-8f8b-79767c444759",
+    "title": "Individual rate that special.",
+    "maxScore": 65,
+    "minScore": 7,
+    "description": "Important focus high prepare office.",
+    "previewFile": {
+      "id": "c09ef488-14bf-4108-8726-1c503f5f944c",
+      "filename": "file_2369.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_2369.png"
+    },
+    "estimatedTime": "7 weeks",
+    "createdByUser": {
+      "id": "66ea5ad3-ac0c-40a3-8112-0c90abe93487",
+      "email": "test_d9f71d81@example.com",
+      "lastName": "Miller",
+      "firstName": "Sharon",
+      "middleName": "Kimberly"
+    }
+  }
+}

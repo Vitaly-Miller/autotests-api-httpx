@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "081af9a4-5913-44bd-9e95-c26030e99635",
+    "title": "Such impact fact seem attention gun.",
+    "maxScore": 72,
+    "minScore": 7,
+    "description": "Nor fast gun rest.",
+    "previewFile": {
+      "id": "379d84f2-c1b4-4a67-9747-8bb907d0ef57",
+      "filename": "file_6248.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_6248.png"
+    },
+    "estimatedTime": "2 weeks",
+    "createdByUser": {
+      "id": "56bc963f-40cd-4976-ab37-43af727acaf6",
+      "email": "test_9b90c892@example.com",
+      "lastName": "Garcia",
+      "firstName": "Tracy",
+      "middleName": "Ronald"
+    }
+  }
+}

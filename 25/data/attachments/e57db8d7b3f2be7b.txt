@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/exercises/150cd988-844a-4b47-91ce-72455820705c \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjAyOjE1LjUwMTk3OSIsInVzZXJfaWQiOiI5NjQ3YTgxNS0wZWQ2LTRhYTQtOWQ0Zi03MjIxNmEzMjk1NjgifQ.Gq_JpUTL0UHP7KXsJBQ8E5rdLZsR188tGcNFJOhFOfg' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Why a him threat.","maxScore":85,"minScore":6,"orderIndex":4102,"description":"Kid tough civil customer.","estimatedTime":"3 weeks"}'
