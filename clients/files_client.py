@@ -12,7 +12,6 @@ from schemas.auth_schema import AuthDataSchema
 from schemas.files_schema import CreateFileRequestSchema, CreateFileResponseSchema, GetFileResponseSchema
 from clients.httpx_client_private import get_httpx_client_private
 
-
 #==================================================== Files Client =====================================================
 class FilesClient(APIClient):
     """
@@ -51,8 +50,8 @@ class FilesClient(APIClient):
 
     #--------------------------------------------------- Create File ---------------------------------------------------
     # API
-    @allure.step('▶ Create File (API)')                             # Allure step Title
-    @tracker.track_coverage_httpx(f'{Endpoint.FILES}')              # API Coverage tracker
+    @allure.step('▶ Create File (API)')                                             # Allure step Title
+    @tracker.track_coverage_httpx(f'{Endpoint.FILES}')                              # API Coverage tracker
     def create_file_api(self, create_file_data: CreateFileRequestSchema) -> httpx.Response:
         """
         API-метод создания файла (Upload).
@@ -63,13 +62,13 @@ class FilesClient(APIClient):
         :param create_file_data: Pydantic-model с данными о файле
         :return: httpx.Response
         """
-        response = self.post(                                       # ▶ Запрос:
-            url=Endpoint.FILES,                                     # URL запроса (endpoint через Enum)
-            # data=create_file_data,  # <- ⚠️проверить - create_file_data целиком -> Сервер получит лишние поля: 'filename' и 'directory' (✔️ничего страшного)
+        response = self.post(                                                       # ▶ Запрос:
+            url=Endpoint.FILES,                                                     # URL запроса (endpoint через Enum)
+            # data=create_file_data,  # целиком -> Сервер получит лишние поля: 'filename' и 'directory' (✔️ничего страшного)
             data={'filename': create_file_data.filename, 'directory': create_file_data.directory}, # Имя сохранения файла,  Директория сохранения
-            files={'upload_file': Path(create_file_data.upload_path).read_bytes()}                 # Содержимое файла (bytes)
+            files={'upload_file': Path(create_file_data.upload_path).read_bytes()}  # Содержимое файла (bytes)
         )
-        return response                                                                            # httpx.Response
+        return response                                                             # httpx.Response
 
 
     # Pydantic-model
