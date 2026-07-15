@@ -68,7 +68,7 @@ jobs:
 
       # 8. Шаг для восстановления истории покрытия (coverage-history.json) из кеша GitHub Actions
       - name: Restore Coverage history
-        uses: actions/cache/restore@v4               # ⚠️Используем GitHub Action для работы с кешем (https://github.com/actions/cache)
+        uses: actions/cache/restore@v6               # ⚠️Используем GitHub Action для работы с кешем https://github.com/actions/cache
         with:
           path: coverage-history.json                # Файл с историей покрытия по запускам
           key: coverage-history-${{ github.run_id }} # Уникальный ключ текущего запуска
@@ -91,7 +91,7 @@ jobs:
       # 11. Шаг для загрузки HTML-отчёта покрытия как артефакта
       - name: Upload Coverage report
         if: always()                                 # ВСЕГДА выполняем, независимо от успеха или неудачи предыдущих шагов
-        uses: actions/upload-artifact@v4             # ⚠️Используем GitHub Action для загрузки артефактов (https://github.com/actions/upload-artifact)
+        uses: actions/upload-artifact@v7             # ⚠️Используем GitHub Action для загрузки артефактов https://github.com/actions/upload-artifact
         with:
           name: coverage-report                      # Имя артефакта
           path: coverage.html                        # Файл HTML-отчёта покрытия
@@ -99,7 +99,7 @@ jobs:
       # 12. Шаг для сохранения папки allure-results как артефакта (для передачи в джобу publish-report)
       - name: Upload Allure results
         if: always()                                 # ВСЕГДА выполняем, независимо от успеха или неудачи предыдущих шагов
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7             # ⚠️Используем GitHub Action для загрузки артефактов https://github.com/actions/upload-artifact
         with:
           name: allure-results                       # Имя артефакта
           path: allure-results                       # Папка с результатами тестов
@@ -120,21 +120,21 @@ jobs:
 
       # 2. Шаг для загрузки артефакта allure-results, сохранённого в джобе run-tests
       - name: Download Allure results
-        uses: actions/download-artifact@v4            # ⚠️Используем GitHub Action для скачивания артефактов (https://github.com/actions/download-artifact)
+        uses: actions/download-artifact@v8            # ⚠️Используем GitHub Action для скачивания артефактов https://github.com/actions/download-artifact
         with:
           name: allure-results                        # Имя артефакта
           path: allure-results                        # Папка, в которую будут загружены результаты тестов
 
       # 3. Шаг для генерации отчёта Allure с историей
       - name: Generate Allure Report with history
-        uses: simple-elf/allure-report-action@v1.14   # ⚠️Используем готовое решение из GitHub Marketplace (https://github.com/simple-elf/allure-report-action)
+        uses: simple-elf/allure-report-action@master   # ⚠️Используем готовое решение из GitHub Marketplace https://github.com/simple-elf/allure-report-action
         with:
           allure_results: allure-results              # Указываем каталог с результатами тестов
           allure_history: allure-history              # Указываем каталог для истории отчётов Allure
 
       # 4. Шаг для деплоя отчёта Allure на GitHub Pages, чтобы его можно было просматривать в браузере
       - name: Deploy report to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4           # ⚠️Используем GitHub Action для публикации отчёта на GitHub Pages (https://github.com/peaceiris/actions-gh-pages)
+        uses: peaceiris/actions-gh-pages@v4           # ⚠️Используем GitHub Action для публикации отчёта на GitHub Pages https://github.com/peaceiris/actions-gh-pages
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}   # Токен для аутентификации на GitHub
           publish_branch: gh-pages                    # Указываем, что отчёт будет опубликован в ветке gh-pages
