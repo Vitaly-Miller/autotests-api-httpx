@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE4OjAwOjI5Ljk5NTQ2MCIsInVzZXJfaWQiOiJjMTYzZGM4My04Mjk2LTQ3YTMtODUwMC04NzIyMDcxZDViYmQifQ.MF10oVbNzYOyb76PNSgDPsK3r3lLWHbyeBkdimyUSlo' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Yeah various example meeting number education.","maxScore":55,"minScore":7,"description":"With start rise benefit trip at action.","estimatedTime":"4 weeks","previewFileId":"598afe8a-6621-4527-8edd-8c9064b110b6","createdByUserId":"c163dc83-8296-47a3-8500-8722071d5bbd"}'

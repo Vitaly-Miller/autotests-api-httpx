@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEyVDA2OjQyOjE4LjkxNzM3OSIsInVzZXJfaWQiOiI1ZGMwNDI3NS1mMmI2LTRkMjEtYjBhMS0zNTkwZDc0MDY4YmIifQ.gVzGQ4X-ATaVZ8g_pULbMMnDlNRt3-taR4aSBB-uf4Q' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Avoid rise Mrs rate fly least.","maxScore":88,"minScore":16,"description":"Much student worker. Party moment focus.","estimatedTime":"4 weeks","previewFileId":"f142ec4d-b58b-42df-9156-fdc28fc7954d","createdByUserId":"5dc04275-f2b6-4d21-b0a1-3590d74068bb"}'

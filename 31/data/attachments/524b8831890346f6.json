@@ -1,0 +1,25 @@
+{
+  "courses": [
+    {
+      "id": "d92729d7-ac50-453f-8868-e84a8a75894f",
+      "title": "Whom now team or street.",
+      "maxScore": 75,
+      "minScore": 2,
+      "description": "Hold president project fish wait point.",
+      "previewFile": {
+        "id": "956800d2-4d89-469b-bc99-8ce329207046",
+        "filename": "file_9510.png",
+        "directory": "Uploaded",
+        "url": "http://localhost:8000/static/Uploaded/file_9510.png"
+      },
+      "estimatedTime": "8 weeks",
+      "createdByUser": {
+        "id": "05c4dab0-3fff-4ecf-98f2-30bce8791928",
+        "email": "test_9eaced25@example.com",
+        "lastName": "Jones",
+        "firstName": "James",
+        "middleName": "Jennifer"
+      }
+    }
+  ]
+}

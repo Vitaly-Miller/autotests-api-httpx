@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE4OjAwOjM0LjE2NjYwNCIsInVzZXJfaWQiOiIzMjRmMjc2ZS1iMTUzLTQ4ZTgtYTQ2Mi05ZjhmYWQ4NmU2MjkifQ.LoplaV3YFqRrPRV2GfW7--tJvRjHDDCUwOH2qeuJaIk' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Exactly beautiful true choose produce ask.","maxScore":89,"minScore":10,"description":"Herself range evening worry thus PM life.","estimatedTime":"8 weeks","previewFileId":"78e6c57d-7071-4568-8092-5f6659a671b1","createdByUserId":"324f276e-b153-48e8-a462-9f8fad86e629"}'

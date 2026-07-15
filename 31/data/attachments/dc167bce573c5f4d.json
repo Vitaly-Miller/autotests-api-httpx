@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "342f9360-55b6-481f-a258-aa30c4f38cfb",
+    "title": "Exactly beautiful true choose produce ask.",
+    "maxScore": 89,
+    "minScore": 10,
+    "description": "Herself range evening worry thus PM life.",
+    "previewFile": {
+      "id": "78e6c57d-7071-4568-8092-5f6659a671b1",
+      "filename": "file_2838.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_2838.png"
+    },
+    "estimatedTime": "8 weeks",
+    "createdByUser": {
+      "id": "324f276e-b153-48e8-a462-9f8fad86e629",
+      "email": "test_d63f6c9b@example.com",
+      "lastName": "Davis",
+      "firstName": "Ronald",
+      "middleName": "Seth"
+    }
+  }
+}

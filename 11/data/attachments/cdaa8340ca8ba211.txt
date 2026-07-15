@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEyVDA2OjQyOjEyLjI2MjQ3NyIsInVzZXJfaWQiOiI4N2E0ODgzMC05OTdiLTQ3ZWUtODZiYi00NTBhZGE4ODEyOGMifQ.cOLfAdNMnsGk6D00LT7Yok2nDSTn3wUTg_qO7mThUco' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Site finish field two fill.","maxScore":65,"minScore":17,"description":"Can thank important bar include open Mr.","estimatedTime":"8 weeks","previewFileId":"4a052756-3ed6-4851-8e1b-d152ed5b80c1","createdByUserId":"87a48830-997b-47ee-86bb-450ada88128c"}'

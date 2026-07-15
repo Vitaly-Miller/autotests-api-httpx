@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE4OjAwOjI3Ljg3MzAzNSIsInVzZXJfaWQiOiIwNWM0ZGFiMC0zZmZmLTRlY2YtOThmMi0zMGJjZTg3OTE5MjgifQ.9LCKKEnFqLAdUpmyuxQAOaB73EZ1rUaywfxZuuUYWWQ' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Whom now team or street.","maxScore":75,"minScore":2,"description":"Hold president project fish wait point.","estimatedTime":"8 weeks","previewFileId":"956800d2-4d89-469b-bc99-8ce329207046","createdByUserId":"05c4dab0-3fff-4ecf-98f2-30bce8791928"}'

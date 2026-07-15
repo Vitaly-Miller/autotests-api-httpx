@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE4OjAwOjM4LjM3NDM5MCIsInVzZXJfaWQiOiI2MmExMTMxMy01ODI0LTQ2YjEtYTY5OC1jNzZlYjkzYWMxN2QifQ.HbR2jLDU58jCu6C2hLsPeZ4loWrTwrHv3yvV5yKoNhQ' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Able participant kind own always heavy.","maxScore":92,"minScore":7,"description":"Result project change run course you look.","estimatedTime":"3 weeks","previewFileId":"6473a5a0-727d-46f5-9f30-b99070dca779","createdByUserId":"62a11313-5824-46b1-a698-c76eb93ac17d"}'

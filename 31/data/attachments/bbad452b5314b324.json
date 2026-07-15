@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "afc05df1-8a0a-4bed-9a81-68eeaa853926",
+    "title": "Student college table toward.",
+    "maxScore": 78,
+    "minScore": 18,
+    "description": "Help no job tell here product seem.",
+    "previewFile": {
+      "id": "fe190a5d-9df9-4f7f-b11b-277c17338e74",
+      "filename": "file_7930.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_7930.png"
+    },
+    "estimatedTime": "5 weeks",
+    "createdByUser": {
+      "id": "05b250fe-c175-4660-ac4a-a8d2fd67ea70",
+      "email": "test_71283c04@example.com",
+      "lastName": "Evans",
+      "firstName": "Karen",
+      "middleName": "Nancy"
+    }
+  }
+}

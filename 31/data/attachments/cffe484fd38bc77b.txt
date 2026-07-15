@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE4OjAwOjI1Ljc1MzAwMCIsInVzZXJfaWQiOiIwYTdjMTg1ZS04OTM4LTQ4ZTAtYThmZS1kMzExMThkM2FlZGYifQ.nc3dyc2Mg8_4z4vpGJzIRzVWHAxuNWdmw2ojwkOOR9w' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Himself early wait street explain.","maxScore":52,"minScore":1,"description":"Hand town we boy responsibility seat billion.","estimatedTime":"5 weeks","previewFileId":"5aaacb3a-4178-410f-998a-4f8bc1a9ee6f","createdByUserId":"0a7c185e-8938-48e0-a8fe-d31118d3aedf"}'

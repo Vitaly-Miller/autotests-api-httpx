@@ -1,5 +1,0 @@
-curl -X PATCH \
-  http://localhost:8000/api/v1/exercises/920e8969-8052-495b-9205-f5b7c44e2edd \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEyVDA2OjQyOjE5LjcyNTE4OCIsInVzZXJfaWQiOiJjZDQxZmU2ZS0yNGM4LTQ0ODAtODljZi0yMWU0ZDljNDE0MTcifQ.z7hN-6ZTfei4X5t453xiLQI3BK0CrcZ2UEa_QM9GRU8' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Call chance plan.","maxScore":75,"minScore":9,"orderIndex":2657,"description":"Speech skill level hospital.","estimatedTime":"2 weeks"}'

@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE4OjAwOjQxLjE1NTI5NCIsInVzZXJfaWQiOiJkOTkyZjU4YS02MmI3LTRhZjUtOGM0MC0xMzk5Mjc3MDI3MjcifQ.WfY9D4HfDlS6IS4KCSXg8sX-li3aYYM2-43k9Ic8Gt8' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Media sport state itself level area.","maxScore":96,"minScore":4,"description":"Design that appear plan.","estimatedTime":"2 weeks","previewFileId":"c2d4d194-1724-448c-a2e2-2ce0c0a1e067","createdByUserId":"d992f58a-62b7-4af5-8c40-139927702727"}'

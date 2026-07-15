@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEyVDA2OjQyOjE2LjYxMjczNCIsInVzZXJfaWQiOiIxMTAyYjM1Yi03NmYwLTQ4NDQtYWI0MC1lZTIxMzkwNGIzNTEifQ.aa8FfF2ApEkLPZqQ4ZI_dvFwm5Qh40ep9shksS6wB1Q' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Go almost low night fly record.","maxScore":88,"minScore":16,"description":"Bring group around.","estimatedTime":"7 weeks","previewFileId":"747d677d-d93c-4272-93e9-507ca5dc1658","createdByUserId":"1102b35b-76f0-4844-ab40-ee213904b351"}'

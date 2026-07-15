@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "ca175413-14c6-4fab-9cdd-62d554a2354f",
+    "title": "Cover poor key.",
+    "maxScore": 80,
+    "minScore": 6,
+    "description": "Teach find owner into. Of give evidence town.",
+    "previewFile": {
+      "id": "e86d077d-d75d-4beb-a0e5-90d62303766c",
+      "filename": "file_6657.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_6657.png"
+    },
+    "estimatedTime": "7 weeks",
+    "createdByUser": {
+      "id": "f8e497f4-9cbf-4def-bd7f-0c4777075088",
+      "email": "test_c1e5c793@example.com",
+      "lastName": "Evans",
+      "firstName": "Danielle",
+      "middleName": "James"
+    }
+  }
+}

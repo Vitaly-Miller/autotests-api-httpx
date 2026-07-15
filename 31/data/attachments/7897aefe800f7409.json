@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "708934a2-218a-4e88-8478-35627e19a7b0",
+    "title": "Against sit cell final themselves.",
+    "maxScore": 88,
+    "minScore": 26,
+    "description": "Better pass war its early your.",
+    "previewFile": {
+      "id": "cfa106df-a15a-40a7-a79d-1e2c2d03b4a4",
+      "filename": "file_1812.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_1812.png"
+    },
+    "estimatedTime": "6 weeks",
+    "createdByUser": {
+      "id": "ee34758e-11f2-42ac-bb55-dd633dd27593",
+      "email": "test_2e76da12@example.com",
+      "lastName": "Conley",
+      "firstName": "Abigail",
+      "middleName": "Danielle"
+    }
+  }
+}

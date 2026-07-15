@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "f2466bcb-ca56-46a2-84ec-f4ca7fff1dfa",
+    "title": "Media sport state itself level area.",
+    "maxScore": 96,
+    "minScore": 4,
+    "description": "Design that appear plan.",
+    "previewFile": {
+      "id": "c2d4d194-1724-448c-a2e2-2ce0c0a1e067",
+      "filename": "file_6182.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_6182.png"
+    },
+    "estimatedTime": "2 weeks",
+    "createdByUser": {
+      "id": "d992f58a-62b7-4af5-8c40-139927702727",
+      "email": "test_60a05f3f@example.com",
+      "lastName": "Andrews",
+      "firstName": "Daniel",
+      "middleName": "Victor"
+    }
+  }
+}

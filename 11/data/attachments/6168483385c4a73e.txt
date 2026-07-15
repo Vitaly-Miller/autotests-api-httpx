@@ -1,5 +1,0 @@
-curl -X PATCH \
-  http://localhost:8000/api/v1/courses/8d20837e-6ec6-407b-9c46-c6425741f053 \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEyVDA2OjQyOjEyLjI2MjQ3NyIsInVzZXJfaWQiOiI4N2E0ODgzMC05OTdiLTQ3ZWUtODZiYi00NTBhZGE4ODEyOGMifQ.cOLfAdNMnsGk6D00LT7Yok2nDSTn3wUTg_qO7mThUco' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Expect investment represent major again idea.","maxScore":99,"minScore":2,"description":"Race ahead special degree ability tree him.","estimatedTime":"4 weeks"}'

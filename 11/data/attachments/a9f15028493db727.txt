@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEyVDA2OjQyOjIwLjA2ODYxMiIsInVzZXJfaWQiOiJjZDQxZmU2ZS0yNGM4LTQ0ODAtODljZi0yMWU0ZDljNDE0MTcifQ.2rLsrCoDjNke06IUrsLu-KH86ZtxuGeRpyHSPWQ-YL0' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Protect first could partner short quite.","maxScore":68,"minScore":23,"description":"Send find school hot. Agent attack investment.","estimatedTime":"2 weeks","previewFileId":"14581c5f-2faf-4313-8eee-4b8c62e80020","createdByUserId":"cd41fe6e-24c8-4480-89cf-21e4d9c41417"}'

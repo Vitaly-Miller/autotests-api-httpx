@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE4OjAwOjMyLjQ1MzgyMSIsInVzZXJfaWQiOiJhNjljZTM5MC03ZTM4LTQ5YWQtOTAxZi1iZjhkMmI0ZjVlZGMifQ.Py93k992LCpL9q0ftltONozLlQh7ku3yxxQ3hJ7kOlU' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Both might sense.","courseId":"358ace56-1408-4c93-aaf3-8ee978493c96","maxScore":88,"minScore":2,"orderIndex":7759,"description":"Student phone soon civil thousand drug ok.","estimatedTime":"8 weeks"}'

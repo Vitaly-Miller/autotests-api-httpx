@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/exercises/066db45b-4f84-4c45-a369-3406efde6884 \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE4OjAwOjM5LjQyNjU0MCIsInVzZXJfaWQiOiJlMjBlMjdkMS02YjVmLTRmNTMtYmQ3NC1jMjgxOWVhODRlNzcifQ.hmRzsXNqz874SqMOzvSFObln7NUaIXEoZ1l3Ea38bt8' \
+  -H 'content-type: application/json' \
+  -d '{"title":"That tough research.","maxScore":94,"minScore":26,"orderIndex":3562,"description":"Three training lose key for according.","estimatedTime":"7 weeks"}'
