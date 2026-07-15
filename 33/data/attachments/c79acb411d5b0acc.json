@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "563acc06-d773-4a54-952c-5f6e1ab9d4c4",
+    "title": "Oil describe sure enough same.",
+    "maxScore": 71,
+    "minScore": 25,
+    "description": "Personal citizen item simple list five yard.",
+    "previewFile": {
+      "id": "80a6db74-fd18-46da-a150-3783a94b294c",
+      "filename": "file_1616.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_1616.png"
+    },
+    "estimatedTime": "8 weeks",
+    "createdByUser": {
+      "id": "b1f39cca-83d1-41c2-9417-db327e476c77",
+      "email": "test_34f0344d@example.com",
+      "lastName": "Dunn",
+      "firstName": "Denise",
+      "middleName": "Brandi"
+    }
+  }
+}

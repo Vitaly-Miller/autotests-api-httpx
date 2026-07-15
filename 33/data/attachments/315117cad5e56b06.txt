@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDAwOjIwOjUzLjcxMDY0OCIsInVzZXJfaWQiOiJkOTBkMmM1Ni0xZTRmLTQwNDMtOGY5OC1kNzVkMGY1YzQ3MDgifQ.VYscUZDcGj1suUxPQslZEGV26yB68LuoeR2XOKwdG8Q' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Assume true image party go.","maxScore":77,"minScore":13,"description":"Daughter south Democrat. Pm light many wind.","estimatedTime":"6 weeks","previewFileId":"fa3e565a-9030-441a-a089-732b2697d3e8","createdByUserId":"d90d2c56-1e4f-4043-8f98-d75d0f5c4708"}'

@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "c373c10b-20a3-4460-a0d0-28ccc9e27433",
+    "title": "Pm brother laugh step since.",
+    "maxScore": 83,
+    "minScore": 1,
+    "description": "Article high with ever rate admit.",
+    "previewFile": {
+      "id": "5c163cfb-31c1-4d19-a49a-b98bb4cf633c",
+      "filename": "file_7117.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_7117.png"
+    },
+    "estimatedTime": "8 weeks",
+    "createdByUser": {
+      "id": "df2875ee-7bf9-42bc-94e7-85a0d1e81f4a",
+      "email": "test_803efa18@example.com",
+      "lastName": "Johnson",
+      "firstName": "Matthew",
+      "middleName": "Anthony"
+    }
+  }
+}

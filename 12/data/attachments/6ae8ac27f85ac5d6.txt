@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/exercises \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEyVDA2OjQ0OjA5LjA5ODYyNyIsInVzZXJfaWQiOiIyNzNjY2JiMS1mMzFhLTQ0ZDgtOGZjNC04ODZkMGEyNzA0MjEifQ.clIAcjCI-WedNSRadeoCZKkoaZQ7lPgQzPF3SXI-OPU' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Arm watch democratic culture person.","courseId":"6ef3327f-5f02-4531-b091-6e6d2505c5f8","maxScore":94,"minScore":13,"orderIndex":5919,"description":"Though rate but tend decide.","estimatedTime":"4 weeks"}'

@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEyVDA2OjQ0OjA1Ljk1MTkxNCIsInVzZXJfaWQiOiJlNzRhNDYzZi00ZTE3LTQwMDAtOGVjNy03MDM5ODRmNDNiNWQifQ.PhM30VMdMjq3bti2LCiCFzo4JoTUswamXsOFAyT8m3U' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Clear look family party arrive.","maxScore":98,"minScore":25,"description":"Eat score free work you laugh.","estimatedTime":"7 weeks","previewFileId":"879742e2-dffc-4969-9214-3db2b35d356f","createdByUserId":"e74a463f-4e17-4000-8ec7-703984f43b5d"}'

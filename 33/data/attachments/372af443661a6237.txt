@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/exercises/2310e783-0536-4aea-b4da-ff8ab8323873 \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDAwOjIxOjAzLjI4Mzg2OSIsInVzZXJfaWQiOiIyMGY2MjU4Yi1mZjZhLTQxNTYtOGEwNy03ZTgxNTFjOTI4NjcifQ.0gKrHSIbkGyJ8MTjj_QVARe7cc6_7did-JCaYaU6g-M' \
+  -H 'content-type: application/json' \
+  -d '{"title":"National you point.","maxScore":94,"minScore":27,"orderIndex":8529,"description":"Management woman about.","estimatedTime":"6 weeks"}'

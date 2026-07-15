@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "818b9925-5ad5-453c-89a3-0d5d8eabc90f",
+    "title": "Nice record piece wait.",
+    "maxScore": 54,
+    "minScore": 29,
+    "description": "About occur attention stand some woman.",
+    "previewFile": {
+      "id": "91d0d57d-ab51-4ae6-a715-d53be690ba4f",
+      "filename": "file_7875.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_7875.png"
+    },
+    "estimatedTime": "2 weeks",
+    "createdByUser": {
+      "id": "7ca996db-4de0-4100-ada0-4d6effea9c94",
+      "email": "test_47e7f8f8@example.com",
+      "lastName": "Rodriguez",
+      "firstName": "Stacey",
+      "middleName": "Alicia"
+    }
+  }
+}

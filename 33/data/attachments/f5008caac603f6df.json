@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "f9e04344-5067-4291-9e51-e4b70436d03e",
+    "title": "Great live carry group.",
+    "maxScore": 78,
+    "minScore": 13,
+    "description": "Religious example because all Mr factor rise.",
+    "previewFile": {
+      "id": "f7d3036b-f4d5-452b-9ef4-f3b18f680d27",
+      "filename": "file_7216.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_7216.png"
+    },
+    "estimatedTime": "3 weeks",
+    "createdByUser": {
+      "id": "20f6258b-ff6a-4156-8a07-7e8151c92867",
+      "email": "test_599120c7@example.com",
+      "lastName": "Cruz",
+      "firstName": "Eric",
+      "middleName": "Randy"
+    }
+  }
+}

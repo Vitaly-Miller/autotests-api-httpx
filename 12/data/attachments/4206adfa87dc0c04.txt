@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/exercises \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEyVDA2OjQ0OjE0LjEwNDIzOSIsInVzZXJfaWQiOiJkNDllYmJkNC0xMWJlLTRiN2YtYTgxOS04Y2Y3NmZhYzcxZDUifQ.WpwNjhY0gO89jxhUH2eJAhk2QlLeT2JC5MX5JdaqWME' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Sound goal hour reason government.","courseId":"2214f1b8-ec30-4dd4-aa39-ede38dee3e7c","maxScore":65,"minScore":19,"orderIndex":9625,"description":"Son recently star believe.","estimatedTime":"6 weeks"}'

@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "9458b8e8-d3cd-4e56-893e-4c47c5bb06a3",
+    "title": "Her fast both.",
+    "maxScore": 77,
+    "minScore": 26,
+    "description": "Order blue compare.",
+    "previewFile": {
+      "id": "573e35ad-c47c-4759-8c8a-75b82b336c58",
+      "filename": "file_5975.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_5975.png"
+    },
+    "estimatedTime": "3 weeks",
+    "createdByUser": {
+      "id": "9b83c7a8-9615-4dcc-98b6-955b388ef589",
+      "email": "test_8bf1993e@example.com",
+      "lastName": "Castillo",
+      "firstName": "Kelly",
+      "middleName": "Jessica"
+    }
+  }
+}

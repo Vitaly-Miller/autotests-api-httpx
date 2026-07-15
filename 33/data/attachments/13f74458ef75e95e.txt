@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDAwOjIwOjUyLjg5MzcwNyIsInVzZXJfaWQiOiJmNjVhNWE2ZS03Y2M2LTQxNDktOWI2Yy1lZTEzZmM3OGZjNjYifQ.71b-ukIOdFhnHwuaSX5rozZMdRKU4tzF5ujQeOK-3q0' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Democratic Mrs situation throw office me.","maxScore":50,"minScore":26,"description":"Far no kind name. Sing none team half entire.","estimatedTime":"6 weeks","previewFileId":"712fc1e9-79b7-4da4-b8be-52a49b621074","createdByUserId":"f65a5a6e-7cc6-4149-9b6c-ee13fc78fc66"}'

@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDAwOjIwOjU0LjU1NTM0NCIsInVzZXJfaWQiOiI5YjgzYzdhOC05NjE1LTRkY2MtOThiNi05NTViMzg4ZWY1ODkifQ.9TrnIIImp4vCmCzJwf18LEZSbPN8jcs9maw5owIWpAE' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Her fast both.","maxScore":77,"minScore":26,"description":"Order blue compare.","estimatedTime":"3 weeks","previewFileId":"573e35ad-c47c-4759-8c8a-75b82b336c58","createdByUserId":"9b83c7a8-9615-4dcc-98b6-955b388ef589"}'

@@ -1,5 +1,0 @@
-curl -X PATCH \
-  http://localhost:8000/api/v1/exercises/e831cc0c-29e6-4873-bac4-c8a2322bc2ce \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEyVDA2OjQ0OjE1LjM0NDg0MyIsInVzZXJfaWQiOiJjN2JiNThmOC1mYzVmLTRmNjItYWJlYy1mZWIzNjNhZjAwZmEifQ.zsDdkSU5eOIXMNbU9aVkUbwkEwCQeYMYKTfFSsxWW6A' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Level kid but believe.","maxScore":63,"minScore":14,"orderIndex":835,"description":"Especially blood network run.","estimatedTime":"6 weeks"}'

@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEyVDA2OjQ0OjE2LjkwNDM4NyIsInVzZXJfaWQiOiIyNGZjZjMyZi1iNWMwLTRlNjktOTQyZC1iODRjZTQ2MjE5ZTIifQ.xJudbcLYJgFMvDkmCqSEmb7mWsiR60V13ev3lDGu3eU' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Common executive significant trial view.","maxScore":89,"minScore":12,"description":"Lose front especially soldier present.","estimatedTime":"5 weeks","previewFileId":"62bdf02c-ec23-4134-89b9-52f20ee5a8b0","createdByUserId":"24fcf32f-b5c0-4e69-942d-b84ce46219e2"}'

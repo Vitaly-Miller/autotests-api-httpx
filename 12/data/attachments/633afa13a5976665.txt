@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEyVDA2OjQ0OjEwLjYzMzI3NCIsInVzZXJfaWQiOiI4MDU5NjA0ZS1lNzI2LTRmN2MtYWZhMy1lNzI5Yjg5NjQyMGEifQ.vtG0fJxj8IVTuhDjEg_wZFxzdFTbZit12AF_9Fnx5U4' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Ever catch thought.","maxScore":69,"minScore":24,"description":"Ok form light case indeed actually.","estimatedTime":"7 weeks","previewFileId":"d549e4bf-a75e-45f9-b233-4e1e762e16bb","createdByUserId":"8059604e-e726-4f7c-afa3-e729b896420a"}'

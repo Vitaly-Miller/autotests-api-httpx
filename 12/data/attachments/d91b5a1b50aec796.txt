@@ -1,5 +1,0 @@
-curl -X PATCH \
-  http://localhost:8000/api/v1/courses/0ceca120-26cf-4f0d-8bc6-15afe66f0ae6 \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEyVDA2OjQ0OjA2Ljg5MDY5MyIsInVzZXJfaWQiOiIyOWI3YzZmOS02MDZjLTQ1OWItYjk5OS1hZGNmZTYxMGVjMmMifQ.BebAsyVveLJKDpo2sjhWc7ss9f-yuJuO7bnEXPorPoQ' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Be man seek add.","maxScore":66,"minScore":13,"description":"Worker far common girl television turn.","estimatedTime":"7 weeks"}'

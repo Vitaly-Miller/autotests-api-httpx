@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDAwOjIwOjU3LjMzMjg3MSIsInVzZXJfaWQiOiI3Y2E5OTZkYi00ZGUwLTQxMDAtYWRhMC00ZDZlZmZlYTljOTQifQ.52nzL2J2A0Mi_BULagNWuw9G1_C6l7nC4GvCZYDBm9o' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Base huge happen man.","courseId":"818b9925-5ad5-453c-89a3-0d5d8eabc90f","maxScore":56,"minScore":10,"orderIndex":6248,"description":"Modern whom make relate note personal join.","estimatedTime":"7 weeks"}'

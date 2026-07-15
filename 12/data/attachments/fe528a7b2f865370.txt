@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEyVDA2OjQ0OjA5LjM5NzM3NCIsInVzZXJfaWQiOiIyNzNjY2JiMS1mMzFhLTQ0ZDgtOGZjNC04ODZkMGEyNzA0MjEifQ.tv6NRXOklQbvrGG3S1ScCmDUTrEU0x164Xy2PqJNcOk' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Health grow forget write old practice economic.","maxScore":74,"minScore":20,"description":"Couple strong fill one child space girl.","estimatedTime":"6 weeks","previewFileId":"45c88b32-d58b-4af8-b243-76dcb55b3b81","createdByUserId":"273ccbb1-f31a-44d8-8fc4-886d0a270421"}'
