@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDA1OjA2OjQ1LjAzNTg4MCIsInVzZXJfaWQiOiI2NjU2MzBjNS0zYjQ3LTQxZmUtOGQ4MC1iMDdhOGJkYjJjNDUifQ.ShCarmw0r9L4O7uVYPCqeBtOP1y803nf1UmY3Sp9Ouo' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Response pressure account left account mean.","maxScore":88,"minScore":28,"description":"Gun treat force often win save.","estimatedTime":"6 weeks","previewFileId":"c3fa4edb-b86d-4765-b812-ec44dfe298f8","createdByUserId":"665630c5-3b47-41fe-8d80-b07a8bdb2c45"}'

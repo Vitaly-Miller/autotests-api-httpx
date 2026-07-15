@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDA1OjA2OjUxLjI1MjE2MyIsInVzZXJfaWQiOiJlM2NkYjA2Ni1iYzk0LTRkZDgtOTUwOS0zMGQwODMxNzJjYzgifQ.T2Fks1syhK1W0wOCURXIOo1uzpw7Rx7tQ-EVdvdS1W0' \
+  -H 'content-type: application/json' \
+  -d '{"title":"During argue camera.","courseId":"ed6cf6de-f44d-47d6-9a8e-3c9240388087","maxScore":74,"minScore":21,"orderIndex":5944,"description":"Provide feel major already bank along box three.","estimatedTime":"8 weeks"}'

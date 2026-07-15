@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDA1OjA2OjU0LjAwNTk0NCIsInVzZXJfaWQiOiI4ZjQxNzAwNS0wN2ZhLTQ3ODktOGYzNy1lM2I0YWY4NWFlOWMifQ.lCy7uVlwX9Qv1ZQrMBm4bkjPak3WZcarwkJAA2GvctY' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Age research third property.","courseId":"fa07581d-26d3-4774-bd87-d67ae972175d","maxScore":65,"minScore":20,"orderIndex":8634,"description":"Beyond why skin color stand.","estimatedTime":"6 weeks"}'

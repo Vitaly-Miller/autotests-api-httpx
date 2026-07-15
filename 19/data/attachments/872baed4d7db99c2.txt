@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDA1OjA2OjQ5Ljg2MTQzNCIsInVzZXJfaWQiOiIzNzM2YzBmOC00ODc1LTQ5MzAtYmY5Ni0zZTRlZjI0NThlNDIifQ.aSemCr4dUzlKTyB8IBFq84Prk4q_Gnj8dXxc-1Newrw' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Loss mother me.","courseId":"8150af94-7b04-49fc-bc2b-fbdb44570a96","maxScore":79,"minScore":2,"orderIndex":1474,"description":"Manage tend base decision nearly allow.","estimatedTime":"6 weeks"}'

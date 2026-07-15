@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDA1OjA2OjU2Ljc1MzQzMiIsInVzZXJfaWQiOiI2MWJhZTI5MC05ZTQ0LTQ5YzgtYjAxNy01MzFjNGQ2YmZhZjYifQ.Gh8Lwj4O5VYYREi4zVh-Bfhq1o-ASwVEbTPhKS19fWk' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Help chair person public.","courseId":"9dd15247-5397-4c39-b96e-f6273fed7ea3","maxScore":88,"minScore":26,"orderIndex":2156,"description":"Huge firm wrong yourself.","estimatedTime":"2 weeks"}'

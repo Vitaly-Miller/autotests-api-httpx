@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDA1OjA2OjU1LjY5NDk4NiIsInVzZXJfaWQiOiI1ZjU2M2IyNC00YzJjLTQ2MzMtOGU5MS1kOWNiNzhhMjcwMmIifQ.6pUTnFCLaJOZo68lToYEIWANNgyx9ipynoW5esWCi1s' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Economy eye PM coach.","maxScore":88,"minScore":25,"description":"Main this finally read ability.","estimatedTime":"2 weeks","previewFileId":"9e3b5c5d-0a92-4c98-872a-8db6abaa9383","createdByUserId":"5f563b24-4c2c-4633-8e91-d9cb78a2702b"}'

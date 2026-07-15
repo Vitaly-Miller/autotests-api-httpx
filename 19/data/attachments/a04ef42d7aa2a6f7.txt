@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/exercises/31b91610-5fe0-48fe-ac1b-1100999885fd \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDA1OjA2OjU1LjM2NDY3NiIsInVzZXJfaWQiOiI1ZjU2M2IyNC00YzJjLTQ2MzMtOGU5MS1kOWNiNzhhMjcwMmIifQ.bsBBwwFMJmxi3YOizXwLORC8Vb-8rNnDEbGN1aVyH3c' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Article indeed wrong.","maxScore":74,"minScore":25,"orderIndex":906,"description":"Effect later enter cut.","estimatedTime":"5 weeks"}'

@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDA1OjA2OjUyLjYxNTczOCIsInVzZXJfaWQiOiI1MWQ2ZDc3ZS1jNGExLTRjYTgtOGMzOC03NGQzYTk4MDE1N2UifQ.D0cMzjkw-uhz9iSwlmmUo2FyL4WdvTHHPck6Jaw9qVQ' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Build clearly newspaper.","courseId":"9c9567e2-0a68-4fbd-aa84-e1b9d5acc601","maxScore":57,"minScore":15,"orderIndex":8377,"description":"Central should measure hotel become culture.","estimatedTime":"6 weeks"}'

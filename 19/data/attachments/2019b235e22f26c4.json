@@ -1,0 +1,25 @@
+{
+  "courses": [
+    {
+      "id": "c08125ff-c1a7-4dc4-ba6f-4b678777f0a3",
+      "title": "White fact interesting way sing rather.",
+      "maxScore": 87,
+      "minScore": 17,
+      "description": "Approach degree give during thus.",
+      "previewFile": {
+        "id": "cac02d7d-c31f-4e86-8a7e-41b08138b54b",
+        "filename": "file_3240.png",
+        "directory": "Uploaded",
+        "url": "http://localhost:8000/static/Uploaded/file_3240.png"
+      },
+      "estimatedTime": "7 weeks",
+      "createdByUser": {
+        "id": "e03dad20-db8a-4783-888a-cf2485608ad1",
+        "email": "test_b971be37@example.com",
+        "lastName": "Gonzalez",
+        "firstName": "Meghan",
+        "middleName": "Chelsey"
+      }
+    }
+  ]
+}

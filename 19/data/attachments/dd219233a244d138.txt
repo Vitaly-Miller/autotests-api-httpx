@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDA1OjA2OjUwLjE5MTM2NSIsInVzZXJfaWQiOiIzNzM2YzBmOC00ODc1LTQ5MzAtYmY5Ni0zZTRlZjI0NThlNDIifQ.TwqnkUlv9FPA3oQwfVVc7XsmJTrY2EzHB9f3NWczfGU' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Ago visit may.","maxScore":53,"minScore":29,"description":"Alone exist miss popular doctor president no.","estimatedTime":"8 weeks","previewFileId":"c78902b8-bef7-4555-8cd1-97c9055dd3e1","createdByUserId":"3736c0f8-4875-4930-bf96-3e4ef2458e42"}'

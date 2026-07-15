@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "467c1d2a-eec5-44d0-8b4c-82fa4f15c7c3",
+    "title": "Team still result above.",
+    "maxScore": 50,
+    "minScore": 20,
+    "description": "Arrive become class arm.",
+    "previewFile": {
+      "id": "b92aac25-cefe-4bfe-bee1-12f50ce4eab5",
+      "filename": "file_4184.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_4184.png"
+    },
+    "estimatedTime": "5 weeks",
+    "createdByUser": {
+      "id": "c190eecf-a4ec-417f-b4cb-398190dff8c6",
+      "email": "test_5410c2ec@example.com",
+      "lastName": "Santos",
+      "firstName": "David",
+      "middleName": "Randall"
+    }
+  }
+}

@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDA1OjA2OjQ3LjEyMDY4NCIsInVzZXJfaWQiOiJjNWUyMWRlYi1hZDI4LTRmNjEtOTc3Yi03NzAwYTgxMGNiNzAifQ.dsFqivqfTLUWcXyCHQrw_HSCaBzWtRBNZ_XfJEJOjAs' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Us yeah those study.","courseId":"7bb62dd7-c6c4-492a-9440-4d2cd926a241","maxScore":93,"minScore":6,"orderIndex":182,"description":"Leg establish good. Yeah property medical.","estimatedTime":"8 weeks"}'

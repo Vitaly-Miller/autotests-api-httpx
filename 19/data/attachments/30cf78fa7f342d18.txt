@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDA1OjA2OjUxLjU4MjEyNCIsInVzZXJfaWQiOiJlM2NkYjA2Ni1iYzk0LTRkZDgtOTUwOS0zMGQwODMxNzJjYzgifQ.LXpwmympPbkwFjfuKdDrYMDp6SEqiHijVleqQo9IW8I' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Speech dog help.","maxScore":60,"minScore":3,"description":"Like effect expect possible our with day.","estimatedTime":"6 weeks","previewFileId":"e8c917fe-7e15-40ac-b605-4c51a86f8fd1","createdByUserId":"e3cdb066-bc94-4dd8-9509-30d083172cc8"}'
