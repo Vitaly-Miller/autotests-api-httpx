@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest    # Указываем, что тесты будут запускаться на последней версии Ubuntu
 
     steps:
-      # 1. Шаг, который будет клонировать ваш репозиторий на машину GitHub Actions
+      # 1. Шаг, который будет клонировать репозиторий на машину GitHub Actions
       - name: Check out repository
         uses: actions/checkout@v7      # Используем GitHub Action для клонирования репозитория ⚠️https://github.com/actions/checkout
 
@@ -63,7 +63,7 @@ jobs:
 
       # 7. Шаг для запуска тестов с использованием pytest и генерации результатов Allure
       - name: Run API tests with pytest and generate Allure results
-        run: pytest --alluredir=allure-results       # --numprocesses 2 (откл.)  # ⚠️Запускаем ВСЕ тесты, генерируем результаты для Allure
+        run: pytest --alluredir=allure-results       # --numprocesses 2 (+ параллельность - откл.)  # ⚠️Запускаем ВСЕ тесты, генерируем результаты для Allure
 
       # 8. Шаг для восстановления истории покрытия (coverage-history.json) из кеша GitHub Actions
       - name: Restore Coverage history
