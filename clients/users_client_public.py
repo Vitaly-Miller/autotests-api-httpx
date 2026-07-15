@@ -4,6 +4,7 @@ Users Client (Public)
 """
 import httpx
 import allure
+from tools.api_coverage import tracker
 from tools.endpoints import Endpoint
 from clients.api_client import APIClient
 from clients.httpx_client_public import get_httpx_client_public
@@ -18,7 +19,8 @@ class UsersClientPublic(APIClient):
     """
     #------------------------------------------------- Create User  ----------------------------------------------------
     # API
-    @allure.step('▶ Create User (API)')
+    @allure.step('▶ Create User (API)')                               # Allure step Title
+    @tracker.track_coverage_httpx(f'{Endpoint.USERS}')                # API Coverage tracker
     def create_user_api(self, create_user_data: CreateUserRequestSchema) -> httpx.Response:
         """
         API-метод создания нового пользователя
@@ -33,7 +35,7 @@ class UsersClientPublic(APIClient):
 
 
     # Pydantic-model
-    @allure.step('▶ Create User (Pydantic)')
+    @allure.step('▶ Create User (Pydantic)')                                          # Allure step Title
     def create_user(self, create_user_data: CreateUserRequestSchema) -> CreateUserResponseSchema:
         """
         Pydantic-метод для создания нового пользователя
@@ -48,7 +50,7 @@ class UsersClientPublic(APIClient):
 
 
 #================================================== Client (builder) ===================================================
-@allure.step('◎ Get Users Client (Public)')
+@allure.step('◎ Get Users Client (Public)')                           # Allure step Title
 def get_users_client_public() -> UsersClientPublic:
     """
     Функция получения экземпляра UsersClientPublic() с настроенным httpx.Client (Public)

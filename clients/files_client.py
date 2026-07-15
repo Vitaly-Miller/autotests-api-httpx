@@ -1,8 +1,11 @@
 """
 Files Client
 """
+
 import allure
 import httpx
+from pathlib import Path
+from tools.api_coverage import tracker
 from tools.endpoints import Endpoint
 from clients.api_client import APIClient
 from schemas.auth_schema import AuthDataSchema
@@ -19,7 +22,8 @@ class FilesClient(APIClient):
     """
     #---------------------------------------------------- Get File -----------------------------------------------------
     # API
-    @allure.step('▶ Get File by ID (API)')
+    @allure.step('▶ Get File by ID (API)')                          # Allure step Title
+    @tracker.track_coverage_httpx(f'{Endpoint.FILES}/{{file_id}}')  # API Coverage tracker (id - заэкранировано)
     def get_file_api(self, file_id: str) -> httpx.Response:
         """
         API-метод получения файла (Download) по File-ID
@@ -32,7 +36,7 @@ class FilesClient(APIClient):
 
 
     # Pydantic-model
-    @allure.step('▶ Get File by ID (Pydantic)')
+    @allure.step('▶ Get File by ID (Pydantic)')                                    # Allure step Title
     def get_file(self, file_id: str) -> GetFileResponseSchema:
         """
         Pydantic-метод получения файла (Download) по File-ID
@@ -47,26 +51,29 @@ class FilesClient(APIClient):
 
     #--------------------------------------------------- Create File ---------------------------------------------------
     # API
-    @allure.step('▶ Create File (API)')
+    @allure.step('▶ Create File (API)')                             # Allure step Title
+    @tracker.track_coverage_httpx(f'{Endpoint.FILES}')              # API Coverage tracker
     def create_file_api(self, create_file_data: CreateFileRequestSchema) -> httpx.Response:
         """
-        API-метод создания файла (Upload) через with-контекстный менеджер (для закрытия после выполнения запроса)
+        API-метод создания файла (Upload).
+
+        Файл передаётся байтами (не открытым файловым объектом),
+        чтобы API Swagger Coverage tracker мог перечитать тело запроса после выполнения ("seek of closed file")
 
         :param create_file_data: Pydantic-model с данными о файле
         :return: httpx.Response
         """
-        with open(create_file_data.upload_path, 'rb') as f:
-            response = self.post(                                   # ▶ Запрос:
-                url=Endpoint.FILES,                                 # URL запроса (endpoint через Enum)
-                # data=create_file_data,  # <- ⚠️проверить - create_file_data целиком -> Сервер получит лишние поля: 'filename' и 'directory' (✔️ничего страшного)
-                data={'filename': create_file_data.filename, 'directory': create_file_data.directory}, # Имя сохранения файла,  Директория сохранения
-                files={'upload_file': f}                            # f - переменная прочитанного файла
-            )
-            return response                                         # httpx.Response
+        response = self.post(                                       # ▶ Запрос:
+            url=Endpoint.FILES,                                     # URL запроса (endpoint через Enum)
+            # data=create_file_data,  # <- ⚠️проверить - create_file_data целиком -> Сервер получит лишние поля: 'filename' и 'directory' (✔️ничего страшного)
+            data={'filename': create_file_data.filename, 'directory': create_file_data.directory}, # Имя сохранения файла,  Директория сохранения
+            files={'upload_file': Path(create_file_data.upload_path).read_bytes()}                 # Содержимое файла (bytes)
+        )
+        return response                                                                            # httpx.Response
 
 
     # Pydantic-model
-    @allure.step('▶ Create File (Pydantic)')
+    @allure.step('▶ Create File (Pydantic)')                                          # Allure step Title
     def create_file(self, create_file_data: CreateFileRequestSchema) -> CreateFileResponseSchema:
         """
         Pydantic-метод создания файла (Upload)
@@ -81,7 +88,8 @@ class FilesClient(APIClient):
 
     #--------------------------------------------------- Delete File ---------------------------------------------------
     # API
-    @allure.step('▶ Delete File by ID (API)')
+    @allure.step('▶ Delete File by ID (API)')                        # Allure step Title
+    @tracker.track_coverage_httpx(f'{Endpoint.FILES}/{{file_id}}')   # API Coverage tracker (id - заэкранировано)
     def delete_file_api(self, file_id: str) -> httpx.Response:
         """
         API-метод удаления файла
@@ -89,13 +97,13 @@ class FilesClient(APIClient):
         :param file_id: File-ID
         :return: httpx.Response
         """
-        response = self.delete(url=f'{Endpoint.FILES}/{file_id}')   # ▶ Запрос
-        return response                                             # httpx.Response
+        response = self.delete(url=f'{Endpoint.FILES}/{file_id}')    # ▶ Запрос
+        return response                                              # httpx.Response
 
 
 
 #================================================== Client (builder) ===================================================
-@allure.step('◎ Get Files Client')
+@allure.step('◎ Get Files Client')                                   # Allure step Title
 def get_files_client(auth_data: AuthDataSchema) -> FilesClient:
     """
     Функция получения экземпляра FilesClient с настроенным HTTP-клиентом (с Авторизацией)
@@ -104,6 +112,6 @@ def get_files_client(auth_data: AuthDataSchema) -> FilesClient:
     :return: Экземпляр FilesClient (с Авторизацией)
     """
     files_client = FilesClient(client=get_httpx_client_private(auth_data))
-    return files_client                                            # FilesClient()
+    return files_client                                              # FilesClient()
 
 #=======================================================================================================================

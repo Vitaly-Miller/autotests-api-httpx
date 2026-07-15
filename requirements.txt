@@ -8,4 +8,5 @@ pydantic-settings==2.14.2
 email-validator==2.3.0
 jsonschema==4.26.0
 allure-pytest==2.16.0
+allure-python-commons
 swagger-coverage-tool==0.33.0

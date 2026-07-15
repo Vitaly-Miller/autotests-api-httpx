@@ -3,6 +3,8 @@ Courses Client
 """
 import allure
 import httpx
+
+from tools.api_coverage import tracker
 from tools.endpoints import Endpoint
 from clients.api_client import APIClient
 from clients.httpx_client_private import get_httpx_client_private
@@ -20,7 +22,8 @@ class CoursesClient(APIClient):
     """
     #--------------------------------------------------- Get Courses ---------------------------------------------------
     # API
-    @allure.step('▶ Get courses by User-ID (API)')
+    @allure.step('▶ Get courses by User-ID (API)')                        # Allure step Title
+    @tracker.track_coverage_httpx(Endpoint.COURSES)                       # API Coverage tracker
     def get_courses_api(self, query_user_id: GetCoursesQwerySchema) -> httpx.Response:
         """
         API-метод получения списка курсов по User-ID (?query)
@@ -36,7 +39,8 @@ class CoursesClient(APIClient):
 
     #---------------------------------------------------- Get Course ---------------------------------------------------
     # API
-    @allure.step('▶ Get course by ID (API)')
+    @allure.step('▶ Get course by ID (API)')                              # Allure step Title
+    @tracker.track_coverage_httpx(f'{Endpoint.COURSES}/{{course_id}}')    # API Coverage tracker (id - заэкранирован)
     def get_course_api(self, course_id: str) -> httpx.Response:
         """
         API-метод получения курса по Course-ID
@@ -50,7 +54,8 @@ class CoursesClient(APIClient):
 
     #--------------------------------------------------- Create Course -------------------------------------------------
     # API
-    @allure.step('▶ Create course (API)')
+    @allure.step('▶ Create course (API)')                                 # Allure step Title
+    @tracker.track_coverage_httpx(Endpoint.COURSES)                       # API Coverage tracker
     def create_course_api(self, create_course_data: CreateCourseRequestSchema) -> httpx.Response:
         """
         API-метод создания курса
@@ -66,7 +71,7 @@ class CoursesClient(APIClient):
 
 
     # Pydantic-model
-    @allure.step('▶ Create Course (Pydantic)')
+    @allure.step('▶ Create Course (Pydantic)')                            # Allure step Title
     def create_course(self, create_course_data: CreateCourseRequestSchema) -> CreateCourseResponseSchema:
         """
         Pydantic-метод создания курса
@@ -81,7 +86,8 @@ class CoursesClient(APIClient):
 
     #--------------------------------------------------- Update Course -------------------------------------------------
     # API
-    @allure.step('▶ Update Course by ID (API)')
+    @allure.step('▶ Update Course by ID (API)')                           # Allure step Title
+    @tracker.track_coverage_httpx(f'{Endpoint.COURSES}/{{course_id}}')    # API Coverage tracker (id - заэкранирован)
     def update_course_api(self, course_id: str, new_course_data: UpdateCourseRequestSchema) -> httpx.Response:
         """
         API-метод частичного обновления курса по Course-ID
@@ -98,7 +104,7 @@ class CoursesClient(APIClient):
 
 
     # Pydantic-model
-    @allure.step('▶ Update Course by ID (Pydantic)')
+    @allure.step('▶ Update Course by ID (Pydantic)')                                   # Allure step Title
     def update_course_pydantic(self, course_id: str, new_course_data: UpdateCourseRequestSchema) -> UpdateCourseResponseSchema:
         """
         Pydantic-метод частичного обновления курса по Course-ID
@@ -114,7 +120,8 @@ class CoursesClient(APIClient):
 
     #--------------------------------------------------- Delete Course -------------------------------------------------
     # API
-    @allure.step('▶ Delete Course by ID (API)')
+    @allure.step('▶ Delete Course by ID (API)')                           # Allure step Title
+    @tracker.track_coverage_httpx(f'{Endpoint.COURSES}/{{course_id}}')    # API Coverage tracker (id - заэкранирован)
     def delete_course_api(self, course_id: str) -> httpx.Response:
         """
         API-метод удаления курса по Course-ID
@@ -128,7 +135,7 @@ class CoursesClient(APIClient):
 
 
 #================================================== Client (builder) ===================================================
-@allure.step('◎ Get Courses Client')
+@allure.step('◎ Get Courses Client')                                      # Allure step Title
 def get_courses_client(auth_data: AuthDataSchema) -> CoursesClient:
     """
     Функция получения экземпляра CoursesClient (с Авторизацией)

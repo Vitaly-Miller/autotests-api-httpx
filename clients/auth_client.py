@@ -3,7 +3,7 @@ Authentication Client
 """
 import allure
 import httpx
-from clients.api_coverage import tracker
+from tools.api_coverage import tracker
 from tools.endpoints import Endpoint
 from clients.api_client import APIClient
 from clients.httpx_client_public import get_httpx_client_public
@@ -67,7 +67,7 @@ class AuthClient(APIClient):
 
 
 #================================================== Client (builder) ===================================================
-@allure.step('◎ Get Auth Client')
+@allure.step('◎ Get Auth Client')                                      # Allure step Title
 def get_auth_client() -> AuthClient:
     """
     Функция получения экземпляра AuthClient с уже настроенным http-клиентом
