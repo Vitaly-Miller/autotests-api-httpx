@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "52ce4496-c710-433a-9ee2-97fc6ff5420c",
+    "title": "Ten shake act.",
+    "maxScore": 57,
+    "minScore": 3,
+    "description": "Student poor total pick coach.",
+    "previewFile": {
+      "id": "9f1df0c0-99a0-4ae7-a267-04a9643b1461",
+      "filename": "file_7812.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_7812.png"
+    },
+    "estimatedTime": "8 weeks",
+    "createdByUser": {
+      "id": "685de21b-6240-441e-b884-2995a907adbf",
+      "email": "test_dc68704a@example.com",
+      "lastName": "Clark",
+      "firstName": "Jacob",
+      "middleName": "Alan"
+    }
+  }
+}

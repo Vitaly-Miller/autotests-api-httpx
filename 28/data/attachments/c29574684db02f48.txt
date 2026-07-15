@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjM2OjM2LjY2MDg1MiIsInVzZXJfaWQiOiJiOTI2MzJlNy03NmM5LTQwNDUtYjU3MC1lMzRjNTE0NjIwMmIifQ.XElHZ_KM7EB05k6S-M2hgBxIMjOz1ksPBp01T3-Egmk' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Quality space agency run fill article.","maxScore":82,"minScore":8,"description":"Stand behavior present reflect son star bad.","estimatedTime":"9 weeks","previewFileId":"e923bb09-39a6-4628-b046-7d30e9297ba0","createdByUserId":"b92632e7-76c9-4045-b570-e34c5146202b"}'

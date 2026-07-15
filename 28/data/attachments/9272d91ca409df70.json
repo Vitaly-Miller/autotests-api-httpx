@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "8880fe83-b639-4da2-b7b9-9f86450558c2",
+    "title": "Billion move your section represent.",
+    "maxScore": 50,
+    "minScore": 2,
+    "description": "Budget memory among.",
+    "previewFile": {
+      "id": "a8e77aa1-8a8c-4d15-a1c8-99f5bd5bebaa",
+      "filename": "file_9597.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_9597.png"
+    },
+    "estimatedTime": "7 weeks",
+    "createdByUser": {
+      "id": "f5505a0a-fe42-4eda-bc20-e7a451864bdd",
+      "email": "test_cffa93dc@example.com",
+      "lastName": "Thompson",
+      "firstName": "George",
+      "middleName": "Scott"
+    }
+  }
+}

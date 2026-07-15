@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjM2OjIzLjA4NTI0NyIsInVzZXJfaWQiOiJjMTU4MGY2My00NTJiLTQ2MTktOGViZi0yNDAzZjc2OTFmNzkifQ.J-G7WoQfCHIdum6FqSlB9B5U079BQfWvzjJhX0ymkdM' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Bag man usually guess.","maxScore":90,"minScore":9,"description":"Group expect gun best require arrive.","estimatedTime":"5 weeks","previewFileId":"0c21406c-c324-48ad-90db-74cfcdada8c0","createdByUserId":"c1580f63-452b-4619-8ebf-2403f7691f79"}'

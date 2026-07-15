@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjM2OjI3LjIyMTQzNCIsInVzZXJfaWQiOiJiYWI5OWVhNC03MDI4LTQ2MmItYjkyMS1lNjU4NGZmNTM1ZGYifQ.jF655BSXwTCuMFlNZcoCe_JujQSB2iQiZCvWwtz3ZBs' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Relate case pay entire.","maxScore":57,"minScore":2,"description":"Use place night let. Public avoid store small.","estimatedTime":"6 weeks","previewFileId":"98d24a7b-d3f6-40d8-9fd7-3cb8b86e77de","createdByUserId":"bab99ea4-7028-462b-b921-e6584ff535df"}'

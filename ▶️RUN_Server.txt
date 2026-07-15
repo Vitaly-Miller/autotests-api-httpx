@@ -1,3 +1,0 @@
-uvicorn main:app --reload     - Запуск сервера (открыть отдельным проектом)
-
-http://localhost:8000/docs    - Swagger

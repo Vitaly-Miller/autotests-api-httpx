@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjM2OjI5LjU1OTAxNiIsInVzZXJfaWQiOiJhODMzMWU3OC02YmU5LTQ0MWEtOWJlNC00ZjBkNTJjMjYzZDcifQ.0sReUrFgosfMwzkGhJh93p5bVpyT3iqaoc-4rZheDiI' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Reason my rest smile.","courseId":"d769e9cd-0477-4719-b3bc-95e7a946bf67","maxScore":76,"minScore":13,"orderIndex":5607,"description":"Put under international safe.","estimatedTime":"6 weeks"}'

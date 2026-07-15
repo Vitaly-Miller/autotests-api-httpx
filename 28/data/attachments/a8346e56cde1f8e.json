@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "302bc9c5-8d7e-4f5c-876f-e8d0e12fb337",
+    "title": "Relate case pay entire.",
+    "maxScore": 57,
+    "minScore": 2,
+    "description": "Use place night let. Public avoid store small.",
+    "previewFile": {
+      "id": "98d24a7b-d3f6-40d8-9fd7-3cb8b86e77de",
+      "filename": "file_5733.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_5733.png"
+    },
+    "estimatedTime": "6 weeks",
+    "createdByUser": {
+      "id": "bab99ea4-7028-462b-b921-e6584ff535df",
+      "email": "test_dd48a581@example.com",
+      "lastName": "Parker",
+      "firstName": "Laura",
+      "middleName": "Brian"
+    }
+  }
+}

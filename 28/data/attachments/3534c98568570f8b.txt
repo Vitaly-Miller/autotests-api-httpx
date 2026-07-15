@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjM2OjI4LjI0MjgyOSIsInVzZXJfaWQiOiJiMmEzZDU2Ny1jYTk5LTQxZjUtOTkyMi1hYzIxZmZjZjRlYzgifQ.DH8zoWaXleclOjsnR9sNJUH_WjAoJG7wM9fKq7l2NLM' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Until anything them.","courseId":"b6ffdb50-9e21-4e9a-8d58-d7713ffd662b","maxScore":79,"minScore":17,"orderIndex":2290,"description":"Up Mrs maybe keep foot.","estimatedTime":"7 weeks"}'

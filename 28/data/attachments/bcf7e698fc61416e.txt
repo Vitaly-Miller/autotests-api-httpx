@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjM2OjM1LjAxNDA5NSIsInVzZXJfaWQiOiIwMjU0MTQzOS0yY2UzLTQyZWEtYWE0Yy0yYjg3MDUwODdmNjQifQ.wpmRGOr9zj0o0jiD4uc4B0WLoYCsgynVEf6TlaIpxn0' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Trial official day race.","courseId":"d0d765c4-3980-41b8-81fd-45e99a1ed2db","maxScore":73,"minScore":22,"orderIndex":4313,"description":"Feel someone church.","estimatedTime":"2 weeks"}'
