@@ -1,0 +1,4 @@
+curl -X POST \
+  http://localhost:8000/api/v1/users \
+  -H 'content-type: application/json' \
+  -d '{"email":"test_2fe356e9@example.com","password":"Xhiw15Gjh)","lastName":"Delacruz","firstName":"Denise","middleName":"Richard"}'

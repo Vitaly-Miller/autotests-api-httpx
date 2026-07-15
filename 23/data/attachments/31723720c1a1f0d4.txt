@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE2OjMzOjA3LjE0MjM3MiIsInVzZXJfaWQiOiI3NmY2ODFhMy04MzkxLTQyYjctOTc1MS1jOTBiYTk1NWU5YjcifQ.mI3OikaoEFtyMlxFnWHIuFMAsmC--OB9U9OjceZSYmE' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Put may explain be ago.","maxScore":61,"minScore":7,"description":"Out require pass contain upon from.","estimatedTime":"6 weeks","previewFileId":"3ac38ae3-9190-4b50-88e8-3f3041c83542","createdByUserId":"76f681a3-8391-42b7-9751-c90ba955e9b7"}'

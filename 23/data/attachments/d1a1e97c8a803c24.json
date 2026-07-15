@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "228127b0-c2da-4698-ba1d-3b5d1639659a",
+    "title": "Actually bank establish bill water lay.",
+    "maxScore": 64,
+    "minScore": 16,
+    "description": "Purpose could article dream.",
+    "previewFile": {
+      "id": "6f73344d-17e7-4ca9-9ef7-c0dabceac130",
+      "filename": "file_1188.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_1188.png"
+    },
+    "estimatedTime": "8 weeks",
+    "createdByUser": {
+      "id": "92e222c0-e3b4-49cd-8cf6-eec733d3dcbd",
+      "email": "test_6deedfb4@example.com",
+      "lastName": "Skinner",
+      "firstName": "Henry",
+      "middleName": "Jessica"
+    }
+  }
+}

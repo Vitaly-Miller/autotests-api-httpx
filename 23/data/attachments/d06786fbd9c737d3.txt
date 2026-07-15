@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE2OjMzOjA4LjUzNTg4NCIsInVzZXJfaWQiOiI4ZmJhYTdiZi01YWNkLTQxZjgtOWM5My01OTljN2FiZjAzOTEifQ.vrbR0TtFuQYc53Y_77gHIlTdy06fQsiYM4LPI3wIsg4' \
+  -H 'content-type: application/json' \
+  -d '{"title":"During go once fear buy.","maxScore":59,"minScore":23,"description":"As happen window couple.","estimatedTime":"3 weeks","previewFileId":"aae30327-4232-4a71-9948-d143880275a2","createdByUserId":"8fbaa7bf-5acd-41f8-9c93-599c7abf0391"}'

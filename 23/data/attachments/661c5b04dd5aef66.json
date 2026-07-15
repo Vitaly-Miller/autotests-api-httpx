@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "e8c82f1c-a819-4b62-bb25-72228ded2ed2",
+    "title": "Hear until art.",
+    "maxScore": 80,
+    "minScore": 15,
+    "description": "Employee arm develop spring.",
+    "previewFile": {
+      "id": "75d6100a-3848-4d7b-b8ff-811e48666f2b",
+      "filename": "file_2227.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_2227.png"
+    },
+    "estimatedTime": "9 weeks",
+    "createdByUser": {
+      "id": "bc4032ad-a229-42b2-811b-ff0f830e4d9b",
+      "email": "test_bb7157f4@example.com",
+      "lastName": "Baxter",
+      "firstName": "Brian",
+      "middleName": "Larry"
+    }
+  }
+}

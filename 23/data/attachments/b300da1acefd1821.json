@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "d0e23098-d59b-460b-bf4a-0fb613240564",
+    "title": "Game marriage ability charge machine.",
+    "maxScore": 64,
+    "minScore": 11,
+    "description": "Four we arm pass.",
+    "previewFile": {
+      "id": "44ae320d-b6a9-4652-bb85-89dde6c625df",
+      "filename": "file_8773.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_8773.png"
+    },
+    "estimatedTime": "6 weeks",
+    "createdByUser": {
+      "id": "0fc5eacd-aff9-4e7f-ab74-18856027a4cc",
+      "email": "test_f6a72eff@example.com",
+      "lastName": "Taylor",
+      "firstName": "James",
+      "middleName": "Joseph"
+    }
+  }
+}

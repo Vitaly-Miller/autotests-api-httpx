@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE2OjMzOjAxLjU0MjMzNCIsInVzZXJfaWQiOiJiYzg5ZDdjMi1mYjYxLTQ4ZWUtOGE5Mi0zNjY0Y2YxOTZmOTAifQ.UIfAZPM0NuV8ziRupffXAev-sRadV37JzZfQXgvX8WE' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Whole white apply impact represent.","maxScore":86,"minScore":28,"description":"Operation detail former now teacher.","estimatedTime":"4 weeks","previewFileId":"0260a66d-448f-4dea-9d28-3750ce9bab6f","createdByUserId":"bc89d7c2-fb61-48ee-8a92-3664cf196f90"}'

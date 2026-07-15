@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE2OjMyOjU3LjI4Mjk5NSIsInVzZXJfaWQiOiI2NWM1YjcxZC05YTYxLTQ2MDktYmVjZC05MWFhNjgxNzc5MDUifQ.XmQR0niZTlf3Tm2HuNtLzD2xHbNPuTwf65fSEj-Or8o' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Today truth sort whether.","maxScore":68,"minScore":14,"description":"Whom teacher group alone those choice.","estimatedTime":"3 weeks","previewFileId":"c136d683-a093-43ad-83a1-6af689506020","createdByUserId":"65c5b71d-9a61-4609-becd-91aa68177905"}'

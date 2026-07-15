@@ -1,0 +1,12 @@
+INFO | HTTPX-Client: POST-request to http://localhost:8000/api/v1/users
+INFO | HTTPX-Client: Status code: 200-OK from http://localhost:8000/api/v1/users
+INFO | HTTPX-Client: POST-request to http://localhost:8000/api/v1/authentication/login
+INFO | HTTPX-Client: Status code: 200-OK from http://localhost:8000/api/v1/authentication/login
+INFO | HTTPX-Client: GET-request to http://localhost:8000/api/v1/files/cd2c962d-6d79-4fc7-8e6e-5fe281cb6d42
+INFO | HTTPX-Client: Status code: 404-Not Found from http://localhost:8000/api/v1/files/cd2c962d-6d79-4fc7-8e6e-5fe281cb6d42
+INFO | - Base-assert: Status code: 404-Not Found
+INFO | - Base-assert: Request method: GET
+INFO | FILES-ASSERT: Get File Not Found Error Response by non-existent file
+INFO | ERRORS-ASSERT: Validation Not Found Error Response
+INFO | - Base-assert: Values of Actual "detail" = Expected "detail"
+INFO | SCHEMA-ASSERT: Response JSON Schema validation (NotFoundErrorResponseSchema)

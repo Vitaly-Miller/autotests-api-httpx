@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "e4fd1c43-9543-4cf8-9145-a99d396e1a5d",
+    "title": "During go once fear buy.",
+    "maxScore": 59,
+    "minScore": 23,
+    "description": "As happen window couple.",
+    "previewFile": {
+      "id": "aae30327-4232-4a71-9948-d143880275a2",
+      "filename": "file_2245.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_2245.png"
+    },
+    "estimatedTime": "3 weeks",
+    "createdByUser": {
+      "id": "8fbaa7bf-5acd-41f8-9c93-599c7abf0391",
+      "email": "test_f15aa228@example.com",
+      "lastName": "Turner",
+      "firstName": "Donald",
+      "middleName": "Phillip"
+    }
+  }
+}

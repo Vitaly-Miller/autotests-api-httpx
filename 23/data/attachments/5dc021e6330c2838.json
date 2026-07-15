@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "2ab500a7-e249-46ea-a848-617d2888d2aa",
+    "title": "Put may explain be ago.",
+    "maxScore": 61,
+    "minScore": 7,
+    "description": "Out require pass contain upon from.",
+    "previewFile": {
+      "id": "3ac38ae3-9190-4b50-88e8-3f3041c83542",
+      "filename": "file_9943.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_9943.png"
+    },
+    "estimatedTime": "6 weeks",
+    "createdByUser": {
+      "id": "76f681a3-8391-42b7-9751-c90ba955e9b7",
+      "email": "test_f06b329e@example.com",
+      "lastName": "Anderson",
+      "firstName": "Brad",
+      "middleName": "Patricia"
+    }
+  }
+}

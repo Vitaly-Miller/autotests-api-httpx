@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "c1234242-97aa-4159-be08-8772f002f509",
+    "title": "Speech site yourself after represent.",
+    "maxScore": 71,
+    "minScore": 8,
+    "description": "Toward out yourself down necessary hard cause.",
+    "previewFile": {
+      "id": "ea5b187c-7f40-4f37-bda9-301160a9223a",
+      "filename": "file_8902.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_8902.png"
+    },
+    "estimatedTime": "2 weeks",
+    "createdByUser": {
+      "id": "508f2dbe-efd8-452d-8a9a-1cd158b70ec6",
+      "email": "test_22af24c4@example.com",
+      "lastName": "Martin",
+      "firstName": "Valerie",
+      "middleName": "Lisa"
+    }
+  }
+}

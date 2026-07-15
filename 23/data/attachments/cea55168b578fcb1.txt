@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE2OjMzOjEyLjM5NzczMCIsInVzZXJfaWQiOiI5MTRmMmIxYy04M2JhLTQ3M2EtOTNkNi05OGVhZmE3NzEyOWMifQ.SslRXxgTL7XWTPt2CUbSjBNzlD7qLxGmHKNEvGMdlDA' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Think never friend likely.","courseId":"062f429c-cdb0-4268-97e5-5db52c444c26","maxScore":73,"minScore":6,"orderIndex":1116,"description":"Voice evidence none cup size mind method.","estimatedTime":"8 weeks"}'

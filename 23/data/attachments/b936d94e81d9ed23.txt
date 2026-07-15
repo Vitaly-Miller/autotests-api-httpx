@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/exercises/aca48c4d-73bf-4d8b-9178-443735b6ed68 \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE2OjMzOjEyLjM5NzczMCIsInVzZXJfaWQiOiI5MTRmMmIxYy04M2JhLTQ3M2EtOTNkNi05OGVhZmE3NzEyOWMifQ.SslRXxgTL7XWTPt2CUbSjBNzlD7qLxGmHKNEvGMdlDA' \
+  -H 'content-type: application/json' \
+  -d '{"title":"They someone election collection especially consider.","maxScore":80,"minScore":21,"orderIndex":1041,"description":"Early exactly stage history power day.","estimatedTime":"6 weeks"}'

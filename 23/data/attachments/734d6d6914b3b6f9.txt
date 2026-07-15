@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE2OjMzOjA2LjgxMjYzNSIsInVzZXJfaWQiOiI3NmY2ODFhMy04MzkxLTQyYjctOTc1MS1jOTBiYTk1NWU5YjcifQ.7Nk1ea2IZPski05zinOLIxP8uZkVFPtCdP0g9E98g_A' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Animal issue company education health quality.","courseId":"2ab500a7-e249-46ea-a848-617d2888d2aa","maxScore":88,"minScore":20,"orderIndex":385,"description":"Medical site blood prove big situation.","estimatedTime":"2 weeks"}'

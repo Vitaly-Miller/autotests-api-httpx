@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "4ca491a5-dd94-4485-aa4a-fac22576e700",
+    "title": "First role quickly herself clear.",
+    "maxScore": 53,
+    "minScore": 5,
+    "description": "Hair popular window receive she above.",
+    "previewFile": {
+      "id": "e881ccda-66ba-4087-82bd-d2e4617fd98b",
+      "filename": "file_9142.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_9142.png"
+    },
+    "estimatedTime": "4 weeks",
+    "createdByUser": {
+      "id": "0250ab43-44cc-4141-88be-2865b64128ae",
+      "email": "test_f78cb5bb@example.com",
+      "lastName": "Colon",
+      "firstName": "Kaylee",
+      "middleName": "Robert"
+    }
+  }
+}

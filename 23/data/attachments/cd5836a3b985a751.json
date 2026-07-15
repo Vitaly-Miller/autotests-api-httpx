@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "9648a78e-f267-46fe-83f0-1be1c30ce553",
+    "title": "Beat out same.",
+    "maxScore": 98,
+    "minScore": 12,
+    "description": "Remember lose federal dream join several race.",
+    "previewFile": {
+      "id": "4fa8633b-dc3d-467a-93e0-df26dbbe6f14",
+      "filename": "file_2146.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_2146.png"
+    },
+    "estimatedTime": "3 weeks",
+    "createdByUser": {
+      "id": "048e1773-c508-452d-b672-dd4f97458d0e",
+      "email": "test_c254773f@example.com",
+      "lastName": "Young",
+      "firstName": "Melissa",
+      "middleName": "Daniel"
+    }
+  }
+}

@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE2OjMzOjA5LjkzOTU1MSIsInVzZXJfaWQiOiIwMjUwYWI0My00NGNjLTQxNDEtODhiZS0yODY1YjY0MTI4YWUifQ.TKaAMNGDX5DeBUwQEZkeZqtbLIBdzGh5K7Y8TBS4l0M' \
+  -H 'content-type: application/json' \
+  -d '{"title":"First role quickly herself clear.","maxScore":53,"minScore":5,"description":"Hair popular window receive she above.","estimatedTime":"4 weeks","previewFileId":"e881ccda-66ba-4087-82bd-d2e4617fd98b","createdByUserId":"0250ab43-44cc-4141-88be-2865b64128ae"}'
