@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDA2OjM3OjI4Ljg2NjI4NyIsInVzZXJfaWQiOiI0NjQ0NmU3ZC1iZmM3LTQ4NmYtYWQ1ZC01YzdhZjQ5MmU1ZTEifQ.SmN1cQr-XV_LHDMT4ro1NYLkmUi-JdID-um8pF-EtUo' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Letter someone miss ok only.","maxScore":96,"minScore":7,"description":"Tree any eat executive wife guess never.","estimatedTime":"6 weeks","previewFileId":"e5f86851-c000-41cd-b4e7-6d22c60bdeb5","createdByUserId":"46446e7d-bfc7-486f-ad5d-5c7af492e5e1"}'

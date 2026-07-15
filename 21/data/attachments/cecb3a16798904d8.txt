@@ -1,0 +1,6 @@
+INFO | HTTPX-Client: POST-request to http://localhost:8000/api/v1/users
+INFO | HTTPX-Client: Status code: 200-OK from http://localhost:8000/api/v1/users
+INFO | HTTPX-Client: POST-request to http://localhost:8000/api/v1/authentication/login
+INFO | HTTPX-Client: Status code: 200-OK from http://localhost:8000/api/v1/authentication/login
+INFO | HTTPX-Client: GET-request to http://localhost:8000/api/v1/users/me
+INFO | HTTPX-Client: Status code: 200-OK from http://localhost:8000/api/v1/users/me

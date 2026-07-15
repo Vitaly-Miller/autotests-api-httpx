@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "ccf8ed6c-4050-4fb4-98e8-a215886e4fe6",
+    "title": "Us card often.",
+    "maxScore": 67,
+    "minScore": 10,
+    "description": "Economic just recognize.",
+    "previewFile": {
+      "id": "07c7f487-c01c-4c8d-9db0-b2fffd0b2514",
+      "filename": "file_9122.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_9122.png"
+    },
+    "estimatedTime": "7 weeks",
+    "createdByUser": {
+      "id": "cb802e61-0472-47b0-ba53-a17c930b0ced",
+      "email": "test_f4ae57f5@example.com",
+      "lastName": "Mitchell",
+      "firstName": "Emma",
+      "middleName": "Andrew"
+    }
+  }
+}

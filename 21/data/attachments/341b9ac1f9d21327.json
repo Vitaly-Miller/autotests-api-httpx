@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "8cf9ddcc-d528-40af-9724-4e33d4a84ab1",
+    "title": "Anything throw performance decision seven anyone process.",
+    "maxScore": 64,
+    "minScore": 21,
+    "description": "Act throughout cell foot.",
+    "previewFile": {
+      "id": "8b177373-9597-427d-8f9a-b2dbed4f0acb",
+      "filename": "file_2676.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_2676.png"
+    },
+    "estimatedTime": "3 weeks",
+    "createdByUser": {
+      "id": "1b55fcbe-6e24-40fc-b514-f423fedcb00d",
+      "email": "test_57ea7259@example.com",
+      "lastName": "Davis",
+      "firstName": "William",
+      "middleName": "Jerry"
+    }
+  }
+}

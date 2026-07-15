@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "3988bf74-6c7a-4d29-b4fe-72bd873170f5",
+    "title": "Resource husband have her other dream without.",
+    "maxScore": 54,
+    "minScore": 26,
+    "description": "Voice every imagine include.",
+    "previewFile": {
+      "id": "7c0f0985-5bb0-4c59-936f-acd771847c49",
+      "filename": "file_5644.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_5644.png"
+    },
+    "estimatedTime": "2 weeks",
+    "createdByUser": {
+      "id": "a5e0b758-7342-4c64-bb99-71c21440cd8f",
+      "email": "test_233fb8e2@example.com",
+      "lastName": "Robinson",
+      "firstName": "Amy",
+      "middleName": "Jacob"
+    }
+  }
+}

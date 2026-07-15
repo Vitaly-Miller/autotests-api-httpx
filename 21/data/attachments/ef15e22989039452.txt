@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDA2OjM3OjI5Ljg2MTk4NCIsInVzZXJfaWQiOiJkYWJkOTljNy1mNmM4LTQ3NzUtODFkZi02MGE3OWY2ODJmNzYifQ.d3GMYwMTPJS1vIu2doD3ROU2kkmEGi0NyGDReIP7iDU' \
+  -H 'content-type: application/json' \
+  -d '{"title":"True agree seven.","courseId":"29a64668-cfd7-4f9c-aa66-72ab24702276","maxScore":90,"minScore":30,"orderIndex":2621,"description":"Side that early pull south baby.","estimatedTime":"8 weeks"}'

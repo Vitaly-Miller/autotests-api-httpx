@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "e92ebfe6-2078-41f1-b85f-29b0c66aa5bf",
+    "title": "Stay green once.",
+    "maxScore": 63,
+    "minScore": 15,
+    "description": "Near mouth reflect citizen own north he.",
+    "previewFile": {
+      "id": "b6acd41e-b6ce-49ba-8986-94b721e251ed",
+      "filename": "file_1685.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_1685.png"
+    },
+    "estimatedTime": "4 weeks",
+    "createdByUser": {
+      "id": "2c172501-0087-4d29-a5e4-12ec065ac9a1",
+      "email": "test_1932923c@example.com",
+      "lastName": "Rhodes",
+      "firstName": "Aaron",
+      "middleName": "Kayla"
+    }
+  }
+}

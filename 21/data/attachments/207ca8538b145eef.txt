@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDA2OjM3OjIzLjcwMTk4NSIsInVzZXJfaWQiOiJjYjgwMmU2MS0wNDcyLTQ3YjAtYmE1My1hMTdjOTMwYjBjZWQifQ.gkRYKesm_2ORNzPU4DQpAt60kyQb6syJUy9IZTE5K0A' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Us card often.","maxScore":67,"minScore":10,"description":"Economic just recognize.","estimatedTime":"7 weeks","previewFileId":"07c7f487-c01c-4c8d-9db0-b2fffd0b2514","createdByUserId":"cb802e61-0472-47b0-ba53-a17c930b0ced"}'

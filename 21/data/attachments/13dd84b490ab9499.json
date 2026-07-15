@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "24407ded-f525-42d4-ac90-10b9f1550912",
+    "title": "Painting moment cold.",
+    "maxScore": 52,
+    "minScore": 18,
+    "description": "She direction capital life travel care several.",
+    "previewFile": {
+      "id": "39d72e69-217d-4cb3-b344-06b3f6fb90b4",
+      "filename": "file_1245.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_1245.png"
+    },
+    "estimatedTime": "6 weeks",
+    "createdByUser": {
+      "id": "b645a3a9-93c3-45b9-bce9-329927b6f54e",
+      "email": "test_91515aef@example.com",
+      "lastName": "Fletcher",
+      "firstName": "Daniel",
+      "middleName": "William"
+    }
+  }
+}

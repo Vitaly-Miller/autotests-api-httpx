@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDA2OjM3OjE2Ljk0NTY3MSIsInVzZXJfaWQiOiIxYjU1ZmNiZS02ZTI0LTQwZmMtYjUxNC1mNDIzZmVkY2IwMGQifQ.6hY6GzC3bsvvwTQfq0Nplf_FmwMvesBuVyRqYPYH8nU' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Anything throw performance decision seven anyone process.","maxScore":64,"minScore":21,"description":"Act throughout cell foot.","estimatedTime":"3 weeks","previewFileId":"8b177373-9597-427d-8f9a-b2dbed4f0acb","createdByUserId":"1b55fcbe-6e24-40fc-b514-f423fedcb00d"}'

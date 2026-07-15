@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "798ecf86-28c9-4ade-b978-6bddd9a65395",
+    "title": "After power newspaper.",
+    "maxScore": 61,
+    "minScore": 16,
+    "description": "Theory never accept western.",
+    "previewFile": {
+      "id": "ee44c378-eba7-4112-b7a3-059036a262b8",
+      "filename": "file_2266.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_2266.png"
+    },
+    "estimatedTime": "9 weeks",
+    "createdByUser": {
+      "id": "c5d47a1d-58e7-4d33-9f39-204be9a40b90",
+      "email": "test_aa90715c@example.com",
+      "lastName": "Frederick",
+      "firstName": "David",
+      "middleName": "Erika"
+    }
+  }
+}

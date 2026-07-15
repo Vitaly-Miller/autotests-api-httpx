@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDA2OjM3OjI2LjI5MTEwNiIsInVzZXJfaWQiOiJiNjQ1YTNhOS05M2MzLTQ1YjktYmNlOS0zMjk5MjdiNmY1NGUifQ.ASLXqAdRKXYcV0yzRtjFeDxzjMLiPpOCGYY3T2W0H_I' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Painting moment cold.","maxScore":52,"minScore":18,"description":"She direction capital life travel care several.","estimatedTime":"6 weeks","previewFileId":"39d72e69-217d-4cb3-b344-06b3f6fb90b4","createdByUserId":"b645a3a9-93c3-45b9-bce9-329927b6f54e"}'

@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDA2OjM3OjI4LjU2NTQwOCIsInVzZXJfaWQiOiI0NjQ0NmU3ZC1iZmM3LTQ4NmYtYWQ1ZC01YzdhZjQ5MmU1ZTEifQ.ZkACZ-KMb-KGO1mVF7ufXMRTjAkmY92yevunAtUPRrI' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Difference when stock but box hour.","courseId":"d5e618f0-deea-48e4-bd37-af04eec08dda","maxScore":80,"minScore":22,"orderIndex":3528,"description":"Ability white set side would build bed according.","estimatedTime":"9 weeks"}'

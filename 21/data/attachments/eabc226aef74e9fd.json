@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "8da24369-7d19-4471-8249-2e1b9ef31ee7",
+    "title": "Movement record adult should.",
+    "maxScore": 94,
+    "minScore": 5,
+    "description": "Realize especially eight.",
+    "previewFile": {
+      "id": "f3f1d927-e42d-4e6e-8d93-d20f232ab834",
+      "filename": "file_8617.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_8617.png"
+    },
+    "estimatedTime": "7 weeks",
+    "createdByUser": {
+      "id": "15a018d5-ca67-49ee-b46d-0c8794b5da51",
+      "email": "test_0bf61fc4@example.com",
+      "lastName": "Moore",
+      "firstName": "Michael",
+      "middleName": "Cindy"
+    }
+  }
+}
