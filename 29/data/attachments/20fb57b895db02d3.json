@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "609ef20d-420b-4d8c-adeb-ff1b6faa63cc",
+    "title": "These bill land.",
+    "maxScore": 64,
+    "minScore": 6,
+    "description": "Republican word newspaper last bar.",
+    "previewFile": {
+      "id": "4b30cce1-e43a-43a8-ba98-379688cf0277",
+      "filename": "file_4443.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_4443.png"
+    },
+    "estimatedTime": "4 weeks",
+    "createdByUser": {
+      "id": "05222d1b-12cb-4491-8f0d-b17f0eb55508",
+      "email": "test_e7fb7751@example.com",
+      "lastName": "Smith",
+      "firstName": "Christopher",
+      "middleName": "Jonathan"
+    }
+  }
+}

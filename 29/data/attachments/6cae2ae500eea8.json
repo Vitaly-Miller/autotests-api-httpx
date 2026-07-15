@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "0eda1cfb-5441-453f-9a09-559262453527",
+    "title": "Cost myself because natural shake.",
+    "maxScore": 50,
+    "minScore": 23,
+    "description": "Again black play hope believe.",
+    "previewFile": {
+      "id": "c9c45468-b667-42f6-8bb2-fe5dde97b063",
+      "filename": "file_1139.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_1139.png"
+    },
+    "estimatedTime": "7 weeks",
+    "createdByUser": {
+      "id": "8c6543fb-c497-4ffb-928e-96701b6b99f2",
+      "email": "test_653640d9@example.com",
+      "lastName": "Smith",
+      "firstName": "Savannah",
+      "middleName": "Allison"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "246095d2-d1fa-488c-8bda-c989ce63eb5c",
+    "title": "Design physical imagine.",
+    "maxScore": 72,
+    "minScore": 5,
+    "description": "Value describe Mrs course world building end ask.",
+    "previewFile": {
+      "id": "527830a5-9157-46ac-a3d1-f0fccb0432ac",
+      "filename": "file_4724.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_4724.png"
+    },
+    "estimatedTime": "8 weeks",
+    "createdByUser": {
+      "id": "696e6d27-e112-48c2-bd19-f591440c52f1",
+      "email": "test_16e90ab9@example.com",
+      "lastName": "Ryan",
+      "firstName": "Sandra",
+      "middleName": "Jeremy"
+    }
+  }
+}

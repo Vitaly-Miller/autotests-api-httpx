@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "ef744f90-038d-47b8-a468-c73e6666308c",
+    "title": "Ball carry treat.",
+    "maxScore": 79,
+    "minScore": 21,
+    "description": "We green discuss marriage.",
+    "previewFile": {
+      "id": "048aa751-5e34-4fb4-a2bd-1790d254f683",
+      "filename": "file_4197.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_4197.png"
+    },
+    "estimatedTime": "7 weeks",
+    "createdByUser": {
+      "id": "d410d952-3ed7-43af-beba-00a1a1f977b3",
+      "email": "test_f0632dc2@example.com",
+      "lastName": "White",
+      "firstName": "Tammy",
+      "middleName": "Danielle"
+    }
+  }
+}

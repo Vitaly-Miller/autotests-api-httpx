@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "80e51f74-1d80-4456-8ad7-879e07316cd4",
+    "title": "Effect simple table can.",
+    "maxScore": 86,
+    "minScore": 16,
+    "description": "Management short trial risk PM.",
+    "previewFile": {
+      "id": "3386c265-5d20-427a-b90d-c5df2405150e",
+      "filename": "file_7723.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_7723.png"
+    },
+    "estimatedTime": "6 weeks",
+    "createdByUser": {
+      "id": "0b9d5497-bf6a-4d7a-8246-2e6e991f209c",
+      "email": "test_d04e7226@example.com",
+      "lastName": "Holloway",
+      "firstName": "Shannon",
+      "middleName": "Dustin"
+    }
+  }
+}

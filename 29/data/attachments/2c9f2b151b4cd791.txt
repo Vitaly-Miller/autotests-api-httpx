@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjQxOjQyLjMyMTk0NSIsInVzZXJfaWQiOiJkZDU3NGMxMC03MTI0LTQ0NjctYjUzNS00YjlhNjQ3YTllYzgifQ.-dzvr2aZKvoHDRUT_1USitWLvxSs5gatvRKj_aUFGco' \
+  -H 'content-type: application/json' \
+  -d '{"title":"All event near young.","maxScore":94,"minScore":12,"description":"Garden popular radio music develop.","estimatedTime":"5 weeks","previewFileId":"a1b8536a-56af-4567-9e99-798a9df8ac77","createdByUserId":"dd574c10-7124-4467-b535-4b9a647a9ec8"}'

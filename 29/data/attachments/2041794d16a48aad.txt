@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjQxOjMxLjc5OTc0OCIsInVzZXJfaWQiOiI5ZjU1MTU1OC03YjRjLTRjZWUtODc5Ny1mZmIwZjc4NWZjNGUifQ.bWQn_7sGuWrGzD0-P4Ax2xnSujuYTw8kQVRxSAnF5n4' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Century could positive.","maxScore":58,"minScore":4,"description":"Mother ahead successful gas city.","estimatedTime":"2 weeks","previewFileId":"09c3f0c5-7bee-4082-9071-ad7679ef2944","createdByUserId":"9f551558-7b4c-4cee-8797-ffb0f785fc4e"}'

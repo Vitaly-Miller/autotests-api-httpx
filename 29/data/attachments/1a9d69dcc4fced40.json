@@ -1,0 +1,25 @@
+{
+  "courses": [
+    {
+      "id": "d2854257-ce0f-4b17-8fb6-c9cf362e4232",
+      "title": "Century could positive.",
+      "maxScore": 58,
+      "minScore": 4,
+      "description": "Mother ahead successful gas city.",
+      "previewFile": {
+        "id": "09c3f0c5-7bee-4082-9071-ad7679ef2944",
+        "filename": "file_1841.png",
+        "directory": "Uploaded",
+        "url": "http://localhost:8000/static/Uploaded/file_1841.png"
+      },
+      "estimatedTime": "2 weeks",
+      "createdByUser": {
+        "id": "9f551558-7b4c-4cee-8797-ffb0f785fc4e",
+        "email": "test_65e8d299@example.com",
+        "lastName": "Fox",
+        "firstName": "Joanna",
+        "middleName": "Lynn"
+      }
+    }
+  ]
+}

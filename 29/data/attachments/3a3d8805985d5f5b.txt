@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjQxOjQ0Ljc4MTA3MyIsInVzZXJfaWQiOiI4ZGM5NjdiYS1hNjBhLTQyOTItOGQ0ZC0zNDYwZmY4MjdlNjQifQ.EzcfvYPbQIjs2fmdEHMyv_r7Qj8IWSb4AmIxopJAqGI' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Expect focus answer simply seek here.","courseId":"80a6f1cc-f3d6-437c-899c-e77c1521b40c","maxScore":73,"minScore":29,"orderIndex":3322,"description":"Likely beat suggest close development once TV.","estimatedTime":"4 weeks"}'

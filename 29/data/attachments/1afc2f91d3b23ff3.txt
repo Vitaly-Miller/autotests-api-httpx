@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjQxOjM2LjM5MjgzOCIsInVzZXJfaWQiOiJiOTY0NjFhMy1hMGI5LTQ5MzAtOWNkZS0wYWE1OGYwNjdiNmEifQ.PeeTHDIfM4jdMQBWukJ7SGMEGeQwNIVN_KLz8EcBySs' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Be because hair reveal green.","courseId":"b72e176e-a209-411c-9880-7485faac9273","maxScore":72,"minScore":1,"orderIndex":8593,"description":"Thousand writer part standard.","estimatedTime":"2 weeks"}'

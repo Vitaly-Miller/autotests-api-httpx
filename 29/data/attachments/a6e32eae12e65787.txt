@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjQxOjMyLjg3MzUxMCIsInVzZXJfaWQiOiJjMzVmOWVlOS1lMGI5LTRjMzEtOTlhOC1iNjYzYmY0NzZlMjkifQ.Cz9Qz-rhHjTMN-8S14MN9mcEjuNZmjGh9CbKj3x1D0I' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Inside know degree control.","maxScore":84,"minScore":2,"description":"Baby develop today include live.","estimatedTime":"6 weeks","previewFileId":"69d04162-a89e-4eac-a042-49971af90fc8","createdByUserId":"c35f9ee9-e0b9-4c31-99a8-b663bf476e29"}'

@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjQxOjQwLjU4ODQ3MiIsInVzZXJfaWQiOiI2OTZlNmQyNy1lMTEyLTQ4YzItYmQxOS1mNTkxNDQwYzUyZjEifQ.WpEy-vkO1ADogTc-hx-3dG902nNjzefjVkL3QiXCJi0' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Rule successful player serve system her.","courseId":"246095d2-d1fa-488c-8bda-c989ce63eb5c","maxScore":61,"minScore":18,"orderIndex":5349,"description":"Rest despite course center.","estimatedTime":"8 weeks"}'

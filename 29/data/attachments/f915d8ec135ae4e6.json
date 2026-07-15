@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "57bc400d-40e8-4353-9ddc-f54bcc7fd3e1",
+    "title": "All event near young.",
+    "maxScore": 94,
+    "minScore": 12,
+    "description": "Garden popular radio music develop.",
+    "previewFile": {
+      "id": "a1b8536a-56af-4567-9e99-798a9df8ac77",
+      "filename": "file_8394.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_8394.png"
+    },
+    "estimatedTime": "5 weeks",
+    "createdByUser": {
+      "id": "dd574c10-7124-4467-b535-4b9a647a9ec8",
+      "email": "test_c9419847@example.com",
+      "lastName": "Cummings",
+      "firstName": "James",
+      "middleName": "Willie"
+    }
+  }
+}

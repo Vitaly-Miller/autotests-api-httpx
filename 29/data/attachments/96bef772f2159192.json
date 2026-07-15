@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "405a35e6-741c-4336-9955-dab3007f4126",
+    "title": "Still bag growth Democrat west affect.",
+    "maxScore": 59,
+    "minScore": 21,
+    "description": "Month difficult role vote me.",
+    "previewFile": {
+      "id": "ac572e82-47e1-4cdf-9c86-1b76b3f6dd7c",
+      "filename": "file_9221.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_9221.png"
+    },
+    "estimatedTime": "4 weeks",
+    "createdByUser": {
+      "id": "6adbc187-5d5f-456a-9be5-96b4664a79ac",
+      "email": "test_91f4c64e@example.com",
+      "lastName": "Simpson",
+      "firstName": "Regina",
+      "middleName": "Adam"
+    }
+  }
+}

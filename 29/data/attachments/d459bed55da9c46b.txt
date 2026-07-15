@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjQxOjM3Ljc4MjA0OCIsInVzZXJfaWQiOiIwYjlkNTQ5Ny1iZjZhLTRkN2EtODI0Ni0yZTZlOTkxZjIwOWMifQ.tApimxgAxlAunjMLkCiYU357KGadUAbJxe9wqfcPwjU' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Represent indicate scene deal discover product.","courseId":"80e51f74-1d80-4456-8ad7-879e07316cd4","maxScore":91,"minScore":5,"orderIndex":6250,"description":"Until run left ground three expert action.","estimatedTime":"9 weeks"}'

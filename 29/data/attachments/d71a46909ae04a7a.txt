@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjQxOjI5LjY3OTQ5NCIsInVzZXJfaWQiOiIwNTIyMmQxYi0xMmNiLTQ0OTEtOGYwZC1iMTdmMGViNTU1MDgifQ._Bo0AbzGdQ5nV63O4kSkuG_16_njjDk63iee7UN8LI0' \
+  -H 'content-type: application/json' \
+  -d '{"title":"These bill land.","maxScore":64,"minScore":6,"description":"Republican word newspaper last bar.","estimatedTime":"4 weeks","previewFileId":"4b30cce1-e43a-43a8-ba98-379688cf0277","createdByUserId":"05222d1b-12cb-4491-8f0d-b17f0eb55508"}'
