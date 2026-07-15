@@ -29,11 +29,11 @@ jobs:
 
       # 3. Шаг для клонирования репозитория с тестовым сервером в рабочую среду
       - name: Clone test server repository
-        run: git clone https://github.com/Vitaly-Miller/autotests-api-server.git  # ⚠️
+        run: git clone https://github.com/Vitaly-Miller/autotests-api-server.git  # ⚠️Путь репозитория с сервером
 
       # 4. Шаг для установки зависимостей для тестового СЕРВЕРА
       - name: Install test server dependencies
-        run: pip install -r autotests-api-server/requirements.txt  # ⚠️
+        run: pip install -r autotests-api-server/requirements.txt                 # ⚠️Путь файла с зависимостями
 
       # 5. Шаг для запуска тестового СЕРВЕРА с необходимыми переменными окружения
       - name: Start a test server
@@ -41,7 +41,7 @@ jobs:
           APP_HOST: "http://localhost:8000"                              # Устанавливаем адрес хоста сервера
           DATABASE_URL: "sqlite+aiosqlite:///./local.db"                 # Устанавливаем URL локальной базы данных
           JWT_ALGORITHM: "HS256"                                         # Алгоритм для JWT токенов
-          JWT_SECRET_KEY: "autotests-api-server-secret-key"              # ⚠️ Секретный ключ для JWT
+          JWT_SECRET_KEY: "autotests-api-server-secret-key"              # ⚠️Секретный ключ для JWT
           JWT_ACCESS_TOKEN_EXPIRE: 1800                                  # Время жизни access token (в секундах)
           JWT_REFRESH_TOKEN_EXPIRE: 5184000                              # Время жизни refresh token (в секундах)
         run: uvicorn main:app --host 0.0.0.0 --port 8000 --app-dir ./autotests-api-server > server.log 2>&1 &  # ⚠️Запускаем сервер с указанными переменными окружения (лог — в server.log)
@@ -137,3 +137,6 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}   # Токен для аутентификации на GitHub
           publish_branch: gh-pages                    # Указываем, что отчёт будет опубликован в ветке gh-pages
           publish_dir: allure-history                 # Указываем папку, которая будет опубликована на GitHub Pages
+
+
+#=======================================================================================================================
