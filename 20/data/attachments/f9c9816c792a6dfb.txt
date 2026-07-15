@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/exercises/f2f7162b-246b-4718-8840-097835b9a8e0 \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDA2OjM0OjU5LjI3NTk1NiIsInVzZXJfaWQiOiI2NTBmYmNiYS01ODYwLTQ4ZTEtODlmNy02YjlhZDY5ZTQ0OTYifQ.iEzJXDDMTChjog_TLzy08JOqnjFJhaPbh4kKaTttUdE' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Relationship read we fact.","maxScore":55,"minScore":9,"orderIndex":4148,"description":"Sure economic statement large hope.","estimatedTime":"2 weeks"}'

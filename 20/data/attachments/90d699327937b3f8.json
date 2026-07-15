@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "6a3a0ab4-a0c6-4b40-a5e7-27140ecf3b30",
+    "title": "Building sign song left.",
+    "maxScore": 62,
+    "minScore": 6,
+    "description": "Tree method seek law.",
+    "previewFile": {
+      "id": "ab0de878-e859-4a3a-8f93-a4b475e8a9bb",
+      "filename": "file_3527.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_3527.png"
+    },
+    "estimatedTime": "3 weeks",
+    "createdByUser": {
+      "id": "98d7f1c9-c719-435c-907d-c10ab55e17b0",
+      "email": "test_1c3f2a23@example.com",
+      "lastName": "Harper",
+      "firstName": "Gerald",
+      "middleName": "Elizabeth"
+    }
+  }
+}

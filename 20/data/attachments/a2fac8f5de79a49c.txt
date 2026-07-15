@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDA2OjM0OjU1Ljc3MTcwOCIsInVzZXJfaWQiOiJiMGEyNGEwOC04NWYzLTRmZmEtOWFkMS0xYmM1MTA1MDNjYjAifQ.i16Pnn8wagHeaMe37BylhUQGtNXyfeysnksIslHFcPU' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Home national couple book.","maxScore":85,"minScore":18,"description":"Back human season.","estimatedTime":"5 weeks","previewFileId":"5ef3d0d7-3975-461a-942b-3beda3ad296e","createdByUserId":"b0a24a08-85f3-4ffa-9ad1-1bc510503cb0"}'

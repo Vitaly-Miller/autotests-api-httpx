@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "bc54f7e3-fc81-47d1-a562-0b6e6504ce3f",
+    "title": "In majority once whole peace top.",
+    "maxScore": 62,
+    "minScore": 8,
+    "description": "Treatment card me across have fear approach.",
+    "previewFile": {
+      "id": "a390e971-7917-4747-ba8b-f510b7a22000",
+      "filename": "file_7457.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_7457.png"
+    },
+    "estimatedTime": "2 weeks",
+    "createdByUser": {
+      "id": "544cf9f7-3019-4503-8182-30bdbde105af",
+      "email": "test_97709c4c@example.com",
+      "lastName": "Rodriguez",
+      "firstName": "Casey",
+      "middleName": "Tommy"
+    }
+  }
+}

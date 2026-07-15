@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/courses/2f319398-6833-44cf-9027-06cd9353d001 \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDA2OjM0OjUzLjAxNzgzOCIsInVzZXJfaWQiOiI4YWNmYjk3OS01OTBjLTRhZWEtODUxYS1lZWYxNmY0MTcxOWIifQ.grWl1LkSkE0TGZY0GZI5d1jHOvpHOg5by97tHaK37sQ' \
+  -H 'content-type: application/json' \
+  -d '{"title":"House group in activity wide international.","maxScore":99,"minScore":23,"description":"Spring staff again these people certainly.","estimatedTime":"5 weeks"}'

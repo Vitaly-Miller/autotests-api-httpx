@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "2f319398-6833-44cf-9027-06cd9353d001",
+    "title": "Idea wish ability.",
+    "maxScore": 55,
+    "minScore": 20,
+    "description": "Recognize get avoid time.",
+    "previewFile": {
+      "id": "4de947d8-bf29-4f58-bd63-4772479f1515",
+      "filename": "file_3386.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_3386.png"
+    },
+    "estimatedTime": "6 weeks",
+    "createdByUser": {
+      "id": "8acfb979-590c-4aea-851a-eef16f41719b",
+      "email": "test_30ddb1fe@example.com",
+      "lastName": "James",
+      "firstName": "Ann",
+      "middleName": "Natalie"
+    }
+  }
+}

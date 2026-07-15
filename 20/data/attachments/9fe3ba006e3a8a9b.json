@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "46e90fec-a81f-42f5-8d49-c4643d4712f6",
+    "title": "Stand general director Republican.",
+    "maxScore": 94,
+    "minScore": 18,
+    "description": "Explain wide best road among must.",
+    "previewFile": {
+      "id": "fda9102a-ce27-4856-9e4e-c536b34e1985",
+      "filename": "file_7879.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_7879.png"
+    },
+    "estimatedTime": "4 weeks",
+    "createdByUser": {
+      "id": "aa96b8ba-0804-4fdf-93e0-b7bf86a832ee",
+      "email": "test_4963af7a@example.com",
+      "lastName": "Taylor",
+      "firstName": "Melissa",
+      "middleName": "Connor"
+    }
+  }
+}

@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDA2OjM0OjUwLjgxNDYwNiIsInVzZXJfaWQiOiIzOTNhNzUyMy0wMzEwLTRjNDAtYjU4YS0xZWI4NzAzMDdmZDEifQ.qNHmdI3RrMniFSUswewK9EGUJGCpKwiEDIIBr65qFlU' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Thought film our show power.","maxScore":64,"minScore":20,"description":"Situation school hospital operation far.","estimatedTime":"9 weeks","previewFileId":"5477e8cb-82f7-4d08-88d1-58fa5a42bcf9","createdByUserId":"393a7523-0310-4c40-b58a-1eb870307fd1"}'

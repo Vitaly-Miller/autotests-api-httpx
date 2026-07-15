@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDA2OjM0OjU0LjY0Njk2NyIsInVzZXJfaWQiOiJhYTk2YjhiYS0wODA0LTRmZGYtOTNlMC1iN2JmODZhODMyZWUifQ.s1tFah5GpGNki0khzCtlpgPTWi12-rAb0mdUg41zH3M' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Sort adult opportunity must.","courseId":"46e90fec-a81f-42f5-8d49-c4643d4712f6","maxScore":57,"minScore":30,"orderIndex":1207,"description":"History or there enter position next sing.","estimatedTime":"8 weeks"}'

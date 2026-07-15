@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDA2OjM0OjUzLjAxNzgzOCIsInVzZXJfaWQiOiI4YWNmYjk3OS01OTBjLTRhZWEtODUxYS1lZWYxNmY0MTcxOWIifQ.grWl1LkSkE0TGZY0GZI5d1jHOvpHOg5by97tHaK37sQ' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Idea wish ability.","maxScore":55,"minScore":20,"description":"Recognize get avoid time.","estimatedTime":"6 weeks","previewFileId":"4de947d8-bf29-4f58-bd63-4772479f1515","createdByUserId":"8acfb979-590c-4aea-851a-eef16f41719b"}'

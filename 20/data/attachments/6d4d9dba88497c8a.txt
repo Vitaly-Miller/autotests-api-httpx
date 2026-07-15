@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/exercises/789b6797-cce6-4d8a-a4d2-ef5356f4d354 \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDA2OjM1OjAwLjIwMzM3MiIsInVzZXJfaWQiOiI5OGQ3ZjFjOS1jNzE5LTQzNWMtOTA3ZC1jMTBhYjU1ZTE3YjAifQ.ttA9CGx_oNbErUQrCwz_vgVaHIoX7A-LusVC6TYxd2E' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Speak bank chance raise make.","maxScore":89,"minScore":11,"orderIndex":9394,"description":"Chair item catch story me.","estimatedTime":"8 weeks"}'

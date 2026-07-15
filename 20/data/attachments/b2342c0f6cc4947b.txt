@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDA2OjM0OjU5LjI3NTk1NiIsInVzZXJfaWQiOiI2NTBmYmNiYS01ODYwLTQ4ZTEtODlmNy02YjlhZDY5ZTQ0OTYifQ.iEzJXDDMTChjog_TLzy08JOqnjFJhaPbh4kKaTttUdE' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Clearly require will receive detail inside.","courseId":"b972c689-2004-4bf6-a5ac-a50b9f095f07","maxScore":73,"minScore":14,"orderIndex":2473,"description":"Two thank yes clear small.","estimatedTime":"8 weeks"}'

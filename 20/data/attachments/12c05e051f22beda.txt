@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDA2OjM0OjU5LjQ5NTIxNCIsInVzZXJfaWQiOiI2NTBmYmNiYS01ODYwLTQ4ZTEtODlmNy02YjlhZDY5ZTQ0OTYifQ.S2xoVI9YeYf524X2iX7VXavetwNqgN0LN--vt-SM4x8' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Method will as people next special.","maxScore":83,"minScore":26,"description":"Bed least value son near memory above.","estimatedTime":"7 weeks","previewFileId":"ce81935f-b811-46f9-874e-d946c93391c9","createdByUserId":"650fbcba-5860-48e1-89f7-6b9ad69e4496"}'

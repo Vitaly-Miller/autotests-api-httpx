@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDA2OjM0OjU2LjcxMzQxNyIsInVzZXJfaWQiOiJiMWYyNjZjMy1hOWEzLTQxZGQtYmY5OC03MTI2MTg1NTcwYmEifQ.z2nLOH3bUHSkeU4uImKcmx8-ibx2wxpVUGCSOz9ZDhY' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Recognize citizen probably rate early just.","maxScore":96,"minScore":13,"description":"Well finally despite. Not they her occur entire.","estimatedTime":"7 weeks","previewFileId":"7ffd1a72-ab8e-44ea-ae8e-623f4165bf92","createdByUserId":"b1f266c3-a9a3-41dd-bf98-7126185570ba"}'
