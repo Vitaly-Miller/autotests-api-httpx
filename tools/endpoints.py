@@ -5,12 +5,12 @@ from enum import StrEnum
 
 #=======================================================================================================================
 class Endpoint(StrEnum):
-    route = '/api/v1'
+    prefix = '/api/v1'
 
-    USERS = f'{route}/users'
-    AUTH = f'{route}/authentication'
-    FILES = f'{route}/files'
-    COURSES = f'{route}/courses'
-    EXERCISES = f'{route}/exercises'
+    USERS = f'{prefix}/users'
+    AUTH = f'{prefix}/authentication'
+    FILES = f'{prefix}/files'
+    COURSES = f'{prefix}/courses'
+    EXERCISES = f'{prefix}/exercises'
 
 #=======================================================================================================================
