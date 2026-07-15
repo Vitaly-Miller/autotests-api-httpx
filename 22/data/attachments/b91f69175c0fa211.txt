@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE2OjIxOjMzLjg2NzM1NyIsInVzZXJfaWQiOiJiNGQxY2MyYS1hN2UxLTRhYTItYTJiYy0wNTU4YTVhODc1N2QifQ.rmMTW7YgFcclPZD7_EufNkX_YxC-eUJwG8mMj7j8WzQ' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Region seem letter.","maxScore":99,"minScore":5,"description":"Black smile health guy heart.","estimatedTime":"4 weeks","previewFileId":"472a5072-7a14-46b8-8149-14a946da7f37","createdByUserId":"b4d1cc2a-a7e1-4aa2-a2bc-0558a5a8757d"}'

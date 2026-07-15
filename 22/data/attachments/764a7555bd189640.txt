@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE2OjIxOjM3LjA1MzAzMSIsInVzZXJfaWQiOiJlNTdjOGYwMS00NzBmLTQ0MzktOTAwMS04YzliMTcxZWM4NmIifQ.6He7LMfsRPMRLcmiWqoDFulPybcrO-93F6ZgDagmxsQ' \
+  -H 'content-type: application/json' \
+  -d '{"title":"With Mrs door.","maxScore":71,"minScore":7,"description":"Morning it him nice lead be.","estimatedTime":"9 weeks","previewFileId":"2894eb77-1989-4076-bb7b-29da0b967225","createdByUserId":"e57c8f01-470f-4439-9001-8c9b171ec86b"}'

@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "3ca865a3-3022-4260-92cb-dfb97cfc6295",
+    "title": "Probably model most data concern itself.",
+    "maxScore": 84,
+    "minScore": 19,
+    "description": "Look technology push require provide.",
+    "previewFile": {
+      "id": "35cc51cf-d66d-4433-a94c-94a08fbc0329",
+      "filename": "file_6236.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_6236.png"
+    },
+    "estimatedTime": "2 weeks",
+    "createdByUser": {
+      "id": "f7e529c8-4bd8-4936-9556-61f6be5d5de5",
+      "email": "test_7efcb24a@example.com",
+      "lastName": "Miller",
+      "firstName": "Alicia",
+      "middleName": "Ashley"
+    }
+  }
+}

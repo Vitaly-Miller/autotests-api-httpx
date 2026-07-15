@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "89e2c24f-f489-45f7-b364-65fdc0742b62",
+    "title": "Else art rate high pick.",
+    "maxScore": 64,
+    "minScore": 2,
+    "description": "Put tell concern television smile.",
+    "previewFile": {
+      "id": "63718e23-4d51-4eab-80bf-d89e6ef4fa0d",
+      "filename": "file_4865.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_4865.png"
+    },
+    "estimatedTime": "3 weeks",
+    "createdByUser": {
+      "id": "f95c6d0a-215d-4963-92ce-ac885807272b",
+      "email": "test_5b556a7d@example.com",
+      "lastName": "Schneider",
+      "firstName": "Lindsay",
+      "middleName": "Jade"
+    }
+  }
+}

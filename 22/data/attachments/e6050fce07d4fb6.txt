@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE2OjIxOjMyLjczMDQzOCIsInVzZXJfaWQiOiJmOTVjNmQwYS0yMTVkLTQ5NjMtOTJjZS1hYzg4NTgwNzI3MmIifQ.zUPq4y8OJulzVdPr28xmNqok9-DIJFI3bahSIfhEZyM' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Else art rate high pick.","maxScore":64,"minScore":2,"description":"Put tell concern television smile.","estimatedTime":"3 weeks","previewFileId":"63718e23-4d51-4eab-80bf-d89e6ef4fa0d","createdByUserId":"f95c6d0a-215d-4963-92ce-ac885807272b"}'

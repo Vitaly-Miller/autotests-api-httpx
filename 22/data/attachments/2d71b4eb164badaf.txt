@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE2OjIxOjI5Ljg1MzE1OSIsInVzZXJfaWQiOiIyOTU2MGJhOS02OWJjLTQ0NjQtYjdjOS1lNjUxY2U4NGQzODIifQ.i0fy6C9Ft0QZCdC8FJLz-lCtzLrNMODZ9bfGQ2DRmzQ' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Item key then.","maxScore":80,"minScore":25,"description":"Rule huge least official.","estimatedTime":"8 weeks","previewFileId":"2ae74e5d-c4dd-4242-88c3-a61fb851f29d","createdByUserId":"29560ba9-69bc-4464-b7c9-e651ce84d382"}'

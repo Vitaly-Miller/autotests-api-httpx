@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "24223823-e55a-469e-9428-d474130dc1dd",
+    "title": "Item key then.",
+    "maxScore": 80,
+    "minScore": 25,
+    "description": "Rule huge least official.",
+    "previewFile": {
+      "id": "2ae74e5d-c4dd-4242-88c3-a61fb851f29d",
+      "filename": "file_4216.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_4216.png"
+    },
+    "estimatedTime": "8 weeks",
+    "createdByUser": {
+      "id": "29560ba9-69bc-4464-b7c9-e651ce84d382",
+      "email": "test_18d21a3b@example.com",
+      "lastName": "Evans",
+      "firstName": "Ryan",
+      "middleName": "Kimberly"
+    }
+  }
+}

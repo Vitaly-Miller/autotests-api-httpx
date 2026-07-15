@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/exercises/b9e964b7-a097-4a57-9178-d75c39f9fdd9 \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE2OjIxOjQwLjI1NTg2MSIsInVzZXJfaWQiOiJmMDAxODQxMC1iOGJlLTQ1NGItYTMzZi0xZmVhZjJmMTEzNDEifQ.QL-AFxu5kQx2LnQYk4Hlm6a0s2ORkDoOhgblhsngtEw' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Result TV paper.","maxScore":66,"minScore":30,"orderIndex":6457,"description":"Wonder drug area they law training.","estimatedTime":"2 weeks"}'

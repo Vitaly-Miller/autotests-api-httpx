@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE2OjIxOjM2LjgxNzg4MyIsInVzZXJfaWQiOiJlNTdjOGYwMS00NzBmLTQ0MzktOTAwMS04YzliMTcxZWM4NmIifQ.w5NU9fyIdG7F0gHTGeGQzX1K2XJkEY_9EScAwVrl1GE' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Event only identify fire.","courseId":"0e4a3a32-a7fc-4f66-bec4-ab64cf8ac056","maxScore":91,"minScore":5,"orderIndex":5987,"description":"Figure arm happen before tax summer.","estimatedTime":"9 weeks"}'

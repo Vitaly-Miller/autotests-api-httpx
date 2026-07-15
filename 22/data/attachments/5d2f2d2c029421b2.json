@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "d1ef401f-ef4b-4162-b511-b9e4f197fd1f",
+    "title": "Which local still.",
+    "maxScore": 62,
+    "minScore": 22,
+    "description": "Everyone together house occur yourself.",
+    "previewFile": {
+      "id": "74d4eb23-5b19-4afc-a5fe-075966d2b26f",
+      "filename": "file_9284.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_9284.png"
+    },
+    "estimatedTime": "8 weeks",
+    "createdByUser": {
+      "id": "c28f4d62-bf3c-41a9-8244-5cd4e7eab878",
+      "email": "test_d0e69d9d@example.com",
+      "lastName": "Hanson",
+      "firstName": "Anthony",
+      "middleName": "Robin"
+    }
+  }
+}

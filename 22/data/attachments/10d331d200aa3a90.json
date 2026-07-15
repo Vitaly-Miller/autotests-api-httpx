@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "d4e33d2c-53d3-46dc-9a6e-d119f43ea9f3",
+    "title": "Federal she white worker.",
+    "maxScore": 57,
+    "minScore": 25,
+    "description": "Ten draw appear business might card.",
+    "previewFile": {
+      "id": "6034325e-38c4-4b4a-ab01-c7ad9735ced6",
+      "filename": "file_7800.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_7800.png"
+    },
+    "estimatedTime": "7 weeks",
+    "createdByUser": {
+      "id": "03c9c587-31ed-4981-af78-d6d4365ce940",
+      "email": "test_20ec347a@example.com",
+      "lastName": "Barber",
+      "firstName": "Tyler",
+      "middleName": "Anthony"
+    }
+  }
+}

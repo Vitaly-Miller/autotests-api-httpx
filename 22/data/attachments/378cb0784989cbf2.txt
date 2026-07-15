@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/courses/a953c334-9494-482d-b41f-e447fd4d6d2c \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE2OjIxOjMxLjM4NTk3OSIsInVzZXJfaWQiOiJkMzgxYjlkNC01YmRhLTRlZTMtOTc2Yi04OWIxODU0NTFiMGYifQ.6DrOHkJXZgTKUOrQgQ7qtaM0NUPova3pwc5bB5VNMfA' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Field floor stage ago success hotel.","maxScore":54,"minScore":5,"description":"Ago performance phone field sure this.","estimatedTime":"7 weeks"}'

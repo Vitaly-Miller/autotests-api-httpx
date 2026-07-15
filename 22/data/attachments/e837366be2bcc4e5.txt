@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE2OjIxOjMzLjYzMjEzMSIsInVzZXJfaWQiOiJiNGQxY2MyYS1hN2UxLTRhYTItYTJiYy0wNTU4YTVhODc1N2QifQ.FsEfqA5qDxsj7xL104OjEvp4sPQ1G6fsp6Zuu6yRI6s' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Production ahead leave hour probably.","courseId":"2b56adf5-60c8-4236-89e0-9de608d9bc56","maxScore":91,"minScore":13,"orderIndex":227,"description":"Marriage local local idea street drop.","estimatedTime":"3 weeks"}'
