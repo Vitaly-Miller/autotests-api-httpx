@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "fb2cc78c-0dce-48cb-bc33-1305b0f78b19",
+    "title": "Participant down keep operation.",
+    "maxScore": 86,
+    "minScore": 29,
+    "description": "Put open memory over car collection.",
+    "previewFile": {
+      "id": "0bd7b234-5f44-441f-b0d2-826db8566e61",
+      "filename": "file_5413.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_5413.png"
+    },
+    "estimatedTime": "6 weeks",
+    "createdByUser": {
+      "id": "5803d03b-47ec-4dfb-a287-41df17d3671e",
+      "email": "test_6ca2064f@example.com",
+      "lastName": "Lopez",
+      "firstName": "Elizabeth",
+      "middleName": "Kyle"
+    }
+  }
+}

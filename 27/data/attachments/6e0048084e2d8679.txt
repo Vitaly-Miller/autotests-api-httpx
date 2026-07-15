@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjMwOjQ0Ljk3NjAwMiIsInVzZXJfaWQiOiJkOTdmZGYwZi1jYTFmLTQxNWEtYjBkNC00MzY4YTZlZDM1NTIifQ.2n3BU-3oOZ_-2InZJzvQkVhIflgF65So3KTdcVOZmdA' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Decide far change culture.","courseId":"5da68df7-aa14-41fb-a86a-00565d393647","maxScore":92,"minScore":15,"orderIndex":629,"description":"Chair understand effort gun life building.","estimatedTime":"9 weeks"}'

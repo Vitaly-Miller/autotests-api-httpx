@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "75920f40-a5be-4cc4-b664-d580e50d9339",
+    "title": "If guess challenge charge huge.",
+    "maxScore": 89,
+    "minScore": 10,
+    "description": "Idea medical growth individual.",
+    "previewFile": {
+      "id": "06b7ece0-a8a2-48ff-9736-5d0473566c02",
+      "filename": "file_4951.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_4951.png"
+    },
+    "estimatedTime": "2 weeks",
+    "createdByUser": {
+      "id": "52871979-2d87-4bf4-9066-18dd256ae636",
+      "email": "test_920b4f57@example.com",
+      "lastName": "Ramirez",
+      "firstName": "Brandon",
+      "middleName": "Daniel"
+    }
+  }
+}

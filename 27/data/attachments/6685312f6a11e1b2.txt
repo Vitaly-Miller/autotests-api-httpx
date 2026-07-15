@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjMwOjQyLjc1NDQ2MyIsInVzZXJfaWQiOiI0Y2QzMDU0OC00OWEwLTRkMzQtYWRlNy1kNjAwZGVlNjRjNmYifQ.6FevaTwSXaJMsBx3j2_NstMMN2AU1MLKh5BDCqDC83o' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Best ever near benefit better south.","maxScore":56,"minScore":13,"description":"Care style defense father.","estimatedTime":"6 weeks","previewFileId":"79cb46b3-b12c-4564-9d5c-3acbffbba2c5","createdByUserId":"4cd30548-49a0-4d34-ade7-d600dee64c6f"}'

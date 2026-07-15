@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjMwOjUxLjI5ODAxMyIsInVzZXJfaWQiOiJlMmQ4NDMwYi0xNmY2LTQwMTctYTVlNS1mNzNhNjU5ZWQwYTQifQ.jm5G2H2Tue1VUEV66lNraY08cD0uJUyAyYZziiHyqBg' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Move across budget attack model.","courseId":"0af60644-c2d4-4a48-b333-8611d3f125e1","maxScore":100,"minScore":16,"orderIndex":7528,"description":"Writer safe power.","estimatedTime":"8 weeks"}'

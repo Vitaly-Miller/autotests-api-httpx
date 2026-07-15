@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjMwOjQ2LjIyNjU2OCIsInVzZXJfaWQiOiJhNzMwMTYzMy01MGU5LTRhNTktODc3NS04ODQyNzA2OGYwNjMifQ.jpPV1A8haCnhJGu9S0CSkXtv1K21mZvpjVVZAvhEKbM' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Early door other high.","courseId":"0da814a1-8a11-42cd-ba67-8d8c1bf30f1a","maxScore":96,"minScore":13,"orderIndex":1045,"description":"Tend worker receive plant like.","estimatedTime":"9 weeks"}'

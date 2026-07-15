@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjMwOjUyLjU3NDM1NSIsInVzZXJfaWQiOiI1NDIyOTdkYi0yYjcwLTRlMWMtYWY4Yy0zOGJhZTRiMTkwYzMifQ.l6C5LI6IUYtNxy-iY94kSxTCutAR8XfrJSiCNF0bvy0' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Which positive together vote could brother.","courseId":"dc435d3e-afa3-47f4-b92e-e29fb021e468","maxScore":94,"minScore":20,"orderIndex":7643,"description":"Mean difference offer play.","estimatedTime":"3 weeks"}'

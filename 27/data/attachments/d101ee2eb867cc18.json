@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "42554056-8a50-4be2-ad05-10bd0a46dd45",
+    "title": "Wait environmental will.",
+    "maxScore": 94,
+    "minScore": 14,
+    "description": "Travel career theory see.",
+    "previewFile": {
+      "id": "f59fdd1f-7c7e-4636-bdb6-055c4d9d9615",
+      "filename": "file_8133.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_8133.png"
+    },
+    "estimatedTime": "3 weeks",
+    "createdByUser": {
+      "id": "ab134f71-6cab-4d0f-9c1c-4243fd33a282",
+      "email": "test_a40e413e@example.com",
+      "lastName": "Hopkins",
+      "firstName": "Kristina",
+      "middleName": "Elizabeth"
+    }
+  }
+}

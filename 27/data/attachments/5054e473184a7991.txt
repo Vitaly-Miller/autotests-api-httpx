@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/courses/1d96b461-cc98-4f1c-a358-3d919e43aa49 \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjMwOjQyLjc1NDQ2MyIsInVzZXJfaWQiOiI0Y2QzMDU0OC00OWEwLTRkMzQtYWRlNy1kNjAwZGVlNjRjNmYifQ.6FevaTwSXaJMsBx3j2_NstMMN2AU1MLKh5BDCqDC83o' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Into build small especially civil central.","maxScore":76,"minScore":17,"description":"Scientist through often peace.","estimatedTime":"2 weeks"}'

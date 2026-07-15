@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjMwOjQ0LjAwNTQ5MiIsInVzZXJfaWQiOiI1Mjg3MTk3OS0yZDg3LTRiZjQtOTA2Ni0xOGRkMjU2YWU2MzYifQ.eLu-9uG2FQ3e27vG7aHhF_cIt0t0g-rt2OEbXpSxexs' \
+  -H 'content-type: application/json' \
+  -d '{"title":"If guess challenge charge huge.","maxScore":89,"minScore":10,"description":"Idea medical growth individual.","estimatedTime":"2 weeks","previewFileId":"06b7ece0-a8a2-48ff-9736-5d0473566c02","createdByUserId":"52871979-2d87-4bf4-9066-18dd256ae636"}'

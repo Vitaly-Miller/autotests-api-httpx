@@ -1,0 +1,25 @@
+{
+  "courses": [
+    {
+      "id": "2a6e9243-ed00-4ec0-a5a5-052640bfd698",
+      "title": "Herself remain discover life century near.",
+      "maxScore": 52,
+      "minScore": 4,
+      "description": "Company effort able late.",
+      "previewFile": {
+        "id": "f7598fae-5477-4c9f-8b5a-f4f99bcce7e8",
+        "filename": "file_4698.png",
+        "directory": "Uploaded",
+        "url": "http://localhost:8000/static/Uploaded/file_4698.png"
+      },
+      "estimatedTime": "7 weeks",
+      "createdByUser": {
+        "id": "fbbe35ca-ad2b-4d5f-9c70-e1bb1bf09172",
+        "email": "test_48742246@example.com",
+        "lastName": "Ferguson",
+        "firstName": "Michael",
+        "middleName": "Nathan"
+      }
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjMwOjQ3LjUwOTM1MSIsInVzZXJfaWQiOiI3OTMzNTc1Yy01YzhjLTRjZTAtOTRkYy1lNGMyMDRmMzZhYzIifQ.n5rYCqHzE-vJPsUfYvGpRdW0xUnWCv_NE0NtWeuPIqw' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Most time easy plant player.","courseId":"bf31eee6-48ba-477c-a7ba-eb77b14341e6","maxScore":57,"minScore":25,"orderIndex":7307,"description":"Word option maybe ahead begin pick.","estimatedTime":"7 weeks"}'

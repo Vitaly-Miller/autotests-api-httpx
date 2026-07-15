@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "92646e55-b53b-436b-8ac3-23b71d9da73e",
+    "title": "Coach speech they.",
+    "maxScore": 89,
+    "minScore": 30,
+    "description": "Edge rate someone range artist major production.",
+    "previewFile": {
+      "id": "7e72ed84-e813-49f6-af90-dfbd367c5560",
+      "filename": "file_4071.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_4071.png"
+    },
+    "estimatedTime": "6 weeks",
+    "createdByUser": {
+      "id": "56da117a-88a2-4601-ba2d-3a1f7a4f3d0a",
+      "email": "test_31583916@example.com",
+      "lastName": "Booth",
+      "firstName": "Michael",
+      "middleName": "Eric"
+    }
+  }
+}

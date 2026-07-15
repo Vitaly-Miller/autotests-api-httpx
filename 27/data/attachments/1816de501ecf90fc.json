@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "350e48e3-b690-4089-83e5-3c1a0cf082a7",
+    "title": "Develop mission future modern involve.",
+    "maxScore": 58,
+    "minScore": 30,
+    "description": "Which peace note red whose.",
+    "previewFile": {
+      "id": "f89b1832-8ec8-4b9d-977d-09e5c933e66d",
+      "filename": "file_3070.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_3070.png"
+    },
+    "estimatedTime": "2 weeks",
+    "createdByUser": {
+      "id": "f9b927b9-ed40-47b4-a7dd-f579a3a5469d",
+      "email": "test_74228a0f@example.com",
+      "lastName": "Brady",
+      "firstName": "Ashley",
+      "middleName": "Linda"
+    }
+  }
+}

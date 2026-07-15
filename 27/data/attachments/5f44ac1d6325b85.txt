@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/exercises/f434be71-7db6-4bb0-841f-013f4bfada0e \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjMwOjUyLjU3NDM1NSIsInVzZXJfaWQiOiI1NDIyOTdkYi0yYjcwLTRlMWMtYWY4Yy0zOGJhZTRiMTkwYzMifQ.l6C5LI6IUYtNxy-iY94kSxTCutAR8XfrJSiCNF0bvy0' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Know dinner our candidate type.","maxScore":87,"minScore":9,"orderIndex":8013,"description":"Without kind mention itself chance million.","estimatedTime":"2 weeks"}'
