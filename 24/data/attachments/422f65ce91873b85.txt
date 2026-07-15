@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE2OjM2OjIyLjg0OTMxMSIsInVzZXJfaWQiOiI0ZjkwM2QzNi03Y2ViLTQ1NDktYjQ0ZS00OTI0NDI1MGRjYjgifQ.YpQOu-j3pC5WPJiOSixOcl_6qEn9U9FIT9AcwL_bhQw' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Trip single become go.","maxScore":50,"minScore":8,"description":"Room series tonight style.","estimatedTime":"2 weeks","previewFileId":"904bd1e4-ffc9-4ba3-878a-0afb903e98fa","createdByUserId":"4f903d36-7ceb-4549-b44e-49244250dcb8"}'

@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "4ec251c0-c50e-4737-a557-51fb382b87ef",
+    "title": "Reveal member leader.",
+    "maxScore": 92,
+    "minScore": 9,
+    "description": "Ball year perform common scene.",
+    "previewFile": {
+      "id": "8f9c45a8-9a27-4768-bff1-95bb1a7a66a7",
+      "filename": "file_7986.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_7986.png"
+    },
+    "estimatedTime": "7 weeks",
+    "createdByUser": {
+      "id": "27572279-0b59-4068-b7e1-82174b1c5c07",
+      "email": "test_e459b343@example.com",
+      "lastName": "Harding",
+      "firstName": "Rebecca",
+      "middleName": "Alison"
+    }
+  }
+}

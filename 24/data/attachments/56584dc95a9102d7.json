@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "579701c2-901a-4f11-978c-2d266c469f2e",
+    "title": "Reach fear hard what.",
+    "maxScore": 86,
+    "minScore": 2,
+    "description": "Billion out article attorney cultural.",
+    "previewFile": {
+      "id": "7f11d513-a5ee-418d-be44-de17904b1f3d",
+      "filename": "file_9876.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_9876.png"
+    },
+    "estimatedTime": "3 weeks",
+    "createdByUser": {
+      "id": "e487d69d-08b6-4bda-b502-7ead21095f9e",
+      "email": "test_a4829299@example.com",
+      "lastName": "Anderson",
+      "firstName": "Vanessa",
+      "middleName": "Nicole"
+    }
+  }
+}

@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/exercises/23e617b5-10db-4ffc-aa9c-025a88b0c694 \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE2OjM2OjMyLjM3NTk2NSIsInVzZXJfaWQiOiI5N2M4MDJkMi0yNTQxLTRiNGEtOGRkYi03NDEzMTYwMTQyNDEifQ.g66Z_o6KC2Be20eYiW8_j_3cXo-JdJIdHrV1m2xtZ9g' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Image price feeling herself.","maxScore":97,"minScore":25,"orderIndex":5845,"description":"Above watch nearly improve.","estimatedTime":"7 weeks"}'

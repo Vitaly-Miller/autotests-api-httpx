@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "4f581eeb-8cff-4a62-84fc-d632368c72bd",
+    "title": "Business drive measure paper fill can.",
+    "maxScore": 91,
+    "minScore": 13,
+    "description": "Least color similar with president pretty.",
+    "previewFile": {
+      "id": "180a89dd-4852-474d-a7cb-87003057ce39",
+      "filename": "file_4145.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_4145.png"
+    },
+    "estimatedTime": "4 weeks",
+    "createdByUser": {
+      "id": "c63dcda7-c851-4cf7-8833-606e400631e2",
+      "email": "test_a44ee0d7@example.com",
+      "lastName": "Wood",
+      "firstName": "Nicholas",
+      "middleName": "Eileen"
+    }
+  }
+}

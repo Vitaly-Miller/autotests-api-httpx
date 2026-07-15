@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE2OjM2OjI2LjMzOTIyMCIsInVzZXJfaWQiOiI4ODcwOWFiOC01NWMzLTQwOTgtYjJlZS02ZWJhYjJjZmY2OWYifQ.u5oDp1zsc46LdzDnOMV3et5Ce5uuLpSxXqzVqWlgt-k' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Ever once hand note response.","maxScore":50,"minScore":30,"description":"True wait remember provide customer stuff.","estimatedTime":"2 weeks","previewFileId":"a615558c-b72a-411d-946b-d5484e887ee8","createdByUserId":"88709ab8-55c3-4098-b2ee-6ebab2cff69f"}'

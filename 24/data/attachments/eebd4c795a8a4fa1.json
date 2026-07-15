@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "5880ad10-cb91-4a4d-a997-46dfd39d1f52",
+    "title": "Billion politics operation.",
+    "maxScore": 53,
+    "minScore": 8,
+    "description": "Democratic during people project evidence begin.",
+    "previewFile": {
+      "id": "4685b54e-6773-4a56-a7ab-63ce36211bdf",
+      "filename": "file_4904.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_4904.png"
+    },
+    "estimatedTime": "9 weeks",
+    "createdByUser": {
+      "id": "1a6a9973-2086-4933-8da5-0572ca2e8ee6",
+      "email": "test_5e4169b7@example.com",
+      "lastName": "Jones",
+      "firstName": "Lauren",
+      "middleName": "Jason"
+    }
+  }
+}

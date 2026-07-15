@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE2OjM2OjIwLjkyNDkzNCIsInVzZXJfaWQiOiJkNDk1MmFkNy1hNzFkLTQyMzQtYmE4ZS00Y2RiNzE2ZGMyMzQifQ.LBJMaSWmmGW-zJQtbgfKelCLoalLKRIT2ZWeBLkAaiQ' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Any southern with.","maxScore":88,"minScore":26,"description":"Which two charge can within.","estimatedTime":"8 weeks","previewFileId":"62e97b10-b284-4a73-969d-6f2067abe401","createdByUserId":"d4952ad7-a71d-4234-ba8e-4cdb716dc234"}'

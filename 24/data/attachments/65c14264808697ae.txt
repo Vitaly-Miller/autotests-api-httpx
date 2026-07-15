@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE2OjM2OjMxLjEyNTEwNyIsInVzZXJfaWQiOiIyNzU3MjI3OS0wYjU5LTQwNjgtYjdlMS04MjE3NGIxYzVjMDcifQ.h1H9nYuFcaYnL0pLFIU_AyZZd8iTbOwrh2QU8c00-g0' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Significant college project again describe song.","courseId":"4ec251c0-c50e-4737-a557-51fb382b87ef","maxScore":95,"minScore":13,"orderIndex":6149,"description":"Left budget pattern poor same remember.","estimatedTime":"9 weeks"}'

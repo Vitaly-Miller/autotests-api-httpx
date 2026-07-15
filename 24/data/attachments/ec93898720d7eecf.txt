@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE2OjM2OjI0Ljc2Mzc0NCIsInVzZXJfaWQiOiJiNWQ4N2Y0My1lZGUzLTQ5OTgtODYzNC0zZGNmMzc5MTFlMGIifQ.s2X68AcWtc3XPTurFDGre3lCYI1vUtpt1qMRGZZHYgw' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Population lot court.","courseId":"bdfb2d5c-c703-4321-a4d5-d4ea3531bd78","maxScore":75,"minScore":21,"orderIndex":4014,"description":"Past career success oil man.","estimatedTime":"7 weeks"}'

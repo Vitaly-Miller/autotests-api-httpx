@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "bdfb2d5c-c703-4321-a4d5-d4ea3531bd78",
+    "title": "Fight how much result without gun.",
+    "maxScore": 60,
+    "minScore": 28,
+    "description": "Professional let within huge.",
+    "previewFile": {
+      "id": "caab3ab7-4d19-4f68-b614-c8b457931b50",
+      "filename": "file_7651.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_7651.png"
+    },
+    "estimatedTime": "8 weeks",
+    "createdByUser": {
+      "id": "b5d87f43-ede3-4998-8634-3dcf37911e0b",
+      "email": "test_a91454c7@example.com",
+      "lastName": "Taylor",
+      "firstName": "Luke",
+      "middleName": "Melissa"
+    }
+  }
+}

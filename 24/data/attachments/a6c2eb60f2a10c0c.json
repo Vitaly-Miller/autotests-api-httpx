@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "ce3eaeac-3b50-4c81-b9a8-0cc1f6c539f2",
+    "title": "Once admit assume probably themselves.",
+    "maxScore": 59,
+    "minScore": 24,
+    "description": "Entire key especially seven evidence brother.",
+    "previewFile": {
+      "id": "fdd55032-3721-43b2-aaa6-9db031aad0b0",
+      "filename": "file_8720.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_8720.png"
+    },
+    "estimatedTime": "5 weeks",
+    "createdByUser": {
+      "id": "e14eb3e5-4647-424b-9a36-01f287830756",
+      "email": "test_15a55441@example.com",
+      "lastName": "Evans",
+      "firstName": "Jessica",
+      "middleName": "Dustin"
+    }
+  }
+}

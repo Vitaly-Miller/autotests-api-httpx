@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE2OjM2OjI2LjA0MTc0MCIsInVzZXJfaWQiOiI4ODcwOWFiOC01NWMzLTQwOTgtYjJlZS02ZWJhYjJjZmY2OWYifQ.Wh1T-sCUCTroKKKqO-mfN3_Dah4dexCCIv8sxMELb24' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Thing arm capital from.","courseId":"7ca49080-20a1-4f3d-9498-54ceb347a877","maxScore":100,"minScore":19,"orderIndex":1611,"description":"Its professor town name success first.","estimatedTime":"9 weeks"}'
