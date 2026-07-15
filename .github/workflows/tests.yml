@@ -5,16 +5,16 @@ name: API tests
 on:
   push:
     branches:
-      - main                  # Запускать workflow, когда будет сделан коммит в ветку main
+      - main          # Запускать workflow, когда будет сделан коммит в ветку main
   pull_request:
     branches:
-      - main                  # Запускать workflow, когда будет сделан pull request в ветку main
+      - main          # Запускать workflow, когда будет сделан pull request в ветку main
 
 # Определяем все джобы, которые должны быть выполнены в рамках работы с тестами
 jobs:
   #============================================ Джоба 1: запуск автотестов =============================================
   run-tests:
-    runs-on: ubuntu-latest    # Указываем, что тесты будут запускаться на последней версии Ubuntu
+    runs-on: ubuntu-latest             # Указываем, что тесты будут запускаться на последней версии Ubuntu
 
     steps:
       # 1. Шаг, который будет клонировать репозиторий на машину GitHub Actions
@@ -38,19 +38,19 @@ jobs:
       # 5. Шаг для запуска тестового СЕРВЕРА с необходимыми переменными окружения
       - name: Start a test server
         env:
-          APP_HOST: "http://localhost:8000"                              # Устанавливаем адрес хоста сервера
-          DATABASE_URL: "sqlite+aiosqlite:///./local.db"                 # Устанавливаем URL локальной базы данных
-          JWT_ALGORITHM: "HS256"                                         # Алгоритм для JWT токенов
-          JWT_SECRET_KEY: "autotests-api-server-secret-key"              # ⚠️Секретный ключ для JWT
-          JWT_ACCESS_TOKEN_EXPIRE: 1800                                  # Время жизни access token (в секундах)
-          JWT_REFRESH_TOKEN_EXPIRE: 5184000                              # Время жизни refresh token (в секундах)
+          APP_HOST: "http://localhost:8000"                         # Устанавливаем адрес хоста сервера
+          DATABASE_URL: "sqlite+aiosqlite:///./local.db"            # Устанавливаем URL локальной базы данных
+          JWT_ALGORITHM: "HS256"                                    # Алгоритм для JWT токенов
+          JWT_SECRET_KEY: "autotests-api-server-secret-key"         # ⚠️Секретный ключ для JWT
+          JWT_ACCESS_TOKEN_EXPIRE: 1800                             # Время жизни access token (в секундах)
+          JWT_REFRESH_TOKEN_EXPIRE: 5184000                         # Время жизни refresh token (в секундах)
         run: uvicorn main:app --host 0.0.0.0 --port 8000 --app-dir ./autotests-api-server > server.log 2>&1 &  # ⚠️Запускаем сервер с указанными переменными окружения (лог — в server.log)
 
       # 6. Шаг для установки всех зависимостей проекта
       - name: Install dependencies
         run: |
-          python -m pip install --upgrade pip         # Обновляем pip до последней версии
-          pip install -r requirements.txt             # Устанавливаем зависимости проекта, указанные в requirements.txt
+          python -m pip install --upgrade pip        # Обновляем pip до последней версии
+          pip install -r requirements.txt            # Устанавливаем зависимости проекта, указанные в requirements.txt
 
       # 6.1. Шаг-проверка, что тестовый сервер поднялся (иначе выводим его лог и останавливаем workflow)
       - name: Wait for test server
@@ -113,8 +113,8 @@ jobs:
         uses: actions/checkout@v7              # ⚠️Клонируем репозиторий, чтобы получить историю отчётов ⚠️https://github.com/actions/checkout
         continue-on-error: true                # Если ветки gh-pages ещё нет, workflow всё равно продолжит выполнение
         with:
-          ref: gh-pages                        # Указываем ветку gh-pages для получения отчётов
-          path: gh-pages                       # Указываем путь для сохранения отчётов
+          ref: gh-pages                        # Ветка gh-pages для получения отчётов
+          path: gh-pages                       # Путь для сохранения отчётов
 
       # 2. Шаг для загрузки артефакта allure-results, сохранённого в джобе run-tests
       - name: Download Allure results
@@ -127,8 +127,8 @@ jobs:
       - name: Generate Allure Report with history
         uses: simple-elf/allure-report-action@master  # Используем готовое решение из GitHub Marketplace ⚠️https://github.com/simple-elf/allure-report-action
         with:
-          allure_results: allure-results              # Указываем каталог с результатами тестов
-          allure_history: allure-history              # Указываем каталог для истории отчётов Allure
+          allure_results: allure-results              # Каталог с результатами тестов
+          allure_history: allure-history              # Каталог для истории отчётов Allure
 
       # 4. Шаг для деплоя отчёта Allure на GitHub Pages, чтобы его можно было просматривать в браузере
       - name: Deploy report to GitHub Pages
@@ -136,7 +136,7 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}   # Токен для аутентификации на GitHub
           publish_branch: gh-pages                    # Указываем, что отчёт будет опубликован в ветке gh-pages
-          publish_dir: allure-history                 # Указываем папку, которая будет опубликована на GitHub Pages
+          publish_dir: allure-history                 # Папка, которая будет опубликована на GitHub Pages
 
 
 #=======================================================================================================================
