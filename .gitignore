@@ -7,8 +7,14 @@
 __pycache__
 
 # Allure
-allure-results
-allure-report
+allure-results/
+allure-report/
 
 # Project
 #.env (NOT secure data)
+
+# Swagger coverage tool
+coverage-results/
+coverage.html
+coverage-history.json
+coverage-report.json
