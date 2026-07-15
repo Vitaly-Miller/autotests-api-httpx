@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/exercises \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEyVDA2OjM5OjIxLjYxNDg5MiIsInVzZXJfaWQiOiJkZjRlNTExNi0wODI1LTRkMzAtYjE2My04N2ViZTExYTg1ZDAifQ.1yrYKvyExDAggMrUJJpakzHWzQr_iWfYWWMjajyRQ9w' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Significant yeah TV reach.","courseId":"bbae57f6-dbee-48ef-afdb-dc525bbe1c1f","maxScore":52,"minScore":23,"orderIndex":6487,"description":"West upon more. During our pattern camera about.","estimatedTime":"4 weeks"}'

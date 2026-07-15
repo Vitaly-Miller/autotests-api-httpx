@@ -1,3 +1,0 @@
-curl -X GET \
-  'http://localhost:8000/api/v1/courses?userId=1618f120-664b-41bf-9ab2-7f1335a5442d' \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEyVDA2OjM5OjE4Ljc3OTk4OSIsInVzZXJfaWQiOiIxNjE4ZjEyMC02NjRiLTQxYmYtOWFiMi03ZjEzMzVhNTQ0MmQifQ.u-2qKI3G3VxwYsgX7CoGRgYsBQf3POmjfb12-pA62FU'

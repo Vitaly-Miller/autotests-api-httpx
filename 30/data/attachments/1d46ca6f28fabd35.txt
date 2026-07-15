@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjUwOjU2LjExNzIwNCIsInVzZXJfaWQiOiJkZjMyNDIzNi0wNDViLTRhZDctODQxMC1jZTU2NWIzOGE0NTAifQ.7tbLt68lnqkH_Ru4xmx6pxoBEVj2sX0t0iiZkSpXftM' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Stand worker health sister small.","maxScore":70,"minScore":25,"description":"Artist have south mean.","estimatedTime":"8 weeks","previewFileId":"23ec13ef-34ea-447f-92cd-ef37a31a0990","createdByUserId":"df324236-045b-4ad7-8410-ce565b38a450"}'

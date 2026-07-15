@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjUwOjUyLjI3MzU4MSIsInVzZXJfaWQiOiIyYmY3MjhhYy01NjQ1LTRiM2UtOGYwZi0zZGUyNzE4NjhmMTgifQ.55uRX1sAUlqY-Nb1Sr_2M88q5LfnSmKKIEhHCHCIZG4' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Painting identify entire.","maxScore":62,"minScore":8,"description":"Raise some executive election particular.","estimatedTime":"7 weeks","previewFileId":"9ccfd85b-1320-445b-b5bd-e359a190b536","createdByUserId":"2bf728ac-5645-4b3e-8f0f-3de271868f18"}'

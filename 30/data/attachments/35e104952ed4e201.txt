@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjUwOjUzLjI1OTE3OCIsInVzZXJfaWQiOiI0OTg4ZDAzMi0wYjk0LTRjOWItOWUxYi0wODY3YWJkODkwNjgifQ.Jr-Qv_TgiTU_qgFGRH49BqJBw2I79TNsYY15qDBiz98' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Attention writer professional pretty form.","courseId":"3ecd73fb-e605-4e66-b06f-3baa0bb6515e","maxScore":83,"minScore":3,"orderIndex":1958,"description":"Kind paper movie. Beautiful both member rise.","estimatedTime":"4 weeks"}'

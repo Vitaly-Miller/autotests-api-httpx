@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEyVDA2OjM5OjE4Ljc3OTk4OSIsInVzZXJfaWQiOiIxNjE4ZjEyMC02NjRiLTQxYmYtOWFiMi03ZjEzMzVhNTQ0MmQifQ.u-2qKI3G3VxwYsgX7CoGRgYsBQf3POmjfb12-pA62FU' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Color you pretty mother base view.","maxScore":89,"minScore":28,"description":"Want phone choice hope speech difference against.","estimatedTime":"7 weeks","previewFileId":"3b5d27e6-7849-44e6-9f27-8990bb26aba6","createdByUserId":"1618f120-664b-41bf-9ab2-7f1335a5442d"}'

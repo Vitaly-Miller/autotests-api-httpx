@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjUwOjQzLjkxODkxNCIsInVzZXJfaWQiOiI3OGM3MTEwNi04YzVmLTQ1ODctOGFhNC1jNWYwMzY0ZGZjZjcifQ.wtXgfj-pswGKD_PFpwBrIQUI9YUSSgx_b7tGggF4Xjs' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Necessary peace indeed.","maxScore":96,"minScore":18,"description":"Cultural blue physical fall after leader.","estimatedTime":"3 weeks","previewFileId":"a1aee73b-4715-4214-a081-143ed2b5da8f","createdByUserId":"78c71106-8c5f-4587-8aa4-c5f0364dfcf7"}'

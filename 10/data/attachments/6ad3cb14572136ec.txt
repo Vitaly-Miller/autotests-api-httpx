@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEyVDA2OjM5OjE3Ljg1MTQ1MSIsInVzZXJfaWQiOiIyMmQ0ZDc1Mi1jNjVmLTRjYTYtYmRkNy00YzAzNDg0ZmYxZTMifQ.l3Ua8lzauRYjvU2Y3D7taYx4ThB9a6lcv_ku8kj671c' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Bed thing certainly.","maxScore":67,"minScore":29,"description":"Available a image.","estimatedTime":"4 weeks","previewFileId":"a075e82c-b46f-41fd-bce0-3a3d58ac0dbb","createdByUserId":"22d4d752-c65f-4ca6-bdd7-4c03484ff1e3"}'

@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjUwOjU1LjgxNzE3MiIsInVzZXJfaWQiOiJkZjMyNDIzNi0wNDViLTRhZDctODQxMC1jZTU2NWIzOGE0NTAifQ.-Fd9MG4q72c_8SEXleWAcFUGFQmrMpiISn1sMqJfxBA' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Country method loss write reality six.","courseId":"8b5c19fa-f72d-4245-a7d8-170317e95232","maxScore":88,"minScore":13,"orderIndex":455,"description":"Huge during understand art.","estimatedTime":"7 weeks"}'

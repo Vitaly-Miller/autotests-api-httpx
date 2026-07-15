@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjUwOjQ2LjgzODQ0NSIsInVzZXJfaWQiOiI0ZDFlOGMwZC00Zjg0LTQ0ZTUtOTY3Yy1jNTg2ZTRlYTA2MWQifQ.sbEzammVsYphBi-vcFrCGuZuzkOpb_nvJBl-n3Pd1Og' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Make cut report strong series mission.","courseId":"4aef20cf-e5c0-4269-95ad-8197ed8d9024","maxScore":64,"minScore":12,"orderIndex":6183,"description":"Grow beyond role off.","estimatedTime":"3 weeks"}'

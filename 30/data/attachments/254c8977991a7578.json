@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "06821cb0-3604-426b-ad0f-d501f72a896a",
+    "title": "Star power order actually win.",
+    "maxScore": 62,
+    "minScore": 20,
+    "description": "Involve image PM find now than there.",
+    "previewFile": {
+      "id": "eab196ac-0741-4d65-9eac-6dfaf52280c2",
+      "filename": "file_6894.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_6894.png"
+    },
+    "estimatedTime": "4 weeks",
+    "createdByUser": {
+      "id": "e8507378-c77d-4ebb-abb8-3ffa4168852d",
+      "email": "test_52d6031b@example.com",
+      "lastName": "Richardson",
+      "firstName": "Jessica",
+      "middleName": "Kristin"
+    }
+  }
+}

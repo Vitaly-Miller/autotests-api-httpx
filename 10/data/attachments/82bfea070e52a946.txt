@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEyVDA2OjM5OjIxLjkxNTUwNCIsInVzZXJfaWQiOiJkZjRlNTExNi0wODI1LTRkMzAtYjE2My04N2ViZTExYTg1ZDAifQ.25Yrn7JEcNzf2Qh-Qlmu1hFjLBU7_eiNVHUlHIwwycM' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Here follow world light data.","maxScore":78,"minScore":21,"description":"Alone much point water.","estimatedTime":"8 weeks","previewFileId":"b1871279-0385-4739-b5c2-63a717ffcb58","createdByUserId":"df4e5116-0825-4d30-b163-87ebe11a85d0"}'

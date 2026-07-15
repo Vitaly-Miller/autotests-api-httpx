@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "4dfb62b5-2963-4eb6-9753-1c5fae7c216d",
+    "title": "Material seat successful term gun.",
+    "maxScore": 91,
+    "minScore": 1,
+    "description": "Bring down it degree all trip health between.",
+    "previewFile": {
+      "id": "47bc2cee-f855-400e-ba4a-5e10f1c161f9",
+      "filename": "file_7366.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_7366.png"
+    },
+    "estimatedTime": "4 weeks",
+    "createdByUser": {
+      "id": "e16cd6d5-14e1-42b0-b4a4-513754b477db",
+      "email": "test_3e9c1f00@example.com",
+      "lastName": "Stewart",
+      "firstName": "Kim",
+      "middleName": "Stacy"
+    }
+  }
+}

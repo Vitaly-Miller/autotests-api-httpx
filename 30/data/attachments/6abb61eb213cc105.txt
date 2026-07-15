@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjUwOjQ5LjY5NzQ0NiIsInVzZXJfaWQiOiJlODUwNzM3OC1jNzdkLTRlYmItYWJiOC0zZmZhNDE2ODg1MmQifQ.uriErQGHzfNhJrkNF4NTtQ25RGe6FvK__nGq8H-fEgA' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Star power order actually win.","maxScore":62,"minScore":20,"description":"Involve image PM find now than there.","estimatedTime":"4 weeks","previewFileId":"eab196ac-0741-4d65-9eac-6dfaf52280c2","createdByUserId":"e8507378-c77d-4ebb-abb8-3ffa4168852d"}'

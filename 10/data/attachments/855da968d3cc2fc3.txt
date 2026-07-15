@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEyVDA2OjM5OjE2Ljg5NDQ4MiIsInVzZXJfaWQiOiI0ODFmN2M1My01ZWUxLTRlNWYtOTVmZS04ZWQ1MmVhZTBjMmQifQ.ZeQM3H1JC7RCwDEY4lfBjzCr8QHcCmEXXzGDPrRmJwc' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Effect money standard establish work.","maxScore":78,"minScore":9,"description":"Research laugh home.","estimatedTime":"9 weeks","previewFileId":"d6906ac5-9841-4d60-ac1e-e063185fe755","createdByUserId":"481f7c53-5ee1-4e5f-95fe-8ed52eae0c2d"}'

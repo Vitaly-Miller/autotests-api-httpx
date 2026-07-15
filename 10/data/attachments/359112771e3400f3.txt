@@ -1,5 +1,0 @@
-curl -X PATCH \
-  http://localhost:8000/api/v1/exercises/cc54a2bf-ae35-429a-ba4b-e9ec94b40d28 \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEyVDA2OjM5OjMwLjQwNjI4NSIsInVzZXJfaWQiOiIwY2JlMTZhYi1jZjNhLTRjMzYtYWNhNi1iN2JiODcyZjk3MTIifQ.nClQvf6OpZ9WcKxFaJEo3YencckhG76ddMcuC7vw5Fs' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Fall training friend official occur admit.","maxScore":70,"minScore":25,"orderIndex":2494,"description":"Law significant measure eat challenge citizen.","estimatedTime":"6 weeks"}'

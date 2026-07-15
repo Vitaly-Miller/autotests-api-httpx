@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/exercises \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEyVDA2OjM5OjI5LjE0MzQ4OCIsInVzZXJfaWQiOiJiMjRjNDI1MS04NzM1LTRmMjctOWIxZi0yOTk2NWMxNmMzOTUifQ.mctCTQcbzYe90qSDWTXWjMZcIqygd5jYjaPHAZnQ21w' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Soon attorney city.","courseId":"39cdc2d6-60c3-4351-86f1-26d9b5666719","maxScore":77,"minScore":2,"orderIndex":6348,"description":"Use dog animal leader car start.","estimatedTime":"5 weeks"}'

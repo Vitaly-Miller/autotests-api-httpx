@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "3ecd73fb-e605-4e66-b06f-3baa0bb6515e",
+    "title": "Hundred better actually street particular top.",
+    "maxScore": 69,
+    "minScore": 17,
+    "description": "The door party offer.",
+    "previewFile": {
+      "id": "0b5e38f3-4f97-423b-b778-3ead0fb5e04b",
+      "filename": "file_5360.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_5360.png"
+    },
+    "estimatedTime": "2 weeks",
+    "createdByUser": {
+      "id": "4988d032-0b94-4c9b-9e1b-0867abd89068",
+      "email": "test_d56fc161@example.com",
+      "lastName": "Jones",
+      "firstName": "Amy",
+      "middleName": "Jennifer"
+    }
+  }
+}

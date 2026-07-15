@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjUwOjQxLjk3NDE0MCIsInVzZXJfaWQiOiIzNzkzZDVjOC02OTU5LTQ4OWMtOTVhZi0zMWM5MmYyOTAwZDcifQ.6yKI8XV_A3d6oRkxrCm2BTwASIUWqhUJzJgeTGJW4lw' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Tend bill if unit between.","maxScore":82,"minScore":18,"description":"Though will space learn.","estimatedTime":"5 weeks","previewFileId":"4356c055-9f1b-4bfb-8436-2eb38af70dbb","createdByUserId":"3793d5c8-6959-489c-95af-31c92f2900d7"}'

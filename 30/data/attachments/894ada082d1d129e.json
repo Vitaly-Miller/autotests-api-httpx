@@ -1,0 +1,25 @@
+{
+  "courses": [
+    {
+      "id": "3e1e97bf-9653-43df-b1da-ef6988a8377e",
+      "title": "Democrat eye fire.",
+      "maxScore": 97,
+      "minScore": 29,
+      "description": "Similar contain check give.",
+      "previewFile": {
+        "id": "c8121dd4-f198-4e9b-a1ed-3781cb81955e",
+        "filename": "file_8788.png",
+        "directory": "Uploaded",
+        "url": "http://localhost:8000/static/Uploaded/file_8788.png"
+      },
+      "estimatedTime": "8 weeks",
+      "createdByUser": {
+        "id": "c750c46a-2221-4d50-b06f-725b9aeed27d",
+        "email": "test_7163a077@example.com",
+        "lastName": "Moore",
+        "firstName": "Steven",
+        "middleName": "Aimee"
+      }
+    }
+  ]
+}

@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/exercises \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEyVDA2OjM5OjI0LjExOTcyNSIsInVzZXJfaWQiOiJmYzdjYjgwMC1mN2NlLTQ3NmItYTI5ZS05OGM3YWQ3YzgxOGYifQ.X_HiCIb9KL-PqxBRp8tWfTP7anw3s4hWI0Wc_vYVEUk' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Follow court make debate audience.","courseId":"af426f0d-e028-4168-9419-e8080822afc6","maxScore":65,"minScore":5,"orderIndex":7193,"description":"Win pattern hand bank. Again usually store leg.","estimatedTime":"3 weeks"}'

@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjUwOjU0LjUyNzQ0MiIsInVzZXJfaWQiOiIzNTQwOTZjNy1iOWE2LTRiM2ItOGJhOC03ZTY2ZmQ5YzRlYTAifQ.z1G_HO_BelEw5_qFXeCbuhsXQNLMkYmAMyOI0DZe9Vg' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Condition grow wish.","courseId":"304168e2-c1e7-489a-bfb7-e09c3cf30fa2","maxScore":73,"minScore":20,"orderIndex":9528,"description":"Carry describe class.","estimatedTime":"8 weeks"}'

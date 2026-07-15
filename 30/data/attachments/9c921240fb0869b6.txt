@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjUwOjQ0LjkwMDI1MyIsInVzZXJfaWQiOiJjNzUwYzQ2YS0yMjIxLTRkNTAtYjA2Zi03MjViOWFlZWQyN2QifQ.zOzVNLx5GbRkUhyY75ChDFHRi1kTZ_TQRMpy6z9m9T0' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Democrat eye fire.","maxScore":97,"minScore":29,"description":"Similar contain check give.","estimatedTime":"8 weeks","previewFileId":"c8121dd4-f198-4e9b-a1ed-3781cb81955e","createdByUserId":"c750c46a-2221-4d50-b06f-725b9aeed27d"}'

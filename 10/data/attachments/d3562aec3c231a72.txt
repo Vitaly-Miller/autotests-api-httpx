@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEyVDA2OjM5OjMwLjcwNjM4NSIsInVzZXJfaWQiOiIwY2JlMTZhYi1jZjNhLTRjMzYtYWNhNi1iN2JiODcyZjk3MTIifQ.ayNjXJaXIPMlXYSyND_S3ZuGMJ_QrgRT3Vtwao9fIio' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Foreign leg however.","maxScore":77,"minScore":6,"description":"Laugh notice likely style.","estimatedTime":"8 weeks","previewFileId":"247b31d1-f1aa-47b3-83e9-211f63dc0f87","createdByUserId":"0cbe16ab-cf3a-4c36-aca6-b7bb872f9712"}'

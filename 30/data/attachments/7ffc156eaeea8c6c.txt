@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjUwOjQ5LjM5NjA0NiIsInVzZXJfaWQiOiJlODUwNzM3OC1jNzdkLTRlYmItYWJiOC0zZmZhNDE2ODg1MmQifQ.Mdqz6RfInhuI35l7-RxW4OlX3Xo6Qr3EWeuTqozOEjc' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Item participant similar oil.","courseId":"06821cb0-3604-426b-ad0f-d501f72a896a","maxScore":89,"minScore":18,"orderIndex":7625,"description":"Teach now sport figure example evening watch.","estimatedTime":"7 weeks"}'

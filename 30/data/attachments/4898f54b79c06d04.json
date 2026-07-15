@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "9e0566ce-b62a-42d5-a3e8-7155f6b4d975",
+    "title": "Computer scene situation task spring.",
+    "maxScore": 70,
+    "minScore": 28,
+    "description": "Effort camera prepare above establish after base.",
+    "previewFile": {
+      "id": "8666b591-b12a-4fdb-b524-f424471decdf",
+      "filename": "file_7901.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_7901.png"
+    },
+    "estimatedTime": "4 weeks",
+    "createdByUser": {
+      "id": "7f50d4ea-492e-4226-99e4-0891761f15d9",
+      "email": "test_2efb7833@example.com",
+      "lastName": "Armstrong",
+      "firstName": "Kendra",
+      "middleName": "Alexis"
+    }
+  }
+}

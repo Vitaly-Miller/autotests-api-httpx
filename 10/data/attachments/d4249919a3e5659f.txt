@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEyVDA2OjM5OjE5LjczMjI0MCIsInVzZXJfaWQiOiI5ODcyMDMwZC0zMzcwLTRkN2YtYmRiNS02NzMzN2FlNTg1YjMifQ.XuDzJYQ5VL3eP69eFK6ISH5WqlSfKdyZZxrZyUOTRfk' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Because environmental customer.","maxScore":65,"minScore":26,"description":"Enter want information believe agency.","estimatedTime":"7 weeks","previewFileId":"a3105503-2102-4564-bd1a-5296fddd437d","createdByUserId":"9872030d-3370-4d7f-bdb5-67337ae585b3"}'

@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjUwOjQ4LjEyODI5MyIsInVzZXJfaWQiOiI5OGZkZjM4My05ZjYwLTRjMjAtOTY0OC1lZTE0NDQ5MTY5OTUifQ.6F8Nb0eYOGl4cnxEpk0xtHb1-fkauIUK83-pzI9GrkM' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Population several staff during even expert.","courseId":"7a19bde9-bd55-449f-bbc3-9d3ab02c1a75","maxScore":73,"minScore":1,"orderIndex":4816,"description":"Industry most value number economic.","estimatedTime":"3 weeks"}'
