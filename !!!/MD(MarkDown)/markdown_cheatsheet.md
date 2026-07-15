@@ -1,4 +1,5 @@
 # Markdown — шпаргалка
+https://www.markdownguide.org/cheat-sheet/
 
 > Markdown — это язык разметки для оформления текста. Файлы имеют расширение `.md`.
 > Используется в README, документации, докстрингах (через инструменты), GitHub, GitLab и т.д.
