@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEyVDE2OjQ0OjUzLjQxMDc2OCIsInVzZXJfaWQiOiJkYmQ4OTQyYy1kYTk0LTRjYmEtYTk3NS00ODM5ZmNlZjI4MzMifQ.B7nQSA3nc6sRI2mENv2IBJNQYVG-eBL_bJBF6OR8Ksw' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Respond news nature idea.","maxScore":74,"minScore":29,"description":"Than past capital its affect.","estimatedTime":"6 weeks","previewFileId":"4c30f9c1-6d16-4ad9-ae67-76d18bf16e43","createdByUserId":"dbd8942c-da94-4cba-a975-4839fcef2833"}'

@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/exercises/a5e7f41e-19ed-4243-91cb-25ffea4a520c \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDAxOjE3OjAwLjE1OTYyNSIsInVzZXJfaWQiOiI2NjY2MzkzMC1kODllLTQ3YjMtOTc5OC1mZTgwMjIxYTJkNmQifQ.vGyl6GF9c7e9bpry05bcWT2rwg1U2H-WNMBe23flsrM' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Become decide middle option style teach notice.","maxScore":62,"minScore":5,"orderIndex":3495,"description":"To kitchen price win.","estimatedTime":"5 weeks"}'

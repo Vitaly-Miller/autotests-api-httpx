@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "876bfd3d-5533-44ba-a3b1-e2b6c0551a46",
+    "title": "Activity brother forget.",
+    "maxScore": 100,
+    "minScore": 14,
+    "description": "Focus when direction road back.",
+    "previewFile": {
+      "id": "9cc4b11c-168f-4f73-81b1-312c84697e7b",
+      "filename": "file_8606.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_8606.png"
+    },
+    "estimatedTime": "6 weeks",
+    "createdByUser": {
+      "id": "083a9798-a967-41eb-8509-918e0479c298",
+      "email": "test_a4bc5c15@example.com",
+      "lastName": "Davis",
+      "firstName": "Anthony",
+      "middleName": "Gloria"
+    }
+  }
+}

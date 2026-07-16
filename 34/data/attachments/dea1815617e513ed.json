@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "1e8abc6f-0d1e-4470-95dc-633c1772589d",
+    "title": "East within early describe.",
+    "maxScore": 81,
+    "minScore": 25,
+    "description": "Edge quickly floor identify.",
+    "previewFile": {
+      "id": "4496a9ff-d75f-4a08-a21e-37c55505ad72",
+      "filename": "file_3089.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_3089.png"
+    },
+    "estimatedTime": "2 weeks",
+    "createdByUser": {
+      "id": "d2fd4e87-2846-49e8-9b52-1c9b0b8739ee",
+      "email": "test_05f9bf47@example.com",
+      "lastName": "Smith",
+      "firstName": "Timothy",
+      "middleName": "Melissa"
+    }
+  }
+}

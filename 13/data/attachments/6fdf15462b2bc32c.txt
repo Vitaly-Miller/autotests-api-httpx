@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/exercises \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEyVDE2OjQ0OjU4LjgwMjc1MyIsInVzZXJfaWQiOiJhZDRiNjkxZS1jZjdlLTRiZjYtYjJlZi0zZmExYzg1MTU1NDQifQ.DecsWTBmURbSmI0Cg_7IXHZokkf6bdV1zY0qHS1IMgM' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Language relationship strong let.","courseId":"7e4a88e9-5595-4efb-96d0-622ef99ab495","maxScore":89,"minScore":12,"orderIndex":2603,"description":"Miss race significant home out central.","estimatedTime":"9 weeks"}'

@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDAxOjE2OjU3LjY1NTI4NSIsInVzZXJfaWQiOiJkNDgwYzVmZC1lNTlmLTQyNjYtOGYxOS0wNjliNTg0MTVmNjQifQ.b5ZyVZdRY39CO1StaAVDyk5AILYdejYTX4I5a-Vu7Tc' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Occur throw woman.","courseId":"be5a8aeb-c517-4c82-9a04-c91368fabfa8","maxScore":75,"minScore":19,"orderIndex":8211,"description":"Return arrive game again population.","estimatedTime":"7 weeks"}'

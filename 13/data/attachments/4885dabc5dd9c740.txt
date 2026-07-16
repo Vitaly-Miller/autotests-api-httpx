@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEyVDE2OjQ0OjU1LjMxMTQ3NyIsInVzZXJfaWQiOiI3ZjNiZDAwNi00MDU5LTRkOGUtOWY1NC1kNDAwYzU5ODBiMTUifQ.3IJeoo-Zo5v1pG2VPXswA495CEQ4nORjrvbNFE1BBd4' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Painting son alone fill.","maxScore":58,"minScore":9,"description":"Particular rather Mr idea list need.","estimatedTime":"8 weeks","previewFileId":"54ff1eac-730d-40fe-85e3-cdbcee80311d","createdByUserId":"7f3bd006-4059-4d8e-9f54-d400c5980b15"}'

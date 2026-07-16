@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEyVDE2OjQ0OjU3Ljg2MDA0NSIsInVzZXJfaWQiOiI5OWYzMmMxMy1jNDliLTRhYTYtODQyYy00NzU0NzhhMWRmZDMifQ.rK9Y92Z34Wr7Rz3UuFB7DuYk8GHQfxdNGjokKTLbYyw' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Plan occur two maybe.","maxScore":93,"minScore":22,"description":"Into design food leave majority focus become.","estimatedTime":"3 weeks","previewFileId":"8171cf8f-331d-448d-ba85-e9858f486d69","createdByUserId":"99f32c13-c49b-4aa6-842c-475478a1dfd3"}'

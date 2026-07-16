@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "a3836e28-0cd2-4f8b-a0b5-9513717a7a2d",
+    "title": "Information among hour if room.",
+    "maxScore": 57,
+    "minScore": 2,
+    "description": "Fish adult receive executive data word.",
+    "previewFile": {
+      "id": "d7d43e1b-ae57-409a-a6e1-fae909e79afc",
+      "filename": "file_1141.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_1141.png"
+    },
+    "estimatedTime": "5 weeks",
+    "createdByUser": {
+      "id": "08609da1-89c0-4318-b14c-2947e00e8a9f",
+      "email": "test_d9bee6ce@example.com",
+      "lastName": "Mitchell",
+      "firstName": "James",
+      "middleName": "Christine"
+    }
+  }
+}

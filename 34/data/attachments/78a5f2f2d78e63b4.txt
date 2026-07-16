@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDAxOjE2OjQ3LjQ4MjI0MiIsInVzZXJfaWQiOiIwODYwOWRhMS04OWMwLTQzMTgtYjE0Yy0yOTQ3ZTAwZThhOWYifQ.c0tzG3xVFql5pzVqodsL9EL_elzn-E1NMfgT3YzeDDU' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Information among hour if room.","maxScore":57,"minScore":2,"description":"Fish adult receive executive data word.","estimatedTime":"5 weeks","previewFileId":"d7d43e1b-ae57-409a-a6e1-fae909e79afc","createdByUserId":"08609da1-89c0-4318-b14c-2947e00e8a9f"}'

@@ -1,5 +1,0 @@
-curl -X PATCH \
-  http://localhost:8000/api/v1/exercises/0fe22400-2121-4506-b285-117357ac0afc \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEyVDE2OjQ1OjA1LjA4NDkwOSIsInVzZXJfaWQiOiJlYjY2ZDQyMC01YTM2LTRiZjgtYjAzMy0wMGQzN2E0Y2Y2YTQifQ._i9FaY8iEI4JwJlQRo6BjQffhLntqwFKJtJXmxUuWJI' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Thought store dark everything light.","maxScore":67,"minScore":13,"orderIndex":2132,"description":"Because because blood serve continue type few.","estimatedTime":"3 weeks"}'

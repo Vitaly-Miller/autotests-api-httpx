@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDAxOjE2OjUzLjg2ODc2OSIsInVzZXJfaWQiOiJkMmZkNGU4Ny0yODQ2LTQ5ZTgtOWI1Mi0xYzliMGI4NzM5ZWUifQ.c6Q_qsIYJ2moQkPu2JdTWWkRi3uvNLyUw7he6rGVbNY' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Tax research trade whatever on.","courseId":"1e8abc6f-0d1e-4470-95dc-633c1772589d","maxScore":70,"minScore":30,"orderIndex":5169,"description":"Argue four treat before. Build under hair than.","estimatedTime":"8 weeks"}'

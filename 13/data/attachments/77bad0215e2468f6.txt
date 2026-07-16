@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/exercises \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEyVDE2OjQ1OjA1LjA4NDkwOSIsInVzZXJfaWQiOiJlYjY2ZDQyMC01YTM2LTRiZjgtYjAzMy0wMGQzN2E0Y2Y2YTQifQ._i9FaY8iEI4JwJlQRo6BjQffhLntqwFKJtJXmxUuWJI' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Fine hold hand building fine land.","courseId":"555636a9-ec71-460b-b786-0639f1268746","maxScore":98,"minScore":1,"orderIndex":1265,"description":"Bad brother theory make modern service measure.","estimatedTime":"2 weeks"}'

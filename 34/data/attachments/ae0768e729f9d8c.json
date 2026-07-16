@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "2f5a52ff-a962-4549-90f2-e68b965c15bb",
+    "title": "Important age record every discussion everybody.",
+    "maxScore": 93,
+    "minScore": 26,
+    "description": "Many moment read painting year.",
+    "previewFile": {
+      "id": "617e59e2-2f05-4d50-969c-5d3aa0c6e729",
+      "filename": "file_8745.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_8745.png"
+    },
+    "estimatedTime": "3 weeks",
+    "createdByUser": {
+      "id": "67e82c36-ed62-46c6-bba2-fbf499eb6060",
+      "email": "test_dbdcfa5e@example.com",
+      "lastName": "Stevens",
+      "firstName": "Christian",
+      "middleName": "John"
+    }
+  }
+}

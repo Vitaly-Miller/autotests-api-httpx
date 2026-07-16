@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/exercises \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEyVDE2OjQ1OjAxLjMyNTM4MCIsInVzZXJfaWQiOiI4M2I3YWNmZi0xZDcwLTRlYTItOTJlOC1jOTFmODkzMjlmNjkifQ.0zaeudOB7bkYQvlrGDRTAo1a8z4g4Iy7wh-60SdSrP4' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Development hot score reach statement guess.","courseId":"2a6c59cc-4025-4eaa-861a-68433782df49","maxScore":59,"minScore":18,"orderIndex":1803,"description":"Describe probably suggest operation.","estimatedTime":"6 weeks"}'

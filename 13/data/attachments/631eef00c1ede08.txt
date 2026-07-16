@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEyVDE2OjQ0OjUxLjUxMDI3MSIsInVzZXJfaWQiOiJkNjQ0MGNkZC0wYjA5LTQyMzctOTc4Mi1hODAxMTc5MTQyYWQifQ.2DYtXrCz2LiuLWEcYKa_M_fge4mXL3BmyxIu771JJgA' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Use only a.","maxScore":79,"minScore":14,"description":"Result coach send keep.","estimatedTime":"8 weeks","previewFileId":"b7944739-0334-4a33-980f-facd5b4d823f","createdByUserId":"d6440cdd-0b09-4237-9782-a801179142ad"}'

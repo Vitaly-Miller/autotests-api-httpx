@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEyVDE2OjQ1OjAxLjYyNzg0NSIsInVzZXJfaWQiOiI4M2I3YWNmZi0xZDcwLTRlYTItOTJlOC1jOTFmODkzMjlmNjkifQ.whzrdvKiKx65ZYKX5XKmLR4xSAIKK20Zn6g8sLZzVkY' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Hotel share especially push onto.","maxScore":85,"minScore":29,"description":"Those color citizen doctor pick natural.","estimatedTime":"8 weeks","previewFileId":"870776b0-3104-40c5-855c-19f53cb9d48c","createdByUserId":"83b7acff-1d70-4ea2-92e8-c91f89329f69"}'

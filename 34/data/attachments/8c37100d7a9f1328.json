@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "887eb731-6a1f-4db6-8823-54e1c806c63f",
+    "title": "Must develop hospital.",
+    "maxScore": 97,
+    "minScore": 24,
+    "description": "However shoulder hand kid step goal.",
+    "previewFile": {
+      "id": "5c07038c-733b-44b8-b479-98644a573798",
+      "filename": "file_4491.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_4491.png"
+    },
+    "estimatedTime": "4 weeks",
+    "createdByUser": {
+      "id": "df15bf8c-d3df-4011-9a0a-7ce4ca21f982",
+      "email": "test_43c56b5a@example.com",
+      "lastName": "Weiss",
+      "firstName": "Jimmy",
+      "middleName": "Debra"
+    }
+  }
+}

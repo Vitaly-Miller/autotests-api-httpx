@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDAxOjE2OjU2LjY4ODI5MyIsInVzZXJfaWQiOiIwODNhOTc5OC1hOTY3LTQxZWItODUwOS05MThlMDQ3OWMyOTgifQ.twHw0UP1-97_5rBa0dxBKcMrMbXDCO00CzwQg4cBtP4' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Activity brother forget.","maxScore":100,"minScore":14,"description":"Focus when direction road back.","estimatedTime":"6 weeks","previewFileId":"9cc4b11c-168f-4f73-81b1-312c84697e7b","createdByUserId":"083a9798-a967-41eb-8509-918e0479c298"}'

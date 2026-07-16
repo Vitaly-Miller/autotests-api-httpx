@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDAxOjE2OjU1LjE0MTM2MyIsInVzZXJfaWQiOiI2N2U4MmMzNi1lZDYyLTQ2YzYtYmJhMi1mYmY0OTllYjYwNjAifQ.Z_AhqgKRmFGlF4ksmOGLppCi8CdItOtp86mYoGYw7Hw' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Beyond indeed new.","courseId":"2f5a52ff-a962-4549-90f2-e68b965c15bb","maxScore":60,"minScore":6,"orderIndex":2335,"description":"Exist test task southern visit.","estimatedTime":"8 weeks"}'

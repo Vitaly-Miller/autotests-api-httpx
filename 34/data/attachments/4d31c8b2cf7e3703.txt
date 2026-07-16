@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/courses/628ffea3-0871-4dd2-99bd-52584ffb3398 \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDAxOjE2OjUwLjMzNDQ5NSIsInVzZXJfaWQiOiIwZjJmMjFkOC05MDNkLTRjOGItYjUzMy01MWM0NGQ2ZmUyZjMifQ.QFfcHNQMUnnNHemdLmofu8pD9LDOSSUVVuRPdAMF8zY' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Resource of social ground.","maxScore":79,"minScore":21,"description":"Doctor traditional single.","estimatedTime":"6 weeks"}'

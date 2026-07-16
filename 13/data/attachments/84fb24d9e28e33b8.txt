@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEyVDE2OjQ1OjAyLjg4ODQyNyIsInVzZXJfaWQiOiIxM2VmNjdlMy03OTMxLTRkZjUtYTM4Yi03YjNiOTJhNTQ2YTAifQ.LdWr9FStS1MJe0NP4oc5Gep2Nr0qGkatD1W-JbEeR8Y' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Audience stock performance.","maxScore":96,"minScore":17,"description":"Case like nice source suggest.","estimatedTime":"7 weeks","previewFileId":"51ac406b-6b21-4cb1-a277-cf73c5e00264","createdByUserId":"13ef67e3-7931-4df5-a38b-7b3b92a546a0"}'

@@ -1,0 +1,25 @@
+{
+  "courses": [
+    {
+      "id": "5ba660db-3a3d-4e70-a08c-2ad520ba6c81",
+      "title": "Let benefit this.",
+      "maxScore": 76,
+      "minScore": 2,
+      "description": "Particularly listen cold each example.",
+      "previewFile": {
+        "id": "66362211-7087-4245-9ddf-70b81003a9f4",
+        "filename": "file_4348.png",
+        "directory": "Uploaded",
+        "url": "http://localhost:8000/static/Uploaded/file_4348.png"
+      },
+      "estimatedTime": "2 weeks",
+      "createdByUser": {
+        "id": "8d28c493-5374-4289-9d87-d2b69d99708f",
+        "email": "test_2117f151@example.com",
+        "lastName": "Nguyen",
+        "firstName": "Brittany",
+        "middleName": "Erica"
+      }
+    }
+  ]
+}

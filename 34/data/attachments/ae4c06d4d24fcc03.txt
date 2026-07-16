@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDAxOjE2OjUyLjg0NzQ5OSIsInVzZXJfaWQiOiI5M2U2NThlOS1jZGEwLTRiNjktYWY5NC05YzIyNmFmMWMxYjcifQ.-sG8aN6odvUCvsDfESXZ1Dk0TDAPAEHIM_w0h0jCNaU' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Range vote notice add.","maxScore":93,"minScore":5,"description":"Prevent a sing he. Economic already our position.","estimatedTime":"6 weeks","previewFileId":"a2277cc0-93ee-49dc-b247-279ea2bb550d","createdByUserId":"93e658e9-cda0-4b69-af94-9c226af1c1b7"}'

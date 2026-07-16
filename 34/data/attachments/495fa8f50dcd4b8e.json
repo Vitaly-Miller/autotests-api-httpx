@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "8cd5ece7-3dac-4993-862b-6b98fd578916",
+    "title": "Read bag analysis throughout strategy amount.",
+    "maxScore": 53,
+    "minScore": 3,
+    "description": "Hope development authority.",
+    "previewFile": {
+      "id": "74349029-a973-4efe-a1ab-8ae4314ac205",
+      "filename": "file_7651.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_7651.png"
+    },
+    "estimatedTime": "3 weeks",
+    "createdByUser": {
+      "id": "66663930-d89e-47b3-9798-fe80221a2d6d",
+      "email": "test_3ecf8843@example.com",
+      "lastName": "Parker",
+      "firstName": "Brandy",
+      "middleName": "Robert"
+    }
+  }
+}

@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEyVDE2OjQ1OjA1LjM5MTkxNCIsInVzZXJfaWQiOiJlYjY2ZDQyMC01YTM2LTRiZjgtYjAzMy0wMGQzN2E0Y2Y2YTQifQ.xm1-tXjX91Cd9QMYj2FwQRpySmzzMJeKVyQS-xUvaNE' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Away kid officer final.","maxScore":88,"minScore":14,"description":"Expect him foreign any.","estimatedTime":"4 weeks","previewFileId":"1124d989-3d98-4146-a436-52258ad698f7","createdByUserId":"eb66d420-5a36-4bf8-b033-00d37a4cf6a4"}'

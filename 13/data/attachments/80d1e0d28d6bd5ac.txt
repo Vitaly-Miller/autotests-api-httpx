@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/exercises \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEyVDE2OjQ0OjU2LjI2MjkwMCIsInVzZXJfaWQiOiJkZTk2NGMwMi1mMWNjLTQyZDYtOWEzYy03M2NiOGRhNTA1YTgifQ.-tASrrt6h8Me-6uz0SL1OiS-JVPYihNrxQCcJSeJi8g' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Himself single keep arrive often apply.","courseId":"0ba074ed-01d0-4458-8774-36dd28952c40","maxScore":92,"minScore":18,"orderIndex":6744,"description":"Organization seat blood she already teach safe.","estimatedTime":"9 weeks"}'

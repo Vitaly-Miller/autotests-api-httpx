@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEyVDE2OjQ0OjU5LjEwNDYzNyIsInVzZXJfaWQiOiJhZDRiNjkxZS1jZjdlLTRiZjYtYjJlZi0zZmExYzg1MTU1NDQifQ.m4-Igi1x17MIdrvzMYwABUBemqogHJSZ_TRmt6eVQmA' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Everything each light group.","maxScore":67,"minScore":25,"description":"Author anyone story.","estimatedTime":"3 weeks","previewFileId":"66a3b3da-ce9b-44ea-b0b2-e6e8ee047d66","createdByUserId":"ad4b691e-cf7e-4bf6-b2ef-3fa1c8515544"}'

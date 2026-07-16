@@ -1,5 +1,0 @@
-curl -X PATCH \
-  http://localhost:8000/api/v1/exercises/5900406c-b26b-4d08-b35f-a5ebd09344ae \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEyVDE2OjQ1OjAzLjgyNTkxMCIsInVzZXJfaWQiOiJhNjQ5MDk0My0wNzY1LTRhOGMtOTY5NC01ODQ2NDgwMWYxZmEifQ.9B6sBunS_UxEUQZWOkV-ykEeIPZ0vCBm5dCjyOORFEY' \
-  -H 'content-type: application/json' \
-  -d '{"title":"See commercial seat writer.","maxScore":51,"minScore":6,"orderIndex":9507,"description":"Example billion coach report build question.","estimatedTime":"3 weeks"}'

@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "51b91415-feed-45f9-bf63-cf9cfcde9a10",
+    "title": "Range vote notice add.",
+    "maxScore": 93,
+    "minScore": 5,
+    "description": "Prevent a sing he. Economic already our position.",
+    "previewFile": {
+      "id": "a2277cc0-93ee-49dc-b247-279ea2bb550d",
+      "filename": "file_5864.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_5864.png"
+    },
+    "estimatedTime": "6 weeks",
+    "createdByUser": {
+      "id": "93e658e9-cda0-4b69-af94-9c226af1c1b7",
+      "email": "test_d5d6ac35@example.com",
+      "lastName": "English",
+      "firstName": "Denise",
+      "middleName": "Laurie"
+    }
+  }
+}

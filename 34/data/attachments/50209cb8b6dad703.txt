@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDAxOjE3OjAwLjE1OTYyNSIsInVzZXJfaWQiOiI2NjY2MzkzMC1kODllLTQ3YjMtOTc5OC1mZTgwMjIxYTJkNmQifQ.vGyl6GF9c7e9bpry05bcWT2rwg1U2H-WNMBe23flsrM' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Bit important science.","courseId":"8cd5ece7-3dac-4993-862b-6b98fd578916","maxScore":56,"minScore":23,"orderIndex":7272,"description":"Without reveal assume many firm early.","estimatedTime":"8 weeks"}'
