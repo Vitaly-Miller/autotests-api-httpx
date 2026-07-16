@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "7002251a-0bf4-48fa-97d4-9dc450c25c2c",
+    "title": "Clearly performance know fly social thus.",
+    "maxScore": 81,
+    "minScore": 24,
+    "description": "Finish listen really list couple paper.",
+    "previewFile": {
+      "id": "9e6e9096-2f36-40c5-bd8b-15242ecc3465",
+      "filename": "file_2422.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_2422.png"
+    },
+    "estimatedTime": "6 weeks",
+    "createdByUser": {
+      "id": "58edca6c-fd70-496c-8016-62ea600d2f22",
+      "email": "test_d56e8d2c@example.com",
+      "lastName": "Lee",
+      "firstName": "Cody",
+      "middleName": "David"
+    }
+  }
+}

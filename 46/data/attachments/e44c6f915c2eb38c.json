@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "8c50d175-5faf-4e97-bf6b-c88b257910bf",
+    "title": "Put article within true.",
+    "maxScore": 100,
+    "minScore": 23,
+    "description": "Trouble must authority check determine.",
+    "previewFile": {
+      "id": "5e950b34-56c1-4744-b17c-af4a267f332a",
+      "filename": "file_3243.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_3243.png"
+    },
+    "estimatedTime": "7 weeks",
+    "createdByUser": {
+      "id": "54d1c964-69c1-4a61-8b0b-d0037ecc9af5",
+      "email": "test_30f36a44@example.com",
+      "lastName": "Lozano",
+      "firstName": "Kaitlyn",
+      "middleName": "Kimberly"
+    }
+  }
+}

@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDIyOjI2OjQ2Ljg5NDUwNCIsInVzZXJfaWQiOiI1OGVkY2E2Yy1mZDcwLTQ5NmMtODAxNi02MmVhNjAwZDJmMjIifQ.awcqq732bQ-9xoi48i17P_yE5jeh6GtcPqdI8HXNSpw' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Clearly performance know fly social thus.","maxScore":81,"minScore":24,"description":"Finish listen really list couple paper.","estimatedTime":"6 weeks","previewFileId":"9e6e9096-2f36-40c5-bd8b-15242ecc3465","createdByUserId":"58edca6c-fd70-496c-8016-62ea600d2f22"}'

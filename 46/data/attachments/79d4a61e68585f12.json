@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "eecd9b93-4549-4d7f-8d3f-5aba14678961",
+    "title": "Need few consumer.",
+    "maxScore": 59,
+    "minScore": 25,
+    "description": "Goal camera under.",
+    "previewFile": {
+      "id": "9f505a11-3155-44cd-9429-3312595149f9",
+      "filename": "file_2113.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_2113.png"
+    },
+    "estimatedTime": "8 weeks",
+    "createdByUser": {
+      "id": "49e08446-35ed-4a9a-b440-b9874400d97a",
+      "email": "test_1af25340@example.com",
+      "lastName": "Lopez",
+      "firstName": "Sarah",
+      "middleName": "Jacqueline"
+    }
+  }
+}

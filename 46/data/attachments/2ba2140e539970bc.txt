@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDIyOjI2OjQ0LjA0NjA1MSIsInVzZXJfaWQiOiIwZDVhMzEwYi0xYzAwLTQ3NGYtYTUwMi0xZTRkZjI5N2RhNmIifQ.8Hd29bJZJc8KbIvUwlVaeKMd07Lxm63QwcU0NNlbZ5o' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Man smile direction.","courseId":"5dab7eff-486f-4010-afb4-c97dac037198","maxScore":82,"minScore":12,"orderIndex":8800,"description":"Red center human court great stock.","estimatedTime":"5 weeks"}'

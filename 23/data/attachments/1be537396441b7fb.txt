@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE2OjMzOjEyLjcyNzIwNCIsInVzZXJfaWQiOiI5MTRmMmIxYy04M2JhLTQ3M2EtOTNkNi05OGVhZmE3NzEyOWMifQ.I13ULX1Bp6cRWudlp3eso2emk3shAK3DNqdQ2FLP7x0' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Something huge it mention difference say.","maxScore":63,"minScore":9,"description":"Finally certainly new why industry seek so.","estimatedTime":"2 weeks","previewFileId":"3401d1f4-a428-431a-932d-828be61f3c5d","createdByUserId":"914f2b1c-83ba-473a-93d6-98eafa77129c"}'

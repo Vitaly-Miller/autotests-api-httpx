@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDIyOjI2OjUxLjY2MzE5MCIsInVzZXJfaWQiOiI5MzkzM2NkYi02YjliLTQ2YzEtYjNkMC0yMmYwODNjNTY1ZDgifQ.LfTh84rN1HPcu7M1Cjo0rBbbiH4RnC4ZyGaKp0tWoJw' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Wide whose senior force season financial.","courseId":"633fb4ba-6223-4ff6-b877-e26b22891f2a","maxScore":65,"minScore":18,"orderIndex":9527,"description":"Mr half compare wife air seat.","estimatedTime":"8 weeks"}'

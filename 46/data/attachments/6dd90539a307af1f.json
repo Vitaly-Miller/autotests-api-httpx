@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "633fb4ba-6223-4ff6-b877-e26b22891f2a",
+    "title": "History little this.",
+    "maxScore": 93,
+    "minScore": 16,
+    "description": "Cold as eat speak much born probably.",
+    "previewFile": {
+      "id": "0ed5802d-36ec-4c4d-b2c4-75ffdf10f596",
+      "filename": "file_3307.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_3307.png"
+    },
+    "estimatedTime": "8 weeks",
+    "createdByUser": {
+      "id": "93933cdb-6b9b-46c1-b3d0-22f083c565d8",
+      "email": "test_904e386f@example.com",
+      "lastName": "Nunez",
+      "firstName": "Alison",
+      "middleName": "Jacqueline"
+    }
+  }
+}

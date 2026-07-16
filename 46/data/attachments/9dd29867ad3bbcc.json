@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "4e85ce75-6b36-44be-9127-738952eba11b",
+    "title": "Learn century stuff.",
+    "maxScore": 63,
+    "minScore": 23,
+    "description": "Collection carry take weight night.",
+    "previewFile": {
+      "id": "235997f7-0ef5-4eb7-861d-04dc430d4491",
+      "filename": "file_1958.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_1958.png"
+    },
+    "estimatedTime": "6 weeks",
+    "createdByUser": {
+      "id": "9e654850-dfd3-44a9-b26c-71c25bc935b7",
+      "email": "test_41099db1@example.com",
+      "lastName": "Mays",
+      "firstName": "Leslie",
+      "middleName": "Barbara"
+    }
+  }
+}

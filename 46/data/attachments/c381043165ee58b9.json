@@ -1,0 +1,25 @@
+{
+  "courses": [
+    {
+      "id": "58800438-83a0-4737-a9cb-459c34c1c1c8",
+      "title": "Blue per left might defense.",
+      "maxScore": 65,
+      "minScore": 18,
+      "description": "Water attorney season each suddenly gas only.",
+      "previewFile": {
+        "id": "8eeafa71-fd4b-404d-bd55-1d78b76f7c97",
+        "filename": "file_1126.png",
+        "directory": "Uploaded",
+        "url": "http://localhost:8000/static/Uploaded/file_1126.png"
+      },
+      "estimatedTime": "3 weeks",
+      "createdByUser": {
+        "id": "dcfc4797-c67a-4779-bb86-20f597160694",
+        "email": "test_70af54a4@example.com",
+        "lastName": "Johnson",
+        "firstName": "Jennifer",
+        "middleName": "Jennifer"
+      }
+    }
+  ]
+}

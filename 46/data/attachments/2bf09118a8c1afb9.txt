@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDIyOjI2OjQyLjc3NTU0NSIsInVzZXJfaWQiOiJkZGU5ZmI2MS1hOTk1LTRiNzEtOGE5MS1iNjBiMjAxZTZjOTUifQ.tgGE29klOyXO8OOar-Hll3aGipT46AVrgub6192AfoU' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Relationship a hope city main animal.","courseId":"8454ea84-bc85-44aa-b297-8f170c867808","maxScore":68,"minScore":20,"orderIndex":8450,"description":"Must conference small media.","estimatedTime":"4 weeks"}'

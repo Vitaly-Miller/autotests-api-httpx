@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "0ed17e6e-e56f-4f5f-8154-02b358131700",
+    "title": "Understand fight speak nice consider.",
+    "maxScore": 58,
+    "minScore": 9,
+    "description": "Send involve by ready will top.",
+    "previewFile": {
+      "id": "788382ce-9dd9-4d39-a79b-e096fe0c2e32",
+      "filename": "file_6804.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_6804.png"
+    },
+    "estimatedTime": "4 weeks",
+    "createdByUser": {
+      "id": "e60a4aa6-ab9a-4165-ad34-56c314d3f8b9",
+      "email": "test_36883529@example.com",
+      "lastName": "Weiss",
+      "firstName": "Edward",
+      "middleName": "Matthew"
+    }
+  }
+}

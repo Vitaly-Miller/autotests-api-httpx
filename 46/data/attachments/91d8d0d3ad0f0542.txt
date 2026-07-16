@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDIyOjI2OjQ2LjU5NjA1MiIsInVzZXJfaWQiOiI1OGVkY2E2Yy1mZDcwLTQ5NmMtODAxNi02MmVhNjAwZDJmMjIifQ.8LIyHq0-WWLA10mUYjp-QS_51P1rExT4ew1lxdbSBjo' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Newspaper nor nice dinner.","courseId":"7002251a-0bf4-48fa-97d4-9dc450c25c2c","maxScore":53,"minScore":16,"orderIndex":5209,"description":"Which bag street to. Own trouble child director.","estimatedTime":"4 weeks"}'

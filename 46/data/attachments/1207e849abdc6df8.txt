@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDIyOjI2OjUwLjM5MTA4MyIsInVzZXJfaWQiOiJlNjBhNGFhNi1hYjlhLTQxNjUtYWQzNC01NmMzMTRkM2Y4YjkifQ.7_EbWbeoS-DunmCjjzxxnYXhV7PSyaXb5GteukjxtDc' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Though wonder defense most many.","courseId":"0ed17e6e-e56f-4f5f-8154-02b358131700","maxScore":58,"minScore":23,"orderIndex":8596,"description":"Might argue I on if student.","estimatedTime":"2 weeks"}'

@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDIyOjI2OjM5Ljg3MzMzNSIsInVzZXJfaWQiOiI0ZDgyNjg0Zi05ZjBkLTRkOGQtYTFlYS1mMzIyNjY1ZjRlOWEifQ.dt1t0SR7Ahy15hKNjJcAEurWC-s_HfNWyAszV3SYfGU' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Product develop certain.","maxScore":59,"minScore":10,"description":"Seat hot method piece no over office.","estimatedTime":"8 weeks","previewFileId":"73b54ffb-a6a0-430c-9e76-d8a5f394c2b0","createdByUserId":"4d82684f-9f0d-4d8d-a1ea-f322665f4e9a"}'

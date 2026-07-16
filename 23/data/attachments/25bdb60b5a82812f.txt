@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/exercises \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE2OjMzOjAyLjU5ODc1NCIsInVzZXJfaWQiOiIwNDhlMTc3My1jNTA4LTQ1MmQtYjY3Mi1kZDRmOTc0NThkMGUifQ.g7zB4dJGCkcTviI0zIbnkagbYGdtF5VtI_mXc-wClKY' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Maybe boy area market staff much.","courseId":"9648a78e-f267-46fe-83f0-1be1c30ce553","maxScore":67,"minScore":8,"orderIndex":8612,"description":"Reveal work may room prevent.","estimatedTime":"5 weeks"}'

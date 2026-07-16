@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE2OjMzOjAyLjkyODE1NiIsInVzZXJfaWQiOiIwNDhlMTc3My1jNTA4LTQ1MmQtYjY3Mi1kZDRmOTc0NThkMGUifQ.nU5kEXp-v4PLz8eBrdK0RwVJhMrS5gPgFgm85dkurh8' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Beat out same.","maxScore":98,"minScore":12,"description":"Remember lose federal dream join several race.","estimatedTime":"3 weeks","previewFileId":"4fa8633b-dc3d-467a-93e0-df26dbbe6f14","createdByUserId":"048e1773-c508-452d-b672-dd4f97458d0e"}'

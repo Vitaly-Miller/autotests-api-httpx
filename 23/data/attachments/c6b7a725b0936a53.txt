@@ -1,5 +1,0 @@
-curl -X PATCH \
-  http://localhost:8000/api/v1/exercises/cb9c589b-ab7c-4feb-976d-98242a001d54 \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE2OjMzOjEwLjk5NjU4NyIsInVzZXJfaWQiOiJjZjY4MmEyOC01YzVlLTQ2ZDYtYTkxNy00ZTc3YjJhOWMxNDcifQ.IKlYhKAHq6lJ3sva2gtfGqXvckC5euLBkCX2AAMq1FI' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Represent wonder the seven return yourself.","maxScore":62,"minScore":1,"orderIndex":8832,"description":"Health important rather institution.","estimatedTime":"5 weeks"}'

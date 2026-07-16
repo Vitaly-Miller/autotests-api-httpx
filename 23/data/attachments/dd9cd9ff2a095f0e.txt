@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/exercises \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE2OjMzOjA4LjIwNTQyMCIsInVzZXJfaWQiOiI4ZmJhYTdiZi01YWNkLTQxZjgtOWM5My01OTljN2FiZjAzOTEifQ.nwA8dDcxLcPnlxHn2XE8HhB_idtVaRxIByqg-4Sc6Yo' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Someone off benefit sometimes something.","courseId":"e4fd1c43-9543-4cf8-9145-a99d396e1a5d","maxScore":60,"minScore":17,"orderIndex":1865,"description":"Wife reason authority wind center.","estimatedTime":"9 weeks"}'

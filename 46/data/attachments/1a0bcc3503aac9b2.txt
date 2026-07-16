@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/courses/eecd9b93-4549-4d7f-8d3f-5aba14678961 \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDIyOjI2OjQxLjgxMDg2NCIsInVzZXJfaWQiOiI0OWUwODQ0Ni0zNWVkLTRhOWEtYjQ0MC1iOTg3NDQwMGQ5N2EifQ.ETeJB5pEBUAfbwadpvSrkQyUTqTK7UHyZ79UK2MdkzU' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Discussion enjoy success audience.","maxScore":80,"minScore":4,"description":"Interest good us art ten factor her.","estimatedTime":"9 weeks"}'

@@ -1,0 +1,25 @@
+{
+  "courses": [
+    {
+      "id": "196e8176-a844-408f-a481-d02137dae20c",
+      "title": "Product develop certain.",
+      "maxScore": 59,
+      "minScore": 10,
+      "description": "Seat hot method piece no over office.",
+      "previewFile": {
+        "id": "73b54ffb-a6a0-430c-9e76-d8a5f394c2b0",
+        "filename": "file_2711.png",
+        "directory": "Uploaded",
+        "url": "http://localhost:8000/static/Uploaded/file_2711.png"
+      },
+      "estimatedTime": "8 weeks",
+      "createdByUser": {
+        "id": "4d82684f-9f0d-4d8d-a1ea-f322665f4e9a",
+        "email": "test_c62acf29@example.com",
+        "lastName": "Hicks",
+        "firstName": "Brandon",
+        "middleName": "Heather"
+      }
+    }
+  ]
+}

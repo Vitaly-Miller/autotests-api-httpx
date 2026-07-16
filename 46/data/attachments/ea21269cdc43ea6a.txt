@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDIyOjI2OjQzLjA3NDE0MiIsInVzZXJfaWQiOiJkZGU5ZmI2MS1hOTk1LTRiNzEtOGE5MS1iNjBiMjAxZTZjOTUifQ.R0eEEnLB37vndWQivAjGL9bWoOAhAnqEQDvO_STramo' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Shoulder spring blood something force opportunity.","maxScore":59,"minScore":21,"description":"Stuff itself number bad just.","estimatedTime":"5 weeks","previewFileId":"3b53d2f1-6b2b-4693-981b-46b4ecbf8ead","createdByUserId":"dde9fb61-a995-4b71-8a91-b60b201e6c95"}'

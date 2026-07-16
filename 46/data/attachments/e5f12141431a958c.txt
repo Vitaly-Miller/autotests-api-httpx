@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDIyOjI2OjQxLjgxMDg2NCIsInVzZXJfaWQiOiI0OWUwODQ0Ni0zNWVkLTRhOWEtYjQ0MC1iOTg3NDQwMGQ5N2EifQ.ETeJB5pEBUAfbwadpvSrkQyUTqTK7UHyZ79UK2MdkzU' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Need few consumer.","maxScore":59,"minScore":25,"description":"Goal camera under.","estimatedTime":"8 weeks","previewFileId":"9f505a11-3155-44cd-9429-3312595149f9","createdByUserId":"49e08446-35ed-4a9a-b440-b9874400d97a"}'

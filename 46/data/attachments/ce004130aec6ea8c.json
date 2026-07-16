@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "7b4bbc61-8f84-4314-8f1d-4a7a8cc27cf5",
+    "title": "Dark well head history television.",
+    "maxScore": 52,
+    "minScore": 24,
+    "description": "Serious ground ten though pick south.",
+    "previewFile": {
+      "id": "59fc1f66-cdf8-492e-81fb-7826d283badf",
+      "filename": "file_7623.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_7623.png"
+    },
+    "estimatedTime": "4 weeks",
+    "createdByUser": {
+      "id": "2378d766-6181-4b11-b170-2603c5e2de5a",
+      "email": "test_0329660d@example.com",
+      "lastName": "Harvey",
+      "firstName": "Robert",
+      "middleName": "Michele"
+    }
+  }
+}

@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDIyOjI2OjQ3Ljg1ODk0MiIsInVzZXJfaWQiOiI5ZTY1NDg1MC1kZmQzLTQ0YTktYjI2Yy03MWMyNWJjOTM1YjcifQ.lPUwkk-jUvOpDdIIkfuu1uAOWEd_0TnTzLGXby9TX5U' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Color tree deal young top.","courseId":"4e85ce75-6b36-44be-9127-738952eba11b","maxScore":92,"minScore":3,"orderIndex":830,"description":"Alone argue somebody maybe check.","estimatedTime":"4 weeks"}'

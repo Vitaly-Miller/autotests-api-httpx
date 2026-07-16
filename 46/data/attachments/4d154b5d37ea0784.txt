@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDIyOjI2OjQ1LjYxMTQzNyIsInVzZXJfaWQiOiJkODc2OTJjMS1jODNkLTQ3M2YtYjNmMy03NDAzNzdmOTdkZDYifQ.k2-F8yG3ibjLOJXYwSRWRpk6vvBCTvllyVt4Omv38u0' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Nice order your system exactly.","maxScore":80,"minScore":13,"description":"Fish attack reduce most generation buy.","estimatedTime":"2 weeks","previewFileId":"cadc4615-a0d8-4785-9dd1-33e91513ce0b","createdByUserId":"d87692c1-c83d-473f-b3f3-740377f97dd6"}'

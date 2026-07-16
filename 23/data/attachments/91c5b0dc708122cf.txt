@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE2OjMzOjA0LjMzNjIyMSIsInVzZXJfaWQiOiI1MDhmMmRiZS1lZmQ4LTQ1MmQtOGE5YS0xY2QxNThiNzBlYzYifQ.KHC9MMb96FNRufuIZRTB-i-PDzFOk_-PjB_Cv6G0Dm4' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Speech site yourself after represent.","maxScore":71,"minScore":8,"description":"Toward out yourself down necessary hard cause.","estimatedTime":"2 weeks","previewFileId":"ea5b187c-7f40-4f37-bda9-301160a9223a","createdByUserId":"508f2dbe-efd8-452d-8a9a-1cd158b70ec6"}'

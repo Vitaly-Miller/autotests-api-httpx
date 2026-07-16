@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "8454ea84-bc85-44aa-b297-8f170c867808",
+    "title": "Shoulder spring blood something force opportunity.",
+    "maxScore": 59,
+    "minScore": 21,
+    "description": "Stuff itself number bad just.",
+    "previewFile": {
+      "id": "3b53d2f1-6b2b-4693-981b-46b4ecbf8ead",
+      "filename": "file_5144.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_5144.png"
+    },
+    "estimatedTime": "5 weeks",
+    "createdByUser": {
+      "id": "dde9fb61-a995-4b71-8a91-b60b201e6c95",
+      "email": "test_3e0e483f@example.com",
+      "lastName": "Jones",
+      "firstName": "Kelly",
+      "middleName": "Christian"
+    }
+  }
+}

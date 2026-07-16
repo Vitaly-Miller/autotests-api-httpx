@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDIyOjI2OjM3LjkzNjEyMSIsInVzZXJfaWQiOiI1NGQxYzk2NC02OWMxLTRhNjEtOGIwYi1kMDAzN2VjYzlhZjUifQ.bM0FcLx6kUEUkyWJyfJtGTK2VclGUcVONlLy-TP2ESk' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Put article within true.","maxScore":100,"minScore":23,"description":"Trouble must authority check determine.","estimatedTime":"7 weeks","previewFileId":"5e950b34-56c1-4744-b17c-af4a267f332a","createdByUserId":"54d1c964-69c1-4a61-8b0b-d0037ecc9af5"}'

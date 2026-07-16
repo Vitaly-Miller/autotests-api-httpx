@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDIyOjI2OjQ5LjEzNDkyMyIsInVzZXJfaWQiOiIyNTNhMzY4ZC1lOWNmLTQxZGEtYjM1MS00MjhlODEzNjg3ODQifQ.ourKUFhNmPI88unNxX6Pvrmyl553eXw25s6xLBMc7uI' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Despite edge focus recent.","courseId":"cccea708-1a47-4f62-8a70-a6f221e24f50","maxScore":60,"minScore":12,"orderIndex":6107,"description":"Election company wonder suggest and.","estimatedTime":"8 weeks"}'

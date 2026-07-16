@@ -1,0 +1,10 @@
+{
+  "host": "localhost:8000",
+  "accept": "*/*",
+  "accept-encoding": "gzip, deflate",
+  "connection": "keep-alive",
+  "user-agent": "python-httpx/0.28.1",
+  "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDIyOjI2OjU0LjE5NTM3NSIsInVzZXJfaWQiOiJmMWI4NmZlOS05OGQxLTQ4ZTYtOGYxMi1iM2Y1MTFhMzdjM2IifQ.aOAt5_WsmU9U4LIUbay25QOB97VSMcm__IiMkTov3LQ",
+  "content-length": "946730",
+  "content-type": "multipart/form-data; boundary=8e122eea6d2416ec4f3a9c28781f8262"
+}

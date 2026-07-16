@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDIyOjI2OjM4LjkyMzIzMCIsInVzZXJfaWQiOiIyMzc4ZDc2Ni02MTgxLTRiMTEtYjE3MC0yNjAzYzVlMmRlNWEifQ.fz6ejcFxsrokZ7VdSDZHPG5Vkk8xjdMnlhxSdHAIaqM' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Dark well head history television.","maxScore":52,"minScore":24,"description":"Serious ground ten though pick south.","estimatedTime":"4 weeks","previewFileId":"59fc1f66-cdf8-492e-81fb-7826d283badf","createdByUserId":"2378d766-6181-4b11-b170-2603c5e2de5a"}'

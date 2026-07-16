@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE2OjMzOjExLjMyNjE1MSIsInVzZXJfaWQiOiJjZjY4MmEyOC01YzVlLTQ2ZDYtYTkxNy00ZTc3YjJhOWMxNDcifQ.09jmeE8m1lXlgUGoqRXaqsEvfN-5RUoo7zSJaO_h6uk' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Doctor push range benefit act college.","maxScore":80,"minScore":28,"description":"Yourself well place know wait central sit.","estimatedTime":"5 weeks","previewFileId":"675d2eba-f694-4a45-9279-2fdf1f3218f7","createdByUserId":"cf682a28-5c5e-46d6-a917-4e77b2a9c147"}'

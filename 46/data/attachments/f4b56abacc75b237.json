@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "1868efe1-9409-40a8-b531-a72318d4b6ee",
+    "title": "Nice order your system exactly.",
+    "maxScore": 80,
+    "minScore": 13,
+    "description": "Fish attack reduce most generation buy.",
+    "previewFile": {
+      "id": "cadc4615-a0d8-4785-9dd1-33e91513ce0b",
+      "filename": "file_6743.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_6743.png"
+    },
+    "estimatedTime": "2 weeks",
+    "createdByUser": {
+      "id": "d87692c1-c83d-473f-b3f3-740377f97dd6",
+      "email": "test_47057c76@example.com",
+      "lastName": "Manning",
+      "firstName": "Michael",
+      "middleName": "Nathan"
+    }
+  }
+}

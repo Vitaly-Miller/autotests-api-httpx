@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "cccea708-1a47-4f62-8a70-a6f221e24f50",
+    "title": "Early happen fast wife.",
+    "maxScore": 97,
+    "minScore": 4,
+    "description": "Population treat per upon will finally.",
+    "previewFile": {
+      "id": "3828c4ea-95af-4774-8bf5-9b32c7a36963",
+      "filename": "file_6114.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_6114.png"
+    },
+    "estimatedTime": "5 weeks",
+    "createdByUser": {
+      "id": "253a368d-e9cf-41da-b351-428e81368784",
+      "email": "test_a2e4c97d@example.com",
+      "lastName": "Riddle",
+      "firstName": "Amanda",
+      "middleName": "Christina"
+    }
+  }
+}
