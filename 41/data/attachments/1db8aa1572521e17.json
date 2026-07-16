@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "2e291fa7-c189-4c15-937f-309062a119be",
+    "title": "Couple society somebody could husband between.",
+    "maxScore": 93,
+    "minScore": 27,
+    "description": "Book language approach professional Mr.",
+    "previewFile": {
+      "id": "21fc0d8f-d3ae-453f-9131-073c853e9a34",
+      "filename": "file_6639.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_6639.png"
+    },
+    "estimatedTime": "4 weeks",
+    "createdByUser": {
+      "id": "6cb27c3b-cf7a-41be-ab42-0dcbc55bd355",
+      "email": "test_8f8d55eb@example.com",
+      "lastName": "Martin",
+      "firstName": "Patrick",
+      "middleName": "John"
+    }
+  }
+}

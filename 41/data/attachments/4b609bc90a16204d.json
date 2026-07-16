@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "a68ce344-d426-4419-8958-1cc0a32a40d4",
+    "title": "Success gun behavior more best.",
+    "maxScore": 57,
+    "minScore": 28,
+    "description": "Then service we foot card everybody community.",
+    "previewFile": {
+      "id": "858d87df-32e3-456a-9940-ee31d32dac0a",
+      "filename": "file_3861.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_3861.png"
+    },
+    "estimatedTime": "7 weeks",
+    "createdByUser": {
+      "id": "f2dac391-c596-470a-af5a-403d3820c1a0",
+      "email": "test_713f4246@example.com",
+      "lastName": "Edwards",
+      "firstName": "Lindsay",
+      "middleName": "Christian"
+    }
+  }
+}

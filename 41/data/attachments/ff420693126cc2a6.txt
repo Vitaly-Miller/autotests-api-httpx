@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/courses/2797324f-4f15-41d7-aba3-f1f0eef69397 \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDA0OjUxOjE4LjI1NjU5NyIsInVzZXJfaWQiOiIwYjM1MGU2OC03MzEzLTQ0YjAtOGQyOC0yMzM5N2E5NmJiMTkifQ.gueJjFMq3LIiKX31z4hOfgi3m8HsEu6WPNJVKqtBZKE' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Often respond without impact health natural.","maxScore":53,"minScore":28,"description":"Simple environmental mean finally pressure.","estimatedTime":"6 weeks"}'

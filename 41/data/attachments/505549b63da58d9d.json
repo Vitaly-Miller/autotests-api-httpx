@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "8a336b18-a506-437b-b76e-a408e9413af2",
+    "title": "Institution appear technology list win rate.",
+    "maxScore": 93,
+    "minScore": 13,
+    "description": "Else among suggest someone it serious court.",
+    "previewFile": {
+      "id": "ed7d771a-136c-45e1-9aea-482bb85e6984",
+      "filename": "file_8044.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_8044.png"
+    },
+    "estimatedTime": "5 weeks",
+    "createdByUser": {
+      "id": "69e4bb79-875e-40e3-8cdb-fafe4880fb56",
+      "email": "test_ca632b27@example.com",
+      "lastName": "Gamble",
+      "firstName": "Michael",
+      "middleName": "Miguel"
+    }
+  }
+}

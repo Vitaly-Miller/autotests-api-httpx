@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDA0OjUxOjE5LjMzODc3MSIsInVzZXJfaWQiOiI2ZGMxNTQxYi00NzczLTRjOTYtODI5Yy0wOTAzYTVlMmFmNjIifQ.2wn2zF4NOLlOifuDiu-TEoWbqQaOjGw3dnSjnSaJ-sE' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Make everybody hand.","maxScore":72,"minScore":8,"description":"Stay page magazine sister include.","estimatedTime":"2 weeks","previewFileId":"c866384a-f18a-4f4b-af7d-ae27ce455cec","createdByUserId":"6dc1541b-4773-4c96-829c-0903a5e2af62"}'

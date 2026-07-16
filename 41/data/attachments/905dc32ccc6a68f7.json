@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "2797324f-4f15-41d7-aba3-f1f0eef69397",
+    "title": "Republican avoid across east away.",
+    "maxScore": 55,
+    "minScore": 21,
+    "description": "Director policy some former.",
+    "previewFile": {
+      "id": "898b78f6-512c-4365-a3d7-314cc50b14fd",
+      "filename": "file_5892.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_5892.png"
+    },
+    "estimatedTime": "2 weeks",
+    "createdByUser": {
+      "id": "0b350e68-7313-44b0-8d28-23397a96bb19",
+      "email": "test_959bffe4@example.com",
+      "lastName": "Davis",
+      "firstName": "Jennifer",
+      "middleName": "Charles"
+    }
+  }
+}

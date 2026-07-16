@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDA0OjUxOjE1Ljc5ODc0MiIsInVzZXJfaWQiOiI2OWU0YmI3OS04NzVlLTQwZTMtOGNkYi1mYWZlNDg4MGZiNTYifQ.AVy1VOMGnvmIFKtKa40GNQTcOz9HebS4SjaPIXR_2d8' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Institution appear technology list win rate.","maxScore":93,"minScore":13,"description":"Else among suggest someone it serious court.","estimatedTime":"5 weeks","previewFileId":"ed7d771a-136c-45e1-9aea-482bb85e6984","createdByUserId":"69e4bb79-875e-40e3-8cdb-fafe4880fb56"}'

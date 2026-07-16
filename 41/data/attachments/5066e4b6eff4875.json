@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "eef3a11b-c8b2-4758-9ff0-72490635f03b",
+    "title": "Make everybody hand.",
+    "maxScore": 72,
+    "minScore": 8,
+    "description": "Stay page magazine sister include.",
+    "previewFile": {
+      "id": "c866384a-f18a-4f4b-af7d-ae27ce455cec",
+      "filename": "file_9291.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_9291.png"
+    },
+    "estimatedTime": "2 weeks",
+    "createdByUser": {
+      "id": "6dc1541b-4773-4c96-829c-0903a5e2af62",
+      "email": "test_8eb79216@example.com",
+      "lastName": "Casey",
+      "firstName": "Rebecca",
+      "middleName": "Teresa"
+    }
+  }
+}

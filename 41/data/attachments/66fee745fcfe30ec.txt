@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDA0OjUxOjI3LjQzNDM4NiIsInVzZXJfaWQiOiIzNjZjMmIxNy01MmRjLTQ3ZjItOTlmZS04Zjk4ZTY5MDM5N2IifQ.2bKo3CWiUezb2nGBJpqLfq6CQT_WtZV6SSpiS36lczs' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Defense doctor small fire want thought.","maxScore":81,"minScore":6,"description":"How then explain dream same heart race movement.","estimatedTime":"7 weeks","previewFileId":"f06d7707-0cd4-4004-af48-29ebdb1d51b4","createdByUserId":"366c2b17-52dc-47f2-99fe-8f98e690397b"}'

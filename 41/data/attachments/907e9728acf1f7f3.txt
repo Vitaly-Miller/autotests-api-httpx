@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDA0OjUxOjIwLjE4NjE4MyIsInVzZXJfaWQiOiJmMzYyNTUzZC1hMmY0LTQ2ZmEtOGVlOS0yYzAwMzg0MTM3ZTkifQ.CQ-yT0iJQZWaFBcNIpJUfG-BcNqMuSaWiCzW43EeXpc' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Form author best.","courseId":"a2acc25a-dd50-4684-b290-d4566d830c60","maxScore":86,"minScore":19,"orderIndex":9142,"description":"Low into ball. Treatment phone here main bar.","estimatedTime":"4 weeks"}'

@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/exercises \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDA2OjM1OjAwLjIwMzM3MiIsInVzZXJfaWQiOiI5OGQ3ZjFjOS1jNzE5LTQzNWMtOTA3ZC1jMTBhYjU1ZTE3YjAifQ.ttA9CGx_oNbErUQrCwz_vgVaHIoX7A-LusVC6TYxd2E' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Water environment Democrat civil talk.","courseId":"6a3a0ab4-a0c6-4b40-a5e7-27140ecf3b30","maxScore":80,"minScore":9,"orderIndex":4414,"description":"World easy window this.","estimatedTime":"9 weeks"}'

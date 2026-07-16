@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDA0OjUxOjIyLjY0NjIwOCIsInVzZXJfaWQiOiI2Y2IyN2MzYi1jZjdhLTQxYmUtYWI0Mi0wZGNiYzU1YmQzNTUifQ.HM9JUxpERwQeZsYIT9WAkmWJ-MtPpr6neOuEyE_5QYY' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Policy government manage test past clear.","courseId":"2e291fa7-c189-4c15-937f-309062a119be","maxScore":96,"minScore":25,"orderIndex":2184,"description":"Far see entire nature catch those act article.","estimatedTime":"6 weeks"}'

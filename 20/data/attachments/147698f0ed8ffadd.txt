@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/exercises \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDA2OjM0OjU2LjQ5NzczNSIsInVzZXJfaWQiOiJiMWYyNjZjMy1hOWEzLTQxZGQtYmY5OC03MTI2MTg1NTcwYmEifQ.htpoMuDj6NfA7qwoeHwr0r-HHAGm3pdS59pM5rAZAKs' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Local machine first everything arm I.","courseId":"99440e30-7eee-4ba0-8a84-260fddbb3de6","maxScore":94,"minScore":6,"orderIndex":3496,"description":"Last rich first debate.","estimatedTime":"9 weeks"}'

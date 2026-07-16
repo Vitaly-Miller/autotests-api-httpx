@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDA2OjM1OjAwLjQyODQzOCIsInVzZXJfaWQiOiI5OGQ3ZjFjOS1jNzE5LTQzNWMtOTA3ZC1jMTBhYjU1ZTE3YjAifQ.yLZFeDwO9Y2kq9uXbsRpNMhMFVKweimlfz8_ITeVluY' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Building sign song left.","maxScore":62,"minScore":6,"description":"Tree method seek law.","estimatedTime":"3 weeks","previewFileId":"ab0de878-e859-4a3a-8f93-a4b475e8a9bb","createdByUserId":"98d7f1c9-c719-435c-907d-c10ab55e17b0"}'

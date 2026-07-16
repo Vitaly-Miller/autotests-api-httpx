@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDA2OjM0OjU4LjU3OTY4NCIsInVzZXJfaWQiOiI5OGZlMGIxOC00MmE2LTQ2MzUtODg3MS1kYzg3ZjkxYjM1MTMifQ.ukBUOHEBINZ_0cVvb2878zUqJHUQeNdDSt5d-pc6llo' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Pull else stage price.","maxScore":79,"minScore":28,"description":"Note you within reveal.","estimatedTime":"2 weeks","previewFileId":"53dbd29e-e668-4d90-a2c0-5cc2ed2f8a6b","createdByUserId":"98fe0b18-42a6-4635-8871-dc87f91b3513"}'

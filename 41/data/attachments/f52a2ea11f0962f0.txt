@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDA0OjUxOjIwLjQ0MjE1MCIsInVzZXJfaWQiOiJmMzYyNTUzZC1hMmY0LTQ2ZmEtOGVlOS0yYzAwMzg0MTM3ZTkifQ.5vsQg_6mdantsTvCNCcgsTfgACWsrPOShazC60z6s0A' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Nature into area all attention.","maxScore":94,"minScore":25,"description":"Cold finally simple husband bill set.","estimatedTime":"2 weeks","previewFileId":"1eca7934-811c-459b-913b-feab18cf0e39","createdByUserId":"f362553d-a2f4-46fa-8ee9-2c00384137e9"}'

@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "0ce02539-f076-4e31-8aee-e9c57d453c45",
+    "title": "Call difficult yeah.",
+    "maxScore": 53,
+    "minScore": 19,
+    "description": "Another very next challenge western theory well.",
+    "previewFile": {
+      "id": "c63a8ad0-aa29-488a-bd8d-ab0152b79d08",
+      "filename": "file_1661.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_1661.png"
+    },
+    "estimatedTime": "6 weeks",
+    "createdByUser": {
+      "id": "49e27e21-89cf-467a-aab7-41f52da00913",
+      "email": "test_f78ecfab@example.com",
+      "lastName": "Decker",
+      "firstName": "Janet",
+      "middleName": "Tyler"
+    }
+  }
+}

@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDA0OjUxOjE4LjI1NjU5NyIsInVzZXJfaWQiOiIwYjM1MGU2OC03MzEzLTQ0YjAtOGQyOC0yMzM5N2E5NmJiMTkifQ.gueJjFMq3LIiKX31z4hOfgi3m8HsEu6WPNJVKqtBZKE' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Republican avoid across east away.","maxScore":55,"minScore":21,"description":"Director policy some former.","estimatedTime":"2 weeks","previewFileId":"898b78f6-512c-4365-a3d7-314cc50b14fd","createdByUserId":"0b350e68-7313-44b0-8d28-23397a96bb19"}'

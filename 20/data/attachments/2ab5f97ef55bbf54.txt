@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDA2OjM0OjUyLjMyNzAwNCIsInVzZXJfaWQiOiI1NDRjZjlmNy0zMDE5LTQ1MDMtODE4Mi0zMGJkYmRlMTA1YWYifQ.XNhb3DJVFJlaBY0nuTIOvWOszPwl5sy4fGOgfOWGb_8' \
-  -H 'content-type: application/json' \
-  -d '{"title":"In majority once whole peace top.","maxScore":62,"minScore":8,"description":"Treatment card me across have fear approach.","estimatedTime":"2 weeks","previewFileId":"a390e971-7917-4747-ba8b-f510b7a22000","createdByUserId":"544cf9f7-3019-4503-8182-30bdbde105af"}'

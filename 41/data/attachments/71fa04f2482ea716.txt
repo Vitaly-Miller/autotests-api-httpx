@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDA0OjUxOjE5LjA4MjQzNSIsInVzZXJfaWQiOiI2ZGMxNTQxYi00NzczLTRjOTYtODI5Yy0wOTAzYTVlMmFmNjIifQ.AWMSw5s_CLhj5903iuTWLjudCaeAnIDer0qQi81kqvE' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Trade step point option western who.","courseId":"eef3a11b-c8b2-4758-9ff0-72490635f03b","maxScore":86,"minScore":11,"orderIndex":487,"description":"Continue simple establish rock you current only.","estimatedTime":"9 weeks"}'

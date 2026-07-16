@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDA0OjUxOjIxLjUxNjY2OCIsInVzZXJfaWQiOiI1YmU5ZWI1Ni01M2M2LTQ4MTQtOWMzOC03NzBkOWM0YTIxOTAifQ.SPjeL2pC5BxXW4KFiLuLy6pP9Fs9frgRyDdwSh0YuAs' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Common class word.","maxScore":68,"minScore":13,"description":"Clear test player pick try.","estimatedTime":"4 weeks","previewFileId":"41df03a9-ba1c-49cf-986c-3b0adc43c4a2","createdByUserId":"5be9eb56-53c6-4814-9c38-770d9c4a2190"}'

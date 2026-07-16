@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDA0OjUxOjI1LjIxMDQ3MSIsInVzZXJfaWQiOiI1NWE5NTQwNi01ODViLTQ1MDYtYjJhNi1kZGQ0ZTIwOWIzMzAifQ.ryccjSDYga_e573vxeQEEqO-RD1NYt1aB1fvy5junL4' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Popular operation raise feel various.","maxScore":96,"minScore":21,"description":"Probably ready expert structure.","estimatedTime":"9 weeks","previewFileId":"2ffb23ac-81ce-4529-81d1-51b885e8dc2d","createdByUserId":"55a95406-585b-4506-b2a6-ddd4e209b330"}'

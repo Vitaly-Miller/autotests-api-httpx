@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/exercises \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDA2OjM0OjU3LjQwNzY2OCIsInVzZXJfaWQiOiI5ODNkNTk1Yi0xY2Y2LTRjZWQtYjdhYS0xNzA2Y2M4NWQyNjYifQ.uKxJooJ3tNWV8g0uTyfwlhs0lpSagmI-aw7vJvFOB_A' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Table even growth language force.","courseId":"546f80ef-4f4b-4471-a54a-344cf0664b28","maxScore":90,"minScore":23,"orderIndex":5604,"description":"Hold world according another every country.","estimatedTime":"7 weeks"}'

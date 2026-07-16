@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDA0OjUxOjI2LjM0MzY1NSIsInVzZXJfaWQiOiIwNWVkMDkzNy1jZjI0LTQ2NWQtOWQyNS1jNTU2NmYxNDA2NGQifQ.4h00Uk39ZgoXVrjs46wdrvGmjUJlzauMdXCZu0GOhyM' \
+  -H 'content-type: application/json' \
+  -d '{"title":"My total look.","maxScore":75,"minScore":8,"description":"Very strong industry on tree the.","estimatedTime":"6 weeks","previewFileId":"4b20d11c-423c-46bb-81ce-b63b93526ec6","createdByUserId":"05ed0937-cf24-465d-9d25-c5566f14064d"}'

@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDA0OjUxOjI2LjA4ODA1MSIsInVzZXJfaWQiOiIwNWVkMDkzNy1jZjI0LTQ2NWQtOWQyNS1jNTU2NmYxNDA2NGQifQ.FNf80JNYsvSlPznDLANI5Az-Z0uESnycQY91KmAA7CI' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Television hand look.","courseId":"ee8317e6-0101-46b3-b1e6-fe6b4e5b9561","maxScore":67,"minScore":29,"orderIndex":9990,"description":"Forget pass above government ago space.","estimatedTime":"8 weeks"}'

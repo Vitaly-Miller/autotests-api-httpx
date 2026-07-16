@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/exercises \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDA2OjM0OjU4LjM2MzY1NSIsInVzZXJfaWQiOiI5OGZlMGIxOC00MmE2LTQ2MzUtODg3MS1kYzg3ZjkxYjM1MTMifQ.CYAXZiNaBsrhO62fIKgJoahTeixaomDGuJBvw2pU7dk' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Require suggest field poor.","courseId":"81e1fde3-74db-4c70-81f5-f938af9d10a5","maxScore":72,"minScore":21,"orderIndex":744,"description":"None charge right city say agent.","estimatedTime":"5 weeks"}'

@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "25708e39-fe76-46d5-a2b1-828dedce5109",
+    "title": "Common class word.",
+    "maxScore": 68,
+    "minScore": 13,
+    "description": "Clear test player pick try.",
+    "previewFile": {
+      "id": "41df03a9-ba1c-49cf-986c-3b0adc43c4a2",
+      "filename": "file_2533.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_2533.png"
+    },
+    "estimatedTime": "4 weeks",
+    "createdByUser": {
+      "id": "5be9eb56-53c6-4814-9c38-770d9c4a2190",
+      "email": "test_6ac85006@example.com",
+      "lastName": "Jones",
+      "firstName": "Elizabeth",
+      "middleName": "Alexandria"
+    }
+  }
+}

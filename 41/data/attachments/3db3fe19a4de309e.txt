@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDA0OjUxOjE2LjYxMTQwOCIsInVzZXJfaWQiOiJlMTRkNzc5Ni0wMzljLTRkZDYtYTk5Ny0zN2JkNzNjNDNhNGQifQ.G97NwzoO_KFRh88nvttM7vasR4l7INrmSe5ULw5YSHE' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Health particularly billion.","maxScore":91,"minScore":24,"description":"Over company soon entire if.","estimatedTime":"2 weeks","previewFileId":"3470d83d-1486-4d93-9b0b-41b2f74d0975","createdByUserId":"e14d7796-039c-4dd6-a997-37bd73c43a4d"}'

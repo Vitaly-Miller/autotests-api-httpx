@@ -1,0 +1,25 @@
+{
+  "courses": [
+    {
+      "id": "b3f0b279-15c2-4769-bc13-6a40c2d5bf25",
+      "title": "Health particularly billion.",
+      "maxScore": 91,
+      "minScore": 24,
+      "description": "Over company soon entire if.",
+      "previewFile": {
+        "id": "3470d83d-1486-4d93-9b0b-41b2f74d0975",
+        "filename": "file_6010.png",
+        "directory": "Uploaded",
+        "url": "http://localhost:8000/static/Uploaded/file_6010.png"
+      },
+      "estimatedTime": "2 weeks",
+      "createdByUser": {
+        "id": "e14d7796-039c-4dd6-a997-37bd73c43a4d",
+        "email": "test_72ae2497@example.com",
+        "lastName": "Thomas",
+        "firstName": "John",
+        "middleName": "Richard"
+      }
+    }
+  ]
+}

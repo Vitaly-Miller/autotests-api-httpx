@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDA0OjUxOjI3LjE3ODUxNCIsInVzZXJfaWQiOiIzNjZjMmIxNy01MmRjLTQ3ZjItOTlmZS04Zjk4ZTY5MDM5N2IifQ.o2MHURLx8kecPQehMIm3cDNT92tH9_7kuhDgGK2q5fI' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Fast full serve industry Democrat have.","courseId":"6a24cf4b-0714-4092-8dae-48fb25a0a640","maxScore":66,"minScore":10,"orderIndex":9920,"description":"Hold our month wonder board control talk list.","estimatedTime":"4 weeks"}'

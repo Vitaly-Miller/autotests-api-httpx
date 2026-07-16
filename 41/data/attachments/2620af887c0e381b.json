@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "cd6c6f78-c686-4580-9e9f-62ae459b4857",
+    "title": "Know include good child chance who.",
+    "maxScore": 84,
+    "minScore": 17,
+    "description": "Not true career traditional white involve young.",
+    "previewFile": {
+      "id": "0c064929-5836-4976-9b91-f3481d45040c",
+      "filename": "file_5272.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_5272.png"
+    },
+    "estimatedTime": "3 weeks",
+    "createdByUser": {
+      "id": "8c63dac1-7cb6-41ee-82fa-a017ba9de1ec",
+      "email": "test_944bfc8a@example.com",
+      "lastName": "Kane",
+      "firstName": "Heather",
+      "middleName": "Joseph"
+    }
+  }
+}

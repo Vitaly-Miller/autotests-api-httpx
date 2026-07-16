@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDA2OjM0OjUzLjkzODYwMyIsInVzZXJfaWQiOiJlOWJiZTQ3NC1jODIwLTQzZjctOTZkZC1hMjZjZmQ5MWVhYzIifQ.7s8vTiIXghqWHfYIeFKb95W0MjRmGwMRhCVVwx6OQyw' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Center word remain.","maxScore":94,"minScore":3,"description":"Piece phone out art state writer contain.","estimatedTime":"7 weeks","previewFileId":"8a48a6ea-a6fd-494c-a337-a30d93789ee6","createdByUserId":"e9bbe474-c820-43f7-96dd-a26cfd91eac2"}'

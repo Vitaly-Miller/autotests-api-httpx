@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "ee8317e6-0101-46b3-b1e6-fe6b4e5b9561",
+    "title": "My total look.",
+    "maxScore": 75,
+    "minScore": 8,
+    "description": "Very strong industry on tree the.",
+    "previewFile": {
+      "id": "4b20d11c-423c-46bb-81ce-b63b93526ec6",
+      "filename": "file_6337.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_6337.png"
+    },
+    "estimatedTime": "6 weeks",
+    "createdByUser": {
+      "id": "05ed0937-cf24-465d-9d25-c5566f14064d",
+      "email": "test_fa2bf8e7@example.com",
+      "lastName": "Gillespie",
+      "firstName": "Mason",
+      "middleName": "Carolyn"
+    }
+  }
+}

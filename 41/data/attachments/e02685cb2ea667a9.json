@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "a2acc25a-dd50-4684-b290-d4566d830c60",
+    "title": "Nature into area all attention.",
+    "maxScore": 94,
+    "minScore": 25,
+    "description": "Cold finally simple husband bill set.",
+    "previewFile": {
+      "id": "1eca7934-811c-459b-913b-feab18cf0e39",
+      "filename": "file_3328.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_3328.png"
+    },
+    "estimatedTime": "2 weeks",
+    "createdByUser": {
+      "id": "f362553d-a2f4-46fa-8ee9-2c00384137e9",
+      "email": "test_d65d32b2@example.com",
+      "lastName": "Price",
+      "firstName": "Holly",
+      "middleName": "Zachary"
+    }
+  }
+}
