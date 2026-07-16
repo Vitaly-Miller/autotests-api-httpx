@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "91b4a41b-a231-49b6-a4e4-602fef78ef47",
+    "title": "Manager south carry call.",
+    "maxScore": 65,
+    "minScore": 16,
+    "description": "Suddenly smile method instead despite.",
+    "previewFile": {
+      "id": "8de54d51-0e26-4166-b4dd-b420015b7e77",
+      "filename": "file_6194.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_6194.png"
+    },
+    "estimatedTime": "6 weeks",
+    "createdByUser": {
+      "id": "25b2ec5e-2c6b-46c8-a14b-64c645e0b0b5",
+      "email": "test_500e954f@example.com",
+      "lastName": "Knight",
+      "firstName": "Chad",
+      "middleName": "Ronnie"
+    }
+  }
+}

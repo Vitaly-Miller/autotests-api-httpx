@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "f411439c-f044-4519-958d-e8449be24feb",
+    "title": "Check imagine industry life sense the.",
+    "maxScore": 53,
+    "minScore": 16,
+    "description": "System idea color movement.",
+    "previewFile": {
+      "id": "0380a100-5796-4fc5-b0f2-a765a22cc40b",
+      "filename": "file_7683.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_7683.png"
+    },
+    "estimatedTime": "3 weeks",
+    "createdByUser": {
+      "id": "505c4739-85a2-4914-913f-8797abdb1854",
+      "email": "test_b0bce5b4@example.com",
+      "lastName": "Grant",
+      "firstName": "Corey",
+      "middleName": "Dennis"
+    }
+  }
+}

@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDAxOjM3OjAyLjQ1Mzk3NyIsInVzZXJfaWQiOiI4ODJmYzQ3Yi00NDU2LTQ5ZWItOTM0NS03MmYzNTk4Nzk2YTQifQ.AVb1d4kxtDwdyjIHqmJJ31tCoP2ELxOKe5CCvSrBkjU' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Through gas fill nothing occur.","maxScore":99,"minScore":6,"description":"Computer bad capital wait decade.","estimatedTime":"7 weeks","previewFileId":"41f0eb4a-6fab-4ec1-abc2-76f5fad8870e","createdByUserId":"882fc47b-4456-49eb-9345-72f3598796a4"}'

@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEzVDA0OjI4OjIyLjc4NjU2NyIsInVzZXJfaWQiOiIyY2MwYmQ0My1kYjNiLTRmNGYtYjE0NC04YzQ5NmU0YTk1NjUifQ.1xSLF8LXezmm1EfEPYcNJ24DrtstUNNld3QwJOQicSA' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Cell bar firm involve money.","maxScore":70,"minScore":4,"description":"Although issue meeting story cause remember.","estimatedTime":"7 weeks","previewFileId":"fd907320-b1f8-4f66-953d-ee0998cc0d03","createdByUserId":"2cc0bd43-db3b-4f4f-b144-8c496e4a9565"}'

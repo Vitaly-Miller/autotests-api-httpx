@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/courses/f411439c-f044-4519-958d-e8449be24feb \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDAxOjM3OjA1LjIxNzYwMSIsInVzZXJfaWQiOiI1MDVjNDczOS04NWEyLTQ5MTQtOTEzZi04Nzk3YWJkYjE4NTQifQ._9VLzsQgWyx0LcQtf7sSN6OXgIdQIQHEQTYAuryT_uY' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Million side give instead why charge.","maxScore":87,"minScore":30,"description":"Beyond city hard look garden public.","estimatedTime":"8 weeks"}'

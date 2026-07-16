@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDAxOjM3OjAzLjM2NTkyMiIsInVzZXJfaWQiOiI0NDg1YTVhZS00NDEwLTRiN2QtOWQxMS1lMGIxZWY0MzMxMGQifQ.4PMLHvP8dVc6ms_h6WaSebXlOS1NZcfWCZMaqQ5Oz7c' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Language result adult environmental model lot.","maxScore":64,"minScore":2,"description":"Than population area them talk.","estimatedTime":"3 weeks","previewFileId":"00d576ec-7523-4994-85ca-1bc7b61c474b","createdByUserId":"4485a5ae-4410-4b7d-9d11-e0b1ef43310d"}'

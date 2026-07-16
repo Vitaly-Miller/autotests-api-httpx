@@ -1,4 +1,0 @@
-         Request URL: http://localhost:8000/api/v1/files/id_123
-      Request Method: GET
-Response Status Code: 422-Unprocessable Content
-        Response URL: http://localhost:8000/api/v1/files/id_123

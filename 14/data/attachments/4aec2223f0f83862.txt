@@ -1,5 +1,0 @@
-curl -X PATCH \
-  http://localhost:8000/api/v1/exercises/7f6a04f8-c38c-4e88-98b2-29047d59cc4c \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEzVDA0OjI4OjMyLjU4MzQ3NSIsInVzZXJfaWQiOiI1NWVjZGE3OS1mMjIzLTQyMDctYmU3NS0xNTRiOTIxMGIwNjcifQ.vz_82m43PDTGiJdcU7nCakrG6Dvv5qq4MWOvdCmYGrg' \
-  -H 'content-type: application/json' \
-  -d '{"title":"House our long half food not.","maxScore":74,"minScore":10,"orderIndex":4286,"description":"College size defense at necessary sea cover.","estimatedTime":"2 weeks"}'

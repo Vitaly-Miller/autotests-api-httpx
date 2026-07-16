@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/exercises \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEzVDAyOjMzOjAzLjg4MDgzMSIsInVzZXJfaWQiOiIwNDk2ZTY2My05ZTE5LTRlN2YtYWNjOC0zMzA5M2ViY2I2M2IifQ.51yPRdvXIznzAhzywFrOHHRtbkFXAnL0pEoEGc_cDys' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Manager process account whom region source.","courseId":"a67da9cc-e1ff-4447-957f-48eb4e152d37","maxScore":85,"minScore":28,"orderIndex":1270,"description":"Black why end station.","estimatedTime":"3 weeks"}'

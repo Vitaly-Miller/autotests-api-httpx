@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEzVDA0OjI4OjMyLjg4MzI2MCIsInVzZXJfaWQiOiI1NWVjZGE3OS1mMjIzLTQyMDctYmU3NS0xNTRiOTIxMGIwNjcifQ.kSvErS14nZ4jeScl5NYhhVjX26J6d4CKZF5Nn7ihwBI' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Entire Mr man finally happen group.","maxScore":96,"minScore":9,"description":"Force response respond ago kid give.","estimatedTime":"4 weeks","previewFileId":"cb5ec5a6-a813-4d40-a70b-0bbea8237c80","createdByUserId":"55ecda79-f223-4207-be75-154b9210b067"}'

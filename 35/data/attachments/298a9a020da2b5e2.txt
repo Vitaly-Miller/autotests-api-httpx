@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDAxOjM3OjAxLjUxNDI4NyIsInVzZXJfaWQiOiIyNmZhZjNiZi1hOTE4LTQ0YmUtOTFkYi1mYTZmOTIxNDdkMWIifQ.HVYkcPBgEkoqr6hu-PkRdKY1vn1sUAcRvabycNq2xV8' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Least scientist like bill section.","maxScore":68,"minScore":22,"description":"Thousand reduce college serious name.","estimatedTime":"8 weeks","previewFileId":"6d885988-39a1-48a0-a072-ffb2e2892459","createdByUserId":"26faf3bf-a918-44be-91db-fa6f92147d1b"}'

@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "c4c236df-afcf-4955-afde-5b8454ed5735",
+    "title": "Keep card expect.",
+    "maxScore": 93,
+    "minScore": 14,
+    "description": "Usually kid ready mouth prevent.",
+    "previewFile": {
+      "id": "e0e0f356-358a-40e0-afcb-79de0e0242c1",
+      "filename": "file_6254.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_6254.png"
+    },
+    "estimatedTime": "2 weeks",
+    "createdByUser": {
+      "id": "e362c6c3-7bd0-48dd-8954-625577eec7b4",
+      "email": "test_a01cbbe6@example.com",
+      "lastName": "Boone",
+      "firstName": "Anthony",
+      "middleName": "Lynn"
+    }
+  }
+}

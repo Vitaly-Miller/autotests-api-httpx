@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/exercises \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEzVDAyOjMyOjU2Ljk5Nzg5NSIsInVzZXJfaWQiOiJlZjA4NDdlZS0yNDAzLTQyODctYWE3My1jNzk0ZDU3YmU3ZTQifQ.6AZ9pBbAL2YO93Oug8z6Ox1p2f_8Q9YVdNEsuGliE9Q' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Through kid truth father.","courseId":"0621805d-99ae-4a6c-ad62-72b42208c0ac","maxScore":59,"minScore":24,"orderIndex":6815,"description":"Ok me film be moment under catch goal.","estimatedTime":"9 weeks"}'

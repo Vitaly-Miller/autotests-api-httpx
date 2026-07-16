@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "0fb52ffe-e891-4ba4-9e54-aa9c6080f858",
+    "title": "Despite consider travel might.",
+    "maxScore": 63,
+    "minScore": 11,
+    "description": "Identify rise after present Democrat.",
+    "previewFile": {
+      "id": "a95f0162-fc17-4306-9f6b-7d241b71819d",
+      "filename": "file_1481.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_1481.png"
+    },
+    "estimatedTime": "2 weeks",
+    "createdByUser": {
+      "id": "eb28f372-3f33-4f40-af43-b91b54cf7e29",
+      "email": "test_fad22971@example.com",
+      "lastName": "Hansen",
+      "firstName": "Erin",
+      "middleName": "Justin"
+    }
+  }
+}

@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEzVDA0OjI4OjE4Ljk2MDUxMyIsInVzZXJfaWQiOiI0ZjhkMmM2Ny02YmFmLTRiMzMtODM5OC04NDQyMGQ4YmE4NmEifQ.kkPyVhJAzPgURSb6HQSJOThA6amPBdd0h1xH8Ynt8CQ' \
-  -H 'content-type: application/json' \
-  -d '{"title":"True at whatever.","maxScore":54,"minScore":11,"description":"South kitchen road face safe add person.","estimatedTime":"7 weeks","previewFileId":"43ff72b8-c53e-474e-8b2a-17709761b3c7","createdByUserId":"4f8d2c67-6baf-4b33-8398-84420d8ba86a"}'

@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/exercises \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEzVDAyOjMzOjAxLjE0MTczNiIsInVzZXJfaWQiOiI4OTgyNjM3Mi0zNmQ3LTQzNmItYTNiYS0zNDJlYmI4ZmZkYTcifQ.lWd-23D7WkfBxzFLYgGhf_MUszwZdfxiQnVnNcHvJUw' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Show medical coach.","courseId":"d2fecba0-a305-46f5-9f65-bdd14e859e17","maxScore":53,"minScore":19,"orderIndex":5024,"description":"Field take necessary page. Suggest source when.","estimatedTime":"8 weeks"}'

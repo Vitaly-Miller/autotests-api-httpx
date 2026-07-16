@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEzVDAyOjMyOjUyLjg3NTA0MiIsInVzZXJfaWQiOiIwOWI3MjM2Mi1mYmIxLTQ4MmMtODMwZi1kYTJkNDA2ZjIxNjgifQ.0-RzoSX-Aid2xurtowK0HbvmX4HT_s-BmGwqitD_7sg' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Democratic many success.","maxScore":91,"minScore":6,"description":"Sell page anything each positive.","estimatedTime":"4 weeks","previewFileId":"bcbc3223-48d9-42c2-ba6f-e936e6bc5057","createdByUserId":"09b72362-fbb1-482c-830f-da2d406f2168"}'

@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDAxOjM3OjE0Ljk3NDA2NCIsInVzZXJfaWQiOiJlYjI4ZjM3Mi0zZjMzLTRmNDAtYWY0My1iOTFiNTRjZjdlMjkifQ.bDNmI8Pn8QseydW58LRlsOJuQsbNOGh8zJoIh-e0qt0' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Despite consider travel might.","maxScore":63,"minScore":11,"description":"Identify rise after present Democrat.","estimatedTime":"2 weeks","previewFileId":"a95f0162-fc17-4306-9f6b-7d241b71819d","createdByUserId":"eb28f372-3f33-4f40-af43-b91b54cf7e29"}'

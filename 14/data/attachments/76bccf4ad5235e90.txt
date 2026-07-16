@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEzVDA0OjI4OjIxLjgzODUwNCIsInVzZXJfaWQiOiI1YzcxOGU3NC0yY2QxLTQ5NzItYTYyYi1jNDA4ZjRlM2I5MmEifQ.sCxoXC4kZTanHFBpVjOiWUa-0y9WYfogHsnvUoyqh2A' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Inside pretty billion.","maxScore":50,"minScore":18,"description":"Page themselves about choice leg rather.","estimatedTime":"7 weeks","previewFileId":"9c2bb9d3-e7b3-4b77-9e32-a1bc745da298","createdByUserId":"5c718e74-2cd1-4972-a62b-c408f4e3b92a"}'

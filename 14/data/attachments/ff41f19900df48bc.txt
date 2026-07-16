@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEzVDA0OjI4OjI1LjMyMDAxMCIsInVzZXJfaWQiOiJkNDA0NzE1My1lN2NjLTQ5OGItYTczNC00OGI4YjI4OGIxZDAifQ.3b0Vsq8eVnA-TN2dxqhqM1Y_dLuLM26_36qr7flSV7A' \
-  -H 'content-type: application/json' \
-  -d '{"title":"About little move father play.","maxScore":76,"minScore":10,"description":"Too simple country allow apply save perhaps.","estimatedTime":"6 weeks","previewFileId":"3f61a295-d151-4a5d-bf63-1f450fdac47a","createdByUserId":"d4047153-e7cc-498b-a734-48b8b288b1d0"}'

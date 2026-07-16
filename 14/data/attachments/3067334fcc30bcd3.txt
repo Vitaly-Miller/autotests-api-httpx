@@ -1,3 +1,0 @@
-curl -X DELETE \
-  http://localhost:8000/api/v1/files/9a365873-8b1e-478e-9b3c-bf77e36de97a \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEzVDA0OjI4OjM1LjY4NTc4MCIsInVzZXJfaWQiOiIzY2VkZmEyNC1hODY3LTQwNGEtYjU0YS1iYTYwMzhhZjA0YmQifQ.ALwhsJpG7oqlXfwpi9tLjfm5hXYoJ-GpftsjdXZVmxE'

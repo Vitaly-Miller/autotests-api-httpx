@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDAxOjM3OjExLjAyOTI5MSIsInVzZXJfaWQiOiJjOGE0ZjU2OC1mZDFkLTQ0NjktODY5NS00ZjhlMmFiNmI1N2UifQ.Z83sSOfM-fTNamPNWFn8bz3TW1nVDR6KZ4BvDiySO00' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Account treat later subject help.","courseId":"7b790b82-06ff-4237-97d7-9efa3f55a787","maxScore":76,"minScore":24,"orderIndex":9627,"description":"Talk whole mission though real.","estimatedTime":"9 weeks"}'

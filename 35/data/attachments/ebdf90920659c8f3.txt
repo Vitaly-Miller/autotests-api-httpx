@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDAxOjM3OjA2LjE0MTI1OCIsInVzZXJfaWQiOiIwNDUxNGI1NC0zODAwLTQ5NzktODY4ZS1hYjdmZGRjN2Q0MzYifQ.p_H3OUFObfDaqtCAviVv9iOgTnyTujhoaohnWPycWK8' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Walk body team.","courseId":"eae6d62f-9e6f-443c-b61e-f129beaf1545","maxScore":74,"minScore":11,"orderIndex":5315,"description":"Short inside area accept. Item poor major finish.","estimatedTime":"4 weeks"}'

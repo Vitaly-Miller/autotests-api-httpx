@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDAxOjM3OjEzLjQ2MDgzOSIsInVzZXJfaWQiOiIyNWIyZWM1ZS0yYzZiLTQ2YzgtYTE0Yi02NGM2NDVlMGIwYjUifQ.cjeV1IV5PiS5i_Mo1HkDM3QumQYNc31kk0e93jUjQfM' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Nearly book probably.","courseId":"91b4a41b-a231-49b6-a4e4-602fef78ef47","maxScore":71,"minScore":26,"orderIndex":2513,"description":"Either example challenge finally.","estimatedTime":"2 weeks"}'

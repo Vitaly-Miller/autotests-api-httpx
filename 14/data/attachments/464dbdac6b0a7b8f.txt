@@ -1,5 +1,0 @@
-curl -X PATCH \
-  http://localhost:8000/api/v1/exercises/55468bae-eb1e-4fcf-8fc0-62c6166756f9 \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEzVDAyOjMzOjA2LjYxOTM3NCIsInVzZXJfaWQiOiJmM2FlYTJhMy1jZTliLTRjZjQtODAyZi0wZjhhMTQ5ZjM4MjIifQ.MFgrIsgNJCQI6FIEqpIOEaG9r7Kol0-An0mPebhemI0' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Reach one police interest garden look.","maxScore":67,"minScore":19,"orderIndex":3600,"description":"Bag cover real evidence PM land good.","estimatedTime":"2 weeks"}'

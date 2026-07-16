@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDAxOjM3OjE0LjY4NjYzNiIsInVzZXJfaWQiOiJlYjI4ZjM3Mi0zZjMzLTRmNDAtYWY0My1iOTFiNTRjZjdlMjkifQ.dENrR-UAB0mm0P-FwqEajPMWjhbvgY13NFelveqiknU' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Your force entire.","courseId":"0fb52ffe-e891-4ba4-9e54-aa9c6080f858","maxScore":58,"minScore":7,"orderIndex":5658,"description":"Yes scene president news.","estimatedTime":"6 weeks"}'

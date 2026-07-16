@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEzVDAyOjMyOjU1Ljk2MzI4NyIsInVzZXJfaWQiOiJiOTY4N2U5MC0wZjc3LTRjNTYtYWI1MC03YjEzZTQ5MTVmZjAifQ.-UhmkLtz9HnxKi84S9nYpnFTh7XVS3e4dlGFtC97XFA' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Technology whom matter parent.","maxScore":60,"minScore":5,"description":"Hand increase five law too if.","estimatedTime":"3 weeks","previewFileId":"cedc5ec3-53eb-4fe0-b320-cd1ff96ffdab","createdByUserId":"b9687e90-0f77-4c56-ab50-7b13e4915ff0"}'

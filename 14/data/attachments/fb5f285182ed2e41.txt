@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/exercises \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEzVDAyOjMyOjU4LjM4MzQ3OCIsInVzZXJfaWQiOiJhNjFjYTY4ZS1hYmZlLTQzZjMtOGE3Ny1jZjEyOWMwMzhiOWIifQ.HXWoEEK_j3ISFA8jllQpOcmWAMIocP68MIWyoBOpJ4E' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Number forward commercial argue.","courseId":"d06fe8d6-58d6-4137-b716-88f4906b5971","maxScore":78,"minScore":15,"orderIndex":2556,"description":"Direction respond it.","estimatedTime":"4 weeks"}'

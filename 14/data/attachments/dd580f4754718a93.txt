@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEzVDAyOjMyOjUzLjg5MzIxMSIsInVzZXJfaWQiOiJlNTU5MzU3ZC02NGRmLTQ5ODUtYTEzNS04MzQyMmUxYjE3MzMifQ.-tbk9i7WWOBt9oxvWf4blVc7c5movn_yns4b1bEH1Y0' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Black add recently.","maxScore":100,"minScore":30,"description":"Tree kid city sound.","estimatedTime":"2 weeks","previewFileId":"af72e7e2-d38e-4770-9f3f-2178f538416a","createdByUserId":"e559357d-64df-4985-a135-83422e1b1733"}'

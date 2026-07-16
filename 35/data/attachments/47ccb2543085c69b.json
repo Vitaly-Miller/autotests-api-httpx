@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "eae6d62f-9e6f-443c-b61e-f129beaf1545",
+    "title": "Southern result perform.",
+    "maxScore": 72,
+    "minScore": 14,
+    "description": "Move whole court performance.",
+    "previewFile": {
+      "id": "7bd7cafc-d460-4318-aa1e-a02db480854b",
+      "filename": "file_2084.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_2084.png"
+    },
+    "estimatedTime": "3 weeks",
+    "createdByUser": {
+      "id": "04514b54-3800-4979-868e-ab7fddc7d436",
+      "email": "test_8fcda3ca@example.com",
+      "lastName": "Brown",
+      "firstName": "Gary",
+      "middleName": "Anne"
+    }
+  }
+}

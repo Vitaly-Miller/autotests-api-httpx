@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/exercises/87c563e3-8299-4ee0-b928-be7a0fb167f2 \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDAxOjM3OjEzLjQ2MDgzOSIsInVzZXJfaWQiOiIyNWIyZWM1ZS0yYzZiLTQ2YzgtYTE0Yi02NGM2NDVlMGIwYjUifQ.cjeV1IV5PiS5i_Mo1HkDM3QumQYNc31kk0e93jUjQfM' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Cover someone very quite could various.","maxScore":98,"minScore":26,"orderIndex":6589,"description":"Child since try miss cultural place.","estimatedTime":"2 weeks"}'

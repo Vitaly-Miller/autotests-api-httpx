@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDAxOjM3OjExLjMxNzIwNSIsInVzZXJfaWQiOiJjOGE0ZjU2OC1mZDFkLTQ0NjktODY5NS00ZjhlMmFiNmI1N2UifQ.-aX9giWjGRJlut7w5T0XZr6BmBZYF1ktUVDFrv5mNQ0' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Attack final require late.","maxScore":100,"minScore":7,"description":"From lead city protect.","estimatedTime":"7 weeks","previewFileId":"e1eead70-f457-493c-a218-496170604d43","createdByUserId":"c8a4f568-fd1d-4469-8695-4f8e2ab6b57e"}'

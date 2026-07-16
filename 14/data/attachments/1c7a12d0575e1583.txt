@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEzVDAyOjMyOjU0LjkzNzU4NSIsInVzZXJfaWQiOiIwNmFlNmM4ZS1iMTlhLTQ4ZjQtODQ5My0yYTJhNGE1MTE3NmMifQ.2xEpQ38LARvTyV1GUeEE-SsHnmaUAM34RDr1dNjz9WA' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Level son role.","maxScore":89,"minScore":4,"description":"Produce sit price huge. Become east east.","estimatedTime":"3 weeks","previewFileId":"254e0aa0-8827-41b5-b1fe-9210c9c1b174","createdByUserId":"06ae6c8e-b19a-48f4-8493-2a2a4a51176c"}'
