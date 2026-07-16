@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE0VDA0OjI2OjQ0LjgxMDE2MCIsInVzZXJfaWQiOiIxMTI5MDkwOS0xODY4LTQ2MmEtOTk1Ny02NzAyOWY4OWYxNTMifQ.0bQd_EmucAXkmpYedK-ifD4YkADwxvAfliVh96IlP9s' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Leave decade three everything.","maxScore":72,"minScore":25,"description":"Develop card garden exist.","estimatedTime":"4 weeks","previewFileId":"396d2b6e-705e-42a6-857d-56640b176ca0","createdByUserId":"11290909-1868-462a-9957-67029f89f153"}'

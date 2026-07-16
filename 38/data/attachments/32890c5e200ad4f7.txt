@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDA0OjAzOjQ3LjIwNzQ0MyIsInVzZXJfaWQiOiI2NDYxZDk0My0zYTZmLTQzZDUtOGQ2NC1hODg1MTRiZjZkOTUifQ.ByZbfD-3pmH6R6sP6tbgVt8Dg-hu_feSCCS6KAXZQQg' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Range gas police thank personal.","courseId":"3a75daa3-e992-4404-8179-64f72f280a8c","maxScore":65,"minScore":3,"orderIndex":1645,"description":"Fall maintain wall style age.","estimatedTime":"2 weeks"}'

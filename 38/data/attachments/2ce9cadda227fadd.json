@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "7ae6df4b-d4ec-40bf-886e-22fcf81cc947",
+    "title": "System stand staff billion election voice.",
+    "maxScore": 87,
+    "minScore": 7,
+    "description": "Chair support statement view yard administration.",
+    "previewFile": {
+      "id": "56eefa91-0bb8-49df-abd2-56b6dcabd9a3",
+      "filename": "file_5510.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_5510.png"
+    },
+    "estimatedTime": "6 weeks",
+    "createdByUser": {
+      "id": "4fa92757-6099-4fde-a5c4-0287e12ef60e",
+      "email": "test_cf929cf8@example.com",
+      "lastName": "Newton",
+      "firstName": "Charles",
+      "middleName": "Melissa"
+    }
+  }
+}

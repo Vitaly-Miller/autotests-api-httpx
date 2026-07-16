@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "13e38f8d-dbb1-4de9-8971-db858433bbb1",
+    "title": "Name beat star center.",
+    "maxScore": 97,
+    "minScore": 4,
+    "description": "Little me seek performance family audience some.",
+    "previewFile": {
+      "id": "22a4ecb1-0eb3-4529-9a84-bf327e43563b",
+      "filename": "file_5281.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_5281.png"
+    },
+    "estimatedTime": "7 weeks",
+    "createdByUser": {
+      "id": "c9106803-f5d4-4319-9399-9be6f4dac00e",
+      "email": "test_bd3895ac@example.com",
+      "lastName": "Hall",
+      "firstName": "Bethany",
+      "middleName": "John"
+    }
+  }
+}

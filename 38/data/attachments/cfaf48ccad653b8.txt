@@ -1,0 +1,32 @@
+INFO | HTTPX-Client: POST-request to http://localhost:8000/api/v1/users
+INFO | HTTPX-Client: Status code: 200-OK from http://localhost:8000/api/v1/users
+INFO | HTTPX-Client: POST-request to http://localhost:8000/api/v1/authentication/login
+INFO | HTTPX-Client: Status code: 200-OK from http://localhost:8000/api/v1/authentication/login
+INFO | HTTPX-Client: POST-request to http://localhost:8000/api/v1/authentication/login
+INFO | HTTPX-Client: Status code: 200-OK from http://localhost:8000/api/v1/authentication/login
+INFO | HTTPX-Client: POST-request to http://localhost:8000/api/v1/authentication/login
+INFO | HTTPX-Client: Status code: 200-OK from http://localhost:8000/api/v1/authentication/login
+INFO | HTTPX-Client: POST-request to http://localhost:8000/api/v1/files
+INFO | HTTPX-Client: Status code: 200-OK from http://localhost:8000/api/v1/files
+INFO | HTTPX-Client: POST-request to http://localhost:8000/api/v1/courses
+INFO | HTTPX-Client: Status code: 200-OK from http://localhost:8000/api/v1/courses
+INFO | HTTPX-Client: POST-request to http://localhost:8000/api/v1/exercises
+INFO | HTTPX-Client: Status code: 200-OK from http://localhost:8000/api/v1/exercises
+INFO | HTTPX-Client: GET-request to http://localhost:8000/api/v1/exercises/35002a53-d9b5-4612-b7a3-3766dcf055b9
+INFO | HTTPX-Client: Status code: 200-OK from http://localhost:8000/api/v1/exercises/35002a53-d9b5-4612-b7a3-3766dcf055b9
+INFO | - Base-assert: Status code: 200-OK
+INFO | - Base-assert: Request method: GET
+INFO | EXERCISES-ASSERT: Get Exercise Response data is non-empty
+INFO | EXERCISES-ASSERT: Exercise values in non-empty
+INFO | - Base-assert: Value of "id" is non-empty
+INFO | - Base-assert: Value of "title" is non-empty
+INFO | - Base-assert: Value of "course_id" is non-empty
+INFO | - Base-assert: Value of "max_score" is non-empty
+INFO | - Base-assert: Value of "min_score" is non-empty
+INFO | - Base-assert: Value of "order_index" is non-empty
+INFO | - Base-assert: Value of "description" is non-empty
+INFO | - Base-assert: Value of "estimated_time" is non-empty
+INFO | EXERCISES-ASSERT: Exercise-ID validation
+INFO | - Base-assert: Value of "exercise_id" is non-empty
+INFO | - Base-assert: Length of "exercise_id" = 36
+INFO | SCHEMA-ASSERT: Response JSON Schema validation (GetExerciseResponseSchema)

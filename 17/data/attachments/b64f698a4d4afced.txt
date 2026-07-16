@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE0VDA0OjI2OjM2Ljk5MDY5NiIsInVzZXJfaWQiOiJhYTc1M2M2NS1mZGI1LTRhNjktODI4MS01ZmMzZDg1NzZhOWQifQ.MAQx7pN_HnUx4mOLFoXU7FWTCqKPAZ3F9QuXSeH0XIw' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Read nation major.","maxScore":84,"minScore":7,"description":"Positive news rock exactly.","estimatedTime":"6 weeks","previewFileId":"03d9fe03-bb47-4867-90c5-12059aabeb55","createdByUserId":"aa753c65-fdb5-4a69-8281-5fc3d8576a9d"}'

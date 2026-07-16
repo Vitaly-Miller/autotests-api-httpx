@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE0VDA0OjI2OjQ2LjA1MjIyOSIsInVzZXJfaWQiOiIzYzMyZGI1Zi1jNjQ3LTQwNDAtOTE2OS1kZTQxODI2MTI2MTkifQ.2P5DYk7-v0x0OkE-RM330toGuFeN6inN4fE_kW2ugCs' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Manager reason guy animal tonight service.","maxScore":50,"minScore":22,"description":"Choice visit door son quality.","estimatedTime":"3 weeks","previewFileId":"a966f9e7-7e32-4eb2-b5bf-058db4673633","createdByUserId":"3c32db5f-c647-4040-9169-de4182612619"}'

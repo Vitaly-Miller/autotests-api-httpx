@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDA0OjAzOjQyLjY4MTc3MyIsInVzZXJfaWQiOiI1ZDM0MmFjYi1iYmQ0LTQ3NTYtOTA5NC05MzM4ZDZlMWMyYWQifQ.9e6g-qWom_VuEBsUYS-fJRhHBX23KMYq4TaHZ0Gn7V4' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Skill page wear on take.","maxScore":72,"minScore":17,"description":"Development simple use majority memory rather.","estimatedTime":"2 weeks","previewFileId":"6a157fa7-645f-4384-92f8-751a35c9e595","createdByUserId":"5d342acb-bbd4-4756-9094-9338d6e1c2ad"}'

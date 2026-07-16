@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/exercises/bcb35b6b-5174-46d6-bdc5-9987a948f65f \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDA0OjAzOjUyLjY1ODIwMiIsInVzZXJfaWQiOiJjYjEzM2EyMC1lZmZjLTQ3YzAtOTYwZi03YTdiYTkzMWU3MjAifQ.Dsq4JxsWTN12Cr6C8FXfQFK942QJnf7owvdY3J1VkzY' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Want compare message.","maxScore":93,"minScore":7,"orderIndex":3288,"description":"Notice general speech garden.","estimatedTime":"6 weeks"}'

@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE0VDA0OjI2OjQzLjU0NzcxNSIsInVzZXJfaWQiOiJjMmVlYmY2ZC0xOWQzLTQyZWUtOGJhYS0yNTQ2YWU1MWM2MGIifQ.eocKxxoydCNutRrSiGg4jVqcVk1B0foljCDLYHaZsj4' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Public set ever single.","maxScore":82,"minScore":1,"description":"Citizen around score. This wear miss where.","estimatedTime":"7 weeks","previewFileId":"37eee95a-f91a-4cc3-a58c-ee9ea9a5fd66","createdByUserId":"c2eebf6d-19d3-42ee-8baa-2546ae51c60b"}'

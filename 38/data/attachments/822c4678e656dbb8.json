@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "3a75daa3-e992-4404-8179-64f72f280a8c",
+    "title": "Speech end picture.",
+    "maxScore": 96,
+    "minScore": 17,
+    "description": "Another occur fine especially.",
+    "previewFile": {
+      "id": "636fcdc9-b6d8-461d-a7f2-f22db68fe296",
+      "filename": "file_4338.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_4338.png"
+    },
+    "estimatedTime": "2 weeks",
+    "createdByUser": {
+      "id": "6461d943-3a6f-43d5-8d64-a88514bf6d95",
+      "email": "test_5fec2d64@example.com",
+      "lastName": "Paul",
+      "firstName": "Rodney",
+      "middleName": "Beth"
+    }
+  }
+}

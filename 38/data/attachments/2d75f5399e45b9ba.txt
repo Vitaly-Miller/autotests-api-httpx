@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/courses/d93f3056-7faf-438e-aee6-f08214790466 \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDA0OjAzOjQzLjY0MjA5OSIsInVzZXJfaWQiOiJjYTAyY2M0Yy05MzAwLTQ1ZmMtYWI5Yi1hYWYxMzQ1MTAwM2IifQ.0OGBjS8GVuynFoN4GJ73uua9CWX4tNgriYmnsS4d0XU' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Single indeed list cover.","maxScore":93,"minScore":3,"description":"Table himself read.","estimatedTime":"4 weeks"}'

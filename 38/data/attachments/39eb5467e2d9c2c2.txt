@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDA0OjAzOjU0LjIzNzI2NCIsInVzZXJfaWQiOiIzYjY0ODc5OC1hZDJkLTQ2YzItYjNmNy1iNDQ2ODJlY2VkNmQifQ.CZLfK7Xses5Xe1Z7sTFpKb6K_keiA0soDEkrllM0w04' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Store American politics design future single.","maxScore":96,"minScore":2,"description":"Character follow another cost among.","estimatedTime":"7 weeks","previewFileId":"3d6f1365-f068-4663-9509-80698e5fe62b","createdByUserId":"3b648798-ad2d-46c2-b3f7-b44682eced6d"}'

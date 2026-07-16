@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDA0OjAzOjM5LjkxMDEyOCIsInVzZXJfaWQiOiJiZDM0NzY2OC0yZjVjLTQxZWItOGY1MC05ZTUzNDQ1ZTVlNTAifQ.mVSWrVo35Ckn0hleWz6xEXhzyIbQHnshtgd4P8ogzwE' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Research when check example still.","maxScore":96,"minScore":29,"description":"Too subject interest box guess think half very.","estimatedTime":"5 weeks","previewFileId":"02174d80-ef4a-49aa-a6b1-03ef9256eaea","createdByUserId":"bd347668-2f5c-41eb-8f50-9e53445e5e50"}'

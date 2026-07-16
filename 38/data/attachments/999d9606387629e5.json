@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "38912133-73ce-4a63-80ab-6f7251cbcc7e",
+    "title": "Who lose attack scene claim.",
+    "maxScore": 72,
+    "minScore": 15,
+    "description": "Police we rock message them.",
+    "previewFile": {
+      "id": "432d843c-bb61-4605-b8c8-ab0d37401ccc",
+      "filename": "file_6971.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_6971.png"
+    },
+    "estimatedTime": "3 weeks",
+    "createdByUser": {
+      "id": "e45a06e1-cb63-4e57-a0bf-7e84a0b95ec0",
+      "email": "test_9949ec15@example.com",
+      "lastName": "Perez",
+      "firstName": "Teresa",
+      "middleName": "Amber"
+    }
+  }
+}

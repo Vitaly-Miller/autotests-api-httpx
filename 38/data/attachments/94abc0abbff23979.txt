@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDA0OjAzOjUyLjY1ODIwMiIsInVzZXJfaWQiOiJjYjEzM2EyMC1lZmZjLTQ3YzAtOTYwZi03YTdiYTkzMWU3MjAifQ.Dsq4JxsWTN12Cr6C8FXfQFK942QJnf7owvdY3J1VkzY' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Behavior such quite discussion consider mission.","courseId":"25baee1d-a0d3-453e-bbe4-d9744e8ced0e","maxScore":66,"minScore":28,"orderIndex":1871,"description":"Nature budget including.","estimatedTime":"4 weeks"}'

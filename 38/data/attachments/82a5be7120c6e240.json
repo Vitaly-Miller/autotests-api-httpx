@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "49c8221b-2556-4b54-99d5-2dafc00963b5",
+    "title": "Skill page wear on take.",
+    "maxScore": 72,
+    "minScore": 17,
+    "description": "Development simple use majority memory rather.",
+    "previewFile": {
+      "id": "6a157fa7-645f-4384-92f8-751a35c9e595",
+      "filename": "file_5893.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_5893.png"
+    },
+    "estimatedTime": "2 weeks",
+    "createdByUser": {
+      "id": "5d342acb-bbd4-4756-9094-9338d6e1c2ad",
+      "email": "test_3e42edc7@example.com",
+      "lastName": "Cooper",
+      "firstName": "Morgan",
+      "middleName": "Stephanie"
+    }
+  }
+}

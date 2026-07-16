@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "eba0b550-5c45-4982-a925-964192082c5a",
+    "title": "Store American politics design future single.",
+    "maxScore": 96,
+    "minScore": 2,
+    "description": "Character follow another cost among.",
+    "previewFile": {
+      "id": "3d6f1365-f068-4663-9509-80698e5fe62b",
+      "filename": "file_6180.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_6180.png"
+    },
+    "estimatedTime": "7 weeks",
+    "createdByUser": {
+      "id": "3b648798-ad2d-46c2-b3f7-b44682eced6d",
+      "email": "test_8b559e4f@example.com",
+      "lastName": "Green",
+      "firstName": "Seth",
+      "middleName": "Holly"
+    }
+  }
+}

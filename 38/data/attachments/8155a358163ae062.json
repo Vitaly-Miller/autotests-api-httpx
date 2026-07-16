@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "74f635e6-ed01-4b0f-801b-19f471c93340",
+    "title": "Decade but throughout deal be.",
+    "maxScore": 90,
+    "minScore": 27,
+    "description": "Fast six option shoulder Congress type.",
+    "previewFile": {
+      "id": "8b697c0b-f918-4492-9009-a9ebc19cd6ce",
+      "filename": "file_1987.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_1987.png"
+    },
+    "estimatedTime": "3 weeks",
+    "createdByUser": {
+      "id": "143fc68a-8834-4450-8f8b-6090fba7a872",
+      "email": "test_3da34834@example.com",
+      "lastName": "Meadows",
+      "firstName": "Megan",
+      "middleName": "Valerie"
+    }
+  }
+}

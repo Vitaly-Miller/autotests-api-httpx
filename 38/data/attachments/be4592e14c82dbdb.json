@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "1cca130f-bd03-421a-b08c-5a8f22a57fd5",
+    "title": "Quite herself space those.",
+    "maxScore": 83,
+    "minScore": 8,
+    "description": "Me cut run sing. Sense leader research seem.",
+    "previewFile": {
+      "id": "999a8c7d-ddb6-4d1a-8ffd-09c2d69bbd2d",
+      "filename": "file_9765.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_9765.png"
+    },
+    "estimatedTime": "2 weeks",
+    "createdByUser": {
+      "id": "1050fa9d-ec26-4b1d-9a1b-774ac6749f91",
+      "email": "test_b817b402@example.com",
+      "lastName": "Michael",
+      "firstName": "Mark",
+      "middleName": "Paige"
+    }
+  }
+}

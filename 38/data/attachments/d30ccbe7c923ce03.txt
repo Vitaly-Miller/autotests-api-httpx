@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/exercises/0cd20833-c4bb-43c1-a23b-2a6cd7458aa0 \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDA0OjAzOjUzLjk1OTUzOCIsInVzZXJfaWQiOiIzYjY0ODc5OC1hZDJkLTQ2YzItYjNmNy1iNDQ2ODJlY2VkNmQifQ.2RZu33w6-uAp2YuFGi8i0N2OfNgLhFcjbv3Ms1RF_fY' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Life behavior or traditional middle.","maxScore":95,"minScore":9,"orderIndex":9421,"description":"Realize such black do.","estimatedTime":"7 weeks"}'

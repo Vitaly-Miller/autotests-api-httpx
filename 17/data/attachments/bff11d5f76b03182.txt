@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/exercises \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE0VDA0OjI2OjQ5LjQ5NTY0NiIsInVzZXJfaWQiOiJjYmY5NjQzMS1lNGEwLTQ4OTctYmFlNi0xZDU5MjljYWQ4MzkifQ.Qp2xsjnbfj7RO1AZaoK7q8mAmQa7qAG1U6L9CSNuac4' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Beat ready ago form.","courseId":"501b95d2-dbb9-4aa2-99be-ef37996f33f7","maxScore":87,"minScore":30,"orderIndex":9052,"description":"Until camera police far.","estimatedTime":"7 weeks"}'

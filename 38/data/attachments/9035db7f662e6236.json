@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "599f4448-92d9-4b98-b2be-b7d087c4c6c2",
+    "title": "Research when check example still.",
+    "maxScore": 96,
+    "minScore": 29,
+    "description": "Too subject interest box guess think half very.",
+    "previewFile": {
+      "id": "02174d80-ef4a-49aa-a6b1-03ef9256eaea",
+      "filename": "file_6472.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_6472.png"
+    },
+    "estimatedTime": "5 weeks",
+    "createdByUser": {
+      "id": "bd347668-2f5c-41eb-8f50-9e53445e5e50",
+      "email": "test_92a30a57@example.com",
+      "lastName": "Martinez",
+      "firstName": "Jennifer",
+      "middleName": "Jody"
+    }
+  }
+}

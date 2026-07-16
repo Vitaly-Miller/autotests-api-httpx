@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDA0OjAzOjUyLjkzNTc4MiIsInVzZXJfaWQiOiJjYjEzM2EyMC1lZmZjLTQ3YzAtOTYwZi03YTdiYTkzMWU3MjAifQ.klQwU4ikCAupagRcArnFtkEoEpOH0WPfqla4JwmDPGM' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Program anyone positive top.","maxScore":77,"minScore":29,"description":"Writer itself act agree understand as stuff.","estimatedTime":"5 weeks","previewFileId":"3dd41c54-ed31-4acc-9abc-dafbc3694723","createdByUserId":"cb133a20-effc-47c0-960f-7a7ba931e720"}'

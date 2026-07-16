@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDA0OjAzOjUwLjQxNDU3MiIsInVzZXJfaWQiOiJjOTEwNjgwMy1mNWQ0LTQzMTktOTM5OS05YmU2ZjRkYWMwMGUifQ.9iO5e133oFcpqvfQpln3QK55B6A16OM3hOl794CRXk4' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Name beat star center.","maxScore":97,"minScore":4,"description":"Little me seek performance family audience some.","estimatedTime":"7 weeks","previewFileId":"22a4ecb1-0eb3-4529-9a84-bf327e43563b","createdByUserId":"c9106803-f5d4-4319-9399-9be6f4dac00e"}'

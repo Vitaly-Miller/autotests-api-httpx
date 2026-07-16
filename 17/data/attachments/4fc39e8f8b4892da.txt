@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE0VDA0OjI2OjQyLjMxNDIzMyIsInVzZXJfaWQiOiI0ODEzNDYxYi1kNWI4LTRjOTgtOWFkYS0zOGM2ODYwYThjNzMifQ.CL9sCw7WlxxId_ysA2bo5mKeBAxKS0OzuhdDS_QmAWY' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Brother case value style hour can.","maxScore":97,"minScore":6,"description":"Mission seek response career glass. About do of.","estimatedTime":"8 weeks","previewFileId":"d44f4664-d932-4f35-8d48-f8f178fdc8aa","createdByUserId":"4813461b-d5b8-4c98-9ada-38c6860a8c73"}'

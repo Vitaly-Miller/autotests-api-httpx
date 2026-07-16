@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "d93f3056-7faf-438e-aee6-f08214790466",
+    "title": "Police check operation.",
+    "maxScore": 61,
+    "minScore": 5,
+    "description": "Voice mother cell mention role better represent.",
+    "previewFile": {
+      "id": "5666f3c8-f933-40f6-a338-ace5c9a00a1d",
+      "filename": "file_8923.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_8923.png"
+    },
+    "estimatedTime": "6 weeks",
+    "createdByUser": {
+      "id": "ca02cc4c-9300-45fc-ab9b-aaf13451003b",
+      "email": "test_4db85e68@example.com",
+      "lastName": "Moreno",
+      "firstName": "Steven",
+      "middleName": "Tina"
+    }
+  }
+}

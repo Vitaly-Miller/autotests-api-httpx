@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDA0OjAzOjUzLjk1OTUzOCIsInVzZXJfaWQiOiIzYjY0ODc5OC1hZDJkLTQ2YzItYjNmNy1iNDQ2ODJlY2VkNmQifQ.2RZu33w6-uAp2YuFGi8i0N2OfNgLhFcjbv3Ms1RF_fY' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Still article few officer.","courseId":"eba0b550-5c45-4982-a925-964192082c5a","maxScore":66,"minScore":15,"orderIndex":8589,"description":"Perhaps only threat four there.","estimatedTime":"3 weeks"}'

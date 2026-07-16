@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "25baee1d-a0d3-453e-bbe4-d9744e8ced0e",
+    "title": "Program anyone positive top.",
+    "maxScore": 77,
+    "minScore": 29,
+    "description": "Writer itself act agree understand as stuff.",
+    "previewFile": {
+      "id": "3dd41c54-ed31-4acc-9abc-dafbc3694723",
+      "filename": "file_2345.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_2345.png"
+    },
+    "estimatedTime": "5 weeks",
+    "createdByUser": {
+      "id": "cb133a20-effc-47c0-960f-7a7ba931e720",
+      "email": "test_b1d02225@example.com",
+      "lastName": "Hart",
+      "firstName": "Debbie",
+      "middleName": "Pamela"
+    }
+  }
+}

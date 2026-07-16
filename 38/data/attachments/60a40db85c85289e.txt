@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDA0OjAzOjUwLjEzOTgzNyIsInVzZXJfaWQiOiJjOTEwNjgwMy1mNWQ0LTQzMTktOTM5OS05YmU2ZjRkYWMwMGUifQ.UYbbnBwWTP-j0dXWpeB3I1_ps52Vp936U_dJt72vAD0' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Unit fast war position life color.","courseId":"13e38f8d-dbb1-4de9-8971-db858433bbb1","maxScore":83,"minScore":4,"orderIndex":6220,"description":"Dream say special instead food.","estimatedTime":"5 weeks"}'

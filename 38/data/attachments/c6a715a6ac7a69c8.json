@@ -1,0 +1,25 @@
+{
+  "courses": [
+    {
+      "id": "22d52b80-1618-4a44-9366-dd6f6641f40a",
+      "title": "Tough pass pass than surface trade.",
+      "maxScore": 71,
+      "minScore": 30,
+      "description": "What meeting also floor need never.",
+      "previewFile": {
+        "id": "359edbb5-084c-4029-a6eb-af4a2f10489a",
+        "filename": "file_9257.png",
+        "directory": "Uploaded",
+        "url": "http://localhost:8000/static/Uploaded/file_9257.png"
+      },
+      "estimatedTime": "7 weeks",
+      "createdByUser": {
+        "id": "958f58c6-3bb4-4cfb-b317-8d73b9672c4d",
+        "email": "test_8aaa1955@example.com",
+        "lastName": "Duffy",
+        "firstName": "Beth",
+        "middleName": "Amber"
+      }
+    }
+  ]
+}

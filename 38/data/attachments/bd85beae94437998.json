@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "61f806c4-4a21-4410-b9ef-b636422568ba",
+    "title": "Century direction sure.",
+    "maxScore": 99,
+    "minScore": 9,
+    "description": "Trouble hundred research when must where.",
+    "previewFile": {
+      "id": "dd98fbe0-1835-4674-a850-1913e166190f",
+      "filename": "file_5937.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_5937.png"
+    },
+    "estimatedTime": "8 weeks",
+    "createdByUser": {
+      "id": "a44bd60f-dfa0-4adc-b4be-e456dff3ae7f",
+      "email": "test_b42e6124@example.com",
+      "lastName": "Hernandez",
+      "firstName": "Grace",
+      "middleName": "Kristen"
+    }
+  }
+}

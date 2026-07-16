@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDA0OjAzOjQ3LjQ5MjkwNCIsInVzZXJfaWQiOiI2NDYxZDk0My0zYTZmLTQzZDUtOGQ2NC1hODg1MTRiZjZkOTUifQ.UMXeHWy5jPOSQTng6P0R2A_TMcik6B0ffe--beRVIkE' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Speech end picture.","maxScore":96,"minScore":17,"description":"Another occur fine especially.","estimatedTime":"2 weeks","previewFileId":"636fcdc9-b6d8-461d-a7f2-f22db68fe296","createdByUserId":"6461d943-3a6f-43d5-8d64-a88514bf6d95"}'

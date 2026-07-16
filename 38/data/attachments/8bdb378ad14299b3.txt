@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDA0OjAzOjQ0Ljk2ODEzOCIsInVzZXJfaWQiOiJhNDRiZDYwZi1kZmEwLTRhZGMtYjRiZS1lNDU2ZGZmM2FlN2YifQ.on1B-kyuACiukmzwRVOkSTFIT39WwuEW57n_OpehhE4' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Century direction sure.","maxScore":99,"minScore":9,"description":"Trouble hundred research when must where.","estimatedTime":"8 weeks","previewFileId":"dd98fbe0-1835-4674-a850-1913e166190f","createdByUserId":"a44bd60f-dfa0-4adc-b4be-e456dff3ae7f"}'
