@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "a3eeb79a-5278-4941-a676-e85f82cb1743",
+    "title": "Large worry prove natural yet eye.",
+    "maxScore": 57,
+    "minScore": 19,
+    "description": "Evidence suddenly low people baby husband miss a.",
+    "previewFile": {
+      "id": "bac2cdb8-b6eb-43e4-8963-8d55f28378d6",
+      "filename": "file_8602.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_8602.png"
+    },
+    "estimatedTime": "4 weeks",
+    "createdByUser": {
+      "id": "43545e0d-84d5-469e-89c9-27b037401220",
+      "email": "test_95cba96f@example.com",
+      "lastName": "Clark",
+      "firstName": "Steven",
+      "middleName": "Angela"
+    }
+  }
+}

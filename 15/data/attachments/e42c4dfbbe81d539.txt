@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEzVDE3OjUyOjI4Ljg2MDM5OSIsInVzZXJfaWQiOiI1MjE5ZDk0NC0xNzFlLTQ0NzQtYWJmYS0yMzMwZmE5ZDMxMDEifQ.Yxz5b9YGKEv_S_q7pg0BJb3wZomLoQh0as1hSTjqRNo' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Front must war.","maxScore":93,"minScore":18,"description":"Series laugh with share certain song education.","estimatedTime":"4 weeks","previewFileId":"304dab01-3395-4a04-9e4a-26268dacd32a","createdByUserId":"5219d944-171e-4474-abfa-2330fa9d3101"}'

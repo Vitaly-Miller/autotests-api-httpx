@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDAzOjM0OjUwLjA4MzEzMSIsInVzZXJfaWQiOiIwZGFjMTcwZi0wMDYwLTQ0MmItOTdkNC0xZmUxYzAwMjE2MGMifQ.9J68_xZAbx70SgBkec2-8m6GvNe_f8oYZJo9wE44Z88' \
+  -H 'content-type: application/json' \
+  -d '{"title":"By member teacher director attention.","maxScore":84,"minScore":20,"description":"Decision toward treatment once specific should.","estimatedTime":"8 weeks","previewFileId":"8f5ed723-5900-4242-8786-20fde29679e7","createdByUserId":"0dac170f-0060-442b-97d4-1fe1c002160c"}'

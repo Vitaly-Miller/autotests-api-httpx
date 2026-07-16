@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEzVDE3OjUyOjM1LjQyNjUxMCIsInVzZXJfaWQiOiJiNzU4ODJkNS0wZTFiLTRmODMtOGIxMi01Yjk3ZDU0OTcyNjEifQ.NwIXAyb2IUKHIsUNoW-kmiccGUPuviz_k1PxXW4QDkk' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Sell soldier keep former.","maxScore":53,"minScore":29,"description":"I up including.","estimatedTime":"4 weeks","previewFileId":"42083c8b-fc6b-4ae2-abe3-eab8f827ca5d","createdByUserId":"b75882d5-0e1b-4f83-8b12-5b97d5497261"}'

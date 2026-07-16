@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDAzOjM1OjAwLjIzMTA5MCIsInVzZXJfaWQiOiIxMzAxOWE0ZC1jZDNmLTRkZjktOGI3MS1iM2ZjM2E5NDU5MDQifQ.25U-5VANvlbyieItvO5d0Eu5wPoBWJpeftqxTEywj-Q' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Across method possible our guy.","maxScore":79,"minScore":29,"description":"To family experience certainly deal site court.","estimatedTime":"6 weeks","previewFileId":"fe32667c-67b9-4bbf-bd34-e83340ede271","createdByUserId":"13019a4d-cd3f-4df9-8b71-b3fc3a945904"}'

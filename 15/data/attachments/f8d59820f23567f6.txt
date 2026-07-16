@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/exercises \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEzVDE3OjUyOjM1LjEyNTU2MCIsInVzZXJfaWQiOiJiNzU4ODJkNS0wZTFiLTRmODMtOGIxMi01Yjk3ZDU0OTcyNjEifQ.-Op26mThcvUV01JKs0KYle9G1EuIeBJ_6kSyYHAvrX4' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Agree air million nor.","courseId":"9bfcefd9-4264-4c40-8c7b-25edc9e88be2","maxScore":86,"minScore":1,"orderIndex":5647,"description":"Site office movie actually. Argue reveal cell so.","estimatedTime":"3 weeks"}'

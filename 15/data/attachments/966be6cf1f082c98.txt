@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/exercises \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEzVDE3OjUyOjMyLjYyNTExMSIsInVzZXJfaWQiOiJhM2UxZjAzOC05NDU5LTQ1NDItYTczZi0zNGFmMjEzZGZhMWQifQ.AIIGCEP7nWnXqMkIRSxRMIF-YKgnUwFHtpUMzCKKZ20' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Art close learn time vote investment.","courseId":"61a05405-89ac-4fbf-aff6-5676f73008a8","maxScore":62,"minScore":29,"orderIndex":7814,"description":"Hand remember budget kind reveal know none.","estimatedTime":"9 weeks"}'

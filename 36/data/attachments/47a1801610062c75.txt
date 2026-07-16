@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDAzOjM0OjU0Ljg3MjQwMiIsInVzZXJfaWQiOiJiZTFkYzQ3MC01YzAzLTQ0NTctYmQ2ZC1mMjE3ZjZkYWEyN2YifQ.WOk291MFfS-PlN2y3RLivdr-ZOYQXyUyze5cddCEfgo' \
+  -H 'content-type: application/json' \
+  -d '{"title":"American along third current somebody computer.","courseId":"db34daae-5569-4274-b557-d6e6584ef533","maxScore":68,"minScore":26,"orderIndex":9523,"description":"Cut me picture positive until member.","estimatedTime":"2 weeks"}'

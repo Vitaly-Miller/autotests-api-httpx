@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/exercises/23f55201-77a9-45b7-9fc9-fdc12071bd03 \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDAzOjM0OjU5LjkzMjcyNCIsInVzZXJfaWQiOiIxMzAxOWE0ZC1jZDNmLTRkZjktOGI3MS1iM2ZjM2E5NDU5MDQifQ.aWagPklKDqGRwk0QIXb1UhIrSItY5krrUBvTTCbk674' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Site trade manage couple example entire.","maxScore":90,"minScore":14,"orderIndex":7798,"description":"Very should writer per property.","estimatedTime":"8 weeks"}'

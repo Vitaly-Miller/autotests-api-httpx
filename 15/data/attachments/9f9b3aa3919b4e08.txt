@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/exercises \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEzVDE3OjUyOjMzLjg5MTEwMSIsInVzZXJfaWQiOiIxNjUzZGVmOC0wYjI4LTQyOTktYjRhYS04ZjIxNDM0MzdkZDIifQ.tcnLPc6ohjOscINRwq90n6wSDjDrLUjafoNFqO8IxmQ' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Difficult fear clearly.","courseId":"0495478a-7141-4ad3-8bc6-d8af34087ff5","maxScore":75,"minScore":10,"orderIndex":120,"description":"Watch music likely wish on.","estimatedTime":"8 weeks"}'

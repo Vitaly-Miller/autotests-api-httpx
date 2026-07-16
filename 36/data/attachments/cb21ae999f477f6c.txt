@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDAzOjM0OjUxLjA0NjI1NiIsInVzZXJfaWQiOiI3MjQ0YzA2ZS0wMzI4LTRlZmEtODUxOS0wOWIzYzgzNzEyZTEifQ.0nl847nbR_CU-ENCIA2WCyihEyzChODTNuDp3NKT-2Q' \
+  -H 'content-type: application/json' \
+  -d '{"title":"First song sure go floor detail.","courseId":"a80603ba-016c-4b30-8c15-1d7a9e05478e","maxScore":80,"minScore":13,"orderIndex":9780,"description":"Plan parent through article draw great.","estimatedTime":"5 weeks"}'

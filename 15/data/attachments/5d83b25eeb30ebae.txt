@@ -1,5 +1,0 @@
-curl -X PATCH \
-  http://localhost:8000/api/v1/exercises/fcf1a4e9-34c3-41af-8175-b69898961d32 \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEzVDE3OjUyOjQxLjM5ODk2MyIsInVzZXJfaWQiOiI1MGZhMjM0MS1iYzQwLTRkNDMtOTUwMS1lMDZmNGE3MTViNDUifQ.5Luroe0bb-nUIUssuPMVRObzwkKxaujgViMRqYy0aP4' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Take apply during prevent could figure.","maxScore":79,"minScore":28,"orderIndex":5768,"description":"Hospital could help table people bank.","estimatedTime":"4 weeks"}'

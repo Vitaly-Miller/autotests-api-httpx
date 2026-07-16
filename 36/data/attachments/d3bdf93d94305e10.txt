@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDAzOjM0OjQ2LjIyOTY0NiIsInVzZXJfaWQiOiIyNjc2NDI2MS1hYzdkLTRmMGUtYjRkZC0zZTJhZjhhODNlOWEifQ.CHOQUieLV4Va1IzxYP0PD2AMJUZw7W0hBURUQAaKh7s' \
+  -H 'content-type: application/json' \
+  -d '{"title":"South consumer focus speech shake sea.","maxScore":91,"minScore":6,"description":"Whether head send eye.","estimatedTime":"4 weeks","previewFileId":"58e9ea84-8bd1-4ab3-95ec-95fea4fcd367","createdByUserId":"26764261-ac7d-4f0e-b4dd-3e2af8a83e9a"}'

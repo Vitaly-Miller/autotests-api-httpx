@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "edc62eb8-1089-4d65-97a1-46cf35647b4c",
+    "title": "South consumer focus speech shake sea.",
+    "maxScore": 91,
+    "minScore": 6,
+    "description": "Whether head send eye.",
+    "previewFile": {
+      "id": "58e9ea84-8bd1-4ab3-95ec-95fea4fcd367",
+      "filename": "file_7864.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_7864.png"
+    },
+    "estimatedTime": "4 weeks",
+    "createdByUser": {
+      "id": "26764261-ac7d-4f0e-b4dd-3e2af8a83e9a",
+      "email": "test_ad2035e4@example.com",
+      "lastName": "Wong",
+      "firstName": "April",
+      "middleName": "Stephanie"
+    }
+  }
+}

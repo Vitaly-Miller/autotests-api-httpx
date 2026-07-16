@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDAzOjM0OjU1LjE3MTUwOCIsInVzZXJfaWQiOiJiZTFkYzQ3MC01YzAzLTQ0NTctYmQ2ZC1mMjE3ZjZkYWEyN2YifQ.dAvKnZbBgUw0OYrdGZiwNpDJL2-65O1ixTE_wGqol48' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Instead our section bad fill thought.","maxScore":64,"minScore":12,"description":"Character especially again.","estimatedTime":"3 weeks","previewFileId":"fbef97ed-7177-452a-8e1e-1370d50c5fb3","createdByUserId":"be1dc470-5c03-4457-bd6d-f217f6daa27f"}'

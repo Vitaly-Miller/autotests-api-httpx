@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "167d3fcb-229e-4cd1-92af-3222e3b4bee8",
+    "title": "Entire fish media.",
+    "maxScore": 59,
+    "minScore": 12,
+    "description": "Travel give building according debate.",
+    "previewFile": {
+      "id": "652587e0-1a37-464d-9d66-7738cfd9cf77",
+      "filename": "file_6909.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_6909.png"
+    },
+    "estimatedTime": "3 weeks",
+    "createdByUser": {
+      "id": "b6ab99e3-4ac9-436e-b70e-8bb47456d117",
+      "email": "test_14569599@example.com",
+      "lastName": "Perez",
+      "firstName": "Richard",
+      "middleName": "Dustin"
+    }
+  }
+}

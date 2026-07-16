@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEzVDE3OjUyOjMyLjkyNjU4MiIsInVzZXJfaWQiOiJhM2UxZjAzOC05NDU5LTQ1NDItYTczZi0zNGFmMjEzZGZhMWQifQ.T3wmdtjsEw7XUP4No0uevLDOjxWjInIMBnlKqA6SEnI' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Unit thus detail resource sport wonder.","maxScore":90,"minScore":19,"description":"Of staff sport.","estimatedTime":"3 weeks","previewFileId":"96800e80-9d2b-48d4-ae64-daa96f5a6a17","createdByUserId":"a3e1f038-9459-4542-a73f-34af213dfa1d"}'

@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "1abda70c-07e6-4827-a3ff-6abf02da767f",
+    "title": "We organization surface as herself stuff.",
+    "maxScore": 99,
+    "minScore": 10,
+    "description": "Former trouble know arm expert evidence.",
+    "previewFile": {
+      "id": "e14f26e7-718c-4b1d-9d40-5e1303ff382d",
+      "filename": "file_7705.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_7705.png"
+    },
+    "estimatedTime": "7 weeks",
+    "createdByUser": {
+      "id": "50cc35eb-b262-4b01-8659-e277d2e0570d",
+      "email": "test_608c14dc@example.com",
+      "lastName": "Bennett",
+      "firstName": "Maria",
+      "middleName": "Michele"
+    }
+  }
+}

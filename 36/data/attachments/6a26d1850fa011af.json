@@ -1,0 +1,25 @@
+{
+  "courses": [
+    {
+      "id": "38212ee2-d0cc-46e7-a102-ce426f97d2f8",
+      "title": "Lose every us church through make.",
+      "maxScore": 91,
+      "minScore": 30,
+      "description": "Technology speech group majority not top.",
+      "previewFile": {
+        "id": "e55d70db-0457-472c-9399-d8ab89873dc9",
+        "filename": "file_8244.png",
+        "directory": "Uploaded",
+        "url": "http://localhost:8000/static/Uploaded/file_8244.png"
+      },
+      "estimatedTime": "8 weeks",
+      "createdByUser": {
+        "id": "bf3d412d-946d-4d73-bc83-be1b3d68f052",
+        "email": "test_459d4759@example.com",
+        "lastName": "Harrison",
+        "firstName": "Ronald",
+        "middleName": "Sherry"
+      }
+    }
+  ]
+}

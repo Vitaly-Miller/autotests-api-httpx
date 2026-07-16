@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDAzOjM0OjQ5LjEyNzI5OCIsInVzZXJfaWQiOiJiZjNkNDEyZC05NDZkLTRkNzMtYmM4My1iZTFiM2Q2OGYwNTIifQ.te-GPu7oyPPu_gvdHbzuRWJg5Lw6KWpdlhamUfFsO5w' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Lose every us church through make.","maxScore":91,"minScore":30,"description":"Technology speech group majority not top.","estimatedTime":"8 weeks","previewFileId":"e55d70db-0457-472c-9399-d8ab89873dc9","createdByUserId":"bf3d412d-946d-4d73-bc83-be1b3d68f052"}'

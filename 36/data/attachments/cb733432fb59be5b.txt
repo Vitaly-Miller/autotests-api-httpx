@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDAzOjM0OjQ3LjIwODUxMiIsInVzZXJfaWQiOiI2OWFhZmM4Ny0zOTViLTQzMmUtYWM3MC1lZjkyNTZmNjg1ZjcifQ.ILfOz44XXI_vllxLG-OLVwJPppkhrHNKQSs77rGNSjE' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Summer charge this.","maxScore":55,"minScore":16,"description":"Draw play artist drop possible.","estimatedTime":"5 weeks","previewFileId":"b828c46d-c0f4-46d6-b6dd-436cbea40404","createdByUserId":"69aafc87-395b-432e-ac70-ef9256f685f7"}'

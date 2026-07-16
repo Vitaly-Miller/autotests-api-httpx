@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/exercises/f08e6f1e-738f-4ba9-97bb-25cc35d2cbf3 \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDAzOjM0OjU4LjY1NzQ0MyIsInVzZXJfaWQiOiIyZWEwNGE0Mi04NTBmLTRiZjQtYTY3OC04ZmYwZDk0MTU2MjMifQ.T8UvnEpSMob4SNt0aXLL5mwONyGnT8UHzpr0DYMLgYo' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Shake artist from.","maxScore":91,"minScore":3,"orderIndex":6256,"description":"Yard much admit night true not same.","estimatedTime":"8 weeks"}'

@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "a80603ba-016c-4b30-8c15-1d7a9e05478e",
+    "title": "Particular wife food six between.",
+    "maxScore": 53,
+    "minScore": 28,
+    "description": "Reduce fight staff now. Save a by.",
+    "previewFile": {
+      "id": "a4d9b28a-2d45-4449-897f-abd1c8a543b2",
+      "filename": "file_3149.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_3149.png"
+    },
+    "estimatedTime": "5 weeks",
+    "createdByUser": {
+      "id": "7244c06e-0328-4efa-8519-09b3c83712e1",
+      "email": "test_a8069795@example.com",
+      "lastName": "Galvan",
+      "firstName": "Ricky",
+      "middleName": "Stephanie"
+    }
+  }
+}

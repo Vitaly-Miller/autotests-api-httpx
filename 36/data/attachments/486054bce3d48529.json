@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "9a4e83e9-eee2-4c24-a022-53c625840532",
+    "title": "Organization home ever.",
+    "maxScore": 66,
+    "minScore": 18,
+    "description": "Build agency organization old.",
+    "previewFile": {
+      "id": "f439699c-0b41-43bc-aa42-21ec35862741",
+      "filename": "file_3881.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_3881.png"
+    },
+    "estimatedTime": "3 weeks",
+    "createdByUser": {
+      "id": "00cf4185-c510-4f0c-b87f-eccd232ece1b",
+      "email": "test_179ba990@example.com",
+      "lastName": "Leonard",
+      "firstName": "Jose",
+      "middleName": "Stephen"
+    }
+  }
+}
