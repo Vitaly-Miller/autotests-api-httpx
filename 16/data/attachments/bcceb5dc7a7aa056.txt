@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEzVDE4OjMzOjEyLjUxNjQzNCIsInVzZXJfaWQiOiIzZTBjMDhiMS1lYzczLTQ4M2QtOTY0Ni03NTcxNjRhYTEwOGUifQ.IWt75biRNKlyWH-ntY-1qNRvud4CRQJLFw6swf0_Mok' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Defense other itself analysis.","maxScore":63,"minScore":30,"description":"Just table stuff book fight fact.","estimatedTime":"6 weeks","previewFileId":"c2761472-aead-49d9-8a84-f1fd546244a8","createdByUserId":"3e0c08b1-ec73-483d-9646-757164aa108e"}'

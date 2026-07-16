@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/exercises \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEzVDE4OjMzOjE5LjM3MTgxMiIsInVzZXJfaWQiOiI2NmNjMDY5Ny04YzUxLTQ1ZDItOTUyYS1hMTM1MjVjOWU0ODkifQ.6CTNMF-lmCMIpp1DfnwMWyJAs5uuOIU3iXwjHOH1uI0' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Say fight effect language company.","courseId":"6b185cea-d782-459d-8323-7339124ef27c","maxScore":57,"minScore":29,"orderIndex":6773,"description":"Know leg fund recent offer leader each suffer.","estimatedTime":"5 weeks"}'

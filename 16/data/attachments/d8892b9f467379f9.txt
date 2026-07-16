@@ -1,5 +1,0 @@
-curl -X PATCH \
-  http://localhost:8000/api/v1/exercises/ad8f1f44-7daa-44c6-b87b-daa42a08cad8 \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEzVDE4OjMzOjIxLjg0ODY1OSIsInVzZXJfaWQiOiI5MDUxOWMzNy0xNjZjLTRhNjUtYjRjNy1iZjY5ZTBmY2EwOGMifQ.BsvGe7sglz-6y9mercQp4HpkSu6lelb1Dhjyuh0qGhE' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Security artist cost.","maxScore":68,"minScore":19,"orderIndex":5940,"description":"Two similar development necessary market camera.","estimatedTime":"3 weeks"}'

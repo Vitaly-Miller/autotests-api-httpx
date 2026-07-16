@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDAzOjUxOjM3LjA1NjE0MiIsInVzZXJfaWQiOiIyMjQ4Nzg2YS1lYzk2LTRkNjAtODUxYi1jZjFhOWFmY2ZiODYifQ.iBwrf3YguGp8ZnnCzIaSLbMlkNMMS2ymvaGjpa_UT78' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Art of find under now become.","courseId":"e369eb46-3169-4224-8cfe-5be596c58bd1","maxScore":65,"minScore":2,"orderIndex":3852,"description":"Impact budget growth itself baby.","estimatedTime":"6 weeks"}'

@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/exercises \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEzVDE4OjMzOjE4LjEyODI0OCIsInVzZXJfaWQiOiIzYWU5MDcyMy0xYWUwLTQ3MjYtOTRiNy01NTFlM2Y0YWIwOTcifQ.qfJUnpZAzCh9PxmtCIsHjki_PFE4zRWAv5kCN330Oc4' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Employee building really cup.","courseId":"e76722e7-4c80-496a-83e5-dc12321f6483","maxScore":51,"minScore":13,"orderIndex":6680,"description":"Various by conference fine wish later.","estimatedTime":"9 weeks"}'

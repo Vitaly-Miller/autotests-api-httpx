@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDAzOjUxOjM0Ljc5NDI0MSIsInVzZXJfaWQiOiJlZWE1ODJlZC01OWU3LTQzNTktYWU5Yi03NTg2MDg1ZThiODIifQ.L6EbaDO9Wi4_LAUm1zzAOAFj4fkEwsdQu8XZ_RDZp-Q' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Finish either wait eight source.","courseId":"3451f1d4-e6f8-44f1-9df8-682447a00a15","maxScore":94,"minScore":28,"orderIndex":6308,"description":"Show soon reach weight later expert same.","estimatedTime":"8 weeks"}'

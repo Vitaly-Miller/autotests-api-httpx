@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "cc3a06f3-dcb9-4780-8010-fe0a73defdc3",
+    "title": "Interesting base seek bag ask very.",
+    "maxScore": 90,
+    "minScore": 21,
+    "description": "Federal through man series.",
+    "previewFile": {
+      "id": "ea129eb8-092a-4f8b-8d82-53bfbd6ef664",
+      "filename": "file_1332.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_1332.png"
+    },
+    "estimatedTime": "7 weeks",
+    "createdByUser": {
+      "id": "b05ff4ef-b35c-4ee1-be91-9a2bfcae28ce",
+      "email": "test_2b69f0c4@example.com",
+      "lastName": "Wright",
+      "firstName": "Jacob",
+      "middleName": "Annette"
+    }
+  }
+}

@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/exercises/d5aef8a9-0893-4250-8f38-9243dea47f8b \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDAzOjUxOjM5LjMwMzEwNCIsInVzZXJfaWQiOiJkMDE2NDllZi1lODA1LTQyYjctYWQ3MS0zYjQ0YjQ3MDY3MjkifQ.8P6Q2LlKiE35xyuyQlJCJfnbdPCd1hb4vazhvmPqd4g' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Argue particularly face fast focus teacher.","maxScore":58,"minScore":23,"orderIndex":6459,"description":"Energy human happen go bill.","estimatedTime":"8 weeks"}'

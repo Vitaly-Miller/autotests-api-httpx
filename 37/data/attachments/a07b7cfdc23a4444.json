@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "ef1cb11a-22bb-4455-a48a-a92dc9276099",
+    "title": "Whatever a when hold.",
+    "maxScore": 64,
+    "minScore": 14,
+    "description": "In perhaps find war.",
+    "previewFile": {
+      "id": "1d58284c-f7d7-40b8-b263-42bb25fd02a3",
+      "filename": "file_6012.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_6012.png"
+    },
+    "estimatedTime": "6 weeks",
+    "createdByUser": {
+      "id": "beed9900-2f16-417c-98ee-735a62e58c41",
+      "email": "test_2f7d1522@example.com",
+      "lastName": "Moore",
+      "firstName": "Sara",
+      "middleName": "Calvin"
+    }
+  }
+}

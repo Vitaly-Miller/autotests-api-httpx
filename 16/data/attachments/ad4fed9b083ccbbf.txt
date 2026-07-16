@@ -1,5 +1,0 @@
-curl -X PATCH \
-  http://localhost:8000/api/v1/exercises/71d5eb23-62c7-4259-b735-68e895e23e03 \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEzVDE4OjMzOjIzLjA5NDk3MyIsInVzZXJfaWQiOiJkZWY4YzJjYy01ZTRkLTRlMWQtOTMzNi05N2I2YjY5NTExNjUifQ.wQ6gFp2xpQg0xBLt-LDxgjEuITSe1IkiEX52fpb9wCg' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Western future either.","maxScore":56,"minScore":24,"orderIndex":5422,"description":"Official huge because it.","estimatedTime":"5 weeks"}'

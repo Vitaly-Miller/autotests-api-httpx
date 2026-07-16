@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDAzOjUxOjI2LjczODYyNyIsInVzZXJfaWQiOiIyNDEzYmNjZi0yNDRkLTQ3NTMtYWVkNC1lN2UwMGJmNDViMTYifQ.bwUwS1iEAyysjQmjGT0Sipn3065qbMiwmWMzYl-wya4' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Oil pressure nor.","maxScore":59,"minScore":25,"description":"Need always adult political security movement.","estimatedTime":"9 weeks","previewFileId":"1012bb9f-5c8c-49ff-84e6-7f8e8269a525","createdByUserId":"2413bccf-244d-4753-aed4-e7e00bf45b16"}'

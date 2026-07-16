@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/courses/133cdab9-61b3-485f-a8a7-21881ddc3f2d \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDAzOjUxOjMwLjUzNzc3NiIsInVzZXJfaWQiOiIzMjJlNTM0Yy0zMWEyLTQyNDYtOWQ3Zi0zZDk4YmU5YjdiYTMifQ.7oq_1P9PxUOpD4lqPZGjUfpKDkVHuxSmhWAJbG48LhQ' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Hear control to station century.","maxScore":84,"minScore":5,"description":"Central adult church these thank common.","estimatedTime":"3 weeks"}'

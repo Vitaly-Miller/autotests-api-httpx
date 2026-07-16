@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDAzOjUxOjI3LjYwOTA1NCIsInVzZXJfaWQiOiJiMDVmZjRlZi1iMzVjLTRlZTEtYmU5MS05YTJiZmNhZTI4Y2UifQ.n4_QiNYl02MytBBMq2bx_6WmBljiDBx0XzByxrPGZFM' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Interesting base seek bag ask very.","maxScore":90,"minScore":21,"description":"Federal through man series.","estimatedTime":"7 weeks","previewFileId":"ea129eb8-092a-4f8b-8d82-53bfbd6ef664","createdByUserId":"b05ff4ef-b35c-4ee1-be91-9a2bfcae28ce"}'

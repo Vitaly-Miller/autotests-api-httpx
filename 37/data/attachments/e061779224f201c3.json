@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "eb7e43dd-7877-494d-b2d7-8c7c486ce92b",
+    "title": "Thus your including great happen federal.",
+    "maxScore": 97,
+    "minScore": 12,
+    "description": "Strategy book nor court until art.",
+    "previewFile": {
+      "id": "03be6281-7f6c-401d-be6f-4aac6fcaab4f",
+      "filename": "file_3081.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_3081.png"
+    },
+    "estimatedTime": "7 weeks",
+    "createdByUser": {
+      "id": "037f75c3-7d62-4fad-a4ce-3fc63263ce45",
+      "email": "test_db697495@example.com",
+      "lastName": "Salazar",
+      "firstName": "Brittney",
+      "middleName": "Brianna"
+    }
+  }
+}

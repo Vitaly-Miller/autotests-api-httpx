@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDAzOjUxOjMyLjUzMjI5OCIsInVzZXJfaWQiOiJiZWVkOTkwMC0yZjE2LTQxN2MtOThlZS03MzVhNjJlNThjNDEifQ.Qpnwi6WcFqeJNlDaL8AUF-gBtttYCk_aiFzFkruLKAQ' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Around push range.","courseId":"ef1cb11a-22bb-4455-a48a-a92dc9276099","maxScore":96,"minScore":17,"orderIndex":1833,"description":"Police hundred toward able cell already.","estimatedTime":"8 weeks"}'

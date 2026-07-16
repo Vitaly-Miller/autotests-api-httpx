@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "e369eb46-3169-4224-8cfe-5be596c58bd1",
+    "title": "Stand blood with production.",
+    "maxScore": 83,
+    "minScore": 27,
+    "description": "Tree writer public prove increase have minute.",
+    "previewFile": {
+      "id": "6a4e2793-8653-45d2-9301-54a449e7e9c9",
+      "filename": "file_2279.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_2279.png"
+    },
+    "estimatedTime": "7 weeks",
+    "createdByUser": {
+      "id": "2248786a-ec96-4d60-851b-cf1a9afcfb86",
+      "email": "test_34ae6578@example.com",
+      "lastName": "Graham",
+      "firstName": "Wendy",
+      "middleName": "Tiffany"
+    }
+  }
+}

@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/exercises \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEzVDE4OjMzOjE1LjY0MzEzNyIsInVzZXJfaWQiOiIwOTUyZDYwNy04YjEzLTRiYjQtODYxMi1jZTFiN2U2YjZlZTcifQ.t2cQ8l5Qs92nanCRUL8thw_ctKe_joMW0eWTlV0nm_M' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Page still social.","courseId":"4d392398-8674-4be0-9eab-6f87074a8246","maxScore":50,"minScore":30,"orderIndex":1936,"description":"End instead buy over.","estimatedTime":"2 weeks"}'

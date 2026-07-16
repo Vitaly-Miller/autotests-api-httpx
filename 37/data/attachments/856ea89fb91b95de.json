@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "42e504e1-9735-42b6-88db-03c0c13a4b98",
+    "title": "Skill social side.",
+    "maxScore": 81,
+    "minScore": 9,
+    "description": "Under share record card some language.",
+    "previewFile": {
+      "id": "06752423-7918-4a6b-b323-5ac8198114a3",
+      "filename": "file_3011.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_3011.png"
+    },
+    "estimatedTime": "2 weeks",
+    "createdByUser": {
+      "id": "fe8a91eb-3ce0-4458-9c5d-8cfde1361591",
+      "email": "test_b5990498@example.com",
+      "lastName": "Shaw",
+      "firstName": "Wanda",
+      "middleName": "Chelsea"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "3451f1d4-e6f8-44f1-9df8-682447a00a15",
+    "title": "Tend south agree.",
+    "maxScore": 68,
+    "minScore": 6,
+    "description": "Involve seek institution everybody summer game.",
+    "previewFile": {
+      "id": "9aab4d2b-fc19-4567-ad07-30d9e1d727ec",
+      "filename": "file_5452.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_5452.png"
+    },
+    "estimatedTime": "7 weeks",
+    "createdByUser": {
+      "id": "eea582ed-59e7-4359-ae9b-7586085e8b82",
+      "email": "test_d18817ac@example.com",
+      "lastName": "Smith",
+      "firstName": "Albert",
+      "middleName": "Jason"
+    }
+  }
+}

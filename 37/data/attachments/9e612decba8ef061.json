@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "79760632-388c-4e78-bacc-ef8930429c7e",
+    "title": "Hair race far bag head fire.",
+    "maxScore": 59,
+    "minScore": 20,
+    "description": "Stay parent make their. Stuff second role with.",
+    "previewFile": {
+      "id": "f4d0567d-c627-4c63-8349-4c497490c6bb",
+      "filename": "file_2781.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_2781.png"
+    },
+    "estimatedTime": "2 weeks",
+    "createdByUser": {
+      "id": "d01649ef-e805-42b7-ad71-3b44b4706729",
+      "email": "test_95c952b3@example.com",
+      "lastName": "Waters",
+      "firstName": "Hunter",
+      "middleName": "Krista"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "133cdab9-61b3-485f-a8a7-21881ddc3f2d",
+    "title": "Such step to.",
+    "maxScore": 83,
+    "minScore": 13,
+    "description": "Least every face address tend.",
+    "previewFile": {
+      "id": "c74ce64f-477f-45cf-b523-c95084ec64cd",
+      "filename": "file_9362.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_9362.png"
+    },
+    "estimatedTime": "6 weeks",
+    "createdByUser": {
+      "id": "322e534c-31a2-4246-9d7f-3d98be9b7ba3",
+      "email": "test_182139ce@example.com",
+      "lastName": "Carlson",
+      "firstName": "Denise",
+      "middleName": "Maureen"
+    }
+  }
+}

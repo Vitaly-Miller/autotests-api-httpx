@@ -1,5 +1,0 @@
-curl -X PATCH \
-  http://localhost:8000/api/v1/courses/3a6873f2-8ab2-4427-b158-21d9ad9a46e8 \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEzVDE4OjMzOjEzLjQ0OTM0MCIsInVzZXJfaWQiOiI1NTkxMDhiNC05NjY1LTQzOTctODM1OC05OWFlMGQ1NWI1YWQifQ.DVL8zOl3DjeDD4u7lWt7QCFPytwbfrHsbabsOP5Su5c' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Side debate product season word.","maxScore":86,"minScore":5,"description":"Organization fish total central music by image.","estimatedTime":"2 weeks"}'

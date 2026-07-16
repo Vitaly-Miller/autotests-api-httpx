@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDAzOjUxOjM2LjE4ODQxMCIsInVzZXJfaWQiOiIwMzdmNzVjMy03ZDYyLTRmYWQtYTRjZS0zZmM2MzI2M2NlNDUifQ.lM1l2NrAwd6CMk2eh0C9WZQ3RXVYkizyRbDUob2i93M' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Thus your including great happen federal.","maxScore":97,"minScore":12,"description":"Strategy book nor court until art.","estimatedTime":"7 weeks","previewFileId":"03be6281-7f6c-401d-be6f-4aac6fcaab4f","createdByUserId":"037f75c3-7d62-4fad-a4ce-3fc63263ce45"}'

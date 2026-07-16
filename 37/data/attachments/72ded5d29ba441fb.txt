@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDAzOjUxOjMzLjY1MDE5NSIsInVzZXJfaWQiOiIwNjlkYzRhOS04NWZlLTRjMmMtYTdmNy01ZDQyM2M5OGMwMGIifQ.j2SnQjDDe3azgZRDjtHDARTl_D72n68ryagQQvbkFZ8' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Debate move trip.","courseId":"3cc01813-974c-42e5-b7f7-e10e9fab7511","maxScore":93,"minScore":25,"orderIndex":1150,"description":"My detail admit huge friend agree side raise.","estimatedTime":"5 weeks"}'

@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEzVDE4OjMzOjIzLjM5MzU3MSIsInVzZXJfaWQiOiJkZWY4YzJjYy01ZTRkLTRlMWQtOTMzNi05N2I2YjY5NTExNjUifQ.IXSPKk2pfiugSV-PMl5mFf2aL2ra-hJ9lbEfQ1dR2TI' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Successful capital lead enter nearly life never.","maxScore":81,"minScore":5,"description":"Would opportunity anyone either.","estimatedTime":"2 weeks","previewFileId":"a40c9b68-26c5-4a02-ad64-1264206f4f0e","createdByUserId":"def8c2cc-5e4d-4e1d-9336-97b6b6951165"}'

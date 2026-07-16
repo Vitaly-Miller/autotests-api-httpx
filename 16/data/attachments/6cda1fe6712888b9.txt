@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEzVDE4OjMzOjIwLjkxODUzMSIsInVzZXJfaWQiOiJiNDRjM2VkOS1hM2JjLTQ3YjgtOTU2My1lYTdmZDlkY2I2ZmIifQ.t42OKHLOwQ0y1fpbWRD5Q0apTBUQdxr-DUHc36IchbM' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Theory what be television minute.","maxScore":89,"minScore":17,"description":"Citizen bad medical thing last relationship.","estimatedTime":"8 weeks","previewFileId":"a1326eb7-e796-435f-a304-e68c03239ac3","createdByUserId":"b44c3ed9-a3bc-47b8-9563-ea7fd9dcb6fb"}'

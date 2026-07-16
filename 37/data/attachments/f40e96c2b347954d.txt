@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDAzOjUxOjMwLjUzNzc3NiIsInVzZXJfaWQiOiIzMjJlNTM0Yy0zMWEyLTQyNDYtOWQ3Zi0zZDk4YmU5YjdiYTMifQ.7oq_1P9PxUOpD4lqPZGjUfpKDkVHuxSmhWAJbG48LhQ' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Such step to.","maxScore":83,"minScore":13,"description":"Least every face address tend.","estimatedTime":"6 weeks","previewFileId":"c74ce64f-477f-45cf-b523-c95084ec64cd","createdByUserId":"322e534c-31a2-4246-9d7f-3d98be9b7ba3"}'

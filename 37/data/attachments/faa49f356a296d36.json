@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "85d7a500-c217-4abf-861c-7770fc47044a",
+    "title": "Teacher sound town also.",
+    "maxScore": 56,
+    "minScore": 4,
+    "description": "Total investment author real a could.",
+    "previewFile": {
+      "id": "c04fae44-0d44-4fa2-b86f-e2df8e318099",
+      "filename": "file_2581.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_2581.png"
+    },
+    "estimatedTime": "8 weeks",
+    "createdByUser": {
+      "id": "884d2257-5447-4fcf-b429-de0f4ead892b",
+      "email": "test_ea75b6fa@example.com",
+      "lastName": "Smith",
+      "firstName": "Raven",
+      "middleName": "William"
+    }
+  }
+}

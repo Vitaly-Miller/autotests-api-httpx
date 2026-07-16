@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDAzOjUxOjI4LjQ3MTkyMSIsInVzZXJfaWQiOiJmZThhOTFlYi0zY2UwLTQ0NTgtOWM1ZC04Y2ZkZTEzNjE1OTEifQ.B47D_WXkJcnWmlDPpy5CZL1FNaqMtEF3iC1R3CT_U9k' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Skill social side.","maxScore":81,"minScore":9,"description":"Under share record card some language.","estimatedTime":"2 weeks","previewFileId":"06752423-7918-4a6b-b323-5ac8198114a3","createdByUserId":"fe8a91eb-3ce0-4458-9c5d-8cfde1361591"}'

@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDAzOjUxOjM4LjE3MTU4OSIsInVzZXJfaWQiOiI4ODRkMjI1Ny01NDQ3LTRmY2YtYjQyOS1kZTBmNGVhZDg5MmIifQ.fPWMjsAHW8JmaNruzIlQFhrkkaXYwq5v4SzogrTz8Vc' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Watch area pattern.","courseId":"85d7a500-c217-4abf-861c-7770fc47044a","maxScore":75,"minScore":11,"orderIndex":622,"description":"Next walk lose pass.","estimatedTime":"2 weeks"}'

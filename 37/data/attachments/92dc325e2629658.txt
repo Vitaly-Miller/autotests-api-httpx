@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDAzOjUxOjMxLjY2MTcxMCIsInVzZXJfaWQiOiJkM2Y4ZGU2OS0yOGY3LTQwYzEtOTY4Yi1jN2EyODlkZWZlMzcifQ.MTZXT_aimB8FtRTjZ9zkwpqp4DPt26zzRrZrmqiS31Y' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Network son hair how situation.","maxScore":86,"minScore":28,"description":"Billion manage sign board.","estimatedTime":"8 weeks","previewFileId":"fe32a563-7fb1-4665-8293-22635a515b23","createdByUserId":"d3f8de69-28f7-40c1-968b-c7a289defe37"}'

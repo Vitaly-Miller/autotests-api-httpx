@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "45c870a2-70d4-4bd4-96fa-8849da8d8c96",
+    "title": "Oil pressure nor.",
+    "maxScore": 59,
+    "minScore": 25,
+    "description": "Need always adult political security movement.",
+    "previewFile": {
+      "id": "1012bb9f-5c8c-49ff-84e6-7f8e8269a525",
+      "filename": "file_1035.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_1035.png"
+    },
+    "estimatedTime": "9 weeks",
+    "createdByUser": {
+      "id": "2413bccf-244d-4753-aed4-e7e00bf45b16",
+      "email": "test_71685a07@example.com",
+      "lastName": "Blair",
+      "firstName": "Aaron",
+      "middleName": "William"
+    }
+  }
+}

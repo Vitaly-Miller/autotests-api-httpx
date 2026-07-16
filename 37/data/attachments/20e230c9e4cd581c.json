@@ -1,0 +1,25 @@
+{
+  "courses": [
+    {
+      "id": "6579cbaf-76ce-4db9-a699-20093a356065",
+      "title": "Chance enter into identify shoulder from.",
+      "maxScore": 72,
+      "minScore": 1,
+      "description": "Sometimes recent heart argue mention cup win.",
+      "previewFile": {
+        "id": "b01b886d-8f6b-4c15-a147-4602c3f3f9d7",
+        "filename": "file_5646.png",
+        "directory": "Uploaded",
+        "url": "http://localhost:8000/static/Uploaded/file_5646.png"
+      },
+      "estimatedTime": "4 weeks",
+      "createdByUser": {
+        "id": "4841bff2-bdb5-48d0-b01d-296d4661e676",
+        "email": "test_322e6584@example.com",
+        "lastName": "Stokes",
+        "firstName": "Christopher",
+        "middleName": "Michael"
+      }
+    }
+  ]
+}

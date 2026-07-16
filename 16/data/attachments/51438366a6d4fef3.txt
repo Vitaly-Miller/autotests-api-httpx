@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEzVDE4OjMzOjE1Ljk0MTQzNyIsInVzZXJfaWQiOiIwOTUyZDYwNy04YjEzLTRiYjQtODYxMi1jZTFiN2U2YjZlZTcifQ._MmqVhQqGcDQYxfoH64buY2HhT0wSMiv87dEzytgIp0' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Grow word summer music.","maxScore":50,"minScore":5,"description":"Both produce dream man behind same we.","estimatedTime":"8 weeks","previewFileId":"8be6bc50-4c60-45b8-8e55-b739fe1319c7","createdByUserId":"0952d607-8b13-4bb4-8612-ce1b7e6b6ee7"}'

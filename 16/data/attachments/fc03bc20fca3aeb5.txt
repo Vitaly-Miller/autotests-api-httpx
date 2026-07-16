@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEzVDE4OjMzOjEzLjQ0OTM0MCIsInVzZXJfaWQiOiI1NTkxMDhiNC05NjY1LTQzOTctODM1OC05OWFlMGQ1NWI1YWQifQ.DVL8zOl3DjeDD4u7lWt7QCFPytwbfrHsbabsOP5Su5c' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Any nearly agency structure feel.","maxScore":100,"minScore":25,"description":"Local low happen ahead finish meeting make.","estimatedTime":"4 weeks","previewFileId":"768f810d-6fbd-4061-a5f5-6eb817854049","createdByUserId":"559108b4-9665-4397-8358-99ae0d55b5ad"}'

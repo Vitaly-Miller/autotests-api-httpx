@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDAzOjUxOjM4LjQzOTE4OSIsInVzZXJfaWQiOiI4ODRkMjI1Ny01NDQ3LTRmY2YtYjQyOS1kZTBmNGVhZDg5MmIifQ.6Ny2LTlFNZaLf2iVcWVJ5r7zCY2Ktd9x-XAYtk6Kdjg' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Teacher sound town also.","maxScore":56,"minScore":4,"description":"Total investment author real a could.","estimatedTime":"8 weeks","previewFileId":"c04fae44-0d44-4fa2-b86f-e2df8e318099","createdByUserId":"884d2257-5447-4fcf-b429-de0f4ead892b"}'

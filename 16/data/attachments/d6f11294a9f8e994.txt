@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTEzVDE4OjMzOjIyLjE0Njg1NSIsInVzZXJfaWQiOiI5MDUxOWMzNy0xNjZjLTRhNjUtYjRjNy1iZjY5ZTBmY2EwOGMifQ.m-ek0WO-NU7rQ1TzuJ-XnlRSVHHT0KPSL0ShbQm8DEc' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Garden continue much.","maxScore":86,"minScore":11,"description":"Image someone tree could bit forward simply.","estimatedTime":"5 weeks","previewFileId":"515a84e6-2f27-4f20-be65-68e906b800ec","createdByUserId":"90519c37-166c-4a65-b4c7-bf69e0fca08c"}'
