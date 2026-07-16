@@ -167,7 +167,7 @@ swagger-coverage-tool save-report
 Generates `coverage.html` — which endpoints, methods and status codes are covered
 compared to the server's OpenAPI spec, with history across runs.
 
-## CI/CD
+## CI/CD 
 
 Every push and pull request to `main` triggers the [GitHub Actions pipeline](.github/workflows/tests.yml):
 
