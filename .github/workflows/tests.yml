@@ -111,9 +111,11 @@ jobs:
         uses: actions/upload-artifact@v7             # Используем GitHub Action для загрузки артефактов ⚠️https://github.com/actions/upload-artifact
         with:
           name: swagger-ui                           # Имя артефакта
-          path: |                                    # Файлы для Swagger-документации на GitHub Pages:
-            openapi.json                             # - OpenAPI-спецификация (выгружена с сервера на шаге 6.2)
-            docs/swagger.html                        # - Статическая страница Swagger UI (из репозитория)
+          # Файлы для Swagger-документации на GitHub Pages: OpenAPI-спецификация (с шага 6.2) + страница Swagger UI.
+          # ⚠️Внутри блока <path: |> комментарии писать нельзя — текст попадает в пути буквально!
+          path: |
+            openapi.json
+            docs/swagger.html
 
 
   #==================================== Джоба 2: публикация отчёта на GitHub Pages =====================================
