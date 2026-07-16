@@ -1,0 +1,24 @@
+# PyCharm (IDE)
+.idea
+
+# Python
+.venv
+__pycache__
+
+# Allure
+allure-results/
+allure-report/
+
+# Swagger coverage tool
+coverage-results/
+coverage.html
+coverage-history.json
+coverage-report.json
+
+# Other
+---/
+.claude
+.DS_Store
+
+# Project
+#.env (if secure data)
