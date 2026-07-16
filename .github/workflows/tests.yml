@@ -61,6 +61,10 @@ jobs:
           done
           echo "❌ Server failed to start. Log:" && cat server.log && exit 1
 
+      # 6.2. Шаг для выгрузки OpenAPI-спецификации с работающего сервера (для Swagger UI на GitHub Pages)
+      - name: Download OpenAPI spec
+        run: curl -sf http://localhost:8000/openapi.json -o openapi.json   # Сохраняем спецификацию в файл openapi.json
+
       # 7. Шаг для запуска тестов с использованием pytest и генерации результатов Allure
       - name: Run API tests with pytest and generate Allure results
         run: pytest --alluredir=allure-results       # --numprocesses 2 (+ параллельность - откл.)  # ⚠️Запускаем ВСЕ тесты, генерируем результаты для Allure
@@ -101,6 +105,16 @@ jobs:
           name: allure-results                       # Имя артефакта
           path: allure-results                       # Папка с результатами тестов
 
+      # 13. Шаг для сохранения OpenAPI-спецификации и страницы Swagger UI как артефакта (для джобы publish-report)
+      - name: Upload Swagger UI files
+        if: always()                                 # ВСЕГДА выполняем, независимо от успеха или неудачи предыдущих шагов
+        uses: actions/upload-artifact@v7             # Используем GitHub Action для загрузки артефактов ⚠️https://github.com/actions/upload-artifact
+        with:
+          name: swagger-ui                           # Имя артефакта
+          path: |                                    # Файлы для Swagger-документации на GitHub Pages:
+            openapi.json                             # - OpenAPI-спецификация (выгружена с сервера на шаге 6.2)
+            docs/swagger.html                        # - Статическая страница Swagger UI (из репозитория)
+
 
   #==================================== Джоба 2: публикация отчёта на GitHub Pages =====================================
   publish-report:
@@ -130,6 +144,13 @@ jobs:
           name: coverage-report                       # Имя артефакта
           path: .                                     # Скачиваем в корень рабочей директории (появится файл coverage.html)
 
+      # 3.1. Шаг для загрузки артефакта swagger-ui (OpenAPI-спецификация + страница Swagger UI), сохранённого в джобе run-tests
+      - name: Download Swagger UI files
+        uses: actions/download-artifact@v8            # Используем GitHub Action для скачивания артефактов ⚠️ https://github.com/actions/download-artifact
+        with:
+          name: swagger-ui                            # Имя артефакта
+          path: .                                     # Скачиваем в корень (появятся openapi.json и docs/swagger.html)
+
       # 4. Шаг для генерации отчёта Allure с историей
       - name: Generate Allure Report with history
         uses: simple-elf/allure-report-action@master  # Используем готовое решение из GitHub Marketplace ⚠️https://github.com/simple-elf/allure-report-action
@@ -140,6 +161,12 @@ jobs:
       # 5. Шаг для добавления coverage-отчёта в публикуемую папку (будет доступен по ссылке .../coverage.html рядом с Allure)
       - name: Add Coverage report to GitHub Pages
         run: sudo cp coverage.html allure-history/coverage.html  # Копируем через sudo: папка allure-history создана Docker-action'ом от root
+
+      # 5.1. Шаг для добавления Swagger-документации в публикуемую папку (будет доступна по ссылке .../swagger.html)
+      - name: Add Swagger UI to GitHub Pages
+        run: |
+          sudo cp docs/swagger.html allure-history/swagger.html  # Страница Swagger UI
+          sudo cp openapi.json allure-history/openapi.json       # OpenAPI-спецификация (страница читает её по относительному пути)
 
       # 6. Шаг для деплоя отчётов (Allure + Coverage) на GitHub Pages, чтобы их можно было просматривать в браузере
       - name: Deploy report to GitHub Pages

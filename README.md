@@ -7,10 +7,21 @@ application with users, courses, exercises and file storage.
 
 Built with **Python**, **HTTPX**, **Pytest**, **Pydantic**, **Allure**, **Faker** and **Swagger Coverage Tool**.
 
-- 👉 [Allure Report](https://vitaly-miller.github.io/autotests-api-httpx/) — test results with history, published on GitHub Pages
-- 👉 [API Coverage Report](https://vitaly-miller.github.io/autotests-api-httpx/coverage.html) — endpoint coverage measured against the OpenAPI spec
-- 👉 [Code](https://github.com/Vitaly-Miller/autotests-api-httpx) — source code on GitHub
+---
+- 👉 <img src="https://allurereport.org/svg/logo-report-sign.svg" height="10"> [My Allure Report](https://vitaly-miller.github.io/autotests-api-httpx/) — test results with history, published on GitHub Pages
+- 👉 📊 [My API Coverage Report](https://vitaly-miller.github.io/autotests-api-httpx/coverage.html) — endpoint coverage measured against the OpenAPI spec
+- 👉 📖 [API Documentation (Swagger UI)](https://vitaly-miller.github.io/autotests-api-httpx/swagger.html) — interactive docs of the API under test
+- 👉 👨🏻‍💻 [My Code](https://github.com/Vitaly-Miller/autotests-api-httpx) — source code on GitHub
+---
 
+> **⚠️ A note on code comments.**  
+> The code is deliberately annotated in detail — nearly every line
+> carries a comment explaining what it does and why. This is an intentional choice for
+> a portfolio project: it lets a reviewer follow every implementation decision without leaving the
+> file. In production code I would keep comments far more sparing, reserving them for non-obvious
+> constraints and decisions.
+
+---
 ## ✨ Highlights
 
 ### 🏗️ Architecture
@@ -40,11 +51,14 @@ Built with **Python**, **HTTPX**, **Pytest**, **Pydantic**, **Allure**, **Faker*
 - **GitHub Actions pipeline** — starts a live API server, runs the full suite, and publishes the
   Allure and coverage reports to GitHub Pages with history preserved between runs
 
+---
+
 ## Project Structure
 
 ```
-├─ 📁.github/        # CI/CD workflow (GitHub Actions)
+├─ 📁 .github/       # CI/CD workflow (GitHub Actions)
 ├─ 📁 clients/       # API clients (auth, users, courses, exercises, files) built on HTTPX
+├─ 📁 docs/          # Static Swagger UI page, published to GitHub Pages by CI
 ├─ 📁 schemas/       # Pydantic models for requests, responses and error bodies
 ├─ 📁 fixtures/      # Pytest fixtures (clients, users, courses, exercises, files)
 ├─ 📁 tests/         # Test suites grouped by domain: auth, users, courses, exercises, files
@@ -55,13 +69,9 @@ Built with **Python**, **HTTPX**, **Pytest**, **Pydantic**, **Allure**, **Faker*
 └─ pytest.ini        # Pytest configuration and markers
 
 ```
-
+---
 ## Getting Started
 
-### Requirements
-
-- Python 3.13+
-- [Allure CLI](https://allurereport.org/docs/gettingstarted-installation/) — only needed to view Allure reports locally
 
 ### ⤵️ Clone the Repository
 
