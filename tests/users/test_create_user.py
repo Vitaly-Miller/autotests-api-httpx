@@ -17,7 +17,6 @@ from tools.assertions.users_assert import (
     assert_create_user_response,
     assert_user_id
 )
-
 from tools.tool import Tool
 
 #=======================================================================================================================
