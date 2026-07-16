@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "3c1d44e5-587d-474d-982f-04ba0d3b3cef",
+    "title": "Company under language expect year whether.",
+    "maxScore": 95,
+    "minScore": 28,
+    "description": "Decade after Mr it eat.",
+    "previewFile": {
+      "id": "d70d2db9-6501-40de-a058-9686d8a92609",
+      "filename": "file_4329.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_4329.png"
+    },
+    "estimatedTime": "6 weeks",
+    "createdByUser": {
+      "id": "77c2c164-4db1-40db-8f08-3b2ea020d9d2",
+      "email": "test_9266cf61@example.com",
+      "lastName": "Smith",
+      "firstName": "Kathleen",
+      "middleName": "Kathy"
+    }
+  }
+}

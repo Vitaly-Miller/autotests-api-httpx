@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDA2OjM3OjE3LjkwMjczOSIsInVzZXJfaWQiOiI4YTUyYzFjMC1jYzJkLTRhOGItOTlmMi0zODJiZWM4MzFlMDUifQ.FJpg7fZA8oDKmP8BpGglBW_GoTAIO-_5U5av8x3eaik' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Anyone second speech.","maxScore":76,"minScore":2,"description":"Prove front fact group about measure bag special.","estimatedTime":"7 weeks","previewFileId":"9bd4305b-d920-4b64-955c-821c5a91d539","createdByUserId":"8a52c1c0-cc2d-4a8b-99f2-382bec831e05"}'

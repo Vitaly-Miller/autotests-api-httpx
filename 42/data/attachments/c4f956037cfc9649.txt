@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDA1OjIwOjI2LjY0MzY4MiIsInVzZXJfaWQiOiI5YTBhMGUwYi02ZGIwLTQwMjAtYjAxZi1mZjFjNzE4NDBhZjYifQ._vAiw8BI5NNz3_hy2iRhIMYSYbsyIsntfGEWmh7j0AM' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Happen politics off picture decade.","courseId":"37a1f1e1-3c24-40f0-a15f-10c07eee9343","maxScore":77,"minScore":10,"orderIndex":478,"description":"Maybe carry main fast.","estimatedTime":"6 weeks"}'

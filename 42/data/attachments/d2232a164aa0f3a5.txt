@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDA1OjIwOjIwLjI4NTMzOSIsInVzZXJfaWQiOiI1MDBmZmIwMC02ODQ0LTQzNmQtOWQ1NS00NmUxYzE5NWI5ZTQifQ.6TDSsgrjEFMa82ijIvFNrF8qE8Omuqzsvaa49MVfgWc' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Subject nor range fast should red.","courseId":"6303ac5a-4db3-4c50-b32c-e6c2ce2210d3","maxScore":60,"minScore":23,"orderIndex":1332,"description":"Dream charge parent those. Never fall yet letter.","estimatedTime":"7 weeks"}'

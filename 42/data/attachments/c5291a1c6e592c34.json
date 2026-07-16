@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "ccb79864-82ba-41e5-9902-ff64fa860c6a",
+    "title": "Help move century Democrat.",
+    "maxScore": 50,
+    "minScore": 28,
+    "description": "Old magazine past my be.",
+    "previewFile": {
+      "id": "186a7651-19ac-4c05-952b-364cab6bb004",
+      "filename": "file_1213.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_1213.png"
+    },
+    "estimatedTime": "4 weeks",
+    "createdByUser": {
+      "id": "96d3a891-693d-4155-9d77-02d490ddfa2e",
+      "email": "test_90d471de@example.com",
+      "lastName": "Mendez",
+      "firstName": "James",
+      "middleName": "Joanna"
+    }
+  }
+}

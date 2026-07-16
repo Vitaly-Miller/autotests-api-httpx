@@ -1,5 +1,0 @@
-curl -X PATCH \
-  http://localhost:8000/api/v1/exercises/92c30fda-4aa6-438b-84c3-eba9efa9b3ff \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDA2OjM3OjI4LjU2NTQwOCIsInVzZXJfaWQiOiI0NjQ0NmU3ZC1iZmM3LTQ4NmYtYWQ1ZC01YzdhZjQ5MmU1ZTEifQ.ZkACZ-KMb-KGO1mVF7ufXMRTjAkmY92yevunAtUPRrI' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Water draw beautiful financial go.","maxScore":98,"minScore":16,"orderIndex":6048,"description":"Yard amount create.","estimatedTime":"4 weeks"}'

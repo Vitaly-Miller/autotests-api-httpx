@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/exercises \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDA2OjM3OjIyLjEzMjczMiIsInVzZXJfaWQiOiIxMmY3Y2U4ZS00ZDQ1LTRlMzktYTMzMi0xZmNlNGJiNDc5MDEifQ.oYV8yQRAYe97L1Ykz8R6yXLbk5znXiA-BcPdE84ZnIg' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Bad plant who statement rich yes.","courseId":"a9def591-4a9e-4fe8-9b73-7cfb18ae092e","maxScore":86,"minScore":27,"orderIndex":9184,"description":"Several nice area newspaper.","estimatedTime":"7 weeks"}'

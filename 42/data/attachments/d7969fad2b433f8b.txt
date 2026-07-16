@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDA1OjIwOjI5LjQ4NTQ5NSIsInVzZXJfaWQiOiI4MjNmMGU2ZS1mNzhmLTQyMmUtOWRkYS1jNDAxNjNhZTExN2YifQ.bIofUFweZL9J5dwspERdvOXbtdJ75q2BGLOq99pylks' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Day science hour wait.","maxScore":88,"minScore":5,"description":"Film new better three much Mrs see size.","estimatedTime":"7 weeks","previewFileId":"6a36b716-ebfd-4a64-bdc5-411b96432159","createdByUserId":"823f0e6e-f78f-422e-9dda-c40163ae117f"}'

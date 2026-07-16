@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/courses/9b20f501-0c78-4c31-af46-3d1b5243a816 \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDA1OjIwOjE5LjMyMjExNSIsInVzZXJfaWQiOiJkNGVkNzAzZi0yZTgzLTRhY2MtYjRlNS03M2Y0MWJmNTM5YmQifQ.wUUxN-H14GjPVweFMEUBZJ4hDTu4DRkV85aNCdA_P8c' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Cause red score.","maxScore":58,"minScore":18,"description":"Western politics far true.","estimatedTime":"5 weeks"}'

@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "9b20f501-0c78-4c31-af46-3d1b5243a816",
+    "title": "Without identify of religious.",
+    "maxScore": 77,
+    "minScore": 3,
+    "description": "Agent education clearly computer president give.",
+    "previewFile": {
+      "id": "7ae894f8-02e4-4b14-b03d-844c94314e59",
+      "filename": "file_3214.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_3214.png"
+    },
+    "estimatedTime": "6 weeks",
+    "createdByUser": {
+      "id": "d4ed703f-2e83-4acc-b4e5-73f41bf539bd",
+      "email": "test_2227fd0c@example.com",
+      "lastName": "Carlson",
+      "firstName": "Matthew",
+      "middleName": "Andrew"
+    }
+  }
+}

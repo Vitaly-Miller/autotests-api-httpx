@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDA2OjM3OjE4Ljg4OTc2NyIsInVzZXJfaWQiOiIwYjQ2ZWQ0My02OWJiLTQ2ZGEtOTYyZC03MTNmMWJlYzIxZDEifQ.jmUcGSqpS1dYlA4Zv24jNuw6VnAQkRYl9ihwf6TokLw' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Food notice order.","maxScore":77,"minScore":16,"description":"Tv store us attack film.","estimatedTime":"7 weeks","previewFileId":"9e801113-ba36-4e31-8176-5f1772dda752","createdByUserId":"0b46ed43-69bb-46da-962d-713f1bec21d1"}'

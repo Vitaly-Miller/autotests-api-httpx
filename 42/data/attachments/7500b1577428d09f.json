@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "1d9c9181-cafb-4b1c-b5a2-ff3a47bd9b9f",
+    "title": "Song street southern travel alone.",
+    "maxScore": 80,
+    "minScore": 1,
+    "description": "Fear president stay west.",
+    "previewFile": {
+      "id": "e8370814-8290-477c-81b1-bbdc5e58ed68",
+      "filename": "file_9402.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_9402.png"
+    },
+    "estimatedTime": "4 weeks",
+    "createdByUser": {
+      "id": "41cedb06-a905-4d2b-bb1c-02562d772aa9",
+      "email": "test_5eeb5986@example.com",
+      "lastName": "Sanders",
+      "firstName": "Kendra",
+      "middleName": "Shirley"
+    }
+  }
+}

@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDA1OjIwOjI2Ljk0NDI5MyIsInVzZXJfaWQiOiI5YTBhMGUwYi02ZGIwLTQwMjAtYjAxZi1mZjFjNzE4NDBhZjYifQ.RnUckw3PqDI6DKDRBmAQ-Tol7bnpmTa7KKWqlnB4Jws' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Into reach role list think group.","maxScore":82,"minScore":3,"description":"Family rule last finally experience keep.","estimatedTime":"7 weeks","previewFileId":"8f9f574a-3b10-4c10-931f-5e0f235776eb","createdByUserId":"9a0a0e0b-6db0-4020-b01f-ff1c71840af6"}'

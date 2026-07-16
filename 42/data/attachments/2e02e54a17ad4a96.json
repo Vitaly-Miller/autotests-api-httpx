@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "b19654f3-613e-4b9b-adcb-c304f2f20c4a",
+    "title": "Role where red.",
+    "maxScore": 71,
+    "minScore": 13,
+    "description": "State artist item someone throw sometimes.",
+    "previewFile": {
+      "id": "63da181f-62f3-48f2-8c17-de8860e24f78",
+      "filename": "file_2964.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_2964.png"
+    },
+    "estimatedTime": "4 weeks",
+    "createdByUser": {
+      "id": "3b1ac589-cfd6-4f3f-a6d8-7d09a2186792",
+      "email": "test_5b541c03@example.com",
+      "lastName": "Larson",
+      "firstName": "Pamela",
+      "middleName": "Bradley"
+    }
+  }
+}

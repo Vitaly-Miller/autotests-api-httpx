@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDA1OjIwOjE5LjMyMjExNSIsInVzZXJfaWQiOiJkNGVkNzAzZi0yZTgzLTRhY2MtYjRlNS03M2Y0MWJmNTM5YmQifQ.wUUxN-H14GjPVweFMEUBZJ4hDTu4DRkV85aNCdA_P8c' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Without identify of religious.","maxScore":77,"minScore":3,"description":"Agent education clearly computer president give.","estimatedTime":"6 weeks","previewFileId":"7ae894f8-02e4-4b14-b03d-844c94314e59","createdByUserId":"d4ed703f-2e83-4acc-b4e5-73f41bf539bd"}'

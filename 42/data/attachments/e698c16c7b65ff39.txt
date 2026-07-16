@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/exercises/4446afb2-9d50-4b39-8ad1-1e2a2e06ab68 \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDA1OjIwOjI5LjE4NzA4NCIsInVzZXJfaWQiOiI4MjNmMGU2ZS1mNzhmLTQyMmUtOWRkYS1jNDAxNjNhZTExN2YifQ.l6f1xFdnIK5RPVET5Kn5GGRM6pXI66SNzH_5VeIdDkk' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Other often floor serve despite.","maxScore":67,"minScore":20,"orderIndex":6672,"description":"Chance upon people assume key parent financial.","estimatedTime":"2 weeks"}'

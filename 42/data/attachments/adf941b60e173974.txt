@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDA1OjIwOjI0LjEwODY0MSIsInVzZXJfaWQiOiI0MWNlZGIwNi1hOTA1LTRkMmItYmIxYy0wMjU2MmQ3NzJhYTkifQ.ju0aCLFMlOQAPEnMl2FQGmyIbE68me2Lqi-bpN-bUTc' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Participant around goal man.","courseId":"1d9c9181-cafb-4b1c-b5a2-ff3a47bd9b9f","maxScore":94,"minScore":17,"orderIndex":5581,"description":"Group expert teach dog music itself.","estimatedTime":"2 weeks"}'

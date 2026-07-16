@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDA1OjIwOjI1LjM2OTI4NSIsInVzZXJfaWQiOiI0N2I5NzZkNC00M2YzLTRjNjYtODYwMi0zNTE1ZTI2Mjk3M2IifQ.qKtkGxvp45YDCye-VlsVWMLzfurY2LQXPcdl8bDVUws' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Piece employee number build.","courseId":"093b87e3-db08-45c9-8038-0d605fea9f02","maxScore":80,"minScore":17,"orderIndex":3662,"description":"Long table college music technology mother.","estimatedTime":"3 weeks"}'

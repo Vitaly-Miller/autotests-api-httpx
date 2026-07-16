@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDA1OjIwOjE3LjM4OTM5MCIsInVzZXJfaWQiOiJkZDI2ZTM5ZC0zZDY5LTQwMDUtOTZjOC05MzJhMGViMzY2Y2IifQ.tUh5031W1KUvl_Ob_pZY3w0ZvOLLVUCqyqIlm4UpzZg' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Detail thing cell research.","maxScore":59,"minScore":29,"description":"Message meeting create maintain general top.","estimatedTime":"6 weeks","previewFileId":"d3e28ed1-a7fb-404e-abc6-a7ba854c2b93","createdByUserId":"dd26e39d-3d69-4005-96c8-932a0eb366cb"}'

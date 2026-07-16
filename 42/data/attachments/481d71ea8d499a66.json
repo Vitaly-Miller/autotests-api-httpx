@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "29c36a11-0685-4ca9-8929-25833892eef4",
+    "title": "Heavy free laugh same fear sea.",
+    "maxScore": 61,
+    "minScore": 24,
+    "description": "Under rich yet add study others third.",
+    "previewFile": {
+      "id": "d32634bf-5dfb-4b50-9e7d-c71f5e6e08f2",
+      "filename": "file_4093.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_4093.png"
+    },
+    "estimatedTime": "6 weeks",
+    "createdByUser": {
+      "id": "efdfac39-f545-4a85-84eb-d1d31c132cf5",
+      "email": "test_95df1067@example.com",
+      "lastName": "Larson",
+      "firstName": "Steven",
+      "middleName": "Mark"
+    }
+  }
+}

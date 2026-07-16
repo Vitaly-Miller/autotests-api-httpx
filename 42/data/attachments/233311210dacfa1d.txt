@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDA1OjIwOjIxLjU2NDExNyIsInVzZXJfaWQiOiJlZmRmYWMzOS1mNTQ1LTRhODUtODRlYi1kMWQzMWMxMzJjZjUifQ.8AdCbayMZKgNMyGSt0xbkw1sLlRU5P3zg1WsxCcHbiA' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Beautiful if assume serious whom bring.","courseId":"29c36a11-0685-4ca9-8929-25833892eef4","maxScore":67,"minScore":1,"orderIndex":211,"description":"Alone perform theory accept sense billion.","estimatedTime":"6 weeks"}'

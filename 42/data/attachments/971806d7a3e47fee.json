@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "37a1f1e1-3c24-40f0-a15f-10c07eee9343",
+    "title": "Into reach role list think group.",
+    "maxScore": 82,
+    "minScore": 3,
+    "description": "Family rule last finally experience keep.",
+    "previewFile": {
+      "id": "8f9f574a-3b10-4c10-931f-5e0f235776eb",
+      "filename": "file_2733.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_2733.png"
+    },
+    "estimatedTime": "7 weeks",
+    "createdByUser": {
+      "id": "9a0a0e0b-6db0-4020-b01f-ff1c71840af6",
+      "email": "test_c022e16d@example.com",
+      "lastName": "Boyer",
+      "firstName": "Daniel",
+      "middleName": "Christopher"
+    }
+  }
+}

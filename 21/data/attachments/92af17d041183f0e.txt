@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/exercises \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDA2OjM3OjIzLjQwMDMzOSIsInVzZXJfaWQiOiJjYjgwMmU2MS0wNDcyLTQ3YjAtYmE1My1hMTdjOTMwYjBjZWQifQ.xnLTvRIGYr-dy3Xa3u1wV6CMJBgy6CTpruETYMBfshc' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Respond myself response thing money world.","courseId":"ccf8ed6c-4050-4fb4-98e8-a215886e4fe6","maxScore":95,"minScore":19,"orderIndex":850,"description":"Parent tell test democratic.","estimatedTime":"8 weeks"}'

@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDA1OjIwOjE2LjQzODY2NSIsInVzZXJfaWQiOiI3N2MyYzE2NC00ZGIxLTQwZGItOGYwOC0zYjJlYTAyMGQ5ZDIifQ.cHDwAee099CLpDpU7IaePdGV0ao6LZBmpJq8IBwAr7g' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Company under language expect year whether.","maxScore":95,"minScore":28,"description":"Decade after Mr it eat.","estimatedTime":"6 weeks","previewFileId":"d70d2db9-6501-40de-a058-9686d8a92609","createdByUserId":"77c2c164-4db1-40db-8f08-3b2ea020d9d2"}'

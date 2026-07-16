@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDA1OjIwOjE4LjM2MzY3NyIsInVzZXJfaWQiOiI3YTdiY2UwNy0yMzk3LTQyYTYtYWFkMi1jMTFiMTVlZDM5MTYifQ.eN1wcDHCxl_H8CA1epcDyn8xhxlYrZ4J2f7SaJVUmWI' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Arm my garden law.","maxScore":58,"minScore":7,"description":"Second site sell large more.","estimatedTime":"9 weeks","previewFileId":"cd7dc5a1-b5f7-44b4-921f-3ecbc744a8da","createdByUserId":"7a7bce07-2397-42a6-aad2-c11b15ed3916"}'

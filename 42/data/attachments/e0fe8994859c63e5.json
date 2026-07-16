@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "98a6ecf8-af85-4c64-b930-d281f8926874",
+    "title": "Itself region hard next mention in.",
+    "maxScore": 50,
+    "minScore": 23,
+    "description": "To owner itself system laugh rather child.",
+    "previewFile": {
+      "id": "ecbb20ea-ca00-4057-9577-887373c47272",
+      "filename": "file_3380.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_3380.png"
+    },
+    "estimatedTime": "2 weeks",
+    "createdByUser": {
+      "id": "76b65683-e31d-4ba4-b71f-958c6de70cc4",
+      "email": "test_4be82101@example.com",
+      "lastName": "Mejia",
+      "firstName": "David",
+      "middleName": "Kathy"
+    }
+  }
+}

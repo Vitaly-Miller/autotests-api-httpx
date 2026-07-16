@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDA1OjIwOjIwLjU4NDQ1OCIsInVzZXJfaWQiOiI1MDBmZmIwMC02ODQ0LTQzNmQtOWQ1NS00NmUxYzE5NWI5ZTQifQ.1Po46CY244c1-DW3KdCZqoX7ZSz0LeBHLb_wcPqGILA' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Bank appear manage.","maxScore":95,"minScore":27,"description":"Service who detail. Low structure Mr name.","estimatedTime":"3 weeks","previewFileId":"3de420cc-e63a-45c6-89f8-34957a83344e","createdByUserId":"500ffb00-6844-436d-9d55-46e1c195b9e4"}'

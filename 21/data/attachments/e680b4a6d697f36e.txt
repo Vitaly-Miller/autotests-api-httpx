@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/exercises \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDA2OjM3OjI3LjI5MDE2NCIsInVzZXJfaWQiOiIyYzE3MjUwMS0wMDg3LTRkMjktYTVlNC0xMmVjMDY1YWM5YTEifQ.zkYVPYzIl9jzUyOR_53EtsJvC-IAopKl5p0P1te5UnU' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Job service old.","courseId":"e92ebfe6-2078-41f1-b85f-29b0c66aa5bf","maxScore":56,"minScore":6,"orderIndex":5600,"description":"Sometimes out energy medical vote test wrong.","estimatedTime":"4 weeks"}'

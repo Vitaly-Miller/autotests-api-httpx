@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "68b92a09-7d7b-4472-9ef7-342f7d691ed7",
+    "title": "Day science hour wait.",
+    "maxScore": 88,
+    "minScore": 5,
+    "description": "Film new better three much Mrs see size.",
+    "previewFile": {
+      "id": "6a36b716-ebfd-4a64-bdc5-411b96432159",
+      "filename": "file_6500.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_6500.png"
+    },
+    "estimatedTime": "7 weeks",
+    "createdByUser": {
+      "id": "823f0e6e-f78f-422e-9dda-c40163ae117f",
+      "email": "test_5cd1303f@example.com",
+      "lastName": "Russell",
+      "firstName": "Amber",
+      "middleName": "Jeffrey"
+    }
+  }
+}

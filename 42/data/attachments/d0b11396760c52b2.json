@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "093b87e3-db08-45c9-8038-0d605fea9f02",
+    "title": "Remember hot throughout dark occur.",
+    "maxScore": 99,
+    "minScore": 10,
+    "description": "Run place sell meeting just bad.",
+    "previewFile": {
+      "id": "8bb666f4-1030-433a-85bb-2b745f83f62a",
+      "filename": "file_4038.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_4038.png"
+    },
+    "estimatedTime": "8 weeks",
+    "createdByUser": {
+      "id": "47b976d4-43f3-4c66-8602-3515e262973b",
+      "email": "test_3e23dfa7@example.com",
+      "lastName": "Brown",
+      "firstName": "Jordan",
+      "middleName": "Timothy"
+    }
+  }
+}

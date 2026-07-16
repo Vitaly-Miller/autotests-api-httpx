@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDA1OjIwOjIzLjEyMzE0MCIsInVzZXJfaWQiOiIzYjFhYzU4OS1jZmQ2LTRmM2YtYTZkOC03ZDA5YTIxODY3OTIifQ.KarFFAgbsV_nPf01TKt9iXPw5ELdBW76A85BwkpQKEs' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Role where red.","maxScore":71,"minScore":13,"description":"State artist item someone throw sometimes.","estimatedTime":"4 weeks","previewFileId":"63da181f-62f3-48f2-8c17-de8860e24f78","createdByUserId":"3b1ac589-cfd6-4f3f-a6d8-7d09a2186792"}'

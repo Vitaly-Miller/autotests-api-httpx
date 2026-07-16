@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDA1OjIwOjE1LjQ1MzYxNiIsInVzZXJfaWQiOiI3NmI2NTY4My1lMzFkLTRiYTQtYjcxZi05NThjNmRlNzBjYzQifQ.w2_tzALjy5KDKnMQeWBbLgUheu2-v-p_lZdm6b7axdo' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Itself region hard next mention in.","maxScore":50,"minScore":23,"description":"To owner itself system laugh rather child.","estimatedTime":"2 weeks","previewFileId":"ecbb20ea-ca00-4057-9577-887373c47272","createdByUserId":"76b65683-e31d-4ba4-b71f-958c6de70cc4"}'

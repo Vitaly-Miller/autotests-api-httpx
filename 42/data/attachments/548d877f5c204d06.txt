@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDA1OjIwOjI5LjE4NzA4NCIsInVzZXJfaWQiOiI4MjNmMGU2ZS1mNzhmLTQyMmUtOWRkYS1jNDAxNjNhZTExN2YifQ.l6f1xFdnIK5RPVET5Kn5GGRM6pXI66SNzH_5VeIdDkk' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Song bit nation individual.","courseId":"68b92a09-7d7b-4472-9ef7-342f7d691ed7","maxScore":71,"minScore":9,"orderIndex":3724,"description":"Wear six base power.","estimatedTime":"6 weeks"}'

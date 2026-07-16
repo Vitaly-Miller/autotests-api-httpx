@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "fd716e40-4b28-41d3-84eb-d1dbd07bbbeb",
+    "title": "Arm my garden law.",
+    "maxScore": 58,
+    "minScore": 7,
+    "description": "Second site sell large more.",
+    "previewFile": {
+      "id": "cd7dc5a1-b5f7-44b4-921f-3ecbc744a8da",
+      "filename": "file_3774.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_3774.png"
+    },
+    "estimatedTime": "9 weeks",
+    "createdByUser": {
+      "id": "7a7bce07-2397-42a6-aad2-c11b15ed3916",
+      "email": "test_a5ccd134@example.com",
+      "lastName": "Rice",
+      "firstName": "Allison",
+      "middleName": "Larry"
+    }
+  }
+}

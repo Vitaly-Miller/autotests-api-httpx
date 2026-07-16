@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDA1OjIwOjI3LjkxNDE3NyIsInVzZXJfaWQiOiI5NmQzYTg5MS02OTNkLTQxNTUtOWQ3Ny0wMmQ0OTBkZGZhMmUifQ.u-UThdio9aWA2FvSqfmJeC6O2MF9wOAq7b1KtlyA9Fw' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Six thing career arrive rich.","courseId":"ccb79864-82ba-41e5-9902-ff64fa860c6a","maxScore":81,"minScore":4,"orderIndex":415,"description":"Interest car relationship several.","estimatedTime":"7 weeks"}'

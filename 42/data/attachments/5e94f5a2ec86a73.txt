@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDA1OjIwOjIyLjgyMjc5MSIsInVzZXJfaWQiOiIzYjFhYzU4OS1jZmQ2LTRmM2YtYTZkOC03ZDA5YTIxODY3OTIifQ.aL0tBUxtHK8dTKksVIJQgQEeJW3FVFYYQ309_dJ_tyE' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Name my along.","courseId":"b19654f3-613e-4b9b-adcb-c304f2f20c4a","maxScore":76,"minScore":10,"orderIndex":2723,"description":"Democrat store western hope.","estimatedTime":"4 weeks"}'

@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDA2OjM3OjMwLjE2NDU0NiIsInVzZXJfaWQiOiJkYWJkOTljNy1mNmM4LTQ3NzUtODFkZi02MGE3OWY2ODJmNzYifQ.53NY1E9f18cPuinQE5teCNoCYARs-tcDgMBeL5QOARU' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Foot term answer him response significant.","maxScore":90,"minScore":5,"description":"Country general human success.","estimatedTime":"4 weeks","previewFileId":"14c0a83d-df3b-4995-8b4b-fe00806db847","createdByUserId":"dabd99c7-f6c8-4775-81df-60a79f682f76"}'
