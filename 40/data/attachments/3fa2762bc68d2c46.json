@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "4d52d11a-cae6-4d9d-87c6-a2db5620f554",
+    "title": "Everybody research box.",
+    "maxScore": 56,
+    "minScore": 10,
+    "description": "Former wait put red.",
+    "previewFile": {
+      "id": "e06fbdd7-4906-4689-8284-ec7ae421f93b",
+      "filename": "file_7914.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_7914.png"
+    },
+    "estimatedTime": "2 weeks",
+    "createdByUser": {
+      "id": "2441c921-0938-4874-afef-04a091cb8d3e",
+      "email": "test_37ef9bf6@example.com",
+      "lastName": "Anderson",
+      "firstName": "Susan",
+      "middleName": "David"
+    }
+  }
+}

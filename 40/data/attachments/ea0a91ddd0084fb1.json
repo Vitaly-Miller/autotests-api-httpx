@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "b4e4e5e7-ee64-456d-af25-a0847a21f50b",
+    "title": "Church call game.",
+    "maxScore": 50,
+    "minScore": 25,
+    "description": "Use article same determine Republican.",
+    "previewFile": {
+      "id": "d6236833-933a-405c-a451-f29e5d47a763",
+      "filename": "file_4955.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_4955.png"
+    },
+    "estimatedTime": "6 weeks",
+    "createdByUser": {
+      "id": "4fec999e-90e7-4951-a06f-3117df7508d9",
+      "email": "test_ddbfa77b@example.com",
+      "lastName": "Craig",
+      "firstName": "Julie",
+      "middleName": "Ronald"
+    }
+  }
+}

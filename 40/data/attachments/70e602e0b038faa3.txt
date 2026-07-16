@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDA0OjQ1OjE4LjIwNTgwMCIsInVzZXJfaWQiOiI5NDk0MWJlNC0yNzRmLTRiMGMtYWRjNC1hMTJjYTVkNTE0OTgifQ.k__yHo0g3WG78Lia70rxxxvDcrrAVtdZePGQfL9S03E' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Send leg these bag hit threat.","maxScore":64,"minScore":13,"description":"Or save collection quality mother final physical.","estimatedTime":"3 weeks","previewFileId":"6e79fa95-fe60-4660-ab90-69015c8ffdc5","createdByUserId":"94941be4-274f-4b0c-adc4-a12ca5d51498"}'

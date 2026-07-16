@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDA0OjQ1OjI0LjYyNjAyMSIsInVzZXJfaWQiOiIyYzRmMjE3Yi04MzE0LTQ4ZDYtOWI0NS03YWFiMjc4NzI1NjQifQ.TUoCIv9qjtKSfYLSTYnkg8ZoI2dgx4ZUDeqmPQZGxjE' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Prepare us she ten car.","courseId":"c1523488-305b-4a58-967c-40c717d1917a","maxScore":77,"minScore":6,"orderIndex":5891,"description":"Director address Republican.","estimatedTime":"4 weeks"}'

@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "5b60b8ca-8a59-49a2-b158-daf8e2f41585",
+    "title": "Style score carry rich off place purpose.",
+    "maxScore": 74,
+    "minScore": 19,
+    "description": "Eat inside accept resource. Last give hair.",
+    "previewFile": {
+      "id": "96cb7359-7f8e-40f6-8e17-22a68dfe95ae",
+      "filename": "file_6465.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_6465.png"
+    },
+    "estimatedTime": "8 weeks",
+    "createdByUser": {
+      "id": "d7ac5fac-39e6-4bd2-ba2e-d246db07e2c1",
+      "email": "test_abf4d7d7@example.com",
+      "lastName": "Moss",
+      "firstName": "Joseph",
+      "middleName": "Alan"
+    }
+  }
+}

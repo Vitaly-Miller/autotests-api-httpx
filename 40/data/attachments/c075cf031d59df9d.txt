@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDA0OjQ1OjI1LjkxOTk0OCIsInVzZXJfaWQiOiJjZjFhYWUyOC1hYjViLTQ5ZTQtODk1Yy02MTg4ZDY2ODQyNWQifQ.dpglb2oXybrq6nqMeTTBNbKKpIQdZzYOsiCjxEpJI0g' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Because author lawyer leader fill exist.","courseId":"684dd0a0-16fb-4983-a500-f239ea0bb7a8","maxScore":87,"minScore":10,"orderIndex":7424,"description":"Decide require movie case east.","estimatedTime":"7 weeks"}'

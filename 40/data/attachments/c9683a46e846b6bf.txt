@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDA0OjQ1OjIyLjA3Mzc0NCIsInVzZXJfaWQiOiI0OTdmNThhOC00NDQ2LTRmOTMtYTE5My03ZTYyNzNiMWNiMDMifQ.UWe2-WV6rV0b7ZfS1AlrpsAbZn71dLKK6XMAvW1ejbE' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Near apply those effect speak draw.","courseId":"a794f933-9183-448d-bc14-7d7aeeecb6d2","maxScore":68,"minScore":13,"orderIndex":8132,"description":"Before president deal big majority trip series.","estimatedTime":"6 weeks"}'

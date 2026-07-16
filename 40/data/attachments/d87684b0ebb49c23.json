@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "f5de3173-dc79-42e1-a10f-9c19ef29894b",
+    "title": "Compare Congress behavior get around than.",
+    "maxScore": 64,
+    "minScore": 3,
+    "description": "Check community culture choose attorney.",
+    "previewFile": {
+      "id": "e8cd7618-1247-4952-831d-d08639609711",
+      "filename": "file_6335.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_6335.png"
+    },
+    "estimatedTime": "3 weeks",
+    "createdByUser": {
+      "id": "8dc98fc1-cb38-44f3-9a61-1d2c440aee68",
+      "email": "test_f97abdbc@example.com",
+      "lastName": "Pennington",
+      "firstName": "Suzanne",
+      "middleName": "Mark"
+    }
+  }
+}

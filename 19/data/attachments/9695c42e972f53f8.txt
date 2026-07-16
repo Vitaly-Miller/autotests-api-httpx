@@ -1,5 +1,0 @@
-curl -X PATCH \
-  http://localhost:8000/api/v1/exercises/208cfdda-22e2-44c2-b736-37d0d87f6fbd \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDA1OjA2OjU2Ljc1MzQzMiIsInVzZXJfaWQiOiI2MWJhZTI5MC05ZTQ0LTQ5YzgtYjAxNy01MzFjNGQ2YmZhZjYifQ.Gh8Lwj4O5VYYREi4zVh-Bfhq1o-ASwVEbTPhKS19fWk' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Fine economy wife difference anyone husband.","maxScore":78,"minScore":26,"orderIndex":8649,"description":"Trouble sense speak tend would there.","estimatedTime":"7 weeks"}'

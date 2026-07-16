@@ -1,0 +1,25 @@
+{
+  "courses": [
+    {
+      "id": "241baa2c-1adc-40bf-8b30-5c3831895d2b",
+      "title": "Always property learn check.",
+      "maxScore": 90,
+      "minScore": 4,
+      "description": "Conference crime skin.",
+      "previewFile": {
+        "id": "65fb8506-37bc-4572-bcdf-f444189dc436",
+        "filename": "file_5629.png",
+        "directory": "Uploaded",
+        "url": "http://localhost:8000/static/Uploaded/file_5629.png"
+      },
+      "estimatedTime": "4 weeks",
+      "createdByUser": {
+        "id": "035c7f1d-700b-42a7-b069-57f7fd6810b8",
+        "email": "test_658e06f9@example.com",
+        "lastName": "Holloway",
+        "firstName": "Thomas",
+        "middleName": "Jonathan"
+      }
+    }
+  ]
+}

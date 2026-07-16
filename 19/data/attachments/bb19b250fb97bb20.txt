@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDA1OjA2OjQ2LjA3OTI2OCIsInVzZXJfaWQiOiJjYzVmMjExMy0xNTkzLTQzYmItYTg2Yi1lMTMyNDc5OTM1MTYifQ.ufMxD2Rb2ljHV4YGFjYOePnIFoObmrT92XQOGszg6Tw' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Scientist sign prove imagine paper.","maxScore":67,"minScore":4,"description":"Indicate cause author Mr official manage.","estimatedTime":"4 weeks","previewFileId":"64c261a1-caa4-4aa5-b323-468372869ecf","createdByUserId":"cc5f2113-1593-43bb-a86b-e13247993516"}'

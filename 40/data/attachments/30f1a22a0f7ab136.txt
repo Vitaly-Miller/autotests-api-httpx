@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDA0OjQ1OjI0LjkyNjkwNSIsInVzZXJfaWQiOiIyYzRmMjE3Yi04MzE0LTQ4ZDYtOWI0NS03YWFiMjc4NzI1NjQifQ.Sn_MNU-Zar4S3OTV3ZbEIT8emyi25IcCwXmDMPb5f5I' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Product remain six.","maxScore":72,"minScore":25,"description":"Rest play involve billion civil system.","estimatedTime":"3 weeks","previewFileId":"fde4ef4a-15c8-46e6-b609-0d7fabbb8e40","createdByUserId":"2c4f217b-8314-48d6-9b45-7aab27872564"}'

@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "623826bd-fecc-42b4-bfa3-5c8a82766d89",
+    "title": "Board agent oil early easy.",
+    "maxScore": 78,
+    "minScore": 29,
+    "description": "Return city upon.",
+    "previewFile": {
+      "id": "a2ab5fe1-5aff-48cf-a759-204f069c5fd3",
+      "filename": "file_2401.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_2401.png"
+    },
+    "estimatedTime": "9 weeks",
+    "createdByUser": {
+      "id": "bb2de253-8c12-4fe4-b49a-76a355293a84",
+      "email": "test_3a012927@example.com",
+      "lastName": "Lynch",
+      "firstName": "Scott",
+      "middleName": "Maria"
+    }
+  }
+}

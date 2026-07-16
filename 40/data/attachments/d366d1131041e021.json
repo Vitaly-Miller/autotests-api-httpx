@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "684dd0a0-16fb-4983-a500-f239ea0bb7a8",
+    "title": "Series idea quickly long these her.",
+    "maxScore": 66,
+    "minScore": 17,
+    "description": "Deep east enter season positive positive.",
+    "previewFile": {
+      "id": "a2cf21f3-ef7b-430c-8dac-f387a7de831c",
+      "filename": "file_9085.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_9085.png"
+    },
+    "estimatedTime": "6 weeks",
+    "createdByUser": {
+      "id": "cf1aae28-ab5b-49e4-895c-6188d668425d",
+      "email": "test_5a476ccd@example.com",
+      "lastName": "Sherman",
+      "firstName": "Robert",
+      "middleName": "Vickie"
+    }
+  }
+}

@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDA1OjA2OjQxLjkzMDgxMCIsInVzZXJfaWQiOiJkOGU4ZDNjNS1iMTNlLTRhZGMtYTFkMS04Zjc1MTcyZTk0ZTQifQ.xMUKxTDWR9zT-lmxZqyuNpOoRNatjmhR-Do4s2zHk7E' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Ability lead describe.","maxScore":83,"minScore":22,"description":"Entire week local. After half final collection.","estimatedTime":"7 weeks","previewFileId":"055ea69d-99d4-4ba7-bea0-52ab4a13cf56","createdByUserId":"d8e8d3c5-b13e-4adc-a1d1-8f75172e94e4"}'

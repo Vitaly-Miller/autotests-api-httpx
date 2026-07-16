@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDA0OjQ1OjI4Ljc3NDEzNCIsInVzZXJfaWQiOiI5NzBlMmQ5MC02NGNkLTQxMGYtYmU3OC03M2U3MTEwZDRmNmMifQ.sp_-uer1tBePLFPJC5gzxZOscRLAR_qkYkTwB-ZBxmM' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Similar natural treatment.","maxScore":79,"minScore":7,"description":"Argue statement guess cell soldier.","estimatedTime":"7 weeks","previewFileId":"b50d0e0c-2c32-48c3-80fc-493d2ada8cc8","createdByUserId":"970e2d90-64cd-410f-be78-73e7110d4f6c"}'

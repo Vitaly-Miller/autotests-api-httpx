@@ -1,5 +1,0 @@
-curl -X PATCH \
-  http://localhost:8000/api/v1/courses/14dc4eba-5826-40a4-9ad4-0a97cef81f56 \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDA1OjA2OjQ2LjA3OTI2OCIsInVzZXJfaWQiOiJjYzVmMjExMy0xNTkzLTQzYmItYTg2Yi1lMTMyNDc5OTM1MTYifQ.ufMxD2Rb2ljHV4YGFjYOePnIFoObmrT92XQOGszg6Tw' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Region design moment.","maxScore":55,"minScore":24,"description":"Too indicate decade share second less part.","estimatedTime":"7 weeks"}'

@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "1b201f26-8160-498b-9683-3c371911c965",
+    "title": "Similar natural treatment.",
+    "maxScore": 79,
+    "minScore": 7,
+    "description": "Argue statement guess cell soldier.",
+    "previewFile": {
+      "id": "b50d0e0c-2c32-48c3-80fc-493d2ada8cc8",
+      "filename": "file_3825.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_3825.png"
+    },
+    "estimatedTime": "7 weeks",
+    "createdByUser": {
+      "id": "970e2d90-64cd-410f-be78-73e7110d4f6c",
+      "email": "test_6223625f@example.com",
+      "lastName": "Sanders",
+      "firstName": "Cheryl",
+      "middleName": "Kenneth"
+    }
+  }
+}

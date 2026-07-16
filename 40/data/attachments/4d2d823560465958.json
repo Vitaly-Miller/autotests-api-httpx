@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "6e8cc2ea-6e79-4fae-a702-a6b71d92a486",
+    "title": "Send leg these bag hit threat.",
+    "maxScore": 64,
+    "minScore": 13,
+    "description": "Or save collection quality mother final physical.",
+    "previewFile": {
+      "id": "6e79fa95-fe60-4660-ab90-69015c8ffdc5",
+      "filename": "file_2124.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_2124.png"
+    },
+    "estimatedTime": "3 weeks",
+    "createdByUser": {
+      "id": "94941be4-274f-4b0c-adc4-a12ca5d51498",
+      "email": "test_9be00cc1@example.com",
+      "lastName": "Miller",
+      "firstName": "Miguel",
+      "middleName": "Anne"
+    }
+  }
+}

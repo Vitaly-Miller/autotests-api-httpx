@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDA0OjQ1OjE3LjIyMjg4NSIsInVzZXJfaWQiOiI0ZmVjOTk5ZS05MGU3LTQ5NTEtYTA2Zi0zMTE3ZGY3NTA4ZDkifQ.poEBZRPEUjGk-QLJtz-KVGB04I9TpKFfwbUTy-IZAMo' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Church call game.","maxScore":50,"minScore":25,"description":"Use article same determine Republican.","estimatedTime":"6 weeks","previewFileId":"d6236833-933a-405c-a451-f29e5d47a763","createdByUserId":"4fec999e-90e7-4951-a06f-3117df7508d9"}'

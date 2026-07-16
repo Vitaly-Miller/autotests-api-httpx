@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDA1OjA2OjQ3LjQ1MTUyMiIsInVzZXJfaWQiOiJjNWUyMWRlYi1hZDI4LTRmNjEtOTc3Yi03NzAwYTgxMGNiNzAifQ.MTClGCSfNEH2LoTZFBWoLqjM3vF6iuMul0ooRI2BVa0' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Natural director bit.","maxScore":50,"minScore":24,"description":"Heart station perhaps entire mind deep.","estimatedTime":"2 weeks","previewFileId":"6640027c-2fb1-41d0-8c52-b46fe67de9dd","createdByUserId":"c5e21deb-ad28-4f61-977b-7700a810cb70"}'

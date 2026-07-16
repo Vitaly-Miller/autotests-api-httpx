@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDA0OjQ1OjIwLjE0MTAzMiIsInVzZXJfaWQiOiIwMzVjN2YxZC03MDBiLTQyYTctYjA2OS01N2Y3ZmQ2ODEwYjgifQ.ZDclzd29UX3Yc-Ocj9hwOc1n-cTdGZ7Vf7h5M9XiMek' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Always property learn check.","maxScore":90,"minScore":4,"description":"Conference crime skin.","estimatedTime":"4 weeks","previewFileId":"65fb8506-37bc-4572-bcdf-f444189dc436","createdByUserId":"035c7f1d-700b-42a7-b069-57f7fd6810b8"}'

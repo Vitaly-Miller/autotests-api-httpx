@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDA0OjQ1OjIyLjM3MzM4NCIsInVzZXJfaWQiOiI0OTdmNThhOC00NDQ2LTRmOTMtYTE5My03ZTYyNzNiMWNiMDMifQ.xHBSEOYU8GmCssybo4BtRqbdXa9QOeXirDDnxkWEedA' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Need factor sense positive.","maxScore":78,"minScore":20,"description":"Network late on deep head until.","estimatedTime":"8 weeks","previewFileId":"c50d1e24-a6c8-4de9-a5ce-8eb8c44901dc","createdByUserId":"497f58a8-4446-4f93-a193-7e6273b1cb03"}'

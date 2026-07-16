@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDA0OjQ1OjIxLjEwMzg0MCIsInVzZXJfaWQiOiI0MWZjOGNmNS05Zjg2LTQwZjItODE2NC0wMjk5NDllNDNlODMifQ.dOiVg3GpEEIL-ElFzvM8v7S3GPFAnxppZGZdTtWMKf4' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Able window majority sense.","maxScore":69,"minScore":20,"description":"Over garden argue spend only appear stay without.","estimatedTime":"5 weeks","previewFileId":"abf8d52d-7134-41d8-8f4d-ed2c320d18a6","createdByUserId":"41fc8cf5-9f86-40f2-8164-029949e43e83"}'

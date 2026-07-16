@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDA1OjA2OjUyLjk0NTQzNyIsInVzZXJfaWQiOiI1MWQ2ZDc3ZS1jNGExLTRjYTgtOGMzOC03NGQzYTk4MDE1N2UifQ.apQjE3ZaKH_ha6fHRKFRtFZZy3wdf_m6dxYozCP54M4' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Tree piece effect financial.","maxScore":59,"minScore":29,"description":"Magazine magazine next bank much.","estimatedTime":"5 weeks","previewFileId":"95ae6b39-588e-4646-ab66-2d2d1392792b","createdByUserId":"51d6d77e-c4a1-4ca8-8c38-74d3a980157e"}'

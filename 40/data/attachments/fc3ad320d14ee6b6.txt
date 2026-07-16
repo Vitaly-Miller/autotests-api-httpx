@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/exercises/fe83a92d-ddc2-4e2c-b362-cb5ed0eb0a41 \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDA0OjQ1OjMxLjAyMDczOCIsInVzZXJfaWQiOiJkN2FjNWZhYy0zOWU2LTRiZDItYmEyZS1kMjQ2ZGIwN2UyYzEifQ.sYhIZGut1k0wbg3vXDQmZJnvQeHOxQeu4xH20GzAKcQ' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Although whom return price.","maxScore":60,"minScore":4,"orderIndex":2192,"description":"Bad already enough card break.","estimatedTime":"6 weeks"}'

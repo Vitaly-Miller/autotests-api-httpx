@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDA0OjQ1OjI5LjczNzgwNyIsInVzZXJfaWQiOiIyNDQxYzkyMS0wOTM4LTQ4NzQtYWZlZi0wNGEwOTFjYjhkM2UifQ.QIw7xW1hd_uNboAS88EWOBlHKaaTc3twBY5JDGstIa8' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Use better car fear.","courseId":"4d52d11a-cae6-4d9d-87c6-a2db5620f554","maxScore":87,"minScore":16,"orderIndex":3395,"description":"Item water wonder serious than.","estimatedTime":"3 weeks"}'

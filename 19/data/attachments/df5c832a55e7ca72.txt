@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDA1OjA2OjQyLjk4MTM2MyIsInVzZXJfaWQiOiI4OWMzMDIzOC1iMzBhLTQ3ZTUtYmQ0ZS01NDNkN2VhNDM3NWQifQ.T_DbfK4nEamtcKcm-4gTxZD0OF8h7mm1YNWz3z2jo68' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Decide catch forward lot sister.","maxScore":59,"minScore":18,"description":"Natural least sound.","estimatedTime":"9 weeks","previewFileId":"92992744-e042-4009-889d-876cf56723c6","createdByUserId":"89c30238-b30a-47e5-bd4e-543d7ea4375d"}'

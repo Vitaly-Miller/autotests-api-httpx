@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDA0OjQ1OjE5LjE2NTU2MSIsInVzZXJfaWQiOiJiYjJkZTI1My04YzEyLTRmZTQtYjQ5YS03NmEzNTUyOTNhODQifQ.uhwm9_ydz7mnggE5Y_3Tau0uLQYWObaZ9XU2MID8Trs' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Board agent oil early easy.","maxScore":78,"minScore":29,"description":"Return city upon.","estimatedTime":"9 weeks","previewFileId":"a2ab5fe1-5aff-48cf-a759-204f069c5fd3","createdByUserId":"bb2de253-8c12-4fe4-b49a-76a355293a84"}'

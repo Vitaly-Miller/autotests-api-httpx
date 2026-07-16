@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "f4eb7e5d-ee22-47c7-ad81-0b34e5b9fc93",
+    "title": "Able window majority sense.",
+    "maxScore": 69,
+    "minScore": 20,
+    "description": "Over garden argue spend only appear stay without.",
+    "previewFile": {
+      "id": "abf8d52d-7134-41d8-8f4d-ed2c320d18a6",
+      "filename": "file_6599.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_6599.png"
+    },
+    "estimatedTime": "5 weeks",
+    "createdByUser": {
+      "id": "41fc8cf5-9f86-40f2-8164-029949e43e83",
+      "email": "test_5ad13d95@example.com",
+      "lastName": "Pruitt",
+      "firstName": "Patricia",
+      "middleName": "Monica"
+    }
+  }
+}
