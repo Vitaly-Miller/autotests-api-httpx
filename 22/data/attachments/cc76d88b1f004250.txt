@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE2OjIxOjM0Ljg5MjA0NyIsInVzZXJfaWQiOiJjMjhmNGQ2Mi1iZjNjLTQxYTktODI0NC01Y2Q0ZTdlYWI4NzgifQ.0LwxTPfa7SaFyMFQAjBS8bCmJch6lY62xYLYV1MZKO8' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Which local still.","maxScore":62,"minScore":22,"description":"Everyone together house occur yourself.","estimatedTime":"8 weeks","previewFileId":"74d4eb23-5b19-4afc-a5fe-075966d2b26f","createdByUserId":"c28f4d62-bf3c-41a9-8244-5cd4e7eab878"}'

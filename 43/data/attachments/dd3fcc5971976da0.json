@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "36f3e04b-9907-47eb-af32-a17776237778",
+    "title": "Behind section assume road road note.",
+    "maxScore": 97,
+    "minScore": 9,
+    "description": "Run lose be would glass. Significant seek ago.",
+    "previewFile": {
+      "id": "2244df9d-5b76-42a5-b8b7-6c0f772bcaa0",
+      "filename": "file_6274.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_6274.png"
+    },
+    "estimatedTime": "2 weeks",
+    "createdByUser": {
+      "id": "f553f46b-39fb-450b-8205-6e0e9349977b",
+      "email": "test_e0e97de1@example.com",
+      "lastName": "Williams",
+      "firstName": "Zachary",
+      "middleName": "Allison"
+    }
+  }
+}

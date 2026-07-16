@@ -1,0 +1,4 @@
+         Request URL: http://localhost:8000/api/v1/files/34173df8-6214-4f68-9699-4c6bc58eede9
+      Request Method: GET
+Response Status Code: 200-OK
+        Response URL: http://localhost:8000/api/v1/files/34173df8-6214-4f68-9699-4c6bc58eede9

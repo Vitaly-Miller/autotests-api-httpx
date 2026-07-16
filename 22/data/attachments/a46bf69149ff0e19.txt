@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE2OjIxOjMxLjM4NTk3OSIsInVzZXJfaWQiOiJkMzgxYjlkNC01YmRhLTRlZTMtOTc2Yi04OWIxODU0NTFiMGYifQ.6DrOHkJXZgTKUOrQgQ7qtaM0NUPova3pwc5bB5VNMfA' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Surface itself million idea discover indeed action.","maxScore":80,"minScore":22,"description":"Move most focus provide moment myself.","estimatedTime":"7 weeks","previewFileId":"bd152b33-8784-4c5a-ab3b-dcabed51ec98","createdByUserId":"d381b9d4-5bda-4ee3-976b-89b185451b0f"}'

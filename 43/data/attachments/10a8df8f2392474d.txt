@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/exercises/89d1f9d0-ad78-4cf5-a44d-f8f87cbe995d \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDA1OjMyOjE4Ljg1NTMwMiIsInVzZXJfaWQiOiIwM2NlMDlkYy01MzhkLTQwYzMtYTUxNS00YTA5NGFjMGJjZWMifQ.YyyR-uZLBnAhYmhpFrK5iZoK1oy83jSSaCxpmVt_8lU' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Tonight will party response.","maxScore":75,"minScore":26,"orderIndex":913,"description":"American wall capital return.","estimatedTime":"7 weeks"}'

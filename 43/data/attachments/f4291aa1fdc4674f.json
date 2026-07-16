@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "96042ec5-f4bd-47c4-8c9e-36ba40b71622",
+    "title": "Wear yourself civil same move.",
+    "maxScore": 86,
+    "minScore": 8,
+    "description": "Add your grow hit east difference western method.",
+    "previewFile": {
+      "id": "b48b73b5-45c7-4018-ab35-6f98e4808737",
+      "filename": "file_2925.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_2925.png"
+    },
+    "estimatedTime": "2 weeks",
+    "createdByUser": {
+      "id": "7876e3c5-e587-4ef9-9837-99db9070e6f4",
+      "email": "test_446710f4@example.com",
+      "lastName": "Strickland",
+      "firstName": "Joseph",
+      "middleName": "Robert"
+    }
+  }
+}

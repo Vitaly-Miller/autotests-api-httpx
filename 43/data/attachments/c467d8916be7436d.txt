@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDA1OjMyOjEzLjI4Mzk4NCIsInVzZXJfaWQiOiIyYjY2ODg0Ny1hNjI0LTQ2OGMtOWQ2Zi1hMzhkZjYzMDYyYzQifQ.ysF6StBaYT8I7Y-YtvNowS5NtwHTPEH4x5vIB1voWXI' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Policy per commercial process.","courseId":"54f8225b-40f7-46f2-b4c1-c8a1b2c949bb","maxScore":77,"minScore":25,"orderIndex":5099,"description":"Relationship present really either along through.","estimatedTime":"7 weeks"}'

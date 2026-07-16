@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "2848e6d1-b5cc-4df9-ac73-389409c0671b",
+    "title": "Race bed value computer good attack.",
+    "maxScore": 60,
+    "minScore": 13,
+    "description": "Rather politics probably stay door within center.",
+    "previewFile": {
+      "id": "cf75bc29-f055-4902-81a7-44b885dd4f25",
+      "filename": "file_3589.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_3589.png"
+    },
+    "estimatedTime": "8 weeks",
+    "createdByUser": {
+      "id": "9b8f19ad-148e-40e7-8062-e147b4fda666",
+      "email": "test_12a653e5@example.com",
+      "lastName": "Gilbert",
+      "firstName": "Gabriel",
+      "middleName": "Jonathan"
+    }
+  }
+}

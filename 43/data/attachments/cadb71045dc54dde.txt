@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDA1OjMyOjExLjg2ODcxMSIsInVzZXJfaWQiOiJmNTUzZjQ2Yi0zOWZiLTQ1MGItODIwNS02ZTBlOTM0OTk3N2IifQ.3Z10N6coijwaClPqz8TDmzIbcFWrujky_ChZZ3rOvgo' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Public green fish.","courseId":"36f3e04b-9907-47eb-af32-a17776237778","maxScore":76,"minScore":3,"orderIndex":3816,"description":"Fact career fish prepare message.","estimatedTime":"4 weeks"}'

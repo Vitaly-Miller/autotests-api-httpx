@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "a6e9d6e5-5e4a-4696-b8ba-047e8dcbb7ab",
+    "title": "Health can forget into.",
+    "maxScore": 54,
+    "minScore": 14,
+    "description": "Trade along bit those TV.",
+    "previewFile": {
+      "id": "271723dd-7c9e-48ef-aec6-5e81007af4f9",
+      "filename": "file_4053.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_4053.png"
+    },
+    "estimatedTime": "8 weeks",
+    "createdByUser": {
+      "id": "6fb3917e-71b1-49ef-b2f0-d64eb384a97e",
+      "email": "test_61f2cc72@example.com",
+      "lastName": "Mccarty",
+      "firstName": "Ashley",
+      "middleName": "Brooke"
+    }
+  }
+}

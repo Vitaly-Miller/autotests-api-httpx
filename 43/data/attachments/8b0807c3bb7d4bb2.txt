@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDA1OjMyOjE0LjY3MTcxNCIsInVzZXJfaWQiOiI2NDNmNTgwNC03MTAzLTRhOTktODJjZS04NzliZGQ5NDhmMTAifQ.5SXzDzA3kyD7ppn_IKXsA1-sAh-UpRZG8_oypUzarf4' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Involve plant drug likely series.","courseId":"a08c2b72-2352-419b-89f1-ca9d0036608e","maxScore":77,"minScore":10,"orderIndex":5367,"description":"Page level feel realize.","estimatedTime":"9 weeks"}'

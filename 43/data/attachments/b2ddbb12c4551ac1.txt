@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDA1OjMyOjA4LjAzNjU1NiIsInVzZXJfaWQiOiI5YjhmMTlhZC0xNDhlLTQwZTctODA2Mi1lMTQ3YjRmZGE2NjYifQ.rUVQyZ_4xRBP8Ed5MSEQTjV7rWTKnHDrvw6QuIzCJzQ' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Stock cause or example.","maxScore":54,"minScore":20,"description":"Red adult very serious study report.","estimatedTime":"5 weeks","previewFileId":"cf75bc29-f055-4902-81a7-44b885dd4f25","createdByUserId":"9b8f19ad-148e-40e7-8062-e147b4fda666"}'

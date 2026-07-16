@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE2OjIxOjM5LjM0Nzc5NyIsInVzZXJfaWQiOiIwM2M5YzU4Ny0zMWVkLTQ5ODEtYWY3OC1kNmQ0MzY1Y2U5NDAifQ.orPmb_9RnL23e09tnFsOsePsPmGNWDjyUagYL1_B4P8' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Federal she white worker.","maxScore":57,"minScore":25,"description":"Ten draw appear business might card.","estimatedTime":"7 weeks","previewFileId":"6034325e-38c4-4b4a-ab01-c7ad9735ced6","createdByUserId":"03c9c587-31ed-4981-af78-d6d4365ce940"}'

@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDA1OjMyOjA0Ljg4MzQxOSIsInVzZXJfaWQiOiIzODY3YmE5Zi1jMDQyLTRmNWItYTRjYi1hYTA3MTliYjljNTIifQ.M7pWDXW-mQyrSTSR-seXkRXxAqmbkSQ_0iiqxYZnctE' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Eight product sea think cover cultural.","maxScore":87,"minScore":1,"description":"Industry since wrong wife newspaper case easy.","estimatedTime":"3 weeks","previewFileId":"60b71d35-3cac-421a-a056-c7d38a060691","createdByUserId":"3867ba9f-c042-4f5b-a4cb-aa0719bb9c52"}'

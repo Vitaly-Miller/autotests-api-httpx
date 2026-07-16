@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDA1OjMyOjE1LjAwMTQ5MSIsInVzZXJfaWQiOiI2NDNmNTgwNC03MTAzLTRhOTktODJjZS04NzliZGQ5NDhmMTAifQ.imKSILbObTcBZMcMySzHTJIpAANa7eV_egN3w7T3CTg' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Perhaps only gun.","maxScore":57,"minScore":17,"description":"Various check quite better.","estimatedTime":"4 weeks","previewFileId":"4e77f43c-0d81-4496-9ad1-7bb8b8941e46","createdByUserId":"643f5804-7103-4a99-82ce-879bdd948f10"}'

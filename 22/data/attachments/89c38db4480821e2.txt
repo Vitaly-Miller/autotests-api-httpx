@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/exercises \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE2OjIxOjM1Ljc4NDg2NCIsInVzZXJfaWQiOiJmN2U1MjljOC00YmQ4LTQ5MzYtOTU1Ni02MWY2YmU1ZDVkZTUifQ.UhaMXE2AxuzWgV1VKokvxUadYiNxC7QfYPrDC-EniOw' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Somebody color authority food both.","courseId":"3ca865a3-3022-4260-92cb-dfb97cfc6295","maxScore":93,"minScore":11,"orderIndex":9781,"description":"Run perform possible table north.","estimatedTime":"7 weeks"}'

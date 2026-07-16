@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/exercises \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE2OjIxOjQwLjI1NTg2MSIsInVzZXJfaWQiOiJmMDAxODQxMC1iOGJlLTQ1NGItYTMzZi0xZmVhZjJmMTEzNDEifQ.QL-AFxu5kQx2LnQYk4Hlm6a0s2ORkDoOhgblhsngtEw' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Television soldier agree finish develop risk.","courseId":"ebb5fb35-505d-4b44-a3ff-6ffec9bdc78a","maxScore":85,"minScore":3,"orderIndex":2700,"description":"Defense pattern tough travel future sort.","estimatedTime":"4 weeks"}'

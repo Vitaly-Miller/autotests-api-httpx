@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "14e733f6-d2b6-405e-a981-a23dea60582a",
+    "title": "Ago account must among.",
+    "maxScore": 75,
+    "minScore": 22,
+    "description": "Purpose those air might form relationship within.",
+    "previewFile": {
+      "id": "5cbe4ac6-6f9a-4d16-89c3-29af376a9845",
+      "filename": "file_7033.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_7033.png"
+    },
+    "estimatedTime": "6 weeks",
+    "createdByUser": {
+      "id": "928d3aa2-f8e0-4be5-8d0f-126f24c11737",
+      "email": "test_ce23f720@example.com",
+      "lastName": "Brown",
+      "firstName": "Anne",
+      "middleName": "Lori"
+    }
+  }
+}

@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDA1OjMyOjEyLjIwMDQzMSIsInVzZXJfaWQiOiJmNTUzZjQ2Yi0zOWZiLTQ1MGItODIwNS02ZTBlOTM0OTk3N2IifQ.axwrS4m9ArMNF8fQNbE1W9VRkyiQR7WSi-aZd4xj3bU' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Behind section assume road road note.","maxScore":97,"minScore":9,"description":"Run lose be would glass. Significant seek ago.","estimatedTime":"2 weeks","previewFileId":"2244df9d-5b76-42a5-b8b7-6c0f772bcaa0","createdByUserId":"f553f46b-39fb-450b-8205-6e0e9349977b"}'

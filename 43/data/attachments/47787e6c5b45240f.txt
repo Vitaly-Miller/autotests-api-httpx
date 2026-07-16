@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDA1OjMyOjEwLjQ4ODk1MSIsInVzZXJfaWQiOiI2ZmIzOTE3ZS03MWIxLTQ5ZWYtYjJmMC1kNjRlYjM4NGE5N2UifQ.41-FGBdWBubtXvJ0_2q1AzlGyAe1Fw0cLwsTpYBbQik' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Collection entire back.","courseId":"a6e9d6e5-5e4a-4696-b8ba-047e8dcbb7ab","maxScore":99,"minScore":11,"orderIndex":5027,"description":"Nothing school up into such girl.","estimatedTime":"5 weeks"}'

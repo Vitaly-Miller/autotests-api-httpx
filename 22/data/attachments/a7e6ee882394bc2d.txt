@@ -1,5 +1,0 @@
-curl -X PATCH \
-  http://localhost:8000/api/v1/exercises/849e1e82-0555-4ee5-9c44-e22aa547d48d \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE2OjIxOjM5LjEwOTM4MiIsInVzZXJfaWQiOiIwM2M5YzU4Ny0zMWVkLTQ5ODEtYWY3OC1kNmQ0MzY1Y2U5NDAifQ.cPT7WVsYUWSBP7zOCSQvx-2VfMc8XmJmr25MZGcEbyw' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Kitchen mission some natural without evening.","maxScore":77,"minScore":2,"orderIndex":2847,"description":"Modern hospital share walk.","estimatedTime":"4 weeks"}'

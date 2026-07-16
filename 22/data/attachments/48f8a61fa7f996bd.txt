@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE2OjIxOjM2LjAxNzI0MyIsInVzZXJfaWQiOiJmN2U1MjljOC00YmQ4LTQ5MzYtOTU1Ni02MWY2YmU1ZDVkZTUifQ.gCUZDR0TxXSozmOAqFYONUeV7ATGhWMKfKvwPnKjhUw' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Probably model most data concern itself.","maxScore":84,"minScore":19,"description":"Look technology push require provide.","estimatedTime":"2 weeks","previewFileId":"35cc51cf-d66d-4433-a94c-94a08fbc0329","createdByUserId":"f7e529c8-4bd8-4936-9556-61f6be5d5de5"}'

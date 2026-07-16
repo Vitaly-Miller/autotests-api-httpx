@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDA1OjMyOjE3LjQ1NDIzNSIsInVzZXJfaWQiOiI1YzcyMWY0Yi0wOWQ1LTQ2YmMtYWQ4OS1iYzgwZmNkZjQ0Y2MifQ.f2u1zY5C3PHZCEP3yNI0oSZL3s77ZML8w8_Elv4hd7Y' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Dinner friend note.","courseId":"ca4db150-999b-42bc-8a9e-7b9304c8354d","maxScore":51,"minScore":5,"orderIndex":7916,"description":"Production professor Mr loss policy.","estimatedTime":"7 weeks"}'

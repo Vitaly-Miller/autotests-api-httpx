@@ -1,0 +1,25 @@
+{
+  "courses": [
+    {
+      "id": "06dc1939-44bf-4dc6-a168-9aba5bcb7161",
+      "title": "Technology fine fill rule.",
+      "maxScore": 85,
+      "minScore": 3,
+      "description": "Without lose should book among walk.",
+      "previewFile": {
+        "id": "3f6a2892-85fc-4f70-9aba-ba55a7458adc",
+        "filename": "file_2795.png",
+        "directory": "Uploaded",
+        "url": "http://localhost:8000/static/Uploaded/file_2795.png"
+      },
+      "estimatedTime": "6 weeks",
+      "createdByUser": {
+        "id": "882f41ed-bd46-4fb5-84fa-e876ee8466ec",
+        "email": "test_b7b9e46c@example.com",
+        "lastName": "Rivera",
+        "firstName": "Emily",
+        "middleName": "Amanda"
+      }
+    }
+  ]
+}

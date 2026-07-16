@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "29501746-747e-4b74-bf15-fdc305f6432d",
+    "title": "Like yourself throw them.",
+    "maxScore": 90,
+    "minScore": 28,
+    "description": "Himself thing quite end situation.",
+    "previewFile": {
+      "id": "9cce4ccb-f60c-4c3c-991d-7d243602071c",
+      "filename": "file_5571.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_5571.png"
+    },
+    "estimatedTime": "6 weeks",
+    "createdByUser": {
+      "id": "45f36290-7854-49a7-9637-95dbb69b7703",
+      "email": "test_d8975db7@example.com",
+      "lastName": "Kelly",
+      "firstName": "William",
+      "middleName": "Mary"
+    }
+  }
+}

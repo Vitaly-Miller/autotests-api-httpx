@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/exercises \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE2OjIxOjM3LjgyODMyMCIsInVzZXJfaWQiOiJiYmZhZWE1Mi1hMDkzLTQyNzItYTBmNS05YzljNWMzNzBhZjUifQ.1t3Oum9igiOBiwXybNDuwMzFk2zbXXlqWPW2cK0Cb14' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Its growth cost value.","courseId":"5e469705-6df3-48b4-923e-68c55d86b5f4","maxScore":56,"minScore":9,"orderIndex":7618,"description":"Court decide who theory trial.","estimatedTime":"4 weeks"}'

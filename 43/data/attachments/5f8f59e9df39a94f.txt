@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDA1OjMyOjE5LjE4NDcyNiIsInVzZXJfaWQiOiIwM2NlMDlkYy01MzhkLTQwYzMtYTUxNS00YTA5NGFjMGJjZWMifQ.K7tp19uQPap1uZTWfLLGLOXlwUl78RiSJtNk1vJsbqk' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Enter involve suffer which beat.","maxScore":69,"minScore":23,"description":"Quality cell at model.","estimatedTime":"8 weeks","previewFileId":"dd88a5f7-8659-44c3-8c3b-29e8df1b0ccd","createdByUserId":"03ce09dc-538d-40c3-a515-4a094ac0bcec"}'

@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDA1OjMyOjEwLjgxODc1OCIsInVzZXJfaWQiOiI2ZmIzOTE3ZS03MWIxLTQ5ZWYtYjJmMC1kNjRlYjM4NGE5N2UifQ.7Bttvna3q9F_rwL5uRR29MJ04nziOQg4N4E6jlvQsTk' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Health can forget into.","maxScore":54,"minScore":14,"description":"Trade along bit those TV.","estimatedTime":"8 weeks","previewFileId":"271723dd-7c9e-48ef-aec6-5e81007af4f9","createdByUserId":"6fb3917e-71b1-49ef-b2f0-d64eb384a97e"}'

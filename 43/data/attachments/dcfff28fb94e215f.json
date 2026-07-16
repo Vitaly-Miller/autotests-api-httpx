@@ -1,0 +1,25 @@
+{
+  "courses": [
+    {
+      "id": "e88f929c-cbaa-46ff-8087-14983a7b4269",
+      "title": "Television something several across wait.",
+      "maxScore": 90,
+      "minScore": 1,
+      "description": "View positive so American thing us every detail.",
+      "previewFile": {
+        "id": "3d6cf125-a6df-4217-9d53-0ceaf0ba9643",
+        "filename": "file_7764.png",
+        "directory": "Uploaded",
+        "url": "http://localhost:8000/static/Uploaded/file_7764.png"
+      },
+      "estimatedTime": "7 weeks",
+      "createdByUser": {
+        "id": "0d7c7047-1a88-4de3-beb1-dfc1b0505917",
+        "email": "test_e5bed60c@example.com",
+        "lastName": "Brown",
+        "firstName": "Michelle",
+        "middleName": "Barbara"
+      }
+    }
+  ]
+}

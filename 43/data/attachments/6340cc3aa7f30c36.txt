@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDA1OjMyOjA5LjA5MDY5MyIsInVzZXJfaWQiOiI0NWYzNjI5MC03ODU0LTQ5YTctOTYzNy05NWRiYjY5Yjc3MDMifQ.z82_MSaLpWUoHhsy3UooRxXnCg3zXFTSg2zEi7T4eyM' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Performance ahead yet perform.","courseId":"29501746-747e-4b74-bf15-fdc305f6432d","maxScore":84,"minScore":3,"orderIndex":6080,"description":"Up information increase less.","estimatedTime":"3 weeks"}'

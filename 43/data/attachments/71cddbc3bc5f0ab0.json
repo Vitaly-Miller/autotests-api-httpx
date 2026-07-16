@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "a08c2b72-2352-419b-89f1-ca9d0036608e",
+    "title": "Perhaps only gun.",
+    "maxScore": 57,
+    "minScore": 17,
+    "description": "Various check quite better.",
+    "previewFile": {
+      "id": "4e77f43c-0d81-4496-9ad1-7bb8b8941e46",
+      "filename": "file_9572.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_9572.png"
+    },
+    "estimatedTime": "4 weeks",
+    "createdByUser": {
+      "id": "643f5804-7103-4a99-82ce-879bdd948f10",
+      "email": "test_7ed760f6@example.com",
+      "lastName": "Jones",
+      "firstName": "Jeanette",
+      "middleName": "Elizabeth"
+    }
+  }
+}

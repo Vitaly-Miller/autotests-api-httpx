@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDA1OjMyOjE2LjQwMjg3OCIsInVzZXJfaWQiOiI5MjhkM2FhMi1mOGUwLTRiZTUtOGQwZi0xMjZmMjRjMTE3MzcifQ.cFW2uwGbJS4aSuJvCIU_5LpsR5sTv_Pjo7RwgAZ0JRY' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Ago account must among.","maxScore":75,"minScore":22,"description":"Purpose those air might form relationship within.","estimatedTime":"6 weeks","previewFileId":"5cbe4ac6-6f9a-4d16-89c3-29af376a9845","createdByUserId":"928d3aa2-f8e0-4be5-8d0f-126f24c11737"}'

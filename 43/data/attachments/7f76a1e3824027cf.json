@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "0e0c5417-bd36-4ab2-9744-0391c4131d4b",
+    "title": "Enter involve suffer which beat.",
+    "maxScore": 69,
+    "minScore": 23,
+    "description": "Quality cell at model.",
+    "previewFile": {
+      "id": "dd88a5f7-8659-44c3-8c3b-29e8df1b0ccd",
+      "filename": "file_5908.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_5908.png"
+    },
+    "estimatedTime": "8 weeks",
+    "createdByUser": {
+      "id": "03ce09dc-538d-40c3-a515-4a094ac0bcec",
+      "email": "test_a57bc9ac@example.com",
+      "lastName": "Robinson",
+      "firstName": "Henry",
+      "middleName": "Laura"
+    }
+  }
+}

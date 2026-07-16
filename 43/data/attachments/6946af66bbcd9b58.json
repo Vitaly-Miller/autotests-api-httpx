@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "54f8225b-40f7-46f2-b4c1-c8a1b2c949bb",
+    "title": "Three during road.",
+    "maxScore": 68,
+    "minScore": 24,
+    "description": "Start pressure occur spring order impact whom.",
+    "previewFile": {
+      "id": "268bbb6c-8bf1-4b5a-94a9-cb2eb5e77260",
+      "filename": "file_1488.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_1488.png"
+    },
+    "estimatedTime": "2 weeks",
+    "createdByUser": {
+      "id": "2b668847-a624-468c-9d6f-a38df63062c4",
+      "email": "test_5ff3584b@example.com",
+      "lastName": "Holt",
+      "firstName": "Cheyenne",
+      "middleName": "Destiny"
+    }
+  }
+}

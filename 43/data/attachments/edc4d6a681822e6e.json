@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "ca4db150-999b-42bc-8a9e-7b9304c8354d",
+    "title": "Agent yet mean mission notice.",
+    "maxScore": 50,
+    "minScore": 11,
+    "description": "Cold other get degree itself kid center.",
+    "previewFile": {
+      "id": "7288a8a1-b12e-4640-b1f0-daac1ca7086e",
+      "filename": "file_8086.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_8086.png"
+    },
+    "estimatedTime": "5 weeks",
+    "createdByUser": {
+      "id": "5c721f4b-09d5-46bc-ad89-bc80fcdf44cc",
+      "email": "test_f434a28c@example.com",
+      "lastName": "Berger",
+      "firstName": "Kristen",
+      "middleName": "Wendy"
+    }
+  }
+}

@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDA1OjMyOjA1LjkyNDc2NSIsInVzZXJfaWQiOiI4ODJmNDFlZC1iZDQ2LTRmYjUtODRmYS1lODc2ZWU4NDY2ZWMifQ.IoIkdknDaQAO0OjgVNerlMLmqZzgZTqLYjB-FUWdwPc' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Technology fine fill rule.","maxScore":85,"minScore":3,"description":"Without lose should book among walk.","estimatedTime":"6 weeks","previewFileId":"3f6a2892-85fc-4f70-9aba-ba55a7458adc","createdByUserId":"882f41ed-bd46-4fb5-84fa-e876ee8466ec"}'

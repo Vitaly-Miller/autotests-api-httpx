@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/courses/2848e6d1-b5cc-4df9-ac73-389409c0671b \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDA1OjMyOjA4LjAzNjU1NiIsInVzZXJfaWQiOiI5YjhmMTlhZC0xNDhlLTQwZTctODA2Mi1lMTQ3YjRmZGE2NjYifQ.rUVQyZ_4xRBP8Ed5MSEQTjV7rWTKnHDrvw6QuIzCJzQ' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Race bed value computer good attack.","maxScore":60,"minScore":13,"description":"Rather politics probably stay door within center.","estimatedTime":"8 weeks"}'
