@@ -1,5 +1,5 @@
 """
-Config (by Pydantic-settings)
+Config (via Pydantic-settings)
 """
 
 from pydantic import BaseModel, HttpUrl, FilePath, DirectoryPath

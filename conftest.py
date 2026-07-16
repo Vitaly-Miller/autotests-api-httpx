@@ -1,9 +1,8 @@
 """
-conftest.py
+conftest.py (via Pytest Plugins)
 """
 """
-Используется pytest_plugins
-Все фикстуры - в отдельных модулях-файлах
+Используется pytest_plugins - dсе фикстуры в отдельных модулях-файлах
 """
 from pathlib import Path            # for <Auto Plugins path>
 

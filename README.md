@@ -3,7 +3,7 @@
 [![API tests](https://github.com/Vitaly-Miller/autotests-api-httpx/actions/workflows/tests.yml/badge.svg)](https://github.com/Vitaly-Miller/autotests-api-httpx/actions/workflows/tests.yml)
 
 Automated REST API tests for the [API Test Server](https://github.com/Vitaly-Miller/autotests-api-server) —
-a training application with users, courses, exercises and file storage.
+application with users, courses, exercises and file storage.
 
 Built with **Python**, **HTTPX**, **Pytest**, **Pydantic**, **Allure**, **Faker** and **Swagger Coverage Tool**.
 
@@ -11,30 +11,49 @@ Built with **Python**, **HTTPX**, **Pytest**, **Pydantic**, **Allure**, **Faker*
 - 👉 [API Coverage Report](https://vitaly-miller.github.io/autotests-api-httpx/coverage.html) — endpoint coverage measured against the OpenAPI spec
 - 👉 [Code](https://github.com/Vitaly-Miller/autotests-api-httpx) — source code on GitHub
 
-## Highlights
+## ✨ Highlights
 
-- **Layered architecture** — API clients, Pydantic schemas, fixtures and tests are strictly separated
-- **API clients** built on HTTPX with event hooks for logging and Allure attachments
-- **Pydantic models** for request/response validation and JSON Schema checks (API contract testing)
+### 🏗️ Architecture
+- **Layered design** — API clients, Pydantic schemas, fixtures and tests are strictly separated
+- **API clients** built on HTTPX with event hooks that automatically instrument every request
+- **API contract testing** — Pydantic models validate every request/response, plus JSON Schema checks
 - **Reusable Pytest fixtures** for authentication, test entities and test data setup
 - **Fake data generation** with Faker to simulate real-world scenarios
-- **Allure reporting** with steps, attachments and run history
+
+### 📋 Reporting & Observability
+- **Allure reporting** with steps and run history, published on GitHub Pages
+- **Rich per-request attachments** — request & response bodies and headers (pretty-printed JSON)
+  and a ready-to-run **cURL command** for every API call
+- **Logging** — every request and response is logged via a custom logger; pytest captures the log
+  and Allure displays it in each test's log section
 - **Swagger coverage** — every API call is tracked and matched against the OpenAPI spec
-- **CI/CD** — GitHub Actions pipeline runs the full suite against a live server and publishes reports
+
+### 🧪 Test Design
+- **Markers** by type (`smoke`, `regression`, `negative`) and by domain (`auth`, `users`, `courses`, …)
+- **Parallel execution** (pytest-xdist) and **automatic reruns** of flaky tests (pytest-rerunfailures)
+- **Test variants** — some scenarios are intentionally implemented in several variants to showcase
+  different approaches: e.g. `TestCreateUser` covers the same flow via a full-cycle fixture (v.1),
+  an API client fixture (v.2), parametrized (v.3), and fully manual (v.4); the `v.1`–`v.4` titles
+  are visible in the Allure Report, making the implementations easy to compare side by side
+
+### ⚙️ CI/CD
+- **GitHub Actions pipeline** — starts a live API server, runs the full suite, and publishes the
+  Allure and coverage reports to GitHub Pages with history preserved between runs
 
 ## Project Structure
 
 ```
-├── clients/       # API clients (auth, users, courses, exercises, files) built on HTTPX
-├── schemas/       # Pydantic models for requests, responses and error bodies
-├── fixtures/      # Pytest fixtures (clients, users, courses, exercises, files)
-├── tests/         # Test suites grouped by domain: auth, users, courses, exercises, files
-├── tools/         # Assertions, Allure helpers, event hooks, data generator, logger
-├── testdata/      # Static test data (e.g. files for upload tests)
-├── config.py      # Typed settings loaded from .env via pydantic-settings
-├── conftest.py    # Root fixtures
-├── pytest.ini     # Pytest configuration and markers
-└── .github/       # CI/CD workflow (GitHub Actions)
+├─ 📁.github/        # CI/CD workflow (GitHub Actions)
+├─ 📁 clients/       # API clients (auth, users, courses, exercises, files) built on HTTPX
+├─ 📁 schemas/       # Pydantic models for requests, responses and error bodies
+├─ 📁 fixtures/      # Pytest fixtures (clients, users, courses, exercises, files)
+├─ 📁 tests/         # Test suites grouped by domain: auth, users, courses, exercises, files
+├─ 📁 tools/         # Assertions, Allure helpers, event hooks, data generator, logger
+├─ 📁 testdata/      # Static test data (e.g. files for upload tests)
+├─ config.py         # Typed settings loaded from .env via pydantic-settings
+├─ conftest.py       # Root fixtures (via Pytest Plugins)
+└─ pytest.ini        # Pytest configuration and markers
+
 ```
 
 ## Getting Started
@@ -121,7 +140,13 @@ python -m pytest --reruns 2       # retry flaky tests (pytest-rerunfailures)
 allure serve allure-results
 ```
 
-Opens an interactive report in your browser: test steps, request/response attachments and logs.
+Opens an interactive report in your browser. Each test includes step-by-step execution details,
+and every API call comes with attachments added automatically by HTTPX event hooks:
+
+- request summary — URL, method, response status code;
+- request & response **bodies** and **headers** as pretty-printed JSON;
+- a ready-to-run **cURL command** to reproduce the request manually;
+- the captured **log** of all requests and responses during the test.
 
 ### 📊 API Coverage Report
 
