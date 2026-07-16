@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDIyOjI4OjEzLjY4MjgyOSIsInVzZXJfaWQiOiIxNjJmZDQ2ZS04NTZjLTQ5MDAtYTc2ZS03ODNjMGM5MTBmZGQifQ.HSPApepjPrt8ZquIxJM6NP5KNzkNaEJpX1sKM9ILJis' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Pressure listen phone mother.","courseId":"91285df1-6ce0-42c1-8ca3-c685d63d94b5","maxScore":70,"minScore":17,"orderIndex":2092,"description":"Day remain physical feel sea glass talk.","estimatedTime":"9 weeks"}'

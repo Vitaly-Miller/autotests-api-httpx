@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDIyOjI4OjEyLjI3ODMyNSIsInVzZXJfaWQiOiJjOTNmNTYxZC0zNTY4LTRiYzYtOTdiMy0wNzg5ZTE2OGI0Y2MifQ.ICi4iNyn9r-SWCx4QE7UNqZ_0xfHyTN-QX0-ShuXUoA' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Issue degree save agree.","courseId":"404afed7-bd52-482a-9e84-b44cb96b89ef","maxScore":61,"minScore":11,"orderIndex":9633,"description":"Think east shake future.","estimatedTime":"2 weeks"}'

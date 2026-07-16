@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "f5d85e48-6374-49a3-aa86-1f6faff8cae3",
+    "title": "Rise defense country guess.",
+    "maxScore": 64,
+    "minScore": 5,
+    "description": "Option guy friend edge us than reality.",
+    "previewFile": {
+      "id": "650d01e2-c127-4a97-bc97-aedc968c845a",
+      "filename": "file_1890.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_1890.png"
+    },
+    "estimatedTime": "8 weeks",
+    "createdByUser": {
+      "id": "689a3349-6d88-4d81-a215-f2d5855dc450",
+      "email": "test_76f30c27@example.com",
+      "lastName": "Schmidt",
+      "firstName": "Diane",
+      "middleName": "Brittany"
+    }
+  }
+}

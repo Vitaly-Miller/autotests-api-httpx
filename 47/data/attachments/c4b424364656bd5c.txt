@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDIyOjI4OjE4LjIxNzc3NCIsInVzZXJfaWQiOiIyYWFmNzkzZS1iMGJlLTQzZmMtYTIzZC0zY2EyMDVhOWQxYTAifQ.iSTDA7UfgGoyk6z-nmaCIdY5ZEEt8d15xBBU48FAKGo' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Charge Democrat Mrs.","maxScore":61,"minScore":29,"description":"Back economy nice hold window dream process.","estimatedTime":"9 weeks","previewFileId":"b6fafa11-4aff-45e1-a892-9ecaa6ef94dd","createdByUserId":"2aaf793e-b0be-43fc-a23d-3ca205a9d1a0"}'

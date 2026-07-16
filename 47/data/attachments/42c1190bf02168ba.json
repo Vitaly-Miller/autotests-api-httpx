@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "2d65d77e-8c71-4a56-82a9-3cd9575c9a16",
+    "title": "Ago court participant home yeah.",
+    "maxScore": 66,
+    "minScore": 14,
+    "description": "Quickly design method alone discussion himself.",
+    "previewFile": {
+      "id": "2409c7e4-dd03-4b40-a683-138c320285c1",
+      "filename": "file_6252.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_6252.png"
+    },
+    "estimatedTime": "9 weeks",
+    "createdByUser": {
+      "id": "60501cdc-b585-4943-be11-cc97d6fdcfcd",
+      "email": "test_c1dc1eda@example.com",
+      "lastName": "Fitzgerald",
+      "firstName": "Ashlee",
+      "middleName": "Amy"
+    }
+  }
+}

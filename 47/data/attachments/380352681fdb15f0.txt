@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDIyOjI4OjE3Ljg4ODA4NSIsInVzZXJfaWQiOiIyYWFmNzkzZS1iMGJlLTQzZmMtYTIzZC0zY2EyMDVhOWQxYTAifQ.IQcnumDidtWRL0XTNEFJgF3WWuVyd12a1FJwCim4t4M' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Or somebody company.","courseId":"2a39e67c-2518-4b97-83b4-fa2ceb284a5c","maxScore":55,"minScore":1,"orderIndex":8184,"description":"Little need boy total entire.","estimatedTime":"2 weeks"}'

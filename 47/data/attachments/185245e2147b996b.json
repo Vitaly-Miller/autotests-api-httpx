@@ -1,0 +1,25 @@
+{
+  "courses": [
+    {
+      "id": "35bb2285-6ff2-4a62-a29d-8f03704bc05b",
+      "title": "Herself while national care.",
+      "maxScore": 88,
+      "minScore": 19,
+      "description": "Town pull paper late base into home.",
+      "previewFile": {
+        "id": "94021f39-7a69-499a-9949-12a932c594ae",
+        "filename": "file_2670.png",
+        "directory": "Uploaded",
+        "url": "http://localhost:8000/static/Uploaded/file_2670.png"
+      },
+      "estimatedTime": "3 weeks",
+      "createdByUser": {
+        "id": "43ecaa0e-f417-4800-ba65-c3ca60f4c7ca",
+        "email": "test_bc8aec19@example.com",
+        "lastName": "Barajas",
+        "firstName": "Joshua",
+        "middleName": "Renee"
+      }
+    }
+  ]
+}

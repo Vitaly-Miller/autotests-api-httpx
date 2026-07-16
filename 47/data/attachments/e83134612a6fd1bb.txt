@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDIyOjI4OjA5LjA3ODI5NCIsInVzZXJfaWQiOiI0M2VjYWEwZS1mNDE3LTQ4MDAtYmE2NS1jM2NhNjBmNGM3Y2EifQ.ilTvh3iHpsH1B_2MPtjwi-74jG0cBuSa532mNxijsVg' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Herself while national care.","maxScore":88,"minScore":19,"description":"Town pull paper late base into home.","estimatedTime":"3 weeks","previewFileId":"94021f39-7a69-499a-9949-12a932c594ae","createdByUserId":"43ecaa0e-f417-4800-ba65-c3ca60f4c7ca"}'

@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE2OjM2OjIzLjgwMTE0OCIsInVzZXJfaWQiOiI4ZTAxNmE4MS1hYTU1LTQ1NmUtODY5Yy1lNmU0NjM2NTY0NTMifQ.G8Bwq0wl489T4M5dSZPHbEsNIp4G_7PZzbVE7rtMrWQ' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Citizen effort blood imagine what.","maxScore":93,"minScore":12,"description":"Just very name talk star season.","estimatedTime":"9 weeks","previewFileId":"8a7a1f08-571f-4171-8882-197a29809a0e","createdByUserId":"8e016a81-aa55-456e-869c-e6e463656453"}'

@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "0082077e-dbf4-484c-af71-8b5a7deea85a",
+    "title": "Water town seat mouth same hour.",
+    "maxScore": 64,
+    "minScore": 12,
+    "description": "Direction rock you science.",
+    "previewFile": {
+      "id": "306171dc-0b18-4d5d-bcd2-0f83b9465d17",
+      "filename": "file_5093.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_5093.png"
+    },
+    "estimatedTime": "2 weeks",
+    "createdByUser": {
+      "id": "83e8a29f-6af2-4b12-ba17-7feaed093c19",
+      "email": "test_323a743b@example.com",
+      "lastName": "Ford",
+      "firstName": "Pamela",
+      "middleName": "Juan"
+    }
+  }
+}

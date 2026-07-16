@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "404afed7-bd52-482a-9e84-b44cb96b89ef",
+    "title": "Color base cold tree gun.",
+    "maxScore": 83,
+    "minScore": 25,
+    "description": "Over meeting a.",
+    "previewFile": {
+      "id": "5eb4168a-fe77-4b19-908a-8490fabc6313",
+      "filename": "file_5985.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_5985.png"
+    },
+    "estimatedTime": "6 weeks",
+    "createdByUser": {
+      "id": "c93f561d-3568-4bc6-97b3-0789e168b4cc",
+      "email": "test_2bba762c@example.com",
+      "lastName": "Jacobs",
+      "firstName": "Trevor",
+      "middleName": "Tammy"
+    }
+  }
+}

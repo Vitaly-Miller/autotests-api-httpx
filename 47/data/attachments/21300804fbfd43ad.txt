@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDIyOjI4OjE5LjI5Njk1OSIsInVzZXJfaWQiOiJjOWZjNTE4OC1iMTE3LTQ0ZjgtODdhMi03YWYyNmI1NGI1MWEifQ.UDa1VjNIreGATwsPLSYrnk9Psnx_mpfHdGl2EsR0Gak' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Somebody young believe.","courseId":"8bd68c54-f745-48de-ad87-0e78a89e3480","maxScore":87,"minScore":24,"orderIndex":3363,"description":"Fund after drug road important offer federal.","estimatedTime":"5 weeks"}'

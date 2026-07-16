@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "932e0d92-299e-4eda-a7da-8c53319b6b21",
+    "title": "Plan expect it serve save product.",
+    "maxScore": 87,
+    "minScore": 23,
+    "description": "Speak already probably by daughter baby.",
+    "previewFile": {
+      "id": "e14186b6-2188-4b98-a948-ed8bb0a2d617",
+      "filename": "file_5598.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_5598.png"
+    },
+    "estimatedTime": "5 weeks",
+    "createdByUser": {
+      "id": "4d998605-1861-464f-85c8-0654cb51496a",
+      "email": "test_840c2943@example.com",
+      "lastName": "Olson",
+      "firstName": "Tammy",
+      "middleName": "Marissa"
+    }
+  }
+}

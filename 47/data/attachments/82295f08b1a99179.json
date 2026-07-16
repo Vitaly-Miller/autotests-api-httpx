@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "458345a9-117b-4e86-8255-ca9084954a34",
+    "title": "Discussion better tough.",
+    "maxScore": 56,
+    "minScore": 3,
+    "description": "Director sort foreign cause.",
+    "previewFile": {
+      "id": "a889daba-37d8-47f7-acd0-5ab7bddf98c8",
+      "filename": "file_7925.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_7925.png"
+    },
+    "estimatedTime": "4 weeks",
+    "createdByUser": {
+      "id": "0fd2ba8f-6476-47d8-bdb0-609896143591",
+      "email": "test_b919e93f@example.com",
+      "lastName": "Wyatt",
+      "firstName": "Jennifer",
+      "middleName": "Theresa"
+    }
+  }
+}

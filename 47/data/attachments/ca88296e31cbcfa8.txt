@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDIyOjI4OjEyLjYwODI5MSIsInVzZXJfaWQiOiJjOTNmNTYxZC0zNTY4LTRiYzYtOTdiMy0wNzg5ZTE2OGI0Y2MifQ.ytS5qXw5ZDzAob_t79_1US-BtISfW8_Dj2gmlMh3A-M' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Color base cold tree gun.","maxScore":83,"minScore":25,"description":"Over meeting a.","estimatedTime":"6 weeks","previewFileId":"5eb4168a-fe77-4b19-908a-8490fabc6313","createdByUserId":"c93f561d-3568-4bc6-97b3-0789e168b4cc"}'

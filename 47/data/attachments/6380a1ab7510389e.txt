@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDIyOjI4OjIyLjA5MjgwNiIsInVzZXJfaWQiOiI2ODlhMzM0OS02ZDg4LTRkODEtYTIxNS1mMmQ1ODU1ZGM0NTAifQ.hZpbTYGCz-3Oa8UitRv-N9-IwQK_BVDV4B58pXQAB0I' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Parent together record mother.","courseId":"f5d85e48-6374-49a3-aa86-1f6faff8cae3","maxScore":50,"minScore":1,"orderIndex":6641,"description":"Area general wind perform.","estimatedTime":"6 weeks"}'

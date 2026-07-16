@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDIyOjI4OjE1LjA3NzY4MCIsInVzZXJfaWQiOiI4M2U4YTI5Zi02YWYyLTRiMTItYmExNy03ZmVhZWQwOTNjMTkifQ.fMHgPQuuKt61D6C1XGz9mDqtXqodpp6btN0_TRHUGJ0' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Himself success whose take.","courseId":"0082077e-dbf4-484c-af71-8b5a7deea85a","maxScore":78,"minScore":15,"orderIndex":9333,"description":"Art gun point bed growth civil firm relate.","estimatedTime":"3 weeks"}'

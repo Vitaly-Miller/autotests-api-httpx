@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDIyOjI4OjE1LjQwNzY1NiIsInVzZXJfaWQiOiI4M2U4YTI5Zi02YWYyLTRiMTItYmExNy03ZmVhZWQwOTNjMTkifQ.mQzkUqLpvrULpY5E3FDKBUDnMaN-ShjEGHNDUVaNI-Q' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Water town seat mouth same hour.","maxScore":64,"minScore":12,"description":"Direction rock you science.","estimatedTime":"2 weeks","previewFileId":"306171dc-0b18-4d5d-bcd2-0f83b9465d17","createdByUserId":"83e8a29f-6af2-4b12-ba17-7feaed093c19"}'

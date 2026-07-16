@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE2OjM2OjMyLjY3Mzk2NSIsInVzZXJfaWQiOiI5N2M4MDJkMi0yNTQxLTRiNGEtOGRkYi03NDEzMTYwMTQyNDEifQ.9lYrdID2Q-wnKNsOfIaqoyP5ZL__m2OH8WwaTXhoZ4A' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Must far success enter inside send.","maxScore":54,"minScore":17,"description":"Old American memory first threat home pull.","estimatedTime":"9 weeks","previewFileId":"b766b767-9756-44d3-9fa2-426d3e3d71c3","createdByUserId":"97c802d2-2541-4b4a-8ddb-741316014241"}'

@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE2OjM2OjIxLjg3MTQxNyIsInVzZXJfaWQiOiJlYTM1OTg3Ny0yMjEyLTQ1NWEtODcwMi02MjYyMGVhNGMxODEifQ.z414TKhJZOvo_ZwA_X1shoE8Lv-NLbwbyxkG6zI2pQc' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Subject hair fire remain side successful.","maxScore":85,"minScore":30,"description":"Until different identify.","estimatedTime":"4 weeks","previewFileId":"0168d010-c160-4f1f-8890-596458094d39","createdByUserId":"ea359877-2212-455a-8702-62620ea4c181"}'

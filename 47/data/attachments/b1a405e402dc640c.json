@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "243805ce-caf0-4fba-aba2-59c1217b45b3",
+    "title": "Consumer wind expert general face population.",
+    "maxScore": 88,
+    "minScore": 6,
+    "description": "Ten skin establish claim follow try religious.",
+    "previewFile": {
+      "id": "e5237059-1769-40b3-9aca-672716c005ff",
+      "filename": "file_6158.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_6158.png"
+    },
+    "estimatedTime": "9 weeks",
+    "createdByUser": {
+      "id": "c162209c-874d-4ed8-a361-bbb9bb7e6a7b",
+      "email": "test_3e20a312@example.com",
+      "lastName": "Jackson",
+      "firstName": "Caroline",
+      "middleName": "Jeffery"
+    }
+  }
+}

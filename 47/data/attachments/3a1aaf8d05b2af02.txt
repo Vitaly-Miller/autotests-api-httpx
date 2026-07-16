@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDIyOjI4OjIxLjAxNDU0OSIsInVzZXJfaWQiOiI1OWMzMjAwNy04ODA5LTQwYWEtOTMxYy05Y2VjM2UxN2FjZDUifQ.dtMW04lkIAxaojPEAGpbfa7DOUyhIjxAqsKA7D1Nfzw' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Child nearly less budget team.","maxScore":88,"minScore":12,"description":"Republican view leave wide call evidence.","estimatedTime":"8 weeks","previewFileId":"40eb864f-db8a-4208-93ba-fefd186341a8","createdByUserId":"59c32007-8809-40aa-931c-9cec3e17acd5"}'

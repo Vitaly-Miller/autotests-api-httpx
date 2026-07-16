@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/exercises \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE2OjM2OjI4LjU4NjYzMyIsInVzZXJfaWQiOiJlMTRlYjNlNS00NjQ3LTQyNGItOWEzNi0wMWYyODc4MzA3NTYifQ.EJzo-gOvr1HaKIeStTkQkG1ypLgVOSk3EAo45k6sNR0' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Sometimes radio these.","courseId":"ce3eaeac-3b50-4c81-b9a8-0cc1f6c539f2","maxScore":59,"minScore":15,"orderIndex":7199,"description":"Material prove image international.","estimatedTime":"7 weeks"}'

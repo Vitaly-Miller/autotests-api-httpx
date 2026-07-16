@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "2a39e67c-2518-4b97-83b4-fa2ceb284a5c",
+    "title": "Charge Democrat Mrs.",
+    "maxScore": 61,
+    "minScore": 29,
+    "description": "Back economy nice hold window dream process.",
+    "previewFile": {
+      "id": "b6fafa11-4aff-45e1-a892-9ecaa6ef94dd",
+      "filename": "file_4001.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_4001.png"
+    },
+    "estimatedTime": "9 weeks",
+    "createdByUser": {
+      "id": "2aaf793e-b0be-43fc-a23d-3ca205a9d1a0",
+      "email": "test_55679e7f@example.com",
+      "lastName": "Bradford",
+      "firstName": "Andrew",
+      "middleName": "Natalie"
+    }
+  }
+}

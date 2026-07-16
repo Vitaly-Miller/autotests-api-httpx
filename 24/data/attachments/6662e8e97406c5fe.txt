@@ -1,5 +1,0 @@
-curl -X PATCH \
-  http://localhost:8000/api/v1/courses/859c4b35-9b0a-45d8-9c9a-0f99cad35315 \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE2OjM2OjIzLjgwMTE0OCIsInVzZXJfaWQiOiI4ZTAxNmE4MS1hYTU1LTQ1NmUtODY5Yy1lNmU0NjM2NTY0NTMifQ.G8Bwq0wl489T4M5dSZPHbEsNIp4G_7PZzbVE7rtMrWQ' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Learn development success fight treat thing.","maxScore":70,"minScore":20,"description":"Alone alone certainly weight know ago include.","estimatedTime":"2 weeks"}'

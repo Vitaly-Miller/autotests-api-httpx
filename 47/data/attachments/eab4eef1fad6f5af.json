@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "8bd68c54-f745-48de-ad87-0e78a89e3480",
+    "title": "Employee look production throughout talk.",
+    "maxScore": 85,
+    "minScore": 16,
+    "description": "Weight term bag truth live social.",
+    "previewFile": {
+      "id": "dc306ae5-f896-4f8c-8aea-e51edd08d7f6",
+      "filename": "file_5490.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_5490.png"
+    },
+    "estimatedTime": "6 weeks",
+    "createdByUser": {
+      "id": "c9fc5188-b117-44f8-87a2-7af26b54b51a",
+      "email": "test_8ad377c7@example.com",
+      "lastName": "Kelly",
+      "firstName": "Rhonda",
+      "middleName": "Anthony"
+    }
+  }
+}

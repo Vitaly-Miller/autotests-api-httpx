@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDIyOjI4OjA2Ljk2MjU3MiIsInVzZXJfaWQiOiI5NTY4MjUyNS0zOTlkLTQ5ZDYtYmI0Yy00Y2NmZjIxZjJmN2QifQ.3KtXfr4n0NcJwnmOd4SQ5QCa907wAOsFz5tD2Nu-4U8' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Second still prove.","maxScore":65,"minScore":18,"description":"Training red happy right maybe.","estimatedTime":"6 weeks","previewFileId":"ad1f2afd-79a1-42d5-b0de-706cf0309f00","createdByUserId":"95682525-399d-49d6-bb4c-4ccff21f2f7d"}'

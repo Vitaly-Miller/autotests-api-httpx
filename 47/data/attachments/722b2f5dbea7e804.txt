@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/courses/2d65d77e-8c71-4a56-82a9-3cd9575c9a16 \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDIyOjI4OjExLjIwOTQ3NyIsInVzZXJfaWQiOiI2MDUwMWNkYy1iNTg1LTQ5NDMtYmUxMS1jYzk3ZDZmZGNmY2QifQ.MAGtkl6SwRvroAaGlM8FLRXuvXDzUY-lAJEJh0sL6A4' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Contain memory least kind.","maxScore":70,"minScore":20,"description":"Child issue skill. Meet glass necessary begin.","estimatedTime":"7 weeks"}'

@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "91285df1-6ce0-42c1-8ca3-c685d63d94b5",
+    "title": "Ability clearly main mind.",
+    "maxScore": 76,
+    "minScore": 29,
+    "description": "Majority beyond art would wall.",
+    "previewFile": {
+      "id": "4065bfdb-49d5-4493-be76-050d7f7fbf49",
+      "filename": "file_3451.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_3451.png"
+    },
+    "estimatedTime": "8 weeks",
+    "createdByUser": {
+      "id": "162fd46e-856c-4900-a76e-783c0c910fdd",
+      "email": "test_6774d7e6@example.com",
+      "lastName": "Dawson",
+      "firstName": "Christopher",
+      "middleName": "Michelle"
+    }
+  }
+}

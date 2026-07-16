@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE2OjM2OjMwLjE0OTY5OSIsInVzZXJfaWQiOiJjNjNkY2RhNy1jODUxLTRjZjctODgzMy02MDZlNDAwNjMxZTIifQ.0tsmoSpX16JErpr9xaFGoowISDZrfr2xNDtH5fTZMUg' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Business drive measure paper fill can.","maxScore":91,"minScore":13,"description":"Least color similar with president pretty.","estimatedTime":"4 weeks","previewFileId":"180a89dd-4852-474d-a7cb-87003057ce39","createdByUserId":"c63dcda7-c851-4cf7-8833-606e400631e2"}'

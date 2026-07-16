@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDIyOjI4OjE2LjQ5NjIwMyIsInVzZXJfaWQiOiI0ZDk5ODYwNS0xODYxLTQ2NGYtODVjOC0wNjU0Y2I1MTQ5NmEifQ.0dfIcXCtZmkHXgLjMtKX_bMfUWHYeJ2x6AGIAMUssPs' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Outside health late identify company word month.","courseId":"932e0d92-299e-4eda-a7da-8c53319b6b21","maxScore":69,"minScore":25,"orderIndex":6382,"description":"Baby yeah box community agree.","estimatedTime":"2 weeks"}'

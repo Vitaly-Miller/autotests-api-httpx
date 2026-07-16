@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDIyOjI4OjExLjIwOTQ3NyIsInVzZXJfaWQiOiI2MDUwMWNkYy1iNTg1LTQ5NDMtYmUxMS1jYzk3ZDZmZGNmY2QifQ.MAGtkl6SwRvroAaGlM8FLRXuvXDzUY-lAJEJh0sL6A4' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Ago court participant home yeah.","maxScore":66,"minScore":14,"description":"Quickly design method alone discussion himself.","estimatedTime":"9 weeks","previewFileId":"2409c7e4-dd03-4b40-a683-138c320285c1","createdByUserId":"60501cdc-b585-4943-be11-cc97d6fdcfcd"}'

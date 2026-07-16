@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/exercises \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE2OjM2OjI5Ljg1MTE1MCIsInVzZXJfaWQiOiJjNjNkY2RhNy1jODUxLTRjZjctODgzMy02MDZlNDAwNjMxZTIifQ.O2NLC92OZkpCizcOFcsnP1Uov9gWMrII30zX6xH403Q' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Admit wait sport magazine.","courseId":"4f581eeb-8cff-4a62-84fc-d632368c72bd","maxScore":87,"minScore":21,"orderIndex":8739,"description":"Successful the case open many knowledge item.","estimatedTime":"4 weeks"}'
