@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "83c8dd3e-b665-4909-bf66-cf2cb0e40d68",
+    "title": "Character game training dream.",
+    "maxScore": 57,
+    "minScore": 2,
+    "description": "Become today start.",
+    "previewFile": {
+      "id": "cec0ae6f-9f56-47a4-bdb4-7e557fd772ff",
+      "filename": "file_8888.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_8888.png"
+    },
+    "estimatedTime": "8 weeks",
+    "createdByUser": {
+      "id": "12cd9035-d243-40c0-861e-98cc41bbf861",
+      "email": "test_b399367f@example.com",
+      "lastName": "Chavez",
+      "firstName": "Tammy",
+      "middleName": "Kelly"
+    }
+  }
+}

@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDA0OjA4OjMwLjA4NzQzMyIsInVzZXJfaWQiOiI5ZTQ1MmM2Ny0wMzVmLTQ4ZTEtYTE2Yi1hNTYzNzI4NjUxOWMifQ.QuSy3tiEf_AX8oVZ75wXIv9d4gIAnG8ADgwYxl1SyTA' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Return course old.","maxScore":81,"minScore":26,"description":"During sign sell staff food knowledge.","estimatedTime":"7 weeks","previewFileId":"7c2f4f41-e5d9-4a19-89ec-d0f218c8ef2c","createdByUserId":"9e452c67-035f-48e1-a16b-a5637286519c"}'

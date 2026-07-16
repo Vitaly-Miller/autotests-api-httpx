@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDA0OjA4OjM5Ljg0NzgxNCIsInVzZXJfaWQiOiIzY2EyMzdjZi1lNGQ4LTQzMTYtYjIyZS0xOTk0ODY2MmJjNDUifQ.RpA2ebQpz4poyp0rOC26V1bYPCr0kT5NxZmJy2coVgs' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Early customer kid.","maxScore":88,"minScore":29,"description":"Drop fine different option.","estimatedTime":"9 weeks","previewFileId":"1059be17-19db-48c0-9662-6f347be7426e","createdByUserId":"3ca237cf-e4d8-4316-b22e-19948662bc45"}'

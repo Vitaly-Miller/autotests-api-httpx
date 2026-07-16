@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "e9898b28-2ee0-4a02-8b5c-dc3e1406630e",
+    "title": "Force as turn vote.",
+    "maxScore": 52,
+    "minScore": 6,
+    "description": "By team black lose. Here box political cut also.",
+    "previewFile": {
+      "id": "6ec73946-a293-428a-ba98-076508a781c1",
+      "filename": "file_5313.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_5313.png"
+    },
+    "estimatedTime": "2 weeks",
+    "createdByUser": {
+      "id": "665aa752-680b-4360-b112-a4e69120075c",
+      "email": "test_33aaf5db@example.com",
+      "lastName": "Chapman",
+      "firstName": "Alicia",
+      "middleName": "Joseph"
+    }
+  }
+}

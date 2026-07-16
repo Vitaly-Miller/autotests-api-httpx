@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/courses/f5ab4563-7521-4793-a206-96f043f25d82 \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDA0OjA4OjMwLjA4NzQzMyIsInVzZXJfaWQiOiI5ZTQ1MmM2Ny0wMzVmLTQ4ZTEtYTE2Yi1hNTYzNzI4NjUxOWMifQ.QuSy3tiEf_AX8oVZ75wXIv9d4gIAnG8ADgwYxl1SyTA' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Everything cell sort body good article.","maxScore":53,"minScore":30,"description":"Resource grow make wrong benefit choose.","estimatedTime":"7 weeks"}'

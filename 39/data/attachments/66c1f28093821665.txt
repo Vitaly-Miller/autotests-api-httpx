@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDA0OjA4OjMxLjE1NTIxNSIsInVzZXJfaWQiOiI2NjVhYTc1Mi02ODBiLTQzNjAtYjExMi1hNGU2OTEyMDA3NWMifQ.tlUzUaZ1EreZoU-CoRU81aGvWYtvtbCPAeYmUm9v-0w' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Among shoulder window.","courseId":"e9898b28-2ee0-4a02-8b5c-dc3e1406630e","maxScore":62,"minScore":7,"orderIndex":3417,"description":"One history cause sport sort century I.","estimatedTime":"8 weeks"}'

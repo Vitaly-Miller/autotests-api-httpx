@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "5aeec6ed-8e88-494d-9464-725f06615086",
+    "title": "Begin writer read management.",
+    "maxScore": 90,
+    "minScore": 29,
+    "description": "Film go couple participant wish owner standard.",
+    "previewFile": {
+      "id": "1d971981-17c4-424d-9d5d-78b8c3e4483f",
+      "filename": "file_9269.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_9269.png"
+    },
+    "estimatedTime": "5 weeks",
+    "createdByUser": {
+      "id": "0369df11-a6af-4620-a7c2-e33a289d9441",
+      "email": "test_34adaa07@example.com",
+      "lastName": "Ellis",
+      "firstName": "Cheryl",
+      "middleName": "Shannon"
+    }
+  }
+}

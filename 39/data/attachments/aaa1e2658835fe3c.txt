@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDA0OjA4OjI2LjkzMzczOSIsInVzZXJfaWQiOiIzOTZiM2M0Ni04ZGYwLTRkMzEtYjg0NS1jYjJmMDg3Mjc4YWUifQ.LRyInXj93MAFumxtzv2ueKylOgCdTutPMHufSZxkvOs' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Painting letter activity few amount discover.","maxScore":58,"minScore":21,"description":"Manager pass road however little edge.","estimatedTime":"3 weeks","previewFileId":"547733c0-cd80-4087-b053-5c76d771453b","createdByUserId":"396b3c46-8df0-4d31-b845-cb2f087278ae"}'

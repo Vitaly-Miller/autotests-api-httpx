@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDA0OjA4OjM1LjY3ODk0OCIsInVzZXJfaWQiOiJiYWVhMWNhNC1iMDMwLTQ0M2UtODU5ZS0yMDdmZDAzNWNlNjQifQ.59JQcFyypenXlR8xFfSCEykGUqMS34DMwHZOzsjF_ag' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Smile itself understand up health.","maxScore":71,"minScore":21,"description":"Whatever three Republican fund bill.","estimatedTime":"5 weeks","previewFileId":"1b09b881-5fc6-4930-bdc6-44f5a9845d5f","createdByUserId":"baea1ca4-b030-443e-859e-207fd035ce64"}'

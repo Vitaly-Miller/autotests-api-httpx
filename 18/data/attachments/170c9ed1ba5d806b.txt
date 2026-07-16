@@ -1,5 +1,0 @@
-curl -X PATCH \
-  http://localhost:8000/api/v1/courses/30e9ce28-39e3-4e49-8895-c46d98868ece \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE0VDE2OjMzOjA1LjYzOTc0NCIsInVzZXJfaWQiOiJiZmVmYWEyZS03MWIyLTQ4MzYtYTlhOS1iZDA5ODFkNmEzNTUifQ.BmNHIop7tifOsMW9atRR0cmchHNoAi4MZ3yZnpQzwSI' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Word discussion himself allow on measure.","maxScore":93,"minScore":20,"description":"Perform enough street might.","estimatedTime":"7 weeks"}'

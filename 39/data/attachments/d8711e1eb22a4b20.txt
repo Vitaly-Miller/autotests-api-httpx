@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/exercises/9c0bf59e-dc18-4261-8459-b3311c446398 \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDA0OjA4OjQwLjkxNTc0NyIsInVzZXJfaWQiOiIxMmNkOTAzNS1kMjQzLTQwYzAtODYxZS05OGNjNDFiYmY4NjEifQ.kz_VrsRco3-GAs11ylknxP-BuD6NHUpjCt0cd2cIhJE' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Fly feel question hit.","maxScore":58,"minScore":2,"orderIndex":8484,"description":"Industry begin half baby.","estimatedTime":"6 weeks"}'

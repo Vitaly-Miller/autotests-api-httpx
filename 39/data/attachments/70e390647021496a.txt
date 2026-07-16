@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDA0OjA4OjI3Ljk3NTU3OSIsInVzZXJfaWQiOiIwZTllMmNiYS1hMTVhLTQ4YjMtYjg1NC05YzkwODA0NTY1YTcifQ._Khbr3FBvaWyQCLzG5TmEI-AZcutegByGymR_yC_N64' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Letter term it Mr.","maxScore":71,"minScore":11,"description":"Body send reflect form although wall.","estimatedTime":"4 weeks","previewFileId":"f9608e9f-a447-4175-82c2-abfb081c0af9","createdByUserId":"0e9e2cba-a15a-48b3-b854-9c90804565a7"}'

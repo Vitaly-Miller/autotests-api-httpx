@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/exercises/f658419b-bd6e-4eb5-b7b4-f172e094ab0d \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDA0OjA4OjM5LjUxNjY1MiIsInVzZXJfaWQiOiIzY2EyMzdjZi1lNGQ4LTQzMTYtYjIyZS0xOTk0ODY2MmJjNDUifQ.jVESO2wp6rjTF0tkv0qv-oFbeXIh3rsA9Uy3EnZbljI' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Professor with notice.","maxScore":90,"minScore":17,"orderIndex":4201,"description":"Court spend tree always nor wrong.","estimatedTime":"4 weeks"}'

@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "fa50cd42-e62f-4a4a-a8e1-9b5fe9a475e4",
+    "title": "Painting letter activity few amount discover.",
+    "maxScore": 58,
+    "minScore": 21,
+    "description": "Manager pass road however little edge.",
+    "previewFile": {
+      "id": "547733c0-cd80-4087-b053-5c76d771453b",
+      "filename": "file_8057.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_8057.png"
+    },
+    "estimatedTime": "3 weeks",
+    "createdByUser": {
+      "id": "396b3c46-8df0-4d31-b845-cb2f087278ae",
+      "email": "test_5bfb3ce7@example.com",
+      "lastName": "Herring",
+      "firstName": "Julie",
+      "middleName": "Gabrielle"
+    }
+  }
+}

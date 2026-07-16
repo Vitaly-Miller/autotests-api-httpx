@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDA0OjA4OjQxLjI0NTIwNyIsInVzZXJfaWQiOiIxMmNkOTAzNS1kMjQzLTQwYzAtODYxZS05OGNjNDFiYmY4NjEifQ.JsUmKGBl9-MQx7abBb1myGWL0-fKGtE4l0XR3j-7x4g' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Character game training dream.","maxScore":57,"minScore":2,"description":"Become today start.","estimatedTime":"8 weeks","previewFileId":"cec0ae6f-9f56-47a4-bdb4-7e557fd772ff","createdByUserId":"12cd9035-d243-40c0-861e-98cc41bbf861"}'

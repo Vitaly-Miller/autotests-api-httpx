@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDA0OjA4OjM0LjI2NjQ1OSIsInVzZXJfaWQiOiI5OWQ4NjhmMi0zNzNkLTQ4NjktYmFhMi1kYWJiZjhmZjg4YTQifQ.jVtIR69cAv0t4ta6AB8qsN7ABYHQzHRjjRzmXTPNK4A' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Leader alone camera.","maxScore":82,"minScore":12,"description":"Well skill with me.","estimatedTime":"3 weeks","previewFileId":"dccd4978-66b8-4ee8-9199-1d3fd52dc6b4","createdByUserId":"99d868f2-373d-4869-baa2-dabbf8ff88a4"}'

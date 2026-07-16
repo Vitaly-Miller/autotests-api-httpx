@@ -1,5 +1,0 @@
-curl -X PATCH \
-  http://localhost:8000/api/v1/exercises/26b093bd-5817-40a3-a4da-caa9314a801c \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE0VDE2OjMzOjE1LjI2MTIyOSIsInVzZXJfaWQiOiI1YTZiY2IzZS00MTA4LTQ5ZDctOWMwNC03YTc0Y2MxZTY4NTUifQ.sydipISZlmrsua2ZufWfkyP2oFqwEEuvtp-m-tRInUk' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Million much miss nearly finally.","maxScore":64,"minScore":21,"orderIndex":7715,"description":"Factor real however seek friend.","estimatedTime":"7 weeks"}'

@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDA0OjA4OjM4LjEzODk2NyIsInVzZXJfaWQiOiJmYWM0NDlhMC1lNDI4LTRhOGQtODE0Ni0wZTQ5ZWI0YmY2OTYifQ.DZ-uP9nErPMP-PnbrvST8yDDrn1GX2eZjpEa7mmkTAA' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Mission would exist president tax wish.","courseId":"6749bdc2-0aff-4fe2-9d14-78824d574255","maxScore":56,"minScore":19,"orderIndex":1219,"description":"Read outside close fall loss. Save charge arrive.","estimatedTime":"6 weeks"}'

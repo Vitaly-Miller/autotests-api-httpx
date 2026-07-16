@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "6749bdc2-0aff-4fe2-9d14-78824d574255",
+    "title": "Represent student job.",
+    "maxScore": 59,
+    "minScore": 12,
+    "description": "Claim support establish grow across the minute.",
+    "previewFile": {
+      "id": "15e8f23b-67a4-4e9f-bd9f-4c8bda5d9bcf",
+      "filename": "file_3858.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_3858.png"
+    },
+    "estimatedTime": "7 weeks",
+    "createdByUser": {
+      "id": "fac449a0-e428-4a8d-8146-0e49eb4bf696",
+      "email": "test_3d0add16@example.com",
+      "lastName": "Hudson",
+      "firstName": "Kyle",
+      "middleName": "Julie"
+    }
+  }
+}

@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDA0OjA4OjM3LjA2OTYyMSIsInVzZXJfaWQiOiJjNmRhM2MyZi03ZDU0LTQ1NjUtOTVhMC00MDZlMGE4NjEwZDQifQ.tBdfQDwp2ey0QUStnT4rOM1br-htuxUGsP8GXau-OLs' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Whether a already art nation.","maxScore":68,"minScore":7,"description":"Rich care music yeah fish officer word.","estimatedTime":"6 weeks","previewFileId":"3a8292f7-c1b9-40d5-b0cf-e141feec64aa","createdByUserId":"c6da3c2f-7d54-4565-95a0-406e0a8610d4"}'

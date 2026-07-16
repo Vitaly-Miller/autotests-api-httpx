@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "a231f9a1-a633-47c4-a551-fd11e9bc1d81",
+    "title": "Effect too weight ask particular lawyer.",
+    "maxScore": 85,
+    "minScore": 5,
+    "description": "Hope just appear daughter.",
+    "previewFile": {
+      "id": "40709e25-3856-47d8-bdd1-d1bfdff3cbd8",
+      "filename": "file_6435.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_6435.png"
+    },
+    "estimatedTime": "8 weeks",
+    "createdByUser": {
+      "id": "04ed3f6f-ea2d-454d-a9f7-d63d896060fe",
+      "email": "test_e3bc4277@example.com",
+      "lastName": "Costa",
+      "firstName": "James",
+      "middleName": "Joanna"
+    }
+  }
+}

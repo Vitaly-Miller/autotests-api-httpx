@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/exercises \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE0VDE2OjMzOjA2LjU3OTEyMCIsInVzZXJfaWQiOiI5NDJiODRhOS1kNzliLTRlNGEtYjY1Yi04ZDU0NjVkN2MzNDUifQ.FYV-tdGhHtY2y1kls7TyPsevpAnBxzDIeYJaFTRFRlg' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Woman evening remain treatment pattern.","courseId":"85f1482b-1a57-4834-a3ef-04d9b902ad29","maxScore":62,"minScore":6,"orderIndex":9548,"description":"Night sing deep.","estimatedTime":"5 weeks"}'

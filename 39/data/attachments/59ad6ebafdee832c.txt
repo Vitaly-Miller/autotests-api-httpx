@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDA0OjA4OjI5LjAzOTc3NiIsInVzZXJfaWQiOiJhZjBjZWQ1ZC0wMTc4LTQ0NGYtYTM1Yy1lMDA0ZGEwZjA3ODcifQ._gSvjC8jdeMKUlLNpqSopeXXKsDExloyusfTkqKcLvE' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Idea ask animal break.","maxScore":60,"minScore":18,"description":"Including fill month he put culture identify.","estimatedTime":"2 weeks","previewFileId":"be887c12-b4fa-464e-ac32-1904b2ca7dfe","createdByUserId":"af0ced5d-0178-444f-a35c-e004da0f0787"}'

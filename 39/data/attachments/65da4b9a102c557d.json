@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "6181b7a7-825e-4f0e-a148-230fccd27512",
+    "title": "Early customer kid.",
+    "maxScore": 88,
+    "minScore": 29,
+    "description": "Drop fine different option.",
+    "previewFile": {
+      "id": "1059be17-19db-48c0-9662-6f347be7426e",
+      "filename": "file_3001.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_3001.png"
+    },
+    "estimatedTime": "9 weeks",
+    "createdByUser": {
+      "id": "3ca237cf-e4d8-4316-b22e-19948662bc45",
+      "email": "test_7ce0b682@example.com",
+      "lastName": "Mccullough",
+      "firstName": "Louis",
+      "middleName": "Sarah"
+    }
+  }
+}

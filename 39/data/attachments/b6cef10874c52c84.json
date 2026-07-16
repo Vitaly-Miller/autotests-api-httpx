@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "a9ae9478-7f85-43ec-af37-7fa53e259ade",
+    "title": "Smile itself understand up health.",
+    "maxScore": 71,
+    "minScore": 21,
+    "description": "Whatever three Republican fund bill.",
+    "previewFile": {
+      "id": "1b09b881-5fc6-4930-bdc6-44f5a9845d5f",
+      "filename": "file_8420.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_8420.png"
+    },
+    "estimatedTime": "5 weeks",
+    "createdByUser": {
+      "id": "baea1ca4-b030-443e-859e-207fd035ce64",
+      "email": "test_06debe9d@example.com",
+      "lastName": "Burns",
+      "firstName": "Kirk",
+      "middleName": "Joseph"
+    }
+  }
+}

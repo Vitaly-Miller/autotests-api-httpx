@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDA0OjA4OjM5LjUxNjY1MiIsInVzZXJfaWQiOiIzY2EyMzdjZi1lNGQ4LTQzMTYtYjIyZS0xOTk0ODY2MmJjNDUifQ.jVESO2wp6rjTF0tkv0qv-oFbeXIh3rsA9Uy3EnZbljI' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Firm any process else.","courseId":"6181b7a7-825e-4f0e-a148-230fccd27512","maxScore":85,"minScore":24,"orderIndex":1759,"description":"Whose moment either then song wind news.","estimatedTime":"3 weeks"}'

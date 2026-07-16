@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDA0OjA4OjMxLjQ4NDMyMSIsInVzZXJfaWQiOiI2NjVhYTc1Mi02ODBiLTQzNjAtYjExMi1hNGU2OTEyMDA3NWMifQ.EE1U9kp5Bm6aeUSQJpfg7ol2KvUCLOW3XGNIbEkBQXg' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Force as turn vote.","maxScore":52,"minScore":6,"description":"By team black lose. Here box political cut also.","estimatedTime":"2 weeks","previewFileId":"6ec73946-a293-428a-ba98-076508a781c1","createdByUserId":"665aa752-680b-4360-b112-a4e69120075c"}'

@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDA0OjA4OjM1LjM0OTUwNiIsInVzZXJfaWQiOiJiYWVhMWNhNC1iMDMwLTQ0M2UtODU5ZS0yMDdmZDAzNWNlNjQifQ.D97oiuSDR0X3I0zB0oyokF0stKwJz9TmKszLK6ZF9nk' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Debate executive around pay despite speak.","courseId":"a9ae9478-7f85-43ec-af37-7fa53e259ade","maxScore":75,"minScore":11,"orderIndex":5592,"description":"Suffer lead may performance remember.","estimatedTime":"2 weeks"}'

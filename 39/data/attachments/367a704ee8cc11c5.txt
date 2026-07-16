@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDA0OjA4OjM2Ljc0MDAyOSIsInVzZXJfaWQiOiJjNmRhM2MyZi03ZDU0LTQ1NjUtOTVhMC00MDZlMGE4NjEwZDQifQ.GbzBGEmNUhgomNubX_oi6nxp_ef5CnBTjKbOPUJmRxw' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Glass success service culture without.","courseId":"4588f330-febe-4034-9a29-677e2b824f71","maxScore":81,"minScore":19,"orderIndex":3456,"description":"Interesting quality southern appear.","estimatedTime":"7 weeks"}'

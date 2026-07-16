@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "fe1c2d70-d9d9-413c-9d60-4c2e5be4c1f8",
+    "title": "Letter term it Mr.",
+    "maxScore": 71,
+    "minScore": 11,
+    "description": "Body send reflect form although wall.",
+    "previewFile": {
+      "id": "f9608e9f-a447-4175-82c2-abfb081c0af9",
+      "filename": "file_9648.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_9648.png"
+    },
+    "estimatedTime": "4 weeks",
+    "createdByUser": {
+      "id": "0e9e2cba-a15a-48b3-b854-9c90804565a7",
+      "email": "test_40bf1063@example.com",
+      "lastName": "Taylor",
+      "firstName": "Melissa",
+      "middleName": "Derek"
+    }
+  }
+}

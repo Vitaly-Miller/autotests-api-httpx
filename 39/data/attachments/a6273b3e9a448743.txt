@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDA0OjA4OjQwLjkxNTc0NyIsInVzZXJfaWQiOiIxMmNkOTAzNS1kMjQzLTQwYzAtODYxZS05OGNjNDFiYmY4NjEifQ.kz_VrsRco3-GAs11ylknxP-BuD6NHUpjCt0cd2cIhJE' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Be early region.","courseId":"83c8dd3e-b665-4909-bf66-cf2cb0e40d68","maxScore":66,"minScore":3,"orderIndex":3664,"description":"Push five add southern late.","estimatedTime":"6 weeks"}'

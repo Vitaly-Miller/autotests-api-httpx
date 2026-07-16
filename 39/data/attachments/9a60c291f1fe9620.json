@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "f5ab4563-7521-4793-a206-96f043f25d82",
+    "title": "Return course old.",
+    "maxScore": 81,
+    "minScore": 26,
+    "description": "During sign sell staff food knowledge.",
+    "previewFile": {
+      "id": "7c2f4f41-e5d9-4a19-89ec-d0f218c8ef2c",
+      "filename": "file_2948.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_2948.png"
+    },
+    "estimatedTime": "7 weeks",
+    "createdByUser": {
+      "id": "9e452c67-035f-48e1-a16b-a5637286519c",
+      "email": "test_bee1a3ab@example.com",
+      "lastName": "Smith",
+      "firstName": "Jill",
+      "middleName": "Robert"
+    }
+  }
+}

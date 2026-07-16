@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE0VDE2OjMzOjExLjg0NDc0MCIsInVzZXJfaWQiOiJlZTVlN2JhMi0xNGJmLTQ2MTEtODUyZC1mMjY3YjgzYzdhMGEifQ.ZOrVPSZDfuzWSwQDYDUASa-8tKbEwg0wNk71uy7PKqs' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Statement speech into pattern position.","maxScore":66,"minScore":13,"description":"Course list society range.","estimatedTime":"6 weeks","previewFileId":"008c837e-3963-4901-8a5f-93167ce03c64","createdByUserId":"ee5e7ba2-14bf-4611-852d-f267b83c7a0a"}'

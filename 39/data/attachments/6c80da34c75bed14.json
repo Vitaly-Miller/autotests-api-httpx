@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "4588f330-febe-4034-9a29-677e2b824f71",
+    "title": "Whether a already art nation.",
+    "maxScore": 68,
+    "minScore": 7,
+    "description": "Rich care music yeah fish officer word.",
+    "previewFile": {
+      "id": "3a8292f7-c1b9-40d5-b0cf-e141feec64aa",
+      "filename": "file_1512.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_1512.png"
+    },
+    "estimatedTime": "6 weeks",
+    "createdByUser": {
+      "id": "c6da3c2f-7d54-4565-95a0-406e0a8610d4",
+      "email": "test_ad41a6a9@example.com",
+      "lastName": "Jordan",
+      "firstName": "Mckenzie",
+      "middleName": "Jennifer"
+    }
+  }
+}

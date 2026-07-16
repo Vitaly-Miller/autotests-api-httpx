@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "e4588777-7988-4c4d-9d75-c2a899ccd61c",
+    "title": "Leader alone camera.",
+    "maxScore": 82,
+    "minScore": 12,
+    "description": "Well skill with me.",
+    "previewFile": {
+      "id": "dccd4978-66b8-4ee8-9199-1d3fd52dc6b4",
+      "filename": "file_1981.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_1981.png"
+    },
+    "estimatedTime": "3 weeks",
+    "createdByUser": {
+      "id": "99d868f2-373d-4869-baa2-dabbf8ff88a4",
+      "email": "test_55f5004e@example.com",
+      "lastName": "Turner",
+      "firstName": "Melinda",
+      "middleName": "Natalie"
+    }
+  }
+}

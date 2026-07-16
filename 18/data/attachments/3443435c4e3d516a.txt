@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE0VDE2OjMzOjAyLjgzNDU2OCIsInVzZXJfaWQiOiIxZDcxM2UyOC1mMWIzLTQxODctYWVlNi04MGRiZTk4MjU4NDYifQ.AQub70tGiQeIq6xq3HxUBCGU-Eh1s0L8ciSwDE2JAms' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Like kid strong.","maxScore":90,"minScore":7,"description":"Compare enjoy at far another.","estimatedTime":"8 weeks","previewFileId":"50b89fba-abe3-42f7-a312-bcb134f41272","createdByUserId":"1d713e28-f1b3-4187-aee6-80dbe9825846"}'
