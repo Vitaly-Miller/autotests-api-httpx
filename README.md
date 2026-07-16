@@ -1,13 +1,13 @@
-# API Automation Tests
+# API Automation Tests by Vitaly Miller
 
 This project implements automated tests for
 the [API Test Server](https://github.com/Vitaly-Miller/autotests-api-server). The
 tests are written using **Python**, **Pytest**, **Pydantic**, **Allure**, **Faker**, **Swagger Coverage** and **HTTPX**. The test
 application’s source code is available on [GitHub](https://github.com/Vitaly-Miller/autotests-api-httpx).
 
-- [API-Testing project code](https://github.com/Vitaly-Miller/autotests-api-httpx)
-- [Allure Report](https://vitaly-miller.github.io/autotests-api-httpx/)
-- [Swagger Coverage](https://vitaly-miller.github.io/autotests-api-httpx/coverage.html   )
+- 👉 [API-Testing project code](https://github.com/Vitaly-Miller/autotests-api-httpx)
+- 👉 [Allure Report](https://vitaly-miller.github.io/autotests-api-httpx/)
+- 👉 [Test Coverage](https://vitaly-miller.github.io/autotests-api-httpx/coverage.html) by Swagger Coverage Tool
 
 
 ## Project Overview
