@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "7361e30b-ac7e-4d83-a997-8b4aef19ff16",
+    "title": "Million model cell good garden artist.",
+    "maxScore": 53,
+    "minScore": 27,
+    "description": "Nearly item future cut successful consumer not.",
+    "previewFile": {
+      "id": "696452d5-e930-4996-a6fc-55f0ffa40cb1",
+      "filename": "file_3837.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_3837.png"
+    },
+    "estimatedTime": "4 weeks",
+    "createdByUser": {
+      "id": "024865f1-40bd-4178-b568-b3de3ec7a016",
+      "email": "test_efbcc84f@example.com",
+      "lastName": "Mccoy",
+      "firstName": "Mike",
+      "middleName": "Whitney"
+    }
+  }
+}

@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDA0OjUzOjU0LjQyMDYyNyIsInVzZXJfaWQiOiIwMjQ4NjVmMS00MGJkLTQxNzgtYjU2OC1iM2RlM2VjN2EwMTYifQ.SYeKhAx01rKhd5mrBombEQPs0Rlrzr27nyTExYUwazI' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Million model cell good garden artist.","maxScore":53,"minScore":27,"description":"Nearly item future cut successful consumer not.","estimatedTime":"4 weeks","previewFileId":"696452d5-e930-4996-a6fc-55f0ffa40cb1","createdByUserId":"024865f1-40bd-4178-b568-b3de3ec7a016"}'

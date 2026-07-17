@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDA0OjUzOjU2LjA5ODc3MyIsInVzZXJfaWQiOiI5ZDlhYmU3My1iMGQzLTQ5ZDctOGMwNi03NGFkOWY0MjNhNjEifQ.Dj3brTdlb37YSQAZYN2V2TvveMsPYhudccodcysrJk8' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Discover seven night international believe participant.","maxScore":55,"minScore":12,"description":"I item debate.","estimatedTime":"4 weeks","previewFileId":"852df0d5-ba33-4caa-8b98-10d69d84b2cb","createdByUserId":"9d9abe73-b0d3-49d7-8c06-74ad9f423a61"}'

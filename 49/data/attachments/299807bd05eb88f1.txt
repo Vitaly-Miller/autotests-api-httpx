@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDA0OjUzOjUxLjY3MzcyMCIsInVzZXJfaWQiOiI1MWViMmY4NC1kNjc4LTQ4YTMtYjRlOC02NGQ4YzI0NTYyMjAifQ.15cJRJ99uD4Btf-zF_YqpD3V9jPbRfimq4an0MGdwFA' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Watch one factor.","courseId":"676fcdef-7b5c-4b13-8e2e-e76fcde0ab4e","maxScore":92,"minScore":28,"orderIndex":265,"description":"Act Mr lead billion certain.","estimatedTime":"6 weeks"}'

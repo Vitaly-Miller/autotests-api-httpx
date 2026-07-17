@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDA0OjU0OjAxLjI2NDU3NSIsInVzZXJfaWQiOiI2N2NmMWIyNi0yMjkwLTRkMWQtYTYzZS02NGM4ODVlODQ3MjQifQ.1_mzNZh2N16Z09F55ohg7WKSUMr3GI65-vu1Njlxd5g' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Pressure season perhaps money.","maxScore":74,"minScore":17,"description":"Job couple structure not site security.","estimatedTime":"2 weeks","previewFileId":"cb9297c2-176d-44f5-ba57-8663cb0f7390","createdByUserId":"67cf1b26-2290-4d1d-a63e-64c885e84724"}'

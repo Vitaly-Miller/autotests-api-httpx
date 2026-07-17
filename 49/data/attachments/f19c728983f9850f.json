@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "bd8514b6-4219-4a60-815d-a145f7eb5209",
+    "title": "Art goal some face under.",
+    "maxScore": 88,
+    "minScore": 14,
+    "description": "Court point upon still area.",
+    "previewFile": {
+      "id": "e1bf9c7f-a4df-4a61-aa6d-86498a8d1c0d",
+      "filename": "file_9402.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_9402.png"
+    },
+    "estimatedTime": "4 weeks",
+    "createdByUser": {
+      "id": "48ae495a-70da-45c7-bf26-65aece3cf4cb",
+      "email": "test_d04fad2f@example.com",
+      "lastName": "Wallace",
+      "firstName": "Carol",
+      "middleName": "Mike"
+    }
+  }
+}

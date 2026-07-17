@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjE2OjMxLjUxNzcwMiIsInVzZXJfaWQiOiI2YzYzNzliOS04ZDU2LTQxMWItYTU1NS1kMjUzY2VkMDc4MmQifQ.6wEqoNJwUDT0BAHaZkEmZE_paI11fYpEqI4N252kQNI' \
-  -H 'content-type: application/json' \
-  -d '{"title":"While analysis soldier others.","maxScore":87,"minScore":26,"description":"Around shake their poor.","estimatedTime":"4 weeks","previewFileId":"b42207dd-267b-499c-8185-b521c3edc4be","createdByUserId":"6c6379b9-8d56-411b-a555-d253ced0782d"}'

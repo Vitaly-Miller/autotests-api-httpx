@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDA0OjUzOjQ5LjE3Njk5MCIsInVzZXJfaWQiOiIzZDgxZDcwOC03NDBkLTRjYmItYWUwYS0yOTM0ZGM3MGM5MmUifQ.vNzybgzradSnkMI7masvmS-TKXSGWXTW6ogaz5gwxak' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Relate glass big.","maxScore":73,"minScore":1,"description":"Reach cultural assume state help chair measure.","estimatedTime":"9 weeks","previewFileId":"b571e820-47c7-4a2a-9690-223fbaf3f711","createdByUserId":"3d81d708-740d-4cbb-ae0a-2934dc70c92e"}'

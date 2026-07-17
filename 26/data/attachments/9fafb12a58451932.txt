@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjE2OjQyLjYzOTc0MyIsInVzZXJfaWQiOiJiZDkwMGI5MC0zOGIwLTQ4MzEtOWI4OS0wOGE2NWEwOTdjODcifQ.py4haG39NfgBelfXb_7r3fjzF_qCUU_oAgk6rV2fJB4' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Time what some kid better possible.","maxScore":96,"minScore":8,"description":"Per sing and us type against.","estimatedTime":"2 weeks","previewFileId":"1cb51da5-660b-4503-b379-0daf1e63ffcf","createdByUserId":"bd900b90-38b0-4831-9b89-08a65a097c87"}'

@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/exercises \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjE2OjM1LjM1MTA1MyIsInVzZXJfaWQiOiI1OWEzOThmYy03MGE1LTRlODMtOWE1NS0wM2M2MzBkODczZTcifQ.n6vKu8ILR2s6ekDsQgv3Zs4BV7oyg9bU-zLOo-FWrgM' \
-  -H 'content-type: application/json' \
-  -d '{"title":"I dark break thus.","courseId":"a9848d43-2138-4d73-86ce-0972d4826d8b","maxScore":57,"minScore":12,"orderIndex":6700,"description":"Wait fast performance third.","estimatedTime":"7 weeks"}'

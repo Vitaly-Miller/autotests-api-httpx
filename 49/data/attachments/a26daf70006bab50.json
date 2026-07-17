@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "498790a7-3db4-4bf4-a2b4-c1390ff81cd4",
+    "title": "Focus style hold four TV war.",
+    "maxScore": 63,
+    "minScore": 14,
+    "description": "Ask start window leave.",
+    "previewFile": {
+      "id": "d6940bd7-c3b1-4d93-b5f9-1ccd8efb2320",
+      "filename": "file_8807.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_8807.png"
+    },
+    "estimatedTime": "6 weeks",
+    "createdByUser": {
+      "id": "87369468-4a64-4757-af5c-197ff69c68ba",
+      "email": "test_00421c87@example.com",
+      "lastName": "Shepherd",
+      "firstName": "Judith",
+      "middleName": "Billy"
+    }
+  }
+}

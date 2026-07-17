@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDA0OjUzOjU3LjA1Nzg2MyIsInVzZXJfaWQiOiI3MzFjMzkzZi1lMjljLTQzNGEtOTJlZS0yNTkyZjE3ZTcxNjAifQ.yzooNqyGX_26BKgAy3Di8GNLx7Oo-Pg8iI1FAJRJMwY' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Despite focus whatever surface key east.","courseId":"f09c0b90-a484-49d2-9399-94c3971edccc","maxScore":78,"minScore":26,"orderIndex":3563,"description":"Reflect door cell majority raise bring social.","estimatedTime":"9 weeks"}'

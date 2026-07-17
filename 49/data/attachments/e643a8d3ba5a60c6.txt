@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/exercises/96217d05-c073-41b2-b80c-2abcd1072a7f \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDA0OjUzOjU5LjgzODA2MSIsInVzZXJfaWQiOiI0OGFlNDk1YS03MGRhLTQ1YzctYmYyNi02NWFlY2UzY2Y0Y2IifQ.qPNjR_tLiuMFjJBpXyZx8T_deMEtFNeq8NkPMXHjMBE' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Term commercial on we owner.","maxScore":90,"minScore":30,"orderIndex":5260,"description":"Water usually a drop price himself test.","estimatedTime":"9 weeks"}'

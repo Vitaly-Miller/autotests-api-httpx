@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDA0OjUzOjUzLjMyNzQ1MSIsInVzZXJfaWQiOiI0ZTNhMjhiMi1mMDhkLTQ5ODAtOTA4NS00YmIyNDgyMTRiNDkifQ.d4YwDF3XtiUYwWWLOunYNcMVIm_JQgjsYYgeBfCrnBk' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Condition whom president.","maxScore":86,"minScore":7,"description":"Something fill increase area.","estimatedTime":"6 weeks","previewFileId":"56da33bc-f962-4379-8f95-0dba9dc1d465","createdByUserId":"4e3a28b2-f08d-4980-9085-4bb248214b49"}'

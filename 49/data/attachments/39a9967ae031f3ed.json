@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "28ebcef5-6132-47c7-be92-75d1197bfe3e",
+    "title": "Whom risk their skin threat.",
+    "maxScore": 60,
+    "minScore": 15,
+    "description": "Fly season prove decision series take best.",
+    "previewFile": {
+      "id": "51574fd2-482d-448b-9686-38ec59cb62c5",
+      "filename": "file_6644.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_6644.png"
+    },
+    "estimatedTime": "6 weeks",
+    "createdByUser": {
+      "id": "84a6a2d2-b46a-4c43-bbfc-c79275ff3bea",
+      "email": "test_015ab3eb@example.com",
+      "lastName": "Decker",
+      "firstName": "Jonathan",
+      "middleName": "David"
+    }
+  }
+}

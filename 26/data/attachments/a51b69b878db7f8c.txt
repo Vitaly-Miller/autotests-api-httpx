@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjE2OjI4LjM2MjAzMiIsInVzZXJfaWQiOiIwYWFjN2JiNC04ZmIwLTQ1ZWQtOTE4MS0zNmQ5OGQ4MjU4ZmIifQ.XZt5a2I-aYPD8f3Jp300BjgOHyfjk-KrWzzdGQY74wU' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Everyone cover whom among.","maxScore":70,"minScore":26,"description":"Spend guy summer study stop.","estimatedTime":"6 weeks","previewFileId":"747617f3-7651-4609-b09e-c9e3208d4c79","createdByUserId":"0aac7bb4-8fb0-45ed-9181-36d98d8258fb"}'

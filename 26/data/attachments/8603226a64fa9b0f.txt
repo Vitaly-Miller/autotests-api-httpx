@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjE2OjM0LjI5Njg2NiIsInVzZXJfaWQiOiI4MmQzM2E1OC1lOWVkLTRkMzEtYjQyYS04YTUzYjliOTkzN2IifQ.PH-bNrxl2wOSaPxFNov3frtkBCAJ3jR6nwYjQ95RzUM' \
-  -H 'content-type: application/json' \
-  -d '{"title":"You nothing letter.","maxScore":58,"minScore":1,"description":"Less mind majority. Push space collection major.","estimatedTime":"7 weeks","previewFileId":"40d98a59-1531-4080-92b4-7ebc3aab5bde","createdByUserId":"82d33a58-e9ed-4d31-b42a-8a53b9b9937b"}'

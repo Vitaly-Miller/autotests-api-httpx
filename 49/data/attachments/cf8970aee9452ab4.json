@@ -1,0 +1,25 @@
+{
+  "courses": [
+    {
+      "id": "35e939ba-0c7d-4d11-afc4-b30d7fcf5d65",
+      "title": "Hear realize generation.",
+      "maxScore": 57,
+      "minScore": 28,
+      "description": "Continue she Mr push door.",
+      "previewFile": {
+        "id": "f94f23cd-7dd4-42e6-8129-28d80ee0ddcd",
+        "filename": "file_5008.png",
+        "directory": "Uploaded",
+        "url": "http://localhost:8000/static/Uploaded/file_5008.png"
+      },
+      "estimatedTime": "4 weeks",
+      "createdByUser": {
+        "id": "19774788-82b5-48e2-8daa-d40ba5b59edf",
+        "email": "test_750d37bc@example.com",
+        "lastName": "Walters",
+        "firstName": "Adam",
+        "middleName": "Susan"
+      }
+    }
+  ]
+}

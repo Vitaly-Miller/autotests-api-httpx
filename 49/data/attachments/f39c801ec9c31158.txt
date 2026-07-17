@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDA0OjUzOjQ5Ljk1MjMzNiIsInVzZXJfaWQiOiIxOTc3NDc4OC04MmI1LTQ4ZTItOGRhYS1kNDBiYTViNTllZGYifQ.UKqj5Tlquzrz_gRZa5fxn6t3xlRySBvL2GBY4y6vlMU' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Hear realize generation.","maxScore":57,"minScore":28,"description":"Continue she Mr push door.","estimatedTime":"4 weeks","previewFileId":"f94f23cd-7dd4-42e6-8129-28d80ee0ddcd","createdByUserId":"19774788-82b5-48e2-8daa-d40ba5b59edf"}'

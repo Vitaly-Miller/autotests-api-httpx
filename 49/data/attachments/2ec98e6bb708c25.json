@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "83cc62c6-0ef4-4940-b53f-1fd4cc7d3a61",
+    "title": "Discover seven night international believe participant.",
+    "maxScore": 55,
+    "minScore": 12,
+    "description": "I item debate.",
+    "previewFile": {
+      "id": "852df0d5-ba33-4caa-8b98-10d69d84b2cb",
+      "filename": "file_5755.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_5755.png"
+    },
+    "estimatedTime": "4 weeks",
+    "createdByUser": {
+      "id": "9d9abe73-b0d3-49d7-8c06-74ad9f423a61",
+      "email": "test_3e2979f3@example.com",
+      "lastName": "Roberts",
+      "firstName": "Kimberly",
+      "middleName": "Randall"
+    }
+  }
+}

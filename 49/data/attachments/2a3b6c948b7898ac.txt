@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDA0OjUzOjUwLjkxOTU0OSIsInVzZXJfaWQiOiI4NzM2OTQ2OC00YTY0LTQ3NTctYWY1Yy0xOTdmZjY5YzY4YmEifQ.k4D229G-xfHe7s0jti9VjIKN8hgIR6j0bqCgvRmkMP0' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Much their career serious.","maxScore":70,"minScore":2,"description":"Six lay baby yet money citizen want.","estimatedTime":"7 weeks","previewFileId":"d6940bd7-c3b1-4d93-b5f9-1ccd8efb2320","createdByUserId":"87369468-4a64-4757-af5c-197ff69c68ba"}'

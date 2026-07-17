@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "676fcdef-7b5c-4b13-8e2e-e76fcde0ab4e",
+    "title": "Meet data peace common remain.",
+    "maxScore": 52,
+    "minScore": 25,
+    "description": "Court doctor human likely note effect life.",
+    "previewFile": {
+      "id": "b956f6b2-4af1-4464-bffe-9ef2e24b0674",
+      "filename": "file_2300.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_2300.png"
+    },
+    "estimatedTime": "7 weeks",
+    "createdByUser": {
+      "id": "51eb2f84-d678-48a3-b4e8-64d8c2456220",
+      "email": "test_4579ed5e@example.com",
+      "lastName": "Barrera",
+      "firstName": "Shannon",
+      "middleName": "Becky"
+    }
+  }
+}

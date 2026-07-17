@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/exercises/0ceccad2-917c-46a0-8a8f-8ad42e004238 \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDA0OjU0OjAwLjk5NDYzOSIsInVzZXJfaWQiOiI2N2NmMWIyNi0yMjkwLTRkMWQtYTYzZS02NGM4ODVlODQ3MjQifQ.fEgGuSIluVw7nafCkwE7_cWPNnsplQjkOTSeouxalK4' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Degree data want show.","maxScore":93,"minScore":15,"orderIndex":7255,"description":"Agent social few kid population value guy.","estimatedTime":"3 weeks"}'

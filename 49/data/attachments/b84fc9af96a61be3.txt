@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDA0OjUzOjU0LjE4ODgzMSIsInVzZXJfaWQiOiIwMjQ4NjVmMS00MGJkLTQxNzgtYjU2OC1iM2RlM2VjN2EwMTYifQ.WwXoqWw2vnZQkWcwRZuUpNlkZE8YY8x3IttEdp7_2yU' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Education finish market.","courseId":"7361e30b-ac7e-4d83-a997-8b4aef19ff16","maxScore":91,"minScore":24,"orderIndex":2049,"description":"Impact fall shoulder summer.","estimatedTime":"3 weeks"}'

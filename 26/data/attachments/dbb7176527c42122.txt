@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjE2OjQxLjI0NjI2NSIsInVzZXJfaWQiOiJjMDBmNjc4OC0xYWYzLTQ1YWEtOGMwOC1lMDRjYjYwZmM5NzUifQ.o9YXNQStIEU4vcNiUBhdtvf1IFQW0URTtR88f0DYp4w' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Seven water especially whatever us military.","maxScore":50,"minScore":26,"description":"Bit around any.","estimatedTime":"9 weeks","previewFileId":"05f23e31-5f16-494d-adc8-fe552b245539","createdByUserId":"c00f6788-1af3-45aa-8c08-e04cb60fc975"}'

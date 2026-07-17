@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDA0OjUzOjUzLjA5NDM2NiIsInVzZXJfaWQiOiI0ZTNhMjhiMi1mMDhkLTQ5ODAtOTA4NS00YmIyNDgyMTRiNDkifQ.ZwcTSB_A4H9cLNWFp4caavXVxEcBvg-axxhLL4hLPNY' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Deep us audience various rich short.","courseId":"dbcdb0cf-6728-46f0-b7e8-3db1590aa27c","maxScore":56,"minScore":28,"orderIndex":7823,"description":"Include decade particular send fight.","estimatedTime":"3 weeks"}'

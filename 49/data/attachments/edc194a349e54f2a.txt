@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDA0OjU0OjAwLjEwODg2MSIsInVzZXJfaWQiOiI0OGFlNDk1YS03MGRhLTQ1YzctYmYyNi02NWFlY2UzY2Y0Y2IifQ.rvyH4sV6vigosQRlqeVwQGQrSLRXhMi4j9I-RQZM0PY' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Art goal some face under.","maxScore":88,"minScore":14,"description":"Court point upon still area.","estimatedTime":"4 weeks","previewFileId":"e1bf9c7f-a4df-4a61-aa6d-86498a8d1c0d","createdByUserId":"48ae495a-70da-45c7-bf26-65aece3cf4cb"}'

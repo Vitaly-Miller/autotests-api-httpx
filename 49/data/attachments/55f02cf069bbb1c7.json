@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "dbcdb0cf-6728-46f0-b7e8-3db1590aa27c",
+    "title": "Condition whom president.",
+    "maxScore": 86,
+    "minScore": 7,
+    "description": "Something fill increase area.",
+    "previewFile": {
+      "id": "56da33bc-f962-4379-8f95-0dba9dc1d465",
+      "filename": "file_9771.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_9771.png"
+    },
+    "estimatedTime": "6 weeks",
+    "createdByUser": {
+      "id": "4e3a28b2-f08d-4980-9085-4bb248214b49",
+      "email": "test_cc7a91a3@example.com",
+      "lastName": "Cooper",
+      "firstName": "Anthony",
+      "middleName": "William"
+    }
+  }
+}

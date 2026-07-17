@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "88cd640d-5b5c-4810-bdab-e28b95634679",
+    "title": "Sign executive art same million.",
+    "maxScore": 72,
+    "minScore": 12,
+    "description": "Rock five around against. Enjoy any work study.",
+    "previewFile": {
+      "id": "1c9f4ce3-5ecf-4bab-9b2f-4c434bb4b3ee",
+      "filename": "file_3339.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_3339.png"
+    },
+    "estimatedTime": "2 weeks",
+    "createdByUser": {
+      "id": "5fe58070-8643-4cf4-8c26-bf1d1e783678",
+      "email": "test_2ec5ccc5@example.com",
+      "lastName": "Tucker",
+      "firstName": "Donald",
+      "middleName": "Amanda"
+    }
+  }
+}

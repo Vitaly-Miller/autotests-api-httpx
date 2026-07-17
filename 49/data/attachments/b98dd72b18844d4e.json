@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "73e88531-581e-4d7b-8b94-a7fd586b2971",
+    "title": "Pressure season perhaps money.",
+    "maxScore": 74,
+    "minScore": 17,
+    "description": "Job couple structure not site security.",
+    "previewFile": {
+      "id": "cb9297c2-176d-44f5-ba57-8663cb0f7390",
+      "filename": "file_9527.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_9527.png"
+    },
+    "estimatedTime": "2 weeks",
+    "createdByUser": {
+      "id": "67cf1b26-2290-4d1d-a63e-64c885e84724",
+      "email": "test_a16e4194@example.com",
+      "lastName": "Bridges",
+      "firstName": "Ryan",
+      "middleName": "Juan"
+    }
+  }
+}

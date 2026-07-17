@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDA0OjUzOjUxLjkwNTM4NCIsInVzZXJfaWQiOiI1MWViMmY4NC1kNjc4LTQ4YTMtYjRlOC02NGQ4YzI0NTYyMjAifQ.7tZlnQmeu3lvjjgsGOn86sd85qkX5IDNX1mRJCcXRUE' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Meet data peace common remain.","maxScore":52,"minScore":25,"description":"Court doctor human likely note effect life.","estimatedTime":"7 weeks","previewFileId":"b956f6b2-4af1-4464-bffe-9ef2e24b0674","createdByUserId":"51eb2f84-d678-48a3-b4e8-64d8c2456220"}'

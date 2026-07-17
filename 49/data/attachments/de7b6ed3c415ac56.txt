@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDA0OjUzOjU4LjU3NzU3NiIsInVzZXJfaWQiOiI4NGE2YTJkMi1iNDZhLTRjNDMtYmJmYy1jNzkyNzVmZjNiZWEifQ.6yOp_hW9Kpyp2__TxP5CnS9aYgqovZNWvPTKJQsihCI' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Western green its significant case.","courseId":"28ebcef5-6132-47c7-be92-75d1197bfe3e","maxScore":58,"minScore":12,"orderIndex":3081,"description":"Suggest push idea ago identify start.","estimatedTime":"5 weeks"}'

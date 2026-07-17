@@ -1,0 +1,25 @@
+{
+  "courses": [
+    {
+      "id": "50577b54-933d-43b9-a186-a4649a9bacc3",
+      "title": "Relate glass big.",
+      "maxScore": 73,
+      "minScore": 1,
+      "description": "Reach cultural assume state help chair measure.",
+      "previewFile": {
+        "id": "b571e820-47c7-4a2a-9690-223fbaf3f711",
+        "filename": "file_5385.png",
+        "directory": "Uploaded",
+        "url": "http://localhost:8000/static/Uploaded/file_5385.png"
+      },
+      "estimatedTime": "9 weeks",
+      "createdByUser": {
+        "id": "3d81d708-740d-4cbb-ae0a-2934dc70c92e",
+        "email": "test_9ebd59dc@example.com",
+        "lastName": "Swanson",
+        "firstName": "Barbara",
+        "middleName": "Paul"
+      }
+    }
+  ]
+}

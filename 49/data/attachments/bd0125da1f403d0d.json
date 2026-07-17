@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "f09c0b90-a484-49d2-9399-94c3971edccc",
+    "title": "House agent base machine increase.",
+    "maxScore": 59,
+    "minScore": 10,
+    "description": "Race team give. Nor strategy near knowledge.",
+    "previewFile": {
+      "id": "229f42a8-6b37-4e6b-82dd-95c7d3ce6f00",
+      "filename": "file_2349.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_2349.png"
+    },
+    "estimatedTime": "4 weeks",
+    "createdByUser": {
+      "id": "731c393f-e29c-434a-92ee-2592f17e7160",
+      "email": "test_b6b9c1c9@example.com",
+      "lastName": "Cain",
+      "firstName": "Christina",
+      "middleName": "Charles"
+    }
+  }
+}

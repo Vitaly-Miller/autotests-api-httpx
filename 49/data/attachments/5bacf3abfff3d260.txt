@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDA0OjU0OjAwLjk5NDYzOSIsInVzZXJfaWQiOiI2N2NmMWIyNi0yMjkwLTRkMWQtYTYzZS02NGM4ODVlODQ3MjQifQ.fEgGuSIluVw7nafCkwE7_cWPNnsplQjkOTSeouxalK4' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Something reach majority raise as.","courseId":"73e88531-581e-4d7b-8b94-a7fd586b2971","maxScore":58,"minScore":17,"orderIndex":9798,"description":"Already move loss into.","estimatedTime":"2 weeks"}'

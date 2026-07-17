@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDA0OjUzOjQ3LjU2NTYxMiIsInVzZXJfaWQiOiI1ZmU1ODA3MC04NjQzLTRjZjQtOGMyNi1iZjFkMWU3ODM2NzgifQ.f6Qqf_ke_CH9VnvvttOtV5CPaWMxn1AYEqYQDHKcci0' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Sign executive art same million.","maxScore":72,"minScore":12,"description":"Rock five around against. Enjoy any work study.","estimatedTime":"2 weeks","previewFileId":"1c9f4ce3-5ecf-4bab-9b2f-4c434bb4b3ee","createdByUserId":"5fe58070-8643-4cf4-8c26-bf1d1e783678"}'

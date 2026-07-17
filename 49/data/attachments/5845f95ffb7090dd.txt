@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDA0OjUzOjU5LjgzODA2MSIsInVzZXJfaWQiOiI0OGFlNDk1YS03MGRhLTQ1YzctYmYyNi02NWFlY2UzY2Y0Y2IifQ.qPNjR_tLiuMFjJBpXyZx8T_deMEtFNeq8NkPMXHjMBE' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Consider court bag minute community.","courseId":"bd8514b6-4219-4a60-815d-a145f7eb5209","maxScore":58,"minScore":26,"orderIndex":9535,"description":"Control at sit long painting feeling.","estimatedTime":"6 weeks"}'
