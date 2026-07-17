@@ -9,9 +9,8 @@ Built with **Python**, **HTTPX**, **Pytest**, **Pydantic**, **Allure**, **Faker*
 
 ---
 - <picture><img src="https://allurereport.org/svg/logo-report-sign.svg" height="16" alt=""></picture> [ My Allure Report](https://vitaly-miller.github.io/autotests-api-httpx/) — test results with history, published on GitHub Pages
-- 📊 [My API Coverage Report](https://vitaly-miller.github.io/autotests-api-httpx/coverage.html) — endpoint coverage measured against the OpenAPI spec
+- <picture><img src="https://raw.githubusercontent.com/Nikita-Filonov/swagger-coverage-report/main/static/logo.png" height="16" alt=""></picture> [My API Coverage Report](https://vitaly-miller.github.io/autotests-api-httpx/coverage.html) — endpoint coverage measured against the OpenAPI spec
 - <picture><img src="https://icon.icepanel.io/Technology/svg/Swagger.svg" height="16" alt=""></picture> [API Documentation (Swagger UI)](https://vitaly-miller.github.io/autotests-api-httpx/swagger.html) — interactive docs of the API under test
-- 👨🏻‍💻 [My Code](https://github.com/Vitaly-Miller/autotests-api-httpx) — source code on GitHub
 ---
 
 > **⚠️ A note on code comments.**  
@@ -116,15 +115,15 @@ uvicorn main:app --host 0.0.0.0 --port 8000
 The server is expected at `http://localhost:8000` — the base URL and other settings
 are defined in [`.env`](.env) and loaded through `pydantic-settings` (see `config.py`).
 
-## Running the Tests
+## 🚀️ Running the Tests
 
-Run the full suite with Allure results:
+### Run the full suite with Allure results:
 
 ```bash
 python -m pytest --alluredir=allure-results --clean-alluredir
 ```
 
-### Selective Runs with Markers
+### Selective Runs with Markers:
 
 Tests are tagged by type (`smoke`, `regression`, `negative`) and by domain
 (`auth`, `users`, `courses`, `exercises`, `files`):
@@ -134,14 +133,14 @@ python -m pytest -m smoke                  # smoke tests only
 python -m pytest -m "regression and users" # regression tests for the users domain
 ```
 
-### Parallel Execution & Reruns
+### Parallel Execution & Reruns:
 
 ```bash
 python -m pytest -n auto          # run in parallel (pytest-xdist)
 python -m pytest --reruns 2       # retry flaky tests (pytest-rerunfailures)
 ```
 
-## Reports
+## 📋 Reports
 
 ### <picture><img src="https://allurereport.org/svg/logo-report-sign.svg" height="16"></picture> Allure Report
 
@@ -157,7 +156,7 @@ and every API call comes with attachments added automatically by HTTPX event hoo
 - a ready-to-run **cURL command** to reproduce the request manually;
 - the captured **log** of all requests and responses during the test.
 
-### 📊 API Coverage Report
+### <picture><img src="https://raw.githubusercontent.com/Nikita-Filonov/swagger-coverage-report/main/static/logo.png" height="16" alt=""></picture>  API Coverage Report
 
 ```bash
 swagger-coverage-tool save-report
