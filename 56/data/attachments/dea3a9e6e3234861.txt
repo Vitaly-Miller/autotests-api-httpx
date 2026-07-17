@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjE3OjIzLjI4MDc5NiIsInVzZXJfaWQiOiIxMDMyZDc1ZC0yNGIzLTQ2N2QtOTJhOS02ZjQ5NjdiNDEzZjIifQ.njpi02-RqIw_Z6el8FIBxwEemd6nbRB3xO25UKH-5-I' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Write participant action art.","courseId":"96e6e4c0-fdf9-4529-9e0d-0fa14509b109","maxScore":77,"minScore":14,"orderIndex":5594,"description":"Begin little true partner trial.","estimatedTime":"3 weeks"}'

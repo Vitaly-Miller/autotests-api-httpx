@@ -1,0 +1,25 @@
+{
+  "courses": [
+    {
+      "id": "31bbdcde-a2b4-4edf-b3bc-5083c6111565",
+      "title": "Federal under fire administration.",
+      "maxScore": 67,
+      "minScore": 29,
+      "description": "Baby never kind become success.",
+      "previewFile": {
+        "id": "7daa341e-378a-4251-901b-fc315cbebaa5",
+        "filename": "file_9564.png",
+        "directory": "Uploaded",
+        "url": "http://localhost:8000/static/Uploaded/file_9564.png"
+      },
+      "estimatedTime": "4 weeks",
+      "createdByUser": {
+        "id": "5943e098-c4b1-462a-a508-d02c70f7aa06",
+        "email": "test_b2773ad1@example.com",
+        "lastName": "Powell",
+        "firstName": "Charlene",
+        "middleName": "Brandy"
+      }
+    }
+  ]
+}

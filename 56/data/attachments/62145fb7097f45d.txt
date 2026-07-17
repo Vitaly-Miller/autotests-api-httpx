@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjE3OjIyLjM5NTMyOSIsInVzZXJfaWQiOiJjZWU3ZWJiOS0wM2Y4LTQ1ZDItYjhkNi0zODY1MDNjZWFhZWEifQ.Zk5jDYV1k92_-soKQxbBc4xzYNoUyVgyTl5tjP_bXy4' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Not guy manage education similar.","maxScore":99,"minScore":5,"description":"Reality do heavy teach order us site.","estimatedTime":"3 weeks","previewFileId":"baa1b9de-3cc8-48c2-ad0d-fc5bf2e64c7e","createdByUserId":"cee7ebb9-03f8-45d2-b8d6-386503ceaaea"}'

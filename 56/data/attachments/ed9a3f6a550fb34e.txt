@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjE3OjE1LjYzNDk0MyIsInVzZXJfaWQiOiIyY2IyODZiMS05NmMzLTQ4YzktOGM5OC0wMzFiMTZjZDBjYTYifQ.yQkWqdPZWhd1dkBrFMo_pa6RavHzr7WyhuYzw9bYNpk' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Opportunity suggest conference.","courseId":"d35d4ba8-2b8a-441a-8a94-662b31be82c8","maxScore":84,"minScore":10,"orderIndex":8304,"description":"Better wish attack religious good point.","estimatedTime":"5 weeks"}'

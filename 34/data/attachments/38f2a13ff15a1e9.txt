@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDAxOjE3OjAwLjQ1NTk0MSIsInVzZXJfaWQiOiI2NjY2MzkzMC1kODllLTQ3YjMtOTc5OC1mZTgwMjIxYTJkNmQifQ.CcZ2sOaQPDWkcT_8KnjgiCvu9MvMnFQgjJps3ZUu6os' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Read bag analysis throughout strategy amount.","maxScore":53,"minScore":3,"description":"Hope development authority.","estimatedTime":"3 weeks","previewFileId":"74349029-a973-4efe-a1ab-8ae4314ac205","createdByUserId":"66663930-d89e-47b3-9798-fe80221a2d6d"}'

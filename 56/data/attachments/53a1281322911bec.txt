@@ -1,0 +1,19 @@
+INFO | HTTPX-Client: POST-request to http://localhost:8000/api/v1/users
+INFO | HTTPX-Client: Status code: 200-OK from http://localhost:8000/api/v1/users
+INFO | HTTPX-Client: POST-request to http://localhost:8000/api/v1/authentication/login
+INFO | HTTPX-Client: Status code: 200-OK from http://localhost:8000/api/v1/authentication/login
+INFO | HTTPX-Client: POST-request to http://localhost:8000/api/v1/authentication/login
+INFO | HTTPX-Client: Status code: 200-OK from http://localhost:8000/api/v1/authentication/login
+INFO | HTTPX-Client: POST-request to http://localhost:8000/api/v1/authentication/login
+INFO | HTTPX-Client: Status code: 200-OK from http://localhost:8000/api/v1/authentication/login
+INFO | HTTPX-Client: POST-request to http://localhost:8000/api/v1/files
+INFO | HTTPX-Client: Status code: 200-OK from http://localhost:8000/api/v1/files
+INFO | HTTPX-Client: POST-request to http://localhost:8000/api/v1/courses
+INFO | HTTPX-Client: Status code: 200-OK from http://localhost:8000/api/v1/courses
+INFO | HTTPX-Client: POST-request to http://localhost:8000/api/v1/exercises
+INFO | HTTPX-Client: Status code: 200-OK from http://localhost:8000/api/v1/exercises
+INFO | HTTPX-Client: PATCH-request to http://localhost:8000/api/v1/exercises/253a40a9-b440-4353-9c5d-afa13d74fa7c
+INFO | HTTPX-Client: Status code: 200-OK from http://localhost:8000/api/v1/exercises/253a40a9-b440-4353-9c5d-afa13d74fa7c
+INFO | - Base-assert: Status code: 200-OK
+INFO | - Base-assert: Request method: PATCH
+INFO | SCHEMA-ASSERT: Response JSON Schema validation (UpdateExerciseResponseSchema)

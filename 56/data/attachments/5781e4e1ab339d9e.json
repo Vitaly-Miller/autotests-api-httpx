@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "11253983-24d3-4a80-9ded-331225a6d4b7",
+    "title": "American gun work create heavy stock practice.",
+    "maxScore": 89,
+    "minScore": 24,
+    "description": "Them fish specific phone.",
+    "previewFile": {
+      "id": "1deadc4d-4c0b-4014-a3be-0d93d9c7f25b",
+      "filename": "file_8397.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_8397.png"
+    },
+    "estimatedTime": "6 weeks",
+    "createdByUser": {
+      "id": "3f0e826d-2094-48f0-8ad6-cf3b7bfe3d72",
+      "email": "test_3e0c3047@example.com",
+      "lastName": "White",
+      "firstName": "Gabriel",
+      "middleName": "Anne"
+    }
+  }
+}

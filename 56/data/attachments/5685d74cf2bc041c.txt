@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/exercises/253a40a9-b440-4353-9c5d-afa13d74fa7c \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjE3OjIyLjEyNjM2NyIsInVzZXJfaWQiOiJjZWU3ZWJiOS0wM2Y4LTQ1ZDItYjhkNi0zODY1MDNjZWFhZWEifQ.4Co-mB6BF31tt3Byxhh7omQCTRkq5kbTVs_ingmSYxs' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Fill summer writer return camera.","maxScore":89,"minScore":2,"orderIndex":7639,"description":"Side situation turn poor dog.","estimatedTime":"8 weeks"}'

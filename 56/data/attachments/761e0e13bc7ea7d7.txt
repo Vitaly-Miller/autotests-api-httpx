@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjE3OjIyLjEyNjM2NyIsInVzZXJfaWQiOiJjZWU3ZWJiOS0wM2Y4LTQ1ZDItYjhkNi0zODY1MDNjZWFhZWEifQ.4Co-mB6BF31tt3Byxhh7omQCTRkq5kbTVs_ingmSYxs' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Set defense sell.","courseId":"e2c67d7f-daf6-4bae-891b-08d959218a80","maxScore":96,"minScore":28,"orderIndex":3931,"description":"West almost keep to this air.","estimatedTime":"6 weeks"}'

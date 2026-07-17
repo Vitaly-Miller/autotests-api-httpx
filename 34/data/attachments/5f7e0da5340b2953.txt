@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDAxOjE2OjUwLjMzNDQ5NSIsInVzZXJfaWQiOiIwZjJmMjFkOC05MDNkLTRjOGItYjUzMy01MWM0NGQ2ZmUyZjMifQ.QFfcHNQMUnnNHemdLmofu8pD9LDOSSUVVuRPdAMF8zY' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Population case along camera feeling note.","maxScore":67,"minScore":16,"description":"Own theory human accept.","estimatedTime":"7 weeks","previewFileId":"5d151039-96e0-41a6-ac5f-5e86231057b6","createdByUserId":"0f2f21d8-903d-4c8b-b533-51c44d6fe2f3"}'

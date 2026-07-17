@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "1babbb31-e1df-4d1a-9608-3eaced26958a",
+    "title": "Product choose day doctor share.",
+    "maxScore": 96,
+    "minScore": 26,
+    "description": "Six wide health set back.",
+    "previewFile": {
+      "id": "63eeb9b3-c97d-4ac8-a665-2e95271a949c",
+      "filename": "file_5865.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_5865.png"
+    },
+    "estimatedTime": "9 weeks",
+    "createdByUser": {
+      "id": "0a431e68-617d-433f-9b2e-59df26210113",
+      "email": "test_ef0e63e6@example.com",
+      "lastName": "Jones",
+      "firstName": "Melissa",
+      "middleName": "Anthony"
+    }
+  }
+}

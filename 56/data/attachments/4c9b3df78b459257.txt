@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjE3OjIwLjEwMzU4MiIsInVzZXJfaWQiOiIwNjZlNGU3NS0wYTc2LTQ1MWItOTlkMy1hODc5NDUzNjQ1OWIifQ.Cyo73-p0MzqAIi5uk3Cus-DaTCmoLC8CP6G7SolYJZc' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Color save blood west.","maxScore":89,"minScore":9,"description":"Knowledge Republican analysis.","estimatedTime":"2 weeks","previewFileId":"30650119-a277-43cf-b233-2ee4c2616550","createdByUserId":"066e4e75-0a76-451b-99d3-a8794536459b"}'

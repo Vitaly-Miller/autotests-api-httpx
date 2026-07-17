@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/exercises/0579aefb-b4d9-4329-a25e-b230423c98ec \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjE3OjIzLjI4MDc5NiIsInVzZXJfaWQiOiIxMDMyZDc1ZC0yNGIzLTQ2N2QtOTJhOS02ZjQ5NjdiNDEzZjIifQ.njpi02-RqIw_Z6el8FIBxwEemd6nbRB3xO25UKH-5-I' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Thus son wonder.","maxScore":97,"minScore":12,"orderIndex":3796,"description":"Measure partner economic sister stay.","estimatedTime":"9 weeks"}'

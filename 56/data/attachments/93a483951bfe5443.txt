@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjE3OjEzLjYzOTA4NiIsInVzZXJfaWQiOiIyZTk5NDQzNi05MjJkLTQ0NzYtOTJlNy03MDdkZWU3MDE1NDQifQ.OZFSbF56Q8e-gdTFUdEOuhoZA38EiCnPKNdX6HLtwdg' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Mother blue may information soldier.","maxScore":82,"minScore":23,"description":"Development glass we majority.","estimatedTime":"4 weeks","previewFileId":"a36955f3-dee6-4e7f-af9f-2bf3359e2555","createdByUserId":"2e994436-922d-4476-92e7-707dee701544"}'

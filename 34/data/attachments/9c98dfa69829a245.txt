@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDAxOjE2OjU3Ljk1MTQ0MyIsInVzZXJfaWQiOiJkNDgwYzVmZC1lNTlmLTQyNjYtOGYxOS0wNjliNTg0MTVmNjQifQ.wPoQ7tjZkVXncEs8HoZMTcqoQcKtJFQTNnvyu7Qux14' \
-  -H 'content-type: application/json' \
-  -d '{"title":"During specific moment production affect.","maxScore":98,"minScore":21,"description":"Phone after true give trade doctor near.","estimatedTime":"8 weeks","previewFileId":"7d28d1da-91e2-425e-8ccf-42cb3bff5fe6","createdByUserId":"d480c5fd-e59f-4266-8f19-069b58415f64"}'

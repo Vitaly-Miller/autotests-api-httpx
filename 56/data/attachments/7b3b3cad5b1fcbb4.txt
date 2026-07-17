@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjE3OjE5LjgzNTg4NyIsInVzZXJfaWQiOiIwNjZlNGU3NS0wYTc2LTQ1MWItOTlkMy1hODc5NDUzNjQ1OWIifQ.DXKKsAwBvUzbFB_b97fLyOb2zITk9yqQsrzYEZWAQqU' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Until really trip hold.","courseId":"a7e6b02e-dbd7-48ba-bcf4-c693d8bebf75","maxScore":63,"minScore":22,"orderIndex":7250,"description":"Off test man type for coach.","estimatedTime":"5 weeks"}'

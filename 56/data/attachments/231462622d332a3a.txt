@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjE3OjIxLjI2MjUyMSIsInVzZXJfaWQiOiJkNjljYmYzOS1jNGU1LTRkZDMtOTc4NC0xOWE5ODZmY2FlMDkifQ.dMRtmcacEYuB51SV4-SBTv8Cd-nyVRlpcL12OIYCsrM' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Base sport center.","maxScore":60,"minScore":26,"description":"Election network time while leader teacher.","estimatedTime":"6 weeks","previewFileId":"faff1d9d-7e83-441c-b9b2-c8844bcb1fd4","createdByUserId":"d69cbf39-c4e5-4dd3-9784-19a986fcae09"}'

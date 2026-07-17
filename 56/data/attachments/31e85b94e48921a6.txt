@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjE3OjIwLjk5NDMyNSIsInVzZXJfaWQiOiJkNjljYmYzOS1jNGU1LTRkZDMtOTc4NC0xOWE5ODZmY2FlMDkifQ.H3E5fOgRhpeNkPBJApnZZaRjOQZohot0GfBT6ipEQCE' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Remember reality at fight together model.","courseId":"ea82822c-35dd-476e-9267-2ef988cb44d3","maxScore":73,"minScore":27,"orderIndex":4385,"description":"Cultural treatment attack throughout.","estimatedTime":"3 weeks"}'

@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "e2c67d7f-daf6-4bae-891b-08d959218a80",
+    "title": "Not guy manage education similar.",
+    "maxScore": 99,
+    "minScore": 5,
+    "description": "Reality do heavy teach order us site.",
+    "previewFile": {
+      "id": "baa1b9de-3cc8-48c2-ad0d-fc5bf2e64c7e",
+      "filename": "file_6589.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_6589.png"
+    },
+    "estimatedTime": "3 weeks",
+    "createdByUser": {
+      "id": "cee7ebb9-03f8-45d2-b8d6-386503ceaaea",
+      "email": "test_bee7e2d7@example.com",
+      "lastName": "Cuevas",
+      "firstName": "Victoria",
+      "middleName": "Matthew"
+    }
+  }
+}

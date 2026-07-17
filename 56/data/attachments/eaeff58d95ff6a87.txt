@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjE3OjE1LjkwMzk4OSIsInVzZXJfaWQiOiIyY2IyODZiMS05NmMzLTQ4YzktOGM5OC0wMzFiMTZjZDBjYTYifQ.XyyPKPidOcS01ADjkSm9qLbAQlOP9CUz1XaY8X9FXj4' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Here we red author act.","maxScore":77,"minScore":27,"description":"Meet hundred skill assume suffer born about.","estimatedTime":"7 weeks","previewFileId":"bf2956c5-a52f-4add-92b6-05847c44bb11","createdByUserId":"2cb286b1-96c3-48c9-8c98-031b16cd0ca6"}'

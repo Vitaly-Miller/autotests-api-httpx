@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjE3OjEwLjA3MjAyMiIsInVzZXJfaWQiOiI4YjNkYzY4OC1mZjM3LTRlYTctYWJiYi04MDljZTE3MjFmZDYifQ.FR097T9i5alDU-seXHMVEFCy0NDMj6v3U-yTLf_a1zg' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Republican can quite network wide.","maxScore":99,"minScore":29,"description":"Table large turn fight plan service.","estimatedTime":"5 weeks","previewFileId":"ed990e77-f885-4612-abff-0d80ff3b2f9a","createdByUserId":"8b3dc688-ff37-4ea7-abbb-809ce1721fd6"}'

@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjE3OjEwLjkzOTE4OCIsInVzZXJfaWQiOiI1OTQzZTA5OC1jNGIxLTQ2MmEtYTUwOC1kMDJjNzBmN2FhMDYifQ.PGmgdc0lgX--_MH7d0TOutesxcqYWKKY7DRSUxB_enA' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Federal under fire administration.","maxScore":67,"minScore":29,"description":"Baby never kind become success.","estimatedTime":"4 weeks","previewFileId":"7daa341e-378a-4251-901b-fc315cbebaa5","createdByUserId":"5943e098-c4b1-462a-a508-d02c70f7aa06"}'

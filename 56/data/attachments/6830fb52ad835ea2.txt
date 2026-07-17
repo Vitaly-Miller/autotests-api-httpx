@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjE3OjEyLjc3NjYwNSIsInVzZXJfaWQiOiJiZWRmODM0NC04N2FhLTRjOWItOTk3OS00MWQ3MDM0MDc2NWMifQ.UseiyAJAGAAdFH4ms2lmEHkXe-gfROQX96tmAGTMKvo' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Or expert beyond word.","maxScore":64,"minScore":21,"description":"Focus indeed indicate trip two appear.","estimatedTime":"7 weeks","previewFileId":"8ad3c74b-ccad-4363-8e4c-c21747cfb8d7","createdByUserId":"bedf8344-87aa-4c9b-9979-41d70340765c"}'

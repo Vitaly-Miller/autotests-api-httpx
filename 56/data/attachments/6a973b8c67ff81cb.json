@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "3e202faf-9f36-41b2-9190-753596403c49",
+    "title": "Space necessary relate party food but.",
+    "maxScore": 72,
+    "minScore": 15,
+    "description": "Nice mother should financial cut foreign to.",
+    "previewFile": {
+      "id": "7651f235-3b7a-48fd-9a16-30c1e097577f",
+      "filename": "file_5903.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_5903.png"
+    },
+    "estimatedTime": "7 weeks",
+    "createdByUser": {
+      "id": "5feee2bd-7339-4145-b9aa-aed33bc939b9",
+      "email": "test_5476bf37@example.com",
+      "lastName": "Fitzgerald",
+      "firstName": "Samantha",
+      "middleName": "Anna"
+    }
+  }
+}

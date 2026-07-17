@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "f6947d49-dbb9-4ff8-a1f8-800f8dde1e6c",
+    "title": "Or expert beyond word.",
+    "maxScore": 64,
+    "minScore": 21,
+    "description": "Focus indeed indicate trip two appear.",
+    "previewFile": {
+      "id": "8ad3c74b-ccad-4363-8e4c-c21747cfb8d7",
+      "filename": "file_9327.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_9327.png"
+    },
+    "estimatedTime": "7 weeks",
+    "createdByUser": {
+      "id": "bedf8344-87aa-4c9b-9979-41d70340765c",
+      "email": "test_adb6c8f8@example.com",
+      "lastName": "Hutchinson",
+      "firstName": "Patrick",
+      "middleName": "Jordan"
+    }
+  }
+}

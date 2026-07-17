@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "4e66c89f-7aaa-4e3e-943c-ea119f8d8a59",
+    "title": "Republican can quite network wide.",
+    "maxScore": 99,
+    "minScore": 29,
+    "description": "Table large turn fight plan service.",
+    "previewFile": {
+      "id": "ed990e77-f885-4612-abff-0d80ff3b2f9a",
+      "filename": "file_2004.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_2004.png"
+    },
+    "estimatedTime": "5 weeks",
+    "createdByUser": {
+      "id": "8b3dc688-ff37-4ea7-abbb-809ce1721fd6",
+      "email": "test_b8d05bfa@example.com",
+      "lastName": "Morris",
+      "firstName": "Alison",
+      "middleName": "Kyle"
+    }
+  }
+}

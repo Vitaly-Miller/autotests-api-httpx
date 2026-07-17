@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjE3OjE0LjQ5OTczMSIsInVzZXJfaWQiOiIzZjBlODI2ZC0yMDk0LTQ4ZjAtOGFkNi1jZjNiN2JmZTNkNzIifQ.1SkX6omkUl0UjVDzV8KLnaespm8pzByc89F6YMMXWRg' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Analysis especially another enjoy blood size.","courseId":"11253983-24d3-4a80-9ded-331225a6d4b7","maxScore":96,"minScore":19,"orderIndex":1178,"description":"Finish pretty everything sea if along list.","estimatedTime":"6 weeks"}'

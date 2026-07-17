@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/exercises \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDAxOjE2OjU2LjM5MTU3MiIsInVzZXJfaWQiOiIwODNhOTc5OC1hOTY3LTQxZWItODUwOS05MThlMDQ3OWMyOTgifQ.vjaCJXoLgICav4etA8qDi2HcYpzlGUpp9zwjOgwq97Q' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Area east bring however.","courseId":"876bfd3d-5533-44ba-a3b1-e2b6c0551a46","maxScore":65,"minScore":16,"orderIndex":6316,"description":"Stuff name former safe bag reflect contain.","estimatedTime":"9 weeks"}'

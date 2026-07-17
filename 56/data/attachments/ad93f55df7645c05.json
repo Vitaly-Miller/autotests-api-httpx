@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "a7e6b02e-dbd7-48ba-bcf4-c693d8bebf75",
+    "title": "Color save blood west.",
+    "maxScore": 89,
+    "minScore": 9,
+    "description": "Knowledge Republican analysis.",
+    "previewFile": {
+      "id": "30650119-a277-43cf-b233-2ee4c2616550",
+      "filename": "file_7463.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_7463.png"
+    },
+    "estimatedTime": "2 weeks",
+    "createdByUser": {
+      "id": "066e4e75-0a76-451b-99d3-a8794536459b",
+      "email": "test_7545d87b@example.com",
+      "lastName": "Perry",
+      "firstName": "Cheyenne",
+      "middleName": "Denise"
+    }
+  }
+}

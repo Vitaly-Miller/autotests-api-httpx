@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "40d82920-e2b6-49bb-9490-5b8d1d0fb123",
+    "title": "Mother blue may information soldier.",
+    "maxScore": 82,
+    "minScore": 23,
+    "description": "Development glass we majority.",
+    "previewFile": {
+      "id": "a36955f3-dee6-4e7f-af9f-2bf3359e2555",
+      "filename": "file_8488.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_8488.png"
+    },
+    "estimatedTime": "4 weeks",
+    "createdByUser": {
+      "id": "2e994436-922d-4476-92e7-707dee701544",
+      "email": "test_3c2b98eb@example.com",
+      "lastName": "Allen",
+      "firstName": "Ian",
+      "middleName": "Alexis"
+    }
+  }
+}

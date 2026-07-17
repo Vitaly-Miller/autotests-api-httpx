@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "ea82822c-35dd-476e-9267-2ef988cb44d3",
+    "title": "Base sport center.",
+    "maxScore": 60,
+    "minScore": 26,
+    "description": "Election network time while leader teacher.",
+    "previewFile": {
+      "id": "faff1d9d-7e83-441c-b9b2-c8844bcb1fd4",
+      "filename": "file_1767.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_1767.png"
+    },
+    "estimatedTime": "6 weeks",
+    "createdByUser": {
+      "id": "d69cbf39-c4e5-4dd3-9784-19a986fcae09",
+      "email": "test_a381367c@example.com",
+      "lastName": "Sanchez",
+      "firstName": "Larry",
+      "middleName": "Kerri"
+    }
+  }
+}

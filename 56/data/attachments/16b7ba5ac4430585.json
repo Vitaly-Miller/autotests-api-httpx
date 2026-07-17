@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "52a9e889-b22a-4a3a-ae66-a8718986004d",
+    "title": "Control listen grow water.",
+    "maxScore": 62,
+    "minScore": 12,
+    "description": "Up claim young.",
+    "previewFile": {
+      "id": "814c7427-d82d-44fc-bd76-f9994e2dad14",
+      "filename": "file_7217.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_7217.png"
+    },
+    "estimatedTime": "6 weeks",
+    "createdByUser": {
+      "id": "6750a553-4519-4736-a0d5-584676663a26",
+      "email": "test_091e7d02@example.com",
+      "lastName": "Barnett",
+      "firstName": "Joy",
+      "middleName": "Terri"
+    }
+  }
+}

@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDAxOjE2OjUxLjU4NDEzNiIsInVzZXJfaWQiOiJkZjE1YmY4Yy1kM2RmLTQwMTEtOWEwYS03Y2U0Y2EyMWY5ODIifQ._PCc_Vx4gzGfv-ptJxV2jvwKwNxFjwiVxcaAE6RmKxM' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Must develop hospital.","maxScore":97,"minScore":24,"description":"However shoulder hand kid step goal.","estimatedTime":"4 weeks","previewFileId":"5c07038c-733b-44b8-b479-98644a573798","createdByUserId":"df15bf8c-d3df-4011-9a0a-7ce4ca21f982"}'

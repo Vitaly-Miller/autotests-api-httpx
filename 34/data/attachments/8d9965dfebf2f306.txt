@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDAxOjE2OjU0LjE2NTk4MyIsInVzZXJfaWQiOiJkMmZkNGU4Ny0yODQ2LTQ5ZTgtOWI1Mi0xYzliMGI4NzM5ZWUifQ.zbmO9YpTq26ZtIWiZskO4YmUpQDlInl204DKLJ7wces' \
-  -H 'content-type: application/json' \
-  -d '{"title":"East within early describe.","maxScore":81,"minScore":25,"description":"Edge quickly floor identify.","estimatedTime":"2 weeks","previewFileId":"4496a9ff-d75f-4a08-a21e-37c55505ad72","createdByUserId":"d2fd4e87-2846-49e8-9b52-1c9b0b8739ee"}'

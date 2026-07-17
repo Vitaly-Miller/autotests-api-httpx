@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "96e6e4c0-fdf9-4529-9e0d-0fa14509b109",
+    "title": "Suggest true official ready now.",
+    "maxScore": 81,
+    "minScore": 15,
+    "description": "Ball group dream training forward fill tax.",
+    "previewFile": {
+      "id": "a67a6cce-b0e4-46f3-b869-598a64f48e93",
+      "filename": "file_7851.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_7851.png"
+    },
+    "estimatedTime": "3 weeks",
+    "createdByUser": {
+      "id": "1032d75d-24b3-467d-92a9-6f4967b413f2",
+      "email": "test_34c2db45@example.com",
+      "lastName": "Pace",
+      "firstName": "Ryan",
+      "middleName": "Melissa"
+    }
+  }
+}
