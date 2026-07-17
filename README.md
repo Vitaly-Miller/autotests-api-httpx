@@ -8,9 +8,9 @@ application with users, courses, exercises and file storage.
 Built with **Python**, **HTTPX**, **Pytest**, **Pydantic**, **Allure**, **Faker** and **Swagger Coverage Tool**.
 
 ---
-- <img src="https://allurereport.org/svg/logo-report-sign.svg" height="13" alt=""> [ My Allure Report](https://vitaly-miller.github.io/autotests-api-httpx/) — test results with history, published on GitHub Pages
+- <a><img src="https://allurereport.org/svg/logo-report-sign.svg" height="13" alt=""></a> [ My Allure Report](https://vitaly-miller.github.io/autotests-api-httpx/) — test results with history, published on GitHub Pages
 - 📊 [My API Coverage Report](https://vitaly-miller.github.io/autotests-api-httpx/coverage.html) — endpoint coverage measured against the OpenAPI spec
-- <img src="https://icon.icepanel.io/Technology/svg/Swagger.svg" height="13" alt=""> [API Documentation (Swagger UI)](https://vitaly-miller.github.io/autotests-api-httpx/swagger.html) — interactive docs of the API under test
+- <a><img src="https://icon.icepanel.io/Technology/svg/Swagger.svg" height="13" alt=""></a> [API Documentation (Swagger UI)](https://vitaly-miller.github.io/autotests-api-httpx/swagger.html) — interactive docs of the API under test
 - 👨🏻‍💻 [My Code](https://github.com/Vitaly-Miller/autotests-api-httpx) — source code on GitHub
 ---
 
@@ -143,7 +143,7 @@ python -m pytest --reruns 2       # retry flaky tests (pytest-rerunfailures)
 
 ## Reports
 
-### <img src="https://allurereport.org/svg/logo-report-sign.svg" height="14"> Allure Report
+### <a><img src="https://allurereport.org/svg/logo-report-sign.svg" height="14"></a> Allure Report
 
 ```bash
 allure serve allure-results
@@ -166,7 +166,7 @@ swagger-coverage-tool save-report
 Generates `coverage.html` — which endpoints, methods and status codes are covered
 compared to the server's OpenAPI spec, with history across runs.
 
-## <img src="https://innovationspace.ansys.com/knowledge/wp-content/uploads/sites/4/2024/02/scade-009-ci-cd-workflow.svg"  height="16"> CI/CD 
+## <a><img src="https://innovationspace.ansys.com/knowledge/wp-content/uploads/sites/4/2024/02/scade-009-ci-cd-workflow.svg"  height="16"></a> CI/CD 
 
 Every push and pull request to `main` triggers the [GitHub Actions pipeline](.github/workflows/tests.yml):
 
