@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDAzOjE5OjUzLjU3Nzk2NCIsInVzZXJfaWQiOiI1ZDk3MjM0YS1mNThlLTRhNzMtYjQ0Ni1mZDBmYmQwMTk1ZTYifQ.zAhD24q4ThQCHhrpgDkEmgEfc9nLX-e4kyt1Xx5Za9U' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Whose eight coach.","courseId":"735f80f3-3fc6-4da7-bfcd-13e59f192201","maxScore":93,"minScore":28,"orderIndex":7413,"description":"Role rest local manager follow culture they.","estimatedTime":"9 weeks"}'

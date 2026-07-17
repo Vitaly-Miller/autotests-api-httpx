@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDAzOjE5OjUwLjAzOTg2OSIsInVzZXJfaWQiOiI4MTI2Mjk1Mi03ZjA5LTQyYzgtYjg5Zi05MGQ2ZTQ3YzBlOGUifQ.IiK3Nr_KNgXAuzPE8ucKHGwnLoi1BU8arEf7Os0AcCo' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Area argue report subject.","maxScore":60,"minScore":12,"description":"Radio east cell field house little.","estimatedTime":"7 weeks","previewFileId":"fa09c847-00a8-4ea5-a87b-345a79fd5b64","createdByUserId":"81262952-7f09-42c8-b89f-90d6e47c0e8e"}'

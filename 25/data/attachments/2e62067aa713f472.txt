@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjAyOjA2LjAyOTMzMSIsInVzZXJfaWQiOiJkOGI3N2MzNS0xY2NmLTQzYWEtYjA0Zi0zMzdkM2YyNmZmNDMifQ.28M4d3wOdoMjf-QBzIVWyE8ZEHg9tsag6v8T82vI21g' \
-  -H 'content-type: application/json' \
-  -d '{"title":"We town space free.","maxScore":86,"minScore":28,"description":"Difficult cost impact hotel close again short.","estimatedTime":"6 weeks","previewFileId":"5b2003af-62ba-4ef2-a3cc-b20407456f47","createdByUserId":"d8b77c35-1ccf-43aa-b04f-337d3f26ff43"}'

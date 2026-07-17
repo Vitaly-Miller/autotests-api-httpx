@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDAzOjE5OjQ3LjUwOTQwNiIsInVzZXJfaWQiOiJhNDA4MjdiYy04NzE3LTQ1MjYtYWNhOC00OWMzZTk2MDlhNWIifQ.BSg0tuWNgfTpl6-wsuUzSOvNRz5A1cSKU0Sg-f6UXoY' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Audience require better sing direction her.","maxScore":66,"minScore":22,"description":"Check design dark green long meet.","estimatedTime":"7 weeks","previewFileId":"0217d9a8-f2e2-4711-a39c-2eb7a84ba9b8","createdByUserId":"a40827bc-8717-4526-aca8-49c3e9609a5b"}'

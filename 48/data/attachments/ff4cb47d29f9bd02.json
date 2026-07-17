@@ -1,0 +1,25 @@
+{
+  "courses": [
+    {
+      "id": "cdcffa38-0a5a-4dde-94a0-c2e1a27f41fe",
+      "title": "And focus those check again pay.",
+      "maxScore": 96,
+      "minScore": 28,
+      "description": "Could doctor suddenly market.",
+      "previewFile": {
+        "id": "30fa6eb5-c6a5-4b54-95cc-c2d62aabd972",
+        "filename": "file_1815.png",
+        "directory": "Uploaded",
+        "url": "http://localhost:8000/static/Uploaded/file_1815.png"
+      },
+      "estimatedTime": "8 weeks",
+      "createdByUser": {
+        "id": "fb60b71a-24fa-4f16-824f-03a734adf220",
+        "email": "test_5b375cc9@example.com",
+        "lastName": "Turner",
+        "firstName": "Lori",
+        "middleName": "Dorothy"
+      }
+    }
+  ]
+}

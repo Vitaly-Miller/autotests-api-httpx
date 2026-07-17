@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "729e0e04-a9cd-415f-9eb1-dd29afc677b9",
+    "title": "Dinner provide economy really.",
+    "maxScore": 55,
+    "minScore": 20,
+    "description": "Baby any him thing toward. See sense way issue.",
+    "previewFile": {
+      "id": "52319c94-3897-4301-8b92-7d88004a5b7c",
+      "filename": "file_7024.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_7024.png"
+    },
+    "estimatedTime": "6 weeks",
+    "createdByUser": {
+      "id": "72af9a90-3cdc-4950-b6ea-06f0be9ceb4c",
+      "email": "test_2e11ac64@example.com",
+      "lastName": "Brown",
+      "firstName": "Brooke",
+      "middleName": "Ray"
+    }
+  }
+}

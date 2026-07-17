@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDAzOjE5OjQ0LjMxNDc1OCIsInVzZXJfaWQiOiJmYjYwYjcxYS0yNGZhLTRmMTYtODI0Zi0wM2E3MzRhZGYyMjAifQ.Xrkw9OC5HsU0lhArFWO52AcpgHiCbEdWTdOzlWiIynA' \
+  -H 'content-type: application/json' \
+  -d '{"title":"And focus those check again pay.","maxScore":96,"minScore":28,"description":"Could doctor suddenly market.","estimatedTime":"8 weeks","previewFileId":"30fa6eb5-c6a5-4b54-95cc-c2d62aabd972","createdByUserId":"fb60b71a-24fa-4f16-824f-03a734adf220"}'

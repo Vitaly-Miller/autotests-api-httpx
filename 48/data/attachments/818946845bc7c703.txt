@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/exercises/f56ac9ac-b4c9-42f6-a600-c9dd7839359d \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDAzOjE5OjU0LjgyOTA1MCIsInVzZXJfaWQiOiJjNGIwMjQ2OC1lY2IzLTQwNTktODJlOC0xZmY4YTQxMzI0MmMifQ.f1bH8Zs8-Zg9cEhNwjNaDthd5xOAiJRWgGDDJfpUWMY' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Still ball always gas cost.","maxScore":95,"minScore":17,"orderIndex":3656,"description":"Finally positive movie respond.","estimatedTime":"4 weeks"}'

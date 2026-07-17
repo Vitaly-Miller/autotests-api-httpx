@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDAzOjE5OjQ2LjI0OTI1NSIsInVzZXJfaWQiOiIxNGE2MGQxNS1lZjUwLTQ1OGQtOWVhMy0xMWNmODMzZDlkZjIifQ.bHqE7JtNvwSYGqBZAzgB2kjWMZZ0xny9hJEs8yU7VIg' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Stop must worker specific world.","maxScore":57,"minScore":18,"description":"Cover word article leader chance nothing.","estimatedTime":"9 weeks","previewFileId":"c1ad0616-4cee-41b3-805e-e933e669cc76","createdByUserId":"14a60d15-ef50-458d-9ea3-11cf833d9df2"}'

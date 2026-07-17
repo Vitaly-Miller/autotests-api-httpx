@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "2167519b-11fe-44d5-a358-c82ab52f7cd3",
+    "title": "Audience require better sing direction her.",
+    "maxScore": 66,
+    "minScore": 22,
+    "description": "Check design dark green long meet.",
+    "previewFile": {
+      "id": "0217d9a8-f2e2-4711-a39c-2eb7a84ba9b8",
+      "filename": "file_9421.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_9421.png"
+    },
+    "estimatedTime": "7 weeks",
+    "createdByUser": {
+      "id": "a40827bc-8717-4526-aca8-49c3e9609a5b",
+      "email": "test_dada33fa@example.com",
+      "lastName": "Bell",
+      "firstName": "Kathleen",
+      "middleName": "Rachel"
+    }
+  }
+}

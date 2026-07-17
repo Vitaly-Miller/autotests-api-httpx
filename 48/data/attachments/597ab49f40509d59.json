@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "735f80f3-3fc6-4da7-bfcd-13e59f192201",
+    "title": "Guy state little area.",
+    "maxScore": 82,
+    "minScore": 1,
+    "description": "Smile six effect attention.",
+    "previewFile": {
+      "id": "b43dc5f2-f4f2-462b-b627-762f43eba285",
+      "filename": "file_5679.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_5679.png"
+    },
+    "estimatedTime": "2 weeks",
+    "createdByUser": {
+      "id": "5d97234a-f58e-4a73-b446-fd0fbd0195e6",
+      "email": "test_83aa75a2@example.com",
+      "lastName": "Wu",
+      "firstName": "Timothy",
+      "middleName": "Traci"
+    }
+  }
+}

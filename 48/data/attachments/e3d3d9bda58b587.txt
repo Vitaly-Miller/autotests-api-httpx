@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDAzOjE5OjQ5Ljc0MDY2MyIsInVzZXJfaWQiOiI4MTI2Mjk1Mi03ZjA5LTQyYzgtYjg5Zi05MGQ2ZTQ3YzBlOGUifQ.JcQosrwWJZMEnyApKuLUDfqDOS6TtdpKVIfs7ZWpF4M' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Send summer military with opportunity.","courseId":"15c11b42-8232-4a90-b4e8-040cedb506bc","maxScore":81,"minScore":17,"orderIndex":3324,"description":"Game something successful fish office low stage.","estimatedTime":"2 weeks"}'

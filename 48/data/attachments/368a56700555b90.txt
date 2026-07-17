@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDAzOjE5OjQ1LjI4NjM2OSIsInVzZXJfaWQiOiIxYTk5OWZmZC1jNTc2LTRmZmEtOTYyOS1jMmZjZTcyZDM5YWEifQ.Z5DSs-DP8ioCVgnSe-Mz06nXBy0Gi-agPgsicDN7ajg' \
+  -H 'content-type: application/json' \
+  -d '{"title":"News old feeling.","maxScore":97,"minScore":10,"description":"World number doctor degree face five.","estimatedTime":"2 weeks","previewFileId":"97288645-daa3-4d58-b908-b5a0b57a7924","createdByUserId":"1a999ffd-c576-4ffa-9629-c2fce72d39aa"}'

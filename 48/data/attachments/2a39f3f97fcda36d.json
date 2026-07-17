@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "0bb50bf0-124f-4efb-b5f1-20aa2ee84c79",
+    "title": "Face effort want.",
+    "maxScore": 91,
+    "minScore": 8,
+    "description": "Long leader little court them sea can.",
+    "previewFile": {
+      "id": "661b9017-6d1a-4d96-b14c-db9b859b2ad2",
+      "filename": "file_1177.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_1177.png"
+    },
+    "estimatedTime": "5 weeks",
+    "createdByUser": {
+      "id": "9e74865f-a740-45ca-b0ad-3d75354a921f",
+      "email": "test_496b5d48@example.com",
+      "lastName": "Lloyd",
+      "firstName": "Zachary",
+      "middleName": "Michael"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "49564fc4-9d13-414a-90aa-0e54568e505c",
+    "title": "Society pick would generation very.",
+    "maxScore": 53,
+    "minScore": 22,
+    "description": "Various service suffer name call everyone four.",
+    "previewFile": {
+      "id": "89546fb4-9e0e-40fd-95d4-cac3f2069204",
+      "filename": "file_9404.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_9404.png"
+    },
+    "estimatedTime": "6 weeks",
+    "createdByUser": {
+      "id": "cf63b183-1a09-40c7-b9d8-689e62c808e8",
+      "email": "test_287a3dc4@example.com",
+      "lastName": "Sutton",
+      "firstName": "Michael",
+      "middleName": "Nancy"
+    }
+  }
+}

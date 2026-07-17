@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDAzOjE5OjUyLjMwNjA2NiIsInVzZXJfaWQiOiIyMWEzODVhZS0xOTI4LTQ0MGItODU3Yi00ODE4MzYwMTMzZTYifQ.lfbWLUlvrU4FwN1Xl_YExuPzJwNUS1cVLort6Na12zk' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Commercial who store thus send.","courseId":"b4cedeca-c22c-4bc4-94dd-282edb4e91e3","maxScore":85,"minScore":5,"orderIndex":4745,"description":"Off activity buy.","estimatedTime":"8 weeks"}'

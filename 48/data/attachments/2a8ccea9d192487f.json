@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "a7cf8c05-d470-451d-b19e-b303b617bb45",
+    "title": "Stop must worker specific world.",
+    "maxScore": 57,
+    "minScore": 18,
+    "description": "Cover word article leader chance nothing.",
+    "previewFile": {
+      "id": "c1ad0616-4cee-41b3-805e-e933e669cc76",
+      "filename": "file_7834.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_7834.png"
+    },
+    "estimatedTime": "9 weeks",
+    "createdByUser": {
+      "id": "14a60d15-ef50-458d-9ea3-11cf833d9df2",
+      "email": "test_071b17c2@example.com",
+      "lastName": "Hurst",
+      "firstName": "Madison",
+      "middleName": "Tanner"
+    }
+  }
+}

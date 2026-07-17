@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjAyOjE1LjgzMTkwOCIsInVzZXJfaWQiOiI5NjQ3YTgxNS0wZWQ2LTRhYTQtOWQ0Zi03MjIxNmEzMjk1NjgifQ.bJCNwBuzuIY3nyE71ameuR0avzVcEOKkqFuEEUFrcHg' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Value rather anyone of compare.","maxScore":94,"minScore":1,"description":"Long spend again within.","estimatedTime":"2 weeks","previewFileId":"8d9a4ee5-8011-4da4-842a-363327939b18","createdByUserId":"9647a815-0ed6-4aa4-9d4f-72216a329568"}'

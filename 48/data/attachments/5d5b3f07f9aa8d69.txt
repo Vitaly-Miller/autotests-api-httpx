@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDAzOjE5OjQzLjM2MjU1MyIsInVzZXJfaWQiOiJjZjYzYjE4My0xYTA5LTQwYzctYjlkOC02ODllNjJjODA4ZTgifQ.LVgH6Og-yhiRl0jX5ZCwluYpWyefUEaMdlCSFCmPfuY' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Society pick would generation very.","maxScore":53,"minScore":22,"description":"Various service suffer name call everyone four.","estimatedTime":"6 weeks","previewFileId":"89546fb4-9e0e-40fd-95d4-cac3f2069204","createdByUserId":"cf63b183-1a09-40c7-b9d8-689e62c808e8"}'

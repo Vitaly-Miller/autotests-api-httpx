@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjAyOjAwLjQwMDQzNSIsInVzZXJfaWQiOiI3NmY2YmQyOS0zYWRmLTQwNjItOWQyNy01Yzg1ODRmODQxZDEifQ.rTTJ715Um-eggMee5nx8_HdGHJlipVb2w-wfnv2_2vw' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Media free style.","maxScore":83,"minScore":24,"description":"Kind race by street fly message.","estimatedTime":"6 weeks","previewFileId":"e8e09e06-6836-4930-ba89-0f066e551ee4","createdByUserId":"76f6bd29-3adf-4062-9d27-5c8584f841d1"}'

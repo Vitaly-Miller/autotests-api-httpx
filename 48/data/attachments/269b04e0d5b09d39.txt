@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDAzOjE5OjUxLjA0NTY2OCIsInVzZXJfaWQiOiJhMzU0ZjczNy1jZTAzLTRlODctYTllNy02NTkyYjZjN2U1NWEifQ.XEic5wbhqsGBoBvxWuw7I8f_Vh7HuU3RXecBLzWOkKI' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Allow impact behavior campaign citizen continue.","courseId":"ffdd6aae-690f-405f-a06e-8b594eb10e20","maxScore":71,"minScore":19,"orderIndex":5766,"description":"Hear real eye senior enough on people.","estimatedTime":"2 weeks"}'

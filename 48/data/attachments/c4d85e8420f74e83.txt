@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDAzOjE5OjQ3LjIxMTI5NyIsInVzZXJfaWQiOiJhNDA4MjdiYy04NzE3LTQ1MjYtYWNhOC00OWMzZTk2MDlhNWIifQ.dFi822LBO1KHAwiO3sbEeF8N816JFcaSSOoBn7pWVbk' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Safe represent treatment arrive fine.","courseId":"2167519b-11fe-44d5-a358-c82ab52f7cd3","maxScore":73,"minScore":14,"orderIndex":9432,"description":"Since pressure dinner race scientist.","estimatedTime":"2 weeks"}'

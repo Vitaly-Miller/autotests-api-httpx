@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjAyOjEwLjI0MjUwNyIsInVzZXJfaWQiOiI2NmVhNWFkMy1hYzBjLTQwYTMtODExMi0wYzkwYWJlOTM0ODcifQ.LeEuJKLZyT2rM0B347sae2u04uSqtoYN8Tz3wOfTLao' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Individual rate that special.","maxScore":65,"minScore":7,"description":"Important focus high prepare office.","estimatedTime":"7 weeks","previewFileId":"c09ef488-14bf-4108-8726-1c503f5f944c","createdByUserId":"66ea5ad3-ac0c-40a3-8112-0c90abe93487"}'

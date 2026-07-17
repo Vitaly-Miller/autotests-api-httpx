@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "ffdd6aae-690f-405f-a06e-8b594eb10e20",
+    "title": "Only difference something himself opportunity.",
+    "maxScore": 73,
+    "minScore": 10,
+    "description": "Anything media add long guess drug fill focus.",
+    "previewFile": {
+      "id": "5e6b363e-54b5-4b8b-8bf7-475a6ce4ea54",
+      "filename": "file_7270.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_7270.png"
+    },
+    "estimatedTime": "6 weeks",
+    "createdByUser": {
+      "id": "a354f737-ce03-4e87-a9e7-6592b6c7e55a",
+      "email": "test_9754bde3@example.com",
+      "lastName": "Christensen",
+      "firstName": "Karen",
+      "middleName": "Brandon"
+    }
+  }
+}

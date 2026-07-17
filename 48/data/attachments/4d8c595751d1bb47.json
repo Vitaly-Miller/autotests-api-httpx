@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "b4cedeca-c22c-4bc4-94dd-282edb4e91e3",
+    "title": "Nation gun provide let.",
+    "maxScore": 100,
+    "minScore": 16,
+    "description": "War white would official pick central.",
+    "previewFile": {
+      "id": "2c52a1c1-118c-4276-8a7a-c6a59f4ec186",
+      "filename": "file_1680.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_1680.png"
+    },
+    "estimatedTime": "5 weeks",
+    "createdByUser": {
+      "id": "21a385ae-1928-440b-857b-4818360133e6",
+      "email": "test_f2424074@example.com",
+      "lastName": "Dennis",
+      "firstName": "Erin",
+      "middleName": "Ashlee"
+    }
+  }
+}

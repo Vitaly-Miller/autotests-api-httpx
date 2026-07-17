@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjAyOjEzLjA0NDg2NyIsInVzZXJfaWQiOiIyN2QyN2Q2NS1mNzAwLTRmNzUtYmQ1YS0zMzU5ZGVlMjk5MWQifQ.NdvZsKTudJv0Kdi_dXcO3BiRAAP3MwPg61X5Gg96LpA' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Catch return movie claim house.","maxScore":77,"minScore":22,"description":"Become wall recently same leave they show just.","estimatedTime":"2 weeks","previewFileId":"8cbcf6cb-467c-4866-b68b-4d281943af24","createdByUserId":"27d27d65-f700-4f75-bd5a-3359dee2991d"}'

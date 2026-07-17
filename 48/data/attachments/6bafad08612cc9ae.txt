@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDAzOjE5OjQ4Ljc4MDEyMCIsInVzZXJfaWQiOiI4YjliY2IyOS0zZDhjLTQ3ZjUtYWQ0OC1kN2JlNzM3NDI3MDMifQ.5BPz6-AqTftfeu7ADmh7um42DP_AarLVTPIv8AusXSM' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Easy space enter cold.","maxScore":99,"minScore":1,"description":"You television risk its next cost under four.","estimatedTime":"3 weeks","previewFileId":"43db6a46-7bbd-42ea-ae77-e16e670463f0","createdByUserId":"8b9bcb29-3d8c-47f5-ad48-d7be73742703"}'

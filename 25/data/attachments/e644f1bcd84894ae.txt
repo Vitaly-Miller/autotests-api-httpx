@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/exercises \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjAyOjA4LjQ5NTE2MCIsInVzZXJfaWQiOiIzM2Y3OTZkYS1iZjJkLTQ0NzQtYTZiNS1iY2RjZjJjNWE2OTIifQ.mehHFNb0rF2b9fEukwiIVtF5N3O8RbWljHbQ6si5xjw' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Relationship government also matter of wish.","courseId":"0bf6da6b-e423-43c4-b2fa-cab82c6c2113","maxScore":54,"minScore":29,"orderIndex":8839,"description":"Only population discussion season during.","estimatedTime":"6 weeks"}'

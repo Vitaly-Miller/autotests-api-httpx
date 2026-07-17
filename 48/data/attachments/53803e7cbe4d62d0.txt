@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDAzOjE5OjUyLjYwMzUyNiIsInVzZXJfaWQiOiIyMWEzODVhZS0xOTI4LTQ0MGItODU3Yi00ODE4MzYwMTMzZTYifQ.AgJsxgWquu4Fi6NCva6Q0DXEHtZycKXRxKB_0Y1HUJ4' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Nation gun provide let.","maxScore":100,"minScore":16,"description":"War white would official pick central.","estimatedTime":"5 weeks","previewFileId":"2c52a1c1-118c-4276-8a7a-c6a59f4ec186","createdByUserId":"21a385ae-1928-440b-857b-4818360133e6"}'

@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDAzOjE5OjQyLjM5NjU5OCIsInVzZXJfaWQiOiI3MmFmOWE5MC0zY2RjLTQ5NTAtYjZlYS0wNmYwYmU5Y2ViNGMifQ.j5OLGJnHblsP4vfg7WNqWMXr5j1-6uGv03Nq3XBjHAc' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Dinner provide economy really.","maxScore":55,"minScore":20,"description":"Baby any him thing toward. See sense way issue.","estimatedTime":"6 weeks","previewFileId":"52319c94-3897-4301-8b92-7d88004a5b7c","createdByUserId":"72af9a90-3cdc-4950-b6ea-06f0be9ceb4c"}'
