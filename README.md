@@ -10,7 +10,7 @@ Built with **Python**, **HTTPX**, **Pytest**, **Pydantic**, **Allure**, **Faker*
 ---
 - <img src="https://allurereport.org/svg/logo-report-sign.svg" height="12"> [My Allure Report](https://vitaly-miller.github.io/autotests-api-httpx/) — test results with history, published on GitHub Pages
 - 📊 [My API Coverage Report](https://vitaly-miller.github.io/autotests-api-httpx/coverage.html) — endpoint coverage measured against the OpenAPI spec
-- <img src="https://icon.icepanel.io/Technology/svg/Swagger.svg"  height="12"> [API Documentation (Swagger UI)](https://vitaly-miller.github.io/autotests-api-httpx/swagger.html) — interactive docs of the API under test
+- <img src="https://icon.icepanel.io/Technology/svg/Swagger.svg"  height="13"> [API Documentation (Swagger UI)](https://vitaly-miller.github.io/autotests-api-httpx/swagger.html) — interactive docs of the API under test
 - 👨🏻‍💻 [My Code](https://github.com/Vitaly-Miller/autotests-api-httpx) — source code on GitHub
 ---
 
@@ -47,7 +47,7 @@ Built with **Python**, **HTTPX**, **Pytest**, **Pydantic**, **Allure**, **Faker*
   an API client fixture (v.2), parametrized (v.3), and fully manual (v.4); the `v.1`–`v.4` titles
   are visible in the Allure Report, making the implementations easy to compare side by side
 
-### ⚙️ CI/CD
+### ♾️ CI/CD
 - **GitHub Actions pipeline** — starts a live API server, runs the full suite, and publishes the
   Allure and coverage reports to GitHub Pages with history preserved between runs
 
@@ -67,7 +67,6 @@ Built with **Python**, **HTTPX**, **Pytest**, **Pydantic**, **Allure**, **Faker*
 ├─ config.py         # Typed settings loaded from .env via pydantic-settings
 ├─ conftest.py       # Root fixtures (via Pytest Plugins)
 └─ pytest.ini        # Pytest configuration and markers
-
 ```
 ---
 ## Getting Started
@@ -144,7 +143,7 @@ python -m pytest --reruns 2       # retry flaky tests (pytest-rerunfailures)
 
 ## Reports
 
-### <img src="https://allurereport.org/svg/logo-report-sign.svg" height="12"> Allure Report
+### <img src="https://allurereport.org/svg/logo-report-sign.svg" height="14"> Allure Report
 
 ```bash
 allure serve allure-results
