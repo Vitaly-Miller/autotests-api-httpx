@@ -8,9 +8,9 @@ application with users, courses, exercises and file storage.
 Built with **Python**, **HTTPX**, **Pytest**, **Pydantic**, **Allure**, **Faker** and **Swagger Coverage Tool**.
 
 ---
-- <img src="https://allurereport.org/svg/logo-report-sign.svg" height="12" alt=""> [My Allure Report](https://vitaly-miller.github.io/autotests-api-httpx/) — test results with history, published on GitHub Pages
+- <img src="https://allurereport.org/svg/logo-report-sign.svg" height="13" align="middle" alt=""> [ My Allure Report](https://vitaly-miller.github.io/autotests-api-httpx/) — test results with history, published on GitHub Pages
 - 📊 [My API Coverage Report](https://vitaly-miller.github.io/autotests-api-httpx/coverage.html) — endpoint coverage measured against the OpenAPI spec
-- <img src="https://icon.icepanel.io/Technology/svg/Swagger.svg"  height="13" alt=""> [API Documentation (Swagger UI)](https://vitaly-miller.github.io/autotests-api-httpx/swagger.html) — interactive docs of the API under test
+- <img src="https://icon.icepanel.io/Technology/svg/Swagger.svg" height="13" align="middle" alt=""> [API Documentation (Swagger UI)](https://vitaly-miller.github.io/autotests-api-httpx/swagger.html) — interactive docs of the API under test
 - 👨🏻‍💻 [My Code](https://github.com/Vitaly-Miller/autotests-api-httpx) — source code on GitHub
 ---
 
