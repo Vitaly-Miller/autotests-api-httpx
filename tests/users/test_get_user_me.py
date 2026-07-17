@@ -27,7 +27,7 @@ from tools.tool import Tool
 @allure.severity(allure.severity_level.NORMAL)       # ] Allure Severity
 #-----------------------------------------------------------------------------------------------------------------------
 class TestGetUserMe:
-    @allure.title('Get User Me (v.1 - Через фикстуру полного цикла)')                 # Allure step Title
+    @allure.title('Get User Me (v.1 - Через фикстуру полного цикла)')
     def test_get_user_me_1(self, get_user_me_api: httpx.Response):
         response = get_user_me_api                                                    # Сохраняем ответ API-фикстуры (httpx.Response)
         response_model = CreateUserResponseSchema.model_validate_json(response.text)  # httpx.Response —> Pydantic-model (parsing-deserialize)
@@ -40,8 +40,7 @@ class TestGetUserMe:
         validate_json_schema(response, GetUserMeResponseSchema)       # JSON schema validation
 
 
-
-    @allure.title('Get User Me (v.2 - Через фикстуру получения экземпляра UsersClientPrivate)')  # Allure step Title
+    @allure.title('Get User Me (v.2 - Через фикстуру получения экземпляра UsersClientPrivate)')
     def test_get_user_me_2(self, users_client_private: UsersClientPrivate):
         response = users_client_private.get_user_me_api()                             # ▶ Запрос через API-метод
         response_model = CreateUserResponseSchema.model_validate_json(response.text)  # httpx.Response —> Pydantic-model (parsing-deserialize)
@@ -54,9 +53,8 @@ class TestGetUserMe:
         validate_json_schema(response, GetUserMeResponseSchema)       # JSON schema validation
 
 
-
 #------------------------------------------------ All manual (example) -------------------------------------------------
-    @allure.title('Get User Me (v.3 - All manual)')       # Allure step Title
+    @allure.title('Get User Me (v.3 - All manual)')
     def test_get_user_me_3_manual(self):
         #----------------------- Pre-conditions --------------------
         # Create User
@@ -95,6 +93,5 @@ class TestGetUserMe:
             format_checker=jsonschema.FormatChecker()             # Проверка форматов
         )
 
-
 #=======================================================================================================================
-        # Tool.api_report(response)
+        # Tool.api_report(response)          # for PyCharm RUN-console API reporting only

@@ -47,7 +47,7 @@ def validate_json_schema(instance: httpx.Response | dict, schema: type[pydantic.
         )
 
         # Validation
-        logger.info(f'Response JSON Schema validation ({schema.__name__})')    # Logger INFO
+        logger.info(f'Response JSON Schema validation ({schema.__name__})')
         try:
             jsonschema.validate(
                 instance=instance,                         # = Instance (Dict) для валидации

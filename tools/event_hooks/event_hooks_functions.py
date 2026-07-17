@@ -3,8 +3,6 @@ Event Hooks Functions
 
 events_hooks — параметр httpx.Client, позволяющий выполнять дополнительные действия перед Request-запроса или после Response-ответа
 """
-
-
 import httpx
 import json
 import shlex
@@ -98,7 +96,6 @@ def get_api_response_headers(response: httpx.Response):
         ensure_ascii=False                                   # - Не заменять не-ASCII (не-латинские) символы на Unicode
     )
     return response_headers_json
-
 
 
 #========================================================= cURL ========================================================

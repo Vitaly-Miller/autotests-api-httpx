@@ -26,7 +26,7 @@ from tools.tool import Tool
 @allure.severity(allure.severity_level.BLOCKER)           # ] Allure Severity
 #-----------------------------------------------------------------------------------------------------------------------
 class TestAuth:
-    @allure.title('Authentication (v.1 - Через API-фикстуру полного цикла)')               # Allure step Title
+    @allure.title('Authentication (v.1 - Через API-фикстуру полного цикла)')     # Allure step Title
     def test_auth_1(self, auth_api: httpx.Response):
         response = auth_api                                                      # Сохраняем ответ API-фикстуры (httpx.Response)
         response_model = AuthResponseSchema.model_validate_json(response.text)   # httpx.Response —> Pydantic-model (deserialize)
@@ -39,8 +39,7 @@ class TestAuth:
         validate_json_schema(response, AuthResponseSchema)               # JSON schema validation
 
 
-
-    @allure.title('Authentication (v.2 - Через фикстуры: create_user + auth_client)')              # Allure step Title
+    @allure.title('Authentication (v.2 - Через фикстуры: create_user + auth_client)')    # Allure step Title
     def test_auth_2(self, create_user: CreateUserSchema, auth_client: AuthClient):
         auth_data = AuthDataSchema(                            # Pydantic-model with fake-data (Email и Password),...
             email=create_user.email,                           # ... замена default на —> реальное значение из фикстуры
@@ -58,4 +57,4 @@ class TestAuth:
 
 
 #=======================================================================================================================
-        # Tool.api_report(response)
+        # Tool.api_report(response)          # for PyCharm RUN-console API reporting only

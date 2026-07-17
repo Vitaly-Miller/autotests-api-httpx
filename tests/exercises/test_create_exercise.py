@@ -29,7 +29,7 @@ from tools.tool import Tool
 @allure.severity(allure.severity_level.NORMAL)                # ] Allure Severity
 #-----------------------------------------------------------------------------------------------------------------------
 class TestCreateExercise:
-    @allure.title('Create Exercise (v.1 - Через API-фикстуру полного цикла)')  # Allure step Title
+    @allure.title('Create Exercise (v.1 - Через API-фикстуру полного цикла)')
     def test_create_exercise_1(self, create_exercise_api: httpx.Response):     # Через API-фикстуру полного цикла        ┐
         response = create_exercise_api                                         # Сохраняем ответ API-фикстуры            ┘
         response_model = CreateExerciseResponseSchema.model_validate_json(response.text)           # httpx.Response —> Pydantic-model (deserialize)
@@ -44,8 +44,7 @@ class TestCreateExercise:
         validate_json_schema(response, CreateExerciseResponseSchema)         # JSON Schema validation
 
 
-
-    @allure.title('Create Exercise (v.2 - Через фикстуры: exercises_client, create_course)')  # Allure step Title
+    @allure.title('Create Exercise (v.2 - Через фикстуры: exercises_client, create_course)')
     def test_create_exercise_2(                                       #                                                  ─┐
             self,                                                     #                                                   │
             exercises_client: ExercisesClient,                        # Фикстура получения экземпляра ExercisesClient()   │
@@ -58,13 +57,13 @@ class TestCreateExercise:
         response_model = CreateExerciseResponseSchema.model_validate_json(response.text)  # httpx.Response —> Pydantic-model (deserialize)
 
         # Assertions
-        assert_status_code(response.status_code, http.HTTPStatus.OK)         # Status Code: 200
-        assert_request_method(response.request.method, http.HTTPMethod.POST) # Method: POST
-        assert_create_exercise_response_non_empty(response_model)                           # Response data is non-empty
+        assert_status_code(response.status_code, http.HTTPStatus.OK)           # Status Code: 200
+        assert_request_method(response.request.method, http.HTTPMethod.POST)   # Method: POST
+        assert_create_exercise_response_non_empty(response_model)                             # Response data is non-empty
         assert_create_exercise_response(response_model, create_exercise_data) # Response data = Request data
-        assert_exercise_id(response_model)                                                  # Exercise-ID validation
-        validate_json_schema(response, CreateExerciseResponseSchema)        # JSON Schema validation
+        assert_exercise_id(response_model)                                                    # Exercise-ID validation
+        validate_json_schema(response, CreateExerciseResponseSchema)           # JSON Schema validation
 
 
 #=======================================================================================================================
-        # Tool.api_report(response)
+        # Tool.api_report(response)          # for PyCharm RUN-console API reporting only

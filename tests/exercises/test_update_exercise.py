@@ -24,7 +24,7 @@ from tools.tool import Tool
 @allure.severity(allure.severity_level.NORMAL)                # ] Allure Severity
 #-----------------------------------------------------------------------------------------------------------------------
 class TestUpdateExercise:
-    @allure.title('Update Exercise (v.1 - Через API-фикстуру полного цикла)') # Allure step Title
+    @allure.title('Update Exercise (v.1 - Через API-фикстуру полного цикла)')
     def test_update_exercise_1(self, update_exercise_api: httpx.Response):    # Через API-фикстуру полного цикла
         response = update_exercise_api                                        # Сохраняем ответ API-фикстуры
 
@@ -34,8 +34,7 @@ class TestUpdateExercise:
         validate_json_schema(response, UpdateExerciseResponseSchema)          # Validate JSON schema
 
 
-
-    @allure.title('Update Exercise (v.2 - Через фикстуры: exercises_client, create_exercise)')  # Allure step Title
+    @allure.title('Update Exercise (v.2 - Через фикстуры: exercises_client, create_exercise)')
     def test_update_exercise_2(self, exercises_client: ExercisesClient, create_exercise: CreateExerciseSchema):
         new_exercise_data = UpdateExerciseRequestSchema()       # Pydantic-model with fake-data (Update ALL data)
         response = exercises_client.update_exercise_api(        # ▶ Запрос через API-метод
@@ -51,4 +50,4 @@ class TestUpdateExercise:
 
 
 #=======================================================================================================================
-        # Tool.api_report(response)
+        # Tool.api_report(response)          # for PyCharm RUN-console API reporting only

@@ -20,9 +20,9 @@ from tools.tool import Tool
 @allure.severity(allure.severity_level.NORMAL)                # ] Allure Severity
 #-----------------------------------------------------------------------------------------------------------------------
 class TestGetExercises:
-    @allure.title('Get Exercises (v.1 - Через API-фикстуры: exercises_client, create_exercise)')  # Allure step Title
+    @allure.title('Get Exercises')
     def test_get_exercises(self, create_exercise_api: httpx.Response, get_exercises_api: httpx.Response):
-        response = get_exercises_api                                              # Сохраняем ответ API-фикстуры
+        response = get_exercises_api                                                     # Сохраняем ответ API-фикстуры
 
         # Assertions
         assert_status_code(response.status_code, http.HTTPStatus.OK)          # Status code: 200
@@ -30,5 +30,5 @@ class TestGetExercises:
 
 
 #=======================================================================================================================
-        # Tool.api_report(create_exercise_api)
-        # Tool.api_report(get_exercises_api)
+        # Tool.api_report(create_exercise_api)        # for PyCharm RUN-console API reporting only
+        # Tool.api_report(get_exercises_api)          # for PyCharm RUN-console API reporting only

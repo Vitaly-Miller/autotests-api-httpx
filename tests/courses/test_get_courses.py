@@ -25,7 +25,7 @@ from tools.tool import Tool
 @allure.severity(allure.severity_level.NORMAL)                # ] Allure Severity
 #-----------------------------------------------------------------------------------------------------------------------
 class TestGetCourses:
-    @allure.title('Get Courses (v.1 - Через фикстуру полного цикла)')                 # Allure step Title
+    @allure.title('Get Courses (v.1 - Через фикстуру полного цикла)')
     def test_get_courses_1(self, create_course: CreateCourseSchema, get_courses_api: httpx.Response):
         response = get_courses_api                                                    # Сохранение ответа API-фикстуры
         response_model = GetCoursesResponseSchema.model_validate_json(response.text)  # httpx.Response —> Pydantic-model (deserialize)
@@ -39,8 +39,7 @@ class TestGetCourses:
         validate_json_schema(response, GetCoursesResponseSchema)     # JSON Schema validation
 
 
-
-    @allure.title('Get Courses (v.1 - Через Pydantic-фикстуры)')                     # Allure step Title
+    @allure.title('Get Courses (v.1 - Через Pydantic-фикстуры)')
     def test_get_courses_2(
             self,
             courses_client: CoursesClient,
@@ -62,4 +61,4 @@ class TestGetCourses:
 
 
 #=======================================================================================================================
-        # Tool.api_report(response)
+        # Tool.api_report(response)          # for PyCharm RUN-console API reporting only

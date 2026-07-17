@@ -26,7 +26,7 @@ from tools.tool import Tool
 @allure.severity(allure.severity_level.NORMAL)                # ] Allure Severity
 #-----------------------------------------------------------------------------------------------------------------------
 class TestCreateCourse:
-    @allure.title('Create Course (v.1 - Через API-фикстуру полного цикла)')         # Allure step Title
+    @allure.title('Create Course (v.1 - Через API-фикстуру полного цикла)')
     def test_create_course_1(self, create_course_api: httpx.Response):              # Через API-фикстуру полного цикла
         response = create_course_api                                                # Сохраняем ответ API-фикстуры
         response_model = CreateCourseResponseSchema.model_validate_json(response.text)           # httpx.Response —> Pydantic-model (deserialize)
@@ -39,8 +39,7 @@ class TestCreateCourse:
         validate_json_schema(response, CreateCourseResponseSchema)              # JSON Schema validation
 
 
-
-    @allure.title('Create Course (v.2 - Через Pydantic-фикстуры)')   # Allure step Title
+    @allure.title('Create Course (v.2 - Через Pydantic-фикстуры)')
     def test_create_course_2(
             self,
             courses_client: CoursesClient,                           # Фикстура получения экземпляра CoursesClient()
@@ -52,7 +51,6 @@ class TestCreateCourse:
             previewFileId=create_file.file_id,                       # Fake data —> Реальные данные из фикстуры
             createdByUserId=create_user.user_id                      # Fake data —> Реальные данные из фикстуры
         )
-
         response = courses_client.create_course_api(create_course_data_model)           # ▶ Запрос через API-метод
         response_model = CreateCourseResponseSchema.model_validate_json(response.text)  # httpx.Response —> Pydantic-model (deserialize)
 
@@ -64,4 +62,4 @@ class TestCreateCourse:
 
 
 #=======================================================================================================================
-        # Tool.api_report(response)
+        # Tool.api_report(response)          # for PyCharm RUN-console API reporting only

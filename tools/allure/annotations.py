@@ -7,7 +7,7 @@ from enum import StrEnum
 # ⚠️Python 3.11- ⮕ class ...(str, Enum):
 # ⚠️Python 3.11+ ⮕ class ...(StrEnum):
 
-#-------------------------------------------------------- Tags ---------------------------------------------------------
+#----------------------------------------------------- Allure Tags -----------------------------------------------------
 # @allure.tag()
 class Tag(StrEnum):
     USERS = 'USERS'
@@ -29,7 +29,7 @@ class Tag(StrEnum):
     PARAMETRIZE = 'PARAMETRIZE'
 
 
-#------------------------------------------------ Behaviors / Suites ---------------------------------------------------
+#---------------------------------------------- Allure Behaviors / Suites ----------------------------------------------
 # @allure.epic() / @allure.parent_suite()
 class Epic(StrEnum):
     API = 'API'

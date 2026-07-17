@@ -38,7 +38,7 @@ class TestCreateFile:
         assert_status_code(response.status_code, http.HTTPStatus.OK)          # Status code: 200
         assert_request_method(response.request.method, http.HTTPMethod.POST)  # Method: POST
         assert_create_file_response_non_empty(response_model)                                # Response data is non-empty
-        assert_create_file_response(response_model,file_data)           # Response data = Request data  (multipart/form-data)
+        assert_create_file_response(response_model,file_data)                # Response data = Request data  (multipart/form-data)
         assert_file_id(response_model)                                                       # File-ID validation
         validate_json_schema(response, CreateFileResponseSchema)              # JSON schema validation
 
@@ -56,7 +56,7 @@ class TestCreateFile:
 @allure.severity(allure.severity_level.NORMAL)                            # ] Allure Severity
 #-----------------------------------------------------------------------------------------------------------------------
 class TestCreateFileNegative:
-    @allure.title('Create File with EMPTY File Name (negative)')                    # Allure step Title
+    @allure.title('Create File with EMPTY File Name (negative)')
     def test_negative_create_file_empty_filename(self, files_client: FilesClient):
         create_file_data = CreateFileRequestSchema(                                 # Pydantic-model with fake-data...
            filename=''                                                              # ... + EMPTY File Name
@@ -70,8 +70,7 @@ class TestCreateFileNegative:
         validate_json_schema(response, ErrorResponseSchema)         # JSON schema validation
 
 
-
-    @allure.title('Create File with EMPTY Directory (negative)')                    # Allure step Title
+    @allure.title('Create File with EMPTY Directory (negative)')
     def test_negative_create_file_empty_directory(self, files_client: FilesClient):
         create_file_data = CreateFileRequestSchema(                                 # Pydantic-model with fake-data...
            directory=''                                                             # ... + EMPTY Directory
@@ -86,4 +85,4 @@ class TestCreateFileNegative:
 
 
 #=======================================================================================================================
-        # Tool.api_report(response)
+        # Tool.api_report(response)          # for PyCharm RUN-console API reporting only

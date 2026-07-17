@@ -14,8 +14,7 @@ from tools.assertions.base_assert import (
 logger = get_logger('AUTH-ASSERT')
 
 #=======================================================================================================================
-# Auth Response data is non-empty
-@allure.step('Auth Response data is non-empty')                                 # Allure step title
+@allure.step('Auth Response data is non-empty')
 def assert_auth_response_non_empty(response: AuthResponseSchema):
     """
     Auth Response data is non-empty
@@ -23,15 +22,13 @@ def assert_auth_response_non_empty(response: AuthResponseSchema):
     :param response: Pydantic-model (AuthResponseSchem)
     :raise AssertionError
     """
-    logger.info('Auth Response data is non-empty')                              # Logger INFO
+    logger.info('Auth Response data is non-empty')
     assert_is_value(response.token.token_type, 'token_type')
     assert_is_value(response.token.access_token, 'access_token')
     assert_is_value(response.token.refresh_token, 'refresh_token')
 
 
-#-----------------------------------------------------------------------------------------------------------------------
-# Tokens validation
-@allure.step('Tokens validation')                                               # Allure step title
+@allure.step('Tokens validation')
 def assert_token(response: AuthResponseSchema):
     """
     Tokens validation
@@ -44,28 +41,24 @@ def assert_token(response: AuthResponseSchema):
     :param response: Pydantic-model (AuthResponseSchema)
     :raise AssertionError
     """
-    logger.info('Tokens validation')                                            # Logger INFO
-    # Access Token type = 'bearer'
-    assert_equal(
+    logger.info('Tokens validation')
+    assert_equal(                              # Access Token type = 'bearer'
         response.token.token_type,
         'bearer',
         'token_type')
 
-    # Access token ≠ Refresh token:
-    assert_not_equal(
+    assert_not_equal(                          # Access token ≠ Refresh token
         response.token.access_token,
         'access_token',
         response.token.refresh_token,
         'refresh_token')
 
-    # Access token length = 199 chars
-    assert_length(
+    assert_length(                             # Access token length = 199 chars
         response.token.access_token,
         199,
         'access_token')
 
-    # Refresh token length = 199 chars
-    assert_length(
+    assert_length(                             # Refresh token length = 199 chars
         response.token.refresh_token,
         199,
         'refresh_token')

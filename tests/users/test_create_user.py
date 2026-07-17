@@ -30,7 +30,7 @@ from tools.tool import Tool
 @allure.severity(allure.severity_level.BLOCKER)            # ] Allure Severity
 #-----------------------------------------------------------------------------------------------------------------------
 class TestCreateUser:
-    @allure.title('Create User (v.1 - Через фикстуру полного цикла)')                          # Allure step Title
+    @allure.title('Create User (v.1 - Через фикстуру полного цикла)')
     def test_create_user_1(self, create_user_api: httpx.Response):
         response = create_user_api                                                             # Сохраняем ответ API-фикстуры (httpx.Response)
         response_model = CreateUserResponseSchema.model_validate_json(response.text)           # httpx.Response —> Pydantic-model (parsing-deserialize)
@@ -40,31 +40,30 @@ class TestCreateUser:
         assert_status_code(response.status_code, http.HTTPStatus.OK)            # Status code: 200
         assert_request_method(response.request.method, http.HTTPMethod.POST)    # Method: POST
         assert_create_user_response_non_empty(response_model)                                  # Response data is non-empty
-        assert_create_user_response(response_model,request_model)         # Response data = Request data (request_model)
+        assert_create_user_response(response_model,request_model)             # Response data = Request data (request_model)
         assert_user_id(response_model)                                                         # User-ID validation
         validate_json_schema(response, CreateUserResponseSchema)               # JSON schema validation
 
 
-
-    @allure.title('Create User (v.2 - Через фикстуру UsersClientPublic)')                      # Allure step Title
+    @allure.title('Create User (v.2 - Через фикстуру UsersClientPublic)')
     def test_create_user_2(self, users_client_public: UsersClientPublic):
-        create_user_data = CreateUserRequestSchema()                                           # Pydantic-model with fake-data
-        response = users_client_public.create_user_api(create_user_data)                       # ▶ Запрос через API-метод
-        response_model = CreateUserResponseSchema.model_validate_json(response.text)           # httpx.Response —> Pydantic-model (parsing-deserialize)
+        create_user_data = CreateUserRequestSchema()                                    # Pydantic-model with fake-data
+        response = users_client_public.create_user_api(create_user_data)                # ▶ Запрос через API-метод
+        response_model = CreateUserResponseSchema.model_validate_json(response.text)    # httpx.Response —> Pydantic-model (parsing-deserialize)
 
         # Assertions
         assert_status_code(response.status_code, http.HTTPStatus.OK)            # Status code: 200
         assert_request_method(response.request.method, http.HTTPMethod.POST)    # Method: POST
         assert_create_user_response_non_empty(response_model)                                  # Response data is non-empty
-        assert_create_user_response(response_model, create_user_data)     # Response data = Request data (create_user_data)
+        assert_create_user_response(response_model, create_user_data)         # Response data = Request data (create_user_data)
         assert_user_id(response_model)                                                         # User-ID validation
         validate_json_schema(response, CreateUserResponseSchema)               # JSON schema validation
 
 
 
-    @allure.tag(Tag.PARAMETRIZE)                                   # Allure Tag
-    @allure.title('Create User (v.3 - Email parametrize 3-in-1)')  # Allure step Title
-    @pytest.mark.parametrize(                                      # Parametrize Email domain (3-in-1)
+    @allure.title('Create User (v.3 - Email parametrize 3-in-1)')    # Allure step Title
+    @allure.tag(Tag.PARAMETRIZE)                                     # Allure Tag
+    @pytest.mark.parametrize(                                        # Parametrize Email domain (3-in-1)
         'domain', [
             'amazon.com',
             'gmail.com',
@@ -72,29 +71,28 @@ class TestCreateUser:
         ]
     )
     def test_create_user_3_params(self, domain: str, users_client_public: UsersClientPublic):
-        create_user_data = CreateUserRequestSchema(                                # Pydantic-model with fake-data, ...
-            email=fake.email(domain=domain)                                        # ... значения Email-домена из parametrize (3-in-1)
+        create_user_data = CreateUserRequestSchema(                # Pydantic-model with fake-data, ...
+            email=fake.email(domain=domain)                        # ... значения Email-домена из parametrize (3-in-1)
         )
         response = users_client_public.create_user_api(create_user_data)               # ▶ Запрос через API-метод
-        response_model = CreateUserResponseSchema.model_validate_json(response.text)   # httpx.Response —> Pydantic-model (parsing-deserialize)
+        response_model = CreateUserResponseSchema.model_validate_json(response.text)   # httpx.Response —> Pydantic-model (deserialize)
 
         # Assertions
         assert_status_code(response.status_code, http.HTTPStatus.OK)            # Status code: 200
         assert_request_method(response.request.method, http.HTTPMethod.POST)    # Method: POST
-        assert_create_user_response_non_empty(response_model)                                  # Response data is non-empty
-        assert_create_user_response(response_model, create_user_data)     # Response data = Request data (create_user_data)
-        assert_user_id(response_model)                                                         # User-ID validation
+        assert_create_user_response_non_empty(response_model)                                 # Response data is non-empty
+        assert_create_user_response(response_model, create_user_data)          # Response data = Request data (create_user_data)
+        assert_user_id(response_model)                                                        # User-ID validation
         validate_json_schema(response, CreateUserResponseSchema)               # JSON schema validation
 
 
-
 #------------------------------------------------ All manual (example) -------------------------------------------------
-    @allure.title('Create User (v.4 - All manual)')                                   # Allure step Title
+    @allure.title('Create User (v.4 - All manual)')
     def test_create_user_4_manual(self):
         users_client_public = get_users_client_public()                               # Получение экземпляра UsersClientPublic
         create_user_data = CreateUserRequestSchema()                                  # Инициализация Pydantic-model с default fake-data нового пользователя
         response = users_client_public.create_user_api(create_user_data)              # ▶ Запрос через API-метод
-        response_model = CreateUserResponseSchema.model_validate_json(response.text)  # httpx.Response —> Pydantic-model (parsing-deserialize) (deserialize for Assertions)
+        response_model = CreateUserResponseSchema.model_validate_json(response.text)  # httpx.Response —> Pydantic-model (deserialize for Assertions)
 
         # Assertions:
         # Base API assertions
@@ -122,6 +120,5 @@ class TestCreateUser:
         )
 
 
-
 #=======================================================================================================================
-        # Tool.api_report(response)
+        # Tool.api_report(response)          # for PyCharm RUN-console API reporting only

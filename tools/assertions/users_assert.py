@@ -10,8 +10,7 @@ from tools.assertions.base_assert import assert_equal, assert_is_value, assert_l
 logger = get_logger('USER-ASSERT')
 
 #=======================================================================================================================
-# Response data is non-empty
-@allure.step('Response data is non-empty')                                        # Allure step title
+@allure.step('Response data is non-empty')
 def assert_create_user_response_non_empty(response: CreateUserResponseSchema):
     """
     Create User Response data is non-empty
@@ -19,7 +18,7 @@ def assert_create_user_response_non_empty(response: CreateUserResponseSchema):
     :param response: Pydantic-model (CreateUserResponseSchema)
     :raise AssertionError
     """
-    logger.info('Response data is non-empty')                                     # Logger INFO
+    logger.info('Response data is non-empty')
     assert_is_value(response.user.id, 'id')
     assert_is_value(response.user.email, 'email')
     assert_is_value(response.user.first_name, 'first_name')
@@ -27,9 +26,7 @@ def assert_create_user_response_non_empty(response: CreateUserResponseSchema):
     assert_is_value(response.user.last_name, 'last_name')
 
 
-
-# Response data = Request data
-@allure.step('Response data = Request data')                                      # Allure step title
+@allure.step('Response data = Request data')
 def assert_create_user_response(response: CreateUserResponseSchema, request: CreateUserRequestSchema):
     """
     Create User Response data = Request data
@@ -38,15 +35,14 @@ def assert_create_user_response(response: CreateUserResponseSchema, request: Cre
     :param request: Pydantic-model (CreateUserRequestSchema)
     :raise AssertionError
     """
-    logger.info('Response data = Request data')                                   # Logger INFO
+    logger.info('Response data = Request data')
     assert_equal(response.user.email,request.email,'email')
     assert_equal(response.user.last_name,request.last_name,'last_name')
     assert_equal(response.user.first_name, request.first_name,'first_name')
     assert_equal(response.user.middle_name,request.middle_name,'middle_ame')
 
 
-# User-ID validation
-@allure.step('User-ID validation')                                                # Allure step title
+@allure.step('User-ID validation')
 def assert_user_id(response: CreateUserResponseSchema):
     """
     User-ID validation
@@ -57,9 +53,9 @@ def assert_user_id(response: CreateUserResponseSchema):
     :param response: Pydantic-model (CreateUserResponseSchema)
     :raise AssertionError
     """
-    logger.info('User-ID validation')                                             # Logger INFO
-    assert_is_value(response.user.id, 'id')                           # User-ID is NOT-empty
-    assert_length(response.user.id, 36, 'id')          # User-ID length = 36 chars
+    logger.info('User-ID validation')
+    assert_is_value(response.user.id, 'id')                    # User-ID is NOT-empty
+    assert_length(response.user.id, 36, 'id')   # User-ID length = 36 chars
 
 
 #=======================================================================================================================

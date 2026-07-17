@@ -17,8 +17,7 @@ logger = get_logger('EXERCISES-ASSERT')
 
 #=======================================================================================================================
 #---------------------------------------------------- Exercise (base) --------------------------------------------------
-# .exercise{} is non-empty (base)
-@allure.step('Exercise values in non-empty')                                     # Allure step title
+@allure.step('Exercise values in non-empty')
 def assert_exercise_non_empty(response: ExerciseSchema):
     """
     .exercise{} is non-empty (base)
@@ -26,7 +25,7 @@ def assert_exercise_non_empty(response: ExerciseSchema):
     :param response: Pydantic-model (ExerciseSchema)
     :raise AssertionError
     """
-    logger.info('Exercise values in non-empty')                                  # Logger INFO
+    logger.info('Exercise values in non-empty')
     assert_is_value(response.id, 'id')
     assert_is_value(response.title, 'title')
     assert_is_value(response.course_id, 'course_id')
@@ -38,8 +37,7 @@ def assert_exercise_non_empty(response: ExerciseSchema):
 
 
 #---------------------------------------------------- Create exercise --------------------------------------------------
-# Response data is non-empty
-@allure.step('Response data is non-empty')                       # Allure step title
+@allure.step('Response data is non-empty')
 def assert_create_exercise_response_non_empty(response: CreateExerciseResponseSchema):
     """
     Create Exercise Response data is non-empty
@@ -49,12 +47,11 @@ def assert_create_exercise_response_non_empty(response: CreateExerciseResponseSc
     :param response: Pydantic-model (CreateExerciseResponseSchema)
     :raise AssertionError
     """
-    logger.info('Create Exercise Response data is non-empty')                    # Logger INFO
-    assert_exercise_non_empty(response.exercise)                                 # передаем exercise{}
+    logger.info('Create Exercise Response data is non-empty')
+    assert_exercise_non_empty(response.exercise)   # передаем объект exercise{}
 
 
-# Response data = Request data
-@allure.step('Response data = Request data')                                    # Allure step title
+@allure.step('Response data = Request data')
 def assert_create_exercise_response(response: CreateExerciseResponseSchema, request: CreateExerciseRequestSchema):
     """
     Created Exercise Response data = Request data
@@ -63,7 +60,7 @@ def assert_create_exercise_response(response: CreateExerciseResponseSchema, requ
     :param request: Pydantic-model (CreateExerciseRequestSchema)
     :raise AssertionError
     """
-    logger.info('Response data = Request data')                                 # Logger INFO
+    logger.info('Response data = Request data')
     assert_equal(response.exercise.title, request.title, 'title')
     assert_equal(response.exercise.course_id, request.course_id, 'course_id')
     assert_equal(response.exercise.max_score, request.max_score, 'max_score')
@@ -73,7 +70,6 @@ def assert_create_exercise_response(response: CreateExerciseResponseSchema, requ
     assert_equal(response.exercise.estimated_time, request.estimated_time, 'estimated_time')
 
 
-# Exercise-ID validation
 @allure.step('Exercise-ID validation')
 def assert_exercise_id(response: CreateExerciseResponseSchema | GetExerciseResponseSchema, exercise_id: str | None = None):
     """
@@ -87,17 +83,15 @@ def assert_exercise_id(response: CreateExerciseResponseSchema | GetExerciseRespo
     :param exercise_id: Exercise-ID / None
     :raise AssertionError
     """
-    logger.info('Exercise-ID validation')                                                  # Logger INFO
+    logger.info('Exercise-ID validation')
     assert_is_value(response.exercise.id, 'exercise_id')                        # NON-empty File-ID
     assert_length(response.exercise.id, 36, 'exercise_id')       # File-ID length = 36 chars
     if exercise_id:                                                                        # Если передать Exercise-ID, то проверяем его:
         assert_equal(response.exercise.id, exercise_id,'exercise_id')  # Actual Exercise-ID = Expected Exercise-ID
 
 
-
 #---------------------------------------------------- Get exercise -----------------------------------------------------
-# Get Exercise Response data is non-empty
-@allure.step('Response data is non-empty')                                         # Allure step title
+@allure.step('Response data is non-empty')
 def assert_get_exercise_response_non_empty(response: GetExerciseResponseSchema):
     """
     Get Exercise Response data is non-empty
@@ -107,13 +101,12 @@ def assert_get_exercise_response_non_empty(response: GetExerciseResponseSchema):
     :param response: Pydantic-model (GetExerciseResponseSchema)
     :raise AssertionError
     """
-    logger.info('Get Exercise Response data is non-empty')                         # Logger INFO
-    assert_exercise_non_empty(response.exercise)                                   # передаем exercise{}
+    logger.info('Get Exercise Response data is non-empty')
+    assert_exercise_non_empty(response.exercise)   # передаем объект exercise{}
 
 
 #--------------------------------------------------- Update exercise ---------------------------------------------------
-# Update Exercise Response data = Request data
-@allure.step('Response data = Request data')                                       # Allure step title
+@allure.step('Response data = Request data')
 def assert_update_exercise_response(response: UpdateExerciseResponseSchema, request: UpdateExerciseRequestSchema):
     """
     Update Exercise Response data = Request data
@@ -122,7 +115,7 @@ def assert_update_exercise_response(response: UpdateExerciseResponseSchema, requ
     :param request: Pydantic-model (UpdateExerciseRequestSchema)
     :raise AssertionError
     """
-    logger.info('Response data = Request data')                                    # Logger INFO
+    logger.info('Response data = Request data')
     assert_equal(response.exercise.title, request.title, 'title')
     assert_equal(response.exercise.max_score, request.max_score, 'max_score')
     assert_equal(response.exercise.min_score, request.min_score, 'min_score')
@@ -131,11 +124,9 @@ def assert_update_exercise_response(response: UpdateExerciseResponseSchema, requ
     assert_equal(response.exercise.estimated_time, request.estimated_time, 'estimated_time')
 
 
-
 #====================================================== NEGATIVE =======================================================
 #---------------------------------------------------- Get exercise -----------------------------------------------------
-# Get File Not Found Error Response by non-existent exercise
-@allure.step('Get File Not Found Error Response by non-existent exercise')            # Allure step title
+@allure.step('Get File Not Found Error Response by non-existent exercise')
 def assert_exercise_not_found_error_response(response: httpx.Response):
     """
     Get File Not Found Error Response by non-existent exercise
@@ -150,7 +141,7 @@ def assert_exercise_not_found_error_response(response: httpx.Response):
     expected_response = NotFoundErrorResponseSchema(
         detail='Exercise not found'                                                   # Expected error message
     )
-    logger.info('Get File Not Found Error Response by non-existent exercise')         # Logger INFO
+    logger.info('Get File Not Found Error Response by non-existent exercise')
     assert_not_found_error_response(actual_response, expected_response)
 
 

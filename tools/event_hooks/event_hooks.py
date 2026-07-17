@@ -3,7 +3,6 @@ Event Hooks (Callback functions)
 
 events_hooks — параметр httpx.Client, позволяющий выполнять дополнительные действия перед Request запроса или после Response
 """
-
 import httpx
 import allure
 from tools.logger import get_logger
@@ -34,7 +33,6 @@ def api_report_event_hook(response: httpx.Response):
         """
     response.read()                                      # Дочитываем тело ответа —
                                                          # — иначе .text/.json() недоступны внутри response event hook
-
     # API Base <=>
     allure.attach(                                       # Allure attachment:
         body=get_api_base(response),                     # - Прикрепляемый объект (функция)
@@ -70,6 +68,7 @@ def api_report_event_hook(response: httpx.Response):
         attachment_type=allure.attachment_type.JSON      # - Тип отображения объекта в отчете
     )
 
+
 #---------------------------------------------------- cURL-command -----------------------------------------------------
 # cURL-command
 def curl_command_event_hook(response: httpx.Response):
@@ -79,7 +78,7 @@ def curl_command_event_hook(response: httpx.Response):
     :param response: httpx.Response, переданный автоматически public/privet httpx-клиентом (builder)
     """
     allure.attach(                                       # Allure attachment:
-        body=make_curl(response.request),   # - Прикрепляемый объект (функция)
+        body=make_curl(response.request),                # - Прикрепляемый объект (функция)
         name='cURL command',                             # - Allure attachment title
         attachment_type=allure.attachment_type.TEXT      # - Тип отображения отчете
     )

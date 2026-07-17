@@ -1,21 +1,10 @@
 """
-Allure environment
+Allure Environment
 """
 from config import settings
 import platform
 
 #=======================================================================================================================
-# v.1
-# def create_allure_environment_file() -> None:
-#     items = [f'{key}={value}' for key, value in settings.model_dump().items()]  # Создаем список из элементов в формате {key}={value}
-#     properties = '\n'.join(items)                                               # Собираем все элементы в единую строку с переносами
-#
-#     # Открываем файл ./allure-results/environment.properties на запись
-#     with open(settings.allure_results_dir.joinpath('environment.properties'), 'w') as file:
-#         file.write(properties)                                                  # Записываем переменные в файл
-
-#=======================================================================================================================
-# v.2
 def create_allure_environment_file() -> None:
     """
     Создает файл environment.properties в папке allure-results.
@@ -41,7 +30,7 @@ def create_allure_environment_file() -> None:
 
     """
 
-    content = '\n'.join(f'{key}={value}' for key, value in properties.items())        # Итерация <properties> и склеивание в строку с переносами
+    content = '\n'.join(f'{key}={value}' for key, value in properties.items())   # Итерация <properties> и склеивание в строку с переносами
     """
     Превращаем dict в текст формата key=value, по одной паре на строку —
     именно такой формат ожидает Allure в файле environment.properties.
@@ -56,9 +45,10 @@ def create_allure_environment_file() -> None:
     (аналог os.path.join, но в стиле pathlib)
     """
 
-    file_path.write_text(content, encoding='utf-8')                                   # Запись в файл
+    file_path.write_text(content, encoding='utf-8')                              # Запись в файл
     """
     write_text() сам открывает файл на запись, пишет content и закрывает файл —
     не нужно вручную делать open(..., 'w') / file.write(...) / закрывать файл
     """
+
 #=======================================================================================================================

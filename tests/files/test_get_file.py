@@ -29,17 +29,16 @@ from tools.tool import Tool
 @allure.severity(allure.severity_level.NORMAL)             # ] Allure Severity
 #-----------------------------------------------------------------------------------------------------------------------
 class TestGetFile:
-    @allure.title('Get File by ID')                                                     # Allure step Title
+    @allure.title('Get File by ID')
     def test_get_file(self, files_client: FilesClient, create_file: CreateFileSchema):
         response = files_client.get_file_api(create_file.file_id)                       # ▶ Запрос через API-метод
-        response_model = GetFileResponseSchema.model_validate_json(response.text)       # httpx.Response —> Pydantic-model (parsing-deserialize)
+        response_model = GetFileResponseSchema.model_validate_json(response.text)       # httpx.Response —> Pydantic-model (deserialize)
 
         # Assertions
         assert_status_code(response.status_code, http.HTTPStatus.OK)          # Status code: 200
         assert_request_method(response.request.method, http.HTTPMethod.GET)   # Method: GET
         assert_file_id(response_model, create_file.file_id)                   # File-ID validation
         validate_json_schema(response, GetFileResponseSchema)                # JSON schema validation
-
 
 
 #====================================================== Negative =======================================================
@@ -54,7 +53,7 @@ class TestGetFile:
 @allure.severity(allure.severity_level.NORMAL)                      # ] Allure Severity
 #-----------------------------------------------------------------------------------------------------------------------
 class TestGetFileNegative:
-    @allure.title('Get File by INVALID File-ID (non-UUID) (negative)')     # Allure step Title
+    @allure.title('Get File by INVALID File-ID (non-UUID) (negative)')
     def test_get_file_by_invalid_file_id(self, files_client: FilesClient):
         invalid_file_id = 'id_123'                                         # Invalid File-ID (non-UUID format)
         response = files_client.get_file_api(invalid_file_id)              # ▶ Запрос через API-метод с Invalid File-ID
@@ -67,7 +66,7 @@ class TestGetFileNegative:
 
 
 
-    @allure.title('Get File by non-existent File-ID (negative)')      # Allure step Title
+    @allure.title('Get File by non-existent File-ID (negative)')
     def test_get_non_existent_file(self, files_client: FilesClient):
         non_existent_file_id = fake.uuid4()                           # Generate Non-Existent File-ID (UUID format)
         response = files_client.get_file_api(non_existent_file_id)    # ▶ Запрос через API-метод с Non-existent File-ID
@@ -78,5 +77,6 @@ class TestGetFileNegative:
         assert_get_file_not_found_error_response(response)                                  # Validation Error Response data
         validate_json_schema(response, NotFoundErrorResponseSchema)         # JSON schema validation
 
+
 #=======================================================================================================================
-        # Tool.api_report(response)
+        # Tool.api_report(response)          # for PyCharm RUN-console API reporting only
