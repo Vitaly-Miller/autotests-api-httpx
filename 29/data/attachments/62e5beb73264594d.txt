@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjQxOjM5LjUzMDA3NSIsInVzZXJfaWQiOiJkNDEwZDk1Mi0zZWQ3LTQzYWYtYmViYS0wMGExYTFmOTc3YjMifQ.UxNAYXaGyeEwHHpl-RlKvdxrJr-rPsI8DJN0DRgrOuk' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Ball carry treat.","maxScore":79,"minScore":21,"description":"We green discuss marriage.","estimatedTime":"7 weeks","previewFileId":"048aa751-5e34-4fb4-a2bd-1790d254f683","createdByUserId":"d410d952-3ed7-43af-beba-00a1a1f977b3"}'

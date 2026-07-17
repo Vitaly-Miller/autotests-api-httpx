@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "7cf7dc9c-bf04-4aca-8671-1e02494f4ab2",
+    "title": "Next suffer morning mother wrong several.",
+    "maxScore": 82,
+    "minScore": 18,
+    "description": "Break method soon art leader.",
+    "previewFile": {
+      "id": "70d4b113-20e2-46e0-b6de-2b2e3381acac",
+      "filename": "file_5587.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_5587.png"
+    },
+    "estimatedTime": "8 weeks",
+    "createdByUser": {
+      "id": "a91be575-15d3-4c8f-8168-92844aa7fe74",
+      "email": "test_bb8300bd@example.com",
+      "lastName": "Nichols",
+      "firstName": "Angela",
+      "middleName": "Christopher"
+    }
+  }
+}

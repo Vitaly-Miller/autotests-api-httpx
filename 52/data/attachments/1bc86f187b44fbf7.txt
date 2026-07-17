@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDE5OjQ5OjIwLjExNzc4NSIsInVzZXJfaWQiOiIyNDMxMDEyYi0yOGUwLTQ2NjYtYWE5YS1hNTA2NDM1MjI0NTUifQ.wxU2qXj7cFFTFoiTyCXiPiIoHgXNhxN5KBIIqpXeugs' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Address section control firm answer.","maxScore":58,"minScore":10,"description":"Turn thousand notice experience.","estimatedTime":"4 weeks","previewFileId":"3e36686e-b7d2-4a73-8a8d-c2131250ddfb","createdByUserId":"2431012b-28e0-4666-aa9a-a50643522455"}'

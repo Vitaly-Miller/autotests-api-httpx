@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDE5OjQ5OjIxLjUxMDc5NiIsInVzZXJfaWQiOiJlZGQ0ZTI2Zi00YzMzLTQ1YzMtYmFjYy00MDBhZWRhNjY2MzkifQ.dDlUs-KlFY3SG5hf8CghVDEbWJfBdsm4cOKlQtERoPk' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Provide western husband.","maxScore":95,"minScore":2,"description":"Physical manager mission subject.","estimatedTime":"5 weeks","previewFileId":"fe026a9a-141e-4d61-99f3-855aaddba737","createdByUserId":"edd4e26f-4c33-45c3-bacc-400aeda66639"}'

@@ -1,7 +1,0 @@
-{
-  "token": {
-    "tokenType": "bearer",
-    "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjQxOjMzLjIwMjkyNCIsInVzZXJfaWQiOiJjMzVmOWVlOS1lMGI5LTRjMzEtOTlhOC1iNjYzYmY0NzZlMjkifQ.EoYW3Namy2bR3zSsvpGqBVYe_nd0TwtvpnEFec5EfBQ",
-    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTEzVDE3OjExOjMzLjIwMzA4MCIsInVzZXJfaWQiOiJjMzVmOWVlOS1lMGI5LTRjMzEtOTlhOC1iNjYzYmY0NzZlMjkifQ.KefLf0skQNfsUc1q6IEDM8AVaAxopHex5MABEdb7ufQ"
-  }
-}

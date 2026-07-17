@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/exercises \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjQxOjM0Ljk4MTUwMCIsInVzZXJfaWQiOiI2MGNhZTZhYi1jNjljLTRkNGMtYjNjZi0yNTU1MGUzOGY1MTcifQ.o_23Z12yRV60ShLkTHGeIHdajRssLhL6WfJ2Cv4sbSU' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Chance each police attorney which.","courseId":"1e29a961-ea5c-431b-b700-c9adf72fc07c","maxScore":96,"minScore":7,"orderIndex":4184,"description":"Raise join magazine say.","estimatedTime":"4 weeks"}'

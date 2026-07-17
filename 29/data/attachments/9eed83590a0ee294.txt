@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjQxOjM4LjExMzkxMCIsInVzZXJfaWQiOiIwYjlkNTQ5Ny1iZjZhLTRkN2EtODI0Ni0yZTZlOTkxZjIwOWMifQ.wMpT7p40Ir7f0x1VnL-QEJx0EGgxJnIB24LqRumQPwg' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Effect simple table can.","maxScore":86,"minScore":16,"description":"Management short trial risk PM.","estimatedTime":"6 weeks","previewFileId":"3386c265-5d20-427a-b90d-c5df2405150e","createdByUserId":"0b9d5497-bf6a-4d7a-8246-2e6e991f209c"}'

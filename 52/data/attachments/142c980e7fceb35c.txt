@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDE5OjQ5OjEzLjA3MTg4MCIsInVzZXJfaWQiOiIzOThkNjUxNC05NTc2LTQwODEtYWIwMi04ZTRlNzhjOTNhZWQifQ.1GwS6wYViNCbJ8y9vuVSV1uY7wRZqTnIK_PyOabEgDY' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Second kid so.","maxScore":100,"minScore":14,"description":"Down who between particularly force perform.","estimatedTime":"2 weeks","previewFileId":"8e9d2108-f03b-47e8-8c92-c379272835a5","createdByUserId":"398d6514-9576-4081-ab02-8e4e78c93aed"}'

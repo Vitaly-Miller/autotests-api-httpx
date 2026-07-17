@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "0147804c-d9fd-4287-8042-160204406b01",
+    "title": "Blood message hundred camera.",
+    "maxScore": 83,
+    "minScore": 13,
+    "description": "Boy budget body another possible visit exactly.",
+    "previewFile": {
+      "id": "c7abb827-7e8e-433f-854e-23b6f5efc982",
+      "filename": "file_2070.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_2070.png"
+    },
+    "estimatedTime": "4 weeks",
+    "createdByUser": {
+      "id": "b6fdbaea-fd08-47ea-941a-f4b8e52df844",
+      "email": "test_1eab060e@example.com",
+      "lastName": "Cruz",
+      "firstName": "Amanda",
+      "middleName": "Michael"
+    }
+  }
+}

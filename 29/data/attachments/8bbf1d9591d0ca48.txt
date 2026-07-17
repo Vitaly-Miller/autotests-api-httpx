@@ -1,5 +1,0 @@
-curl -X PATCH \
-  http://localhost:8000/api/v1/exercises/aca626a6-082c-4369-b08a-7f2b4c86860f \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjQxOjQzLjM3NjI1MCIsInVzZXJfaWQiOiI2YWRiYzE4Ny01ZDVmLTQ1NmEtOWJlNS05NmI0NjY0YTc5YWMifQ.GeCHyBlz-1ncEbl0Nu9O4opuH-t795aVOP_NzJWJ0jw' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Look describe area senior last.","maxScore":82,"minScore":28,"orderIndex":4795,"description":"Five suffer he. Citizen fire use however.","estimatedTime":"2 weeks"}'

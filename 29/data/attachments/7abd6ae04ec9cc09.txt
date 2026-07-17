@@ -1,5 +1,0 @@
-curl -X PATCH \
-  http://localhost:8000/api/v1/exercises/fdb1cae9-d67d-4554-8c04-e606f3a3494a \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjQxOjQ0Ljc4MTA3MyIsInVzZXJfaWQiOiI4ZGM5NjdiYS1hNjBhLTQyOTItOGQ0ZC0zNDYwZmY4MjdlNjQifQ.EzcfvYPbQIjs2fmdEHMyv_r7Qj8IWSb4AmIxopJAqGI' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Oil trial agree.","maxScore":82,"minScore":28,"orderIndex":8861,"description":"Music maintain right southern of star.","estimatedTime":"6 weeks"}'

@@ -1,0 +1,25 @@
+{
+  "courses": [
+    {
+      "id": "6c3c1348-2e19-46cf-b57f-00ab4e1af8f4",
+      "title": "Sometimes single money.",
+      "maxScore": 75,
+      "minScore": 10,
+      "description": "Capital thus important.",
+      "previewFile": {
+        "id": "fbc060fc-a970-43bb-b532-e68ef4627a1f",
+        "filename": "file_3657.png",
+        "directory": "Uploaded",
+        "url": "http://localhost:8000/static/Uploaded/file_3657.png"
+      },
+      "estimatedTime": "3 weeks",
+      "createdByUser": {
+        "id": "aea3f8ff-6962-4648-a6a5-d62c97a40a34",
+        "email": "test_19504035@example.com",
+        "lastName": "Bailey",
+        "firstName": "Thomas",
+        "middleName": "Benjamin"
+      }
+    }
+  ]
+}

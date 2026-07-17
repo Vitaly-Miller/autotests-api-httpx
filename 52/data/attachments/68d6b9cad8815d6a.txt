@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDE5OjQ5OjE3LjMxODc4OCIsInVzZXJfaWQiOiI1NjVkNDE3Mi1iZGI3LTQzNWUtOTViYy03MDMzMTcwZjZjZTMifQ.-O_e6Tsd-RqzRhY8guavTlHB2yzGUjoCKAotAeF7UW0' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Maybe force major.","maxScore":98,"minScore":7,"description":"Control by partner federal until.","estimatedTime":"4 weeks","previewFileId":"c3fdb360-12a0-4c02-b942-c48e6cb50dbf","createdByUserId":"565d4172-bdb7-435e-95bc-7033170f6ce3"}'

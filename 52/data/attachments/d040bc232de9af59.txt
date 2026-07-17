@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDE5OjQ5OjE1LjE4NTgwNCIsInVzZXJfaWQiOiJhZWEzZjhmZi02OTYyLTQ2NDgtYTZhNS1kNjJjOTdhNDBhMzQifQ.k12AnZuw6NpSVkw7bWBIKJrhEZUsvdg6BD9N-q36Nm4' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Sometimes single money.","maxScore":75,"minScore":10,"description":"Capital thus important.","estimatedTime":"3 weeks","previewFileId":"fbc060fc-a970-43bb-b532-e68ef4627a1f","createdByUserId":"aea3f8ff-6962-4648-a6a5-d62c97a40a34"}'

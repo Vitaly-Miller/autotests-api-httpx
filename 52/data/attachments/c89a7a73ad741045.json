@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "968b52b6-8eb4-4c2e-a8ca-e2458eb6221e",
+    "title": "Claim economy idea effect.",
+    "maxScore": 62,
+    "minScore": 12,
+    "description": "Doctor book experience reason.",
+    "previewFile": {
+      "id": "9460a3f1-165d-470b-b00f-878e4be49048",
+      "filename": "file_8588.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_8588.png"
+    },
+    "estimatedTime": "4 weeks",
+    "createdByUser": {
+      "id": "b60385be-c251-4894-844f-cfb29210e460",
+      "email": "test_35d83b17@example.com",
+      "lastName": "Ramirez",
+      "firstName": "David",
+      "middleName": "Mary"
+    }
+  }
+}

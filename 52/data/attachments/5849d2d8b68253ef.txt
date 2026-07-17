@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDE5OjQ5OjI3LjEzMjE1NSIsInVzZXJfaWQiOiI4MTJmMWYyZi0wODE1LTRkMmItYTZmYy1hYzM1YTdmMDRhODIifQ.qDm-qwrUbYNZs2BMUd0_p9KL-1fDKmu3JhU6dsgpuks' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Green your field according who rock.","maxScore":77,"minScore":21,"description":"Up weight how dog there career.","estimatedTime":"3 weeks","previewFileId":"f519d7c7-d39a-412e-9147-d202c6aa9e99","createdByUserId":"812f1f2f-0815-4d2b-a6fc-ac35a7f04a82"}'

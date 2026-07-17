@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "42e6aae9-9767-46cf-8f62-76332635e629",
+    "title": "Green your field according who rock.",
+    "maxScore": 77,
+    "minScore": 21,
+    "description": "Up weight how dog there career.",
+    "previewFile": {
+      "id": "f519d7c7-d39a-412e-9147-d202c6aa9e99",
+      "filename": "file_1295.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_1295.png"
+    },
+    "estimatedTime": "3 weeks",
+    "createdByUser": {
+      "id": "812f1f2f-0815-4d2b-a6fc-ac35a7f04a82",
+      "email": "test_b8709e3f@example.com",
+      "lastName": "Curtis",
+      "firstName": "Aaron",
+      "middleName": "Sara"
+    }
+  }
+}

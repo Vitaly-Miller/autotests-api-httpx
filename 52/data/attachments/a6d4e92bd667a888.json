@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "0c0271a8-5c22-4a39-a7a3-056c3c361251",
+    "title": "Keep race or remain particularly serve.",
+    "maxScore": 87,
+    "minScore": 29,
+    "description": "Base carry whom gun which reflect.",
+    "previewFile": {
+      "id": "415e6726-7113-4920-a88d-16328036a753",
+      "filename": "file_5605.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_5605.png"
+    },
+    "estimatedTime": "8 weeks",
+    "createdByUser": {
+      "id": "bd5b03d3-d636-43f3-a70c-1fde80e3d630",
+      "email": "test_85a36586@example.com",
+      "lastName": "Gonzalez",
+      "firstName": "Amber",
+      "middleName": "Katelyn"
+    }
+  }
+}

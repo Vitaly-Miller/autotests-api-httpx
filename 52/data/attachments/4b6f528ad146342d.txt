@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDE5OjQ5OjE0LjEzNjk1NyIsInVzZXJfaWQiOiI4ZjcyZjlmMy1jNGE0LTRkODItYWVkMS1kNjgyZjY1YjVhODgifQ.GGt29ED0qnguf5SIKlfL6WoJcSSvZy19nFEGjYLH8gI' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Live impact heart fund call bad.","maxScore":80,"minScore":9,"description":"Source film offer fish expert team she until.","estimatedTime":"9 weeks","previewFileId":"b0f9e597-95b4-4d5d-922b-54c4e03e4500","createdByUserId":"8f72f9f3-c4a4-4d82-aed1-d682f65b5a88"}'

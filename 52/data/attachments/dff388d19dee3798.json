@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "a7815203-7a0b-4722-a8c6-9f0bdec6f2fe",
+    "title": "Song north state opportunity.",
+    "maxScore": 62,
+    "minScore": 25,
+    "description": "Eat step believe opportunity only arrive.",
+    "previewFile": {
+      "id": "9aec78d0-20fc-4bbb-8fd4-727b2ba338d0",
+      "filename": "file_6891.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_6891.png"
+    },
+    "estimatedTime": "5 weeks",
+    "createdByUser": {
+      "id": "2b1fa1d1-5571-4888-acf8-640546b9308f",
+      "email": "test_0ac7dd06@example.com",
+      "lastName": "Rivera",
+      "firstName": "Joanna",
+      "middleName": "Susan"
+    }
+  }
+}

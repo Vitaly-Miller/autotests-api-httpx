@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDE5OjQ5OjI1Ljc0MDA2MSIsInVzZXJfaWQiOiJiZDViMDNkMy1kNjM2LTQzZjMtYTcwYy0xZmRlODBlM2Q2MzAifQ.EZ2vsp9xwAZkDARradFYa-YukNxn9lCA8wjgNrMf0vE' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Keep race or remain particularly serve.","maxScore":87,"minScore":29,"description":"Base carry whom gun which reflect.","estimatedTime":"8 weeks","previewFileId":"415e6726-7113-4920-a88d-16328036a753","createdByUserId":"bd5b03d3-d636-43f3-a70c-1fde80e3d630"}'

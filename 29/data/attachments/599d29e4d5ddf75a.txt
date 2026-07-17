@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjQxOjMzLjkyNDI3NyIsInVzZXJfaWQiOiI4YzY1NDNmYi1jNDk3LTRmZmItOTI4ZS05NjcwMWI2Yjk5ZjIifQ.AUJjmQHF9puLbcPmjWtG4idpucUU53VnWs5z33Oi1IA' \
-  -H 'content-type: application/json' \
-  -d '{"title":"First day mother establish.","maxScore":58,"minScore":3,"description":"Instead expect able land word last.","estimatedTime":"9 weeks","previewFileId":"c9c45468-b667-42f6-8bb2-fe5dde97b063","createdByUserId":"8c6543fb-c497-4ffb-928e-96701b6b99f2"}'

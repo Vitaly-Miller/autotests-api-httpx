@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDE5OjQ5OjI4LjIxMzA5MyIsInVzZXJfaWQiOiJhOTFiZTU3NS0xNWQzLTRjOGYtODE2OC05Mjg0NGFhN2ZlNzQifQ.Q2pj-U4JpMi0taAlrR-o1E5FkoZCARpmn1WJElQbYBA' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Nation bit attack.","courseId":"7cf7dc9c-bf04-4aca-8671-1e02494f4ab2","maxScore":75,"minScore":14,"orderIndex":8672,"description":"Who structure market stop treat reduce state.","estimatedTime":"3 weeks"}'

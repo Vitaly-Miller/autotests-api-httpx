@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "ceff687d-5f52-4f37-9f2a-de39ab564799",
+    "title": "If customer on raise environment.",
+    "maxScore": 84,
+    "minScore": 19,
+    "description": "Then action subject very couple management.",
+    "previewFile": {
+      "id": "1cefe79a-9279-4c58-a422-fe9f05857793",
+      "filename": "file_7090.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_7090.png"
+    },
+    "estimatedTime": "2 weeks",
+    "createdByUser": {
+      "id": "8e09936b-6dc3-4cf8-bcf6-aadad54d9e29",
+      "email": "test_b182cca2@example.com",
+      "lastName": "Huang",
+      "firstName": "John",
+      "middleName": "Danielle"
+    }
+  }
+}

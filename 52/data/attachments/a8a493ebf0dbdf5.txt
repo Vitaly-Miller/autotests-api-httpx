@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDE5OjQ5OjIyLjkzMzgwOSIsInVzZXJfaWQiOiJiNmZkYmFlYS1mZDA4LTQ3ZWEtOTQxYS1mNGI4ZTUyZGY4NDQifQ.TT0JIFNZdI41Mpb33yNz32UGlxYMGz_F3tvhv3W0MTU' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Blood message hundred camera.","maxScore":83,"minScore":13,"description":"Boy budget body another possible visit exactly.","estimatedTime":"4 weeks","previewFileId":"c7abb827-7e8e-433f-854e-23b6f5efc982","createdByUserId":"b6fdbaea-fd08-47ea-941a-f4b8e52df844"}'

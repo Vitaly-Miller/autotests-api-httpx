@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjQxOjQzLjcwNTY1NSIsInVzZXJfaWQiOiI2YWRiYzE4Ny01ZDVmLTQ1NmEtOWJlNS05NmI0NjY0YTc5YWMifQ.ixscZX8w2IjXmZztHofoQ6YdaYvPEe6N-PL0pmt986Y' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Still bag growth Democrat west affect.","maxScore":59,"minScore":21,"description":"Month difficult role vote me.","estimatedTime":"4 weeks","previewFileId":"ac572e82-47e1-4cdf-9c86-1b76b3f6dd7c","createdByUserId":"6adbc187-5d5f-456a-9be5-96b4664a79ac"}'

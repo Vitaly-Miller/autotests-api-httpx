@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "c672d449-d69f-4eca-8dda-2954ef763019",
+    "title": "Address section control firm answer.",
+    "maxScore": 58,
+    "minScore": 10,
+    "description": "Turn thousand notice experience.",
+    "previewFile": {
+      "id": "3e36686e-b7d2-4a73-8a8d-c2131250ddfb",
+      "filename": "file_2272.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_2272.png"
+    },
+    "estimatedTime": "4 weeks",
+    "createdByUser": {
+      "id": "2431012b-28e0-4666-aa9a-a50643522455",
+      "email": "test_81887cec@example.com",
+      "lastName": "Taylor",
+      "firstName": "Nathaniel",
+      "middleName": "Russell"
+    }
+  }
+}

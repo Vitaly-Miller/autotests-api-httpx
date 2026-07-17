@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "8fc2baf9-c6b7-4b62-bc4d-992d69cdb72b",
+    "title": "Provide western husband.",
+    "maxScore": 95,
+    "minScore": 2,
+    "description": "Physical manager mission subject.",
+    "previewFile": {
+      "id": "fe026a9a-141e-4d61-99f3-855aaddba737",
+      "filename": "file_4785.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_4785.png"
+    },
+    "estimatedTime": "5 weeks",
+    "createdByUser": {
+      "id": "edd4e26f-4c33-45c3-bacc-400aeda66639",
+      "email": "test_c216d026@example.com",
+      "lastName": "Roth",
+      "firstName": "Larry",
+      "middleName": "Darren"
+    }
+  }
+}

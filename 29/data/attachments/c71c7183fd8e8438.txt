@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/exercises \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjQxOjM5LjIwMDQwMyIsInVzZXJfaWQiOiJkNDEwZDk1Mi0zZWQ3LTQzYWYtYmViYS0wMGExYTFmOTc3YjMifQ.wiHcpVs60FyDWkpsfXPQODdYHWcTGIAtgoNQcV-iM34' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Continue physical rich attack message.","courseId":"ef744f90-038d-47b8-a468-c73e6666308c","maxScore":62,"minScore":17,"orderIndex":4838,"description":"Per measure practice its interest thought.","estimatedTime":"6 weeks"}'

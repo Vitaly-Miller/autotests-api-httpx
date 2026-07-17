@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDE5OjQ5OjIyLjYwMzcyMyIsInVzZXJfaWQiOiJiNmZkYmFlYS1mZDA4LTQ3ZWEtOTQxYS1mNGI4ZTUyZGY4NDQifQ.Rd18oSok_9c33C7-O0LXYLjpUlY0j515HLXdVo1P550' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Republican use determine.","courseId":"0147804c-d9fd-4287-8042-160204406b01","maxScore":84,"minScore":7,"orderIndex":4220,"description":"Quality federal four glass realize.","estimatedTime":"2 weeks"}'

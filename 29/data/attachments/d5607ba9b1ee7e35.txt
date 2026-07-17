@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjQxOjQ1LjExMTE0NSIsInVzZXJfaWQiOiI4ZGM5NjdiYS1hNjBhLTQyOTItOGQ0ZC0zNDYwZmY4MjdlNjQifQ.kCA4POZDV_Xqdvvl8w5F1qOGtI-wWoJRbl00DU_iydg' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Offer professor baby note late.","maxScore":94,"minScore":21,"description":"Answer security collection.","estimatedTime":"9 weeks","previewFileId":"f9a0d5a5-68fc-4f82-ba43-64edfedb362b","createdByUserId":"8dc967ba-a60a-4292-8d4d-3460ff827e64"}'

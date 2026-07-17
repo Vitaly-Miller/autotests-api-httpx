@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/exercises/8872aa12-d13a-4c5b-a16d-6d06b21442c5 \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDE5OjQ5OjI4LjIxMzA5MyIsInVzZXJfaWQiOiJhOTFiZTU3NS0xNWQzLTRjOGYtODE2OC05Mjg0NGFhN2ZlNzQifQ.Q2pj-U4JpMi0taAlrR-o1E5FkoZCARpmn1WJElQbYBA' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Address side western.","maxScore":82,"minScore":5,"orderIndex":1803,"description":"Room break simply nation visit.","estimatedTime":"4 weeks"}'

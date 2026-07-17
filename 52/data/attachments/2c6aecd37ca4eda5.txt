@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDE5OjQ5OjI2Ljc5OTMwNiIsInVzZXJfaWQiOiI4MTJmMWYyZi0wODE1LTRkMmItYTZmYy1hYzM1YTdmMDRhODIifQ.EKvzKcbaeRSdtPCeX6VZzapKrBuV5N_B3mgACTMyWCg' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Heart few similar.","courseId":"42e6aae9-9767-46cf-8f62-76332635e629","maxScore":64,"minScore":29,"orderIndex":1779,"description":"Citizen whatever rest institution look send open.","estimatedTime":"4 weeks"}'

@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDE5OjQ5OjI0LjAwMTEzMiIsInVzZXJfaWQiOiI4ZTA5OTM2Yi02ZGMzLTRjZjgtYmNmNi1hYWRhZDU0ZDllMjkifQ.hesNsW-t-KDGu9eDWfmErA342APJhpNQyhN-BcU52fY' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Around material gun.","courseId":"ceff687d-5f52-4f37-9f2a-de39ab564799","maxScore":60,"minScore":16,"orderIndex":2644,"description":"Win clear out save I.","estimatedTime":"3 weeks"}'

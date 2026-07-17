@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDE5OjQ5OjE5Ljc4NTg4NCIsInVzZXJfaWQiOiIyNDMxMDEyYi0yOGUwLTQ2NjYtYWE5YS1hNTA2NDM1MjI0NTUifQ.XjETJsnPyEWWkmiFk3XdbTKuN-wvrUfz7LUwq4GBTnI' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Big rather class.","courseId":"c672d449-d69f-4eca-8dda-2954ef763019","maxScore":99,"minScore":16,"orderIndex":9236,"description":"Allow board watch feel size character represent.","estimatedTime":"2 weeks"}'

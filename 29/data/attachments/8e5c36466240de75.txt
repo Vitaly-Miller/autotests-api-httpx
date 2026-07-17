@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/exercises \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjQxOjQzLjM3NjI1MCIsInVzZXJfaWQiOiI2YWRiYzE4Ny01ZDVmLTQ1NmEtOWJlNS05NmI0NjY0YTc5YWMifQ.GeCHyBlz-1ncEbl0Nu9O4opuH-t795aVOP_NzJWJ0jw' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Call speech could law discussion authority.","courseId":"405a35e6-741c-4336-9955-dab3007f4126","maxScore":83,"minScore":29,"orderIndex":6290,"description":"Record marriage work test with.","estimatedTime":"7 weeks"}'

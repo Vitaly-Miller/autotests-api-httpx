@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDE5OjQ5OjI0LjMzMTIzOSIsInVzZXJfaWQiOiI4ZTA5OTM2Yi02ZGMzLTRjZjgtYmNmNi1hYWRhZDU0ZDllMjkifQ.BIT12yWu5ZQ8p8q91d0ppIperUR2uYltREIR0fEjlDI' \
+  -H 'content-type: application/json' \
+  -d '{"title":"If customer on raise environment.","maxScore":84,"minScore":19,"description":"Then action subject very couple management.","estimatedTime":"2 weeks","previewFileId":"1cefe79a-9279-4c58-a422-fe9f05857793","createdByUserId":"8e09936b-6dc3-4cf8-bcf6-aadad54d9e29"}'

@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDE5OjQ5OjE4LjcxMTYzNCIsInVzZXJfaWQiOiIyYjFmYTFkMS01NTcxLTQ4ODgtYWNmOC02NDA1NDZiOTMwOGYifQ.8x2ZlCIb8NsT0mG0LohxP5RT2rbq_hvJUM9KijSTmZA' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Song north state opportunity.","maxScore":62,"minScore":25,"description":"Eat step believe opportunity only arrive.","estimatedTime":"5 weeks","previewFileId":"9aec78d0-20fc-4bbb-8fd4-727b2ba338d0","createdByUserId":"2b1fa1d1-5571-4888-acf8-640546b9308f"}'

@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjQxOjMwLjc1NjQ5OCIsInVzZXJfaWQiOiJiYmI0OTY4ZC1lOGQ0LTRjYmYtYWJlNy00ZTU4YmI5NmRmMzYifQ.QoUbA8ceYrS-_bgLhFiLyZSGM9wl8p-X-SrEbN5OcHE' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Term health sing election hit may.","maxScore":59,"minScore":14,"description":"Serious anything relationship source.","estimatedTime":"6 weeks","previewFileId":"484bd65c-a183-4fc9-868e-6aff9e2d31f0","createdByUserId":"bbb4968d-e8d4-4cbf-abe7-4e58bb96df36"}'
