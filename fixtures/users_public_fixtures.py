@@ -7,7 +7,7 @@ import allure
 from clients.users_client_public import get_users_client_public, UsersClientPublic
 from schemas.users_schema import CreateUserSchema, CreateUserRequestSchema
 
-#================================================= Users Client (Public) =================================================
+#================================================ Users Client (Public) ================================================
 # Users Client (Public)
 @pytest.fixture
 @allure.title('◎ Users Client (Public) (fixture)')

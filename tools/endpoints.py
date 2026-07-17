@@ -13,4 +13,5 @@ class Endpoint(StrEnum):
     COURSES = f'{prefix}/courses'
     EXERCISES = f'{prefix}/exercises'
 
+
 #=======================================================================================================================

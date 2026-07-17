@@ -175,4 +175,6 @@ def get_log_response(response: httpx.Response) -> str:
      """
     log_response = f'Status code: {response.status_code}-{response.reason_phrase} from {response.url}' # Формируем сроку c данными для лога
     return log_response
+
+
 #=======================================================================================================================

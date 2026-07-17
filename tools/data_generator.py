@@ -150,4 +150,5 @@ class Fake:
 fake = Fake(faker=Faker())                     # en_US - Default
 fake_ru = Fake(faker=Faker(locale='ru_RU'))    # ru_RU
 
+
 #=======================================================================================================================

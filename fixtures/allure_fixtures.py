@@ -1,5 +1,5 @@
 """
-Allure autouse fixture
+Allure autouse-fixture
 """
 
 import pytest
@@ -16,5 +16,6 @@ def save_allure_environment_file():
     # До начала автотестов ничего не делаем
     yield                                        # Запускаются тесты...
     create_allure_environment_file()             # После завершения тестов создаем файл environment.properties
+
 
 #=======================================================================================================================

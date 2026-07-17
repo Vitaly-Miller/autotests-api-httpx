@@ -60,4 +60,5 @@ def get_users_client_public() -> UsersClientPublic:
     users_client_public = UsersClientPublic(client=get_httpx_client_public())
     return users_client_public                                        # UsersClientPublic()
 
+
 #=======================================================================================================================

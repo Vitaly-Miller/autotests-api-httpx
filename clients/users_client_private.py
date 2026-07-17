@@ -141,4 +141,5 @@ def get_users_client_private(auth_data: AuthDataSchema) -> UsersClientPrivate:
     users_client_private = UsersClientPrivate(client=get_httpx_client_private(auth_data))
     return users_client_private                                     # UsersClientPrivate()
 
+
 #=======================================================================================================================

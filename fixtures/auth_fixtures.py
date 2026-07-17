@@ -52,4 +52,5 @@ def auth(create_user: CreateUserSchema, auth_client: AuthClient) -> AuthResponse
     response_model = auth_client.login_pydantic(create_user.auth_data)   # ▶ Запрос через Pydantic-метод
     return response_model                                                # Pydantic-model (AuthResponseSchema)
 
+
 #=======================================================================================================================

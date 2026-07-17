@@ -43,4 +43,5 @@ def get_httpx_client_private(auth_data: AuthDataSchema) -> httpx.Client:  # Пр
     )
     return httpx_client_private                                           # httpx.Client (настроенный)
 
+
 #=======================================================================================================================

@@ -97,4 +97,5 @@ def get_courses_api(courses_client: CoursesClient, create_user: CreateUserSchema
     response = courses_client.get_courses_api(user_id_qwery_model)                # ▶ Запрос через API-метод
     return response                                                               # httpx.Response
 
+
 #=======================================================================================================================

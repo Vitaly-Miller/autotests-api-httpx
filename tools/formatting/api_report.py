@@ -1,5 +1,5 @@
 """
-API REPORT to console (✨Pretty)
+API REPORT to PyCharm console (✨Pretty)
 """
 import httpx
 import json
@@ -100,5 +100,6 @@ class Report:
         response_headers_json = json.dumps(response_headers_dict, indent=2, ensure_ascii=False)
         print(response_headers_json)
         print(f'{'—'*36}{ANSI.RESET}')
+
 
 #=======================================================================================================================

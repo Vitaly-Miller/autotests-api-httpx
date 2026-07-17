@@ -7,7 +7,7 @@ import allure
 from clients.users_client_private import UsersClientPrivate, get_users_client_private
 from schemas.users_schema import CreateUserSchema, GetUserMeResponseSchema
 
-#================================================ Users Client (Private) =================================================
+#=============================================== Users Client (Private) ================================================
 # Users Client (Private)
 @pytest.fixture
 @allure.title('◎ Users Client (Private) (fixture)')
