@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "b4292b69-4caa-48d1-97db-7a214334dde0",
+    "title": "Eat from both democratic character.",
+    "maxScore": 56,
+    "minScore": 14,
+    "description": "Physical word still wrong.",
+    "previewFile": {
+      "id": "4a97bf3c-a5da-4d5b-9a5b-6fab8d1a750c",
+      "filename": "file_4926.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_4926.png"
+    },
+    "estimatedTime": "9 weeks",
+    "createdByUser": {
+      "id": "6cfaea30-8db0-499f-b292-06e15f23c92c",
+      "email": "test_79fbac9b@example.com",
+      "lastName": "Ortiz",
+      "firstName": "Corey",
+      "middleName": "Michael"
+    }
+  }
+}

@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjMwOjQ2LjUyNjM5MiIsInVzZXJfaWQiOiJhNzMwMTYzMy01MGU5LTRhNTktODc3NS04ODQyNzA2OGYwNjMifQ.tTauNvVGh524IiocZKzXFhDY1vhfSLa2RtW9z7f9EXU' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Maybe plant heart buy.","maxScore":50,"minScore":29,"description":"Her challenge late. Son Mr turn indicate sport.","estimatedTime":"6 weeks","previewFileId":"788709b3-d9f8-4171-8dfb-932b6b523dca","createdByUserId":"a7301633-50e9-4a59-8775-88427068f063"}'

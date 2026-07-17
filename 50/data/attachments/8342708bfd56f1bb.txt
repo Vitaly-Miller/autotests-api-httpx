@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDE4OjQxOjEwLjIyMjA4MiIsInVzZXJfaWQiOiJlMGRlNGFhMS00NTlhLTRhMjEtYTAzYi1lM2JiNDcwOTBiMjAifQ.RKerky16xot0S2NKOUX0Jz_0epA9uZc3_GFTo85Z3u0' \
+  -H 'content-type: application/json' \
+  -d '{"title":"You sell fear year kitchen today.","maxScore":83,"minScore":16,"description":"Trade official marriage friend result.","estimatedTime":"2 weeks","previewFileId":"a84a7b74-ed2e-42d1-bbcc-1ff6c710bf21","createdByUserId":"e0de4aa1-459a-4a21-a03b-e3bb47090b20"}'

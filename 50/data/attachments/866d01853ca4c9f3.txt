@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDE4OjQxOjExLjQ4MTkzNiIsInVzZXJfaWQiOiIyNGNhNDAwNC05NWRjLTQ3N2QtYThkNC1mYWY3NzIzMmRlNDYifQ.YNAhpfh0PDa2DjPGMFfQjXmxmAhB8kKSj2rwwkFR_KQ' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Message lawyer that night space.","maxScore":65,"minScore":23,"description":"Writer try movie nature food stand.","estimatedTime":"6 weeks","previewFileId":"358328f3-ce19-45b7-af30-8a0beb2d3615","createdByUserId":"24ca4004-95dc-477d-a8d4-faf77232de46"}'

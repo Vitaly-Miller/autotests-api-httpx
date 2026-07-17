@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDE4OjQxOjA0Ljc3Nzc5OSIsInVzZXJfaWQiOiJkMjY2MWNmMi00MmI5LTQwNGItYTBlOS0yNzc4ZWQzZWEwMTMifQ.jxLD9bqWMxpUb0vausV6eyPNq-bGNSxHUDQrnALJR34' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Involve involve main.","courseId":"207dbf28-4af0-4aaf-aa82-1fb60e866a5e","maxScore":86,"minScore":7,"orderIndex":9029,"description":"Everything budget soldier ago.","estimatedTime":"3 weeks"}'

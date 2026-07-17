@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "e6186a6d-d232-476e-bfec-d2035c904fad",
+    "title": "Message lawyer that night space.",
+    "maxScore": 65,
+    "minScore": 23,
+    "description": "Writer try movie nature food stand.",
+    "previewFile": {
+      "id": "358328f3-ce19-45b7-af30-8a0beb2d3615",
+      "filename": "file_1579.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_1579.png"
+    },
+    "estimatedTime": "6 weeks",
+    "createdByUser": {
+      "id": "24ca4004-95dc-477d-a8d4-faf77232de46",
+      "email": "test_20548df4@example.com",
+      "lastName": "Reed",
+      "firstName": "Tammy",
+      "middleName": "Amy"
+    }
+  }
+}

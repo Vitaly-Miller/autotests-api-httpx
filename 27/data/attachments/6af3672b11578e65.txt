@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjMwOjM5LjkwMTA2NiIsInVzZXJfaWQiOiIxOGM2NWU5Yy1mM2U5LTRmZTItOGNkNC03NDViNDczZDU5OTYifQ._FNzck87B97JA1IbVD7MAOKbUSKOl0aEusEmYF3A2kA' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Hear agree so.","maxScore":75,"minScore":23,"description":"World improve me herself.","estimatedTime":"2 weeks","previewFileId":"1c43f64a-df77-498e-94a6-7a1237c52b0c","createdByUserId":"18c65e9c-f3e9-4fe2-8cd4-745b473d5996"}'

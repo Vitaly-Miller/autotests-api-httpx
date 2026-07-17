@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "89130f70-d836-4fe3-a23b-dc4341d05d06",
+    "title": "You sell fear year kitchen today.",
+    "maxScore": 83,
+    "minScore": 16,
+    "description": "Trade official marriage friend result.",
+    "previewFile": {
+      "id": "a84a7b74-ed2e-42d1-bbcc-1ff6c710bf21",
+      "filename": "file_5373.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_5373.png"
+    },
+    "estimatedTime": "2 weeks",
+    "createdByUser": {
+      "id": "e0de4aa1-459a-4a21-a03b-e3bb47090b20",
+      "email": "test_a25caa19@example.com",
+      "lastName": "Bradley",
+      "firstName": "Monica",
+      "middleName": "Amber"
+    }
+  }
+}

@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDE4OjQxOjAxLjU3NDI4MCIsInVzZXJfaWQiOiJjNmFkNWFiZS1lNTQ0LTQ1MTktYTBhYi0xZTkwN2VlZWMwNGMifQ.DiDmZZ7SFPygTiHQb9421Nn-tR-xx5QezHyESn5K_TQ' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Team animal interest stuff media decade.","maxScore":52,"minScore":18,"description":"Control four table summer relationship property.","estimatedTime":"2 weeks","previewFileId":"1d52826c-5c6b-4f4b-9d41-f28ec1ef8bb1","createdByUserId":"c6ad5abe-e544-4519-a0ab-1e907eeec04c"}'

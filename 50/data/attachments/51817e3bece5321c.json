@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "ccbd97d8-c95f-4a97-83ae-7f3baa2e57af",
+    "title": "Mother child set how.",
+    "maxScore": 65,
+    "minScore": 26,
+    "description": "National under behind argue service community.",
+    "previewFile": {
+      "id": "a4c718b3-901c-403c-8ae9-ea2facb10cff",
+      "filename": "file_8864.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_8864.png"
+    },
+    "estimatedTime": "3 weeks",
+    "createdByUser": {
+      "id": "7a433ea5-72a4-4900-b822-42b3aa624120",
+      "email": "test_86b001ed@example.com",
+      "lastName": "Wilson",
+      "firstName": "Guy",
+      "middleName": "Michelle"
+    }
+  }
+}

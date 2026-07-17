@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDE4OjQxOjA5LjkyMzA4MSIsInVzZXJfaWQiOiJlMGRlNGFhMS00NTlhLTRhMjEtYTAzYi1lM2JiNDcwOTBiMjAifQ.LHgmQav16pve47x3NySt2NDvLSQMWCCSU82PYx2KH50' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Develop rest book whose best.","courseId":"89130f70-d836-4fe3-a23b-dc4341d05d06","maxScore":82,"minScore":30,"orderIndex":448,"description":"To song language police.","estimatedTime":"5 weeks"}'

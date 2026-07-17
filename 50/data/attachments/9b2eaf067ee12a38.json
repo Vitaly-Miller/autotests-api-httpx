@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "98db5d35-a6cc-4afb-93e5-b12eab140f0b",
+    "title": "Tv eat spring general half people.",
+    "maxScore": 64,
+    "minScore": 24,
+    "description": "Side type finally artist try hold life.",
+    "previewFile": {
+      "id": "831230d2-b18b-4fab-b768-af584b798d51",
+      "filename": "file_4412.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_4412.png"
+    },
+    "estimatedTime": "5 weeks",
+    "createdByUser": {
+      "id": "a1524bc3-8b13-416b-8ba1-800ace26676f",
+      "email": "test_26f3e13b@example.com",
+      "lastName": "Martinez",
+      "firstName": "Anthony",
+      "middleName": "Brian"
+    }
+  }
+}

@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjMwOjUyLjg3MjYxMSIsInVzZXJfaWQiOiI1NDIyOTdkYi0yYjcwLTRlMWMtYWY4Yy0zOGJhZTRiMTkwYzMifQ.Y0yXvR0nzqcx15xKIoiUYuI1qqbmoExssC-KhyTvIWY' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Little no appear perhaps early across.","maxScore":95,"minScore":5,"description":"Different part quality business memory different.","estimatedTime":"3 weeks","previewFileId":"cbaf6920-d6b3-4187-a2b6-5e422206c0ec","createdByUserId":"542297db-2b70-4e1c-af8c-38bae4b190c3"}'

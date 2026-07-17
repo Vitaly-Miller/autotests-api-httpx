@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDE4OjQxOjEyLjQ2Mzc0OCIsInVzZXJfaWQiOiJkZGU4ZWI2Mi0yNDliLTQ3YjItYjI4My0yOTg1OWZhOTMxOGQifQ.C6lITfBaOzZtOdumvqaICW4uwwI2imdtX1VOAgCfN4s' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Full conference than care those.","courseId":"aa876219-0e00-43fe-b175-a148a193b369","maxScore":56,"minScore":17,"orderIndex":4900,"description":"Prove sort present worker.","estimatedTime":"8 weeks"}'

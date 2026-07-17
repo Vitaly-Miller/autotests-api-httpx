@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/exercises/2684a2b7-34a5-4052-ba27-b4bb0147c75c \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDE4OjQxOjExLjE4MTM1NyIsInVzZXJfaWQiOiIyNGNhNDAwNC05NWRjLTQ3N2QtYThkNC1mYWY3NzIzMmRlNDYifQ.H7fcgPYHjlA7MHe6MvI50YbfZ0mO-KfPSaCZ2EbMz6w' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Property him push call often low.","maxScore":68,"minScore":7,"orderIndex":2806,"description":"Throw admit front together amount. Side can find.","estimatedTime":"4 weeks"}'

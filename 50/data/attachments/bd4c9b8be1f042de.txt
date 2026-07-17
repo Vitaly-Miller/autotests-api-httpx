@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/exercises/dbba6889-75fd-490d-913f-0d2f147e83f0 \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDE4OjQxOjEyLjQ2Mzc0OCIsInVzZXJfaWQiOiJkZGU4ZWI2Mi0yNDliLTQ3YjItYjI4My0yOTg1OWZhOTMxOGQifQ.C6lITfBaOzZtOdumvqaICW4uwwI2imdtX1VOAgCfN4s' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Newspaper in camera up officer hundred.","maxScore":50,"minScore":16,"orderIndex":8703,"description":"Reason discuss senior teach education.","estimatedTime":"4 weeks"}'

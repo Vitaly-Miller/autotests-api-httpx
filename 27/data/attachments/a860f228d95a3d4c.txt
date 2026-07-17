@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjMwOjQ1LjI3Mjc2MiIsInVzZXJfaWQiOiJkOTdmZGYwZi1jYTFmLTQxNWEtYjBkNC00MzY4YTZlZDM1NTIifQ.F8fIuxaiYaL3dBbjK147dH9I1YaxBMnHidNb6D8_hKQ' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Goal model trial already organization score.","maxScore":61,"minScore":1,"description":"Break service wear until actually reach.","estimatedTime":"6 weeks","previewFileId":"a8e34dce-6db9-4707-8ebd-c463e01f706f","createdByUserId":"d97fdf0f-ca1f-415a-b0d4-4368a6ed3552"}'

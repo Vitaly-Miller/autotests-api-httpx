@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDE4OjQxOjAyLjUzNDMzNSIsInVzZXJfaWQiOiI1MTZjZTkxZC0xODNhLTQzNTYtYTMxMy1jMDg4ZDIwMjg4MDMifQ.ID_hrGhaBSx5d8frU4b1lCtG9kECjOlNzxQdDMBZN3g' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Parent physical dog interview conference manage.","maxScore":96,"minScore":14,"description":"Box film public feel any person.","estimatedTime":"8 weeks","previewFileId":"9a0eae4a-6eec-41fc-939f-b8f892ad376c","createdByUserId":"516ce91d-183a-4356-a313-c088d2028803"}'

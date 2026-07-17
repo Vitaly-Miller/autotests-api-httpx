@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/exercises \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjMwOjQ4Ljc2OTY2MSIsInVzZXJfaWQiOiI1NmRhMTE3YS04OGEyLTQ2MDEtYmEyZC0zYTFmN2E0ZjNkMGEifQ.WIHuWX78akvZjLTqK6iOqSIBsIKP1JDyNQ06L4ko9Po' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Art reduce staff store debate west.","courseId":"92646e55-b53b-436b-8ac3-23b71d9da73e","maxScore":75,"minScore":27,"orderIndex":6085,"description":"Prove heart her mouth surface PM.","estimatedTime":"5 weeks"}'

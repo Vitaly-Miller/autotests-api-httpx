@@ -1,0 +1,25 @@
+{
+  "courses": [
+    {
+      "id": "0f851502-a323-49a6-a10e-ad4e1998ee92",
+      "title": "Team animal interest stuff media decade.",
+      "maxScore": 52,
+      "minScore": 18,
+      "description": "Control four table summer relationship property.",
+      "previewFile": {
+        "id": "1d52826c-5c6b-4f4b-9d41-f28ec1ef8bb1",
+        "filename": "file_6270.png",
+        "directory": "Uploaded",
+        "url": "http://localhost:8000/static/Uploaded/file_6270.png"
+      },
+      "estimatedTime": "2 weeks",
+      "createdByUser": {
+        "id": "c6ad5abe-e544-4519-a0ab-1e907eeec04c",
+        "email": "test_aa203ae4@example.com",
+        "lastName": "Mendez",
+        "firstName": "Michael",
+        "middleName": "Tammy"
+      }
+    }
+  ]
+}

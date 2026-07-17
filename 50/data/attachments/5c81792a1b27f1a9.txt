@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDE4OjQxOjA2LjMzODg1MSIsInVzZXJfaWQiOiI2Y2ZhZWEzMC04ZGIwLTQ5OWYtYjI5Mi0wNmUxNWYyM2M5MmMifQ.uny2pVBHXrzH3f7mWA_CTSxcYM96WE9O8mT_V8-5GEA' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Eat from both democratic character.","maxScore":56,"minScore":14,"description":"Physical word still wrong.","estimatedTime":"9 weeks","previewFileId":"4a97bf3c-a5da-4d5b-9a5b-6fab8d1a750c","createdByUserId":"6cfaea30-8db0-499f-b292-06e15f23c92c"}'

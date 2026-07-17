@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "ca4645e6-18f0-43cd-a4c0-335e3d5a1f60",
+    "title": "News you require last.",
+    "maxScore": 81,
+    "minScore": 2,
+    "description": "Nice subject within song PM executive.",
+    "previewFile": {
+      "id": "8c00d913-b4cb-422d-8bfb-3445c4c22975",
+      "filename": "file_8769.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_8769.png"
+    },
+    "estimatedTime": "9 weeks",
+    "createdByUser": {
+      "id": "e25beb68-1c8b-418c-85bf-a671121cbe88",
+      "email": "test_bcba632f@example.com",
+      "lastName": "Sanchez",
+      "firstName": "Peter",
+      "middleName": "Jenny"
+    }
+  }
+}

@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjMwOjM4LjkyNzYzOSIsInVzZXJfaWQiOiJmOWI5MjdiOS1lZDQwLTQ3YjQtYTdkZC1mNTc5YTNhNTQ2OWQifQ.5ioui_yqnOxz9pJaoqXzOS2_C0_TtEenpqknePZfdgU' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Develop mission future modern involve.","maxScore":58,"minScore":30,"description":"Which peace note red whose.","estimatedTime":"2 weeks","previewFileId":"f89b1832-8ec8-4b9d-977d-09e5c933e66d","createdByUserId":"f9b927b9-ed40-47b4-a7dd-f579a3a5469d"}'

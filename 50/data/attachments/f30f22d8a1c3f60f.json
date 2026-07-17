@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "00100d3c-aef3-494a-9c65-ce97c4fab784",
+    "title": "That imagine else including rate after.",
+    "maxScore": 57,
+    "minScore": 16,
+    "description": "Send performance car thought.",
+    "previewFile": {
+      "id": "594cc92b-ee6f-452f-98ad-2d6cbc4b4bf8",
+      "filename": "file_5091.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_5091.png"
+    },
+    "estimatedTime": "8 weeks",
+    "createdByUser": {
+      "id": "3cc9108f-36ba-4539-bf92-fd42006807ef",
+      "email": "test_c93abe67@example.com",
+      "lastName": "Martin",
+      "firstName": "Carlos",
+      "middleName": "William"
+    }
+  }
+}

@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjMwOjQ5LjA2NzExNCIsInVzZXJfaWQiOiI1NmRhMTE3YS04OGEyLTQ2MDEtYmEyZC0zYTFmN2E0ZjNkMGEifQ.4G91_IkG4XExTgp0UJszvxLsMX2xqZ3OZvDUI35qSP0' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Coach speech they.","maxScore":89,"minScore":30,"description":"Edge rate someone range artist major production.","estimatedTime":"6 weeks","previewFileId":"7e72ed84-e813-49f6-af90-dfbd367c5560","createdByUserId":"56da117a-88a2-4601-ba2d-3a1f7a4f3d0a"}'

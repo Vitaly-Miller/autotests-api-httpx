@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "75e19c74-0e98-4d35-9aac-9013eb4a332e",
+    "title": "Week might meet.",
+    "maxScore": 71,
+    "minScore": 8,
+    "description": "Fish stock four. Threat opportunity mind occur.",
+    "previewFile": {
+      "id": "8cc75ad3-4c54-4da3-9bdd-594e7b7f9f67",
+      "filename": "file_3759.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_3759.png"
+    },
+    "estimatedTime": "9 weeks",
+    "createdByUser": {
+      "id": "154b6f0c-32b8-4434-99e6-837bfa57dad6",
+      "email": "test_9b51ad60@example.com",
+      "lastName": "Smith",
+      "firstName": "Mark",
+      "middleName": "Kenneth"
+    }
+  }
+}

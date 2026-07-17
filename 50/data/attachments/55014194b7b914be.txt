@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDE4OjQwOjU4LjY3NTE3MSIsInVzZXJfaWQiOiIxNTRiNmYwYy0zMmI4LTQ0MzQtOTllNi04MzdiZmE1N2RhZDYifQ.RfDGNMpx8LNxN9wpBRsSZitXFZK-zJTm34KL-vcWb1Y' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Week might meet.","maxScore":71,"minScore":8,"description":"Fish stock four. Threat opportunity mind occur.","estimatedTime":"9 weeks","previewFileId":"8cc75ad3-4c54-4da3-9bdd-594e7b7f9f67","createdByUserId":"154b6f0c-32b8-4434-99e6-837bfa57dad6"}'

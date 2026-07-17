@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/courses/a00674f1-578a-4dcb-b2c3-89fd2d39c7d6 \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDE4OjQxOjAyLjUzNDMzNSIsInVzZXJfaWQiOiI1MTZjZTkxZC0xODNhLTQzNTYtYTMxMy1jMDg4ZDIwMjg4MDMifQ.ID_hrGhaBSx5d8frU4b1lCtG9kECjOlNzxQdDMBZN3g' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Necessary forget local kid sure maybe.","maxScore":51,"minScore":22,"description":"Office white hour future.","estimatedTime":"4 weeks"}'

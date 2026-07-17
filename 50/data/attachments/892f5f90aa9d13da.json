@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "aa876219-0e00-43fe-b175-a148a193b369",
+    "title": "Check meeting foreign.",
+    "maxScore": 99,
+    "minScore": 13,
+    "description": "Require up computer white family sort everybody.",
+    "previewFile": {
+      "id": "94a1ca3c-9dd9-4540-9df0-ceab9eb4f3f9",
+      "filename": "file_1797.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_1797.png"
+    },
+    "estimatedTime": "8 weeks",
+    "createdByUser": {
+      "id": "dde8eb62-249b-47b2-b283-29859fa9318d",
+      "email": "test_83440cce@example.com",
+      "lastName": "Yoder",
+      "firstName": "Jennifer",
+      "middleName": "Randy"
+    }
+  }
+}

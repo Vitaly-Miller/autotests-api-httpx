@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "207dbf28-4af0-4aaf-aa82-1fb60e866a5e",
+    "title": "Rest each technology method yard.",
+    "maxScore": 96,
+    "minScore": 17,
+    "description": "Senior current leg green great billion.",
+    "previewFile": {
+      "id": "c8c715d6-f271-47eb-a761-0b6ed56c5a68",
+      "filename": "file_8031.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_8031.png"
+    },
+    "estimatedTime": "7 weeks",
+    "createdByUser": {
+      "id": "d2661cf2-42b9-404b-a0e9-2778ed3ea013",
+      "email": "test_7b631b5f@example.com",
+      "lastName": "Roth",
+      "firstName": "Stacey",
+      "middleName": "Andrew"
+    }
+  }
+}

@@ -1,0 +1,4 @@
+         Request URL: http://localhost:8000/api/v1/exercises/fc9f3b34-18e5-4ec3-8a3f-c8989e5df2de
+      Request Method: GET
+Response Status Code: 404-Not Found
+        Response URL: http://localhost:8000/api/v1/exercises/fc9f3b34-18e5-4ec3-8a3f-c8989e5df2de

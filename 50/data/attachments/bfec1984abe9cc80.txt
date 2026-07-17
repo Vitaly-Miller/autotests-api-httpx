@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDE4OjQxOjA4LjkyNDE5NiIsInVzZXJfaWQiOiJhMTUyNGJjMy04YjEzLTQxNmItOGJhMS04MDBhY2UyNjY3NmYifQ.dr-0XMDSegEq1mrOmCRwRtF8WvfK7vgLDl-FUlARXbc' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Tv eat spring general half people.","maxScore":64,"minScore":24,"description":"Side type finally artist try hold life.","estimatedTime":"5 weeks","previewFileId":"831230d2-b18b-4fab-b768-af584b798d51","createdByUserId":"a1524bc3-8b13-416b-8ba1-800ace26676f"}'
