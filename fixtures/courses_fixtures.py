@@ -22,7 +22,7 @@ def courses_client(create_user: CreateUserSchema) -> CoursesClient:
     :return: Экземпляр CoursesClient() (с Авторизацией)
     """
     courses_client = get_courses_client(create_user.auth_data)
-    return courses_client           # CoursesClient()
+    return courses_client            # CoursesClient()
 
 
 #---------------------------------------------------- Create course ----------------------------------------------------
@@ -30,8 +30,8 @@ def courses_client(create_user: CreateUserSchema) -> CoursesClient:
 @pytest.fixture
 @allure.title('▷ Create Course (API-fixture)')
 def create_course_api(
-    courses_client: CoursesClient,   # ┐  ✨ДЕДУПЛИКАЦИЯ внутри одного теста — это фундаментальное свойство Pytest
-    create_user: CreateUserSchema,   # ┘  ✨Один и тоже User! Несмотря на то, что обе фикстуры создают пользователя
+    courses_client: CoursesClient,    # ┐  ✨ДЕДУПЛИКАЦИЯ внутри одного теста — это фундаментальное свойство Pytest
+    create_user: CreateUserSchema,    # ┘  ✨Один и тоже User! Несмотря на то, что обе фикстуры создают пользователя
     create_file: CreateFileSchema
 ) -> httpx.Response:
     """
