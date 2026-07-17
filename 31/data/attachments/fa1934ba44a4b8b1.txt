@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE4OjAwOjMxLjM4MzI2OSIsInVzZXJfaWQiOiIwNWIyNTBmZS1jMTc1LTQ2NjAtYWM0YS1hOGQyZmQ2N2VhNzAifQ.HV0CJjl9KVjSwodk2eqPVmUmKq2gkNpJ4QtP0FBNAxs' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Student college table toward.","maxScore":78,"minScore":18,"description":"Help no job tell here product seem.","estimatedTime":"5 weeks","previewFileId":"fe190a5d-9df9-4f7f-b11b-277c17338e74","createdByUserId":"05b250fe-c175-4660-ac4a-a8d2fd67ea70"}'

@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjEwOjEyLjczNjM3OCIsInVzZXJfaWQiOiIwZmE4NjNiMi1mOGM0LTQ1MzEtYjI4OC0zMTUzOTBmMmQ4ZDgifQ.5CQ9o_4c_2GbrXQEjNIwSm3ffhVuuEtZwaCHurO8MqI' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Hotel our clear.","maxScore":83,"minScore":17,"description":"Character pretty executive lead new house to.","estimatedTime":"4 weeks","previewFileId":"baab4c07-7e92-4dcc-9b78-ad80f8269578","createdByUserId":"0fa863b2-f8c4-4531-b288-315390f2d8d8"}'

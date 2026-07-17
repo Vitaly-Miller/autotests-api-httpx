@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE4OjAwOjI2LjgyODg4OSIsInVzZXJfaWQiOiJmOGU0OTdmNC05Y2JmLTRkZWYtYmQ3Zi0wYzQ3NzcwNzUwODgifQ.koH4AxHj2EksvjxTenYqAle48YAI-cQ95r8cU6HNOOE' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Cover poor key.","maxScore":80,"minScore":6,"description":"Teach find owner into. Of give evidence town.","estimatedTime":"7 weeks","previewFileId":"e86d077d-d75d-4beb-a0e5-90d62303766c","createdByUserId":"f8e497f4-9cbf-4def-bd7f-0c4777075088"}'

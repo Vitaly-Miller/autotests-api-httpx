@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjEwOjE2LjE4MTYyNiIsInVzZXJfaWQiOiIwZGE3ZTMxMy03ZjJiLTQzMDYtOWRiNy03N2Q2MDRhYjMyM2YifQ.P7G52g-qB2TKahMK0b-qiNuxM1hiXhAMpvK6qyt2X2o' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Laugh whatever security rest.","maxScore":50,"minScore":5,"description":"Evidence worry training fill almost example.","estimatedTime":"7 weeks","previewFileId":"09e23db2-b5db-450e-956c-12203770c198","createdByUserId":"0da7e313-7f2b-4306-9db7-77d604ab323f"}'

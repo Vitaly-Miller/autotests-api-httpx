@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjEwOjI1LjU1ODc3MiIsInVzZXJfaWQiOiIzZjY1OTg3ZC00MTJkLTQ0MDUtYjcyYy03OGVjOGI0NmY3MGIifQ.hQJVm_asMdUWaCi37rk3C0onNO8MxnxPb_qWeQP45UQ' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Enough exactly reduce capital.","courseId":"6ee4e3ac-c5a9-46dd-a3fe-9421d2060125","maxScore":93,"minScore":28,"orderIndex":6701,"description":"Drug ground tough final certainly family before.","estimatedTime":"2 weeks"}'

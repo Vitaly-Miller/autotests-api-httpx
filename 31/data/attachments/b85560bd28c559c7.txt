@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/exercises \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE4OjAwOjM5LjQyNjU0MCIsInVzZXJfaWQiOiJlMjBlMjdkMS02YjVmLTRmNTMtYmQ3NC1jMjgxOWVhODRlNzcifQ.hmRzsXNqz874SqMOzvSFObln7NUaIXEoZ1l3Ea38bt8' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Resource black occur turn size one.","courseId":"91a87ac6-fc1c-4fb9-a8d7-393752d9c0e4","maxScore":67,"minScore":10,"orderIndex":1516,"description":"Seat human responsibility assume agreement.","estimatedTime":"7 weeks"}'

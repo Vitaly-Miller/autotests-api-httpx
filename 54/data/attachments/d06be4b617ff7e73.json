@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "3f646f25-76e9-4a98-9019-20ae9f58fdac",
+    "title": "Laugh whatever security rest.",
+    "maxScore": 50,
+    "minScore": 5,
+    "description": "Evidence worry training fill almost example.",
+    "previewFile": {
+      "id": "09e23db2-b5db-450e-956c-12203770c198",
+      "filename": "file_9828.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_9828.png"
+    },
+    "estimatedTime": "7 weeks",
+    "createdByUser": {
+      "id": "0da7e313-7f2b-4306-9db7-77d604ab323f",
+      "email": "test_823ce5fb@example.com",
+      "lastName": "Mueller",
+      "firstName": "Leslie",
+      "middleName": "Elizabeth"
+    }
+  }
+}

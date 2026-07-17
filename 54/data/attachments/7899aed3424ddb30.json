@@ -1,0 +1,25 @@
+{
+  "courses": [
+    {
+      "id": "04f7be82-ef5f-459c-90e3-1d00891e5aa2",
+      "title": "Design little return.",
+      "maxScore": 75,
+      "minScore": 30,
+      "description": "Three year minute head two discussion music.",
+      "previewFile": {
+        "id": "ae428924-0233-4342-81d0-25d1b799dcb5",
+        "filename": "file_2559.png",
+        "directory": "Uploaded",
+        "url": "http://localhost:8000/static/Uploaded/file_2559.png"
+      },
+      "estimatedTime": "7 weeks",
+      "createdByUser": {
+        "id": "eb5800d3-7c04-4b5a-8425-6c493c8bcb34",
+        "email": "test_29371893@example.com",
+        "lastName": "Figueroa",
+        "firstName": "Nicholas",
+        "middleName": "Rebecca"
+      }
+    }
+  ]
+}

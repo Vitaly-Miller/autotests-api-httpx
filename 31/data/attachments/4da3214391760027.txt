@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/exercises \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE4OjAwOjMxLjA1MzQzMiIsInVzZXJfaWQiOiIwNWIyNTBmZS1jMTc1LTQ2NjAtYWM0YS1hOGQyZmQ2N2VhNzAifQ.vcij6QivVgN2f3sNIJwKLdE8rt5x--TmeH8PbENSDUs' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Language include really.","courseId":"afc05df1-8a0a-4bed-9a81-68eeaa853926","maxScore":95,"minScore":25,"orderIndex":8290,"description":"Out blood drive lead.","estimatedTime":"9 weeks"}'

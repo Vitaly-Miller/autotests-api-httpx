@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "8da5713e-e441-4041-a4e8-e5c8efbd229e",
+    "title": "Later successful computer street article family.",
+    "maxScore": 75,
+    "minScore": 29,
+    "description": "Two career gun gas night.",
+    "previewFile": {
+      "id": "daf989be-adcd-4d07-b0a7-a8b2c7c02e3c",
+      "filename": "file_8199.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_8199.png"
+    },
+    "estimatedTime": "5 weeks",
+    "createdByUser": {
+      "id": "ef6f7793-0bfe-4dc2-9e2a-72d8216bc60e",
+      "email": "test_e399b47c@example.com",
+      "lastName": "Bennett",
+      "firstName": "Christopher",
+      "middleName": "William"
+    }
+  }
+}

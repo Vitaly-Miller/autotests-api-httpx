@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjEwOjE4LjU4MDc4MSIsInVzZXJfaWQiOiIwMTU4N2RiOS0yYjdhLTRiNzItYTg5YS1mMjYzNTdlZDFkOGUifQ.gJhth3vEH--2qsoiyPdtohZPHq4J8nsUWc_3olKOl_w' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Step near walk.","courseId":"95d6f226-c4cb-427a-9eba-f71d886d9eea","maxScore":99,"minScore":10,"orderIndex":5377,"description":"Teach heavy outside quite stay choose anyone.","estimatedTime":"6 weeks"}'

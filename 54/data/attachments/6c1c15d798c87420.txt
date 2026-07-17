@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjEwOjE0LjgxNjY1MSIsInVzZXJfaWQiOiI0ODBiODczYS00MzYzLTRkZjItODE3Ni1hZDIzYzc1MjE2ODkifQ.GNFDhMwGs0NURmoreXgtlTkKTXgnIeuQsnMmdGP8qs8' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Cultural ever take age middle.","maxScore":75,"minScore":4,"description":"Early he show move.","estimatedTime":"3 weeks","previewFileId":"47eb453d-0520-46fc-acdb-4c2f2e9e187a","createdByUserId":"480b873a-4363-4df2-8176-ad23c7521689"}'

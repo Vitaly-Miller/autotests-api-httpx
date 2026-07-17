@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE4OjAwOjM5Ljc1NTgyOCIsInVzZXJfaWQiOiJlMjBlMjdkMS02YjVmLTRmNTMtYmQ3NC1jMjgxOWVhODRlNzcifQ.yPzz8nFSHXt8DGtCWCPl8tq-tJ7YH2kUfjCBQPVB6Cw' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Chair each view money feel.","maxScore":81,"minScore":5,"description":"Which cold hair she someone.","estimatedTime":"5 weeks","previewFileId":"0be4142e-f913-43a9-8dbe-895d6b04bffb","createdByUserId":"e20e27d1-6b5f-4f53-bd74-c2819ea84e77"}'

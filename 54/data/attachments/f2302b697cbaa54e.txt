@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjEwOjEwLjY3NzMwMiIsInVzZXJfaWQiOiJlZjZmNzc5My0wYmZlLTRkYzItOWUyYS03MmQ4MjE2YmM2MGUifQ.5eZZvfc0J9Ctg-o5J57Ezi_QI2ymBOqdJUjeRTUnytU' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Later successful computer street article family.","maxScore":75,"minScore":29,"description":"Two career gun gas night.","estimatedTime":"5 weeks","previewFileId":"daf989be-adcd-4d07-b0a7-a8b2c7c02e3c","createdByUserId":"ef6f7793-0bfe-4dc2-9e2a-72d8216bc60e"}'

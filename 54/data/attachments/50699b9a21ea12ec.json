@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "7bcf1689-5144-4832-af03-967dbb338357",
+    "title": "Exist research management.",
+    "maxScore": 97,
+    "minScore": 6,
+    "description": "Young view leader top understand staff as.",
+    "previewFile": {
+      "id": "72164b68-e90b-40e2-b044-b27f6c6cea26",
+      "filename": "file_1863.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_1863.png"
+    },
+    "estimatedTime": "5 weeks",
+    "createdByUser": {
+      "id": "007555b0-0834-4e19-a3a9-cc1bc2f663c3",
+      "email": "test_1e9c695e@example.com",
+      "lastName": "Andrews",
+      "firstName": "Linda",
+      "middleName": "David"
+    }
+  }
+}

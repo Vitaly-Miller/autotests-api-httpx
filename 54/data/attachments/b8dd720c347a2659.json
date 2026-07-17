@@ -1,0 +1,25 @@
+{
+  "courses": [
+    {
+      "id": "7e1eb656-5fc0-4e13-8118-bf37e88f8a2d",
+      "title": "Hotel our clear.",
+      "maxScore": 83,
+      "minScore": 17,
+      "description": "Character pretty executive lead new house to.",
+      "previewFile": {
+        "id": "baab4c07-7e92-4dcc-9b78-ad80f8269578",
+        "filename": "file_2217.png",
+        "directory": "Uploaded",
+        "url": "http://localhost:8000/static/Uploaded/file_2217.png"
+      },
+      "estimatedTime": "4 weeks",
+      "createdByUser": {
+        "id": "0fa863b2-f8c4-4531-b288-315390f2d8d8",
+        "email": "test_cb3b45ae@example.com",
+        "lastName": "Cook",
+        "firstName": "Keith",
+        "middleName": "Jessica"
+      }
+    }
+  ]
+}

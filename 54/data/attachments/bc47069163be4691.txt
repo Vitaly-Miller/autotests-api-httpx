@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/exercises/42957ef4-3021-408b-90bc-613e05cd7d38 \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjEwOjI0LjE1NzMxNSIsInVzZXJfaWQiOiJkODY3NDQ4Zi1iZDljLTRhMWItODI1ZC02ZTVlY2Y1YjkzZWEifQ.HqcjB6w7hizEuUFceoqwMmwXPHIvvQlUfBlMBeAWW-k' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Individual keep share among.","maxScore":69,"minScore":12,"orderIndex":1410,"description":"Bank cup scientist already.","estimatedTime":"2 weeks"}'

@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "fa28ce01-c3de-4b8d-b25d-e67dcd36dbab",
+    "title": "Industry how loss role when.",
+    "maxScore": 58,
+    "minScore": 7,
+    "description": "Grow back movement. Health economic nothing.",
+    "previewFile": {
+      "id": "47eb453d-0520-46fc-acdb-4c2f2e9e187a",
+      "filename": "file_6285.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_6285.png"
+    },
+    "estimatedTime": "5 weeks",
+    "createdByUser": {
+      "id": "480b873a-4363-4df2-8176-ad23c7521689",
+      "email": "test_0b48e593@example.com",
+      "lastName": "Rice",
+      "firstName": "Andrew",
+      "middleName": "Janice"
+    }
+  }
+}

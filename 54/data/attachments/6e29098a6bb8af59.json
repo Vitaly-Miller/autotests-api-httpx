@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "cb4d492e-5b7d-4b13-9ed9-da18147b1559",
+    "title": "Admit themselves computer now.",
+    "maxScore": 52,
+    "minScore": 15,
+    "description": "Me allow exist. Western year American.",
+    "previewFile": {
+      "id": "76f58619-01e0-495e-a65f-3a8c1b78a2a2",
+      "filename": "file_4280.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_4280.png"
+    },
+    "estimatedTime": "4 weeks",
+    "createdByUser": {
+      "id": "9c3da2de-f555-4de4-8c61-42f18adfd183",
+      "email": "test_7b11e07a@example.com",
+      "lastName": "Archer",
+      "firstName": "Lori",
+      "middleName": "Randall"
+    }
+  }
+}

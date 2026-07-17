@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "0d506832-c878-4a23-a287-7194fc801450",
+    "title": "Figure record treat.",
+    "maxScore": 98,
+    "minScore": 10,
+    "description": "Spring director bar common.",
+    "previewFile": {
+      "id": "60630627-bc16-4018-8bd6-877189f17f5f",
+      "filename": "file_1319.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_1319.png"
+    },
+    "estimatedTime": "9 weeks",
+    "createdByUser": {
+      "id": "d867448f-bd9c-4a1b-825d-6e5ecf5b93ea",
+      "email": "test_8cdd9919@example.com",
+      "lastName": "Mccann",
+      "firstName": "Andrew",
+      "middleName": "Pamela"
+    }
+  }
+}

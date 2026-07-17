@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjEwOjEzLjc4MDgzOCIsInVzZXJfaWQiOiJlYjU4MDBkMy03YzA0LTRiNWEtODQyNS02YzQ5M2M4YmNiMzQifQ.oktyrokk7eWEwTB9AhuaHDtjhINB5ZOZ7Xocl9oVl6k' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Design little return.","maxScore":75,"minScore":30,"description":"Three year minute head two discussion music.","estimatedTime":"7 weeks","previewFileId":"ae428924-0233-4342-81d0-25d1b799dcb5","createdByUserId":"eb5800d3-7c04-4b5a-8425-6c493c8bcb34"}'

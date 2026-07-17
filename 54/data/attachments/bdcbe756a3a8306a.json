@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "ec8a2578-9d8d-468e-af05-78bb0500b1a2",
+    "title": "Give present along strategy.",
+    "maxScore": 81,
+    "minScore": 16,
+    "description": "White good thought reflect consider.",
+    "previewFile": {
+      "id": "fd4c4b5f-756e-4dcc-af85-3c712ca30e04",
+      "filename": "file_5591.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_5591.png"
+    },
+    "estimatedTime": "6 weeks",
+    "createdByUser": {
+      "id": "19aeefc7-4c4d-49f5-ba57-e9373e4c5d42",
+      "email": "test_17e97e86@example.com",
+      "lastName": "Daugherty",
+      "firstName": "Cindy",
+      "middleName": "Blake"
+    }
+  }
+}

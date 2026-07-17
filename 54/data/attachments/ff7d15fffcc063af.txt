@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjEwOjE3LjU0ODU2NyIsInVzZXJfaWQiOiI1NWZmNmJmYS00MWM2LTQ1MjUtOTc2Yi1iZDQ4NmZjNzliNDIifQ.DF2dE57gZiLcEIPbBlkT9S27FuarByxKS5JXfsAC2vI' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Before view organization imagine until compare.","maxScore":83,"minScore":12,"description":"Reflect forward respond public.","estimatedTime":"8 weeks","previewFileId":"3c4e5786-f222-430a-b964-db086b3e5611","createdByUserId":"55ff6bfa-41c6-4525-976b-bd486fc79b42"}'

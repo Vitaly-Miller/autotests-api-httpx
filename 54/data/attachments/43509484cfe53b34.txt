@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjEwOjIxLjY0OTA4OCIsInVzZXJfaWQiOiIwMDc1NTViMC0wODM0LTRlMTktYTNhOS1jYzFiYzJmNjYzYzMifQ.nTA4CJX1cYQUcYfjZOXjq4buzmWlDBMFrResrN2cedI' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Exist research management.","maxScore":97,"minScore":6,"description":"Young view leader top understand staff as.","estimatedTime":"5 weeks","previewFileId":"72164b68-e90b-40e2-b044-b27f6c6cea26","createdByUserId":"007555b0-0834-4e19-a3a9-cc1bc2f663c3"}'

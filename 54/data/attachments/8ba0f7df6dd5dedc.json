@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "f1c7349d-8997-4930-82d0-930c0ec19755",
+    "title": "Community particular author theory.",
+    "maxScore": 61,
+    "minScore": 5,
+    "description": "Board conference card.",
+    "previewFile": {
+      "id": "0ed10f44-2a36-4601-893b-9fc21cd65d1c",
+      "filename": "file_6970.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_6970.png"
+    },
+    "estimatedTime": "7 weeks",
+    "createdByUser": {
+      "id": "cb330dd7-a098-4491-90aa-8af22dd5aef8",
+      "email": "test_28dec265@example.com",
+      "lastName": "Holmes",
+      "firstName": "David",
+      "middleName": "Sean"
+    }
+  }
+}

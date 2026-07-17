@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjEwOjIwLjI5MDA3MCIsInVzZXJfaWQiOiJjYjMzMGRkNy1hMDk4LTQ0OTEtOTBhYS04YWYyMmRkNWFlZjgifQ.AuT0hH_m7qxf2TU0aXwdoc08rS0-aCRLaj_vRTddBz8' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Community particular author theory.","maxScore":61,"minScore":5,"description":"Board conference card.","estimatedTime":"7 weeks","previewFileId":"0ed10f44-2a36-4601-893b-9fc21cd65d1c","createdByUserId":"cb330dd7-a098-4491-90aa-8af22dd5aef8"}'

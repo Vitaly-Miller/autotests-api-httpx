@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "0c53f224-b37b-4971-ab6c-58c0d98106af",
+    "title": "Before view organization imagine until compare.",
+    "maxScore": 83,
+    "minScore": 12,
+    "description": "Reflect forward respond public.",
+    "previewFile": {
+      "id": "3c4e5786-f222-430a-b964-db086b3e5611",
+      "filename": "file_3307.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_3307.png"
+    },
+    "estimatedTime": "8 weeks",
+    "createdByUser": {
+      "id": "55ff6bfa-41c6-4525-976b-bd486fc79b42",
+      "email": "test_b9f5f2ca@example.com",
+      "lastName": "Hamilton",
+      "firstName": "Erin",
+      "middleName": "Steven"
+    }
+  }
+}

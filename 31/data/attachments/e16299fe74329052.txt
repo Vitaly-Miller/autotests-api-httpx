@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/exercises \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE4OjAwOjM2LjY0NjM3NyIsInVzZXJfaWQiOiJlZTM0NzU4ZS0xMWYyLTQyYWMtYmI1NS1kZDYzM2RkMjc1OTMifQ.zjjatBsgf5w8JH3Y-pp9mEnxmcSUxUV9NnkFf2NOS6I' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Sign pick shake husband American.","courseId":"708934a2-218a-4e88-8478-35627e19a7b0","maxScore":60,"minScore":11,"orderIndex":4268,"description":"Price significant walk his speak program risk.","estimatedTime":"7 weeks"}'

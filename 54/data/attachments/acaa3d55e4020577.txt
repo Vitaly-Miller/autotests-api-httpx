@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/courses/fa28ce01-c3de-4b8d-b25d-e67dcd36dbab \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjEwOjE0LjgxNjY1MSIsInVzZXJfaWQiOiI0ODBiODczYS00MzYzLTRkZjItODE3Ni1hZDIzYzc1MjE2ODkifQ.GNFDhMwGs0NURmoreXgtlTkKTXgnIeuQsnMmdGP8qs8' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Industry how loss role when.","maxScore":58,"minScore":7,"description":"Grow back movement. Health economic nothing.","estimatedTime":"5 weeks"}'

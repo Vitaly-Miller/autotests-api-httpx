@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjEwOjE4LjkwMDkxNyIsInVzZXJfaWQiOiIwMTU4N2RiOS0yYjdhLTRiNzItYTg5YS1mMjYzNTdlZDFkOGUifQ.5vd68-23N8OgjjpbPTu0XJkQ_uK78CF7Nma-14giO_U' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Film her issue world none often.","maxScore":80,"minScore":2,"description":"Store set step respond.","estimatedTime":"2 weeks","previewFileId":"4d8318be-046a-4d24-97ea-6d9dc38c51fb","createdByUserId":"01587db9-2b7a-4b72-a89a-f26357ed1d8e"}'

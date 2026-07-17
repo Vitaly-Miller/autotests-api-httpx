@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/exercises \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE4OjAwOjMzLjgzNjM5NyIsInVzZXJfaWQiOiIzMjRmMjc2ZS1iMTUzLTQ4ZTgtYTQ2Mi05ZjhmYWQ4NmU2MjkifQ.G1LTaz9897tMKOZY2bONQmQchZtOd82Gj4bCYOu0wdQ' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Tough listen TV.","courseId":"342f9360-55b6-481f-a258-aa30c4f38cfb","maxScore":93,"minScore":20,"orderIndex":442,"description":"Research individual education same both.","estimatedTime":"3 weeks"}'

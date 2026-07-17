@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjEwOjE1Ljg1ODEwMiIsInVzZXJfaWQiOiIwZGE3ZTMxMy03ZjJiLTQzMDYtOWRiNy03N2Q2MDRhYjMyM2YifQ.F8VRt0Afzo-X8ij3uNzqML1GMqxxnlYBoM161GaYQAk' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Raise tend say capital.","courseId":"3f646f25-76e9-4a98-9019-20ae9f58fdac","maxScore":53,"minScore":2,"orderIndex":2743,"description":"Really more vote whom activity top bank.","estimatedTime":"4 weeks"}'

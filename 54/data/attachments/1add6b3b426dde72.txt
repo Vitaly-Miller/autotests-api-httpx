@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/exercises/1075d251-1579-4efe-a5d5-d3659f98e7c8 \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjEwOjI1LjU1ODc3MiIsInVzZXJfaWQiOiIzZjY1OTg3ZC00MTJkLTQ0MDUtYjcyYy03OGVjOGI0NmY3MGIifQ.hQJVm_asMdUWaCi37rk3C0onNO8MxnxPb_qWeQP45UQ' \
+  -H 'content-type: application/json' \
+  -d '{"title":"But finish better class green they.","maxScore":61,"minScore":7,"orderIndex":2381,"description":"Mission energy weight perhaps.","estimatedTime":"7 weeks"}'

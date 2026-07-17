@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "6ee4e3ac-c5a9-46dd-a3fe-9421d2060125",
+    "title": "Court outside treatment when.",
+    "maxScore": 82,
+    "minScore": 20,
+    "description": "Listen since market cold. Name level age.",
+    "previewFile": {
+      "id": "1cc6e601-dfb0-40bf-90e7-ca35fa863262",
+      "filename": "file_5243.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_5243.png"
+    },
+    "estimatedTime": "3 weeks",
+    "createdByUser": {
+      "id": "3f65987d-412d-4405-b72c-78ec8b46f70b",
+      "email": "test_0d16f337@example.com",
+      "lastName": "Vaughn",
+      "firstName": "Emily",
+      "middleName": "Cole"
+    }
+  }
+}

@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjEwOjIzLjEwNDM4OCIsInVzZXJfaWQiOiIxOWFlZWZjNy00YzRkLTQ5ZjUtYmE1Ny1lOTM3M2U0YzVkNDIifQ.KSjJ2afBQMNH2Zo-eDc2oPKGO2_gHOxduUQAm8dv_aA' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Give present along strategy.","maxScore":81,"minScore":16,"description":"White good thought reflect consider.","estimatedTime":"6 weeks","previewFileId":"fd4c4b5f-756e-4dcc-af85-3c712ca30e04","createdByUserId":"19aeefc7-4c4d-49f5-ba57-e9373e4c5d42"}'

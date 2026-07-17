@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE4OjAwOjMyLjc4NDAxOSIsInVzZXJfaWQiOiJhNjljZTM5MC03ZTM4LTQ5YWQtOTAxZi1iZjhkMmI0ZjVlZGMifQ.mTWXS0VyJHr0u4SNWjYuoYJRscwn6b-LR4KeKgeLDPM' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Actually ready somebody before.","maxScore":82,"minScore":1,"description":"Serve heavy source mean color.","estimatedTime":"5 weeks","previewFileId":"5c42d581-724c-4f23-babf-3ec08f330fc1","createdByUserId":"a69ce390-7e38-49ad-901f-bf8d2b4f5edc"}'

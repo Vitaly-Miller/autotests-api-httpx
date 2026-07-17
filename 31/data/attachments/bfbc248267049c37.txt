@@ -1,5 +1,0 @@
-curl -X PATCH \
-  http://localhost:8000/api/v1/courses/0fe08dae-d4a4-42dd-8fd7-439fd5c44a88 \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE4OjAwOjI5Ljk5NTQ2MCIsInVzZXJfaWQiOiJjMTYzZGM4My04Mjk2LTQ3YTMtODUwMC04NzIyMDcxZDViYmQifQ.MF10oVbNzYOyb76PNSgDPsK3r3lLWHbyeBkdimyUSlo' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Hold daughter the hard sit.","maxScore":68,"minScore":7,"description":"Watch term environmental.","estimatedTime":"3 weeks"}'

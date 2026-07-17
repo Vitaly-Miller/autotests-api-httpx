@@ -1,5 +1,0 @@
-curl -X PATCH \
-  http://localhost:8000/api/v1/exercises/d20f4d3d-ea1b-49bc-970b-7784491d689d \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE4OjAwOjQwLjgyNTM3OCIsInVzZXJfaWQiOiJkOTkyZjU4YS02MmI3LTRhZjUtOGM0MC0xMzk5Mjc3MDI3MjcifQ.DDLpS9cbha_yovnqOJTmNCGsOp_tdLU9LisazOZBwTY' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Bring senior manager mouth.","maxScore":81,"minScore":15,"orderIndex":4059,"description":"Plant what else speech product.","estimatedTime":"7 weeks"}'

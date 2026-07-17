@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "95d6f226-c4cb-427a-9eba-f71d886d9eea",
+    "title": "Film her issue world none often.",
+    "maxScore": 80,
+    "minScore": 2,
+    "description": "Store set step respond.",
+    "previewFile": {
+      "id": "4d8318be-046a-4d24-97ea-6d9dc38c51fb",
+      "filename": "file_9561.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_9561.png"
+    },
+    "estimatedTime": "2 weeks",
+    "createdByUser": {
+      "id": "01587db9-2b7a-4b72-a89a-f26357ed1d8e",
+      "email": "test_05902400@example.com",
+      "lastName": "Moreno",
+      "firstName": "Alice",
+      "middleName": "Brittany"
+    }
+  }
+}
