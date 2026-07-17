@@ -1,5 +1,5 @@
 """
-Allure fixtures
+Allure autouse fixture
 """
 
 import pytest

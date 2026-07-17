@@ -35,7 +35,7 @@ class FilesClient(APIClient):
 
 
     # Pydantic-model
-    @allure.step('▶ Get File by ID (Pydantic)')                                    # Allure step Title
+    @allure.step('▶ Get File by ID (Pydantic)')
     def get_file(self, file_id: str) -> GetFileResponseSchema:
         """
         Pydantic-метод получения файла (Download) по File-ID
@@ -50,8 +50,8 @@ class FilesClient(APIClient):
 
     #--------------------------------------------------- Create File ---------------------------------------------------
     # API
-    @allure.step('▶ Create File (API)')                                             # Allure step Title
-    @tracker.track_coverage_httpx(f'{Endpoint.FILES}')                              # API Coverage tracker
+    @allure.step('▶ Create File (API)')
+    @tracker.track_coverage_httpx(f'{Endpoint.FILES}')
     def create_file_api(self, create_file_data: CreateFileRequestSchema) -> httpx.Response:
         """
         API-метод создания файла (Upload).
@@ -72,7 +72,7 @@ class FilesClient(APIClient):
 
 
     # Pydantic-model
-    @allure.step('▶ Create File (Pydantic)')                                          # Allure step Title
+    @allure.step('▶ Create File (Pydantic)')
     def create_file(self, create_file_data: CreateFileRequestSchema) -> CreateFileResponseSchema:
         """
         Pydantic-метод создания файла (Upload)
@@ -87,7 +87,7 @@ class FilesClient(APIClient):
 
     #--------------------------------------------------- Delete File ---------------------------------------------------
     # API
-    @allure.step('▶ Delete File by ID (API)')                        # Allure step Title
+    @allure.step('▶ Delete File by ID (API)')
     @tracker.track_coverage_httpx(f'{Endpoint.FILES}/{{file_id}}')   # API Coverage tracker (id - заэкранировано)
     def delete_file_api(self, file_id: str) -> httpx.Response:
         """
@@ -102,7 +102,7 @@ class FilesClient(APIClient):
 
 
 #================================================== Client (builder) ===================================================
-@allure.step('◎ Get Files Client')                                   # Allure step Title
+@allure.step('◎ Get Files Client')
 def get_files_client(auth_data: AuthDataSchema) -> FilesClient:
     """
     Функция получения экземпляра FilesClient с настроенным HTTP-клиентом (с Авторизацией)

@@ -1,5 +1,5 @@
 """
-Logger (by logging)
+Logger (via logging)
 """
 import logging
 

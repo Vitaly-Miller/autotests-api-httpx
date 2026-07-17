@@ -5,7 +5,7 @@ from pydantic import BaseModel, Field, EmailStr
 from schemas.auth_schema import AuthDataSchema
 from tools.data_generator import fake
 
-"""================================================ ⬆︎REQUEST Schema ================================================"""
+#================================================== ⬆︎REQUEST schemas ==================================================
 #----------------------------------------------------- Create User -----------------------------------------------------
 class CreateUserRequestSchema(BaseModel):
     email: EmailStr = Field(default_factory=fake.email)  # ⚠️Возможно придется заменить на str. А то будут падать негативные тесты при валидации Email
@@ -27,9 +27,7 @@ class UpdateUserRequestSchema(BaseModel):
     middle_name: str | None = Field(alias='middleName', default_factory=fake.middle_name)
 
 
-#-----------------------------------------------------------------------------------------------------------------------
-
-"""=============================================== ⬇︎RESPONSE Schema ================================================"""
+#================================================= ⬇︎RESPONSE schema ===================================================
 #----------------------------------------------------- "user": {} ------------------------------------------------------
 class UserSchema(BaseModel):
     id: str
@@ -55,8 +53,7 @@ class UserUpdateResponseSchema(BaseModel):
     user: UserSchema
 
 
-#-----------------------------------------------------------------------------------------------------------------------
-"""====================================== Full Schema (⬆︎Request + ⬇Response) ✨====================================="""
+#======================================== Full schema (⬆︎Request + ⬇Response) ✨=======================================
 class CreateUserSchema(BaseModel):
     request: CreateUserRequestSchema    # ┐
     response: CreateUserResponseSchema  # ┘
@@ -99,6 +96,5 @@ class CreateUserSchema(BaseModel):
             email=self.email,       # Email     ┐
             password=self.password  # Password  ┘
         )
-
 
 #=======================================================================================================================

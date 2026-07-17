@@ -68,7 +68,6 @@ class TestGetUserMe:
         #------------------------ Get User Me -----------------------
         get_user_me_client = get_users_client_private(auth_data)     # Получаем экземпляр UsersClientPrivate
         response = get_user_me_client.get_user_me_api()              # ▶ Запрос через API-метод
-
         response_model = CreateUserResponseSchema.model_validate_json(response.text)  # httpx.Response —> Pydantic-model (parsing-deserialize) (Deserialize for Assertions)
 
         #------------------------ Assertions ------------------------

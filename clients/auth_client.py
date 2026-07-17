@@ -28,14 +28,14 @@ class AuthClient(APIClient):
         :return httpx.Response
         """
         response = self.post(                                          # ▶ Запрос
-            url=f'{Endpoint.AUTH}/login',                              # Endpoint (by Enum)
+            url=f'{Endpoint.AUTH}/login',                              # Endpoint (via Enum)
             json=auth_data.model_dump(by_alias=True)                   # Pydantic-model —> Dict (serialize)
         )
         return response                                                # httpx.Response
 
 
     # Pydantic-model
-    @allure.step('▶ Login User (Pydantic)')                                     # Allure step Title
+    @allure.step('▶ Login User (Pydantic)')
     def login_pydantic(self, auth_data: AuthDataSchema) -> AuthResponseSchema:
         """
         Pydantic-метод аутентификации пользователя (Log in)
@@ -50,8 +50,8 @@ class AuthClient(APIClient):
 
     #-------------------------------------------------- Refresh --------------------------------------------------------
     # API
-    @allure.step('▶ Refresh Token (API)')                              # Allure step Title
-    @tracker.track_coverage_httpx(f'{Endpoint.AUTH}/refresh')          # API Coverage tracker
+    @allure.step('▶ Refresh Token (API)')
+    @tracker.track_coverage_httpx(f'{Endpoint.AUTH}/refresh')
     def refresh_api(self, refresh_token: RefreshRequestSchema) -> httpx.Response:
         """
         API-метод обновления токена авторизации
@@ -59,15 +59,15 @@ class AuthClient(APIClient):
         :param refresh_token: Pydantic-model c refresh_token
         :return: httpx.Response
         """
-        response = self.post(                                          # ▶ Запрос
-            url=f'{Endpoint.AUTH}/refresh',                            # Endpoint (by Enum)
-            json=refresh_token.model_dump(by_alias=True)               # Pydantic-model —> Dict (serialize)
+        response = self.post(                                     # ▶ Запрос
+            url=f'{Endpoint.AUTH}/refresh',                       # Endpoint (via Enum)
+            json=refresh_token.model_dump(by_alias=True)          # Pydantic-model —> Dict (serialize)
         )
-        return response                                                # httpx.Response
+        return response                                           # httpx.Response
 
 
 #================================================== Client (builder) ===================================================
-@allure.step('◎ Get Auth Client')                                      # Allure step Title
+@allure.step('◎ Get Auth Client')
 def get_auth_client() -> AuthClient:
     """
     Функция получения экземпляра AuthClient с уже настроенным http-клиентом
@@ -75,6 +75,7 @@ def get_auth_client() -> AuthClient:
     :return: Экземпляр AuthClient с (Base URL)
     """
     auth_client = AuthClient(client=get_httpx_client_public())
-    return auth_client                                                 # AuthClient()
+    return auth_client                                            # AuthClient()
+
 
 #=======================================================================================================================

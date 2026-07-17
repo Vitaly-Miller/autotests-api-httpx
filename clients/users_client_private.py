@@ -38,7 +38,7 @@ class UsersClientPrivate(APIClient):
 
 
     # Pydantic-model
-    @allure.step('▶ Get User Me (Pydantic)')                                          # Allure step Title
+    @allure.step('▶ Get User Me (Pydantic)')
     def get_user_me(self) -> GetUserMeResponseSchema:
         """
         Pydantic-метод получения данных текущего пользователя
@@ -52,7 +52,7 @@ class UsersClientPrivate(APIClient):
 
     #---------------------------------------------------- Get User -----------------------------------------------------
     # API
-    @allure.step('▶ Get User by ID (API)')                             # Allure step Title
+    @allure.step('▶ Get User by ID (API)')
     @tracker.track_coverage_httpx(f'{Endpoint.USERS}/{{user_id}}')     # API Coverage tracker (id - заэкранировано)
     def get_user_api(self, user_id: str) -> httpx.Response:
         """
@@ -66,7 +66,7 @@ class UsersClientPrivate(APIClient):
 
 
     # Pydantic-model
-    @allure.step('▶ Get User by ID (Pydantic)')                                      # Allure step Title
+    @allure.step('▶ Get User by ID (Pydantic)')
     def get_user_pydantic(self, user_id: str) -> GetUserResponseSchema:
         """
         Pydantic-метод получения данных пользователя по User-ID
@@ -81,7 +81,7 @@ class UsersClientPrivate(APIClient):
 
     #--------------------------------------------------- Update User ---------------------------------------------------
     # API
-    @allure.step('▶ Update User by ID (API)')                         # Allure step Title
+    @allure.step('▶ Update User by ID (API)')
     @tracker.track_coverage_httpx(f'{Endpoint.USERS}/{{user_id}}')    # API Coverage tracker (id - заэкранировано)
     def update_user_api(self, user_id: str, update_data: UpdateUserRequestSchema) -> httpx.Response:
         """
@@ -99,7 +99,7 @@ class UsersClientPrivate(APIClient):
 
 
     # Pydantic-model
-    @allure.step('▶ Update User by ID (Pydantic)')                                      # Allure step Title
+    @allure.step('▶ Update User by ID (Pydantic)')
     def update_user_pydantic(self, user_id: str, update_data: UpdateUserRequestSchema) -> UserUpdateResponseSchema:
         """
         Pydantic-метод частичного обновления данных пользователя по User-ID
@@ -115,7 +115,7 @@ class UsersClientPrivate(APIClient):
 
     #--------------------------------------------------- Delete User ---------------------------------------------------
     # API
-    @allure.step('▶ Delete User by ID (API)')                       # Allure step Title
+    @allure.step('▶ Delete User by ID (API)')
     @tracker.track_coverage_httpx(f'{Endpoint.USERS}/{{user_id}}')  # API Coverage tracker (id - заэкранировано)
     def delete_user_api(self, user_id: str) -> httpx.Response:
         """
@@ -130,7 +130,7 @@ class UsersClientPrivate(APIClient):
 
 
 #================================================== Client (builder) ===================================================
-@allure.step('◎ Get Users Client (Private)')                         # Allure step Title
+@allure.step('◎ Get Users Client (Private)')
 def get_users_client_private(auth_data: AuthDataSchema) -> UsersClientPrivate:
     """
     Функция получения экземпляра UsersClientPrivate() с настроенным httpx.Client (Private)

@@ -4,7 +4,7 @@ Exercises (Pydantic Schema)
 from pydantic import BaseModel, Field
 from tools.data_generator import fake
 
-"""================================================ ⬆︎REQUEST Schema ================================================"""
+#================================================== ⬆︎REQUEST Schema ===================================================
 #--------------------------------------------------- Create Exercise ---------------------------------------------------
 class CreateExerciseRequestSchema(BaseModel):
     title: str = Field(default_factory=fake.sentence)
@@ -15,14 +15,13 @@ class CreateExerciseRequestSchema(BaseModel):
     description: str = Field(default_factory=fake.text)
     estimated_time: str = Field(alias='estimatedTime', default_factory=fake.estimated_time)
 
-#---------------------------------------------------- Get Exercise ----------------------------------------------------
+#---------------------------------------------------- Get Exercise -----------------------------------------------------
 class GetExerciseRequestSchema(BaseModel):
     exercise_id: str
 
 #---------------------------------------------------- Get Exercises ----------------------------------------------------
 class GetExercisesQwerySchema(BaseModel):                                 # (?query)
     course_id: str = Field(alias='courseId', default_factory=fake.uuid4)  # ⚠️Default value for NEGATIVE tests only
-
 
 #--------------------------------------------------- Update Exercise ---------------------------------------------------
 class UpdateExerciseRequestSchema(BaseModel):
@@ -34,9 +33,7 @@ class UpdateExerciseRequestSchema(BaseModel):
     estimated_time: str | None = Field(alias='estimatedTime', default_factory=fake.estimated_time)
 
 
-#-----------------------------------------------------------------------------------------------------------------------
-
-"""================================================ ⬇︎RESPONSE Schema ==============================================="""
+#================================================== ⬇︎RESPONSE Schema ==================================================
 #---------------------------------------------------- "exercise": {} ---------------------------------------------------
 class ExerciseSchema(BaseModel):
     id: str
@@ -67,8 +64,8 @@ class UpdateExerciseResponseSchema(BaseModel):
 #--------------------------------------------------- Delete Exercise ---------------------------------------------------
 
 
-#-----------------------------------------------------------------------------------------------------------------------
-"""====================================== Full Schema (⬆︎Request + ⬇Response) ✨====================================="""
+
+#======================================== Full Schema (⬆︎Request + ⬇Response) ✨=======================================
 class CreateExerciseSchema(BaseModel):
     request: CreateExerciseRequestSchema    # ┐
     response: CreateExerciseResponseSchema  # ┘

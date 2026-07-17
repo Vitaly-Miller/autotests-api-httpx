@@ -33,7 +33,7 @@ class ExercisesClient(APIClient):
         :return: httpx.Response
         """
         response = self.post(                                     # ▶ Запрос
-            url=Endpoint.EXERCISES,                               # Endpoint (by Enum)
+            url=Endpoint.EXERCISES,                               # Endpoint (via Enum)
             json=create_exercise_data.model_dump(by_alias=True)   # Pydantic-model —> Dict (serialize)
         )
         return response                                           # httpx.Response
@@ -55,8 +55,8 @@ class ExercisesClient(APIClient):
 
     #-------------------------------------------------- Get Exercise ---------------------------------------------------
     # API
-    @allure.step('▶ Get Exercise by ID (API)')                               # Allure step Title
-    @tracker.track_coverage_httpx(f'{Endpoint.EXERCISES}/{{exercise_id}}')   # API Coverage tracker (id - заэкранирован)
+    @allure.step('▶ Get Exercise by ID (API)')
+    @tracker.track_coverage_httpx(f'{Endpoint.EXERCISES}/{{exercise_id}}')
     def get_exercise_api(self, exercise_id: str) -> httpx.Response:
         """
         API-метод получения информации о задании по Exercise-ID
@@ -69,7 +69,7 @@ class ExercisesClient(APIClient):
 
 
     # Pydantic-model
-    @allure.step('▶ Get Exercise by ID (Pydantic)')                                   # Allure step Title
+    @allure.step('▶ Get Exercise by ID (Pydantic)')
     def get_exercise(self, exercise_id: str) -> GetExerciseResponseSchema:
         """
         Pydantic-метод получения информации о задании по Exercise-ID
@@ -84,8 +84,8 @@ class ExercisesClient(APIClient):
 
     #-------------------------------------------------- Get Exercises --------------------------------------------------
     # API
-    @allure.step('▶ Get Exercises by Course-ID (API)')            # Allure step Title
-    @tracker.track_coverage_httpx(f'{Endpoint.EXERCISES}')        # API Coverage tracker
+    @allure.step('▶ Get Exercises by Course-ID (API)')
+    @tracker.track_coverage_httpx(f'{Endpoint.EXERCISES}')
     def get_exercises_api(self, query_course_id: GetExercisesQwerySchema) -> httpx.Response:
         """
         API-метод получения списка заданий по Course-ID (?query)
@@ -94,15 +94,15 @@ class ExercisesClient(APIClient):
         :return: httpx.Response
         """
         response = self.get(                                      # ▶ Запрос c Query-параметром
-            url=Endpoint.EXERCISES,                               # Endpoint (by Enum)
+            url=Endpoint.EXERCISES,                               # Endpoint (via Enum)
             params=query_course_id.model_dump(by_alias=True))     # Pydantic-model —> Dict (serialize)
         return response                                           # httpx.Response
 
 
     #------------------------------------------------- Update Exercise -------------------------------------------------
     # API
-    @allure.step('▶ Update Exercise by ID (API)')                            # Allure step Title
-    @tracker.track_coverage_httpx(f'{Endpoint.EXERCISES}/{{exercise_id}}')   # API Coverage tracker (id - заэкранирован)
+    @allure.step('▶ Update Exercise by ID (API)')
+    @tracker.track_coverage_httpx(f'{Endpoint.EXERCISES}/{{exercise_id}}')
     def update_exercise_api(self, exercise_id: str, new_exercise_data: UpdateExerciseRequestSchema) -> httpx.Response:
         """
         API-метод частичного обновления данных задания
@@ -111,15 +111,15 @@ class ExercisesClient(APIClient):
         :param new_exercise_data: Pydantic-model c данными, которые необходимо обновить
         :return: httpx.Response
         """
-        response = self.patch(                                               # ▶ Запрос
+        response = self.patch(                                     # ▶ Запрос
             url=f'{Endpoint.EXERCISES}/{exercise_id}',
-            json=new_exercise_data.model_dump(by_alias=True)                 # Pydantic-model —> Dict (serialize)
+            json=new_exercise_data.model_dump(by_alias=True)       # Pydantic-model —> Dict (serialize)
         )
-        return response                                                      # httpx.Response
+        return response                                            # httpx.Response
 
 
     # Pydantic-model
-    @allure.step('▶ Update Exercise by ID (Pydantic)')   # Allure step Title
+    @allure.step('▶ Update Exercise by ID (Pydantic)')
     def update_exercise(self, exercise_id: str, new_exercise_data: UpdateExerciseRequestSchema) -> UpdateExerciseResponseSchema:
         """
         Pydantic-метод частичного обновления данных задания
@@ -128,9 +128,9 @@ class ExercisesClient(APIClient):
         :param new_exercise_data: Pydantic-model c данными, которые необходимо обновить
         :return: Pydantic-model (UpdateExerciseResponseSchema)
         """
-        response = self.update_exercise_api(             # ▶ Запрос через API-метод
-            exercise_id,                       # Передаем  Exercise-ID
-            new_exercise_data            # Передаем Pydantic-model данными, которые необходимо обновить
+        response = self.update_exercise_api(          # ▶ Запрос через API-метод
+            exercise_id,                    # Передаем  Exercise-ID
+            new_exercise_data         # Передаем Pydantic-model данными, которые необходимо обновить
         )
         response_model = UpdateExerciseResponseSchema.model_validate_json(response.text) # httpx.Response —> Pydantic-model (deserialize)
         return response_model                            # Pydantic-model (UpdateExerciseResponseSchema)
@@ -138,8 +138,8 @@ class ExercisesClient(APIClient):
 
     #------------------------------------------------- Delete Exercise -------------------------------------------------
     # API
-    @allure.step('▶ Delete Exercise by ID (API)')                           # Allure step Title
-    @tracker.track_coverage_httpx(f'{Endpoint.EXERCISES}/{{exercise_id}}')  # API Coverage tracker (id - заэкранирован)
+    @allure.step('▶ Delete Exercise by ID (API)')
+    @tracker.track_coverage_httpx(f'{Endpoint.EXERCISES}/{{exercise_id}}')
     def delete_exercise_api(self, exercise_id: str) -> httpx.Response:
         """
         Метод удаление задания по Exercise-ID
@@ -152,7 +152,7 @@ class ExercisesClient(APIClient):
 
 
 #=================================================== Client (builder) ==================================================
-@allure.step('◎ Get Exercises Client')                                      # Allure step Title
+@allure.step('◎ Get Exercises Client')
 def get_exercises_client(auth_data: AuthDataSchema) -> ExercisesClient:
     """
     Функция получения экземпляра ExercisesClient с настроенным HTTP-клиентом (с Авторизацией)
@@ -162,5 +162,6 @@ def get_exercises_client(auth_data: AuthDataSchema) -> ExercisesClient:
     """
     exercises_client = ExercisesClient(client=get_httpx_client_private(auth_data))
     return exercises_client                                                 # ExercisesClient()
+
 
 #=======================================================================================================================

@@ -29,13 +29,13 @@ class UsersClientPublic(APIClient):
         :return: httpx.Response
         """
         response = self.post(                                         # ▶ Запрос
-            url=Endpoint.USERS,                                       # Endpoint (by Enum)
+            url=Endpoint.USERS,                                       # Endpoint (via Enum)
             json=create_user_data.model_dump(by_alias=True))          # Pydantic-model —> Dict (serialize)
         return response                                               # httpx.Response
 
 
     # Pydantic-model
-    @allure.step('▶ Create User (Pydantic)')                                          # Allure step Title
+    @allure.step('▶ Create User (Pydantic)')
     def create_user(self, create_user_data: CreateUserRequestSchema) -> CreateUserResponseSchema:
         """
         Pydantic-метод для создания нового пользователя
@@ -50,7 +50,7 @@ class UsersClientPublic(APIClient):
 
 
 #================================================== Client (builder) ===================================================
-@allure.step('◎ Get Users Client (Public)')                           # Allure step Title
+@allure.step('◎ Get Users Client (Public)')
 def get_users_client_public() -> UsersClientPublic:
     """
     Функция получения экземпляра UsersClientPublic() с настроенным httpx.Client (Public)

@@ -5,7 +5,6 @@ Config (via Pydantic-settings)
 from pydantic import BaseModel, HttpUrl, FilePath, DirectoryPath
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
-
 #================================================== Settings Classes ===================================================
 #----------------------------------------------------- Sub-Classes -----------------------------------------------------
 class HTTPXClientConfig(BaseModel):
@@ -51,8 +50,9 @@ class Settings(BaseSettings):
 
         return Settings(allure_results_dir=allure_results_dir)
 
+
 #========================================== Helper ✨(ГЛОБАЛЬНАЯ ПЕРЕМЕННАЯ) ===========================================
 settings = Settings.initialize()              # Инициализация класса-Pydantic-model (Settings) методом .initialize
 
+
 #=======================================================================================================================
-print(settings)

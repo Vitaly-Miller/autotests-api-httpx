@@ -63,7 +63,7 @@ class TestCreateUser:
 
     @allure.title('Create User (v.3 - Email parametrize 3-in-1)')    # Allure step Title
     @allure.tag(Tag.PARAMETRIZE)                                     # Allure Tag
-    @pytest.mark.parametrize(                                        # Parametrize Email domain (3-in-1)
+    @pytest.mark.parametrize(                                        # Parametrize Email domain (3-in-1):
         'domain', [
             'amazon.com',
             'gmail.com',

@@ -5,8 +5,7 @@ from config import settings
 from pydantic import BaseModel, Field
 from tools.data_generator import fake
 
-#=======================================================================================================================
-"""================================================= ⬆︎REQUEST Schema ==============================================="""
+#================================================= ⬆︎REQUEST Schemas ===================================================
 #----------------------------------------------------- Create File -----------------------------------------------------
 class CreateFileRequestSchema(BaseModel):
     filename: str = Field(default_factory=fake.png_file_name)            # Новое имя файла при сохранении на сервере
@@ -14,7 +13,7 @@ class CreateFileRequestSchema(BaseModel):
     upload_path: str = Field(default=settings.test_data.image_png_file)  # Путь к файлу (from .env)
 
 
-"""================================================ ⬇︎RESPONSE Schema ==============================================="""
+#================================================= ⬇︎RESPONSE Schemas ==================================================
 #----------------------------------------------------- "file": {}  -----------------------------------------------------
 class FileSchema(BaseModel):
     id: str           # File-ID
@@ -30,8 +29,8 @@ class CreateFileResponseSchema(BaseModel):
 class GetFileResponseSchema(BaseModel):
     file: FileSchema
 
-#-----------------------------------------------------------------------------------------------------------------------
-"""====================================== Full Schema (⬆︎Request + ⬇Response) ✨====================================="""
+
+#======================================== Full Schema (⬆︎Request + ⬇Response) ✨=======================================
 class CreateFileSchema(BaseModel):
     request: CreateFileRequestSchema    # ┐
     response: CreateFileResponseSchema  # ┘

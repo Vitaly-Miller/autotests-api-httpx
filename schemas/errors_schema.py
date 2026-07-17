@@ -4,7 +4,7 @@ Validation Error (Pydantic Schema)
 from pydantic import BaseModel
 from typing import Any
 
-#======================================================== Main =========================================================
+#================================================== Main Error schema ==================================================
 #---------------------------------------------------- "detail": {} -----------------------------------------------------
 class ErrorSchema(BaseModel):
     type: str
@@ -22,7 +22,7 @@ class ErrorResponseSchema(BaseModel):
     """
     detail: list[ErrorSchema]
 
-# Examples
+# Example
 """
 ---- Create User with empty 'first_name' ----
 {
@@ -77,7 +77,6 @@ class ErrorResponseSchema(BaseModel):
   ]
 }
 """
-
 
 #---------------------------------------------------- NON-exist entity -------------------------------------------------
 class NotFoundErrorResponseSchema(BaseModel):

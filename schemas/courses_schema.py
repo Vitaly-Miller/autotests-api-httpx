@@ -6,7 +6,7 @@ from schemas.files_schema import FileSchema
 from schemas.users_schema import UserSchema
 from tools.data_generator import fake
 
-"""================================================ ⬆︎REQUEST Schema ================================================"""
+#================================================== ⬆︎REQUEST schemas ==================================================
 #---------------------------------------------------- Create Course ----------------------------------------------------
 class CreateCourseRequestSchema(BaseModel):
     title: str = Field(default_factory=fake.sentence)
@@ -35,7 +35,7 @@ class UpdateCourseRequestSchema(BaseModel):
     estimated_time: str | None = Field(alias='estimatedTime', default_factory=fake.estimated_time)
 
 
-"""=============================================== ⬆︎RESPONSE Schema ================================================"""
+#================================================ ⬆︎RESPONSE schemas ===================================================
 #--------------------------------------------------- "course": {} ------------------------------------------------------
 class CourseSchema(BaseModel):
     id: str
@@ -64,14 +64,13 @@ class UpdateCourseResponseSchema(BaseModel):
     course: CourseSchema
 
 
-#-----------------------------------------------------------------------------------------------------------------------
-"""====================================== Full Schema (⬆︎Request + ⬇Response) ✨====================================="""
+#======================================== Full schema (⬆︎Request + ⬇Response) ✨=======================================
 #---------------------------------------------------- Create Course ----------------------------------------------------
 class CreateCourseSchema(BaseModel):
     request: CreateCourseRequestSchema    # ┐
     response: CreateCourseResponseSchema  # ┘
 
-    # --- Методы прямого доступа к данным ---
+    # ------- Методы прямого доступа к данным -------
     @property
     def course_id(self) -> str:
         return self.response.course.id
@@ -96,7 +95,7 @@ class CreateCourseSchema(BaseModel):
     def estimated_time(self) -> str:
         return self.request.estimated_time
 
-    # preview_file{}
+    # preview_file{} ----------------------------------
     @property
     def file_id(self) -> str:
         return self.response.course.preview_file.id
@@ -113,7 +112,7 @@ class CreateCourseSchema(BaseModel):
     def url(self) -> str:
         return self.response.course.preview_file.url
 
-    # created_by_user{}
+    # created_by_user{} ----------------------------------
     @property
     def user_id(self) -> str:
         return self.response.course.created_by_user.id

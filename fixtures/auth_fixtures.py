@@ -21,6 +21,7 @@ def auth_client() -> AuthClient:
     auth_client = get_auth_client()
     return auth_client                                          # AuthClient()
 
+
 #-------------------------------------------------------- Auth ---------------------------------------------------------
 # API
 @pytest.fixture
