@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDAwOjIxOjAzLjUzOTc1MSIsInVzZXJfaWQiOiIyMGY2MjU4Yi1mZjZhLTQxNTYtOGEwNy03ZTgxNTFjOTI4NjcifQ.XARVoOGw_AvUujo-di_U-tDpkcg25dZUY2l_doXyDW8' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Great live carry group.","maxScore":78,"minScore":13,"description":"Religious example because all Mr factor rise.","estimatedTime":"3 weeks","previewFileId":"f7d3036b-f4d5-452b-9ef4-f3b18f680d27","createdByUserId":"20f6258b-ff6a-4156-8a07-7e8151c92867"}'

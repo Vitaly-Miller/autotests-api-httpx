@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDAwOjIwOjUyLjA0MTA3MiIsInVzZXJfaWQiOiJjZTI4OGE4NC1jYjI1LTQ2YjctOWY3YS1iZGUwYTBiNTJjZDgifQ.3IkqhSCWda9LD6cQELooWcAm9GarfsqB_eO8cyksfOQ' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Growth during along side kind.","maxScore":79,"minScore":27,"description":"Rise far during summer. Office sing tax.","estimatedTime":"9 weeks","previewFileId":"c7f363cc-b270-443d-987f-8cfc0a83af2e","createdByUserId":"ce288a84-cb25-46b7-9f7a-bde0a0b52cd8"}'

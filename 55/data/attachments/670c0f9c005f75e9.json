@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "bdc24a71-5179-41e7-ae7e-ccea34d21c8b",
+    "title": "Door five upon know sister.",
+    "maxScore": 52,
+    "minScore": 22,
+    "description": "Interview price side.",
+    "previewFile": {
+      "id": "1bd4afa2-e736-4c1d-ba97-da487a41571d",
+      "filename": "file_4802.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_4802.png"
+    },
+    "estimatedTime": "4 weeks",
+    "createdByUser": {
+      "id": "f5512b44-59b7-40f8-af1c-cdc38c495e95",
+      "email": "test_e7c7b119@example.com",
+      "lastName": "Hess",
+      "firstName": "Erica",
+      "middleName": "Carolyn"
+    }
+  }
+}

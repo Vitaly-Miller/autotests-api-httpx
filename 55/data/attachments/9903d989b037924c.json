@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "17f5a273-2032-44bf-ab2a-05081c474cd7",
+    "title": "Camera order meeting money.",
+    "maxScore": 99,
+    "minScore": 18,
+    "description": "Build until table could right red.",
+    "previewFile": {
+      "id": "02e7699f-fa61-459e-8a2e-f64c6affb3ff",
+      "filename": "file_8814.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_8814.png"
+    },
+    "estimatedTime": "6 weeks",
+    "createdByUser": {
+      "id": "004201dd-c165-4e68-af5a-cebbfb1c0097",
+      "email": "test_75bcc890@example.com",
+      "lastName": "Burke",
+      "firstName": "James",
+      "middleName": "Larry"
+    }
+  }
+}

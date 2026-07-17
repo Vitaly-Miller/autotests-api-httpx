@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjEzOjQzLjExODMyNyIsInVzZXJfaWQiOiIyODhiMDA3OC0zNjE1LTQzNDktODNmYi02ZTJiMGM3YjVmODYifQ.VjAOaKhY1un1ElgdOVaMKU96HZ4zwfWiHvyyVxCCTl4' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Have player gas feel.","maxScore":81,"minScore":2,"description":"Draw occur product vote official difference.","estimatedTime":"9 weeks","previewFileId":"e4c70988-b18d-44a7-b902-efb09d0d58e3","createdByUserId":"288b0078-3615-4349-83fb-6e2b0c7b5f86"}'

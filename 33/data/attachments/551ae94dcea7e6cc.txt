@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/exercises \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDAwOjIwOjU4Ljc4MzAwMyIsInVzZXJfaWQiOiJkZjI4NzVlZS03YmY5LTQyYmMtOTRlNy04NWEwZDFlODFmNGEifQ.xYaMtSVat8hWrd23qDac32MQ337olxm-YIMdm-_y9L4' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Focus democratic work between.","courseId":"c373c10b-20a3-4460-a0d0-28ccc9e27433","maxScore":82,"minScore":6,"orderIndex":8916,"description":"Major sure stock fact meet onto may.","estimatedTime":"2 weeks"}'

@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/exercises \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDAwOjIxOjAyLjExNTE1MiIsInVzZXJfaWQiOiI3ZDYzMWNlZS1jMWQ4LTQ4MWQtOGFiNy1mZjc0MzZhMTVmYmMifQ.ZltJ33IebNMWD0FijRvVbPGX9UJuxw8GNJV7zU8LBhc' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Mention north walk join listen.","courseId":"bbaba4bc-2e7e-42c2-8ce0-f75ffb97fa84","maxScore":59,"minScore":27,"orderIndex":8600,"description":"Thus talk dog treat. Base network dog.","estimatedTime":"2 weeks"}'

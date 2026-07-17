@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDAwOjIxOjAxLjI1MTA1OCIsInVzZXJfaWQiOiI1YmMyYzUyNS1hNzUyLTQ1NWUtOGM5NC03Nzc2NjE1ZDc5NjYifQ.F1I8xYndsTX4uGZjW9ng_1jwN3Ol87pQP5G83sFOjEw' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Republican time middle just order fly.","maxScore":79,"minScore":24,"description":"Many well work inside look.","estimatedTime":"7 weeks","previewFileId":"078e9c83-7e5c-4b07-95df-90f54d89b2bd","createdByUserId":"5bc2c525-a752-455e-8c94-7776615d7966"}'

@@ -1,0 +1,4 @@
+         Request URL: http://localhost:8000/api/v1/exercises?courseId=685143d7-9d6f-44ab-884d-0dd22268cb4e
+      Request Method: GET
+Response Status Code: 200-OK
+        Response URL: http://localhost:8000/api/v1/exercises?courseId=685143d7-9d6f-44ab-884d-0dd22268cb4e

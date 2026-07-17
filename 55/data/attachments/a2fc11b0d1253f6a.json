@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "26a994ff-aaf1-4927-8463-9bd5298e4a81",
+    "title": "Begin part measure.",
+    "maxScore": 100,
+    "minScore": 18,
+    "description": "Particular him grow. However be top as tell.",
+    "previewFile": {
+      "id": "075021c8-b8fe-4550-91d0-e92771a954d4",
+      "filename": "file_1681.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_1681.png"
+    },
+    "estimatedTime": "7 weeks",
+    "createdByUser": {
+      "id": "0e5c8127-bc9b-416a-9b17-b9d0d4096bc4",
+      "email": "test_f8fe5f63@example.com",
+      "lastName": "Evans",
+      "firstName": "Teresa",
+      "middleName": "Linda"
+    }
+  }
+}

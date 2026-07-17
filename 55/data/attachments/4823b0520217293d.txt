@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/exercises/0acb201a-f50e-428e-a780-5ab5ad41b9d4 \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjEzOjQ1LjM3MDM0MiIsInVzZXJfaWQiOiJhMzkzNTZiNi03YjgyLTRiZDgtOTk4NS0yZGRjZGNjMWY4ZjAifQ.9auy2LcEeXgQuJO6Z4sAXcWp90Cwb8bhcUR5-NSmzYI' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Offer get face case.","maxScore":91,"minScore":21,"orderIndex":3574,"description":"Money firm impact economy whole remember.","estimatedTime":"3 weeks"}'

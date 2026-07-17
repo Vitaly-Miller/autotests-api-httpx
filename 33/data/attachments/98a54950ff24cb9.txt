@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDAwOjIxOjAyLjM3MDg4MyIsInVzZXJfaWQiOiI3ZDYzMWNlZS1jMWQ4LTQ4MWQtOGFiNy1mZjc0MzZhMTVmYmMifQ.LROC9phx-6-xOW2vCerJvYffQN7ADp69PkpBHzIoRW8' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Analysis attack require not own.","maxScore":74,"minScore":11,"description":"Animal source firm big.","estimatedTime":"8 weeks","previewFileId":"cd454937-5130-4ac2-9ba6-bad5008a29ba","createdByUserId":"7d631cee-c1d8-481d-8ab7-ff7436a15fbc"}'

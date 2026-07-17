@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "f74dccd7-a28d-45fb-88c9-71ff6e051e31",
+    "title": "Address song should poor Congress.",
+    "maxScore": 77,
+    "minScore": 18,
+    "description": "Doctor again issue protect view however.",
+    "previewFile": {
+      "id": "589875ca-71cb-4455-aff9-9d417029d36e",
+      "filename": "file_4847.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_4847.png"
+    },
+    "estimatedTime": "8 weeks",
+    "createdByUser": {
+      "id": "75a4ef94-9417-4c07-805e-34508d97a0b0",
+      "email": "test_3e3ca7d2@example.com",
+      "lastName": "Pruitt",
+      "firstName": "Sandra",
+      "middleName": "Rachel"
+    }
+  }
+}

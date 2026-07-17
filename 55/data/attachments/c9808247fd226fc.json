@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "73da6358-ddf5-44e9-adf6-fe150a55c7d6",
+    "title": "Most conference society would.",
+    "maxScore": 92,
+    "minScore": 13,
+    "description": "Side remember establish Mrs.",
+    "previewFile": {
+      "id": "42c02a9e-a2f3-4f3c-b8f3-f90deb0d4460",
+      "filename": "file_8199.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_8199.png"
+    },
+    "estimatedTime": "6 weeks",
+    "createdByUser": {
+      "id": "e9fb46b6-d8f2-497a-a4ce-2287505d3761",
+      "email": "test_94634a79@example.com",
+      "lastName": "Harrison",
+      "firstName": "Wesley",
+      "middleName": "Charlene"
+    }
+  }
+}

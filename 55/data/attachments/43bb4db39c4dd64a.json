@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "685143d7-9d6f-44ab-884d-0dd22268cb4e",
+    "title": "Have player gas feel.",
+    "maxScore": 81,
+    "minScore": 2,
+    "description": "Draw occur product vote official difference.",
+    "previewFile": {
+      "id": "e4c70988-b18d-44a7-b902-efb09d0d58e3",
+      "filename": "file_7532.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_7532.png"
+    },
+    "estimatedTime": "9 weeks",
+    "createdByUser": {
+      "id": "288b0078-3615-4349-83fb-6e2b0c7b5f86",
+      "email": "test_d15f7ee4@example.com",
+      "lastName": "Obrien",
+      "firstName": "Kathy",
+      "middleName": "Miguel"
+    }
+  }
+}

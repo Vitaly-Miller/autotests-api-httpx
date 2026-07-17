@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjEzOjMyLjUwNTI1OCIsInVzZXJfaWQiOiI3NWE0ZWY5NC05NDE3LTRjMDctODA1ZS0zNDUwOGQ5N2EwYjAifQ.TTU-qrOMav-XwnFqhjFnM987fuuRh7LQy83Eqn4CnKU' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Address song should poor Congress.","maxScore":77,"minScore":18,"description":"Doctor again issue protect view however.","estimatedTime":"8 weeks","previewFileId":"589875ca-71cb-4455-aff9-9d417029d36e","createdByUserId":"75a4ef94-9417-4c07-805e-34508d97a0b0"}'

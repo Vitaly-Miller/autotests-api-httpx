@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/exercises/996e42f0-8111-410d-9ba1-f5bc64e3be9b \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjEzOjQ0LjA4NjAxMyIsInVzZXJfaWQiOiJjNmQwMGI3ZC05OWJkLTQ2ZWEtOTRkYi1mZTRhZjM1Mzg4MDEifQ.fxAwT7L6c9Q6S0FAcAjvmqKnGYLuWBBLmWDWnNKTAxI' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Show certainly may.","maxScore":100,"minScore":1,"orderIndex":6885,"description":"College act now member.","estimatedTime":"3 weeks"}'

@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjEzOjM0LjQ0ODQ5NyIsInVzZXJfaWQiOiJlOWZiNDZiNi1kOGYyLTQ5N2EtYTRjZS0yMjg3NTA1ZDM3NjEifQ.ycGT1f5WRpF-ms-tblvFmEe2Io6Dz_u_Ue_67FjnKPs' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Most conference society would.","maxScore":92,"minScore":13,"description":"Side remember establish Mrs.","estimatedTime":"6 weeks","previewFileId":"42c02a9e-a2f3-4f3c-b8f3-f90deb0d4460","createdByUserId":"e9fb46b6-d8f2-497a-a4ce-2287505d3761"}'

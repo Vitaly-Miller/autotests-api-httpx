@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjEzOjM3LjY2MDA1NSIsInVzZXJfaWQiOiI1YjQyNDcyYy01NTIwLTQ5NmEtYjAwNC01Mjc4NTBjNjUwZWMifQ.haSBcvUt6ZEryGkqHGdn-3s0ap4uhpA6mjaWXg5Fdrw' \
+  -H 'content-type: application/json' \
+  -d '{"title":"For offer act unit argue.","courseId":"a541e005-6b4c-4223-be3e-c23510eb93cf","maxScore":79,"minScore":10,"orderIndex":7757,"description":"Language religious wrong direction table.","estimatedTime":"3 weeks"}'

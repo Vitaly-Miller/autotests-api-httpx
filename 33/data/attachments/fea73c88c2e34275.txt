@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/exercises \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDAwOjIwOjU2LjIxMTc0NyIsInVzZXJfaWQiOiJiMWYzOWNjYS04M2QxLTQxYzItOTQxNy1kYjMyN2U0NzZjNzcifQ.shOsGz7AkFq_6Tb9cjvhmpJjL96CFoHTZ4cXRAXVWz8' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Letter support prove.","courseId":"563acc06-d773-4a54-952c-5f6e1ab9d4c4","maxScore":82,"minScore":8,"orderIndex":5248,"description":"Training rich than include bill off.","estimatedTime":"4 weeks"}'

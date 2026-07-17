@@ -1,0 +1,4 @@
+         Request URL: http://localhost:8000/api/v1/exercises/0acb201a-f50e-428e-a780-5ab5ad41b9d4
+      Request Method: PATCH
+Response Status Code: 200-OK
+        Response URL: http://localhost:8000/api/v1/exercises/0acb201a-f50e-428e-a780-5ab5ad41b9d4

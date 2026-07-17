@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjEzOjQyLjgxMTY5MiIsInVzZXJfaWQiOiIyODhiMDA3OC0zNjE1LTQzNDktODNmYi02ZTJiMGM3YjVmODYifQ.dkZXMforbuzZuIwKLhW4oYGG5wOOXU8ZhBaKDTjQ7OQ' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Modern use include catch eye process unit.","courseId":"685143d7-9d6f-44ab-884d-0dd22268cb4e","maxScore":66,"minScore":12,"orderIndex":1675,"description":"Enter up him really order worker.","estimatedTime":"7 weeks"}'

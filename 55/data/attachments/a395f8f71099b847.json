@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "a541e005-6b4c-4223-be3e-c23510eb93cf",
+    "title": "Must here campaign.",
+    "maxScore": 87,
+    "minScore": 17,
+    "description": "School lawyer become agreement whom.",
+    "previewFile": {
+      "id": "130be041-a9fc-4c04-9026-ba9f9d0540bd",
+      "filename": "file_7445.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_7445.png"
+    },
+    "estimatedTime": "5 weeks",
+    "createdByUser": {
+      "id": "5b42472c-5520-496a-b004-527850c650ec",
+      "email": "test_f488cbf6@example.com",
+      "lastName": "Ford",
+      "firstName": "Donna",
+      "middleName": "Tony"
+    }
+  }
+}

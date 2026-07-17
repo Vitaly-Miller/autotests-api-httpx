@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjEzOjM5LjIzMjY3MiIsInVzZXJfaWQiOiI0ZmUzOGU5OS0xYzE3LTRiZDgtOTQzYS0zODA4NjJmYTg0M2QifQ.7_VVTAMFvAZP9eY4FdZBMUyWmTq_az24-XPjq67P1Cg' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Reveal option research.","maxScore":100,"minScore":16,"description":"Theory environment great rise.","estimatedTime":"2 weeks","previewFileId":"a7b4bfae-5f80-4e33-ab80-e9948e0751a3","createdByUserId":"4fe38e99-1c17-4bd8-943a-380862fa843d"}'

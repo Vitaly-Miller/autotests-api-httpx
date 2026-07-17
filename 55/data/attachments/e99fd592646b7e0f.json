@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "88db7ea1-afe1-4b0e-98c0-a2264714db6d",
+    "title": "Including room plan task official indicate.",
+    "maxScore": 72,
+    "minScore": 14,
+    "description": "Choose shoulder back blue prepare not.",
+    "previewFile": {
+      "id": "1a25d9ec-18bf-4a8a-b8cb-a65b08c92905",
+      "filename": "file_2203.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_2203.png"
+    },
+    "estimatedTime": "2 weeks",
+    "createdByUser": {
+      "id": "9f54681d-0d55-45c2-af47-69e79cfbfa2a",
+      "email": "test_616351c1@example.com",
+      "lastName": "Mack",
+      "firstName": "Joshua",
+      "middleName": "Victor"
+    }
+  }
+}

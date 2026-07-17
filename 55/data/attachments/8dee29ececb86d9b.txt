@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjEzOjM3Ljk2MTQ5MyIsInVzZXJfaWQiOiI1YjQyNDcyYy01NTIwLTQ5NmEtYjAwNC01Mjc4NTBjNjUwZWMifQ.jKt_bdM1QK_q8MJgyOkpIcFK2WpSIMbqSeocyf-2bNc' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Must here campaign.","maxScore":87,"minScore":17,"description":"School lawyer become agreement whom.","estimatedTime":"5 weeks","previewFileId":"130be041-a9fc-4c04-9026-ba9f9d0540bd","createdByUserId":"5b42472c-5520-496a-b004-527850c650ec"}'

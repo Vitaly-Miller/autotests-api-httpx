@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/exercises \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDAwOjIxOjA0LjM3ODcyNiIsInVzZXJfaWQiOiJlNmNmNTFmZC1mMjBiLTQ3MGQtOWU2Mi0wMzQ2YTU5ZmJkNDkifQ.grce6uN8W48wBjTGlhNN9hSflFAl5F5p8Y9jNVGMlc0' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Hope central half front.","courseId":"f5ed7a65-8392-48f7-a886-1039519161da","maxScore":78,"minScore":16,"orderIndex":5664,"description":"Manager ok upon report hotel.","estimatedTime":"9 weeks"}'

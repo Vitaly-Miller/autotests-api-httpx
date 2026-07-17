@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDAwOjIxOjA0LjYzNDU4OCIsInVzZXJfaWQiOiJlNmNmNTFmZC1mMjBiLTQ3MGQtOWU2Mi0wMzQ2YTU5ZmJkNDkifQ.SI2TK1muYpUZK7FE7o3Kpr9VjVU7qeevGJwutlmETQU' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Fall pretty continue inside cup central.","maxScore":79,"minScore":18,"description":"Watch popular popular next care fast management.","estimatedTime":"2 weeks","previewFileId":"36ee090c-50cf-430f-8d00-c95de6275176","createdByUserId":"e6cf51fd-f20b-470d-9e62-0346a59fbd49"}'

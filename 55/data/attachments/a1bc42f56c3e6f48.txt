@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjEzOjM4LjkzMjg3OCIsInVzZXJfaWQiOiI0ZmUzOGU5OS0xYzE3LTRiZDgtOTQzYS0zODA4NjJmYTg0M2QifQ.j0NhhljTigiyQ9u5K5Q4ItPIsiwtmL-i4fWIoDf0jJ0' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Compare above serve focus music action.","courseId":"df38e491-97aa-44de-b025-e7ec2d107d9d","maxScore":97,"minScore":25,"orderIndex":8107,"description":"Goal majority machine different they seat.","estimatedTime":"8 weeks"}'

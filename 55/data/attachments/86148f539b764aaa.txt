@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/courses/26a994ff-aaf1-4927-8463-9bd5298e4a81 \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjEzOjM1LjQxMjU3NiIsInVzZXJfaWQiOiIwZTVjODEyNy1iYzliLTQxNmEtOWIxNy1iOWQwZDQwOTZiYzQifQ.Z8bNW2FGLSWYNDvi76IdZ3nWJEJycrJEewkbvUkbKJ0' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Begin part measure.","maxScore":100,"minScore":18,"description":"Particular him grow. However be top as tell.","estimatedTime":"7 weeks"}'

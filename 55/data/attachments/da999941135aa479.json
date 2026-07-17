@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "62287c20-f370-4cc2-a70c-5f47ecf415a4",
+    "title": "Site those list.",
+    "maxScore": 72,
+    "minScore": 1,
+    "description": "Here one his deep situation hotel treat.",
+    "previewFile": {
+      "id": "769bf52e-646d-4e22-ba3b-33893f067032",
+      "filename": "file_3898.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_3898.png"
+    },
+    "estimatedTime": "2 weeks",
+    "createdByUser": {
+      "id": "a39356b6-7b82-4bd8-9985-2ddcdcc1f8f0",
+      "email": "test_1f10945a@example.com",
+      "lastName": "Dorsey",
+      "firstName": "Michael",
+      "middleName": "Kevin"
+    }
+  }
+}

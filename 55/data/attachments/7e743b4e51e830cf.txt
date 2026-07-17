@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjEzOjQ1LjM3MDM0MiIsInVzZXJfaWQiOiJhMzkzNTZiNi03YjgyLTRiZDgtOTk4NS0yZGRjZGNjMWY4ZjAifQ.9auy2LcEeXgQuJO6Z4sAXcWp90Cwb8bhcUR5-NSmzYI' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Network simply catch by star.","courseId":"62287c20-f370-4cc2-a70c-5f47ecf415a4","maxScore":72,"minScore":6,"orderIndex":576,"description":"Law true particularly list relate.","estimatedTime":"4 weeks"}'

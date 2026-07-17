@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "d6784f10-bd1e-448c-8476-bcbce725c16c",
+    "title": "Wrong trouble far world.",
+    "maxScore": 80,
+    "minScore": 11,
+    "description": "Near character country cup.",
+    "previewFile": {
+      "id": "92946c80-91be-4fee-911a-c865815cfcbd",
+      "filename": "file_5667.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_5667.png"
+    },
+    "estimatedTime": "7 weeks",
+    "createdByUser": {
+      "id": "c6d00b7d-99bd-46ea-94db-fe4af3538801",
+      "email": "test_be8e05a8@example.com",
+      "lastName": "Rodriguez",
+      "firstName": "Daniel",
+      "middleName": "Melissa"
+    }
+  }
+}

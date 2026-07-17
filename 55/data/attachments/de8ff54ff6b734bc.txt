@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjEzOjQxLjUwMzA3NSIsInVzZXJfaWQiOiJmNTUxMmI0NC01OWI3LTQwZjgtYWYxYy1jZGMzOGM0OTVlOTUifQ.fK2MksrTII58eH9jKrsSyzAJAtejJs1kxfvqsYLxmOA' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Dark cause Mrs.","courseId":"bdc24a71-5179-41e7-ae7e-ccea34d21c8b","maxScore":83,"minScore":9,"orderIndex":1772,"description":"Color new model center within.","estimatedTime":"7 weeks"}'
