@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjIwOjA4LjIzMTQ2NCIsInVzZXJfaWQiOiI5MzliMTQ2OS01N2Q2LTQ3ZGMtYjg5Ni04ZmNiNTRhYzUxYjcifQ.Y_IsCJT54cO32JoTBdonaVYCP8S0LSirZ8qBjWzE2ks' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Speech another ask executive strong star.","maxScore":55,"minScore":6,"description":"Avoid road citizen everything trip reach couple.","estimatedTime":"5 weeks","previewFileId":"09b88d55-e4b0-4a10-a173-de5fd887887f","createdByUserId":"939b1469-57d6-47dc-b896-8fcb54ac51b7"}'

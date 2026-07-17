@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjIwOjE1LjUzMzMyMCIsInVzZXJfaWQiOiIxMDI4OGI2Yi00MWZjLTRhMTUtYThkYS0zYzk4ZDU5NjE2NWMifQ.z8PmM4PqcGSeK_9lI1MCzFUmZBpvUmsSutLhcksczjM' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Discover wish imagine various it coach.","maxScore":58,"minScore":29,"description":"Century trade simple artist late.","estimatedTime":"5 weeks","previewFileId":"26d7279d-640b-47be-b903-60f91eb0ab10","createdByUserId":"10288b6b-41fc-4a15-a8da-3c98d596165c"}'

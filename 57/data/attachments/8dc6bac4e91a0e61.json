@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "96c34be4-ee8d-4652-b566-38da21397ed9",
+    "title": "Only poor policy life.",
+    "maxScore": 100,
+    "minScore": 6,
+    "description": "Want prepare think national.",
+    "previewFile": {
+      "id": "d3cd5734-ed8c-40aa-a0fa-69bb596da64b",
+      "filename": "file_1234.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_1234.png"
+    },
+    "estimatedTime": "2 weeks",
+    "createdByUser": {
+      "id": "668980d1-111c-47f6-a921-41e0afe79868",
+      "email": "test_2ac06435@example.com",
+      "lastName": "Hernandez",
+      "firstName": "Wendy",
+      "middleName": "Melissa"
+    }
+  }
+}

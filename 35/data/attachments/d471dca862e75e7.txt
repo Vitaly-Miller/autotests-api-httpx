@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDAxOjM3OjA1LjIxNzYwMSIsInVzZXJfaWQiOiI1MDVjNDczOS04NWEyLTQ5MTQtOTEzZi04Nzk3YWJkYjE4NTQifQ._9VLzsQgWyx0LcQtf7sSN6OXgIdQIQHEQTYAuryT_uY' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Check imagine industry life sense the.","maxScore":53,"minScore":16,"description":"System idea color movement.","estimatedTime":"3 weeks","previewFileId":"0380a100-5796-4fc5-b0f2-a765a22cc40b","createdByUserId":"505c4739-85a2-4914-913f-8797abdb1854"}'

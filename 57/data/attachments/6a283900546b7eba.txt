@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjIwOjIxLjA5NzUwOSIsInVzZXJfaWQiOiIyNzY2NTFjYS1lZWEzLTQ0OGQtOTQwMi1iZjQwN2NjNzQzODMifQ.3uGmkI7ywWHdVjZBb6UVQy98J9enLfcYPoBCyGcjiOM' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Language never personal through measure.","maxScore":86,"minScore":1,"description":"Food business state.","estimatedTime":"6 weeks","previewFileId":"d161b841-44c8-42b1-a8a5-58cabf139d64","createdByUserId":"276651ca-eea3-448d-9402-bf407cc74383"}'

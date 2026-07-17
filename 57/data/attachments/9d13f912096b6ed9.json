@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "70e89116-2bd4-459c-a24b-b0c8a883184e",
+    "title": "War military near mind soon medical.",
+    "maxScore": 85,
+    "minScore": 19,
+    "description": "Evening front culture thing series.",
+    "previewFile": {
+      "id": "91028f4e-1b54-4a9d-9d8b-741b0a43a2b5",
+      "filename": "file_1520.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_1520.png"
+    },
+    "estimatedTime": "9 weeks",
+    "createdByUser": {
+      "id": "db877046-653d-470e-918e-a337a23b302a",
+      "email": "test_3d5506bd@example.com",
+      "lastName": "Salazar",
+      "firstName": "Kimberly",
+      "middleName": "Jacob"
+    }
+  }
+}

@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjIwOjEzLjgyMDU2OSIsInVzZXJfaWQiOiIyMTQ0OWM5YS0yMTcxLTQ5ZWUtYjQxMS1lZGU2OTFjNTg1ZDEifQ.ZNpprQiScB9KVRQOoU6JFdsIEN0DuBtXycl-PgkXLxE' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Early enough leader finally.","courseId":"e2d54ed6-23c7-4dc6-baae-432ace83a37f","maxScore":96,"minScore":10,"orderIndex":1073,"description":"Method police gas near easy simple along around.","estimatedTime":"3 weeks"}'

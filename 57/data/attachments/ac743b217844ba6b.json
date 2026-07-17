@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "af57994e-f524-4988-9df6-b4e3a52fbdc4",
+    "title": "Whose central organization Republican kitchen eye.",
+    "maxScore": 90,
+    "minScore": 8,
+    "description": "Serious ok join until method dream authority.",
+    "previewFile": {
+      "id": "d1d680d0-7dc8-41a7-bcd8-71d354909211",
+      "filename": "file_8151.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_8151.png"
+    },
+    "estimatedTime": "5 weeks",
+    "createdByUser": {
+      "id": "f194cbd8-6aaa-4727-86ba-57ab1d2c9e9c",
+      "email": "test_a086c234@example.com",
+      "lastName": "Ray",
+      "firstName": "Caitlin",
+      "middleName": "Nathan"
+    }
+  }
+}

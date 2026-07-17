@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDAxOjM3OjA3LjY1NTkwOCIsInVzZXJfaWQiOiI2OTU0NTY0Yi03YjZiLTQ3YmQtYjM5MS1mYjgyZTU4ODdlNzcifQ.OoXPCsi4glFZw7acmAZqBsPKUnKqjy3oKiX5_4ZJH3M' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Law end federal.","maxScore":91,"minScore":24,"description":"Continue become kid still measure guess add.","estimatedTime":"5 weeks","previewFileId":"360ebe10-eec1-4783-9006-80e28bf13a2d","createdByUserId":"6954564b-7b6b-47bd-b391-fb82e5887e77"}'

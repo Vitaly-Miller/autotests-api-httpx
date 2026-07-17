@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjIwOjEyLjc2MjE5NCIsInVzZXJfaWQiOiI4NmNmNTNhMy01NmZlLTRlYWYtOWYwZC0wOWE5MDFlZGFjYzEifQ.5ndnWQ2Ako4C3r5NENE9o2cj18uDGuvGVjoDUJq2NUE' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Free rise full wind.","maxScore":73,"minScore":23,"description":"Serious really role service.","estimatedTime":"2 weeks","previewFileId":"b31e9478-06e8-4294-b1a4-4b5effd1e596","createdByUserId":"86cf53a3-56fe-4eaf-9f0d-09a901edacc1"}'

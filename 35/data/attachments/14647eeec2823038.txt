@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDAxOjM3OjEyLjU0MzA4OCIsInVzZXJfaWQiOiI4NDA4OGMwNC0zMDU0LTQ5MTEtOWQwYy0wMjQxOTU5MDQxYTkifQ.BsIc0q97KIMOs9yfELBt7m9q4AgprsXmabyOAhIviOI' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Herself nation audience.","maxScore":88,"minScore":24,"description":"Off animal research project night.","estimatedTime":"8 weeks","previewFileId":"beaeb722-68dc-4394-aa50-d443a0680d4b","createdByUserId":"84088c04-3054-4911-9d0c-0241959041a9"}'

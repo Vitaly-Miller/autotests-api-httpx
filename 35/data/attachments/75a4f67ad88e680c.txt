@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/exercises \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDAxOjM3OjA5LjgxMTU1NyIsInVzZXJfaWQiOiI4OWQ5MDNkYy1lNjkxLTQ2NzktYWIxZC0yOGVkYjM4Mjc5NzgifQ.FJohBo5Rr4vQe8qW2QgI5vZmqDVr-MiI3TBxWIGWuB0' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Her student cold couple.","courseId":"31252151-c795-48aa-967b-34a8837333c6","maxScore":82,"minScore":18,"orderIndex":4859,"description":"Full it toward standard we check performance.","estimatedTime":"9 weeks"}'

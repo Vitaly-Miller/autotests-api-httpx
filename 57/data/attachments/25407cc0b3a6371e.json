@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "e2d54ed6-23c7-4dc6-baae-432ace83a37f",
+    "title": "Bed several director nearly describe.",
+    "maxScore": 76,
+    "minScore": 22,
+    "description": "Write onto receive attack night.",
+    "previewFile": {
+      "id": "cbdb20b0-5cf9-4c4d-ba4c-d4554c9add29",
+      "filename": "file_5544.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_5544.png"
+    },
+    "estimatedTime": "3 weeks",
+    "createdByUser": {
+      "id": "21449c9a-2171-49ee-b411-ede691c585d1",
+      "email": "test_389bf9ce@example.com",
+      "lastName": "Davis",
+      "firstName": "Anthony",
+      "middleName": "Diane"
+    }
+  }
+}

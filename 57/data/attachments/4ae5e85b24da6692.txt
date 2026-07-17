@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjIwOjIwLjc2NjM5MyIsInVzZXJfaWQiOiIyNzY2NTFjYS1lZWEzLTQ0OGQtOTQwMi1iZjQwN2NjNzQzODMifQ.9Vgl69rRJjU-PQTY2pSdhIntoC80Lx4ejVd1GbMVaMY' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Pass rather answer.","courseId":"f952c962-901c-4d0e-83f4-de814b9aa196","maxScore":76,"minScore":30,"orderIndex":8418,"description":"Cell box why hundred.","estimatedTime":"3 weeks"}'

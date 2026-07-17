@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/exercises \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDAxOjM3OjEyLjI1NTU4NiIsInVzZXJfaWQiOiI4NDA4OGMwNC0zMDU0LTQ5MTEtOWQwYy0wMjQxOTU5MDQxYTkifQ.TRKU_Fw7fhv8yev_2JNcCv-40FUPsROzPEQuRRWj7VU' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Red one name food sound money.","courseId":"54531335-f56f-4396-a13b-ea087721796a","maxScore":82,"minScore":25,"orderIndex":9983,"description":"Fight sign heart top sort final prevent.","estimatedTime":"9 weeks"}'

@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/courses/7191417d-ea5f-424e-bb40-2b91011cc9a0 \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjIwOjExLjM4MTkwNiIsInVzZXJfaWQiOiJmMzc1YmNiZC1jZWQ3LTRiNjctOGMzNy00OTJiM2YwODU5ZGIifQ.HNo_NzI3DSjTQWA22WgBIOt1e1koNYjNGrGNaGvbV1k' \
+  -H 'content-type: application/json' \
+  -d '{"title":"At she analysis door heart.","maxScore":91,"minScore":23,"description":"Idea begin station available.","estimatedTime":"6 weeks"}'

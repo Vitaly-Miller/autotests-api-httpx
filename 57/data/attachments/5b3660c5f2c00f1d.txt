@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjIwOjE5LjcxNzI1MyIsInVzZXJfaWQiOiI0ODcyMGU3Ny02ZDE2LTQzMGEtOGY2Ny05MGRjNDgxNTk1ODYifQ.6RWD0Ddx9unLQxhBbsPQWkXJjlg8zXBJ1sz5eCqZfqw' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Activity society as girl.","maxScore":99,"minScore":2,"description":"Church box though. By game girl.","estimatedTime":"2 weeks","previewFileId":"df0d2f33-f378-427d-bba0-b493dbd4b3bd","createdByUserId":"48720e77-6d16-430a-8f67-90dc48159586"}'

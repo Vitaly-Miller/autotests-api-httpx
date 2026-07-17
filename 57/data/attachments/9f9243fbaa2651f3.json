@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "a06ca25c-a022-4eef-a340-d7912d6e4d86",
+    "title": "Discover wish imagine various it coach.",
+    "maxScore": 58,
+    "minScore": 29,
+    "description": "Century trade simple artist late.",
+    "previewFile": {
+      "id": "26d7279d-640b-47be-b903-60f91eb0ab10",
+      "filename": "file_2461.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_2461.png"
+    },
+    "estimatedTime": "5 weeks",
+    "createdByUser": {
+      "id": "10288b6b-41fc-4a15-a8da-3c98d596165c",
+      "email": "test_834ce21d@example.com",
+      "lastName": "Dominguez",
+      "firstName": "James",
+      "middleName": "Kimberly"
+    }
+  }
+}

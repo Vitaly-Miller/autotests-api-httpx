@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjIwOjE2LjkzODMwOCIsInVzZXJfaWQiOiI2Njg5ODBkMS0xMTFjLTQ3ZjYtYTkyMS00MWUwYWZlNzk4NjgifQ.kM9puDIx8ZFkFts-A9Qk28bJ7wgHp5Frxy6PcaL0GbU' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Only poor policy life.","maxScore":100,"minScore":6,"description":"Want prepare think national.","estimatedTime":"2 weeks","previewFileId":"d3cd5734-ed8c-40aa-a0fa-69bb596da64b","createdByUserId":"668980d1-111c-47f6-a921-41e0afe79868"}'

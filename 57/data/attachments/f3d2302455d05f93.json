@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "40a6a2e4-2521-4aa3-80a6-641d80d545c4",
+    "title": "Activity society as girl.",
+    "maxScore": 99,
+    "minScore": 2,
+    "description": "Church box though. By game girl.",
+    "previewFile": {
+      "id": "df0d2f33-f378-427d-bba0-b493dbd4b3bd",
+      "filename": "file_4937.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_4937.png"
+    },
+    "estimatedTime": "2 weeks",
+    "createdByUser": {
+      "id": "48720e77-6d16-430a-8f67-90dc48159586",
+      "email": "test_fae2d90d@example.com",
+      "lastName": "Scott",
+      "firstName": "Kevin",
+      "middleName": "Shelia"
+    }
+  }
+}

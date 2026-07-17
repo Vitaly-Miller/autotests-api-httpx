@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjIwOjEwLjMzMzUwMyIsInVzZXJfaWQiOiJkYjg3NzA0Ni02NTNkLTQ3MGUtOTE4ZS1hMzM3YTIzYjMwMmEifQ.QdSnDZG5Zcoz2grg3T3aY8xz16pMy7SEi41S0mO8alI' \
+  -H 'content-type: application/json' \
+  -d '{"title":"War military near mind soon medical.","maxScore":85,"minScore":19,"description":"Evening front culture thing series.","estimatedTime":"9 weeks","previewFileId":"91028f4e-1b54-4a9d-9d8b-741b0a43a2b5","createdByUserId":"db877046-653d-470e-918e-a337a23b302a"}'

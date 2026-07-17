@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjIwOjE0LjE1MjQ4OSIsInVzZXJfaWQiOiIyMTQ0OWM5YS0yMTcxLTQ5ZWUtYjQxMS1lZGU2OTFjNTg1ZDEifQ.BgxXssyMKsteQJqWTdMNdGHmf50DOVTFDzdBFmTdNes' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Bed several director nearly describe.","maxScore":76,"minScore":22,"description":"Write onto receive attack night.","estimatedTime":"3 weeks","previewFileId":"cbdb20b0-5cf9-4c4d-ba4c-d4554c9add29","createdByUserId":"21449c9a-2171-49ee-b411-ede691c585d1"}'

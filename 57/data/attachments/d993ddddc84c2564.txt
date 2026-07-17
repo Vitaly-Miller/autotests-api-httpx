@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjIwOjIyLjQ5Mzc5MCIsInVzZXJfaWQiOiIxOGQ4Mjc0Zi0zZjc2LTRiNzEtOGViNi04NjdjMmY5Yzg3NTgifQ.SkaA07WGzKLJvrExbcdzJ1KIojFchcRskSj-y7bBvJ4' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Course face focus.","maxScore":98,"minScore":25,"description":"Form man drive security behavior.","estimatedTime":"5 weeks","previewFileId":"3c3332df-7387-4b0f-a7c1-b18073bb157e","createdByUserId":"18d8274f-3f76-4b71-8eb6-867c2f9c8758"}'

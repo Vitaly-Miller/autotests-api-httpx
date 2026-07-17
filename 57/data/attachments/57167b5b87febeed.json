@@ -1,0 +1,25 @@
+{
+  "courses": [
+    {
+      "id": "facad5a7-924f-4b0b-b938-1e7f21b3f761",
+      "title": "Tax attention inside course stand.",
+      "maxScore": 68,
+      "minScore": 3,
+      "description": "Card ready American others.",
+      "previewFile": {
+        "id": "161c79e3-2dc6-4ed4-aae7-28d31ade5f10",
+        "filename": "file_6438.png",
+        "directory": "Uploaded",
+        "url": "http://localhost:8000/static/Uploaded/file_6438.png"
+      },
+      "estimatedTime": "2 weeks",
+      "createdByUser": {
+        "id": "8aaa39a5-f319-42d0-9b49-c56f4c8767fb",
+        "email": "test_0ff57158@example.com",
+        "lastName": "Perry",
+        "firstName": "William",
+        "middleName": "Brooke"
+      }
+    }
+  ]
+}

@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDAxOjM3OjA0LjI5ODU5MCIsInVzZXJfaWQiOiJjN2YwN2E0YS02NTgyLTQ2MDctOWRmZC1lNzY4MjkxMzA0NGEifQ.mWpcpfBfy2iIaZjYSWsHocZXwBs_x87EYxw0CrcnHGc' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Lead usually money help.","maxScore":77,"minScore":23,"description":"Film mission member product appear exactly.","estimatedTime":"3 weeks","previewFileId":"a2b0742b-bb9f-4e35-b6aa-4af4e1bdb8d6","createdByUserId":"c7f07a4a-6582-4607-9dfd-e7682913044a"}'

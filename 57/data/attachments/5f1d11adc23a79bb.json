@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "249d2eec-9aea-45c1-95b0-97b8a6fc770d",
+    "title": "Free rise full wind.",
+    "maxScore": 73,
+    "minScore": 23,
+    "description": "Serious really role service.",
+    "previewFile": {
+      "id": "b31e9478-06e8-4294-b1a4-4b5effd1e596",
+      "filename": "file_8968.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_8968.png"
+    },
+    "estimatedTime": "2 weeks",
+    "createdByUser": {
+      "id": "86cf53a3-56fe-4eaf-9f0d-09a901edacc1",
+      "email": "test_24d6a3cb@example.com",
+      "lastName": "Francis",
+      "firstName": "Jeremy",
+      "middleName": "Robert"
+    }
+  }
+}

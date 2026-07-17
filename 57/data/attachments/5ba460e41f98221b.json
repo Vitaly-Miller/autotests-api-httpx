@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "f952c962-901c-4d0e-83f4-de814b9aa196",
+    "title": "Language never personal through measure.",
+    "maxScore": 86,
+    "minScore": 1,
+    "description": "Food business state.",
+    "previewFile": {
+      "id": "d161b841-44c8-42b1-a8a5-58cabf139d64",
+      "filename": "file_7754.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_7754.png"
+    },
+    "estimatedTime": "6 weeks",
+    "createdByUser": {
+      "id": "276651ca-eea3-448d-9402-bf407cc74383",
+      "email": "test_53989519@example.com",
+      "lastName": "Matthews",
+      "firstName": "Luke",
+      "middleName": "John"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "ec48ae54-ec01-4eb7-81fd-2c5dff9a5b2f",
+    "title": "Administration necessary later.",
+    "maxScore": 63,
+    "minScore": 17,
+    "description": "Discover firm likely project film maybe art.",
+    "previewFile": {
+      "id": "0d4fc76a-d7aa-4961-90cd-8ea1bf494a84",
+      "filename": "file_1207.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_1207.png"
+    },
+    "estimatedTime": "7 weeks",
+    "createdByUser": {
+      "id": "ade0c2c4-aa6e-48d9-8f8f-b98a813a89f5",
+      "email": "test_9e583240@example.com",
+      "lastName": "Lowe",
+      "firstName": "Angela",
+      "middleName": "Corey"
+    }
+  }
+}

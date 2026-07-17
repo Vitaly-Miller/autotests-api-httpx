@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/exercises/fbfbce17-daa8-4b6b-9ab8-0a5e7967a7ac \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjIwOjIwLjc2NjM5MyIsInVzZXJfaWQiOiIyNzY2NTFjYS1lZWEzLTQ0OGQtOTQwMi1iZjQwN2NjNzQzODMifQ.9Vgl69rRJjU-PQTY2pSdhIntoC80Lx4ejVd1GbMVaMY' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Board risk necessary place or.","maxScore":83,"minScore":13,"orderIndex":8643,"description":"Add laugh behind message argue.","estimatedTime":"3 weeks"}'

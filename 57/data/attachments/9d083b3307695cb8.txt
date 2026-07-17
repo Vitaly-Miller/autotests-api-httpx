@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjIwOjA3LjE3ODczNiIsInVzZXJfaWQiOiJmMTk0Y2JkOC02YWFhLTQ3MjctODZiYS01N2FiMWQyYzllOWMifQ.gbAVs0IVvw7WLaTDxhgIBE54D0fZ9JyVAV40gUE3RJA' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Whose central organization Republican kitchen eye.","maxScore":90,"minScore":8,"description":"Serious ok join until method dream authority.","estimatedTime":"5 weeks","previewFileId":"d1d680d0-7dc8-41a7-bcd8-71d354909211","createdByUserId":"f194cbd8-6aaa-4727-86ba-57ab1d2c9e9c"}'

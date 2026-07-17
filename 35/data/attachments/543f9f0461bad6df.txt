@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDAxOjM3OjA2LjQyNzkzNCIsInVzZXJfaWQiOiIwNDUxNGI1NC0zODAwLTQ5NzktODY4ZS1hYjdmZGRjN2Q0MzYifQ.-DHD5ldSOe9sb6ZITDXcQ2AGAmhHEMSk2pkZZJ2lzZo' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Southern result perform.","maxScore":72,"minScore":14,"description":"Move whole court performance.","estimatedTime":"3 weeks","previewFileId":"7bd7cafc-d460-4318-aa1e-a02db480854b","createdByUserId":"04514b54-3800-4979-868e-ab7fddc7d436"}'

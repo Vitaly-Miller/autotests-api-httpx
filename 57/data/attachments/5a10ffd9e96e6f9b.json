@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "7191417d-ea5f-424e-bb40-2b91011cc9a0",
+    "title": "At she analysis door heart.",
+    "maxScore": 91,
+    "minScore": 23,
+    "description": "Idea begin station available.",
+    "previewFile": {
+      "id": "fe4b73c3-87d5-4daa-8fc6-8a2bd3090ab2",
+      "filename": "file_6753.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_6753.png"
+    },
+    "estimatedTime": "6 weeks",
+    "createdByUser": {
+      "id": "f375bcbd-ced7-4b67-8c37-492b3f0859db",
+      "email": "test_4ae07d95@example.com",
+      "lastName": "Brewer",
+      "firstName": "Richard",
+      "middleName": "Michael"
+    }
+  }
+}

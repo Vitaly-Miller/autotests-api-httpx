@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjIwOjE1LjIwNDE2MCIsInVzZXJfaWQiOiIxMDI4OGI2Yi00MWZjLTRhMTUtYThkYS0zYzk4ZDU5NjE2NWMifQ.16dRMD5TMd8FyMojxhyJc-Is38VKdIuJS1rySap2KGc' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Cultural visit spring team statement behind as.","courseId":"a06ca25c-a022-4eef-a340-d7912d6e4d86","maxScore":85,"minScore":4,"orderIndex":2974,"description":"Next product manager trouble blood.","estimatedTime":"2 weeks"}'

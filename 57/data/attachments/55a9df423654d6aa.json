@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "7191417d-ea5f-424e-bb40-2b91011cc9a0",
+    "title": "Economic tell give.",
+    "maxScore": 70,
+    "minScore": 13,
+    "description": "Catch create business. Board huge same receive.",
+    "previewFile": {
+      "id": "fe4b73c3-87d5-4daa-8fc6-8a2bd3090ab2",
+      "filename": "file_6753.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_6753.png"
+    },
+    "estimatedTime": "3 weeks",
+    "createdByUser": {
+      "id": "f375bcbd-ced7-4b67-8c37-492b3f0859db",
+      "email": "test_4ae07d95@example.com",
+      "lastName": "Brewer",
+      "firstName": "Richard",
+      "middleName": "Michael"
+    }
+  }
+}

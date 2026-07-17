@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjIwOjE3Ljk5Mjg2MCIsInVzZXJfaWQiOiJhZGUwYzJjNC1hYTZlLTQ4ZDktOGY4Zi1iOThhODEzYTg5ZjUifQ.cQOHNxY1pwnpnyFIAnyIyXxmXIU0RC0t8LmiHEgXjVA' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Hold after subject for impact brother.","courseId":"ec48ae54-ec01-4eb7-81fd-2c5dff9a5b2f","maxScore":99,"minScore":27,"orderIndex":1642,"description":"Issue condition these knowledge car really.","estimatedTime":"8 weeks"}'

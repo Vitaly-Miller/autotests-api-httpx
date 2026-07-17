@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjIwOjE2LjYwOTI4MyIsInVzZXJfaWQiOiI2Njg5ODBkMS0xMTFjLTQ3ZjYtYTkyMS00MWUwYWZlNzk4NjgifQ.rFRuEL0YqEB2s_3GGRsX8dmFpaGYSWp7hP_3IyERE10' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Community exist daughter determine.","courseId":"96c34be4-ee8d-4652-b566-38da21397ed9","maxScore":83,"minScore":10,"orderIndex":8028,"description":"Realize city pay seek.","estimatedTime":"8 weeks"}'

@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "3b1a1704-f0cb-4de4-80f7-12f2143ae8ff",
+    "title": "Course face focus.",
+    "maxScore": 98,
+    "minScore": 25,
+    "description": "Form man drive security behavior.",
+    "previewFile": {
+      "id": "3c3332df-7387-4b0f-a7c1-b18073bb157e",
+      "filename": "file_2437.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_2437.png"
+    },
+    "estimatedTime": "5 weeks",
+    "createdByUser": {
+      "id": "18d8274f-3f76-4b71-8eb6-867c2f9c8758",
+      "email": "test_46af7fa6@example.com",
+      "lastName": "Harvey",
+      "firstName": "Robert",
+      "middleName": "Michele"
+    }
+  }
+}
