@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/exercises \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDAzOjM0OjU5LjkzMjcyNCIsInVzZXJfaWQiOiIxMzAxOWE0ZC1jZDNmLTRkZjktOGI3MS1iM2ZjM2E5NDU5MDQifQ.aWagPklKDqGRwk0QIXb1UhIrSItY5krrUBvTTCbk674' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Send agent impact finish clearly research.","courseId":"cc72f731-49ec-4b6d-9f08-b71c05abbb69","maxScore":98,"minScore":16,"orderIndex":714,"description":"Current tonight town society trip.","estimatedTime":"9 weeks"}'

@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjM2OjE3Ljc1MTYyMiIsInVzZXJfaWQiOiJmZTg0MDkxNC0zMzQxLTQxZDktYWU4MS1kMTkxNWY3MDNhOGUifQ.BpUMPjBjApLbwbYyCo_BrRDOrOfLUE9QSGu_zSOGujg' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Establish best home stock to.","maxScore":89,"minScore":19,"description":"Fish manage back nothing visit.","estimatedTime":"4 weeks","previewFileId":"b8d61189-81f7-40d0-a089-d5fc56e68281","createdByUserId":"fe840914-3341-41d9-ae81-d1915f703a8e"}'

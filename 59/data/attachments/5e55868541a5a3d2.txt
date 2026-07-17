@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjM2OjEzLjg5NTMzMCIsInVzZXJfaWQiOiI2YTQwNGM1OC1kMDI0LTQyMTAtODJmNS05YmI2ZWJlMmFiNWUifQ.EkeI0DgFHKzC0Q6UWJjoX8uY_EiEbjD9GXTGgPXbn9c' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Always way should remember garden plan.","maxScore":87,"minScore":25,"description":"Quality receive edge child speak them claim.","estimatedTime":"8 weeks","previewFileId":"3773f5ba-7690-4eb6-9a3c-7062068d91f2","createdByUserId":"6a404c58-d024-4210-82f5-9bb6ebe2ab5e"}'

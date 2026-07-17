@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "933c06eb-eb6d-45de-b4aa-4bb7534f12f1",
+    "title": "Mrs without sound he too.",
+    "maxScore": 93,
+    "minScore": 2,
+    "description": "Morning question kid statement.",
+    "previewFile": {
+      "id": "a9cd7d5c-7cf0-4c1d-bfc8-a79f11c31a40",
+      "filename": "file_4341.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_4341.png"
+    },
+    "estimatedTime": "8 weeks",
+    "createdByUser": {
+      "id": "acd9a9a6-7640-4372-bdcc-06da0fa41b95",
+      "email": "test_b3435dbd@example.com",
+      "lastName": "Frazier",
+      "firstName": "Jessica",
+      "middleName": "Patrick"
+    }
+  }
+}

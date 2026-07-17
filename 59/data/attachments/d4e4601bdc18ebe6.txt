@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjM2OjA5LjcxNDQyOCIsInVzZXJfaWQiOiI2NjdlNTY5Ny01ZDgwLTQ5YzYtOGM3NC1lNDA4NTA4NGQyOTIifQ.DIqZXW6EZp-K5O5rjnGA-coVE_am_Xzfp7ZqOrTEkfI' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Fear eat eye.","maxScore":59,"minScore":30,"description":"Still worry military Mr seek sometimes future.","estimatedTime":"3 weeks","previewFileId":"b4ef6291-ca48-47ed-a7b4-9a2c1c30b8f8","createdByUserId":"667e5697-5d80-49c6-8c74-e4085084d292"}'

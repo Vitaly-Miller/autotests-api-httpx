@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/exercises \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDAzOjM0OjU2LjEzNDQzMyIsInVzZXJfaWQiOiIwMGNmNDE4NS1jNTEwLTRmMGMtYjg3Zi1lY2NkMjMyZWNlMWIifQ.7iDqIA5NICL256TpXBxGKYEEfK4zKANyLg6BT29Odgg' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Several year our.","courseId":"9a4e83e9-eee2-4c24-a022-53c625840532","maxScore":82,"minScore":11,"orderIndex":7590,"description":"Cut measure forward soldier ever.","estimatedTime":"6 weeks"}'

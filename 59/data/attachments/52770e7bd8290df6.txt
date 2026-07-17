@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjM2OjE4Ljc0NTA4OSIsInVzZXJfaWQiOiJlYzFlOGIwOS04ODgwLTQ3MTktOTE2Zi0xOWQxMTZiYTdkOWMifQ.LfnPydMHEEMRJIptoDclR_yxgGH_lVwlZuTumAKT2nc' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Here other physical.","courseId":"b9a7a83d-a847-4eba-bf83-0c466aa80521","maxScore":58,"minScore":30,"orderIndex":1418,"description":"Age approach change.","estimatedTime":"5 weeks"}'

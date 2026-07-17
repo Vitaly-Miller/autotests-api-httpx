@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/exercises/c70b2c08-4532-49b6-85e7-fdfb38f8d3ca \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjM2OjIzLjg0MDgxOCIsInVzZXJfaWQiOiI5Y2Y1YmFkNS1hOGY1LTRhYWMtYTRhZC01MGFlMzg0MDY4N2UifQ.S6plQB3fQC54Ev0NLvffKuRzBf4k-jkaofIz4zCGn1E' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Face head during.","maxScore":80,"minScore":9,"orderIndex":5739,"description":"Against onto term expect forward.","estimatedTime":"7 weeks"}'

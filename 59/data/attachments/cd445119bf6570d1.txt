@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjM2OjIwLjAxOTgwMiIsInVzZXJfaWQiOiI2YjAwMWVhNy0xMTdmLTQ5Y2EtYWU5NC1lZWFkYWRkOTdiYWYifQ.IR5fjhmCD8sJ7OsTlLxnG-PMfFB3sqbI8ufnQKNiUt4' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Future stay sit father western improve.","courseId":"f1e865d1-a9ec-482c-8dc2-061837eaa5a2","maxScore":61,"minScore":28,"orderIndex":4507,"description":"Owner look indeed such. Adult center quite hair.","estimatedTime":"9 weeks"}'

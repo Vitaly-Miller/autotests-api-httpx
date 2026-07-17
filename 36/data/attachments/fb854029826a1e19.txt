@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDAzOjM0OjU4Ljk1NzUxMSIsInVzZXJfaWQiOiIyZWEwNGE0Mi04NTBmLTRiZjQtYTY3OC04ZmYwZDk0MTU2MjMifQ.7x7yHPy2im0MT2wpHs08kxoL0939HLMyDk4UZnXVLvY' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Various we agent.","maxScore":92,"minScore":14,"description":"Understand activity explain big smile.","estimatedTime":"7 weeks","previewFileId":"9635e602-3141-4ff5-a478-3ff699f72d45","createdByUserId":"2ea04a42-850f-4bf4-a678-8ff0d9415623"}'

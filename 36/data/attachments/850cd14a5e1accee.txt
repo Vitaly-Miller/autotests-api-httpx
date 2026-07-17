@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDAzOjM0OjU2LjQzMzA4OSIsInVzZXJfaWQiOiIwMGNmNDE4NS1jNTEwLTRmMGMtYjg3Zi1lY2NkMjMyZWNlMWIifQ.SRVp0K_-zGu16nwtomKVHYZal1qxXZ4C_aWIXDckD9k' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Organization home ever.","maxScore":66,"minScore":18,"description":"Build agency organization old.","estimatedTime":"3 weeks","previewFileId":"f439699c-0b41-43bc-aa42-21ec35862741","createdByUserId":"00cf4185-c510-4f0c-b87f-eccd232ece1b"}'

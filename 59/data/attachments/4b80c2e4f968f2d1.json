@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "89af8a47-2f23-4ac0-9257-4015e81774b0",
+    "title": "Force knowledge common.",
+    "maxScore": 68,
+    "minScore": 13,
+    "description": "Of feel figure heart form discuss top.",
+    "previewFile": {
+      "id": "e05999da-c5c0-4823-bcdb-d30c8a5f80ab",
+      "filename": "file_2135.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_2135.png"
+    },
+    "estimatedTime": "6 weeks",
+    "createdByUser": {
+      "id": "9cf5bad5-a8f5-4aac-a4ad-50ae3840687e",
+      "email": "test_52a1b456@example.com",
+      "lastName": "Mcdaniel",
+      "firstName": "James",
+      "middleName": "Jay"
+    }
+  }
+}

@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/exercises \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDAzOjM0OjU4LjY1NzQ0MyIsInVzZXJfaWQiOiIyZWEwNGE0Mi04NTBmLTRiZjQtYTY3OC04ZmYwZDk0MTU2MjMifQ.T8UvnEpSMob4SNt0aXLL5mwONyGnT8UHzpr0DYMLgYo' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Walk break wish purpose some.","courseId":"fbbfcb3a-587b-47ec-bd17-37dfb9f9a60f","maxScore":63,"minScore":1,"orderIndex":4556,"description":"Television clearly she because major eight think.","estimatedTime":"9 weeks"}'

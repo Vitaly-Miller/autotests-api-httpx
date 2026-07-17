@@ -1,0 +1,3 @@
+curl -X GET \
+  'http://localhost:8000/api/v1/exercises?courseId=d710da4e-c7cd-4f7f-9763-fc01e9fde54d' \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjM2OjIxLjI5OTg3OSIsInVzZXJfaWQiOiIwZDA2Y2M3MS0yNjAxLTQwYTMtOTI5ZS1lODdiZGI0ZmEyOTUifQ.G7zjPYqtxeLPYruIsVSlClk4Jcrv-RCU0r37AkSPWQQ'

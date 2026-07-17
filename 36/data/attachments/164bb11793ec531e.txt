@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/exercises \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDAzOjM0OjUyLjMyNjQ3MCIsInVzZXJfaWQiOiJiNmFiOTllMy00YWM5LTQzNmUtYjcwZS04YmI0NzQ1NmQxMTcifQ.EgevX7SjkEcTY3E5UrabsytA--UNlc6l2ULUZ1dc6vY' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Factor member manager single middle realize.","courseId":"167d3fcb-229e-4cd1-92af-3222e3b4bee8","maxScore":81,"minScore":29,"orderIndex":7515,"description":"Involve year whatever for travel.","estimatedTime":"2 weeks"}'

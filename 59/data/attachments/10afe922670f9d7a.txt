@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjM2OjE5LjA0OTE5MyIsInVzZXJfaWQiOiJlYzFlOGIwOS04ODgwLTQ3MTktOTE2Zi0xOWQxMTZiYTdkOWMifQ.8TZMOsbTWInwtYe51Nf03kz8nLS9aAGXwzOt55RAXbQ' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Already federal reason hope among loss.","maxScore":70,"minScore":16,"description":"Bed store property well fire value field.","estimatedTime":"9 weeks","previewFileId":"482f659f-fdaf-482a-b531-7f9a34f2f89c","createdByUserId":"ec1e8b09-8880-4719-916f-19d116ba7d9c"}'

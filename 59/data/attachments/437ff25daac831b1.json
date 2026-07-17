@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "c39c55ef-8467-448c-88a8-2b8311cc1578",
+    "title": "Mother six seek money new discussion.",
+    "maxScore": 98,
+    "minScore": 22,
+    "description": "Property music suggest star head anything.",
+    "previewFile": {
+      "id": "6c103e17-27cb-421f-9e7d-2f057becdba6",
+      "filename": "file_1776.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_1776.png"
+    },
+    "estimatedTime": "9 weeks",
+    "createdByUser": {
+      "id": "97162014-e851-44a8-a600-a46377c7d500",
+      "email": "test_0f999d27@example.com",
+      "lastName": "Evans",
+      "firstName": "Jasmine",
+      "middleName": "Brooke"
+    }
+  }
+}

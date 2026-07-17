@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/exercises \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDAzOjM0OjUzLjU4MjY2MyIsInVzZXJfaWQiOiI1MGNjMzVlYi1iMjYyLTRiMDEtODY1OS1lMjc3ZDJlMDU3MGQifQ.pT_UJm4DIQnUXrkLhYF4Bn0YTE1PwgSRufU3pQ6dgjw' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Debate take push near something middle.","courseId":"1abda70c-07e6-4827-a3ff-6abf02da767f","maxScore":61,"minScore":29,"orderIndex":8809,"description":"Above artist show officer threat always.","estimatedTime":"7 weeks"}'

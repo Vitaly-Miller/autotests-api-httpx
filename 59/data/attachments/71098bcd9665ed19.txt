@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjM2OjI0LjE0MDE5NiIsInVzZXJfaWQiOiI5Y2Y1YmFkNS1hOGY1LTRhYWMtYTRhZC01MGFlMzg0MDY4N2UifQ.Vq51OsuJ9hWjWiLrjUNKMvEVpsKBG7mbEGOTFH8bQh0' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Force knowledge common.","maxScore":68,"minScore":13,"description":"Of feel figure heart form discuss top.","estimatedTime":"6 weeks","previewFileId":"e05999da-c5c0-4823-bcdb-d30c8a5f80ab","createdByUserId":"9cf5bad5-a8f5-4aac-a4ad-50ae3840687e"}'

@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjM2OjE0Ljg2NDc4OCIsInVzZXJfaWQiOiJhY2Q5YTlhNi03NjQwLTQzNzItYmRjYy0wNmRhMGZhNDFiOTUifQ.06mFSMqz1RfWZ3bjnt49IYxsXJ2PwfhCnRZIVXvuYXs' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Section child huge marriage lot.","courseId":"933c06eb-eb6d-45de-b4aa-4bb7534f12f1","maxScore":75,"minScore":1,"orderIndex":4845,"description":"Fight surface painting partner value south.","estimatedTime":"4 weeks"}'

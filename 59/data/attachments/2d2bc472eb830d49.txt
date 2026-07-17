@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjM2OjE1LjE2NDc1NyIsInVzZXJfaWQiOiJhY2Q5YTlhNi03NjQwLTQzNzItYmRjYy0wNmRhMGZhNDFiOTUifQ.d8mqxqc1fQh6l6gu9NoGS9zPYHryYbKCrrIP1uzOXic' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Mrs without sound he too.","maxScore":93,"minScore":2,"description":"Morning question kid statement.","estimatedTime":"8 weeks","previewFileId":"a9cd7d5c-7cf0-4c1d-bfc8-a79f11c31a40","createdByUserId":"acd9a9a6-7640-4372-bdcc-06da0fa41b95"}'

@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjM2OjExLjYzNzc0MyIsInVzZXJfaWQiOiIyNzg5OWZlNy1jNzg3LTQxMTgtYjU2Mi1jZGVjZjVkODlkMjAifQ.Zf6BN7i6_rS1J_3uvUr_wWJRVregGpibQFyj5dmkLOU' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Student federal product paper.","maxScore":93,"minScore":28,"description":"Weight degree anything ok.","estimatedTime":"3 weeks","previewFileId":"2ac8276f-59db-493b-9da0-b550f775f0f9","createdByUserId":"27899fe7-c787-4118-b562-cdecf5d89d20"}'

@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjM2OjE3LjQ1MTM3MiIsInVzZXJfaWQiOiJmZTg0MDkxNC0zMzQxLTQxZDktYWU4MS1kMTkxNWY3MDNhOGUifQ.BRxyv6W26w9Yg69OCot4TOof4F7y8cGdsOyqPwsj9WI' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Senior relationship true star result quickly.","courseId":"8c78ef53-c0fe-499e-ad9b-80f6e6bae6a9","maxScore":58,"minScore":25,"orderIndex":8450,"description":"Idea simply return amount mean lead.","estimatedTime":"7 weeks"}'

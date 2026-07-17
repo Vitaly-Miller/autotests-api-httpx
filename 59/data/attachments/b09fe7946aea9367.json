@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "8c78ef53-c0fe-499e-ad9b-80f6e6bae6a9",
+    "title": "Establish best home stock to.",
+    "maxScore": 89,
+    "minScore": 19,
+    "description": "Fish manage back nothing visit.",
+    "previewFile": {
+      "id": "b8d61189-81f7-40d0-a089-d5fc56e68281",
+      "filename": "file_5817.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_5817.png"
+    },
+    "estimatedTime": "4 weeks",
+    "createdByUser": {
+      "id": "fe840914-3341-41d9-ae81-d1915f703a8e",
+      "email": "test_7bef45b1@example.com",
+      "lastName": "Tran",
+      "firstName": "April",
+      "middleName": "Crystal"
+    }
+  }
+}

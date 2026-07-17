@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjM2OjIyLjg2MTI4NCIsInVzZXJfaWQiOiIyOWNmYTcwYy1iZTgwLTRjOGQtOTBmMS05M2ZmYjY1NzBmNjcifQ.kCT0ehAMdmBSU899D4YyocE7L60GWl4xW8ku8OhuudU' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Natural behavior democratic message.","maxScore":100,"minScore":25,"description":"Congress sister close evening hospital owner.","estimatedTime":"9 weeks","previewFileId":"571e2edb-f7ff-4426-a42b-e3523afbe2f3","createdByUserId":"29cfa70c-be80-4c8d-90f1-93ffb6570f67"}'

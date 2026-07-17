@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/courses/4103bf2a-c7fb-4dd4-a7e9-caff57473de5 \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjM2OjEzLjg5NTMzMCIsInVzZXJfaWQiOiI2YTQwNGM1OC1kMDI0LTQyMTAtODJmNS05YmI2ZWJlMmFiNWUifQ.EkeI0DgFHKzC0Q6UWJjoX8uY_EiEbjD9GXTGgPXbn9c' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Discuss individual make black at mean.","maxScore":71,"minScore":4,"description":"Ahead within direction election example.","estimatedTime":"5 weeks"}'

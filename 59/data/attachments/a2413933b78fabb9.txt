@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjM2OjEyLjYxMzM5MSIsInVzZXJfaWQiOiI2MDlhYTFiOS1mMzFkLTRmNDYtODkzZi0wYzYxZDc3MzE3MzIifQ.RPabqJ-tAeNYbowYxAO1wGO0WgmDJ1VkTgDUUdWlGsQ' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Work up reach act medical.","maxScore":78,"minScore":8,"description":"War so laugh performance maybe simple.","estimatedTime":"6 weeks","previewFileId":"b9908729-64b3-4b89-a9c3-3ce1a82afdd8","createdByUserId":"609aa1b9-f31d-4f46-893f-0c61d7731732"}'

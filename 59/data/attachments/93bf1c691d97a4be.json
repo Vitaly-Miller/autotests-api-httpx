@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "a0e4615c-ffd5-48aa-b963-615aade0c822",
+    "title": "Student federal product paper.",
+    "maxScore": 93,
+    "minScore": 28,
+    "description": "Weight degree anything ok.",
+    "previewFile": {
+      "id": "2ac8276f-59db-493b-9da0-b550f775f0f9",
+      "filename": "file_4264.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_4264.png"
+    },
+    "estimatedTime": "3 weeks",
+    "createdByUser": {
+      "id": "27899fe7-c787-4118-b562-cdecf5d89d20",
+      "email": "test_a51c535b@example.com",
+      "lastName": "Hanson",
+      "firstName": "Keith",
+      "middleName": "Garrett"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "48817474-b862-410d-afec-feee096a672b",
+    "title": "Natural behavior democratic message.",
+    "maxScore": 100,
+    "minScore": 25,
+    "description": "Congress sister close evening hospital owner.",
+    "previewFile": {
+      "id": "571e2edb-f7ff-4426-a42b-e3523afbe2f3",
+      "filename": "file_1776.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_1776.png"
+    },
+    "estimatedTime": "9 weeks",
+    "createdByUser": {
+      "id": "29cfa70c-be80-4c8d-90f1-93ffb6570f67",
+      "email": "test_4f796574@example.com",
+      "lastName": "Benjamin",
+      "firstName": "Janet",
+      "middleName": "Robert"
+    }
+  }
+}

@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDAzOjM0OjU3LjcwNDkzNCIsInVzZXJfaWQiOiI0MzU0NWUwZC04NGQ1LTQ2OWUtODljOS0yN2IwMzc0MDEyMjAifQ.zIiA5VF6ZcrYbJR4MXCXtM40fw04fYusaNQzjBBsLWs' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Large worry prove natural yet eye.","maxScore":57,"minScore":19,"description":"Evidence suddenly low people baby husband miss a.","estimatedTime":"4 weeks","previewFileId":"bac2cdb8-b6eb-43e4-8963-8d55f28378d6","createdByUserId":"43545e0d-84d5-469e-89c9-27b037401220"}'

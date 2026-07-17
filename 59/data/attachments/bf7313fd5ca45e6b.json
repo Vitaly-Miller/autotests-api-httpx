@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "aa5b2789-470d-4d72-8f4d-be387d2d9046",
+    "title": "Work up reach act medical.",
+    "maxScore": 78,
+    "minScore": 8,
+    "description": "War so laugh performance maybe simple.",
+    "previewFile": {
+      "id": "b9908729-64b3-4b89-a9c3-3ce1a82afdd8",
+      "filename": "file_1607.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_1607.png"
+    },
+    "estimatedTime": "6 weeks",
+    "createdByUser": {
+      "id": "609aa1b9-f31d-4f46-893f-0c61d7731732",
+      "email": "test_4e224c3d@example.com",
+      "lastName": "Freeman",
+      "firstName": "Heidi",
+      "middleName": "Travis"
+    }
+  }
+}

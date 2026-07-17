@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjM2OjEwLjY4NTcxNSIsInVzZXJfaWQiOiIwMjdiYjlhZS0wMTYxLTRkYTAtYjZhZi1hYzRjMWY1NjQxZjIifQ.fdT7NeWu-tgEpP_NOdo4lCgHHimAD1_530pJYPT-mx0' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Herself in operation will.","maxScore":59,"minScore":2,"description":"Type team player after personal.","estimatedTime":"6 weeks","previewFileId":"782dee6c-0a0b-45b1-871a-326b880e8273","createdByUserId":"027bb9ae-0161-4da0-b6af-ac4c1f5641f2"}'

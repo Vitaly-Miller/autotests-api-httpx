@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "b9a7a83d-a847-4eba-bf83-0c466aa80521",
+    "title": "Already federal reason hope among loss.",
+    "maxScore": 70,
+    "minScore": 16,
+    "description": "Bed store property well fire value field.",
+    "previewFile": {
+      "id": "482f659f-fdaf-482a-b531-7f9a34f2f89c",
+      "filename": "file_9266.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_9266.png"
+    },
+    "estimatedTime": "9 weeks",
+    "createdByUser": {
+      "id": "ec1e8b09-8880-4719-916f-19d116ba7d9c",
+      "email": "test_f88353a0@example.com",
+      "lastName": "Ryan",
+      "firstName": "Mark",
+      "middleName": "Amy"
+    }
+  }
+}

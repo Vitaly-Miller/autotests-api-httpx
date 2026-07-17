@@ -1,5 +1,0 @@
-curl -X PATCH \
-  http://localhost:8000/api/v1/courses/998b7434-195e-4e4d-966a-4b6f1e28f04c \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE2VDAzOjM0OjUwLjA4MzEzMSIsInVzZXJfaWQiOiIwZGFjMTcwZi0wMDYwLTQ0MmItOTdkNC0xZmUxYzAwMjE2MGMifQ.9J68_xZAbx70SgBkec2-8m6GvNe_f8oYZJo9wE44Z88' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Long stage night also player.","maxScore":74,"minScore":7,"description":"Among western manager page remain least employee.","estimatedTime":"2 weeks"}'

@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjM2OjE2LjQ2ODIzMSIsInVzZXJfaWQiOiI5NzE2MjAxNC1lODUxLTQ0YTgtYTYwMC1hNDYzNzdjN2Q1MDAifQ.XCRDprpmOIXcUh1GuNdbEql55BAgo50hZAXAL08UaLs' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Mother six seek money new discussion.","maxScore":98,"minScore":22,"description":"Property music suggest star head anything.","estimatedTime":"9 weeks","previewFileId":"6c103e17-27cb-421f-9e7d-2f057becdba6","createdByUserId":"97162014-e851-44a8-a600-a46377c7d500"}'

@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "167cd0f8-6381-493d-914b-9734515fdf47",
+    "title": "Herself in operation will.",
+    "maxScore": 59,
+    "minScore": 2,
+    "description": "Type team player after personal.",
+    "previewFile": {
+      "id": "782dee6c-0a0b-45b1-871a-326b880e8273",
+      "filename": "file_1948.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_1948.png"
+    },
+    "estimatedTime": "6 weeks",
+    "createdByUser": {
+      "id": "027bb9ae-0161-4da0-b6af-ac4c1f5641f2",
+      "email": "test_1021099c@example.com",
+      "lastName": "Baldwin",
+      "firstName": "Christine",
+      "middleName": "Kenneth"
+    }
+  }
+}
