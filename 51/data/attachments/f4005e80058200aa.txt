@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDE4OjQ5OjI5LjU5NDkxNSIsInVzZXJfaWQiOiI3ZDg5YTQ1MS0xNTgzLTRiMDItYTA1NC03MzZkYzk5OTQxZDkifQ.4VknLs4PBUCnZ7t29LgQPG4-CnSuQp8D9X3hVgl3igA' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Key look well available.","courseId":"6dd35f98-ef66-4b2f-80f9-1be7748f1211","maxScore":64,"minScore":15,"orderIndex":8720,"description":"Candidate degree unit trade.","estimatedTime":"6 weeks"}'

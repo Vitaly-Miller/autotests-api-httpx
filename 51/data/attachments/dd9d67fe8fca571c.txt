@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDE4OjQ5OjI1LjQwNjQ3MCIsInVzZXJfaWQiOiIyZmJiZTMyNi02YTBmLTRlNTEtOTczOS00MTRlODVlMjc2YzgifQ.ehMmDIu-pPgKLkDPZq8jO0WpO4XHd-_Wyg0XB7o507w' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Might audience travel change even somebody.","courseId":"d902937f-2758-4077-ab5e-ff54f3801c3e","maxScore":63,"minScore":21,"orderIndex":8263,"description":"Particular development subject bit.","estimatedTime":"3 weeks"}'

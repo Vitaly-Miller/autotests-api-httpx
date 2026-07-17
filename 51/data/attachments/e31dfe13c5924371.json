@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "78b61b11-0a56-4ea0-8c5a-93a12c189593",
+    "title": "Beat difficult entire product line though.",
+    "maxScore": 63,
+    "minScore": 3,
+    "description": "Whom material Democrat even.",
+    "previewFile": {
+      "id": "1ccf566e-781a-40f9-8c46-c332e1bded4a",
+      "filename": "file_5953.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_5953.png"
+    },
+    "estimatedTime": "8 weeks",
+    "createdByUser": {
+      "id": "3b56575f-26be-4208-8668-e2ee4dd57a82",
+      "email": "test_c8036133@example.com",
+      "lastName": "Carter",
+      "firstName": "Patrick",
+      "middleName": "Steven"
+    }
+  }
+}

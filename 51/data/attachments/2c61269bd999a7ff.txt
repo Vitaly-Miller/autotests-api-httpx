@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDE4OjQ5OjI3LjEyMjM4OSIsInVzZXJfaWQiOiIzZWM5MmM4NC03NzIxLTQ4MTEtOTA0Yi0xNWFjMzMxYjg1ZjUifQ.x_xxmAtiX7QWf5V3T7poU3N1rdAh86fEqBZ-yWIZ_fE' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Another data which turn spring.","maxScore":55,"minScore":25,"description":"Environmental financial thousand half.","estimatedTime":"5 weeks","previewFileId":"2c915801-b12c-4fa0-9f6d-4b67ec6ab738","createdByUserId":"3ec92c84-7721-4811-904b-15ac331b85f5"}'

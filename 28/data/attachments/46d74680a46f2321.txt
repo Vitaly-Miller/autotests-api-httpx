@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjM2OjI5Ljg3MjY0MiIsInVzZXJfaWQiOiJhODMzMWU3OC02YmU5LTQ0MWEtOWJlNC00ZjBkNTJjMjYzZDcifQ._XmcNiDXzFGN1DxPhSWnoIRdT1edONaWx7-no6GBOcw' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Less everyone require religious these sure contain.","maxScore":81,"minScore":24,"description":"Lose discuss both white million guess only want.","estimatedTime":"4 weeks","previewFileId":"d14e6485-256a-40c8-b35b-a660c803e4bd","createdByUserId":"a8331e78-6be9-441a-9be4-4f0d52c263d7"}'

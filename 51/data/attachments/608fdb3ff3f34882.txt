@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDE4OjQ5OjMyLjM4MzMxMSIsInVzZXJfaWQiOiJhZGM4MWYyZS00NWQ0LTQzMjYtOWRmMy0yNmM4MGM0YmVjZjAifQ.BYJNmYXKDlLNeJLZVkjQ4MSmWxjuc6MAoS59mIMt6vI' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Air choice respond blue.","courseId":"41dd9ebe-54a7-44e4-bbee-781aeb73b1db","maxScore":52,"minScore":23,"orderIndex":2162,"description":"Natural machine like region away.","estimatedTime":"5 weeks"}'

@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDE4OjQ5OjMzLjc4ODM1NCIsInVzZXJfaWQiOiIzYjU2NTc1Zi0yNmJlLTQyMDgtODY2OC1lMmVlNGRkNTdhODIifQ.t_sC3lPnCMqFuibNDhL41ZtZiQk34bZEWfhVkFAdeHM' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Relate central box assume government.","courseId":"78b61b11-0a56-4ea0-8c5a-93a12c189593","maxScore":81,"minScore":24,"orderIndex":4605,"description":"Again term weight eat wish five herself.","estimatedTime":"9 weeks"}'

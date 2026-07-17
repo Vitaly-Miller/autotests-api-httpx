@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDE4OjQ5OjMxLjMyOTE1MCIsInVzZXJfaWQiOiJiN2FmYzllYi04MDY3LTQyYjctYmNiMy1hYmU5MjQ1ZGU3NzkifQ.H4rS0F8Y5_JGPg4_TKL3tXEO4YC9L5F_ekBg-e_CAeU' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Would out morning produce three.","maxScore":76,"minScore":21,"description":"Because heart along business whose fall visit.","estimatedTime":"5 weeks","previewFileId":"7d625cef-51ce-4fa3-a3f4-f304af11352a","createdByUserId":"b7afc9eb-8067-42b7-bcb3-abe9245de779"}'

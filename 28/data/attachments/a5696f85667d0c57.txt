@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjM2OjIxLjA1MzIxMyIsInVzZXJfaWQiOiJmNTUwNWEwYS1mZTQyLTRlZGEtYmMyMC1lN2E0NTE4NjRiZGQifQ.JG432BI4ICCxsRSRUYfZHbLwDWzF8_ECfhPjlOGcZTU' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Billion move your section represent.","maxScore":50,"minScore":2,"description":"Budget memory among.","estimatedTime":"7 weeks","previewFileId":"a8e77aa1-8a8c-4d15-a1c8-99f5bd5bebaa","createdByUserId":"f5505a0a-fe42-4eda-bc20-e7a451864bdd"}'

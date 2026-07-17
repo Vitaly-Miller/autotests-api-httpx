@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDE4OjQ5OjIwLjgzMzM0NSIsInVzZXJfaWQiOiJiYmU4M2IwNy1jZDk3LTQ1ZjctYjUwYi00ZWM1ZDZhMzMzZmUifQ.ARuy5n9RZbJSTMJW2rE4q3ukneqj3F_ecZUsR1OQc40' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Benefit figure be defense population statement.","maxScore":56,"minScore":19,"description":"Quickly realize while focus fact.","estimatedTime":"9 weeks","previewFileId":"0444dc65-6b46-4a52-8a40-6e0d7b5cd951","createdByUserId":"bbe83b07-cd97-45f7-b50b-4ec5d6a333fe"}'

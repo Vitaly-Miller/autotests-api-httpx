@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjM2OjM0LjAwMjkxMiIsInVzZXJfaWQiOiJiZGE0YzMzNi1lMjMwLTQ4YmMtYWE4Ni0xNzE4MGNmNDgzZmIifQ.kUfZuC-ZYL03FK9hZ8q_9sgQ_RfOH_1OCJM6fys2UrQ' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Not group major.","maxScore":81,"minScore":19,"description":"Require never husband success book need.","estimatedTime":"7 weeks","previewFileId":"682844dc-bc90-41e5-8bb4-8f956994ee11","createdByUserId":"bda4c336-e230-48bc-aa86-17180cf483fb"}'

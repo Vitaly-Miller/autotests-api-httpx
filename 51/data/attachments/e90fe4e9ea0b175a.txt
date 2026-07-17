@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDE4OjQ5OjIxLjg5OTkwOCIsInVzZXJfaWQiOiJiOGMzOGJmMC1mYWQ5LTQxMmMtYmE5OC00YjZiZDI3YzU1MmEifQ.uY8cpLk9c2Nv8zQeoCN6ncDA1S3Blx1Voq10OavLoBM' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Lawyer investment finish which.","maxScore":55,"minScore":20,"description":"Board piece but drop.","estimatedTime":"7 weeks","previewFileId":"482b96db-8fa3-49ec-a5f3-dff0f512dd5e","createdByUserId":"b8c38bf0-fad9-412c-ba98-4b6bd27c552a"}'

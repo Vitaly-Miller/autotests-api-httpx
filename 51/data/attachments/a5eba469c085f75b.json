@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "d606d5e9-c54f-4601-aecf-3e0642bbfafc",
+    "title": "These since race argue.",
+    "maxScore": 58,
+    "minScore": 1,
+    "description": "Skin wrong character left part most Democrat kid.",
+    "previewFile": {
+      "id": "423bcea2-bf18-475f-acb3-a42bc86168bf",
+      "filename": "file_4495.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_4495.png"
+    },
+    "estimatedTime": "8 weeks",
+    "createdByUser": {
+      "id": "d64c20c3-d9e5-48fe-ae93-2cd48a42d08e",
+      "email": "test_81cbc8e0@example.com",
+      "lastName": "Simmons",
+      "firstName": "John",
+      "middleName": "Adrian"
+    }
+  }
+}

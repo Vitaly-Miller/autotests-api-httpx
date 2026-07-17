@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/exercises \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjM2OjMwLjkwNDg1MyIsInVzZXJfaWQiOiI2ODVkZTIxYi02MjQwLTQ0MWUtYjg4NC0yOTk1YTkwN2FkYmYifQ.OFYVwGVIeF5nVnCMf0jT9GHNpxQCSC-3XnjqVlCLDIE' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Indicate very year place.","courseId":"52ce4496-c710-433a-9ee2-97fc6ff5420c","maxScore":50,"minScore":1,"orderIndex":8189,"description":"Glass far sort fund represent major appear.","estimatedTime":"5 weeks"}'

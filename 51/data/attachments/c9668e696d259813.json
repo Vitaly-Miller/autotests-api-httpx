@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "6dd35f98-ef66-4b2f-80f9-1be7748f1211",
+    "title": "Itself entire shake.",
+    "maxScore": 73,
+    "minScore": 14,
+    "description": "Public a bag Mrs work social.",
+    "previewFile": {
+      "id": "66e5b436-cde0-4c9e-bb22-d2572f70f9c5",
+      "filename": "file_8276.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_8276.png"
+    },
+    "estimatedTime": "5 weeks",
+    "createdByUser": {
+      "id": "7d89a451-1583-4b02-a054-736dc99941d9",
+      "email": "test_bd64f2d1@example.com",
+      "lastName": "Herman",
+      "firstName": "Amanda",
+      "middleName": "Scott"
+    }
+  }
+}

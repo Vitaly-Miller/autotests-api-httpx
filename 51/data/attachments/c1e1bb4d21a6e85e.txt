@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/courses/fc339227-7f60-4e4f-8286-f9751f1a903a \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDE4OjQ5OjIyLjk1NTc2MiIsInVzZXJfaWQiOiIyYzdkMzI1OC0xZTQ2LTQ0MGUtYjI3ZS02MzdlYmFlMTc4NTAifQ.JcqO-NFSewpHl3a6DJks7s30pLZb67k6wEFV4ojWNAk' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Doctor catch statement daughter during.","maxScore":80,"minScore":29,"description":"Wind note fast social accept.","estimatedTime":"7 weeks"}'

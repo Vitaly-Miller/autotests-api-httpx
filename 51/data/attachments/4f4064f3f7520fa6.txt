@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDE4OjQ5OjIyLjk1NTc2MiIsInVzZXJfaWQiOiIyYzdkMzI1OC0xZTQ2LTQ0MGUtYjI3ZS02MzdlYmFlMTc4NTAifQ.JcqO-NFSewpHl3a6DJks7s30pLZb67k6wEFV4ojWNAk' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Professor age manage fire south girl.","maxScore":74,"minScore":9,"description":"Mind issue benefit current view.","estimatedTime":"8 weeks","previewFileId":"f5b9bc5d-4177-4ac4-b00b-1c7100e16405","createdByUserId":"2c7d3258-1e46-440e-b27e-637ebae17850"}'

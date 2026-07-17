@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "a0ac0e3d-18e2-4f65-813d-93140ff579c3",
+    "title": "Miss your war relate.",
+    "maxScore": 94,
+    "minScore": 30,
+    "description": "Behavior find scene man night sister.",
+    "previewFile": {
+      "id": "7fba1b8e-99dd-4ca9-9b95-5fcce3aec646",
+      "filename": "file_9307.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_9307.png"
+    },
+    "estimatedTime": "4 weeks",
+    "createdByUser": {
+      "id": "58ea1269-bbc0-4fd7-81c2-11756783fa56",
+      "email": "test_97fe22ef@example.com",
+      "lastName": "Murphy",
+      "firstName": "Courtney",
+      "middleName": "Larry"
+    }
+  }
+}

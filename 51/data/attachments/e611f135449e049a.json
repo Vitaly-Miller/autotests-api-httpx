@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "9243882e-80d7-4c0d-81f2-2a2e05743408",
+    "title": "Ask less since bit still.",
+    "maxScore": 56,
+    "minScore": 18,
+    "description": "Want turn product artist end budget.",
+    "previewFile": {
+      "id": "9204d99f-bcba-44c1-9089-6ae54bcf00a4",
+      "filename": "file_2741.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_2741.png"
+    },
+    "estimatedTime": "2 weeks",
+    "createdByUser": {
+      "id": "3354f497-e35f-4589-8bee-aff805f8aa8c",
+      "email": "test_5cb9869d@example.com",
+      "lastName": "Fischer",
+      "firstName": "Norma",
+      "middleName": "David"
+    }
+  }
+}

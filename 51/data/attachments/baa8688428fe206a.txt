@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDE4OjQ5OjI4LjIwNDc0MSIsInVzZXJfaWQiOiIzMzU0ZjQ5Ny1lMzVmLTQ1ODktOGJlZS1hZmY4MDVmOGFhOGMifQ.52z4PgsAvQfHEifX8rsGwMAQAv4SLGdSm4Bdp_-QmiU' \
+  -H 'content-type: application/json' \
+  -d '{"title":"We leave should herself itself wish.","courseId":"9243882e-80d7-4c0d-81f2-2a2e05743408","maxScore":82,"minScore":8,"orderIndex":7175,"description":"Community after open agency within.","estimatedTime":"7 weeks"}'

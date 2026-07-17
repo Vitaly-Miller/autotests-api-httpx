@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/exercises/d888c812-c9fb-4397-8ec4-f69adc49a171 \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDE4OjQ5OjMyLjM4MzMxMSIsInVzZXJfaWQiOiJhZGM4MWYyZS00NWQ0LTQzMjYtOWRmMy0yNmM4MGM0YmVjZjAifQ.BYJNmYXKDlLNeJLZVkjQ4MSmWxjuc6MAoS59mIMt6vI' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Million upon hard table join.","maxScore":91,"minScore":19,"orderIndex":587,"description":"Threat hotel something career. Ball season ever.","estimatedTime":"5 weeks"}'

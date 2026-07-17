@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjM2OjI4LjU1NTczNyIsInVzZXJfaWQiOiJiMmEzZDU2Ny1jYTk5LTQxZjUtOTkyMi1hYzIxZmZjZjRlYzgifQ.91XVRQQ7CznsMXQxPNiHDi_0NfhK4Cl3hnWrgwOCpJk' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Water show heavy do.","maxScore":99,"minScore":21,"description":"Consider agent collection hot.","estimatedTime":"6 weeks","previewFileId":"12eaae91-3dab-4c31-a468-52c7af2ce8de","createdByUserId":"b2a3d567-ca99-41f5-9922-ac21ffcf4ec8"}'

@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDE4OjQ5OjE5Ljc4Nzg2OSIsInVzZXJfaWQiOiJiNmUyMjQ0YS00YzJiLTQ4ZmMtYTliZC0xYjk1NzY4OTk0MzcifQ.N9C895lkwrMEs1jovGybhTv5qmq-RPuzAn-gMWFSMl0' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Live however when crime pay room.","maxScore":82,"minScore":13,"description":"Such interest where.","estimatedTime":"9 weeks","previewFileId":"e7e216fb-be67-4720-8261-f1c786cc2e3e","createdByUserId":"b6e2244a-4c2b-48fc-a9bd-1b9576899437"}'

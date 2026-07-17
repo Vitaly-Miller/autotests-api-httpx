@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDE4OjQ5OjMyLjcxNDU5NyIsInVzZXJfaWQiOiJhZGM4MWYyZS00NWQ0LTQzMjYtOWRmMy0yNmM4MGM0YmVjZjAifQ.AZgwT7P4dDY9LSmOU7LsRNhT63SSrKEiYFACRhhm3yw' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Some city society figure.","maxScore":86,"minScore":5,"description":"Professional prove soon begin much their.","estimatedTime":"7 weeks","previewFileId":"3b21ef03-d2af-44f6-b4a5-7a5cca4be27c","createdByUserId":"adc81f2e-45d4-4326-9df3-26c80c4becf0"}'

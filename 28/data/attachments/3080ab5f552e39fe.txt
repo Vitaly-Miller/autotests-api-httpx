@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjM2OjI1LjEwOTY0MyIsInVzZXJfaWQiOiJlMGVkOGYwYy0yOTMzLTQ5MGMtYTA5ZC0zNGRhZDMwNWViODAifQ.RjMDMqhrdq9rfxdCKA-KaUp9KY6O2NW_lisNeK1RwtY' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Him current member return model able.","maxScore":54,"minScore":24,"description":"Father ten expert political describe.","estimatedTime":"2 weeks","previewFileId":"4cd698d6-1b0f-4d0f-8690-e2d59ce93cc2","createdByUserId":"e0ed8f0c-2933-490c-a09d-34dad305eb80"}'

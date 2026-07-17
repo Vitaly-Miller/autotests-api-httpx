@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDE4OjQ5OjI2Ljc5MzA5MiIsInVzZXJfaWQiOiIzZWM5MmM4NC03NzIxLTQ4MTEtOTA0Yi0xNWFjMzMxYjg1ZjUifQ.NLIM9SsPmdg7BA1WB3KMtmsxsjZdT4ENIujZj86TtwI' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Before artist report return church skill.","courseId":"43b0675d-5d40-4a51-beb3-c56f9f2e06ed","maxScore":82,"minScore":23,"orderIndex":2800,"description":"Early kitchen travel the allow technology fact.","estimatedTime":"3 weeks"}'

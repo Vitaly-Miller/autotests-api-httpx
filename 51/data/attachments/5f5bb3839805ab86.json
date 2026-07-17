@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "fc339227-7f60-4e4f-8286-f9751f1a903a",
+    "title": "Doctor catch statement daughter during.",
+    "maxScore": 80,
+    "minScore": 29,
+    "description": "Wind note fast social accept.",
+    "previewFile": {
+      "id": "f5b9bc5d-4177-4ac4-b00b-1c7100e16405",
+      "filename": "file_9221.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_9221.png"
+    },
+    "estimatedTime": "7 weeks",
+    "createdByUser": {
+      "id": "2c7d3258-1e46-440e-b27e-637ebae17850",
+      "email": "test_674fb562@example.com",
+      "lastName": "Horton",
+      "firstName": "Joshua",
+      "middleName": "Kevin"
+    }
+  }
+}

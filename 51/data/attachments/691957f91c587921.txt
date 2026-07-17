@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDE4OjQ5OjMwLjk5OTk2NiIsInVzZXJfaWQiOiJiN2FmYzllYi04MDY3LTQyYjctYmNiMy1hYmU5MjQ1ZGU3NzkifQ.1uaO8UUa0b9SImfzUdC8Xb1qBo2WYoaEuCKTlQonkIc' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Theory card into management.","courseId":"e299784e-b8e2-41f2-90cf-de91a3851274","maxScore":60,"minScore":21,"orderIndex":1815,"description":"Community beautiful enough listen often her.","estimatedTime":"4 weeks"}'

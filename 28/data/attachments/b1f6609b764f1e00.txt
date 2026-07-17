@@ -1,5 +1,0 @@
-curl -X PATCH \
-  http://localhost:8000/api/v1/courses/7c61b084-c07f-4a4c-9345-8da7584d3557 \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjM2OjI1LjEwOTY0MyIsInVzZXJfaWQiOiJlMGVkOGYwYy0yOTMzLTQ5MGMtYTA5ZC0zNGRhZDMwNWViODAifQ.RjMDMqhrdq9rfxdCKA-KaUp9KY6O2NW_lisNeK1RwtY' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Boy car require successful.","maxScore":88,"minScore":25,"description":"Seven table window cut debate place.","estimatedTime":"4 weeks"}'

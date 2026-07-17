@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/exercises/5d0b9732-83cd-4d12-aacf-a55fdee41f15 \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDE4OjQ5OjMzLjc4ODM1NCIsInVzZXJfaWQiOiIzYjU2NTc1Zi0yNmJlLTQyMDgtODY2OC1lMmVlNGRkNTdhODIifQ.t_sC3lPnCMqFuibNDhL41ZtZiQk34bZEWfhVkFAdeHM' \
+  -H 'content-type: application/json' \
+  -d '{"title":"History vote much bill sign.","maxScore":95,"minScore":10,"orderIndex":2202,"description":"Plan clear idea think dog general.","estimatedTime":"7 weeks"}'

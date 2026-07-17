@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "e299784e-b8e2-41f2-90cf-de91a3851274",
+    "title": "Would out morning produce three.",
+    "maxScore": 76,
+    "minScore": 21,
+    "description": "Because heart along business whose fall visit.",
+    "previewFile": {
+      "id": "7d625cef-51ce-4fa3-a3f4-f304af11352a",
+      "filename": "file_8436.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_8436.png"
+    },
+    "estimatedTime": "5 weeks",
+    "createdByUser": {
+      "id": "b7afc9eb-8067-42b7-bcb3-abe9245de779",
+      "email": "test_3a44c70a@example.com",
+      "lastName": "Reed",
+      "firstName": "Michael",
+      "middleName": "Adam"
+    }
+  }
+}

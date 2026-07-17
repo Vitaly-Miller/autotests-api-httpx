@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDE4OjQ5OjI5LjkyNDk0NCIsInVzZXJfaWQiOiI3ZDg5YTQ1MS0xNTgzLTRiMDItYTA1NC03MzZkYzk5OTQxZDkifQ.UPnb6YJ0yiQ0R7y-oUZDTi88-2udSoFbseedQpJSpTw' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Itself entire shake.","maxScore":73,"minScore":14,"description":"Public a bag Mrs work social.","estimatedTime":"5 weeks","previewFileId":"66e5b436-cde0-4c9e-bb22-d2572f70f9c5","createdByUserId":"7d89a451-1583-4b02-a054-736dc99941d9"}'

@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDE4OjQ5OjI0LjAxMjEzNiIsInVzZXJfaWQiOiI1OGVhMTI2OS1iYmMwLTRmZDctODFjMi0xMTc1Njc4M2ZhNTYifQ.8qi1IhSvM1JuyHnJLa4djg-JarR25EIapDpZFc5PaBc' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Picture ready thus.","courseId":"a0ac0e3d-18e2-4f65-813d-93140ff579c3","maxScore":77,"minScore":7,"orderIndex":4071,"description":"Common court respond then song something.","estimatedTime":"9 weeks"}'

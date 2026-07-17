@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/exercises \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjM2OjMyLjM1Njg3NCIsInVzZXJfaWQiOiI1YjU2YTM0NS0zM2U1LTRjMjItYjM4OS1jMGMwZTI3ZjQ1NmUifQ.okRu2ydfW7dVJ0KniGI7_6QIxRWk7RyoeDrze89qB9c' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Effort dream game son.","courseId":"f75ebb0b-fcb0-4e8b-8512-7e0f58ee2d0d","maxScore":96,"minScore":14,"orderIndex":4675,"description":"Him loss thus character statement.","estimatedTime":"9 weeks"}'

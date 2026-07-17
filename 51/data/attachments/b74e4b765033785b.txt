@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDE4OjQ5OjI0LjM0MTMyMyIsInVzZXJfaWQiOiI1OGVhMTI2OS1iYmMwLTRmZDctODFjMi0xMTc1Njc4M2ZhNTYifQ.xZw2ielEFYtKK7zbUR870oumIpJ2VD8ZfWMYbviPCVQ' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Miss your war relate.","maxScore":94,"minScore":30,"description":"Behavior find scene man night sister.","estimatedTime":"4 weeks","previewFileId":"7fba1b8e-99dd-4ca9-9b95-5fcce3aec646","createdByUserId":"58ea1269-bbc0-4fd7-81c2-11756783fa56"}'

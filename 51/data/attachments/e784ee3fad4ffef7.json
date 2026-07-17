@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "f2a2aeff-9e3e-4308-a00e-89c9644c83ac",
+    "title": "Lawyer investment finish which.",
+    "maxScore": 55,
+    "minScore": 20,
+    "description": "Board piece but drop.",
+    "previewFile": {
+      "id": "482b96db-8fa3-49ec-a5f3-dff0f512dd5e",
+      "filename": "file_9429.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_9429.png"
+    },
+    "estimatedTime": "7 weeks",
+    "createdByUser": {
+      "id": "b8c38bf0-fad9-412c-ba98-4b6bd27c552a",
+      "email": "test_05a7472a@example.com",
+      "lastName": "Dickson",
+      "firstName": "Ian",
+      "middleName": "Lisa"
+    }
+  }
+}

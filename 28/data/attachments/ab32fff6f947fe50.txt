@@ -1,5 +1,0 @@
-curl -X PATCH \
-  http://localhost:8000/api/v1/exercises/ee776619-70ae-4e93-8c7f-1a174dc6d03a \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjM2OjM1LjAxNDA5NSIsInVzZXJfaWQiOiIwMjU0MTQzOS0yY2UzLTQyZWEtYWE0Yy0yYjg3MDUwODdmNjQifQ.wpmRGOr9zj0o0jiD4uc4B0WLoYCsgynVEf6TlaIpxn0' \
-  -H 'content-type: application/json' \
-  -d '{"title":"However my project reason arm.","maxScore":56,"minScore":24,"orderIndex":271,"description":"Stuff song message blood someone world.","estimatedTime":"6 weeks"}'

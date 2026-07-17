@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "14e9dfa9-eca8-4ccb-a8ca-5b19bf73b156",
+    "title": "Live however when crime pay room.",
+    "maxScore": 82,
+    "minScore": 13,
+    "description": "Such interest where.",
+    "previewFile": {
+      "id": "e7e216fb-be67-4720-8261-f1c786cc2e3e",
+      "filename": "file_9322.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_9322.png"
+    },
+    "estimatedTime": "9 weeks",
+    "createdByUser": {
+      "id": "b6e2244a-4c2b-48fc-a9bd-1b9576899437",
+      "email": "test_9340fe3c@example.com",
+      "lastName": "Valenzuela",
+      "firstName": "Robert",
+      "middleName": "Elizabeth"
+    }
+  }
+}

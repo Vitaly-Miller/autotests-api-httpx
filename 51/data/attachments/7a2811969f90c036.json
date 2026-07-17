@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "43b0675d-5d40-4a51-beb3-c56f9f2e06ed",
+    "title": "Another data which turn spring.",
+    "maxScore": 55,
+    "minScore": 25,
+    "description": "Environmental financial thousand half.",
+    "previewFile": {
+      "id": "2c915801-b12c-4fa0-9f6d-4b67ec6ab738",
+      "filename": "file_4346.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_4346.png"
+    },
+    "estimatedTime": "5 weeks",
+    "createdByUser": {
+      "id": "3ec92c84-7721-4811-904b-15ac331b85f5",
+      "email": "test_822b43b7@example.com",
+      "lastName": "Higgins",
+      "firstName": "Tanya",
+      "middleName": "Richard"
+    }
+  }
+}

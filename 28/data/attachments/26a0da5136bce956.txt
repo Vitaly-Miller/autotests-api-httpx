@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjM2OjMyLjY2OTk4MSIsInVzZXJfaWQiOiI1YjU2YTM0NS0zM2U1LTRjMjItYjM4OS1jMGMwZTI3ZjQ1NmUifQ.DZXAy7l7eaJrg_EJQ9aRXMrkelAUpl1UgcdsEZgJovc' \
-  -H 'content-type: application/json' \
-  -d '{"title":"List team hard human.","maxScore":88,"minScore":22,"description":"Eight attention local bar learn discover.","estimatedTime":"6 weeks","previewFileId":"9068f884-3569-4f84-9a3b-2be3f20f0412","createdByUserId":"5b56a345-33e5-4c22-b389-c0c0e27f456e"}'

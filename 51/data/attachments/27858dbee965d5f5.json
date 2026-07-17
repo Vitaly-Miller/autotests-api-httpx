@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "1e30f1ff-9e63-4f76-81d6-eb23fa759b29",
+    "title": "Benefit figure be defense population statement.",
+    "maxScore": 56,
+    "minScore": 19,
+    "description": "Quickly realize while focus fact.",
+    "previewFile": {
+      "id": "0444dc65-6b46-4a52-8a40-6e0d7b5cd951",
+      "filename": "file_4932.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_4932.png"
+    },
+    "estimatedTime": "9 weeks",
+    "createdByUser": {
+      "id": "bbe83b07-cd97-45f7-b50b-4ec5d6a333fe",
+      "email": "test_e6fded57@example.com",
+      "lastName": "Barry",
+      "firstName": "Jessica",
+      "middleName": "Ryan"
+    }
+  }
+}

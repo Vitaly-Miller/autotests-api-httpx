@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "41dd9ebe-54a7-44e4-bbee-781aeb73b1db",
+    "title": "Some city society figure.",
+    "maxScore": 86,
+    "minScore": 5,
+    "description": "Professional prove soon begin much their.",
+    "previewFile": {
+      "id": "3b21ef03-d2af-44f6-b4a5-7a5cca4be27c",
+      "filename": "file_7004.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_7004.png"
+    },
+    "estimatedTime": "7 weeks",
+    "createdByUser": {
+      "id": "adc81f2e-45d4-4326-9df3-26c80c4becf0",
+      "email": "test_4af8b299@example.com",
+      "lastName": "Boyd",
+      "firstName": "Steven",
+      "middleName": "Amanda"
+    }
+  }
+}

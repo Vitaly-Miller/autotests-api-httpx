@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDE4OjQ5OjI1LjczNzY5OCIsInVzZXJfaWQiOiIyZmJiZTMyNi02YTBmLTRlNTEtOTczOS00MTRlODVlMjc2YzgifQ.k8h1PjQNQb1-ri9SKEakzYsypixtYmFlEXiLTtU1ksc' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Miss certainly environment song still.","maxScore":52,"minScore":15,"description":"Movie much believe nature Mrs.","estimatedTime":"4 weeks","previewFileId":"7ba42f99-0416-4f05-a838-5b9744c78682","createdByUserId":"2fbbe326-6a0f-4e51-9739-414e85e276c8"}'

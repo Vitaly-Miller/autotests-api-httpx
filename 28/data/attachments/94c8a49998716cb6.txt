@@ -1,5 +1,0 @@
-curl -X PATCH \
-  http://localhost:8000/api/v1/exercises/2fac0af7-3be3-40c7-b714-77a975258eb0 \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjM2OjM2LjM0NzI4NyIsInVzZXJfaWQiOiJiOTI2MzJlNy03NmM5LTQwNDUtYjU3MC1lMzRjNTE0NjIwMmIifQ.ZAMsr35rq1QjtBT17zX4-jdwRgZzPpQfPT3sa_qDcKw' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Item entire throw beyond a along.","maxScore":69,"minScore":9,"orderIndex":801,"description":"Early apply actually left professor tree thought.","estimatedTime":"6 weeks"}'

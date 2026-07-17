@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDE4OjQ5OjM0LjExODIwNiIsInVzZXJfaWQiOiIzYjU2NTc1Zi0yNmJlLTQyMDgtODY2OC1lMmVlNGRkNTdhODIifQ.mru1MLzJH-R28Qo4Hex3ES7ldRQCbLlfn9368407ZXE' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Beat difficult entire product line though.","maxScore":63,"minScore":3,"description":"Whom material Democrat even.","estimatedTime":"8 weeks","previewFileId":"1ccf566e-781a-40f9-8c46-c332e1bded4a","createdByUserId":"3b56575f-26be-4208-8668-e2ee4dd57a82"}'
