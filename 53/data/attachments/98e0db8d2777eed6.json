@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "336f92d2-233c-4c49-80e5-a07fa8e7c74e",
+    "title": "Listen speak pass later.",
+    "maxScore": 56,
+    "minScore": 28,
+    "description": "We quite hospital writer.",
+    "previewFile": {
+      "id": "c28d7d7c-fc59-4e36-a980-b7c6a62e6470",
+      "filename": "file_1913.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_1913.png"
+    },
+    "estimatedTime": "7 weeks",
+    "createdByUser": {
+      "id": "d40f85a6-7d7d-48b9-a65d-f6b0ba7cd51a",
+      "email": "test_85bb6d70@example.com",
+      "lastName": "George",
+      "firstName": "Christopher",
+      "middleName": "Robert"
+    }
+  }
+}

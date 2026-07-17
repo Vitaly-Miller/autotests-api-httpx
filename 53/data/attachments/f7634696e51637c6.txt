@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjA4OjQ2LjI1MTU0NiIsInVzZXJfaWQiOiI3YzE0NDY2Ny1mZmE3LTQyZmItODY3ZC02MTU1ZTAxNzUyZWYifQ.y2Ttg7ZQnrZhZKU9x2GCuNmuV3KKdmLMeXDmJGziGeg' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Step whatever consider.","maxScore":52,"minScore":2,"description":"Whose first author challenge.","estimatedTime":"7 weeks","previewFileId":"014ffef7-e9a4-4da5-82bd-14c6d8e64218","createdByUserId":"7c144667-ffa7-42fb-867d-6155e01752ef"}'

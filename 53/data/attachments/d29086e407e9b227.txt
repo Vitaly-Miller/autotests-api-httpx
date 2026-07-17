@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjA4OjQwLjI2Mjc1NiIsInVzZXJfaWQiOiI5OTA2ODJiZC0xYzc3LTQzOWEtYTBhOS0wZDM0YWE5ZTIwY2EifQ.YG4IDr1yjq8p7UfGN37mrX8hl6L93zFuYNVxIT8DJfM' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Southern exactly foreign.","maxScore":54,"minScore":10,"description":"Among detail before such impact.","estimatedTime":"5 weeks","previewFileId":"2a12fd14-9125-4e28-964d-caa02db27402","createdByUserId":"990682bd-1c77-439a-a0a9-0d34aa9e20ca"}'

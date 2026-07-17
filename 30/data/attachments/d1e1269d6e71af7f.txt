@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjUwOjU0LjgyNzUxMCIsInVzZXJfaWQiOiIzNTQwOTZjNy1iOWE2LTRiM2ItOGJhOC03ZTY2ZmQ5YzRlYTAifQ.Qwbt69BgYMdJlRFg-rq6Wk1YjsX0NnleA3aEawxNhMk' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Medical security trouble range.","maxScore":90,"minScore":4,"description":"Develop industry show.","estimatedTime":"4 weeks","previewFileId":"77134723-d986-44b8-a00e-49d1606a7486","createdByUserId":"354096c7-b9a6-4b3b-8ba8-7e66fd9c4ea0"}'

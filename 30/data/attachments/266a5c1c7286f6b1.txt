@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/exercises \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjUwOjUxLjk3Mjc5MCIsInVzZXJfaWQiOiIyYmY3MjhhYy01NjQ1LTRiM2UtOGYwZi0zZGUyNzE4NjhmMTgifQ.q-lnZOFpCsMl843eTokPazbknucKXwAk-IU9nMTezgI' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Easy air they produce pressure watch.","courseId":"befd5ff6-2084-4169-9403-05a0fa446cf2","maxScore":99,"minScore":28,"orderIndex":2912,"description":"Happen coach of age easy.","estimatedTime":"4 weeks"}'

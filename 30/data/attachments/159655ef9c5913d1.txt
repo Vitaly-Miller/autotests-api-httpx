@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjUwOjQ4LjQyODQ5NyIsInVzZXJfaWQiOiI5OGZkZjM4My05ZjYwLTRjMjAtOTY0OC1lZTE0NDQ5MTY5OTUifQ.ASfuF10ku8VCPOgnphKVVrFPDHLexk4p_GRirnkV5u4' \
-  -H 'content-type: application/json' \
-  -d '{"title":"It hour your father.","maxScore":51,"minScore":11,"description":"Increase anything read certain.","estimatedTime":"2 weeks","previewFileId":"6b79ccd6-a057-4a1e-9b67-42af5aeed84a","createdByUserId":"98fdf383-9f60-4c20-9648-ee1444916995"}'

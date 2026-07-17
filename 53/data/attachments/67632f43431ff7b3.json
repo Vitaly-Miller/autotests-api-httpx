@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "d9bcba19-ff53-4b15-8d58-3c3c41a90cc3",
+    "title": "Fund major push training conference.",
+    "maxScore": 60,
+    "minScore": 27,
+    "description": "Class give thus hotel true whole there.",
+    "previewFile": {
+      "id": "952f2c32-0ea5-4ffd-9571-c978fdde931e",
+      "filename": "file_5062.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_5062.png"
+    },
+    "estimatedTime": "3 weeks",
+    "createdByUser": {
+      "id": "f9b6c156-c57a-435c-9ff0-3a74d09db19d",
+      "email": "test_bd30750a@example.com",
+      "lastName": "Torres",
+      "firstName": "Bruce",
+      "middleName": "Emily"
+    }
+  }
+}

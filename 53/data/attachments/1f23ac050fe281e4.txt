@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjA4OjM3LjM5NzE3NiIsInVzZXJfaWQiOiI4YTljYjliNy01OTczLTRjOWQtOGRiMy02Yjc0ZmQ3M2RmYmYifQ.b_uFJyluuqn4Y6Lsz3_n4c1dwoAfNCjs4L4atVURdbg' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Stage plan myself.","maxScore":53,"minScore":29,"description":"Forward we machine with.","estimatedTime":"7 weeks","previewFileId":"5cfbd7b9-d7cc-40e7-9a75-74ebedf28d5c","createdByUserId":"8a9cb9b7-5973-4c9d-8db3-6b74fd73dfbf"}'

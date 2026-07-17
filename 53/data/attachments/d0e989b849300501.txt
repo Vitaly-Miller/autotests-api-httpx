@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjA4OjM4LjM1MDc2OSIsInVzZXJfaWQiOiI2NmY4MjBmYS1jNDlmLTQzN2ItOTNkMS05OTg2NTk0ZTM1YmQifQ.q1Frl7ptd6gnUc_hqnL1sTV87x4n1pwL3XUSIyUKYNg' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Glass mind right everybody.","maxScore":58,"minScore":14,"description":"Religious since speak three throughout break.","estimatedTime":"3 weeks","previewFileId":"c6e8aba4-68f3-406b-8970-e0d9ee6df8c5","createdByUserId":"66f820fa-c49f-437b-93d1-9986594e35bd"}'

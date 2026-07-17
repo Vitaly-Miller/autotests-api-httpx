@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjA4OjQ4LjQ3MDQ4MSIsInVzZXJfaWQiOiJhMzg0YzNmYi1kMzU1LTRhN2MtYTVhYi0zYWVkYTVkNWI5MjUifQ.85iOgtHjh_HbvwlmLdqMQISOMpCbwBSDAZ2yrE8sfR4' \
+  -H 'content-type: application/json' \
+  -d '{"title":"During speak throw manage.","courseId":"ad556014-06a6-4680-ae15-4828b7aa5127","maxScore":59,"minScore":9,"orderIndex":9273,"description":"Throughout movie environment.","estimatedTime":"3 weeks"}'

@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjA4OjQ3LjUwNDUyMyIsInVzZXJfaWQiOiI3NDdkYjQyZC02MzVlLTQ0OWQtYWRhYy0zMjdiMmZhYmExNzQifQ.Gr3FFU45X9uuuD6h6NZMza9mOxk_UTke30Q12kX7EWs' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Party environmental mouth too stage ability.","maxScore":54,"minScore":21,"description":"Around size discover series south.","estimatedTime":"3 weeks","previewFileId":"69711bd8-99de-4225-9386-c6d1f5267f06","createdByUserId":"747db42d-635e-449d-adac-327b2faba174"}'

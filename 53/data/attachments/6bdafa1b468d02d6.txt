@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjA4OjQ0LjY4MjU2NiIsInVzZXJfaWQiOiI2ZWE3NWEyMC1mZTMxLTQ2MmYtOGYwOC1kZDBkNzAxZmMzYTYifQ.TKQRejg7MaTieeecy1y7XZfiJSdXH6_yxJXF47gP27g' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Expert light necessary foreign.","courseId":"942791cb-e132-4887-99b2-ed5ce3e61d60","maxScore":50,"minScore":30,"orderIndex":8090,"description":"Front expert bit few station thought.","estimatedTime":"4 weeks"}'

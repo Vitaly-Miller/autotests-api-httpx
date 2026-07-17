@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjA4OjM5LjI5MjUyNCIsInVzZXJfaWQiOiJkZGZmNTI2MC0yMDE2LTRmMWEtYTYzOC02MWM4NWE3MjQ1YTUifQ.1iruw41zXcM2qFq_KckD1VkysOW_yncbH5FnFt1g33o' \
+  -H 'content-type: application/json' \
+  -d '{"title":"People buy entire.","maxScore":89,"minScore":20,"description":"Edge Congress ahead office crime firm.","estimatedTime":"2 weeks","previewFileId":"f10693e0-ab59-46fa-ae73-ed5248d01c7c","createdByUserId":"ddff5260-2016-4f1a-a638-61c85a7245a5"}'

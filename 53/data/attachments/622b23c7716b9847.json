@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "8d3e6614-8399-4d8f-a349-636e430e4b2e",
+    "title": "East system general on.",
+    "maxScore": 96,
+    "minScore": 19,
+    "description": "Particularly power determine nearly store under.",
+    "previewFile": {
+      "id": "74661d3f-cade-4b7c-a4f9-035474a46612",
+      "filename": "file_6595.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_6595.png"
+    },
+    "estimatedTime": "9 weeks",
+    "createdByUser": {
+      "id": "4c7931a0-658a-479e-8ae0-a7fcc1f893d9",
+      "email": "test_51aae0d5@example.com",
+      "lastName": "Lynn",
+      "firstName": "Crystal",
+      "middleName": "Melissa"
+    }
+  }
+}

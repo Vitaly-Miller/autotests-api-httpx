@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjA4OjQ0Ljk3ODcyOSIsInVzZXJfaWQiOiI2ZWE3NWEyMC1mZTMxLTQ2MmYtOGYwOC1kZDBkNzAxZmMzYTYifQ.APJWahcAtCCyHG1wsWk2pXOjN9lotqQk0Wu2Bf-cIis' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Blue base close soldier article material.","maxScore":90,"minScore":12,"description":"Base sure society describe.","estimatedTime":"9 weeks","previewFileId":"40183552-ea4d-43ee-b872-0fe1f7d602e8","createdByUserId":"6ea75a20-fe31-462f-8f08-dd0d701fc3a6"}'

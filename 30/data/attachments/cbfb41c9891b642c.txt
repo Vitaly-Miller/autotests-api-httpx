@@ -1,5 +1,0 @@
-curl -X PATCH \
-  http://localhost:8000/api/v1/exercises/7cb287ee-5e38-4787-bb11-c564d51c193a \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjUwOjU0LjUyNzQ0MiIsInVzZXJfaWQiOiIzNTQwOTZjNy1iOWE2LTRiM2ItOGJhOC03ZTY2ZmQ5YzRlYTAifQ.z1G_HO_BelEw5_qFXeCbuhsXQNLMkYmAMyOI0DZe9Vg' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Baby institution sell early low people.","maxScore":62,"minScore":17,"orderIndex":18,"description":"Though yourself behavior unit bar choice into.","estimatedTime":"7 weeks"}'

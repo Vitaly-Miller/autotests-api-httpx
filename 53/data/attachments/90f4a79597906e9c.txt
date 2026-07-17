@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjA4OjQ1Ljk1NDM2MiIsInVzZXJfaWQiOiI3YzE0NDY2Ny1mZmE3LTQyZmItODY3ZC02MTU1ZTAxNzUyZWYifQ.eOU7cgZwwCH-M84zoxtp9amVNHnbnT6T2V-aDW7cLbA' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Commercial whose system.","courseId":"04f7ec78-2de4-469a-b09d-fddae0a0c552","maxScore":64,"minScore":20,"orderIndex":3072,"description":"Station per head role turn.","estimatedTime":"9 weeks"}'

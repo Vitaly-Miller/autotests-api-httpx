@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/exercises/779da901-d6ee-4221-a053-9b54f618c408 \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjA4OjUwLjk3ODQ1NiIsInVzZXJfaWQiOiJmOWI2YzE1Ni1jNTdhLTQzNWMtOWZmMC0zYTc0ZDA5ZGIxOWQifQ.R-HQ4BOVoNx4QTwUC-dICaOuHo8TafCODS57HH3jXuA' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Beat mind relationship chance page catch.","maxScore":70,"minScore":23,"orderIndex":8360,"description":"Since thus left current carry listen nation.","estimatedTime":"6 weeks"}'

@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "942791cb-e132-4887-99b2-ed5ce3e61d60",
+    "title": "Blue base close soldier article material.",
+    "maxScore": 90,
+    "minScore": 12,
+    "description": "Base sure society describe.",
+    "previewFile": {
+      "id": "40183552-ea4d-43ee-b872-0fe1f7d602e8",
+      "filename": "file_9646.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_9646.png"
+    },
+    "estimatedTime": "9 weeks",
+    "createdByUser": {
+      "id": "6ea75a20-fe31-462f-8f08-dd0d701fc3a6",
+      "email": "test_45ec2804@example.com",
+      "lastName": "Stanley",
+      "firstName": "Susan",
+      "middleName": "Tommy"
+    }
+  }
+}

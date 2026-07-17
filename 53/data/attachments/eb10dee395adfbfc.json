@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "edadb45c-5e6d-49ef-a5f3-d775d81eefed",
+    "title": "Capital glass always age worker.",
+    "maxScore": 66,
+    "minScore": 27,
+    "description": "Beautiful usually travel issue.",
+    "previewFile": {
+      "id": "3ac437f8-732f-463e-8258-9b7c1a8f807e",
+      "filename": "file_3208.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_3208.png"
+    },
+    "estimatedTime": "9 weeks",
+    "createdByUser": {
+      "id": "62d6d1ba-c711-49d9-ada1-edd1a72800f4",
+      "email": "test_23b8ae4c@example.com",
+      "lastName": "Green",
+      "firstName": "Michelle",
+      "middleName": "Cody"
+    }
+  }
+}

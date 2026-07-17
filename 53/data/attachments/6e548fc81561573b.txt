@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/courses/c45208d2-fe4f-45e7-90e5-904f104cfed2 \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjA4OjQxLjIxMTE1MCIsInVzZXJfaWQiOiIxN2ZiNzI2OC1kZGJmLTRlYjktYjRkNy0wNjFiM2RmNWMxMWUifQ.ZqLtnrM0lErou9qJL2IfZsZqd7XORjxyVGkHldvSSho' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Than board crime.","maxScore":54,"minScore":22,"description":"Modern attack question.","estimatedTime":"6 weeks"}'

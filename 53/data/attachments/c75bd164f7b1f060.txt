@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjA4OjQyLjQ1ODk1OSIsInVzZXJfaWQiOiI0Yzc5MzFhMC02NThhLTQ3OWUtOGFlMC1hN2ZjYzFmODkzZDkifQ.vKm40m-ER2FiK19nZOIPnK1DWQP6k7DkCNi_jt_soGM' \
+  -H 'content-type: application/json' \
+  -d '{"title":"East system general on.","maxScore":96,"minScore":19,"description":"Particularly power determine nearly store under.","estimatedTime":"9 weeks","previewFileId":"74661d3f-cade-4b7c-a4f9-035474a46612","createdByUserId":"4c7931a0-658a-479e-8ae0-a7fcc1f893d9"}'

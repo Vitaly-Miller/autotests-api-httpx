@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjUwOjUzLjU1OTAwOCIsInVzZXJfaWQiOiI0OTg4ZDAzMi0wYjk0LTRjOWItOWUxYi0wODY3YWJkODkwNjgifQ.3Lj-RnDhX9CF55cptEB-arsK6k9M3875WixGgjDEZxE' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Hundred better actually street particular top.","maxScore":69,"minScore":17,"description":"The door party offer.","estimatedTime":"2 weeks","previewFileId":"0b5e38f3-4f97-423b-b778-3ead0fb5e04b","createdByUserId":"4988d032-0b94-4c9b-9e1b-0867abd89068"}'

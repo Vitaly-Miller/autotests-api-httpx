@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjA4OjUwLjk3ODQ1NiIsInVzZXJfaWQiOiJmOWI2YzE1Ni1jNTdhLTQzNWMtOWZmMC0zYTc0ZDA5ZGIxOWQifQ.R-HQ4BOVoNx4QTwUC-dICaOuHo8TafCODS57HH3jXuA' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Sort reduce game.","courseId":"d9bcba19-ff53-4b15-8d58-3c3c41a90cc3","maxScore":83,"minScore":20,"orderIndex":6326,"description":"Serious serve government little day doctor bed.","estimatedTime":"9 weeks"}'

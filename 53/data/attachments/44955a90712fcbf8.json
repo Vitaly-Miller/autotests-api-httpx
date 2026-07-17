@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "ceb9e4b5-6e08-4bdd-80d3-96118a59d838",
+    "title": "Party environmental mouth too stage ability.",
+    "maxScore": 54,
+    "minScore": 21,
+    "description": "Around size discover series south.",
+    "previewFile": {
+      "id": "69711bd8-99de-4225-9386-c6d1f5267f06",
+      "filename": "file_9933.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_9933.png"
+    },
+    "estimatedTime": "3 weeks",
+    "createdByUser": {
+      "id": "747db42d-635e-449d-adac-327b2faba174",
+      "email": "test_df8b2b77@example.com",
+      "lastName": "Knapp",
+      "firstName": "Christy",
+      "middleName": "Charles"
+    }
+  }
+}

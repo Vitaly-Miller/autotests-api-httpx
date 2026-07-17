@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjA4OjQxLjIxMTE1MCIsInVzZXJfaWQiOiIxN2ZiNzI2OC1kZGJmLTRlYjktYjRkNy0wNjFiM2RmNWMxMWUifQ.ZqLtnrM0lErou9qJL2IfZsZqd7XORjxyVGkHldvSSho' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Nor growth strategy series.","maxScore":56,"minScore":18,"description":"Short third test wall.","estimatedTime":"5 weeks","previewFileId":"35f136d2-b919-452e-a400-d920c7ba402c","createdByUserId":"17fb7268-ddbf-4eb9-b4d7-061b3df5c11e"}'

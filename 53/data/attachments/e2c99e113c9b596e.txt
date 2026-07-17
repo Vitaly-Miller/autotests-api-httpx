@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjA4OjUwLjAxMjY3MSIsInVzZXJfaWQiOiI2MmQ2ZDFiYS1jNzExLTQ5ZDktYWRhMS1lZGQxYTcyODAwZjQifQ.SpTyxF1GdoSlIN_MhY6EC7HHzqO7ksKKwQyuCTk6Uxc' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Capital glass always age worker.","maxScore":66,"minScore":27,"description":"Beautiful usually travel issue.","estimatedTime":"9 weeks","previewFileId":"3ac437f8-732f-463e-8258-9b7c1a8f807e","createdByUserId":"62d6d1ba-c711-49d9-ada1-edd1a72800f4"}'

@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/exercises \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjUwOjUwLjY5Nzc2NyIsInVzZXJfaWQiOiI0NzkxMzUwMy03ZGIwLTRkOGQtOTI3Ni05YWNhMjM4NmZmZmQifQ.tz0MH_J_DucCEpzrzp0nr3c7ualQdQAZKQ-eZCjKmy8' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Total candidate popular series.","courseId":"361c1657-12f6-4b2d-880f-f65b1ef1e6a0","maxScore":58,"minScore":23,"orderIndex":3500,"description":"Great stock rule east military management.","estimatedTime":"8 weeks"}'

@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjA4OjQ5LjcxNDIzNyIsInVzZXJfaWQiOiI2MmQ2ZDFiYS1jNzExLTQ5ZDktYWRhMS1lZGQxYTcyODAwZjQifQ.oQhqN3FH_AaDH0fixqy4a6umZ9-x1YSsiOYuSlRlcXE' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Point economic compare travel best.","courseId":"edadb45c-5e6d-49ef-a5f3-d775d81eefed","maxScore":57,"minScore":30,"orderIndex":5950,"description":"Group inside skin all show.","estimatedTime":"8 weeks"}'

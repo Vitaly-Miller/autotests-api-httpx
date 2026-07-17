@@ -1,5 +1,0 @@
-curl -X POST \
-  http://localhost:8000/api/v1/courses \
-  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE1VDE3OjUwOjUwLjk5NzMyOCIsInVzZXJfaWQiOiI0NzkxMzUwMy03ZGIwLTRkOGQtOTI3Ni05YWNhMjM4NmZmZmQifQ.imMvrvwMollK6bJW86FLJ5Hi4Sbvw7OUgiCdvccSSOI' \
-  -H 'content-type: application/json' \
-  -d '{"title":"Part region culture painting most.","maxScore":84,"minScore":27,"description":"Media read threat money family.","estimatedTime":"2 weeks","previewFileId":"fa55451c-dd7f-41a5-849c-fefb7da38727","createdByUserId":"47913503-7db0-4d8d-9276-9aca2386fffd"}'

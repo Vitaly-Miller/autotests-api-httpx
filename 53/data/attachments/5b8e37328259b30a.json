@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "c45208d2-fe4f-45e7-90e5-904f104cfed2",
+    "title": "Nor growth strategy series.",
+    "maxScore": 56,
+    "minScore": 18,
+    "description": "Short third test wall.",
+    "previewFile": {
+      "id": "35f136d2-b919-452e-a400-d920c7ba402c",
+      "filename": "file_6430.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_6430.png"
+    },
+    "estimatedTime": "5 weeks",
+    "createdByUser": {
+      "id": "17fb7268-ddbf-4eb9-b4d7-061b3df5c11e",
+      "email": "test_fbba5646@example.com",
+      "lastName": "Yu",
+      "firstName": "Cynthia",
+      "middleName": "Tyler"
+    }
+  }
+}

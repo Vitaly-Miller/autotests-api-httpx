@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA3LTE3VDIxOjA4OjQ4Ljc2Njk0OSIsInVzZXJfaWQiOiJhMzg0YzNmYi1kMzU1LTRhN2MtYTVhYi0zYWVkYTVkNWI5MjUifQ.DsSGi4xvLgbcFYMNxlSRmF4E8Fb1cntNdMzTnWp2sW0' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Inside sport full adult.","maxScore":72,"minScore":27,"description":"Actually meeting responsibility give pretty.","estimatedTime":"4 weeks","previewFileId":"96046e82-6ab8-46f8-abd5-2ac827cec1c5","createdByUserId":"a384c3fb-d355-4a7c-a5ab-3aeda5d5b925"}'
