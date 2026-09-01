@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "60b18d20-eb63-4359-b709-56cb44855f58",
+    "title": "Action some free work majority floor.",
+    "maxScore": 96,
+    "minScore": 26,
+    "description": "Religious a also itself argue consider.",
+    "previewFile": {
+      "id": "6122a8fd-c30a-4bf7-b814-6bf201f4bbec",
+      "filename": "file_9903.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_9903.png"
+    },
+    "estimatedTime": "5 weeks",
+    "createdByUser": {
+      "id": "6d7cab50-7778-4005-a508-26ec977b727f",
+      "email": "test_8ca7f619@example.com",
+      "lastName": "Harris",
+      "firstName": "Bryan",
+      "middleName": "Justin"
+    }
+  }
+}

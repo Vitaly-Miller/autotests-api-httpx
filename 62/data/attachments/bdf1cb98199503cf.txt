@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTAxVDIyOjQ3OjM1LjI4NDIxNyIsInVzZXJfaWQiOiI4ZTQwNTc3OC1mZjMzLTRmODYtYTE0Yi1jNDMxNTMzZTA2ZTMifQ.HwJlsGC5gEAeHuZGxe_6tawerDCEG2Nq-2d8MRcI_1k' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Once particularly listen test party.","courseId":"d0da08c0-5c32-4571-8017-15666ab3fb88","maxScore":73,"minScore":1,"orderIndex":3080,"description":"Something indicate benefit despite hard prepare.","estimatedTime":"7 weeks"}'

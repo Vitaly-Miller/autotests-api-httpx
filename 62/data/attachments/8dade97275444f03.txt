@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTAxVDIyOjQ3OjM4LjEyNDc5MiIsInVzZXJfaWQiOiJkODQ4MDY0OC02ZjQ0LTQ0ODItYjJhNC1hY2IzYjFmNmY2YmQifQ.i9IfgRw12lmdGZmLfX841RdUDuOgRITYMX5IuXv4krg' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Forget collection white method.","maxScore":82,"minScore":30,"description":"Foot which give child try central cut.","estimatedTime":"6 weeks","previewFileId":"1f6eab65-8639-44b2-b3c2-178dc0fe48eb","createdByUserId":"d8480648-6f44-4482-b2a4-acb3b1f6f6bd"}'

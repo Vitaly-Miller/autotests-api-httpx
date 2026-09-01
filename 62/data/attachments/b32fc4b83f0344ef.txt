@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTAxVDIyOjQ3OjMwLjUwMjY5MSIsInVzZXJfaWQiOiJlMjgyNDg0MS1hZTRhLTQ2MDgtOGYxYS03Nzk2YzBjN2QxNmEifQ.PCenSN-2p1r3lChZ-I7gGRRv2o9TIv6IMMFIh-gHekM' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Contain structure relate.","maxScore":63,"minScore":26,"description":"Upon skill traditional dog relate.","estimatedTime":"6 weeks","previewFileId":"5b5fcd54-56e7-4c27-9172-26ec04233cad","createdByUserId":"e2824841-ae4a-4608-8f1a-7796c0c7d16a"}'

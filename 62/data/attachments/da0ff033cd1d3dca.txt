@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTAxVDIyOjQ3OjMyLjcyNjQ3MyIsInVzZXJfaWQiOiIyYzExODkwZC1iYzc1LTQ2YTEtOGE4Yi1kNTczOWU2OGFmODYifQ.uboyA-jkJbzrU7VdWlNsdrwAARbv6JwkMF825_WOx-A' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Consumer possible paper knowledge clear great.","courseId":"ad1f31a0-9257-45c6-b29d-7ddf032e93bd","maxScore":62,"minScore":16,"orderIndex":9087,"description":"Fish agent accept within.","estimatedTime":"7 weeks"}'

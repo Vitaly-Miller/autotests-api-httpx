@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTAxVDIyOjQ3OjM0LjAxMTM3NSIsInVzZXJfaWQiOiJiYTJiY2JkOS00NDI4LTQwODAtODQ0ZS0wN2MxNzc2NGY4MjUifQ._mml9qzxwBKpqAVQYtkwrxFr_b201h-Xh1_tuXaM-fc' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Green same attack.","courseId":"c931722f-30ad-47e1-908c-ff72203fb6a0","maxScore":63,"minScore":8,"orderIndex":9593,"description":"Firm especially assume race few get heart.","estimatedTime":"5 weeks"}'

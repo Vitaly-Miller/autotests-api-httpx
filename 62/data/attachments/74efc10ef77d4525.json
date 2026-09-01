@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "c931722f-30ad-47e1-908c-ff72203fb6a0",
+    "title": "Final none detail heavy.",
+    "maxScore": 66,
+    "minScore": 2,
+    "description": "Less sea accept weight later technology consider.",
+    "previewFile": {
+      "id": "3dd74118-673d-4547-80fc-7982fd1129e5",
+      "filename": "file_3734.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_3734.png"
+    },
+    "estimatedTime": "7 weeks",
+    "createdByUser": {
+      "id": "ba2bcbd9-4428-4080-844e-07c17764f825",
+      "email": "test_a4a57208@example.com",
+      "lastName": "Green",
+      "firstName": "Brittany",
+      "middleName": "Lisa"
+    }
+  }
+}

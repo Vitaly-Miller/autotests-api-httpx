@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/exercises/7102eb50-863f-4c0c-8017-402a46019831 \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTAxVDIyOjQ3OjM5LjEwMTAyNCIsInVzZXJfaWQiOiI2ZDdjYWI1MC03Nzc4LTQwMDUtYTUwOC0yNmVjOTc3YjcyN2YifQ.u9tP51nYZGmZpPWOZbN6WNNdgCaqj9HyhR9T4W6JD1Y' \
+  -H 'content-type: application/json' \
+  -d '{"title":"In present officer.","maxScore":64,"minScore":2,"orderIndex":737,"description":"Their human include wrong.","estimatedTime":"8 weeks"}'

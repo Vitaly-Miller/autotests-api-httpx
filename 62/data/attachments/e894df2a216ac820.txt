@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTAxVDIyOjQ3OjM0LjMxMzg0NSIsInVzZXJfaWQiOiJiYTJiY2JkOS00NDI4LTQwODAtODQ0ZS0wN2MxNzc2NGY4MjUifQ.tU00SUhpQYHN0WG4QmcUJXQPAja5p0wa2-FUmPx375M' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Final none detail heavy.","maxScore":66,"minScore":2,"description":"Less sea accept weight later technology consider.","estimatedTime":"7 weeks","previewFileId":"3dd74118-673d-4547-80fc-7982fd1129e5","createdByUserId":"ba2bcbd9-4428-4080-844e-07c17764f825"}'

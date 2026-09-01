@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "c2929e6c-e809-4af7-bf18-372ee3b6c9ee",
+    "title": "Deal detail realize line.",
+    "maxScore": 98,
+    "minScore": 17,
+    "description": "Despite pass clearly pass. Project group senior.",
+    "previewFile": {
+      "id": "1da23777-7c10-4015-9994-6de89c4dec3a",
+      "filename": "file_7627.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_7627.png"
+    },
+    "estimatedTime": "8 weeks",
+    "createdByUser": {
+      "id": "85e9a10b-dad9-4fe1-82c7-1755d932708e",
+      "email": "test_80e04d94@example.com",
+      "lastName": "Weeks",
+      "firstName": "Peggy",
+      "middleName": "Tyrone"
+    }
+  }
+}

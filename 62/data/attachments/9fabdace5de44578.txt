@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTAxVDIyOjQ3OjM5LjQwMDAxMyIsInVzZXJfaWQiOiI2ZDdjYWI1MC03Nzc4LTQwMDUtYTUwOC0yNmVjOTc3YjcyN2YifQ.w9pQ0x0g2C1nnObjh1h2cstx0zWDKVIxUIw6FXTfp3c' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Action some free work majority floor.","maxScore":96,"minScore":26,"description":"Religious a also itself argue consider.","estimatedTime":"5 weeks","previewFileId":"6122a8fd-c30a-4bf7-b814-6bf201f4bbec","createdByUserId":"6d7cab50-7778-4005-a508-26ec977b727f"}'

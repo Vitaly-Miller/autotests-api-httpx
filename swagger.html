@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<!-- Статическая страница Swagger UI для GitHub Pages.
+     Спецификация (openapi.json) выгружается с тестового сервера в CI (см. .github/workflows/tests.yml)
+     и публикуется рядом с этой страницей. -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>API Test Server — Swagger UI</title>
+    <link rel="stylesheet" href="https://unpkg.com/swagger-ui-dist@5/swagger-ui.css">  <!-- Стили Swagger UI (CDN) -->
+</head>
+<body>
+<div id="swagger-ui"></div>                                                            <!-- Контейнер, в который рендерится UI -->
+<script src="https://unpkg.com/swagger-ui-dist@5/swagger-ui-bundle.js"></script>       <!-- Скрипт Swagger UI (CDN) -->
+<script>
+    window.ui = SwaggerUIBundle({
+        url: 'openapi.json',      // OpenAPI-спецификация (лежит рядом на GitHub Pages)
+        dom_id: '#swagger-ui'     // Куда рендерить
+    });
+</script>
+</body>
+</html>

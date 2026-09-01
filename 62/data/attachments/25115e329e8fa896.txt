@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTAxVDIyOjQ3OjI5LjIzMzA3MiIsInVzZXJfaWQiOiI0NDA0ZjcxMS0wNjUzLTRmZjEtODM1NC00YTg0YjZkMTllMWQifQ.j5iYVbb7HNdtr-hH3hJUxogpwjvtv2vAzxSqksyJiyg' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Stop such movie my our certainly.","maxScore":84,"minScore":20,"description":"Area both result hot begin either.","estimatedTime":"4 weeks","previewFileId":"c4f3cbbf-80b0-414b-b1a4-1a364632f672","createdByUserId":"4404f711-0653-4ff1-8354-4a84b6d19e1d"}'

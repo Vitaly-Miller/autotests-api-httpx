@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTAxVDIyOjQ3OjM2Ljg2MTczNiIsInVzZXJfaWQiOiI4YWMzOWM0Yy05NTlkLTRiZmUtYTg2NS1kYjg3YzFkZjBlYTYifQ.TkADiT6oXhYp-6bU9RVEn_0KaLYxVCk6TioBdZJMUtA' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Already who oil soon.","maxScore":94,"minScore":26,"description":"Method where as. Along use serious hour.","estimatedTime":"9 weeks","previewFileId":"59719bad-4f6f-44e9-8b0c-a79f31f4a85d","createdByUserId":"8ac39c4c-959d-4bfe-a865-db87c1df0ea6"}'

@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTAxVDIyOjQ3OjMwLjIwNDAzNSIsInVzZXJfaWQiOiJlMjgyNDg0MS1hZTRhLTQ2MDgtOGYxYS03Nzk2YzBjN2QxNmEifQ.CuOllXdbhXxqrQjxG-WNohwz5lLklbuAAA8hJreVP8A' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Manage part size discuss ever anything.","courseId":"75559857-3139-4721-a0ca-3970d389c500","maxScore":98,"minScore":2,"orderIndex":4372,"description":"Machine yet to care vote create space.","estimatedTime":"3 weeks"}'

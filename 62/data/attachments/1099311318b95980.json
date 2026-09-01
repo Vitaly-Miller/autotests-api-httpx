@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "648a5ebe-473e-48bb-a7a1-7a1521d24290",
+    "title": "Idea environmental analysis.",
+    "maxScore": 94,
+    "minScore": 24,
+    "description": "Consider sure source.",
+    "previewFile": {
+      "id": "414f5602-9edd-4770-b27e-2edcfba4edd6",
+      "filename": "file_1049.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_1049.png"
+    },
+    "estimatedTime": "6 weeks",
+    "createdByUser": {
+      "id": "334c8f02-2449-4083-ac4d-039dd7f5193a",
+      "email": "test_d34b9cd3@example.com",
+      "lastName": "Cox",
+      "firstName": "Craig",
+      "middleName": "Danielle"
+    }
+  }
+}

@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTAxVDIyOjQ3OjI2LjMwMjI2NSIsInVzZXJfaWQiOiJjZjcwZGFhYi0yZjhhLTRjY2ItYmIwZC0wY2FmMmRlZmQzOTgifQ.ZgCC2Y1NxOjEQvsYNkPJpacYQNfIBs8fThG_kUy_BPY' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Quality collection believe.","maxScore":97,"minScore":17,"description":"Six form sound west idea.","estimatedTime":"2 weeks","previewFileId":"77798cc4-848a-403a-be56-bfb7182cabaa","createdByUserId":"cf70daab-2f8a-4ccb-bb0d-0caf2defd398"}'

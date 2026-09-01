@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTAxVDIyOjQ3OjI3LjI1MjkwNSIsInVzZXJfaWQiOiI3NWI1ZGU3OC03ZDY5LTQ4YWYtYjYzYy0wMWMxMzIwNWY2NGQifQ.6-KwpD7n70y1Vca40uahQDAcwlBCHUujkJoS3PXaP_A' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Level gun themselves they four.","maxScore":62,"minScore":12,"description":"Place age shoulder stand nearly at.","estimatedTime":"9 weeks","previewFileId":"a6374d03-4df0-4285-a866-c1a40dd64c2f","createdByUserId":"75b5de78-7d69-48af-b63c-01c13205f64d"}'

@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTAxVDIyOjQ3OjMzLjAzMDAwMyIsInVzZXJfaWQiOiIyYzExODkwZC1iYzc1LTQ2YTEtOGE4Yi1kNTczOWU2OGFmODYifQ.HeEMbjpLygnG5U4LOC_vRJS-7N2rFHdlKUlyblW-bA0' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Score tonight fire wide debate recognize.","maxScore":80,"minScore":10,"description":"Require relate support often enjoy.","estimatedTime":"5 weeks","previewFileId":"36192b3a-d75e-43e7-a70d-9f506dabcf55","createdByUserId":"2c11890d-bc75-46a1-8a8b-d5739e68af86"}'

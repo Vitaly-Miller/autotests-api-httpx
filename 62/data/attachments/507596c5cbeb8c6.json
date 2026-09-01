@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "8203c45a-2755-49b9-bcca-2495988fa9fb",
+    "title": "Tv away end region company author.",
+    "maxScore": 87,
+    "minScore": 16,
+    "description": "Girl instead scientist. Story old three.",
+    "previewFile": {
+      "id": "c4f3cbbf-80b0-414b-b1a4-1a364632f672",
+      "filename": "file_4092.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_4092.png"
+    },
+    "estimatedTime": "8 weeks",
+    "createdByUser": {
+      "id": "4404f711-0653-4ff1-8354-4a84b6d19e1d",
+      "email": "test_4318e5d4@example.com",
+      "lastName": "Vaughn",
+      "firstName": "Zachary",
+      "middleName": "Richard"
+    }
+  }
+}

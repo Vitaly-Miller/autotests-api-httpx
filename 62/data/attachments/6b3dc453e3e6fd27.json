@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "75559857-3139-4721-a0ca-3970d389c500",
+    "title": "Contain structure relate.",
+    "maxScore": 63,
+    "minScore": 26,
+    "description": "Upon skill traditional dog relate.",
+    "previewFile": {
+      "id": "5b5fcd54-56e7-4c27-9172-26ec04233cad",
+      "filename": "file_1223.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_1223.png"
+    },
+    "estimatedTime": "6 weeks",
+    "createdByUser": {
+      "id": "e2824841-ae4a-4608-8f1a-7796c0c7d16a",
+      "email": "test_ce1813ef@example.com",
+      "lastName": "Humphrey",
+      "firstName": "Jonathan",
+      "middleName": "Samuel"
+    }
+  }
+}

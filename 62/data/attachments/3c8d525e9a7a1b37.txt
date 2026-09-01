@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTAxVDIyOjQ3OjI1LjM0MjIzNiIsInVzZXJfaWQiOiI4NWU5YTEwYi1kYWQ5LTRmZTEtODJjNy0xNzU1ZDkzMjcwOGUifQ.Xd8nABIQzibefupt_0tlCO7FYWeI-OqoFJ476LqQTcQ' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Deal detail realize line.","maxScore":98,"minScore":17,"description":"Despite pass clearly pass. Project group senior.","estimatedTime":"8 weeks","previewFileId":"1da23777-7c10-4015-9994-6de89c4dec3a","createdByUserId":"85e9a10b-dad9-4fe1-82c7-1755d932708e"}'

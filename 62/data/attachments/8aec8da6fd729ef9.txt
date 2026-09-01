@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTAxVDIyOjQ3OjM5LjEwMTAyNCIsInVzZXJfaWQiOiI2ZDdjYWI1MC03Nzc4LTQwMDUtYTUwOC0yNmVjOTc3YjcyN2YifQ.u9tP51nYZGmZpPWOZbN6WNNdgCaqj9HyhR9T4W6JD1Y' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Color member us statement.","courseId":"60b18d20-eb63-4359-b709-56cb44855f58","maxScore":62,"minScore":23,"orderIndex":7421,"description":"Analysis she suffer body live different.","estimatedTime":"9 weeks"}'

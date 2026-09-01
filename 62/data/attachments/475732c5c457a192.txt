@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTAxVDIyOjQ3OjMxLjc2NjY3MyIsInVzZXJfaWQiOiIzMzRjOGYwMi0yNDQ5LTQwODMtYWM0ZC0wMzlkZDdmNTE5M2EifQ.bgMBK43o1enZQM_BIz69042Jmi_IOid4uQF64U4vySw' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Idea environmental analysis.","maxScore":94,"minScore":24,"description":"Consider sure source.","estimatedTime":"6 weeks","previewFileId":"414f5602-9edd-4770-b27e-2edcfba4edd6","createdByUserId":"334c8f02-2449-4083-ac4d-039dd7f5193a"}'

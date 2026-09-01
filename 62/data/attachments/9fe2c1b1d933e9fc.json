@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "d0da08c0-5c32-4571-8017-15666ab3fb88",
+    "title": "Parent space people course his.",
+    "maxScore": 69,
+    "minScore": 17,
+    "description": "Despite gun suffer edge song dream.",
+    "previewFile": {
+      "id": "d1b9c777-eb50-4f57-a978-f44f1cf58ac4",
+      "filename": "file_4400.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_4400.png"
+    },
+    "estimatedTime": "7 weeks",
+    "createdByUser": {
+      "id": "8e405778-ff33-4f86-a14b-c431533e06e3",
+      "email": "test_6c847ecc@example.com",
+      "lastName": "Miller",
+      "firstName": "Stephanie",
+      "middleName": "Jeremy"
+    }
+  }
+}

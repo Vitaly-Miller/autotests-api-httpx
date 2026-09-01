@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/exercises/426e84c9-88e8-443e-a80d-bdbfbc300b85 \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTAxVDIyOjQ3OjM3LjgyNTIxOCIsInVzZXJfaWQiOiJkODQ4MDY0OC02ZjQ0LTQ0ODItYjJhNC1hY2IzYjFmNmY2YmQifQ.e-1B7mBlI4W4k4QgTFQXwRnwJO-PIPgv3Brg76kEAmY' \
+  -H 'content-type: application/json' \
+  -d '{"title":"My human drop election.","maxScore":55,"minScore":10,"orderIndex":4233,"description":"Thus appear soldier true fire some natural.","estimatedTime":"3 weeks"}'

@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "0a4fe2d1-da72-4248-b032-221b9e294592",
+    "title": "Quality collection believe.",
+    "maxScore": 97,
+    "minScore": 17,
+    "description": "Six form sound west idea.",
+    "previewFile": {
+      "id": "77798cc4-848a-403a-be56-bfb7182cabaa",
+      "filename": "file_9984.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_9984.png"
+    },
+    "estimatedTime": "2 weeks",
+    "createdByUser": {
+      "id": "cf70daab-2f8a-4ccb-bb0d-0caf2defd398",
+      "email": "test_32ab8236@example.com",
+      "lastName": "Wong",
+      "firstName": "Julian",
+      "middleName": "Kristen"
+    }
+  }
+}

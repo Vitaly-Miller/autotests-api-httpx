@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "8c0ab7ab-5104-4cd8-a93b-271976199e8a",
+    "title": "Level gun themselves they four.",
+    "maxScore": 62,
+    "minScore": 12,
+    "description": "Place age shoulder stand nearly at.",
+    "previewFile": {
+      "id": "a6374d03-4df0-4285-a866-c1a40dd64c2f",
+      "filename": "file_1232.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_1232.png"
+    },
+    "estimatedTime": "9 weeks",
+    "createdByUser": {
+      "id": "75b5de78-7d69-48af-b63c-01c13205f64d",
+      "email": "test_a70ab1be@example.com",
+      "lastName": "Brock",
+      "firstName": "Suzanne",
+      "middleName": "Anthony"
+    }
+  }
+}

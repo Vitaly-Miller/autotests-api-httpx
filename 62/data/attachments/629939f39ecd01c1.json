@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "e2d603b6-d7d3-4022-908c-a8ee7361f094",
+    "title": "Forget collection white method.",
+    "maxScore": 82,
+    "minScore": 30,
+    "description": "Foot which give child try central cut.",
+    "previewFile": {
+      "id": "1f6eab65-8639-44b2-b3c2-178dc0fe48eb",
+      "filename": "file_5316.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_5316.png"
+    },
+    "estimatedTime": "6 weeks",
+    "createdByUser": {
+      "id": "d8480648-6f44-4482-b2a4-acb3b1f6f6bd",
+      "email": "test_e3b0401c@example.com",
+      "lastName": "Moore",
+      "firstName": "William",
+      "middleName": "Heather"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "510144eb-99ba-49bd-8b16-f7fa58614d81",
+    "title": "Already who oil soon.",
+    "maxScore": 94,
+    "minScore": 26,
+    "description": "Method where as. Along use serious hour.",
+    "previewFile": {
+      "id": "59719bad-4f6f-44e9-8b0c-a79f31f4a85d",
+      "filename": "file_8959.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_8959.png"
+    },
+    "estimatedTime": "9 weeks",
+    "createdByUser": {
+      "id": "8ac39c4c-959d-4bfe-a865-db87c1df0ea6",
+      "email": "test_bf61d880@example.com",
+      "lastName": "Pacheco",
+      "firstName": "Kimberly",
+      "middleName": "Linda"
+    }
+  }
+}

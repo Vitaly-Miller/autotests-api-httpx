@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/courses/8203c45a-2755-49b9-bcca-2495988fa9fb \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTAxVDIyOjQ3OjI5LjIzMzA3MiIsInVzZXJfaWQiOiI0NDA0ZjcxMS0wNjUzLTRmZjEtODM1NC00YTg0YjZkMTllMWQifQ.j5iYVbb7HNdtr-hH3hJUxogpwjvtv2vAzxSqksyJiyg' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Tv away end region company author.","maxScore":87,"minScore":16,"description":"Girl instead scientist. Story old three.","estimatedTime":"8 weeks"}'
