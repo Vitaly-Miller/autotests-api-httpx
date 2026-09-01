@@ -3,7 +3,6 @@ Courses Client
 """
 import allure
 import httpx
-
 from tools.api_coverage import tracker
 from tools.endpoints import Endpoint
 from clients.api_client import APIClient
