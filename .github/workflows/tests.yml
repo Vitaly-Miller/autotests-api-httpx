@@ -84,7 +84,7 @@ jobs:
       # 10. Шаг для сохранения обновлённой истории покрытия обратно в кеш
       - name: Cache Coverage history
         if: always()                                 # ВСЕГДА выполняем, независимо от успеха или неудачи предыдущих шагов
-        uses: actions/cache/save@v4
+        uses: actions/cache/save@v6                   # v6 — как у cache/restore выше; v4 форсируется на Node 24 и сыпет deprecation-warning
         with:
           path: coverage-history.json                # Файл с историей покрытия по запускам
           key: coverage-history-${{ github.run_id }} # Сохраняем под ключом текущего запуска
@@ -169,6 +169,14 @@ jobs:
         run: |
           sudo cp docs/swagger.html allure-history/swagger.html  # Страница Swagger UI
           sudo cp openapi.json allure-history/openapi.json       # OpenAPI-спецификация (страница читает её по относительному пути)
+
+      # 5.2. Шаг-страховка: удаляем возможный битый .git внутри allure-history.
+      # Он появляется, когда ветки gh-pages нет и шаг «Get Allure history» оставляет пустой .git,
+      # который Docker-action от root копирует в allure-history. Без очистки peaceiris коммитит
+      # не в gh-pages, а в master → «src refspec gh-pages does not match any» → git exit code 1.
+      - name: Clean stray .git from publish dir
+        if: always()
+        run: sudo rm -rf allure-history/.git
 
       # 6. Шаг для деплоя отчётов (Allure + Coverage) на GitHub Pages, чтобы их можно было просматривать в браузере
       - name: Deploy report to GitHub Pages
