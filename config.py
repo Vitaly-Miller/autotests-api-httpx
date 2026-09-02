@@ -41,10 +41,11 @@ class Settings(BaseSettings):
     # Вложенные Pydantic-models:
     httpx_client: HTTPXClientConfig
     test_data: TestDataConfig
-    # allure_results_dir: DirectoryPath
     allure_results_dir: Path = Path('allure-results')
+    # allure_results_dir: DirectoryPath
 
-    # #------------- Создать папку, если её нет -------------
+
+    # #-------------- Создает папку, если её нет --------------
     # @classmethod
     # def initialize(cls) -> "Settings":
     #     allure_results_dir = DirectoryPath('allure-results')   # Название папки
@@ -53,8 +54,9 @@ class Settings(BaseSettings):
     #     return Settings(allure_results_dir=allure_results_dir)
 
 
-#========================================== Helper ✨(ГЛОБАЛЬНАЯ ПЕРЕМЕННАЯ) ===========================================
-settings = Settings()              # Инициализация класса-Pydantic-model (Settings) методом .initialize
+#--------------------------------------------------- Helper ✨ ---------------------------------------------------------
+#settings = Settings.initialize()      # Инициализация класса-Pydantic-model (Settings) методом .initialize
+settings = Settings()                  # Инициализация класса-Pydantic-model (Settings)
 
 
 #=======================================================================================================================
