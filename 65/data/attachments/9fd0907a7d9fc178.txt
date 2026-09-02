@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTAyVDA1OjUwOjI1LjQwMjYxNSIsInVzZXJfaWQiOiJlMzQ1YTIzZi05MDdkLTRmMDctODMyNC03NWU3NmRiYjUxYjkifQ.v8K2O6eNG4t7pMhtuu4AMB8df4T-JA2HeA4jHUnyYjk' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Deal Mr create.","courseId":"52d2e90e-104a-4f5c-9c2b-611fc3ae1c20","maxScore":71,"minScore":22,"orderIndex":7694,"description":"Product mouth involve region finish although eat.","estimatedTime":"4 weeks"}'

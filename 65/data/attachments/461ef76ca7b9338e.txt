@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTAyVDA1OjUwOjI0LjAwMjUxOSIsInVzZXJfaWQiOiIyMTZhZWRjMi1mOGFlLTQzYWItYjY1MS02YTY2M2E0ZTAzZDAifQ.iwUWEbiOK6P1BP8-Pl0Vhg37S376ZXhijH97g7SLN-c' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Often himself color contain for same again.","courseId":"1b49d6b5-7588-4811-aeeb-1f2051cafe28","maxScore":77,"minScore":10,"orderIndex":4744,"description":"Expert page machine rock.","estimatedTime":"3 weeks"}'

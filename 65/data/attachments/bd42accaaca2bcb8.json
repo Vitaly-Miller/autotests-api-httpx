@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "52d2e90e-104a-4f5c-9c2b-611fc3ae1c20",
+    "title": "Sort answer field listen any.",
+    "maxScore": 57,
+    "minScore": 17,
+    "description": "Television authority fact scientist any.",
+    "previewFile": {
+      "id": "1894beb6-5daf-4c37-9bc5-502336141635",
+      "filename": "file_5588.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_5588.png"
+    },
+    "estimatedTime": "6 weeks",
+    "createdByUser": {
+      "id": "e345a23f-907d-4f07-8324-75e76dbb51b9",
+      "email": "test_dd67ff6b@example.com",
+      "lastName": "Harrison",
+      "firstName": "Victoria",
+      "middleName": "Daniel"
+    }
+  }
+}

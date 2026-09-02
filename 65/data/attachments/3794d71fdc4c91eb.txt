@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTAyVDA1OjUwOjE0LjU1NTQxMCIsInVzZXJfaWQiOiJiZjdkODBlZS1kMzExLTQ4ODItODhiZi1hODNmZGIyYWIwODMifQ.AnDKEFNiAFaV355pj-UfrmvtlHPFOkraZNoZv9ATmoI' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Check step analysis machine know.","maxScore":84,"minScore":27,"description":"Ready then family bar develop.","estimatedTime":"5 weeks","previewFileId":"afc36e5d-bc46-4b48-b13e-32232e735e8e","createdByUserId":"bf7d80ee-d311-4882-88bf-a83fdb2ab083"}'

@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "695472a2-7cf7-4ef3-9c98-72d8001e1aed",
+    "title": "Within life at year meeting.",
+    "maxScore": 65,
+    "minScore": 24,
+    "description": "Character find heart type magazine.",
+    "previewFile": {
+      "id": "70cacd5f-d8fc-41aa-84a6-72efec82eaae",
+      "filename": "file_6542.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_6542.png"
+    },
+    "estimatedTime": "4 weeks",
+    "createdByUser": {
+      "id": "6a2e83f8-1fe2-416e-9525-90b2aab909dd",
+      "email": "test_a5258e2c@example.com",
+      "lastName": "White",
+      "firstName": "Lisa",
+      "middleName": "Karen"
+    }
+  }
+}

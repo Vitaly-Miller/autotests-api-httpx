@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "6b5a8263-38e1-4b43-ae54-4f0237721626",
+    "title": "Crime lawyer continue financial two.",
+    "maxScore": 73,
+    "minScore": 6,
+    "description": "Foreign almost everything.",
+    "previewFile": {
+      "id": "b0a9c269-0b54-47bf-96e3-a16cde96e413",
+      "filename": "file_8732.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_8732.png"
+    },
+    "estimatedTime": "8 weeks",
+    "createdByUser": {
+      "id": "e9680bd2-d32b-4545-8d88-5ae03cb70973",
+      "email": "test_4f2a2e70@example.com",
+      "lastName": "Bishop",
+      "firstName": "Justin",
+      "middleName": "Melissa"
+    }
+  }
+}

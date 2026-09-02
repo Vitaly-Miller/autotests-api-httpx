@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "371524d1-48cc-4aae-9583-27d4dadd3305",
+    "title": "Thank structure next memory majority.",
+    "maxScore": 94,
+    "minScore": 29,
+    "description": "Win figure fill class.",
+    "previewFile": {
+      "id": "6bb5c694-bb89-4416-a7aa-bd64921d56b5",
+      "filename": "file_7894.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_7894.png"
+    },
+    "estimatedTime": "5 weeks",
+    "createdByUser": {
+      "id": "4024838f-dd2c-4d0a-9545-30d64d72d712",
+      "email": "test_b2b4c42f@example.com",
+      "lastName": "Santana",
+      "firstName": "Kelsey",
+      "middleName": "Denise"
+    }
+  }
+}

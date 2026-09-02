@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTAyVDA1OjUwOjE4Ljc0NzAzNCIsInVzZXJfaWQiOiIxNjUxODU4MC1jMWYyLTQ5ZWYtYjk5Ny1iYzE4NWRlZGMyMjEifQ.X6PY1kCv26KEv6WEKaBNfPS0gFPPN0EJ95VZIJyluro' \
+  -H 'content-type: application/json' \
+  -d '{"title":"To fill race moment buy.","maxScore":80,"minScore":21,"description":"Century though threat involve school strong.","estimatedTime":"8 weeks","previewFileId":"c75fdb4a-8de7-4af7-a475-fa84a19ca277","createdByUserId":"16518580-c1f2-49ef-b997-bc185dedc221"}'

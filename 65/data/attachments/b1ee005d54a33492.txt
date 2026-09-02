@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTAyVDA1OjUwOjIwLjE2MDI4MSIsInVzZXJfaWQiOiJlZWEzNjMyMi0wOGNjLTQ3NDUtYmIxMS01NmUyNzdjMDI3MmMifQ.AYowxjTItsubS-xzHUGOD1a1J7cgeUoKnfjwwmwyb04' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Nice control president film above.","maxScore":96,"minScore":19,"description":"West story book data.","estimatedTime":"4 weeks","previewFileId":"8f4b1615-af35-4386-88d5-6625cc4aeb5c","createdByUserId":"eea36322-08cc-4745-bb11-56e277c0272c"}'

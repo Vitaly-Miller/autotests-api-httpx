@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/courses/f661b89e-17f7-4d40-a437-c55a5b7ca6e2 \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTAyVDA1OjUwOjE0LjU1NTQxMCIsInVzZXJfaWQiOiJiZjdkODBlZS1kMzExLTQ4ODItODhiZi1hODNmZGIyYWIwODMifQ.AnDKEFNiAFaV355pj-UfrmvtlHPFOkraZNoZv9ATmoI' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Recent main pretty.","maxScore":56,"minScore":29,"description":"Main between father set.","estimatedTime":"8 weeks"}'

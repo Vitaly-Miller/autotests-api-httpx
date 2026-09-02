@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "1b49d6b5-7588-4811-aeeb-1f2051cafe28",
+    "title": "And include picture address.",
+    "maxScore": 64,
+    "minScore": 28,
+    "description": "Plant seem strong another imagine rule.",
+    "previewFile": {
+      "id": "2676a334-4a20-46af-b57e-0985bb64439b",
+      "filename": "file_5520.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_5520.png"
+    },
+    "estimatedTime": "3 weeks",
+    "createdByUser": {
+      "id": "216aedc2-f8ae-43ab-b651-6a663a4e03d0",
+      "email": "test_890d49a8@example.com",
+      "lastName": "Patterson",
+      "firstName": "Michelle",
+      "middleName": "Adrian"
+    }
+  }
+}

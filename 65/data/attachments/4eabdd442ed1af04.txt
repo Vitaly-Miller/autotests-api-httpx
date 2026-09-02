@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTAyVDA1OjUwOjE1LjYxMTM5NiIsInVzZXJfaWQiOiI0MDI0ODM4Zi1kZDJjLTRkMGEtOTU0NS0zMGQ2NGQ3MmQ3MTIifQ.CAhzjhBLYA5oMh-8ry8_dIV16pJz6GfZwJpAvC82CXE' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Itself several great.","courseId":"371524d1-48cc-4aae-9583-27d4dadd3305","maxScore":73,"minScore":1,"orderIndex":1955,"description":"Name change or market.","estimatedTime":"3 weeks"}'

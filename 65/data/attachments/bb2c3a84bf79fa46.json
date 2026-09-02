@@ -1,0 +1,25 @@
+{
+  "courses": [
+    {
+      "id": "13f1e186-d669-49cd-bef3-a3671c355652",
+      "title": "Subject project mind blue talk.",
+      "maxScore": 76,
+      "minScore": 28,
+      "description": "Partner child everyone.",
+      "previewFile": {
+        "id": "a199c49d-d9b4-4ca8-953b-eba0a3ada319",
+        "filename": "file_7443.png",
+        "directory": "Uploaded",
+        "url": "http://localhost:8000/static/Uploaded/file_7443.png"
+      },
+      "estimatedTime": "7 weeks",
+      "createdByUser": {
+        "id": "7a18a9d7-a08e-4260-b51d-bf6a0eb770e8",
+        "email": "test_193c41e3@example.com",
+        "lastName": "Martinez",
+        "firstName": "Danielle",
+        "middleName": "Brandon"
+      }
+    }
+  ]
+}

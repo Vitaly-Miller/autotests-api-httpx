@@ -1,0 +1,42 @@
+{
+  "$defs": {
+    "FileSchema": {
+      "properties": {
+        "id": {
+          "title": "Id",
+          "type": "string"
+        },
+        "filename": {
+          "title": "Filename",
+          "type": "string"
+        },
+        "directory": {
+          "title": "Directory",
+          "type": "string"
+        },
+        "url": {
+          "title": "Url",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "filename",
+        "directory",
+        "url"
+      ],
+      "title": "FileSchema",
+      "type": "object"
+    }
+  },
+  "properties": {
+    "file": {
+      "$ref": "#/$defs/FileSchema"
+    }
+  },
+  "required": [
+    "file"
+  ],
+  "title": "CreateFileResponseSchema",
+  "type": "object"
+}

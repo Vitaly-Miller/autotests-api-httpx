@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTAyVDA1OjUwOjEwLjM0MzIzNSIsInVzZXJfaWQiOiJkMTJhOTVmMS0xMTNjLTQzZDQtOGMyYy1jMGMwNzFmODllZTQifQ.FC2UOdJ_5Eva9FBjpRbLisg3IgqqEYOdvclhdgMq4qg' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Knowledge apply describe.","maxScore":51,"minScore":6,"description":"Need year support voice nor they.","estimatedTime":"3 weeks","previewFileId":"86548a90-e82d-4a34-b7a3-3071beebd769","createdByUserId":"d12a95f1-113c-43d4-8c2c-c0c071f89ee4"}'

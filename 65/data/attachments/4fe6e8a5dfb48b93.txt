@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTAyVDA1OjUwOjE5LjgyOTUxNCIsInVzZXJfaWQiOiJlZWEzNjMyMi0wOGNjLTQ3NDUtYmIxMS01NmUyNzdjMDI3MmMifQ.vZcLWKbvsvJStLhUIb075DqQADvcxNvXbHiOJFxt1Mg' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Area defense natural.","courseId":"0d7bac60-6c5c-4827-a344-1778b8dfdb53","maxScore":95,"minScore":2,"orderIndex":1521,"description":"Hotel age anything member staff.","estimatedTime":"4 weeks"}'

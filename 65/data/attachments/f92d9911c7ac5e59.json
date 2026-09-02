@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "57bf0412-a5e9-4f56-81f6-2fb52ee6f7c7",
+    "title": "Military data else.",
+    "maxScore": 77,
+    "minScore": 8,
+    "description": "Issue wish charge particular blood.",
+    "previewFile": {
+      "id": "97ddeb6a-5ac8-476e-8e57-3c5058d82efc",
+      "filename": "file_9742.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_9742.png"
+    },
+    "estimatedTime": "7 weeks",
+    "createdByUser": {
+      "id": "78d38e0d-b37a-455e-958e-2d03190daeca",
+      "email": "test_76f1e819@example.com",
+      "lastName": "Larsen",
+      "firstName": "Jason",
+      "middleName": "David"
+    }
+  }
+}

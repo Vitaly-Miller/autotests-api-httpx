@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTAyVDA1OjUwOjE3LjM0MTA3OSIsInVzZXJfaWQiOiI2YTJlODNmOC0xZmUyLTQxNmUtOTUyNS05MGIyYWFiOTA5ZGQifQ.cY4bKmDL6h7fpqAN31ARl1erMq_uAOSq3vgxdoKxu-w' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Within life at year meeting.","maxScore":65,"minScore":24,"description":"Character find heart type magazine.","estimatedTime":"4 weeks","previewFileId":"70cacd5f-d8fc-41aa-84a6-72efec82eaae","createdByUserId":"6a2e83f8-1fe2-416e-9525-90b2aab909dd"}'

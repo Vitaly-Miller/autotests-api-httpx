@@ -1,0 +1,25 @@
+{
+  "courses": [
+    {
+      "id": "1dc8d745-6afc-40b9-8622-c6380cc069d1",
+      "title": "Phone natural boy.",
+      "maxScore": 100,
+      "minScore": 14,
+      "description": "Stay these risk safe full clearly.",
+      "previewFile": {
+        "id": "0b6c6bac-7587-4575-a243-0e081d785e4c",
+        "filename": "file_2066.png",
+        "directory": "Uploaded",
+        "url": "http://localhost:8000/static/Uploaded/file_2066.png"
+      },
+      "estimatedTime": "4 weeks",
+      "createdByUser": {
+        "id": "3771e68c-b1e2-4355-8e25-14488e0a2e35",
+        "email": "test_08a55c13@example.com",
+        "lastName": "Baird",
+        "firstName": "Shannon",
+        "middleName": "Anthony"
+      }
+    }
+  ]
+}

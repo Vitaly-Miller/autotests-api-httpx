@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "0c531669-5ecf-4666-8935-1719dd1fbbd7",
+    "title": "To fill race moment buy.",
+    "maxScore": 80,
+    "minScore": 21,
+    "description": "Century though threat involve school strong.",
+    "previewFile": {
+      "id": "c75fdb4a-8de7-4af7-a475-fa84a19ca277",
+      "filename": "file_7473.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_7473.png"
+    },
+    "estimatedTime": "8 weeks",
+    "createdByUser": {
+      "id": "16518580-c1f2-49ef-b997-bc185dedc221",
+      "email": "test_0fcd5e80@example.com",
+      "lastName": "Garcia",
+      "firstName": "Heather",
+      "middleName": "John"
+    }
+  }
+}

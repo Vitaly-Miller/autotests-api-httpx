@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTAyVDA1OjUwOjE1Ljk0MTc2MyIsInVzZXJfaWQiOiI0MDI0ODM4Zi1kZDJjLTRkMGEtOTU0NS0zMGQ2NGQ3MmQ3MTIifQ.7Dadmy5B-p-GGTkIeadOhE-aEtzK37C26JHVARJX7xg' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Thank structure next memory majority.","maxScore":94,"minScore":29,"description":"Win figure fill class.","estimatedTime":"5 weeks","previewFileId":"6bb5c694-bb89-4416-a7aa-bd64921d56b5","createdByUserId":"4024838f-dd2c-4d0a-9545-30d64d72d712"}'

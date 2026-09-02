@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "f661b89e-17f7-4d40-a437-c55a5b7ca6e2",
+    "title": "Check step analysis machine know.",
+    "maxScore": 84,
+    "minScore": 27,
+    "description": "Ready then family bar develop.",
+    "previewFile": {
+      "id": "afc36e5d-bc46-4b48-b13e-32232e735e8e",
+      "filename": "file_5092.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_5092.png"
+    },
+    "estimatedTime": "5 weeks",
+    "createdByUser": {
+      "id": "bf7d80ee-d311-4882-88bf-a83fdb2ab083",
+      "email": "test_832d80d6@example.com",
+      "lastName": "Mack",
+      "firstName": "Austin",
+      "middleName": "Haley"
+    }
+  }
+}

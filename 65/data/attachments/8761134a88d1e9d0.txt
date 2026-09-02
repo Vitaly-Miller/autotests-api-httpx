@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTAyVDA1OjUwOjExLjM5NjQ3OCIsInVzZXJfaWQiOiJlMWVjM2MwMS04NTVjLTQzOGItYWU3OS1jMWY0MDMwMzk5ZmEifQ.Vb3emS18sltoZGbQHWkMZqwdpw81c6bZ4i4LcgAbHqA' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Smile finish apply whatever hold challenge.","maxScore":93,"minScore":4,"description":"American happen wall history.","estimatedTime":"5 weeks","previewFileId":"7a002614-fb46-4aba-89cb-b4a3ab77c176","createdByUserId":"e1ec3c01-855c-438b-ae79-c1f4030399fa"}'

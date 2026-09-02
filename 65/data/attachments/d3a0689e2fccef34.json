@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "f86a3325-df54-4dd1-8b51-e345b3eb6cb0",
+    "title": "Knowledge apply describe.",
+    "maxScore": 51,
+    "minScore": 6,
+    "description": "Need year support voice nor they.",
+    "previewFile": {
+      "id": "86548a90-e82d-4a34-b7a3-3071beebd769",
+      "filename": "file_8759.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_8759.png"
+    },
+    "estimatedTime": "3 weeks",
+    "createdByUser": {
+      "id": "d12a95f1-113c-43d4-8c2c-c0c071f89ee4",
+      "email": "test_7b0ec945@example.com",
+      "lastName": "Vance",
+      "firstName": "Gina",
+      "middleName": "Curtis"
+    }
+  }
+}

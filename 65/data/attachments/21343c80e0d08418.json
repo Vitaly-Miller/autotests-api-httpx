@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "0d7bac60-6c5c-4827-a344-1778b8dfdb53",
+    "title": "Nice control president film above.",
+    "maxScore": 96,
+    "minScore": 19,
+    "description": "West story book data.",
+    "previewFile": {
+      "id": "8f4b1615-af35-4386-88d5-6625cc4aeb5c",
+      "filename": "file_7367.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_7367.png"
+    },
+    "estimatedTime": "4 weeks",
+    "createdByUser": {
+      "id": "eea36322-08cc-4745-bb11-56e277c0272c",
+      "email": "test_5d168127@example.com",
+      "lastName": "Fischer",
+      "firstName": "Dawn",
+      "middleName": "Misty"
+    }
+  }
+}

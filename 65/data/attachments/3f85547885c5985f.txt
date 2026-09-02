@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTAyVDA1OjUwOjIxLjIxODA4OSIsInVzZXJfaWQiOiI3OGQzOGUwZC1iMzdhLTQ1NWUtOTU4ZS0yZDAzMTkwZGFlY2EifQ.kU-kl-e9hM6sMmSfXublnNreFGbRuAzfjSOHzsT9zpk' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Sort become relate.","courseId":"57bf0412-a5e9-4f56-81f6-2fb52ee6f7c7","maxScore":93,"minScore":20,"orderIndex":8932,"description":"Later carry every anything particular.","estimatedTime":"7 weeks"}'

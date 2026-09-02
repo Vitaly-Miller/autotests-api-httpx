@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTAyVDA1OjUwOjE4LjQwNzczMyIsInVzZXJfaWQiOiIxNjUxODU4MC1jMWYyLTQ5ZWYtYjk5Ny1iYzE4NWRlZGMyMjEifQ.UrEWwkcDl1NsDwuIY7KEyWtpLemDNUJhdhxwQPH4JAA' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Find fall method set production form.","courseId":"0c531669-5ecf-4666-8935-1719dd1fbbd7","maxScore":57,"minScore":29,"orderIndex":8779,"description":"Front attorney strong land dinner participant.","estimatedTime":"7 weeks"}'
