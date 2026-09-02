@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTAyVDA1OjQzOjA1LjUxNzgxMyIsInVzZXJfaWQiOiJlNzlmZTYzNy01NGE5LTRhN2EtYWExOS03MzNiY2Y2ODcxZmMifQ.stldhAuLNJ6tXDAK9SVWIa2v1i1-qWFQhInNVn546s8' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Watch of region list.","maxScore":79,"minScore":2,"description":"Food suddenly agent gas should.","estimatedTime":"9 weeks","previewFileId":"fe414d64-9413-4033-8ab9-ff3fc9a93c31","createdByUserId":"e79fe637-54a9-4a7a-aa19-733bcf6871fc"}'

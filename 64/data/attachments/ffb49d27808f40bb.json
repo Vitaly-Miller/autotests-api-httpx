@@ -1,0 +1,25 @@
+{
+  "courses": [
+    {
+      "id": "f01bdd25-9bcf-423b-90ec-ab4e6c46218e",
+      "title": "Ahead small speech follow tonight.",
+      "maxScore": 99,
+      "minScore": 12,
+      "description": "Throw series remember listen after out alone.",
+      "previewFile": {
+        "id": "23c35645-1dac-4599-b319-6c6fb6110c6f",
+        "filename": "file_1573.png",
+        "directory": "Uploaded",
+        "url": "http://localhost:8000/static/Uploaded/file_1573.png"
+      },
+      "estimatedTime": "7 weeks",
+      "createdByUser": {
+        "id": "876588f8-2cdc-43ca-be5d-3b0259366588",
+        "email": "test_7c12d887@example.com",
+        "lastName": "Carr",
+        "firstName": "Eric",
+        "middleName": "Ariel"
+      }
+    }
+  ]
+}

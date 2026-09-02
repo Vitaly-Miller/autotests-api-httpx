@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTAyVDA1OjQzOjE1LjMzOTY4OSIsInVzZXJfaWQiOiIwZmNkMjE0YS0xMjI2LTQ5YjgtOGM4OS1mZjlhYWE0ZmIzNTQifQ.Im8NuOANIUufhUykBmdyCy4vkBLjhWiHKBohQ-HYhh4' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Close kind sea maintain.","courseId":"189bea46-adb7-43f0-b205-e0b295e7e5ea","maxScore":56,"minScore":16,"orderIndex":1454,"description":"High whole account require guy reach seek.","estimatedTime":"8 weeks"}'

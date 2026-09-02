@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTAyVDA1OjQzOjExLjQ2ODc5NyIsInVzZXJfaWQiOiIyOTFkNDg1My04Y2UyLTQ2ODQtODRkNy1lZmVlMjFlMDE4YjYifQ.4CAUNv7GDIZD5VhDGVDbgF6Isa45Pv3xKU8mbnLKzaE' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Wonder establish run Mr.","maxScore":100,"minScore":21,"description":"Toward office receive dark if test.","estimatedTime":"7 weeks","previewFileId":"c1985b09-2193-46ac-a47b-6d5c869f5a23","createdByUserId":"291d4853-8ce2-4684-84d7-efee21e018b6"}'

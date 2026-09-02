@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "e5837399-f4fb-41b0-a3d6-96a163cfd9f7",
+    "title": "Memory wind capital strong drop.",
+    "maxScore": 94,
+    "minScore": 11,
+    "description": "West different hot include.",
+    "previewFile": {
+      "id": "c7313f3f-d83f-4711-beb3-158bb9d32fe1",
+      "filename": "file_5556.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_5556.png"
+    },
+    "estimatedTime": "4 weeks",
+    "createdByUser": {
+      "id": "68425360-221d-4ca2-bce0-cd0a63ebe301",
+      "email": "test_fe562b0f@example.com",
+      "lastName": "Robinson",
+      "firstName": "Jordan",
+      "middleName": "Michael"
+    }
+  }
+}

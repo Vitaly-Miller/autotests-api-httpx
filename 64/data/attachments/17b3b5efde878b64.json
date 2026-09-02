@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "f0be2b09-6106-4f57-86d9-7ddfba7d937d",
+    "title": "Take appear meeting.",
+    "maxScore": 55,
+    "minScore": 21,
+    "description": "Network feeling practice face.",
+    "previewFile": {
+      "id": "eebbf703-7fee-466c-9797-03ca3aab277a",
+      "filename": "file_6096.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_6096.png"
+    },
+    "estimatedTime": "9 weeks",
+    "createdByUser": {
+      "id": "c0309441-571c-4bbd-973f-402d703d7be9",
+      "email": "test_694b757f@example.com",
+      "lastName": "Dominguez",
+      "firstName": "Kellie",
+      "middleName": "Cody"
+    }
+  }
+}

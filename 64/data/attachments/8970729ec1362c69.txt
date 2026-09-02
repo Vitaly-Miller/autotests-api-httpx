@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTAyVDA1OjQzOjEzLjk0ODk5NyIsInVzZXJfaWQiOiI5ZjAyMzBjNi1lYmE0LTQwZjAtYjQ4ZS1lZTNmODNjM2NjM2YifQ.Fpigw4_6moUjIbE4cm9uMGmsB8AaMCcmI0TCWc17COk' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Eight interesting ability either which.","courseId":"16b1bceb-0cc7-41a1-b4a1-fc1d43d3eba3","maxScore":78,"minScore":22,"orderIndex":3823,"description":"Subject less commercial teacher one on he.","estimatedTime":"4 weeks"}'

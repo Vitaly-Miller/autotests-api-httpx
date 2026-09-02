@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/exercises/041eb036-e3c3-44fb-b169-fb79a3cc65da \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTAyVDA1OjQzOjE4LjEyNTY1MSIsInVzZXJfaWQiOiJmYTdhY2U1My0xZTE4LTQzYTktYWNhOS00MThhNDAwYWMzZTkifQ.n_ZBwjTzNVF6pSKzN0s7YM2zfHESPvXuwfqCKwTfiS0' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Determine great information.","maxScore":77,"minScore":9,"orderIndex":1532,"description":"Late product drug door they nor beautiful sit.","estimatedTime":"7 weeks"}'

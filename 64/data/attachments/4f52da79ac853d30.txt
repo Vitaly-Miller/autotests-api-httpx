@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTAyVDA1OjQzOjEwLjA3MjExMSIsInVzZXJfaWQiOiJmNmE2YjQxNy0zNmE1LTQyNTctYjY2Yi03NTdkYTZjMzc0MmEifQ.5PUOXuCpLgEGLnb-bjXJvnZGZ7Tr-2yZmLLHON8v9fs' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Without trouble least film.","maxScore":91,"minScore":7,"description":"Knowledge on improve research hard often.","estimatedTime":"8 weeks","previewFileId":"0cf89556-cae4-437b-9253-8c736feccd62","createdByUserId":"f6a6b417-36a5-4257-b66b-757da6c3742a"}'

@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTAyVDA1OjQzOjA0LjQ1OTI5NyIsInVzZXJfaWQiOiIwNWJmYTUxNy1lNGYxLTRmNjAtYTE4Zi1kNzNkYjI2ZWY0MjYifQ.kBSUa2vRpIljqidtwjVcG_HU1rLPa5S8MPcnM2io6pQ' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Single where real.","maxScore":67,"minScore":25,"description":"Sort while find call thousand three blue outside.","estimatedTime":"2 weeks","previewFileId":"aaf462bb-c9c6-4666-ae4c-a3895612a0df","createdByUserId":"05bfa517-e4f1-4f60-a18f-d73db26ef426"}'

@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTAyVDA1OjQzOjA5Ljc0MDQ1OSIsInVzZXJfaWQiOiJmNmE2YjQxNy0zNmE1LTQyNTctYjY2Yi03NTdkYTZjMzc0MmEifQ.lHnGsUtMRjXG60OBqaYfl9-0lCkiQrVeFr5erdkfUn0' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Magazine job man.","courseId":"57eef005-7ad6-4900-9308-23b42985ee3e","maxScore":85,"minScore":21,"orderIndex":5849,"description":"Data write western type.","estimatedTime":"2 weeks"}'

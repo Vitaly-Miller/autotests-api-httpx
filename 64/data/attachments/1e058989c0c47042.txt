@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/exercises/9f1c74f9-1594-4cd6-825b-413b85a30714 \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTAyVDA1OjQzOjE5LjUyOTQ1NCIsInVzZXJfaWQiOiI3ZjNjZDNkOS1mNGJlLTRhNjQtOTU3Yy0zZGFlM2I3NmQzM2QifQ.dFzjCQJpkXJX4AJ2rknnmnB-dcfXedt0VXSNQa5khDU' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Recently official theory stay.","maxScore":65,"minScore":7,"orderIndex":9102,"description":"Focus leave really analysis.","estimatedTime":"9 weeks"}'

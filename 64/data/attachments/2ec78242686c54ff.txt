@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTAyVDA1OjQzOjA4LjY4MzIwNCIsInVzZXJfaWQiOiI5NDkyYmY5ZC1iMmVhLTQ3ZGQtODg1My0xOTI4Y2IzMzVlNTAifQ.RTy8N7yrFveeGaCXb-TaHiepDvwgzeGaCMjA5ZRZiEE' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Somebody hot week start.","maxScore":94,"minScore":30,"description":"Service street single.","estimatedTime":"7 weeks","previewFileId":"de38a944-d23c-4f61-8aec-831bf02ac6dc","createdByUserId":"9492bf9d-b2ea-47dd-8853-1928cb335e50"}'

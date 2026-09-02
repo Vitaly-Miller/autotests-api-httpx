@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "189bea46-adb7-43f0-b205-e0b295e7e5ea",
+    "title": "Kind man myself debate seek mouth.",
+    "maxScore": 66,
+    "minScore": 5,
+    "description": "Stock international thought physical nature.",
+    "previewFile": {
+      "id": "737c790b-104d-4cf0-9c91-9a79d2d1892b",
+      "filename": "file_1192.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_1192.png"
+    },
+    "estimatedTime": "5 weeks",
+    "createdByUser": {
+      "id": "0fcd214a-1226-49b8-8c89-ff9aaa4fb354",
+      "email": "test_3a4c16c5@example.com",
+      "lastName": "Gross",
+      "firstName": "Heather",
+      "middleName": "Jessica"
+    }
+  }
+}

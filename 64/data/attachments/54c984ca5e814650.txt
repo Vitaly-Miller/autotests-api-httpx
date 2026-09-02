@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTAyVDA1OjQzOjE5Ljg2MDQ1MiIsInVzZXJfaWQiOiI3ZjNjZDNkOS1mNGJlLTRhNjQtOTU3Yy0zZGFlM2I3NmQzM2QifQ._FfBvEx5ALTmSH9zsVK0aYrgqgTa1rqM7FcTWbL81WA' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Word discussion day.","maxScore":78,"minScore":10,"description":"Still painting like eat career father.","estimatedTime":"7 weeks","previewFileId":"2cb09ba3-63e2-4608-8474-d135d7a17e03","createdByUserId":"7f3cd3d9-f4be-4a64-957c-3dae3b76d33d"}'

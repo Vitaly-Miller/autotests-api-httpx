@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "7fe9e7fb-0fd6-4c1c-b515-59c05354fac1",
+    "title": "Wonder establish run Mr.",
+    "maxScore": 100,
+    "minScore": 21,
+    "description": "Toward office receive dark if test.",
+    "previewFile": {
+      "id": "c1985b09-2193-46ac-a47b-6d5c869f5a23",
+      "filename": "file_6046.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_6046.png"
+    },
+    "estimatedTime": "7 weeks",
+    "createdByUser": {
+      "id": "291d4853-8ce2-4684-84d7-efee21e018b6",
+      "email": "test_8f6cd24b@example.com",
+      "lastName": "Campbell",
+      "firstName": "Sabrina",
+      "middleName": "Steven"
+    }
+  }
+}

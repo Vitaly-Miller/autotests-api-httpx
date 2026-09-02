@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "16b1bceb-0cc7-41a1-b4a1-fc1d43d3eba3",
+    "title": "Decade thus color.",
+    "maxScore": 94,
+    "minScore": 17,
+    "description": "Yet maintain name whatever discuss us three.",
+    "previewFile": {
+      "id": "c6062453-054a-44b4-9410-9eff5fcc9f93",
+      "filename": "file_4457.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_4457.png"
+    },
+    "estimatedTime": "2 weeks",
+    "createdByUser": {
+      "id": "9f0230c6-eba4-40f0-b48e-ee3f83c3cc3f",
+      "email": "test_94c0abaa@example.com",
+      "lastName": "Garcia",
+      "firstName": "Martin",
+      "middleName": "Sharon"
+    }
+  }
+}

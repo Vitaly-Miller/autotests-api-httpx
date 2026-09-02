@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "57eef005-7ad6-4900-9308-23b42985ee3e",
+    "title": "Without trouble least film.",
+    "maxScore": 91,
+    "minScore": 7,
+    "description": "Knowledge on improve research hard often.",
+    "previewFile": {
+      "id": "0cf89556-cae4-437b-9253-8c736feccd62",
+      "filename": "file_3623.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_3623.png"
+    },
+    "estimatedTime": "8 weeks",
+    "createdByUser": {
+      "id": "f6a6b417-36a5-4257-b66b-757da6c3742a",
+      "email": "test_dbca7784@example.com",
+      "lastName": "Yang",
+      "firstName": "Anita",
+      "middleName": "Michelle"
+    }
+  }
+}

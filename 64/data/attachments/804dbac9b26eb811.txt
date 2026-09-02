@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTAyVDA1OjQzOjEyLjg2NzU5OSIsInVzZXJfaWQiOiI2ODQyNTM2MC0yMjFkLTRjYTItYmNlMC1jZDBhNjNlYmUzMDEifQ.2l9AHXKhD0JbVgkj4Q0USHoMKqEQxavTTBWdyNDsOxY' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Memory wind capital strong drop.","maxScore":94,"minScore":11,"description":"West different hot include.","estimatedTime":"4 weeks","previewFileId":"c7313f3f-d83f-4711-beb3-158bb9d32fe1","createdByUserId":"68425360-221d-4ca2-bce0-cd0a63ebe301"}'

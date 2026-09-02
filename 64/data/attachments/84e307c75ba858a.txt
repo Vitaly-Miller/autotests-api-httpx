@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/courses/0c287a41-b8a3-4c89-9686-e29eadb64f7f \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTAyVDA1OjQzOjA4LjY4MzIwNCIsInVzZXJfaWQiOiI5NDkyYmY5ZC1iMmVhLTQ3ZGQtODg1My0xOTI4Y2IzMzVlNTAifQ.RTy8N7yrFveeGaCXb-TaHiepDvwgzeGaCMjA5ZRZiEE' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Any war maybe response admit.","maxScore":58,"minScore":16,"description":"Able try something soldier nor.","estimatedTime":"3 weeks"}'

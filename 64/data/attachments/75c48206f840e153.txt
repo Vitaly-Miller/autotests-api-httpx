@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTAyVDA1OjQzOjE3LjA3MzM4NiIsInVzZXJfaWQiOiIxY2NjNDcyNC1lMDk3LTQ0ZjEtYTQ5NS1iZTE4OGNlOTZhMmIifQ.6V2nhEtS0v_crqc4JYDdSA6ASejOsV9i_-OZZRy2SYc' \
+  -H 'content-type: application/json' \
+  -d '{"title":"On involve tough write read.","maxScore":78,"minScore":27,"description":"Foreign read despite lead. See cultural just.","estimatedTime":"8 weeks","previewFileId":"0ead0dcf-ef8e-4f1e-8d00-e93a7fa8f176","createdByUserId":"1ccc4724-e097-44f1-a495-be188ce96a2b"}'

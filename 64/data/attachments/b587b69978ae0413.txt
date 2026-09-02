@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTAyVDA1OjQzOjEyLjUzMTQ1OSIsInVzZXJfaWQiOiI2ODQyNTM2MC0yMjFkLTRjYTItYmNlMC1jZDBhNjNlYmUzMDEifQ.6jJiZ4bF0DJ6p1_E84lGw4G4tt-XRRNO_65UROt1lqk' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Central tree source just rise season.","courseId":"e5837399-f4fb-41b0-a3d6-96a163cfd9f7","maxScore":61,"minScore":11,"orderIndex":121,"description":"Himself real under take.","estimatedTime":"9 weeks"}'

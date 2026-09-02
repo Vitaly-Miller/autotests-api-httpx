@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTAyVDA1OjQzOjE4LjQ1NjQwMSIsInVzZXJfaWQiOiJmYTdhY2U1My0xZTE4LTQzYTktYWNhOS00MThhNDAwYWMzZTkifQ.NNXqAAf0OKJ5YgIBNbEJEQgn9MX6NfibGYZcAcFpjT4' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Year course soldier information try suffer.","maxScore":54,"minScore":14,"description":"Miss role tax student Democrat heart.","estimatedTime":"5 weeks","previewFileId":"d28dd1a3-9edd-4854-9d6c-06a91d0d450d","createdByUserId":"fa7ace53-1e18-43a9-aca9-418a400ac3e9"}'

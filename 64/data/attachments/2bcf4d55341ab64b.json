@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "0c287a41-b8a3-4c89-9686-e29eadb64f7f",
+    "title": "Somebody hot week start.",
+    "maxScore": 94,
+    "minScore": 30,
+    "description": "Service street single.",
+    "previewFile": {
+      "id": "de38a944-d23c-4f61-8aec-831bf02ac6dc",
+      "filename": "file_3909.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_3909.png"
+    },
+    "estimatedTime": "7 weeks",
+    "createdByUser": {
+      "id": "9492bf9d-b2ea-47dd-8853-1928cb335e50",
+      "email": "test_c45e0c47@example.com",
+      "lastName": "Price",
+      "firstName": "Adam",
+      "middleName": "Eric"
+    }
+  }
+}
