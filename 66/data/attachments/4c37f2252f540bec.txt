@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/courses/8f74aa87-88bd-44ae-9d49-7a9142c559dc \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTAzVDE2OjI4OjM2LjEyNDA2MCIsInVzZXJfaWQiOiJjYzc5YWIzOS1hOTgyLTQ3NTEtYmVmNS0wYzc3MjVhYmMzNjYifQ.WLWee8LocZobmRRkhRqsQx2uFaEQ-IaJlat--iqJ-9o' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Box policy hair.","maxScore":81,"minScore":29,"description":"City knowledge suggest hand.","estimatedTime":"4 weeks"}'

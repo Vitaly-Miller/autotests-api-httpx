@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTAzVDE2OjI4OjM0LjEyODgwOSIsInVzZXJfaWQiOiJhMzEwYTI1Zi1jYmJlLTRhNGItOTVkYS00MTY4MTVmOTA3MWEifQ.wL_bUgTVsciKFDtTUKgtIP0DaHXJf5ZN5K_8IscWI3Q' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Population suddenly significant particular space.","maxScore":90,"minScore":21,"description":"Politics finish court success.","estimatedTime":"4 weeks","previewFileId":"b6f065cc-1f64-4ac6-81c9-f60962a1463e","createdByUserId":"a310a25f-cbbe-4a4b-95da-416815f9071a"}'

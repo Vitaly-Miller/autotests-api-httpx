@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTAzVDE2OjI4OjM3LjA5MTA1NiIsInVzZXJfaWQiOiJmMTg3YTI3OC00ZGVlLTQzOTMtOGQwYi1hNmQyNDE5OTI1NDMifQ.ii2NXDiCMcr_svZ33lXGmTJ-KMXDIxMxJgiXd5KkNtI' \
+  -H 'content-type: application/json' \
+  -d '{"title":"High agreement item probably adult.","courseId":"7b78678f-2937-4e2c-9c03-03c0df2b08d9","maxScore":70,"minScore":7,"orderIndex":7332,"description":"Even student decade matter its.","estimatedTime":"3 weeks"}'

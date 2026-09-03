@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTAzVDE2OjI4OjQ0LjA1NTk4MiIsInVzZXJfaWQiOiIyNDZjNWIxMC0wMzU3LTQxZTktOWZjMS0wNzNhN2M0NTQ3MmUifQ.1l3jZ2cvjMeOpE0ckmNGkfUOduon7YR0FUQKFIg2GQ8' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Hundred bring anyone career middle stock.","maxScore":87,"minScore":22,"description":"Activity certain child kid.","estimatedTime":"5 weeks","previewFileId":"69700c8e-9e76-44bc-bcb3-ae8788ca0110","createdByUserId":"246c5b10-0357-41e9-9fc1-073a7c45472e"}'

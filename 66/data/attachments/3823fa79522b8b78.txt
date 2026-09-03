@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTAzVDE2OjI4OjQyLjc3NDgzOSIsInVzZXJfaWQiOiI5NTRjZTA3NC1jMWIxLTRhMjYtYjlhNS02M2Y0YjUxYTdmODcifQ.3uf5cKDJxi1K-MJ1o23dHv1HK_9QdBRTYGURX-thUXw' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Nature or within.","maxScore":90,"minScore":13,"description":"Out scene her structure free.","estimatedTime":"9 weeks","previewFileId":"45b7b04f-aede-4755-9423-84776403241d","createdByUserId":"954ce074-c1b1-4a26-b9a5-63f4b51a7f87"}'

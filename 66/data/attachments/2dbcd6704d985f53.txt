@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTAzVDE2OjI4OjQ2LjYwOTI3MiIsInVzZXJfaWQiOiJlMzRjODE2MC0zZjIzLTRjZmUtOWE1Yy0wN2YzYjZhY2U0MjkifQ.q9OMqRYXEhNbc4jSMApUAVLnYUh_IzZwy3105oHyRp8' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Evidence treat individual.","maxScore":55,"minScore":23,"description":"See responsibility theory dog.","estimatedTime":"5 weeks","previewFileId":"2b6c2549-71b6-4672-b6aa-dfc24a5be118","createdByUserId":"e34c8160-3f23-4cfe-9a5c-07f3b6ace429"}'

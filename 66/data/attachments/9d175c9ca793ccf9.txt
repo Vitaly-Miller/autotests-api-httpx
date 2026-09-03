@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTAzVDE2OjI4OjM4LjM2ODExOCIsInVzZXJfaWQiOiI0MWZhN2ZiZi1hMjA1LTQ2NDEtYTViMi1iYmI3YzBjNTRlMGEifQ.v01xxlSjhSut3BMtSTlmnDTj38mGbXJoTq4B75PycR8' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Unit need affect military education able.","courseId":"c09fbc03-e682-4eab-9366-07831b7ab3e0","maxScore":68,"minScore":19,"orderIndex":9171,"description":"Six until garden situation society language.","estimatedTime":"8 weeks"}'

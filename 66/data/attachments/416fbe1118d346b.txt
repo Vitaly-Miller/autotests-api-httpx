@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTAzVDE2OjI4OjM4LjY2OTA4OCIsInVzZXJfaWQiOiI0MWZhN2ZiZi1hMjA1LTQ2NDEtYTViMi1iYmI3YzBjNTRlMGEifQ.yAaU2w6JJ3sMCmQcOAsi9I7GN2olCGbRyCOr2_ojCnw' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Measure story benefit.","maxScore":54,"minScore":8,"description":"After old start sign look.","estimatedTime":"7 weeks","previewFileId":"d85b487a-f2e1-4528-a27b-8a4315fe5f42","createdByUserId":"41fa7fbf-a205-4641-a5b2-bbb7c0c54e0a"}'

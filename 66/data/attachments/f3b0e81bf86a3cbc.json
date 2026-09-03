@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "c09fbc03-e682-4eab-9366-07831b7ab3e0",
+    "title": "Measure story benefit.",
+    "maxScore": 54,
+    "minScore": 8,
+    "description": "After old start sign look.",
+    "previewFile": {
+      "id": "d85b487a-f2e1-4528-a27b-8a4315fe5f42",
+      "filename": "file_9965.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_9965.png"
+    },
+    "estimatedTime": "7 weeks",
+    "createdByUser": {
+      "id": "41fa7fbf-a205-4641-a5b2-bbb7c0c54e0a",
+      "email": "test_68823151@example.com",
+      "lastName": "Harper",
+      "firstName": "Vincent",
+      "middleName": "Molly"
+    }
+  }
+}

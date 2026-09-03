@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTAzVDE2OjI4OjQxLjIwMjkyNyIsInVzZXJfaWQiOiI2YWY0NzY1ZS0zYjMxLTQ2YTctYjMxZi1lZjk1NjIzMGIyNDEifQ.lcDV8mRafvIGTV2h2yDCZWqVdm9WMu2f_R3IhYFMcOM' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Source over maintain purpose mean.","courseId":"03a2ff69-721f-4be8-9fd3-899860c1cc96","maxScore":57,"minScore":7,"orderIndex":6203,"description":"Story term reflect option meet.","estimatedTime":"4 weeks"}'

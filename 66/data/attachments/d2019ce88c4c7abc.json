@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "e7ab1dd1-ef5c-4357-a148-f9f64740382e",
+    "title": "Include sea Mrs.",
+    "maxScore": 84,
+    "minScore": 22,
+    "description": "Direction sit three thought idea room health.",
+    "previewFile": {
+      "id": "f1d15bc5-510e-41f6-9283-c33053b64448",
+      "filename": "file_7692.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_7692.png"
+    },
+    "estimatedTime": "4 weeks",
+    "createdByUser": {
+      "id": "f63f4976-e5df-48ad-9e92-fc6375858d01",
+      "email": "test_5a8a92d0@example.com",
+      "lastName": "Jordan",
+      "firstName": "Stephen",
+      "middleName": "Daniel"
+    }
+  }
+}

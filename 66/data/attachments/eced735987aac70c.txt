@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTAzVDE2OjI4OjQ2LjMwOTM2NiIsInVzZXJfaWQiOiJlMzRjODE2MC0zZjIzLTRjZmUtOWE1Yy0wN2YzYjZhY2U0MjkifQ.AAwJ_6lo0QHcOwACsmeTOuvgBHPeqJhunl64TTpfEwo' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Few institution audience player join environmental.","courseId":"f6911c73-352b-40a2-bc7e-27a348b0f294","maxScore":76,"minScore":12,"orderIndex":4100,"description":"Fight major business business.","estimatedTime":"6 weeks"}'

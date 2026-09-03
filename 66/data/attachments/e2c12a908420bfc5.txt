@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTAzVDE2OjI4OjQzLjc1NTc1MiIsInVzZXJfaWQiOiIyNDZjNWIxMC0wMzU3LTQxZTktOWZjMS0wNzNhN2M0NTQ3MmUifQ.3b1zlyt25bN2b-K4x1m43o_TnUqOSLgJxyLZJ30qJsc' \
+  -H 'content-type: application/json' \
+  -d '{"title":"War reveal score but cut.","courseId":"b8257766-f831-4043-b621-0a0feab1a0c9","maxScore":95,"minScore":1,"orderIndex":5761,"description":"Result baby executive.","estimatedTime":"7 weeks"}'

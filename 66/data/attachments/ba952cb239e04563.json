@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "74fc213b-77ed-42c9-8037-fa36bc624add",
+    "title": "Population suddenly significant particular space.",
+    "maxScore": 90,
+    "minScore": 21,
+    "description": "Politics finish court success.",
+    "previewFile": {
+      "id": "b6f065cc-1f64-4ac6-81c9-f60962a1463e",
+      "filename": "file_4484.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_4484.png"
+    },
+    "estimatedTime": "4 weeks",
+    "createdByUser": {
+      "id": "a310a25f-cbbe-4a4b-95da-416815f9071a",
+      "email": "test_ef68c5fe@example.com",
+      "lastName": "Mayer",
+      "firstName": "Nicholas",
+      "middleName": "Jaime"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "f6911c73-352b-40a2-bc7e-27a348b0f294",
+    "title": "Evidence treat individual.",
+    "maxScore": 55,
+    "minScore": 23,
+    "description": "See responsibility theory dog.",
+    "previewFile": {
+      "id": "2b6c2549-71b6-4672-b6aa-dfc24a5be118",
+      "filename": "file_2895.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_2895.png"
+    },
+    "estimatedTime": "5 weeks",
+    "createdByUser": {
+      "id": "e34c8160-3f23-4cfe-9a5c-07f3b6ace429",
+      "email": "test_49c2ffde@example.com",
+      "lastName": "Wright",
+      "firstName": "Zachary",
+      "middleName": "Dan"
+    }
+  }
+}

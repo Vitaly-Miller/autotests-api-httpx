@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTAzVDE2OjI4OjQwLjIxMTM3MyIsInVzZXJfaWQiOiJkYzc3MDE1MS1kNWE1LTRjMmMtOTBhMS1hZGJiMmQxYmI4YjQifQ.Z3WvWB2mbNpGLI9Ah1qANMrwNn0cn2_NrrphRtQyUYg' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Blood their phone doctor bed control.","maxScore":83,"minScore":18,"description":"Degree summer specific same story reach.","estimatedTime":"4 weeks","previewFileId":"3e3c2de9-ffb0-408e-81c1-cb3bd82b6650","createdByUserId":"dc770151-d5a5-4c2c-90a1-adbb2d1bb8b4"}'

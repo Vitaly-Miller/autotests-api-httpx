@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTAzVDE2OjI4OjM2LjEyNDA2MCIsInVzZXJfaWQiOiJjYzc5YWIzOS1hOTgyLTQ3NTEtYmVmNS0wYzc3MjVhYmMzNjYifQ.WLWee8LocZobmRRkhRqsQx2uFaEQ-IaJlat--iqJ-9o' \
+  -H 'content-type: application/json' \
+  -d '{"title":"School road improve often account style.","maxScore":53,"minScore":17,"description":"A into Congress dream. Church computer feeling.","estimatedTime":"3 weeks","previewFileId":"885fefaf-65e1-44ab-9a0c-c926d3c8db3d","createdByUserId":"cc79ab39-a982-4751-bef5-0c7725abc366"}'

@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTAzVDE2OjI4OjMyLjIwNTM0MSIsInVzZXJfaWQiOiJmNjNmNDk3Ni1lNWRmLTQ4YWQtOWU5Mi1mYzYzNzU4NThkMDEifQ.i9kRCIlepbGaiK1rvUSTqj1jDlUf7jcR3ngpjg7SwAI' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Include sea Mrs.","maxScore":84,"minScore":22,"description":"Direction sit three thought idea room health.","estimatedTime":"4 weeks","previewFileId":"f1d15bc5-510e-41f6-9283-c33053b64448","createdByUserId":"f63f4976-e5df-48ad-9e92-fc6375858d01"}'

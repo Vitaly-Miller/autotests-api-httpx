@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/exercises/f38610c7-f8b7-4548-b8c2-40aa5defc402 \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTAzVDE2OjI4OjQ1LjAyMjQ5NCIsInVzZXJfaWQiOiIwNmVmN2I1ZS0zMDMxLTQ1NDAtOGI3MC04ZmRhZjEyNmYyMDMifQ.OhoImiH51a9B6ikpqmB2OGdHK2yq9QtN_eHcCowU9dg' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Successful size student.","maxScore":82,"minScore":11,"orderIndex":2356,"description":"Opportunity American read he everything.","estimatedTime":"5 weeks"}'

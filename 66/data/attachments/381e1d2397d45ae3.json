@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "e4d7c501-0c99-4ab3-ac48-ad9c3c2207c6",
+    "title": "Soldier choose peace figure.",
+    "maxScore": 72,
+    "minScore": 18,
+    "description": "Physical career start fall political spring book.",
+    "previewFile": {
+      "id": "8a58fc6f-78a4-4bd3-9daa-7a861e9a4db6",
+      "filename": "file_2212.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_2212.png"
+    },
+    "estimatedTime": "9 weeks",
+    "createdByUser": {
+      "id": "c46c0d85-f535-4382-9567-74745ec49e05",
+      "email": "test_6d699944@example.com",
+      "lastName": "Long",
+      "firstName": "Andre",
+      "middleName": "Theodore"
+    }
+  }
+}

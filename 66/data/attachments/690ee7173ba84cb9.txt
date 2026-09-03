@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTAzVDE2OjI4OjQxLjUwMjU4MSIsInVzZXJfaWQiOiI2YWY0NzY1ZS0zYjMxLTQ2YTctYjMxZi1lZjk1NjIzMGIyNDEifQ.AezqXHaDvMTQM5ky0HzALGSFwOgey3cwc8fwlZyFg20' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Sound writer despite third enter throw.","maxScore":52,"minScore":16,"description":"Upon theory leg teach here.","estimatedTime":"2 weeks","previewFileId":"fbd732aa-dce9-4e9f-a366-74526d1d6611","createdByUserId":"6af4765e-3b31-46a7-b31f-ef956230b241"}'

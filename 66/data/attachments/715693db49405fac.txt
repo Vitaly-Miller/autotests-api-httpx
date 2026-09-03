@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTAzVDE2OjI4OjM3LjM5MDI4OCIsInVzZXJfaWQiOiJmMTg3YTI3OC00ZGVlLTQzOTMtOGQwYi1hNmQyNDE5OTI1NDMifQ.0reMPTrAEFLo_frBqqCdeOdrJ3U2npYe--p7nJeO_5U' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Involve establish well fish kitchen town live.","maxScore":97,"minScore":24,"description":"Position successful turn top.","estimatedTime":"6 weeks","previewFileId":"8d32b522-0b92-41a4-9a1a-dad43ab8d860","createdByUserId":"f187a278-4dee-4393-8d0b-a6d241992543"}'

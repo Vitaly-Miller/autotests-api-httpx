@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "e7a508e5-8605-427a-944e-c9b6a7341e22",
+    "title": "Blood their phone doctor bed control.",
+    "maxScore": 83,
+    "minScore": 18,
+    "description": "Degree summer specific same story reach.",
+    "previewFile": {
+      "id": "3e3c2de9-ffb0-408e-81c1-cb3bd82b6650",
+      "filename": "file_6601.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_6601.png"
+    },
+    "estimatedTime": "4 weeks",
+    "createdByUser": {
+      "id": "dc770151-d5a5-4c2c-90a1-adbb2d1bb8b4",
+      "email": "test_b6177b02@example.com",
+      "lastName": "George",
+      "firstName": "Derek",
+      "middleName": "Gregory"
+    }
+  }
+}

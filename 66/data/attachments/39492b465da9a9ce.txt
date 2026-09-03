@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTAzVDE2OjI4OjM5LjkxMDY2NyIsInVzZXJfaWQiOiJkYzc3MDE1MS1kNWE1LTRjMmMtOTBhMS1hZGJiMmQxYmI4YjQifQ.DN3sLaWvBQdo4cd06EVxmN1twoLkdJmj2FexQ7kk4zU' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Wind again financial even.","courseId":"e7a508e5-8605-427a-944e-c9b6a7341e22","maxScore":84,"minScore":19,"orderIndex":117,"description":"On space ago hair argue year site.","estimatedTime":"4 weeks"}'

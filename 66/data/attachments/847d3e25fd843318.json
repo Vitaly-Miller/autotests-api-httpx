@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "7b78678f-2937-4e2c-9c03-03c0df2b08d9",
+    "title": "Involve establish well fish kitchen town live.",
+    "maxScore": 97,
+    "minScore": 24,
+    "description": "Position successful turn top.",
+    "previewFile": {
+      "id": "8d32b522-0b92-41a4-9a1a-dad43ab8d860",
+      "filename": "file_2872.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_2872.png"
+    },
+    "estimatedTime": "6 weeks",
+    "createdByUser": {
+      "id": "f187a278-4dee-4393-8d0b-a6d241992543",
+      "email": "test_29e8fcd8@example.com",
+      "lastName": "Evans",
+      "firstName": "Isabella",
+      "middleName": "Jacqueline"
+    }
+  }
+}

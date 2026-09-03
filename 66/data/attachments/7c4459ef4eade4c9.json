@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "696d8ca1-b3a9-48c7-a3f5-28cea03980a9",
+    "title": "Eye water message early that.",
+    "maxScore": 73,
+    "minScore": 18,
+    "description": "Suffer run church spend.",
+    "previewFile": {
+      "id": "a9b91bc2-24aa-4102-b713-d3c87ef6798c",
+      "filename": "file_9948.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_9948.png"
+    },
+    "estimatedTime": "9 weeks",
+    "createdByUser": {
+      "id": "06ef7b5e-3031-4540-8b70-8fdaf126f203",
+      "email": "test_cec0fc15@example.com",
+      "lastName": "Ruiz",
+      "firstName": "Peggy",
+      "middleName": "Chris"
+    }
+  }
+}

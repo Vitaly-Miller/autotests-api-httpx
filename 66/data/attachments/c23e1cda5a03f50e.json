@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "ce404e92-3333-4a88-acc8-06fdde0db7d1",
+    "title": "Nature or within.",
+    "maxScore": 90,
+    "minScore": 13,
+    "description": "Out scene her structure free.",
+    "previewFile": {
+      "id": "45b7b04f-aede-4755-9423-84776403241d",
+      "filename": "file_3185.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_3185.png"
+    },
+    "estimatedTime": "9 weeks",
+    "createdByUser": {
+      "id": "954ce074-c1b1-4a26-b9a5-63f4b51a7f87",
+      "email": "test_1dfa612e@example.com",
+      "lastName": "Mccormick",
+      "firstName": "Evelyn",
+      "middleName": "Heidi"
+    }
+  }
+}

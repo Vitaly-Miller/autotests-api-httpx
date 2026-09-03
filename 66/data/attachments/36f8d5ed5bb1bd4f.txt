@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTAzVDE2OjI4OjM1LjEwNjE0NiIsInVzZXJfaWQiOiJjNDZjMGQ4NS1mNTM1LTQzODItOTU2Ny03NDc0NWVjNDllMDUifQ.Nj2mhRykR5nMgZ-CCCncjYqB1oLhlEL4d_7kwk3engQ' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Soldier choose peace figure.","maxScore":72,"minScore":18,"description":"Physical career start fall political spring book.","estimatedTime":"9 weeks","previewFileId":"8a58fc6f-78a4-4bd3-9daa-7a861e9a4db6","createdByUserId":"c46c0d85-f535-4382-9567-74745ec49e05"}'

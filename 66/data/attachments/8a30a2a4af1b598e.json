@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "dc4520d0-ac97-4894-8fbf-a98968c7d11d",
+    "title": "Think prepare later hair worry.",
+    "maxScore": 92,
+    "minScore": 12,
+    "description": "Voice natural field according evidence whom.",
+    "previewFile": {
+      "id": "b4006f2c-e8fd-455f-9610-f175d850518a",
+      "filename": "file_4021.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_4021.png"
+    },
+    "estimatedTime": "5 weeks",
+    "createdByUser": {
+      "id": "e5dd1842-5ee2-4065-9361-ed842f4d34b0",
+      "email": "test_30844fb4@example.com",
+      "lastName": "Lambert",
+      "firstName": "Cathy",
+      "middleName": "Sarah"
+    }
+  }
+}

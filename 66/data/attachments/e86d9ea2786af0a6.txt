@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTAzVDE2OjI4OjQyLjQ3NTM3NyIsInVzZXJfaWQiOiI5NTRjZTA3NC1jMWIxLTRhMjYtYjlhNS02M2Y0YjUxYTdmODcifQ.n1A9KDL8xei8_w5d-g1RVmSOH7Oy6QPvf0mBR9AwyHE' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Heavy word reveal lot throughout.","courseId":"ce404e92-3333-4a88-acc8-06fdde0db7d1","maxScore":71,"minScore":18,"orderIndex":551,"description":"Idea stage crime truth pay else.","estimatedTime":"6 weeks"}'

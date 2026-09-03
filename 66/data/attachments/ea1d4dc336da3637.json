@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "03a2ff69-721f-4be8-9fd3-899860c1cc96",
+    "title": "Sound writer despite third enter throw.",
+    "maxScore": 52,
+    "minScore": 16,
+    "description": "Upon theory leg teach here.",
+    "previewFile": {
+      "id": "fbd732aa-dce9-4e9f-a366-74526d1d6611",
+      "filename": "file_3896.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_3896.png"
+    },
+    "estimatedTime": "2 weeks",
+    "createdByUser": {
+      "id": "6af4765e-3b31-46a7-b31f-ef956230b241",
+      "email": "test_63552355@example.com",
+      "lastName": "Santiago",
+      "firstName": "Michael",
+      "middleName": "Erik"
+    }
+  }
+}
