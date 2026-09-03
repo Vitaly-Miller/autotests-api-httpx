@@ -2,8 +2,7 @@
 Config (via Pydantic-settings)
 """
 from pathlib import Path
-
-from pydantic import BaseModel, HttpUrl, FilePath, DirectoryPath
+from pydantic import BaseModel, HttpUrl, FilePath
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
 #================================================== Settings Classes ===================================================
