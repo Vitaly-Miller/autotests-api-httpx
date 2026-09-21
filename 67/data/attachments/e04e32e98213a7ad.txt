@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTIxVDA2OjU3OjExLjczMzcwOCIsInVzZXJfaWQiOiJjZmMzNGQyZi01NjJhLTQ5OTUtODBhYS1hY2NiZWQ4MzA0NjAifQ.Y58xgxhRAT9mFhSnyKcZ4_pZ3bIM2R5AsFPRH0puFnc' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Office value computer color street.","courseId":"cb5e4017-3e95-4f1b-b14d-4006891b6f06","maxScore":70,"minScore":14,"orderIndex":6039,"description":"Without capital significant view poor sort four.","estimatedTime":"6 weeks"}'

@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "cb5e4017-3e95-4f1b-b14d-4006891b6f06",
+    "title": "Increase safe keep really maybe.",
+    "maxScore": 89,
+    "minScore": 18,
+    "description": "Music recent garden for court arm.",
+    "previewFile": {
+      "id": "707dd5d2-62cb-45fc-a503-e1be012ef664",
+      "filename": "file_7169.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_7169.png"
+    },
+    "estimatedTime": "4 weeks",
+    "createdByUser": {
+      "id": "cfc34d2f-562a-4995-80aa-accbed830460",
+      "email": "test_0b72a0c3@example.com",
+      "lastName": "Williams",
+      "firstName": "Jon",
+      "middleName": "Megan"
+    }
+  }
+}

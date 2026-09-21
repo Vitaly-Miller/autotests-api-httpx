@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTIxVDA2OjU3OjE1Ljg3NDYyMyIsInVzZXJfaWQiOiJkNmYzM2Q0OS00M2M0LTQ2NjMtYjUwYi1jNDQ5YWM2MmYzN2MifQ.3IiYilDFwXog9hxQMeOwgv6VTVipb7gYeLvU0kWs0WA' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Since month police notice experience.","maxScore":76,"minScore":11,"description":"Husband question paper TV media.","estimatedTime":"5 weeks","previewFileId":"e28aa8cc-70bb-444c-9470-56f3f941c53d","createdByUserId":"d6f33d49-43c4-4663-b50b-c449ac62f37c"}'

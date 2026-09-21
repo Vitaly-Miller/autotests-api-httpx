@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTIxVDA2OjU3OjE1LjU3NDE1NiIsInVzZXJfaWQiOiJkNmYzM2Q0OS00M2M0LTQ2NjMtYjUwYi1jNDQ5YWM2MmYzN2MifQ.a-UcczbtKXQTaThV0-JMzQF-iywsbbzZJtBnQMPqUNY' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Section believe popular card.","courseId":"a36d65ce-40ae-4637-af28-08a6a0ca69cd","maxScore":55,"minScore":1,"orderIndex":7585,"description":"Concern like challenge project item box.","estimatedTime":"2 weeks"}'

@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTIxVDA2OjU3OjA4LjgyODM3MSIsInVzZXJfaWQiOiI4MTcyNTBkMi0zYWVjLTRkY2MtOWY0MC1lYjQwNzlmN2Q2MjQifQ.yxs50hahtkh-76sJXuH65r0MjNSoP4-gbE-hsLbbCpQ' \
+  -H 'content-type: application/json' \
+  -d '{"title":"People some before very eat.","maxScore":55,"minScore":11,"description":"Talk behind thing affect recent four.","estimatedTime":"6 weeks","previewFileId":"755a4226-ca79-434b-9b32-a872ab7ac74c","createdByUserId":"817250d2-3aec-4dcc-9f40-eb4079f7d624"}'

@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTIxVDA2OjU3OjE5LjY5MjYyMSIsInVzZXJfaWQiOiJjMzZjMTIzNi00MTFiLTRiYWYtYjFmZS1mNDkwMmYwMzkyM2UifQ.KfnaoZR7lm3UKG7QJ6diWD0mvlaQ7APVD_ryTki-DSI' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Voice bit someone perform.","maxScore":74,"minScore":29,"description":"Water generation character its.","estimatedTime":"4 weeks","previewFileId":"2ffb0516-ee8e-42eb-a2a6-f381f71f89a4","createdByUserId":"c36c1236-411b-4baf-b1fe-f4902f03923e"}'

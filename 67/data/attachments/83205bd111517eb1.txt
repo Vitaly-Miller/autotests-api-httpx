@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTIxVDA2OjU3OjA5LjgwNTA2OCIsInVzZXJfaWQiOiI0OGIyZTNiNS02YWQ4LTQ1ZDktOTVhOS04Nzk2ZWMyNTE4NDcifQ.Ud_zegEtJZgmt-YfASfSW4sgTDW_MCgGJEI8g5I5cbY' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Dinner small floor rest player they.","maxScore":66,"minScore":2,"description":"East box very only.","estimatedTime":"5 weeks","previewFileId":"c282164a-234c-46af-95cc-cc1f553253f6","createdByUserId":"48b2e3b5-6ad8-45d9-95a9-8796ec251847"}'

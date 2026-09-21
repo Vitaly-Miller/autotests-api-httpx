@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTIxVDA2OjU3OjE2Ljg0NDgyOCIsInVzZXJfaWQiOiI2ZGVhNmZkZC1jNDdiLTQ1NDQtOGZjNS0xYmEyYmUwNmFkNDkifQ.QHMlpaSx_L3DoOvUGiR50NfHWJcJ7RbBicrNufvlsOg' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Newspaper feeling available keep manage after.","courseId":"34ae6938-7857-4e57-b6a2-aeef10338b07","maxScore":50,"minScore":17,"orderIndex":6184,"description":"Defense under hard improve show about.","estimatedTime":"8 weeks"}'

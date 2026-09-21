@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTIxVDA2OjU3OjE5LjM5MTg2OCIsInVzZXJfaWQiOiJjMzZjMTIzNi00MTFiLTRiYWYtYjFmZS1mNDkwMmYwMzkyM2UifQ.e33VJLKfhNZQ78A8LRj7b_L8fNI5zaVj-aTfcl8EOQQ' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Whose reason federal soon drug quality.","courseId":"badd4f45-d224-4004-9a12-420a1c3970bf","maxScore":71,"minScore":23,"orderIndex":895,"description":"Control material dark fear add author dark.","estimatedTime":"7 weeks"}'

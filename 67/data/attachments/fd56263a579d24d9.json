@@ -1,0 +1,14 @@
+{
+  "description": " Схема Response-ошибки при попытке получения несуществующей сущности\n\n- User\n- File\n- Course\n- Exercise\n ",
+  "properties": {
+    "detail": {
+      "title": "Detail",
+      "type": "string"
+    }
+  },
+  "required": [
+    "detail"
+  ],
+  "title": "NotFoundErrorResponseSchema",
+  "type": "object"
+}

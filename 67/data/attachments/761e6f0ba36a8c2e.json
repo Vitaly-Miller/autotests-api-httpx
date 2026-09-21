@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "a36d65ce-40ae-4637-af28-08a6a0ca69cd",
+    "title": "Since month police notice experience.",
+    "maxScore": 76,
+    "minScore": 11,
+    "description": "Husband question paper TV media.",
+    "previewFile": {
+      "id": "e28aa8cc-70bb-444c-9470-56f3f941c53d",
+      "filename": "file_6001.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_6001.png"
+    },
+    "estimatedTime": "5 weeks",
+    "createdByUser": {
+      "id": "d6f33d49-43c4-4663-b50b-c449ac62f37c",
+      "email": "test_6f0ae17c@example.com",
+      "lastName": "Adams",
+      "firstName": "Todd",
+      "middleName": "Karen"
+    }
+  }
+}

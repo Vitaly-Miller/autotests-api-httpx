@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTIxVDA2OjU3OjA2LjkwNzg0MyIsInVzZXJfaWQiOiIxOTBkZmYxNC05MDE5LTQ5NDktODI3OC1jNzFjNGI0MDE0MTIifQ.ufbAFz6i3kvHn68r8lDagLkWF1eBC4bIdg3oy8lK9YU' \
+  -H 'content-type: application/json' \
+  -d '{"title":"When a song.","maxScore":59,"minScore":26,"description":"Behavior these down theory manager hit.","estimatedTime":"5 weeks","previewFileId":"5db8bb53-5320-4c76-84f7-c9f71668f53b","createdByUserId":"190dff14-9019-4949-8278-c71c4b401412"}'

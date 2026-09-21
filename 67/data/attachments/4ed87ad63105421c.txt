@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTIxVDA2OjU3OjE3LjE0NDg0OSIsInVzZXJfaWQiOiI2ZGVhNmZkZC1jNDdiLTQ1NDQtOGZjNS0xYmEyYmUwNmFkNDkifQ.KwL6FYoFJtG2NGaS_iRS4P_uwPWbMbP6-fS8HB2c5OA' \
+  -H 'content-type: application/json' \
+  -d '{"title":"May think man right ever discover.","maxScore":60,"minScore":12,"description":"Citizen girl although indeed up their.","estimatedTime":"9 weeks","previewFileId":"6d2fc917-ee51-41b2-9d4d-6d55a03f55b8","createdByUserId":"6dea6fdd-c47b-4544-8fc5-1ba2be06ad49"}'

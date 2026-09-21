@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/courses/615d348a-f3a5-4dc1-817b-2fe0bf1973bb \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTIxVDA2OjU3OjEwLjc2MzQ5NyIsInVzZXJfaWQiOiJmOTlkN2FhOS1kNGJlLTQyOTgtYjdlNC1lMjA1NGMxNmZlMmYifQ.WqQehrcrruDfpCF_urvMZd1qZJiX6VYc6KXZg6hqj6k' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Mention act face big trip.","maxScore":90,"minScore":28,"description":"Billion myself bit project measure key network.","estimatedTime":"8 weeks"}'

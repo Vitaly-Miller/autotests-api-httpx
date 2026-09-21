@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTIxVDA2OjU3OjEzLjAwNTc0OSIsInVzZXJfaWQiOiI4ZWFjMzljNS01YTAzLTQ2MjMtYmNiMC03NTE4MGZkNjMzMmQifQ.n5GV_oJD92oZ1o7AtlQMbqlhaF494U0Q5ubO6vkwGxE' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Listen week card society.","courseId":"62c3d892-9378-4919-8e7e-d9cf715c2ce0","maxScore":95,"minScore":6,"orderIndex":8415,"description":"Forget research morning.","estimatedTime":"7 weeks"}'

@@ -1,0 +1,25 @@
+{
+  "courses": [
+    {
+      "id": "ea4be16a-2dba-4f15-861c-8776737f27a3",
+      "title": "Dinner small floor rest player they.",
+      "maxScore": 66,
+      "minScore": 2,
+      "description": "East box very only.",
+      "previewFile": {
+        "id": "c282164a-234c-46af-95cc-cc1f553253f6",
+        "filename": "file_6684.png",
+        "directory": "Uploaded",
+        "url": "http://localhost:8000/static/Uploaded/file_6684.png"
+      },
+      "estimatedTime": "5 weeks",
+      "createdByUser": {
+        "id": "48b2e3b5-6ad8-45d9-95a9-8796ec251847",
+        "email": "test_d394f67d@example.com",
+        "lastName": "Berger",
+        "firstName": "Christopher",
+        "middleName": "Kimberly"
+      }
+    }
+  ]
+}

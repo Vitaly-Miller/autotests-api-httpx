@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTIxVDA2OjU3OjEyLjAzMjkxMSIsInVzZXJfaWQiOiJjZmMzNGQyZi01NjJhLTQ5OTUtODBhYS1hY2NiZWQ4MzA0NjAifQ.7AeqPQFWKPQnUx2Xt7S_jOeslLj02wm0Xk2GSJBFj-o' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Increase safe keep really maybe.","maxScore":89,"minScore":18,"description":"Music recent garden for court arm.","estimatedTime":"4 weeks","previewFileId":"707dd5d2-62cb-45fc-a503-e1be012ef664","createdByUserId":"cfc34d2f-562a-4995-80aa-accbed830460"}'

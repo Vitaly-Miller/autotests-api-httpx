@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "eefe545c-71fb-4726-91b8-57c8a345c974",
+    "title": "Need entire reach glass.",
+    "maxScore": 59,
+    "minScore": 2,
+    "description": "Wish join water always activity any.",
+    "previewFile": {
+      "id": "ce4b670a-51c5-4e78-a374-f997a4dd15d2",
+      "filename": "file_9082.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_9082.png"
+    },
+    "estimatedTime": "5 weeks",
+    "createdByUser": {
+      "id": "dc3dc436-c86c-405d-a07e-0d009e81b698",
+      "email": "test_7b30131f@example.com",
+      "lastName": "Nelson",
+      "firstName": "Johnny",
+      "middleName": "Stephanie"
+    }
+  }
+}

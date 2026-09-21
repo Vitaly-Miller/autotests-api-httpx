@@ -1,0 +1,25 @@
+{
+  "courses": [
+    {
+      "id": "c04d722b-4617-4e22-bc16-1b52d512ac77",
+      "title": "People some before very eat.",
+      "maxScore": 55,
+      "minScore": 11,
+      "description": "Talk behind thing affect recent four.",
+      "previewFile": {
+        "id": "755a4226-ca79-434b-9b32-a872ab7ac74c",
+        "filename": "file_9349.png",
+        "directory": "Uploaded",
+        "url": "http://localhost:8000/static/Uploaded/file_9349.png"
+      },
+      "estimatedTime": "6 weeks",
+      "createdByUser": {
+        "id": "817250d2-3aec-4dcc-9f40-eb4079f7d624",
+        "email": "test_50eb4a75@example.com",
+        "lastName": "Henderson",
+        "firstName": "Gregory",
+        "middleName": "Leslie"
+      }
+    }
+  ]
+}

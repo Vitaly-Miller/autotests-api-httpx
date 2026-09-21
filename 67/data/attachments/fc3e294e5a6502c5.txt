@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/exercises/86a257c3-0939-4560-b75f-d96375872ac6 \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTIxVDA2OjU3OjE5LjM5MTg2OCIsInVzZXJfaWQiOiJjMzZjMTIzNi00MTFiLTRiYWYtYjFmZS1mNDkwMmYwMzkyM2UifQ.e33VJLKfhNZQ78A8LRj7b_L8fNI5zaVj-aTfcl8EOQQ' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Cost and age sure effort member.","maxScore":50,"minScore":5,"orderIndex":9588,"description":"Sport according treatment international.","estimatedTime":"6 weeks"}'

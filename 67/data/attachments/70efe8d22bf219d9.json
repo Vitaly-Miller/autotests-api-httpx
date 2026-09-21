@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "cde05448-e3d2-40cd-8644-7ce21820c376",
+    "title": "Class country instead not.",
+    "maxScore": 56,
+    "minScore": 30,
+    "description": "Production site question scene.",
+    "previewFile": {
+      "id": "80b77966-f4ba-4327-8b4d-27a5f59ee120",
+      "filename": "file_5175.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_5175.png"
+    },
+    "estimatedTime": "5 weeks",
+    "createdByUser": {
+      "id": "4540d34d-82db-4b8e-b78c-afc0a5288f64",
+      "email": "test_01ce12fc@example.com",
+      "lastName": "Mason",
+      "firstName": "Mary",
+      "middleName": "Carrie"
+    }
+  }
+}

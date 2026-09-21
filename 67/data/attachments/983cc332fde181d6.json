@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "62c3d892-9378-4919-8e7e-d9cf715c2ce0",
+    "title": "Item value teach already.",
+    "maxScore": 52,
+    "minScore": 18,
+    "description": "Too treat certain east.",
+    "previewFile": {
+      "id": "8f4e8c03-7a88-4efe-8f33-55bde2a60d2a",
+      "filename": "file_4753.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_4753.png"
+    },
+    "estimatedTime": "4 weeks",
+    "createdByUser": {
+      "id": "8eac39c5-5a03-4623-bcb0-75180fd6332d",
+      "email": "test_6f1d7834@example.com",
+      "lastName": "Winters",
+      "firstName": "Mary",
+      "middleName": "John"
+    }
+  }
+}

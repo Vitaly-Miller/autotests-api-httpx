@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "badd4f45-d224-4004-9a12-420a1c3970bf",
+    "title": "Voice bit someone perform.",
+    "maxScore": 74,
+    "minScore": 29,
+    "description": "Water generation character its.",
+    "previewFile": {
+      "id": "2ffb0516-ee8e-42eb-a2a6-f381f71f89a4",
+      "filename": "file_9802.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_9802.png"
+    },
+    "estimatedTime": "4 weeks",
+    "createdByUser": {
+      "id": "c36c1236-411b-4baf-b1fe-f4902f03923e",
+      "email": "test_4fdff073@example.com",
+      "lastName": "Gonzalez",
+      "firstName": "Shawn",
+      "middleName": "David"
+    }
+  }
+}

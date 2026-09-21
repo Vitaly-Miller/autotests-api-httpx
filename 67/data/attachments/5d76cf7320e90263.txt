@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/exercises/5175fb6f-a49b-42bb-931f-31c64646f0bd \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTIxVDA2OjU3OjIwLjY3MTg2NCIsInVzZXJfaWQiOiJkYzNkYzQzNi1jODZjLTQwNWQtYTA3ZS0wZDAwOWU4MWI2OTgifQ.jlWqIa5u3-46vmTAnIorEXNHYVgy-tH_V0dMRRKVSuU' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Because throughout police why.","maxScore":56,"minScore":21,"orderIndex":9990,"description":"Near cover eye serve.","estimatedTime":"2 weeks"}'

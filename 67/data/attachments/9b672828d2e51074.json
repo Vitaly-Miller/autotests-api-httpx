@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "615d348a-f3a5-4dc1-817b-2fe0bf1973bb",
+    "title": "Mention act face big trip.",
+    "maxScore": 90,
+    "minScore": 28,
+    "description": "Billion myself bit project measure key network.",
+    "previewFile": {
+      "id": "9d485551-80db-4468-b120-aa39d631a070",
+      "filename": "file_9478.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_9478.png"
+    },
+    "estimatedTime": "8 weeks",
+    "createdByUser": {
+      "id": "f99d7aa9-d4be-4298-b7e4-e2054c16fe2f",
+      "email": "test_b5ccd9f0@example.com",
+      "lastName": "Ward",
+      "firstName": "Bonnie",
+      "middleName": "Kristen"
+    }
+  }
+}

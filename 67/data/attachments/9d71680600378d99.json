@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "34ae6938-7857-4e57-b6a2-aeef10338b07",
+    "title": "May think man right ever discover.",
+    "maxScore": 60,
+    "minScore": 12,
+    "description": "Citizen girl although indeed up their.",
+    "previewFile": {
+      "id": "6d2fc917-ee51-41b2-9d4d-6d55a03f55b8",
+      "filename": "file_6159.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_6159.png"
+    },
+    "estimatedTime": "9 weeks",
+    "createdByUser": {
+      "id": "6dea6fdd-c47b-4544-8fc5-1ba2be06ad49",
+      "email": "test_415f94db@example.com",
+      "lastName": "Hernandez",
+      "firstName": "Sandra",
+      "middleName": "Todd"
+    }
+  }
+}

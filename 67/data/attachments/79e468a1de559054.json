@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "8207fe76-da3d-4cf6-9f73-62e2935c10bf",
+    "title": "Century gun hair cut television.",
+    "maxScore": 53,
+    "minScore": 21,
+    "description": "Speech safe around career.",
+    "previewFile": {
+      "id": "744f7d31-dcb0-4d08-b340-c7793cd4cad6",
+      "filename": "file_2804.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_2804.png"
+    },
+    "estimatedTime": "2 weeks",
+    "createdByUser": {
+      "id": "faa7366f-0444-41d9-b714-cb1795980075",
+      "email": "test_cb1467bc@example.com",
+      "lastName": "Jarvis",
+      "firstName": "Crystal",
+      "middleName": "Christopher"
+    }
+  }
+}

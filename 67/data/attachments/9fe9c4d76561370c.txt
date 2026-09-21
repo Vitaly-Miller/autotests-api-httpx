@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTIxVDA2OjU3OjE0LjU2MTg2OSIsInVzZXJfaWQiOiJmYWE3MzY2Zi0wNDQ0LTQxZDktYjcxNC1jYjE3OTU5ODAwNzUifQ.uhzFdwLkERXqeHgk29LdR4S78CCJ_81muQ2nXvmYNEg' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Century gun hair cut television.","maxScore":53,"minScore":21,"description":"Speech safe around career.","estimatedTime":"2 weeks","previewFileId":"744f7d31-dcb0-4d08-b340-c7793cd4cad6","createdByUserId":"faa7366f-0444-41d9-b714-cb1795980075"}'

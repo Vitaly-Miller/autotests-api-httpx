@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTIxVDA2OjU3OjE4LjQyNjg0NSIsInVzZXJfaWQiOiI0NTQwZDM0ZC04MmRiLTRiOGUtYjc4Yy1hZmMwYTUyODhmNjQifQ.fdvWs3KaiIiqDBSwsIFSIdbiWtict05vjEpodGcxymU' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Class country instead not.","maxScore":56,"minScore":30,"description":"Production site question scene.","estimatedTime":"5 weeks","previewFileId":"80b77966-f4ba-4327-8b4d-27a5f59ee120","createdByUserId":"4540d34d-82db-4b8e-b78c-afc0a5288f64"}'

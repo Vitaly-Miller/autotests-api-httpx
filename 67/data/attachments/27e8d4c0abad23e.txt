@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTIxVDA2OjU3OjIwLjY3MTg2NCIsInVzZXJfaWQiOiJkYzNkYzQzNi1jODZjLTQwNWQtYTA3ZS0wZDAwOWU4MWI2OTgifQ.jlWqIa5u3-46vmTAnIorEXNHYVgy-tH_V0dMRRKVSuU' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Left prepare character.","courseId":"eefe545c-71fb-4726-91b8-57c8a345c974","maxScore":85,"minScore":3,"orderIndex":9490,"description":"Decide power century.","estimatedTime":"2 weeks"}'

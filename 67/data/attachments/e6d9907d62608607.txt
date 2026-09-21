@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTIxVDA2OjU3OjE0LjI2MDU0OSIsInVzZXJfaWQiOiJmYWE3MzY2Zi0wNDQ0LTQxZDktYjcxNC1jYjE3OTU5ODAwNzUifQ.M4fj6ercVpX7GOx4OiO7yTglTWlm78EC9SJBNsvFmIs' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Interesting continue art.","courseId":"8207fe76-da3d-4cf6-9f73-62e2935c10bf","maxScore":83,"minScore":14,"orderIndex":1019,"description":"Plant answer find sell perform.","estimatedTime":"4 weeks"}'
