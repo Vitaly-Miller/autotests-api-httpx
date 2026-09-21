@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTIxVDIwOjU4OjQyLjU5NjQ4OSIsInVzZXJfaWQiOiIzY2JiOGU2OC1mMGE4LTQ5NDEtYTIzZi0wMjY2MWQ1YWY3Y2YifQ.7oISaAGVYYXw-8C3e8V6gAU2_UdHOA4BbWINb49s8dA' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Allow doctor foot traditional produce husband.","maxScore":67,"minScore":15,"description":"Walk traditional trip resource military.","estimatedTime":"7 weeks","previewFileId":"b1520288-b760-454a-942b-b1fee6fb3e93","createdByUserId":"3cbb8e68-f0a8-4941-a23f-02661d5af7cf"}'

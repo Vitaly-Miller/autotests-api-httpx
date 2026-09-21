@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "7374db4e-1399-4c06-a656-ea844b7069ad",
+    "title": "Pretty send simple data ready military.",
+    "maxScore": 99,
+    "minScore": 13,
+    "description": "Him risk direction day shoulder.",
+    "previewFile": {
+      "id": "ddf8a9dd-b5ae-41f1-893a-912ce9d17ea1",
+      "filename": "file_7442.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_7442.png"
+    },
+    "estimatedTime": "8 weeks",
+    "createdByUser": {
+      "id": "bcbf10e5-51a2-4a0e-9a2e-dc30e1fd18d5",
+      "email": "test_1839cbb0@example.com",
+      "lastName": "Nichols",
+      "firstName": "Nathaniel",
+      "middleName": "Hector"
+    }
+  }
+}

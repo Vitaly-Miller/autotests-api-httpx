@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "4a9958ce-0934-4aad-b341-8424c4b348a7",
+    "title": "Allow doctor foot traditional produce husband.",
+    "maxScore": 67,
+    "minScore": 15,
+    "description": "Walk traditional trip resource military.",
+    "previewFile": {
+      "id": "b1520288-b760-454a-942b-b1fee6fb3e93",
+      "filename": "file_9945.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_9945.png"
+    },
+    "estimatedTime": "7 weeks",
+    "createdByUser": {
+      "id": "3cbb8e68-f0a8-4941-a23f-02661d5af7cf",
+      "email": "test_e2f2e824@example.com",
+      "lastName": "Sanchez",
+      "firstName": "Maria",
+      "middleName": "Lisa"
+    }
+  }
+}

@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/exercises/bff2c9a4-a5ec-4e93-a375-16ce86d92cd0 \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTIxVDIwOjU4OjU2LjMwOTk3NiIsInVzZXJfaWQiOiIzNDk4MjcwYS0yOThmLTRhOTQtYTcxNC02NWQzMjI4OTVmYzAifQ.Htm0f5pt6a0Qbvc_YRYhV5FPiXoo6ebt4N9onRZrnPc' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Business edge change cold other magazine.","maxScore":78,"minScore":6,"orderIndex":5184,"description":"Family worry especially ten rise employee heavy.","estimatedTime":"4 weeks"}'

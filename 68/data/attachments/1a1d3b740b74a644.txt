@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTIxVDIwOjU4OjU1LjI1NDI0MCIsInVzZXJfaWQiOiI3MDg2NTViYi1lYzZiLTQxYzktYmZkZS1iNDJiNjJjNWI3YjEifQ.xEbAVn9CvKtZrirVz9a86NML_WzLUVlhNAAY_B7LfZc' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Explain not station month evidence group.","maxScore":94,"minScore":25,"description":"Level brother perform family most glass.","estimatedTime":"7 weeks","previewFileId":"6a5671d2-f757-4a39-8fee-facab6fab5d6","createdByUserId":"708655bb-ec6b-41c9-bfde-b42b62c5b7b1"}'

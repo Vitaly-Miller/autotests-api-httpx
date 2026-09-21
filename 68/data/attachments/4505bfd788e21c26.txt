@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTIxVDIwOjU4OjQ0LjcxMDUwMyIsInVzZXJfaWQiOiJiY2JmMTBlNS01MWEyLTRhMGUtOWEyZS1kYzMwZTFmZDE4ZDUifQ.bnSdDz1ChqOa9RqbLjrM-IqFExoraeDjaYV8pFUeMuI' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Pretty send simple data ready military.","maxScore":99,"minScore":13,"description":"Him risk direction day shoulder.","estimatedTime":"8 weeks","previewFileId":"ddf8a9dd-b5ae-41f1-893a-912ce9d17ea1","createdByUserId":"bcbf10e5-51a2-4a0e-9a2e-dc30e1fd18d5"}'

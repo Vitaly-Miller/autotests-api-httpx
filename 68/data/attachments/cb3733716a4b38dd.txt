@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTIxVDIwOjU4OjU4LjA4NTMxNCIsInVzZXJfaWQiOiI2Zjg4N2ZhYy0zZDU2LTQ5NDEtYjMzNy1hM2NmNTYzMzM4MzUifQ.JrKPk4sFIF-WalcF1J7BkmUtZPtzMD9r3s9OPm-n-bw' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Democratic realize represent son.","maxScore":61,"minScore":20,"description":"Far position issue they international gas answer.","estimatedTime":"7 weeks","previewFileId":"93da7c1c-5289-44c4-9e96-2e847824a145","createdByUserId":"6f887fac-3d56-4941-b337-a3cf56333835"}'

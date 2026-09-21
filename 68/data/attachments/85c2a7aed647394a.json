@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "0adad799-54fe-4c2d-b948-cb81e736439b",
+    "title": "Give especially scene into forget none.",
+    "maxScore": 100,
+    "minScore": 23,
+    "description": "Know standard response remember home guy.",
+    "previewFile": {
+      "id": "dcedd4cb-7238-499d-9989-97fa3baa97ad",
+      "filename": "file_7403.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_7403.png"
+    },
+    "estimatedTime": "7 weeks",
+    "createdByUser": {
+      "id": "c9a22710-98af-43ce-ae2f-a6ea6af5d195",
+      "email": "test_74d13337@example.com",
+      "lastName": "Mcguire",
+      "firstName": "Erin",
+      "middleName": "Amy"
+    }
+  }
+}

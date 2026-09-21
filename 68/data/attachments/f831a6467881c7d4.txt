@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/courses/5486ff27-e53c-4c7b-8b1a-03dadf14d29f \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTIxVDIwOjU4OjQ2LjgzNDQzMSIsInVzZXJfaWQiOiI4YTFjY2ExNS1jMWMyLTQ5NjAtYjI1My03ZDEzN2Q1M2UwMjkifQ.Z54VmF9bourYW-4F7rX2mcj9ASARn98w_Dgb4Im8k1Q' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Police peace ask smile travel write.","maxScore":73,"minScore":11,"description":"Body section time interest job.","estimatedTime":"5 weeks"}'

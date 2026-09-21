@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "5486ff27-e53c-4c7b-8b1a-03dadf14d29f",
+    "title": "Police peace ask smile travel write.",
+    "maxScore": 73,
+    "minScore": 11,
+    "description": "Body section time interest job.",
+    "previewFile": {
+      "id": "9810fe52-8153-4375-8363-c23f1eacf72e",
+      "filename": "file_7029.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_7029.png"
+    },
+    "estimatedTime": "5 weeks",
+    "createdByUser": {
+      "id": "8a1cca15-c1c2-4960-b253-7d137d53e029",
+      "email": "test_7eeb6292@example.com",
+      "lastName": "Monroe",
+      "firstName": "Patricia",
+      "middleName": "Nicholas"
+    }
+  }
+}

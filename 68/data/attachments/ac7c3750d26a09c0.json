@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "4b7d6cd5-cb67-46ce-874c-a7183ae03896",
+    "title": "Stock speak agency president knowledge there.",
+    "maxScore": 71,
+    "minScore": 10,
+    "description": "Society walk others wait that.",
+    "previewFile": {
+      "id": "294ce31c-fb40-4828-9a27-ac0505c742c7",
+      "filename": "file_2576.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_2576.png"
+    },
+    "estimatedTime": "5 weeks",
+    "createdByUser": {
+      "id": "9257e42c-f924-4aa3-a545-472bad59dc57",
+      "email": "test_e1763195@example.com",
+      "lastName": "Guzman",
+      "firstName": "Michael",
+      "middleName": "Shannon"
+    }
+  }
+}

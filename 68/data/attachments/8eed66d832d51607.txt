@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTIxVDIwOjU4OjUzLjUwMDI0NCIsInVzZXJfaWQiOiI1NzUxYmEyNi0xOTI2LTQ4MWQtYmE3Yi0wOGI5NmJlMmEwMzUifQ.VLN8xBpb6yWnBU2khEUO7Ni3Gnr_57Noh7y81Sf5tAY' \
+  -H 'content-type: application/json' \
+  -d '{"title":"See stay method chance color game.","courseId":"eb610904-aa0a-4be5-81c8-36f7ec0d4884","maxScore":64,"minScore":19,"orderIndex":9965,"description":"Movement girl finish plant surface sister eat.","estimatedTime":"9 weeks"}'

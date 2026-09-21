@@ -1,0 +1,25 @@
+{
+  "courses": [
+    {
+      "id": "0d881251-d3ff-4f1c-9309-25dd1e806d1f",
+      "title": "Approach ball rate at outside.",
+      "maxScore": 100,
+      "minScore": 20,
+      "description": "Tell study teacher lawyer story.",
+      "previewFile": {
+        "id": "75d866a0-979d-475a-a6bf-69be06bc0aef",
+        "filename": "file_7110.png",
+        "directory": "Uploaded",
+        "url": "http://localhost:8000/static/Uploaded/file_7110.png"
+      },
+      "estimatedTime": "7 weeks",
+      "createdByUser": {
+        "id": "fa3b9399-6a45-4a79-bd2f-30e80f4fbd41",
+        "email": "test_db4a0e0f@example.com",
+        "lastName": "Adams",
+        "firstName": "Evan",
+        "middleName": "Wendy"
+      }
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTIxVDIwOjU4OjQ5LjI5Mzg3NSIsInVzZXJfaWQiOiIzYTdmNTEyMC1jZGQ0LTQ2NzEtYjkyNy0yMTJkYmY4ZDc5MWQifQ.GqcrFPWexqG6iQejXzslYvABvMcadHVCvd07-Xgg_Js' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Identify reveal yes push.","courseId":"2e15d7d8-ee38-47b3-8871-1f8655cbe334","maxScore":85,"minScore":7,"orderIndex":8362,"description":"Issue under I name organization day.","estimatedTime":"2 weeks"}'

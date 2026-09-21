@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/exercises/4c19ba99-56f1-41a8-a4cb-751e04f1533d \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTIxVDIwOjU4OjU3Ljc1MDk3OCIsInVzZXJfaWQiOiI2Zjg4N2ZhYy0zZDU2LTQ5NDEtYjMzNy1hM2NmNTYzMzM4MzUifQ.DK154VYOw0jO-_qrJIsdsMSWH8WJNfUdyE8FO7z1uDk' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Opportunity eat cost.","maxScore":81,"minScore":11,"orderIndex":5819,"description":"Pay degree nice place sister.","estimatedTime":"5 weeks"}'

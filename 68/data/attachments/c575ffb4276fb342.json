@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "2e15d7d8-ee38-47b3-8871-1f8655cbe334",
+    "title": "Rule family eat station ground travel.",
+    "maxScore": 99,
+    "minScore": 28,
+    "description": "Fish stay nearly science.",
+    "previewFile": {
+      "id": "59a03682-9033-4e07-8fe9-a11eb150320d",
+      "filename": "file_7972.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_7972.png"
+    },
+    "estimatedTime": "9 weeks",
+    "createdByUser": {
+      "id": "3a7f5120-cdd4-4671-b927-212dbf8d791d",
+      "email": "test_fab2797d@example.com",
+      "lastName": "Ross",
+      "firstName": "Tiffany",
+      "middleName": "Morgan"
+    }
+  }
+}

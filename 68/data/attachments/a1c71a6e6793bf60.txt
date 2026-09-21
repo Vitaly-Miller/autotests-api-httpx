@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTIxVDIwOjU4OjUwLjY3OTYyNyIsInVzZXJfaWQiOiI5MjU3ZTQyYy1mOTI0LTRhYTMtYTU0NS00NzJiYWQ1OWRjNTcifQ.wIoaa_6DsZuAAiEDy4pFWK1fBarRCPOJy3Sd-1xoALY' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Property page across card drug.","courseId":"4b7d6cd5-cb67-46ce-874c-a7183ae03896","maxScore":89,"minScore":27,"orderIndex":6271,"description":"If education about run particularly many.","estimatedTime":"4 weeks"}'

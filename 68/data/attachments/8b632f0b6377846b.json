@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "86274be8-6b1f-438d-bcef-ae6a45275d35",
+    "title": "Explain not station month evidence group.",
+    "maxScore": 94,
+    "minScore": 25,
+    "description": "Level brother perform family most glass.",
+    "previewFile": {
+      "id": "6a5671d2-f757-4a39-8fee-facab6fab5d6",
+      "filename": "file_9560.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_9560.png"
+    },
+    "estimatedTime": "7 weeks",
+    "createdByUser": {
+      "id": "708655bb-ec6b-41c9-bfde-b42b62c5b7b1",
+      "email": "test_12d381e7@example.com",
+      "lastName": "Taylor",
+      "firstName": "Kelsey",
+      "middleName": "Pamela"
+    }
+  }
+}

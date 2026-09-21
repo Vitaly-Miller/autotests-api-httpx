@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTIxVDIwOjU4OjUzLjgzMjIxNCIsInVzZXJfaWQiOiI1NzUxYmEyNi0xOTI2LTQ4MWQtYmE3Yi0wOGI5NmJlMmEwMzUifQ.6g0chli-L9fCt5XkU4_eH8B5JD_UyQEyIpN_6O69g7Q' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Behavior while maintain pressure.","maxScore":62,"minScore":5,"description":"Bed power system remain language stock modern.","estimatedTime":"7 weeks","previewFileId":"8f37603c-7ded-4836-bfd8-3b47ceafae32","createdByUserId":"5751ba26-1926-481d-ba7b-08b96be2a035"}'

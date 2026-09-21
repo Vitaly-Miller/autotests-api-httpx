@@ -1,0 +1,18 @@
+INFO | HTTPX-Client: POST-request to http://localhost:8000/api/v1/users
+INFO | HTTPX-Client: Status code: 200-OK from http://localhost:8000/api/v1/users
+INFO | HTTPX-Client: POST-request to http://localhost:8000/api/v1/authentication/login
+INFO | HTTPX-Client: Status code: 200-OK from http://localhost:8000/api/v1/authentication/login
+INFO | HTTPX-Client: POST-request to http://localhost:8000/api/v1/files
+INFO | HTTPX-Client: Status code: 200-OK from http://localhost:8000/api/v1/files
+INFO | HTTPX-Client: DELETE-request to http://localhost:8000/api/v1/files/443cf182-5570-4c21-ba37-96d67b40b065
+INFO | HTTPX-Client: Status code: 200-OK from http://localhost:8000/api/v1/files/443cf182-5570-4c21-ba37-96d67b40b065
+INFO | HTTPX-Client: GET-request to http://localhost:8000/api/v1/files/443cf182-5570-4c21-ba37-96d67b40b065
+INFO | HTTPX-Client: Status code: 404-Not Found from http://localhost:8000/api/v1/files/443cf182-5570-4c21-ba37-96d67b40b065
+INFO | - Base-assert: Status code: 200-OK
+INFO | - Base-assert: Request method: DELETE
+INFO | - Base-assert: Status code: 404-Not Found
+INFO | - Base-assert: Request method: GET
+INFO | FILES-ASSERT: Get File Not Found Error Response by non-existent file
+INFO | ERRORS-ASSERT: Validation Not Found Error Response
+INFO | - Base-assert: Values of Actual "detail" = Expected "detail"
+INFO | SCHEMA-ASSERT: Response JSON Schema validation (NotFoundErrorResponseSchema)

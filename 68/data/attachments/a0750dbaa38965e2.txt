@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTIxVDIwOjU4OjQ2LjgzNDQzMSIsInVzZXJfaWQiOiI4YTFjY2ExNS1jMWMyLTQ5NjAtYjI1My03ZDEzN2Q1M2UwMjkifQ.Z54VmF9bourYW-4F7rX2mcj9ASARn98w_Dgb4Im8k1Q' \
+  -H 'content-type: application/json' \
+  -d '{"title":"May sit heart.","maxScore":86,"minScore":7,"description":"Call money people know.","estimatedTime":"5 weeks","previewFileId":"9810fe52-8153-4375-8363-c23f1eacf72e","createdByUserId":"8a1cca15-c1c2-4960-b253-7d137d53e029"}'

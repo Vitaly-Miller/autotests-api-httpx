@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "f4be4c27-e9ed-4757-aedb-7103fd825b9e",
+    "title": "Act high here cup establish.",
+    "maxScore": 73,
+    "minScore": 26,
+    "description": "Better perform nation home weight member.",
+    "previewFile": {
+      "id": "3e343dc8-2a9d-4260-bc9b-d8586377d212",
+      "filename": "file_2924.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_2924.png"
+    },
+    "estimatedTime": "4 weeks",
+    "createdByUser": {
+      "id": "06768d8e-f1c7-4862-8947-9feeb614d0e1",
+      "email": "test_8212534e@example.com",
+      "lastName": "Rodriguez",
+      "firstName": "Patricia",
+      "middleName": "Dana"
+    }
+  }
+}

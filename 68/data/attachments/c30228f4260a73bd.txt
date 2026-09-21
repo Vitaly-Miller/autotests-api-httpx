@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTIxVDIwOjU4OjQ1Ljc4MDUyNyIsInVzZXJfaWQiOiJmYTNiOTM5OS02YTQ1LTRhNzktYmQyZi0zMGU4MGY0ZmJkNDEifQ.uKU2XK9dd8WAshOVto1ClXejtUKbghyFhNUs5UqWhLU' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Approach ball rate at outside.","maxScore":100,"minScore":20,"description":"Tell study teacher lawyer story.","estimatedTime":"7 weeks","previewFileId":"75d866a0-979d-475a-a6bf-69be06bc0aef","createdByUserId":"fa3b9399-6a45-4a79-bd2f-30e80f4fbd41"}'

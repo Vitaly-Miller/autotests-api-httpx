@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTIxVDIwOjU4OjU0LjkxMTY5OSIsInVzZXJfaWQiOiI3MDg2NTViYi1lYzZiLTQxYzktYmZkZS1iNDJiNjJjNWI3YjEifQ.a3w_CpW6Ao-pr7AXKBi6VbRU5vbEUx4OyINDDCxyM0c' \
+  -H 'content-type: application/json' \
+  -d '{"title":"I respond want off free.","courseId":"86274be8-6b1f-438d-bcef-ae6a45275d35","maxScore":59,"minScore":22,"orderIndex":8349,"description":"Skin result blood follow training.","estimatedTime":"9 weeks"}'

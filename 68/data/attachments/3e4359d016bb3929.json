@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "eb610904-aa0a-4be5-81c8-36f7ec0d4884",
+    "title": "Behavior while maintain pressure.",
+    "maxScore": 62,
+    "minScore": 5,
+    "description": "Bed power system remain language stock modern.",
+    "previewFile": {
+      "id": "8f37603c-7ded-4836-bfd8-3b47ceafae32",
+      "filename": "file_3513.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_3513.png"
+    },
+    "estimatedTime": "7 weeks",
+    "createdByUser": {
+      "id": "5751ba26-1926-481d-ba7b-08b96be2a035",
+      "email": "test_0d768b48@example.com",
+      "lastName": "Drake",
+      "firstName": "Christopher",
+      "middleName": "Jodi"
+    }
+  }
+}

@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTIxVDIwOjU4OjU2LjMwOTk3NiIsInVzZXJfaWQiOiIzNDk4MjcwYS0yOThmLTRhOTQtYTcxNC02NWQzMjI4OTVmYzAifQ.Htm0f5pt6a0Qbvc_YRYhV5FPiXoo6ebt4N9onRZrnPc' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Owner major pick city million car.","courseId":"0477f69b-bd27-40d3-afe3-5f82406465c6","maxScore":75,"minScore":8,"orderIndex":9492,"description":"More oil military live.","estimatedTime":"8 weeks"}'

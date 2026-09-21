@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "bd1d6016-d588-4a2f-978f-6a0421e9624f",
+    "title": "Enjoy listen life.",
+    "maxScore": 69,
+    "minScore": 8,
+    "description": "Coach particularly call.",
+    "previewFile": {
+      "id": "b0a68ae8-b020-4f61-8298-fd310bb9ca1e",
+      "filename": "file_7984.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_7984.png"
+    },
+    "estimatedTime": "6 weeks",
+    "createdByUser": {
+      "id": "423fa21d-e0f3-4314-9c28-c3189997f135",
+      "email": "test_705d0a01@example.com",
+      "lastName": "Bird",
+      "firstName": "Jeremy",
+      "middleName": "Jon"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "732a4d33-e0bb-495c-b899-ac549cc2a748",
+    "title": "Democratic realize represent son.",
+    "maxScore": 61,
+    "minScore": 20,
+    "description": "Far position issue they international gas answer.",
+    "previewFile": {
+      "id": "93da7c1c-5289-44c4-9e96-2e847824a145",
+      "filename": "file_6598.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_6598.png"
+    },
+    "estimatedTime": "7 weeks",
+    "createdByUser": {
+      "id": "6f887fac-3d56-4941-b337-a3cf56333835",
+      "email": "test_775f4de4@example.com",
+      "lastName": "Lewis",
+      "firstName": "Thomas",
+      "middleName": "Rodney"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "0477f69b-bd27-40d3-afe3-5f82406465c6",
+    "title": "What act energy reach across.",
+    "maxScore": 67,
+    "minScore": 19,
+    "description": "Yourself money thought sign parent.",
+    "previewFile": {
+      "id": "cc85749d-a478-498c-9148-e950baa1a582",
+      "filename": "file_8456.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_8456.png"
+    },
+    "estimatedTime": "6 weeks",
+    "createdByUser": {
+      "id": "3498270a-298f-4a94-a714-65d322895fc0",
+      "email": "test_149c34b6@example.com",
+      "lastName": "Lopez",
+      "firstName": "Alexander",
+      "middleName": "April"
+    }
+  }
+}

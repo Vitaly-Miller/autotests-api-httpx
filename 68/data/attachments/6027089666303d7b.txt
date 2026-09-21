@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTIxVDIwOjU4OjQzLjY2MjUzNSIsInVzZXJfaWQiOiI0MjNmYTIxZC1lMGYzLTQzMTQtOWMyOC1jMzE4OTk5N2YxMzUifQ.F36d33T4CkM_S9lbbWwqAIOa5JQY2o7bJ0atqE5fHt4' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Enjoy listen life.","maxScore":69,"minScore":8,"description":"Coach particularly call.","estimatedTime":"6 weeks","previewFileId":"b0a68ae8-b020-4f61-8298-fd310bb9ca1e","createdByUserId":"423fa21d-e0f3-4314-9c28-c3189997f135"}'

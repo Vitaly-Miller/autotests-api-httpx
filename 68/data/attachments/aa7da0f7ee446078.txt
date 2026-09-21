@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTA5LTIxVDIwOjU4OjU3Ljc1MDk3OCIsInVzZXJfaWQiOiI2Zjg4N2ZhYy0zZDU2LTQ5NDEtYjMzNy1hM2NmNTYzMzM4MzUifQ.DK154VYOw0jO-_qrJIsdsMSWH8WJNfUdyE8FO7z1uDk' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Capital mouth send.","courseId":"732a4d33-e0bb-495c-b899-ac549cc2a748","maxScore":88,"minScore":20,"orderIndex":8284,"description":"Customer conference lay research call fly follow.","estimatedTime":"9 weeks"}'
