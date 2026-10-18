@@ -1,58 +1,58 @@
-# Имя workflow, которое будет отображаться в интерфейсе GitHub Actions
+# Workflow
 name: API tests
 
-# Указываем, когда будет запускаться данный workflow
+# Events
 on:
   push:
     branches:
-      - main          # Запускать workflow, когда будет сделан коммит в ветку main
+      - main
   pull_request:
     branches:
-      - main          # Запускать workflow, когда будет сделан pull request в ветку main
+      - main
 
-# Определяем все джобы, которые должны быть выполнены в рамках работы с тестами
+# Jobs
 jobs:
-  #============================================ Джоба 1: запуск автотестов =============================================
+  #==================================================== Job 1: Tests ===================================================
   run-tests:
-    runs-on: ubuntu-latest             # Указываем, что тесты будут запускаться на последней версии Ubuntu
+    runs-on: ubuntu-latest
 
     steps:
-      # 1. Шаг, который будет клонировать репозиторий на машину GitHub Actions
+      # 1. Clone
       - name: Check out repository
-        uses: actions/checkout@v7      # Используем GitHub Action для клонирования репозитория ⚠️https://github.com/actions/checkout
+        uses: actions/checkout@v7      # https://github.com/actions/checkout
 
-      # 2. Шаг для установки Python на виртуальной машине
+      # 2. Python
       - name: Set up Python
-        uses: actions/setup-python@v6  # Используем GitHub Action для установки Python ⚠️https://github.com/actions/setup-python
+        uses: actions/setup-python@v6  # https://github.com/actions/setup-python
         with:
-          python-version: '3.13'       # Устанавливаем версию Python 3.13 ⚠️https://github.com/actions/setup-python
+          python-version: '3.13'       # https://github.com/actions/setup-python
 
-      # 3. Шаг для клонирования репозитория с тестовым сервером в рабочую среду
+      # 3. API Server
       - name: Clone test server repository
-        run: git clone https://github.com/Vitaly-Miller/autotests-api-server.git  # ⚠️Путь репозитория с сервером
+        run: git clone https://github.com/Vitaly-Miller/autotests-api-server.git  # API Server
 
-      # 4. Шаг для установки зависимостей для тестового СЕРВЕРА
+      # 4. API server dependencies
       - name: Install test server dependencies
-        run: pip install -r autotests-api-server/requirements.txt                 # ⚠️Путь файла с зависимостями
+        run: pip install -r autotests-api-server/requirements.txt
 
-      # 5. Шаг для запуска тестового СЕРВЕРА с необходимыми переменными окружения
+      # 5. Launch API server
       - name: Start a test server
         env:
-          APP_HOST: "http://localhost:8000"                         # Устанавливаем адрес хоста сервера
-          DATABASE_URL: "sqlite+aiosqlite:///./local.db"            # Устанавливаем URL локальной базы данных
-          JWT_ALGORITHM: "HS256"                                    # Алгоритм для JWT токенов
-          JWT_SECRET_KEY: "autotests-api-server-secret-key"         # ⚠️Секретный ключ для JWT
-          JWT_ACCESS_TOKEN_EXPIRE: 1800                             # Время жизни access token (в секундах)
-          JWT_REFRESH_TOKEN_EXPIRE: 5184000                         # Время жизни refresh token (в секундах)
-        run: uvicorn main:app --host 0.0.0.0 --port 8000 --app-dir ./autotests-api-server > server.log 2>&1 &  # ⚠️Запускаем сервер с указанными переменными окружения (лог — в server.log)
+          APP_HOST: "http://localhost:8000"
+          DATABASE_URL: "sqlite+aiosqlite:///./local.db"
+          JWT_ALGORITHM: "HS256"
+          JWT_SECRET_KEY: "autotests-api-server-secret-key"
+          JWT_ACCESS_TOKEN_EXPIRE: 1800
+          JWT_REFRESH_TOKEN_EXPIRE: 5184000
+        run: uvicorn main:app --host 0.0.0.0 --port 8000 --app-dir ./autotests-api-server > server.log 2>&1 &
 
-      # 6. Шаг для установки всех зависимостей проекта
+      # 6. Project dependencies
       - name: Install dependencies
         run: |
-          python -m pip install --upgrade pip        # Обновляем pip до последней версии
-          pip install -r requirements.txt            # Устанавливаем зависимости проекта, указанные в requirements.txt
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
 
-      # 6.1. Шаг-проверка, что тестовый сервер поднялся (иначе выводим его лог и останавливаем workflow)
+      # 6.1. Check server is running
       - name: Wait for test server
         run: |
           for i in {1..15}; do
@@ -61,130 +61,125 @@ jobs:
           done
           echo "❌ Server failed to start. Log:" && cat server.log && exit 1
 
-      # 6.2. Шаг для выгрузки OpenAPI-спецификации с работающего сервера (для Swagger UI на GitHub Pages)
+      # 6.2. OpenAPI spec
       - name: Download OpenAPI spec
-        run: curl -sf http://localhost:8000/openapi.json -o openapi.json   # Сохраняем спецификацию в файл openapi.json
+        run: curl -sf http://localhost:8000/openapi.json -o openapi.json
 
-      # 7. Шаг для запуска тестов с использованием pytest и генерации результатов Allure
+      # 7. Run tests + generate Allure results
       - name: Run API tests with pytest and generate Allure results
-        run: pytest --alluredir=allure-results       # --numprocesses 2 (+ параллельность - откл.)  # ⚠️Запускаем ВСЕ тесты, генерируем результаты для Allure
+        run: pytest --alluredir=allure-results
 
-      # 8. Шаг для восстановления истории покрытия (coverage-history.json) из кеша GitHub Actions
+      # 8. Coverage history
       - name: Restore Coverage history
-        uses: actions/cache/restore@v6               # Используем GitHub Action для работы с кешем ⚠️https://github.com/actions/cache
+        uses: actions/cache/restore@v6               # https://github.com/actions/cache
         with:
-          path: coverage-history.json                # Файл с историей покрытия по запускам
-          key: coverage-history-${{ github.run_id }} # Уникальный ключ текущего запуска
-          restore-keys: coverage-history-            # Если точного совпадения нет — берём последнюю сохранённую историю
+          path: coverage-history.json
+          key: coverage-history-${{ github.run_id }}
+          restore-keys: coverage-history-            # If there is no exact match, take the last saved history
 
-      # 9. Шаг для генерации HTML-отчёта покрытия и обновления истории (swagger-coverage-tool)
+      # 9. Swagger coverage tool
       - name: Generate Coverage report
-        run: swagger-coverage-tool save-report       # Генерируем coverage.html + coverage-report.json, обновляем coverage-history.json
+        run: swagger-coverage-tool save-report
 
-      # 10. Шаг для сохранения обновлённой истории покрытия обратно в кеш
+      # 10. Cache Coverage history
       - name: Cache Coverage history
-        if: always()                                 # ВСЕГДА выполняем, независимо от успеха или неудачи предыдущих шагов
-        uses: actions/cache/save@v6                   # v6 — как у cache/restore выше; v4 форсируется на Node 24 и сыпет deprecation-warning
+        if: always()
+        uses: actions/cache/save@v6                  # v6 — like in Restore Coverage history
         with:
-          path: coverage-history.json                # Файл с историей покрытия по запускам
-          key: coverage-history-${{ github.run_id }} # Сохраняем под ключом текущего запуска
+          path: coverage-history.json
+          key: coverage-history-${{ github.run_id }}
 
-      # 11. Шаг для загрузки HTML-отчёта покрытия как артефакта
+      # 11. Coverage report
       - name: Upload Coverage report
-        if: always()                                 # ВСЕГДА выполняем, независимо от успеха или неудачи предыдущих шагов
-        uses: actions/upload-artifact@v7             # Используем GitHub Action для загрузки артефактов ⚠️https://github.com/actions/upload-artifact
+        if: always()
+        uses: actions/upload-artifact@v7             # https://github.com/actions/upload-artifact
         with:
-          name: coverage-report                      # Имя артефакта
-          path: coverage.html                        # Файл HTML-отчёта покрытия
+          name: coverage-report
+          path: coverage.html
 
-      # 12. Шаг для сохранения папки allure-results как артефакта (для передачи в джобу publish-report)
+      # 12. Allure results
       - name: Upload Allure results
-        if: always()                                 # ВСЕГДА выполняем, независимо от успеха или неудачи предыдущих шагов
-        uses: actions/upload-artifact@v7             # Используем GitHub Action для загрузки артефактов ⚠️https://github.com/actions/upload-artifact
+        if: always()
+        uses: actions/upload-artifact@v7             # https://github.com/actions/upload-artifact
         with:
-          name: allure-results                       # Имя артефакта
-          path: allure-results                       # Папка с результатами тестов
+          name: allure-results
+          path: allure-results
 
-      # 13. Шаг для сохранения OpenAPI-спецификации и страницы Swagger UI как артефакта (для джобы publish-report)
+      # 13. OpenAPI-spec artifact
       - name: Upload Swagger UI files
-        if: always()                                 # ВСЕГДА выполняем, независимо от успеха или неудачи предыдущих шагов
-        uses: actions/upload-artifact@v7             # Используем GitHub Action для загрузки артефактов ⚠️https://github.com/actions/upload-artifact
+        if: always()
+        uses: actions/upload-artifact@v7             # https://github.com/actions/upload-artifact
         with:
-          name: swagger-ui                           # Имя артефакта
-          # Файлы для Swagger-документации на GitHub Pages: OpenAPI-спецификация (с шага 6.2) + страница Swagger UI.
-          # ⚠️Внутри блока <path: |> комментарии писать нельзя — текст попадает в пути буквально!
+          name: swagger-ui
           path: |
             openapi.json
             docs/swagger.html
 
 
-  #==================================== Джоба 2: публикация отчёта на GitHub Pages =====================================
+  #=============================================== Job 2: Publish report ===============================================
   publish-report:
-    needs: [ run-tests ]                       # Джоба запускается только после успешного выполнения run-tests
-    runs-on: ubuntu-latest                     # Указываем, что публикация будет выполняться на последней версии Ubuntu
+    needs: [ run-tests ]
+    runs-on: ubuntu-latest
 
     steps:
-      # 1. Шаг для получения истории отчётов Allure, если она существует
+      # 1. Allure history
       - name: Get Allure history
-        uses: actions/checkout@v7              # ⚠️Клонируем репозиторий, чтобы получить историю отчётов ⚠️https://github.com/actions/checkout
-        continue-on-error: true                # Если ветки gh-pages ещё нет, workflow всё равно продолжит выполнение
+        uses: actions/checkout@v7                     # https://github.com/actions/checkout
+        continue-on-error: true
         with:
-          ref: gh-pages                        # Ветка gh-pages для получения отчётов
-          path: gh-pages                       # Путь для сохранения отчётов
+          ref: gh-pages
+          path: gh-pages
 
-      # 2. Шаг для загрузки артефакта allure-results, сохранённого в джобе run-tests
+      # 2. Artifacts downloading
       - name: Download Allure results
-        uses: actions/download-artifact@v8            # Используем GitHub Action для скачивания артефактов ⚠️ https://github.com/actions/download-artifact
+        uses: actions/download-artifact@v8            # https://github.com/actions/download-artifact
         with:
-          name: allure-results                        # Имя артефакта
-          path: allure-results                        # Папка, в которую будут загружены результаты тестов
+          name: allure-results
+          path: allure-results
 
-      # 3. Шаг для загрузки артефакта coverage-report, сохранённого в джобе run-tests
+      # 3. Coverage-report downloading
       - name: Download Coverage report
-        uses: actions/download-artifact@v8            # Используем GitHub Action для скачивания артефактов ⚠️ https://github.com/actions/download-artifact
+        uses: actions/download-artifact@v8            # https://github.com/actions/download-artifact
         with:
-          name: coverage-report                       # Имя артефакта
-          path: .                                     # Скачиваем в корень рабочей директории (появится файл coverage.html)
+          name: coverage-report
+          path: .
 
-      # 3.1. Шаг для загрузки артефакта swagger-ui (OpenAPI-спецификация + страница Swagger UI), сохранённого в джобе run-tests
+      # 3.1. Swagger UI downloading
       - name: Download Swagger UI files
-        uses: actions/download-artifact@v8            # Используем GitHub Action для скачивания артефактов ⚠️ https://github.com/actions/download-artifact
+        uses: actions/download-artifact@v8            # https://github.com/actions/download-artifact
         with:
-          name: swagger-ui                            # Имя артефакта
-          path: .                                     # Скачиваем в корень (появятся openapi.json и docs/swagger.html)
+          name: swagger-ui
+          path: .
 
-      # 4. Шаг для генерации отчёта Allure с историей
+      # 4. Allure Report history
       - name: Generate Allure Report with history
-        uses: simple-elf/allure-report-action@master  # Используем готовое решение из GitHub Marketplace ⚠️https://github.com/simple-elf/allure-report-action
+        uses: simple-elf/allure-report-action@master  # https://github.com/simple-elf/allure-report-action
         with:
-          allure_results: allure-results              # Каталог с результатами тестов
-          allure_history: allure-history              # Каталог для истории отчётов Allure
+          allure_results: allure-results
+          allure_history: allure-history
 
-      # 5. Шаг для добавления coverage-отчёта в публикуемую папку (будет доступен по ссылке .../coverage.html рядом с Allure)
+      # 5. Add Coverage report
       - name: Add Coverage report to GitHub Pages
-        run: sudo cp coverage.html allure-history/coverage.html  # Копируем через sudo: папка allure-history создана Docker-action'ом от root
+        run: sudo cp coverage.html allure-history/coverage.html
 
-      # 5.1. Шаг для добавления Swagger-документации в публикуемую папку (будет доступна по ссылке .../swagger.html)
+      # 5.1. Add Swagger UI
       - name: Add Swagger UI to GitHub Pages
         run: |
-          sudo cp docs/swagger.html allure-history/swagger.html  # Страница Swagger UI
-          sudo cp openapi.json allure-history/openapi.json       # OpenAPI-спецификация (страница читает её по относительному пути)
+          sudo cp docs/swagger.html allure-history/swagger.html
+          sudo cp openapi.json allure-history/openapi.json
 
-      # 5.2. Шаг-страховка: удаляем возможный битый .git внутри allure-history.
-      # Он появляется, когда ветки gh-pages нет и шаг «Get Allure history» оставляет пустой .git,
-      # который Docker-action от root копирует в allure-history. Без очистки peaceiris коммитит
-      # не в gh-pages, а в master → «src refspec gh-pages does not match any» → git exit code 1.
+      # 5.2. Safety step: Remove any possible broken .git inside allure-history
       - name: Clean stray .git from publish dir
         if: always()
         run: sudo rm -rf allure-history/.git
 
-      # 6. Шаг для деплоя отчётов (Allure + Coverage) на GitHub Pages, чтобы их можно было просматривать в браузере
+      # 6. Deploy Allure report
       - name: Deploy report to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4           # Используем GitHub Action для публикации отчёта на GitHub Pages ⚠️https://github.com/peaceiris/actions-gh-pages
+        uses: peaceiris/actions-gh-pages@v4           # https://github.com/peaceiris/actions-gh-pages
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}   # Токен для аутентификации на GitHub
-          publish_branch: gh-pages                    # Указываем, что отчёт будет опубликован в ветке gh-pages
-          publish_dir: allure-history                 # Папка, которая будет опубликована на GitHub Pages
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: allure-history
 
 
 #=======================================================================================================================
