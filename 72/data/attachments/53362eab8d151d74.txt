@@ -1,0 +1,4 @@
+         Request URL: http://localhost:8000/api/v1/files/f6592d83-c308-4657-91db-8e7f3c06acc8
+      Request Method: DELETE
+Response Status Code: 200-OK
+        Response URL: http://localhost:8000/api/v1/files/f6592d83-c308-4657-91db-8e7f3c06acc8

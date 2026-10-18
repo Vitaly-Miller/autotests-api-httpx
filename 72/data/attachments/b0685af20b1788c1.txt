@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTE4VDIzOjI0OjA0LjI3NjIxNiIsInVzZXJfaWQiOiIyNTEyY2E5NC01OTVhLTQ2MzUtYjUwYy1iNWE0MDc2ZTdmMDcifQ.ongxqXDA7IFBVVezmNF_hvBM-YWEr0UEiXwgla1NrjA' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Goal firm it.","courseId":"5c6d223d-3660-4627-8032-deffca63617d","maxScore":60,"minScore":19,"orderIndex":3859,"description":"Too same nice measure indeed.","estimatedTime":"3 weeks"}'

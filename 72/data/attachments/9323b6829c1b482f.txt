@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTE4VDIzOjI0OjExLjkyODI1OSIsInVzZXJfaWQiOiIyM2RmMzYwOS03YWM1LTRmOWMtYWVjMi1lNTk0NjZmOGVjMzIifQ.AIt0Tcq90UqvB80DpHPh47yYDgLGgVU-I3xKq0jiCFI' \
+  -H 'content-type: application/json' \
+  -d '{"title":"City term contain answer.","courseId":"d1674b4f-c183-4d31-a55b-f525fc11624e","maxScore":95,"minScore":23,"orderIndex":4479,"description":"Upon role at direction. Together eat dark.","estimatedTime":"9 weeks"}'

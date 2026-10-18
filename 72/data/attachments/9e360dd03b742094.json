@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "ebee0ac4-6444-4e7f-925e-8675203eec21",
+    "title": "Whatever use easy total purpose go apply.",
+    "maxScore": 88,
+    "minScore": 18,
+    "description": "Side doctor a keep.",
+    "previewFile": {
+      "id": "311a8577-3f75-401a-86a6-3baba1333666",
+      "filename": "file_8623.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_8623.png"
+    },
+    "estimatedTime": "4 weeks",
+    "createdByUser": {
+      "id": "a1fdd90d-9219-4e3a-a604-fd2ef048fa15",
+      "email": "test_619b1201@example.com",
+      "lastName": "Parker",
+      "firstName": "Nancy",
+      "middleName": "Nicholas"
+    }
+  }
+}

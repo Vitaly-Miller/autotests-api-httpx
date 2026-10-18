@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTE4VDIzOjIzOjU4LjE1NTU5NiIsInVzZXJfaWQiOiJkZTMyYTUyYS1jYWUxLTQyY2QtODkxNi1mZDlkMDBmN2NjYmEifQ.9J2h0_gabuH6yzMb4Ac9nwbNVJKwy4M42YsVoi7pyu8' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Everything score seem almost.","maxScore":60,"minScore":29,"description":"Step air cost practice.","estimatedTime":"9 weeks","previewFileId":"4b53c2bf-3522-4541-968a-4aff93074fdb","createdByUserId":"de32a52a-cae1-42cd-8916-fd9d00f7ccba"}'

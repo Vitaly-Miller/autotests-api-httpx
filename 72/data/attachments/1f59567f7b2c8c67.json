@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "3c31439d-e942-491f-bc2c-7592b4c4a761",
+    "title": "Lot recently chance.",
+    "maxScore": 56,
+    "minScore": 19,
+    "description": "Air brother enjoy pull door Congress.",
+    "previewFile": {
+      "id": "d38b18f2-ca5b-4e6e-9f27-005c676beffc",
+      "filename": "file_5746.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_5746.png"
+    },
+    "estimatedTime": "2 weeks",
+    "createdByUser": {
+      "id": "b636f419-5c0b-4be5-8016-46fe338bb1b2",
+      "email": "test_8a882ca6@example.com",
+      "lastName": "Jones",
+      "firstName": "Stephen",
+      "middleName": "Abigail"
+    }
+  }
+}

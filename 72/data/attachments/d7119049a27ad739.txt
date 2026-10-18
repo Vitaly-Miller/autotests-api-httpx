@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTE4VDIzOjI0OjA1LjUzNzQ5MCIsInVzZXJfaWQiOiI5OWZhMzA5My05OGE3LTQ0YzItODViNC03YTkzYTNkMjBlNzcifQ.AL8dfc_uc9dCjIBAX2T3yDLtvZr316gwFDZTdAlcg7Y' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Talk on six participant special detail.","courseId":"1d5a5115-be3e-4dde-bad8-0dc266133070","maxScore":51,"minScore":4,"orderIndex":1870,"description":"Table pick treat each whose plant of.","estimatedTime":"5 weeks"}'

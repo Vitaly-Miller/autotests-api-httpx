@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTE4VDIzOjI0OjEwLjk0MjIwOSIsInVzZXJfaWQiOiJkOTRlMWU2YS00MTE3LTRiNmMtODY4Ni05OGYwZDkyNzU1MWIifQ.B6Qvqz7azd4U6dk5V5wkldYhmVcsPmmVExypRJYngG8' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Too moment development.","maxScore":100,"minScore":26,"description":"Kid set apply we anything.","estimatedTime":"7 weeks","previewFileId":"798e8cf4-b98f-4fc1-b18a-0a467d45347b","createdByUserId":"d94e1e6a-4117-4b6c-8686-98f0d927551b"}'

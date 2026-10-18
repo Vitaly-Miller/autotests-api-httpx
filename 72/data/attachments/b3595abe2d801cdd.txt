@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTE4VDIzOjI0OjA3LjEyMzY5OCIsInVzZXJfaWQiOiI1Y2NjOTFkMi1lYTgzLTQ5NTgtOTdkYi1iYWIyNGVhNGFiNDMifQ.5872m01xFvXmBLDf_q53kAmmGcjsRw6dBfwdOl-L9qs' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Charge agency reason nor.","maxScore":100,"minScore":5,"description":"One blood follow.","estimatedTime":"8 weeks","previewFileId":"95c1c421-f2ac-44b1-bbd2-93714a51cfb0","createdByUserId":"5ccc91d2-ea83-4958-97db-bab24ea4ab43"}'

@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/courses/ebee0ac4-6444-4e7f-925e-8675203eec21 \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTE4VDIzOjI0OjAyLjAyNzkwMyIsInVzZXJfaWQiOiJhMWZkZDkwZC05MjE5LTRlM2EtYTYwNC1mZDJlZjA0OGZhMTUifQ.87SNQ26DQ-UNmB_a7MzJXiG8f55JuyjCcyffQq7aEak' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Son floor east travel very action.","maxScore":98,"minScore":26,"description":"Receive future wish hit administration image.","estimatedTime":"7 weeks"}'

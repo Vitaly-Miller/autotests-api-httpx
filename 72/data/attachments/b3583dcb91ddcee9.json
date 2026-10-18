@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "62f99549-3277-4881-9cbc-33cdee072722",
+    "title": "Too moment development.",
+    "maxScore": 100,
+    "minScore": 26,
+    "description": "Kid set apply we anything.",
+    "previewFile": {
+      "id": "798e8cf4-b98f-4fc1-b18a-0a467d45347b",
+      "filename": "file_5282.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_5282.png"
+    },
+    "estimatedTime": "7 weeks",
+    "createdByUser": {
+      "id": "d94e1e6a-4117-4b6c-8686-98f0d927551b",
+      "email": "test_ac68b477@example.com",
+      "lastName": "Hammond",
+      "firstName": "Patricia",
+      "middleName": "Gary"
+    }
+  }
+}

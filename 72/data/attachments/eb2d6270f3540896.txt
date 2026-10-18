@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTE4VDIzOjI0OjA2LjgyNDkyMCIsInVzZXJfaWQiOiI1Y2NjOTFkMi1lYTgzLTQ5NTgtOTdkYi1iYWIyNGVhNGFiNDMifQ.jPIlQj-Ki3-UHp-UsNfkXlsN4Cjwrpaq0887laBC4Ns' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Try size marriage big condition old.","courseId":"103aed0d-158f-435b-a51d-2274c114ddf0","maxScore":90,"minScore":28,"orderIndex":6905,"description":"Stop conference enter sit century.","estimatedTime":"5 weeks"}'

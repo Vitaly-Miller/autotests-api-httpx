@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTE4VDIzOjI0OjAzLjAwMzY2MyIsInVzZXJfaWQiOiJmN2E3OWI3MC02NjQ1LTQ2ZTMtOGNlMC03OWU1NWFhYWRiYmEifQ.ltaBfL_0Ziy6RsybouTg6tOvK1F1CTUaQzYrst7pkaQ' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Green dinner establish.","courseId":"fd80e10a-0f1f-4280-9730-161a9f2f0af7","maxScore":80,"minScore":20,"orderIndex":6889,"description":"Chance agree money.","estimatedTime":"6 weeks"}'

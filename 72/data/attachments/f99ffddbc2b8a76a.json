@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "d1674b4f-c183-4d31-a55b-f525fc11624e",
+    "title": "Paper few before detail newspaper black.",
+    "maxScore": 93,
+    "minScore": 29,
+    "description": "Guy situation not term list. Behind job fill.",
+    "previewFile": {
+      "id": "41798180-2562-458f-ab60-d612e0cab65c",
+      "filename": "file_9782.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_9782.png"
+    },
+    "estimatedTime": "9 weeks",
+    "createdByUser": {
+      "id": "23df3609-7ac5-4f9c-aec2-e59466f8ec32",
+      "email": "test_34d21436@example.com",
+      "lastName": "Schmitt",
+      "firstName": "Michael",
+      "middleName": "Jeffrey"
+    }
+  }
+}

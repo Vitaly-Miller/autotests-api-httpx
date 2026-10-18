@@ -1,0 +1,25 @@
+{
+  "courses": [
+    {
+      "id": "02d49bc0-d274-4241-9bf6-8342371efb3d",
+      "title": "Rise real different.",
+      "maxScore": 73,
+      "minScore": 24,
+      "description": "Season ok product south my cup catch require.",
+      "previewFile": {
+        "id": "b84356bc-c0ae-4a1b-9bf3-c27842f9698c",
+        "filename": "file_7925.png",
+        "directory": "Uploaded",
+        "url": "http://localhost:8000/static/Uploaded/file_7925.png"
+      },
+      "estimatedTime": "7 weeks",
+      "createdByUser": {
+        "id": "fc0dadcb-e4ba-43bf-b65d-4b6e428294e5",
+        "email": "test_3d8988fd@example.com",
+        "lastName": "Neal",
+        "firstName": "Calvin",
+        "middleName": "Kyle"
+      }
+    }
+  ]
+}

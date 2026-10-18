@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "81aa8d13-0773-4f7f-bda7-0080d81f0ec1",
+    "title": "Everything score seem almost.",
+    "maxScore": 60,
+    "minScore": 29,
+    "description": "Step air cost practice.",
+    "previewFile": {
+      "id": "4b53c2bf-3522-4541-968a-4aff93074fdb",
+      "filename": "file_4065.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_4065.png"
+    },
+    "estimatedTime": "9 weeks",
+    "createdByUser": {
+      "id": "de32a52a-cae1-42cd-8916-fd9d00f7ccba",
+      "email": "test_caf306ae@example.com",
+      "lastName": "Mcclain",
+      "firstName": "Faith",
+      "middleName": "Megan"
+    }
+  }
+}

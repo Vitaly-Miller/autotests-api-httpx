@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTE4VDIzOjI0OjAwLjA4NDQ4MSIsInVzZXJfaWQiOiJmYzBkYWRjYi1lNGJhLTQzYmYtYjY1ZC00YjZlNDI4Mjk0ZTUifQ.0u6_3mgUy9fnYbumW17A5v-sc9iuJssw6lz0RvdjRx8' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Rise real different.","maxScore":73,"minScore":24,"description":"Season ok product south my cup catch require.","estimatedTime":"7 weeks","previewFileId":"b84356bc-c0ae-4a1b-9bf3-c27842f9698c","createdByUserId":"fc0dadcb-e4ba-43bf-b65d-4b6e428294e5"}'

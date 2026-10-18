@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "d112a4ac-324d-4770-abae-a986e0c94ea3",
+    "title": "Particularly station discover writer ball heavy.",
+    "maxScore": 70,
+    "minScore": 23,
+    "description": "In begin experience weight. Buy live table poor.",
+    "previewFile": {
+      "id": "d015145e-062e-4dc6-bca5-14698962d2e0",
+      "filename": "file_3715.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_3715.png"
+    },
+    "estimatedTime": "2 weeks",
+    "createdByUser": {
+      "id": "273a47d6-383e-45ba-ab81-73cb49fd18f8",
+      "email": "test_1f2ca41a@example.com",
+      "lastName": "Martinez",
+      "firstName": "David",
+      "middleName": "Edward"
+    }
+  }
+}

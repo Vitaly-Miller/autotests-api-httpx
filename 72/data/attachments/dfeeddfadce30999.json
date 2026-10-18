@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "103aed0d-158f-435b-a51d-2274c114ddf0",
+    "title": "Charge agency reason nor.",
+    "maxScore": 100,
+    "minScore": 5,
+    "description": "One blood follow.",
+    "previewFile": {
+      "id": "95c1c421-f2ac-44b1-bbd2-93714a51cfb0",
+      "filename": "file_1119.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_1119.png"
+    },
+    "estimatedTime": "8 weeks",
+    "createdByUser": {
+      "id": "5ccc91d2-ea83-4958-97db-bab24ea4ab43",
+      "email": "test_e61cdc5a@example.com",
+      "lastName": "White",
+      "firstName": "Adam",
+      "middleName": "Christina"
+    }
+  }
+}

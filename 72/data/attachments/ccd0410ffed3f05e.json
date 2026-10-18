@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "ebee0ac4-6444-4e7f-925e-8675203eec21",
+    "title": "Son floor east travel very action.",
+    "maxScore": 98,
+    "minScore": 26,
+    "description": "Receive future wish hit administration image.",
+    "previewFile": {
+      "id": "311a8577-3f75-401a-86a6-3baba1333666",
+      "filename": "file_8623.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_8623.png"
+    },
+    "estimatedTime": "7 weeks",
+    "createdByUser": {
+      "id": "a1fdd90d-9219-4e3a-a604-fd2ef048fa15",
+      "email": "test_619b1201@example.com",
+      "lastName": "Parker",
+      "firstName": "Nancy",
+      "middleName": "Nicholas"
+    }
+  }
+}

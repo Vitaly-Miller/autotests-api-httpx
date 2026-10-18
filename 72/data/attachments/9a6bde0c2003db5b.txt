@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTE4VDIzOjI0OjA4LjM5MzAwMCIsInVzZXJfaWQiOiI3MjJhNzAxZi1mZTQ3LTQ5MmItODg4ZC00NWI3NWZkNjAxNWIifQ.DesvJecSB-9Hv7E_UvdWJVSyYMhcomIZ7fDSbBU3yM4' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Class particularly wife federal church.","maxScore":95,"minScore":3,"description":"Build north property data half open create.","estimatedTime":"6 weeks","previewFileId":"8565444a-e2e6-48d0-a119-21fe76d14b4e","createdByUserId":"722a701f-fe47-492b-888d-45b75fd6015b"}'

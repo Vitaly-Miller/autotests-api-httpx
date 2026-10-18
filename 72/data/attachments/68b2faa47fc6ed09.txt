@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTE4VDIzOjI0OjEwLjY0MDk0NiIsInVzZXJfaWQiOiJkOTRlMWU2YS00MTE3LTRiNmMtODY4Ni05OGYwZDkyNzU1MWIifQ.J7EH7XYyhzeSOONJiuAYh98cDGyjn8xlFVTSu-hfvBg' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Discuss stage among democratic young daughter.","courseId":"62f99549-3277-4881-9cbc-33cdee072722","maxScore":99,"minScore":3,"orderIndex":632,"description":"Against heart approach.","estimatedTime":"2 weeks"}'

@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTE4VDIzOjIzOjU5LjEyNTM0MCIsInVzZXJfaWQiOiJiNjM2ZjQxOS01YzBiLTRiZTUtODAxNi00NmZlMzM4YmIxYjIifQ.y52Z5zg1z9bflCX-_jCCL3-mzryAZ656bhbDXcWZcdM' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Lot recently chance.","maxScore":56,"minScore":19,"description":"Air brother enjoy pull door Congress.","estimatedTime":"2 weeks","previewFileId":"d38b18f2-ca5b-4e6e-9f27-005c676beffc","createdByUserId":"b636f419-5c0b-4be5-8016-46fe338bb1b2"}'

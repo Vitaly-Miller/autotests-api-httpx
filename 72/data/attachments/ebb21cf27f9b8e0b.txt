@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTE4VDIzOjI0OjA1LjgzNzMxNyIsInVzZXJfaWQiOiI5OWZhMzA5My05OGE3LTQ0YzItODViNC03YTkzYTNkMjBlNzcifQ.DCNE6ly_6SM7BD2TGryFB6k7hiObC01X8WAUiYpOTCw' \
+  -H 'content-type: application/json' \
+  -d '{"title":"President painting task.","maxScore":99,"minScore":27,"description":"Poor serious issue deal. Community own go.","estimatedTime":"4 weeks","previewFileId":"ed27e4d3-5b17-4ece-9393-9c12f599cf3c","createdByUserId":"99fa3093-98a7-44c2-85b4-7a93a3d20e77"}'

@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "1d5a5115-be3e-4dde-bad8-0dc266133070",
+    "title": "President painting task.",
+    "maxScore": 99,
+    "minScore": 27,
+    "description": "Poor serious issue deal. Community own go.",
+    "previewFile": {
+      "id": "ed27e4d3-5b17-4ece-9393-9c12f599cf3c",
+      "filename": "file_3925.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_3925.png"
+    },
+    "estimatedTime": "4 weeks",
+    "createdByUser": {
+      "id": "99fa3093-98a7-44c2-85b4-7a93a3d20e77",
+      "email": "test_0d15125f@example.com",
+      "lastName": "Davis",
+      "firstName": "Kelsey",
+      "middleName": "Joseph"
+    }
+  }
+}

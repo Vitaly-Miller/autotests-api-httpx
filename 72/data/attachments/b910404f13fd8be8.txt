@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTE4VDIzOjI0OjA4LjA5NDA3OCIsInVzZXJfaWQiOiI3MjJhNzAxZi1mZTQ3LTQ5MmItODg4ZC00NWI3NWZkNjAxNWIifQ.fcbkxxHZPsSbN4Q7Pr0GIbI3WnAUfHeCHtfXhJj24eY' \
+  -H 'content-type: application/json' \
+  -d '{"title":"South write do accept indicate.","courseId":"5672c60c-aa36-4225-a4ed-5dd2c1c6a5ab","maxScore":85,"minScore":4,"orderIndex":6812,"description":"Democratic yeah report against fire industry.","estimatedTime":"4 weeks"}'

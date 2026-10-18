@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "fd80e10a-0f1f-4280-9730-161a9f2f0af7",
+    "title": "Commercial everything people child trouble.",
+    "maxScore": 67,
+    "minScore": 30,
+    "description": "Her drop eye perform upon.",
+    "previewFile": {
+      "id": "9763b69a-7b77-441d-a9fe-30f3743599a7",
+      "filename": "file_6675.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_6675.png"
+    },
+    "estimatedTime": "2 weeks",
+    "createdByUser": {
+      "id": "f7a79b70-6645-46e3-8ce0-79e55aaadbba",
+      "email": "test_4feb6958@example.com",
+      "lastName": "Sharp",
+      "firstName": "Andrew",
+      "middleName": "Allison"
+    }
+  }
+}

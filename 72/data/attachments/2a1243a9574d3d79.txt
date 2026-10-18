@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTE4VDIzOjI0OjEyLjIzMzQyNSIsInVzZXJfaWQiOiIyM2RmMzYwOS03YWM1LTRmOWMtYWVjMi1lNTk0NjZmOGVjMzIifQ.YPG8xs1CC0MR_kDXM2mvNsugnQ6DueI83R4_2rAglZc' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Paper few before detail newspaper black.","maxScore":93,"minScore":29,"description":"Guy situation not term list. Behind job fill.","estimatedTime":"9 weeks","previewFileId":"41798180-2562-458f-ab60-d612e0cab65c","createdByUserId":"23df3609-7ac5-4f9c-aec2-e59466f8ec32"}'

@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/exercises/6f9f14c5-edf6-4a92-89ca-f56337da065b \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTE4VDIzOjI0OjEwLjY0MDk0NiIsInVzZXJfaWQiOiJkOTRlMWU2YS00MTE3LTRiNmMtODY4Ni05OGYwZDkyNzU1MWIifQ.J7EH7XYyhzeSOONJiuAYh98cDGyjn8xlFVTSu-hfvBg' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Rest concern explain.","maxScore":58,"minScore":16,"orderIndex":7739,"description":"Race kind voice pay.","estimatedTime":"9 weeks"}'

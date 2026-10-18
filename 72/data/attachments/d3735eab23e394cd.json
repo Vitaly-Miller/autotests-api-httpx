@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "5672c60c-aa36-4225-a4ed-5dd2c1c6a5ab",
+    "title": "Class particularly wife federal church.",
+    "maxScore": 95,
+    "minScore": 3,
+    "description": "Build north property data half open create.",
+    "previewFile": {
+      "id": "8565444a-e2e6-48d0-a119-21fe76d14b4e",
+      "filename": "file_8474.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_8474.png"
+    },
+    "estimatedTime": "6 weeks",
+    "createdByUser": {
+      "id": "722a701f-fe47-492b-888d-45b75fd6015b",
+      "email": "test_2120d096@example.com",
+      "lastName": "Miller",
+      "firstName": "Carolyn",
+      "middleName": "Luis"
+    }
+  }
+}

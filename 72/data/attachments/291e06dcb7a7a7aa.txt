@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTE4VDIzOjI0OjA5LjM3Njk5NiIsInVzZXJfaWQiOiIyNzNhNDdkNi0zODNlLTQ1YmEtYWI4MS03M2NiNDlmZDE4ZjgifQ.qdMtWl1MRR50ahE6aT_nNr9We3EI2Oj0CivmZoLxZa0' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Shake quite somebody power.","courseId":"d112a4ac-324d-4770-abae-a986e0c94ea3","maxScore":71,"minScore":21,"orderIndex":1896,"description":"Pressure smile there Republican structure.","estimatedTime":"9 weeks"}'
