@@ -137,9 +137,9 @@ def assert_get_file_invalid_id_error_response(response: httpx.Response):
             ErrorSchema(
                 type='uuid_parsing',
                 loc=['path', 'file_id'],
-                msg='Input should be a valid UUID, invalid character: found `i` at 1',
+                msg='Input should be a valid UUID, invalid character: found `i` at 0',
                 input=response.json()['detail'][0]['input'],        # 👈 тут 'invalid File-ID' при передаче (пока решил так)
-                ctx={"error": 'invalid character: found `i` at 1'}  # ⚠️ Допилить - не учитывать символы после <...`i` at> ...
+                ctx={"error": 'invalid character: found `i` at 0'}  # ⚠️ Допилить - не учитывать символы после <...`i` at> ...
             )
         ]
     )
