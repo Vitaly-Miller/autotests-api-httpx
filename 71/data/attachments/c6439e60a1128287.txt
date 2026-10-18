@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTE4VDE5OjMxOjExLjExNjI5MSIsInVzZXJfaWQiOiI5NjBlOTc2Mi1jNTkwLTQ2OTAtYWExNi1hNDNkN2U2ZGY5NDEifQ.fGmmGECMK19w8JSKB3M4j5vcdelWWva6oYaF2Sm367c' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Training season develop day.","maxScore":65,"minScore":29,"description":"Hotel school audience administration.","estimatedTime":"4 weeks","previewFileId":"099264a6-52bf-413f-8a5d-6b1db06f4592","createdByUserId":"960e9762-c590-4690-aa16-a43d7e6df941"}'

@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "3fa8c799-285a-4b8b-a668-8bb1e02c766f",
+    "title": "Light production night.",
+    "maxScore": 88,
+    "minScore": 26,
+    "description": "Administration cultural turn sort.",
+    "previewFile": {
+      "id": "dcbe62fd-525b-4d0f-b3bf-ed7a0c13b224",
+      "filename": "file_8339.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_8339.png"
+    },
+    "estimatedTime": "8 weeks",
+    "createdByUser": {
+      "id": "1a0244ee-38e0-48d3-b9e5-65a60368de42",
+      "email": "test_ac5f6df2@example.com",
+      "lastName": "Ball",
+      "firstName": "Erik",
+      "middleName": "Kent"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "a9d7d99b-f7b1-4af5-a9ba-162a43256fb6",
+    "title": "Course wind pattern store third.",
+    "maxScore": 91,
+    "minScore": 28,
+    "description": "Event admit building or push base.",
+    "previewFile": {
+      "id": "7ee0bf6e-2b32-411e-98de-76c1e8bcd073",
+      "filename": "file_3076.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_3076.png"
+    },
+    "estimatedTime": "8 weeks",
+    "createdByUser": {
+      "id": "c9a0d0c2-e2a6-4ce6-b552-e8d7a1f856d5",
+      "email": "test_97d6e287@example.com",
+      "lastName": "Martinez",
+      "firstName": "Robert",
+      "middleName": "Christina"
+    }
+  }
+}

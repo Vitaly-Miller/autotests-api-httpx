@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTE4VDE5OjMxOjA4LjI3NjYxNyIsInVzZXJfaWQiOiI3MTAyMDZhZS0zMjllLTRkMDktOTk5OC00ZTg1MjFiNDYyMmEifQ.cyeTgZs_r5T6IRll0TcYxUYUN3NEZeOVpjdSaF1e3d0' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Four me create.","courseId":"1d60dc0d-b80a-4dab-8f95-4fc786e8c8d5","maxScore":92,"minScore":18,"orderIndex":4844,"description":"Mission play commercial year car mother reach.","estimatedTime":"4 weeks"}'

@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "6b20e47f-e0b5-44b1-a4c2-c9700cf8611a",
+    "title": "Data other service.",
+    "maxScore": 95,
+    "minScore": 11,
+    "description": "Dog project evening few quality dinner.",
+    "previewFile": {
+      "id": "d3fc6f7e-d757-4973-ace3-920d098a4947",
+      "filename": "file_6526.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_6526.png"
+    },
+    "estimatedTime": "9 weeks",
+    "createdByUser": {
+      "id": "1cfacc42-563c-4d90-82dc-854814b5430f",
+      "email": "test_a72af586@example.com",
+      "lastName": "Barnes",
+      "firstName": "Christopher",
+      "middleName": "Lisa"
+    }
+  }
+}

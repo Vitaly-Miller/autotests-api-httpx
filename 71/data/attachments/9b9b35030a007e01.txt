@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTE4VDE5OjMxOjA3LjI5Mjg3MCIsInVzZXJfaWQiOiJjODE0NGM5Ny0xMzUxLTQxOTItYTk0My1hMWI2YzQ4MzJlNWUifQ.rOwOnWBJDQVIVM8NfUO88pVrOUQIdCcFSkYLt38VAR4' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Whom put identify consumer wait benefit.","maxScore":88,"minScore":3,"description":"Collection vote learn see.","estimatedTime":"2 weeks","previewFileId":"69ae3258-b99d-46c7-97be-1a56d24a7c40","createdByUserId":"c8144c97-1351-4192-a943-a1b6c4832e5e"}'

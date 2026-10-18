@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTE4VDE5OjMxOjA4LjU3NDk2MiIsInVzZXJfaWQiOiI3MTAyMDZhZS0zMjllLTRkMDktOTk5OC00ZTg1MjFiNDYyMmEifQ.BiS12C6sgQpU9_cZ1rSKoZdmsjPwXLmytdwPRdy5TMg' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Key role allow home war.","maxScore":95,"minScore":8,"description":"Citizen stuff car.","estimatedTime":"2 weeks","previewFileId":"cc91cfe3-dcc3-42f9-a546-d4a25d788653","createdByUserId":"710206ae-329e-4d09-9998-4e8521b4622a"}'

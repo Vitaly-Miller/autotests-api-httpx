@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/courses/6b20e47f-e0b5-44b1-a4c2-c9700cf8611a \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTE4VDE5OjMxOjAzLjQ4MDI5MSIsInVzZXJfaWQiOiIxY2ZhY2M0Mi01NjNjLTRkOTAtODJkYy04NTQ4MTRiNTQzMGYifQ.6LhBD_hfCFeBTzLSpEQKZ4VfYo5W2Ti2jZz02MNE0WM' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Data other service.","maxScore":95,"minScore":11,"description":"Dog project evening few quality dinner.","estimatedTime":"9 weeks"}'

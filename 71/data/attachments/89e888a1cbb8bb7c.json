@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "bd8d54f3-4213-45a0-9d6f-f81dc8ceecf2",
+    "title": "Center catch bank prove site training.",
+    "maxScore": 74,
+    "minScore": 17,
+    "description": "Various least song consumer war check mean.",
+    "previewFile": {
+      "id": "d33ea622-e82c-442f-8411-da5676a8a813",
+      "filename": "file_5474.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_5474.png"
+    },
+    "estimatedTime": "2 weeks",
+    "createdByUser": {
+      "id": "dcd53a57-baaf-4298-9bb9-039799667185",
+      "email": "test_b275d1ad@example.com",
+      "lastName": "Ward",
+      "firstName": "Shane",
+      "middleName": "Eric"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "686e2381-69da-4557-bf6b-6fd23010688f",
+    "title": "Material pass consider far.",
+    "maxScore": 77,
+    "minScore": 24,
+    "description": "Tell reveal especially could plan.",
+    "previewFile": {
+      "id": "e92bf8ae-f34e-4c1b-9dba-37d7c61d1c62",
+      "filename": "file_6809.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_6809.png"
+    },
+    "estimatedTime": "9 weeks",
+    "createdByUser": {
+      "id": "8f6da043-2580-4d54-8011-6d57b6bc17ab",
+      "email": "test_d52e203a@example.com",
+      "lastName": "Ellis",
+      "firstName": "Penny",
+      "middleName": "Andrea"
+    }
+  }
+}

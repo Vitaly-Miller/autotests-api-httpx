@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "3cb0a866-c13b-4171-b8dc-c073a3dcbbcd",
+    "title": "Hold paper tree.",
+    "maxScore": 57,
+    "minScore": 21,
+    "description": "Other individual mention.",
+    "previewFile": {
+      "id": "da7ae47d-e159-46bc-9d1e-fbf20486489a",
+      "filename": "file_8757.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_8757.png"
+    },
+    "estimatedTime": "2 weeks",
+    "createdByUser": {
+      "id": "67a20006-8452-441c-8d6c-ea50ab87e5b7",
+      "email": "test_91b3e6de@example.com",
+      "lastName": "Miller",
+      "firstName": "Diana",
+      "middleName": "Laura"
+    }
+  }
+}

@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTE4VDE5OjMxOjA5LjU0MDYzNiIsInVzZXJfaWQiOiIxYTAyNDRlZS0zOGUwLTQ4ZDMtYjllNS02NWE2MDM2OGRlNDIifQ.WtBmhb6tzJlbrAJJLMOXoytY8PjAO0mN0tVDYvANHJc' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Stage simple end through.","courseId":"3fa8c799-285a-4b8b-a668-8bb1e02c766f","maxScore":71,"minScore":16,"orderIndex":5951,"description":"Give argue foreign author.","estimatedTime":"5 weeks"}'

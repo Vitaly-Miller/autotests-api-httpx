@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTE4VDE5OjMxOjA0LjQ1Mjk5NSIsInVzZXJfaWQiOiI0ZWU2MGMyYS0xOGMwLTQ1MDAtOTY4NS0yMmEzMzc0MmUxOGIifQ.FBI-NS1FfBtYpetdXo_oc3Y5U92ngx-BIEy7WUTvmHE' \
+  -H 'content-type: application/json' \
+  -d '{"title":"While least well no.","courseId":"fb7f023d-f41b-4fe9-ae8d-178c4d58d3ab","maxScore":91,"minScore":26,"orderIndex":5440,"description":"Ask magazine trade training not.","estimatedTime":"3 weeks"}'

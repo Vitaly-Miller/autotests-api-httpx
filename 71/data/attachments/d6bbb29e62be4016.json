@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "fb7f023d-f41b-4fe9-ae8d-178c4d58d3ab",
+    "title": "Prove magazine hard white we.",
+    "maxScore": 97,
+    "minScore": 21,
+    "description": "Form allow produce.",
+    "previewFile": {
+      "id": "ba04d91c-a9c7-4eb9-9030-0ec528274652",
+      "filename": "file_7206.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_7206.png"
+    },
+    "estimatedTime": "8 weeks",
+    "createdByUser": {
+      "id": "4ee60c2a-18c0-4500-9685-22a33742e18b",
+      "email": "test_7329fd6a@example.com",
+      "lastName": "Mcgee",
+      "firstName": "Stephanie",
+      "middleName": "Robert"
+    }
+  }
+}

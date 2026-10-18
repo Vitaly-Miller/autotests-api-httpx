@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "8522db36-fee2-42e7-aa3f-072570c7c1f5",
+    "title": "Whom put identify consumer wait benefit.",
+    "maxScore": 88,
+    "minScore": 3,
+    "description": "Collection vote learn see.",
+    "previewFile": {
+      "id": "69ae3258-b99d-46c7-97be-1a56d24a7c40",
+      "filename": "file_2691.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_2691.png"
+    },
+    "estimatedTime": "2 weeks",
+    "createdByUser": {
+      "id": "c8144c97-1351-4192-a943-a1b6c4832e5e",
+      "email": "test_89fa60ab@example.com",
+      "lastName": "Johnson",
+      "firstName": "Breanna",
+      "middleName": "Walter"
+    }
+  }
+}

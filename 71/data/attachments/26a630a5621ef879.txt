@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTE4VDE5OjMxOjA2LjAzNzE4NSIsInVzZXJfaWQiOiI2N2EyMDAwNi04NDUyLTQ0MWMtOGQ2Yy1lYTUwYWI4N2U1YjcifQ.2RvtDzbtk6JL_rUnZF3x9_IZQl_f4yHckJF-Eiufz7c' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Hold paper tree.","maxScore":57,"minScore":21,"description":"Other individual mention.","estimatedTime":"2 weeks","previewFileId":"da7ae47d-e159-46bc-9d1e-fbf20486489a","createdByUserId":"67a20006-8452-441c-8d6c-ea50ab87e5b7"}'

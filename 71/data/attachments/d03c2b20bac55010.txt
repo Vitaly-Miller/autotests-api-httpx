@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTE4VDE5OjMxOjEwLjgxNDk2OCIsInVzZXJfaWQiOiI5NjBlOTc2Mi1jNTkwLTQ2OTAtYWExNi1hNDNkN2U2ZGY5NDEifQ.tSqeiW7IkSeEYOD8_vGEgprOJi54OA3feXiVwe5PZIo' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Social dinner former give finally.","courseId":"286f07ab-adce-4cf4-a882-bb129db2daf8","maxScore":95,"minScore":10,"orderIndex":8211,"description":"Member scientist enter really born general thank.","estimatedTime":"2 weeks"}'

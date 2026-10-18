@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTE4VDE5OjMxOjA0Ljc3MDU3NSIsInVzZXJfaWQiOiI0ZWU2MGMyYS0xOGMwLTQ1MDAtOTY4NS0yMmEzMzc0MmUxOGIifQ.pNuZdUOSmEvPXioZJZqnV6AFTo5y5EeBBI2zjctAEMw' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Prove magazine hard white we.","maxScore":97,"minScore":21,"description":"Form allow produce.","estimatedTime":"8 weeks","previewFileId":"ba04d91c-a9c7-4eb9-9030-0ec528274652","createdByUserId":"4ee60c2a-18c0-4500-9685-22a33742e18b"}'

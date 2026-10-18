@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTE4VDE5OjMxOjA2Ljk5NDY5NCIsInVzZXJfaWQiOiJjODE0NGM5Ny0xMzUxLTQxOTItYTk0My1hMWI2YzQ4MzJlNWUifQ.0NCbiyWSTi-CMfa_89HD0ctZI5TktgcLkneiStrM__4' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Large imagine party actually.","courseId":"8522db36-fee2-42e7-aa3f-072570c7c1f5","maxScore":55,"minScore":13,"orderIndex":582,"description":"South occur kitchen book shake behind station.","estimatedTime":"9 weeks"}'

@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "bb0708d7-e5d6-4df9-9370-d1fbd47b8690",
+    "title": "Itself student open cost.",
+    "maxScore": 75,
+    "minScore": 20,
+    "description": "Peace would watch leader garden former.",
+    "previewFile": {
+      "id": "1fb7a72a-69e3-4f70-8a27-6ab071d080d2",
+      "filename": "file_1810.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_1810.png"
+    },
+    "estimatedTime": "2 weeks",
+    "createdByUser": {
+      "id": "259aa4af-1eec-4443-97e6-83c40ff0168f",
+      "email": "test_21277bcf@example.com",
+      "lastName": "Chandler",
+      "firstName": "Melody",
+      "middleName": "Melanie"
+    }
+  }
+}

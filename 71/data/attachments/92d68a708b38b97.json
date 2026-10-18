@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "1d60dc0d-b80a-4dab-8f95-4fc786e8c8d5",
+    "title": "Key role allow home war.",
+    "maxScore": 95,
+    "minScore": 8,
+    "description": "Citizen stuff car.",
+    "previewFile": {
+      "id": "cc91cfe3-dcc3-42f9-a546-d4a25d788653",
+      "filename": "file_6421.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_6421.png"
+    },
+    "estimatedTime": "2 weeks",
+    "createdByUser": {
+      "id": "710206ae-329e-4d09-9998-4e8521b4622a",
+      "email": "test_29e25383@example.com",
+      "lastName": "Brewer",
+      "firstName": "Bryan",
+      "middleName": "Ashley"
+    }
+  }
+}

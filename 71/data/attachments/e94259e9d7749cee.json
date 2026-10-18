@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "286f07ab-adce-4cf4-a882-bb129db2daf8",
+    "title": "Training season develop day.",
+    "maxScore": 65,
+    "minScore": 29,
+    "description": "Hotel school audience administration.",
+    "previewFile": {
+      "id": "099264a6-52bf-413f-8a5d-6b1db06f4592",
+      "filename": "file_2916.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_2916.png"
+    },
+    "estimatedTime": "4 weeks",
+    "createdByUser": {
+      "id": "960e9762-c590-4690-aa16-a43d7e6df941",
+      "email": "test_8e093b9d@example.com",
+      "lastName": "Phillips",
+      "firstName": "Matthew",
+      "middleName": "Hannah"
+    }
+  }
+}

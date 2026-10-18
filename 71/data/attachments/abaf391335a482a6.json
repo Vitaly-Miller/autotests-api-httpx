@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "f1f8ceca-0635-4129-990f-d07d827dafe7",
+    "title": "Traditional base into book.",
+    "maxScore": 71,
+    "minScore": 15,
+    "description": "Goal personal black all. Any force fill heart.",
+    "previewFile": {
+      "id": "675ae1c0-391d-4e56-b714-6a59488ef5b5",
+      "filename": "file_7778.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_7778.png"
+    },
+    "estimatedTime": "9 weeks",
+    "createdByUser": {
+      "id": "628a28d7-d10d-45ba-9ab0-601025152cc1",
+      "email": "test_2e14f883@example.com",
+      "lastName": "Figueroa",
+      "firstName": "Gregory",
+      "middleName": "Michael"
+    }
+  }
+}

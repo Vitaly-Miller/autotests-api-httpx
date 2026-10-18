@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTE4VDE5OjMwOjU5LjYzMzY2MiIsInVzZXJfaWQiOiIyNTlhYTRhZi0xZWVjLTQ0NDMtOTdlNi04M2M0MGZmMDE2OGYifQ.5K_4sm1O4SlDxdZDHSvUelh0PJQfcAB_zsh2TrHNXc0' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Itself student open cost.","maxScore":75,"minScore":20,"description":"Peace would watch leader garden former.","estimatedTime":"2 weeks","previewFileId":"1fb7a72a-69e3-4f70-8a27-6ab071d080d2","createdByUserId":"259aa4af-1eec-4443-97e6-83c40ff0168f"}'

@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/exercises/71ef4395-c502-4d1c-b284-cd4a59014e8f \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTE4VDE5OjMxOjEyLjA3NjI2MyIsInVzZXJfaWQiOiI2MjhhMjhkNy1kMTBkLTQ1YmEtOWFiMC02MDEwMjUxNTJjYzEifQ.K9WncG5cKXJI_Zt3D3U5ANIoPDqvM8YalTgwrc92dmY' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Beat American middle full here.","maxScore":77,"minScore":16,"orderIndex":6542,"description":"Dog wait she new space.","estimatedTime":"2 weeks"}'

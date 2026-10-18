@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTE4VDE5OjMxOjA1LjczOTA4OCIsInVzZXJfaWQiOiI2N2EyMDAwNi04NDUyLTQ0MWMtOGQ2Yy1lYTUwYWI4N2U1YjcifQ.wMFIOVgwBHDNBRfYZ04yObWVQz7egyR9cWNBJPLs-KE' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Century indeed stop travel author.","courseId":"3cb0a866-c13b-4171-b8dc-c073a3dcbbcd","maxScore":68,"minScore":20,"orderIndex":9535,"description":"Compare business early late table sort right arm.","estimatedTime":"5 weeks"}'

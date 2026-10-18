@@ -1,0 +1,4 @@
+         Request URL: http://localhost:8000/api/v1/exercises/2fa42a5d-93d1-4a79-bbf4-0f1515b4f167
+      Request Method: DELETE
+Response Status Code: 200-OK
+        Response URL: http://localhost:8000/api/v1/exercises/2fa42a5d-93d1-4a79-bbf4-0f1515b4f167
