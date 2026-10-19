@@ -1,7 +1,7 @@
 """
 Event Hooks (Callback functions)
 
-events_hooks — параметр httpx.Client, позволяющий выполнять дополнительные действия перед Request запроса или после Response
+events_hooks — an httpx.Client parameter that allows performing additional actions before a Request or after a Response
 """
 import httpx
 import allure
@@ -21,7 +21,7 @@ logger = get_logger('HTTPX-Client')                      # for <log_request_even
 # API-Reports
 def api_report_event_hook(response: httpx.Response):
     """
-    Callback-функция для event_hooks, прикрепляющая API-reports к Allure отчету
+    Callback function for event_hooks that attaches API reports to the Allure report
 
     - API Base (URL, Method, Status Code)
     - API Request Body =>
@@ -29,7 +29,7 @@ def api_report_event_hook(response: httpx.Response):
     - API Request Headers =>
     - API Response Headers <=
 
-    :param response: httpx.Response, переданный автоматически public/privet httpx-клиентом (builder)
+    :param response: httpx.Response, passed automatically by the public/private httpx client (builder)
         """
     response.read()                                      # Дочитываем тело ответа —
                                                          # — иначе .text/.json() недоступны внутри response event hook
@@ -73,9 +73,9 @@ def api_report_event_hook(response: httpx.Response):
 # cURL-command
 def curl_command_event_hook(response: httpx.Response):
     """
-    Callback-функция для event_hooks, прикрепляющая cURL-команду к Allure отчету
+    Callback function for event_hooks that attaches a cURL command to the Allure report
 
-    :param response: httpx.Response, переданный автоматически public/privet httpx-клиентом (builder)
+    :param response: httpx.Response, passed automatically by the public/private httpx client (builder)
     """
     allure.attach(                                       # Allure attachment:
         body=make_curl(response.request),                # - Прикрепляемый объект (функция)
@@ -88,7 +88,7 @@ def curl_command_event_hook(response: httpx.Response):
 # Log Request =>
 def log_request_event_hook(request: httpx.Request):
     """
-    Callback-функция для event_hooks, логирующая httpx.Request
+    Callback function for event_hooks that logs httpx.Request
 
     ex. Make GET-request to https://wwww.example.com
 
@@ -100,7 +100,7 @@ def log_request_event_hook(request: httpx.Request):
 # Log Response <=
 def log_response_event_hook(response: httpx.Response):
     """
-    Callback-функция для event_hooks, логирующая httpx.Response
+    Callback function for event_hooks that logs httpx.Response
 
     ex. Got response status code: 200-OK from https://wwww.example.com
 

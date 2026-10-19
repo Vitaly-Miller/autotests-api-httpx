@@ -1,6 +1,6 @@
 """
 Other Tools
-(⚠️В РАЗРАБОТКЕ)
+(⚠️WORK IN PROGRESS)
 """
 import httpx
 import inspect

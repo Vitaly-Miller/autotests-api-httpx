@@ -16,12 +16,12 @@ def validate_json_schema(instance: httpx.Response | dict, schema: type[pydantic.
     """
     JSON Schema validation
 
-    + Встроенный генератор (Pydantic-схема —> JSON-схема)
+    + Built-in generator (Pydantic schema —> JSON schema)
     + Allure attachments (Response JSON, JSON Schema)
 
-    :param instance: Объект для валидации <httpx.Response> или <dict>
-    :param schema: Ожидаемая Pydantic-schema, из которой будет генерирована JSON-схема
-    :raise: ValidationError - если instance ≠ Pydantic-schema
+    :param instance: Object to validate <httpx.Response> or <dict>
+    :param schema: Expected Pydantic-schema from which the JSON schema will be generated
+    :raise: ValidationError - if instance ≠ Pydantic-schema
     """
     with allure.step(f'Response JSON Schema validation ({schema.__name__})'):    # Allure step title + динамическое __имя__ Pydantic-схемы
         if isinstance(instance, httpx.Response):                                 # Проверка на тип данных <instance>

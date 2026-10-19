@@ -13,10 +13,10 @@ from schemas.users_schema import CreateUserSchema, GetUserMeResponseSchema
 @allure.title('◎ Users Client (Private) (fixture)')
 def users_client_private(create_user: CreateUserSchema) -> UsersClientPrivate:
     """
-    Фикстура получения экземпляра UsersClientPrivate() (c Авторизацией)
+    Fixture that provides a UsersClientPrivate() instance (with Authorization)
 
-    :param create_user: Вложенная Pydantic-фикстура создания пользователя
-    :return: Экземпляр UsersClientPrivate() (c Авторизацией)
+    :param create_user: Nested Pydantic fixture that creates a user
+    :return: UsersClientPrivate() instance (with Authorization)
     """
     client = get_users_client_private(create_user.auth_data)
     return client                                          # UsersClientPrivate()
@@ -28,9 +28,9 @@ def users_client_private(create_user: CreateUserSchema) -> UsersClientPrivate:
 @allure.title('▷ Get User Me (API-fixture)')
 def get_user_me_api(users_client_private: UsersClientPrivate) -> httpx.Response:
     """
-    API-фикстура получения данных текущего пользователя
+    API fixture that gets the current user's data
 
-    :param users_client_private: Фикстура вызова экземпляра UsersClientPrivate (с Авторизацией)
+    :param users_client_private: Fixture that provides a UsersClientPrivate instance (with Authorization)
     :return: httpx.Response
     """
     response = users_client_private.get_user_me_api()     # ▶ Запрос через API-метод
@@ -42,9 +42,9 @@ def get_user_me_api(users_client_private: UsersClientPrivate) -> httpx.Response:
 @allure.title('▷ Get User Me (Pydantic-fixture)')
 def get_user_me(users_client_private: UsersClientPrivate) -> GetUserMeResponseSchema:
     """
-    Pydantic-фикстура получения данных текущего пользователя
+    Pydantic fixture that gets the current user's data
 
-    :param users_client_private: Экземпляр UsersClientPrivate (c Авторизацией)
+    :param users_client_private: UsersClientPrivate instance (with Authorization)
     :return: Pydantic-model (GetUserMeResponseSchema)
     """
     response_model = users_client_private.get_user_me()    # ▶ Запрос через Pydantic-метод

@@ -59,16 +59,16 @@ def assert_request_method(actual: str, expected: str):
 @allure.step('Values of Actual {name} = Expected {name}')
 def assert_equal(actual: Any, expected: Any | str, name: str):
     """
-    Проверяет совпадение values двух объектов (actual_obj = expected_obj)
+    Checks that the values of two objects match (actual_obj = expected_obj)
 
     Example:
     response_model.user.email == create_user_data.email
-                             или
+                             or
     response_model.user.email == 'john_connor@email.com'
 
     :param actual:   Actual object
     :param expected: Expected object / 'string'
-    :param name:     Object Name (для вывода в ошибке)
+    :param name:     Object Name (for the error output)
     :raise AssertionError
     """
     error_message = \
@@ -83,7 +83,7 @@ def assert_equal(actual: Any, expected: Any | str, name: str):
 @allure.step('Values of {obj_1_name} ≠ {obj_2_name}')
 def assert_not_equal(obj_1: Any, obj_1_name: str, obj_2: Any, obj_2_name: str):
     """
-    Проверяет НЕсовпадение значений двух объектов (Object-1 ≠ Object-2)
+    Checks that the values of two objects do NOT match (Object-1 ≠ Object-2)
 
     Example:
     response_model.token.access_token != response_model.token.refresh_token
@@ -109,7 +109,7 @@ def assert_not_equal(obj_1: Any, obj_1_name: str, obj_2: Any, obj_2_name: str):
 @allure.step('Value of {name} is non-empty')
 def assert_is_value(actual: Any, name: str):
     """
-    Проверяет, что значение не пустое
+    Checks that the value is not empty
 
     :param actual: Actual object (ex.: response_model.user.id)
     :param name: Object name (for Assertion Error output)
@@ -128,7 +128,7 @@ def assert_is_value(actual: Any, name: str):
 @allure.step('Length of {obj_name} = {expected_length}')
 def assert_length(obj: Sized, expected_length: int, obj_name: str):
     """
-    Проверяет длину объекта (manual length)
+    Checks the length of an object (manual length)
 
     :param obj: Actual object (ex.: response_model.user.id)
     :param expected_length: Expected length (manual)
@@ -146,11 +146,11 @@ def assert_length(obj: Sized, expected_length: int, obj_name: str):
 # Actual Length = Expected Length
 def assert_length_equal(actual: Sized, expected: Sized, name: str):
     """
-    Сравнивает равенства длин двух объектов
+    Checks that the lengths of two objects are equal
 
     :param actual: Actual object (actual.field)
     :param expected: Expected object (expected.field)
-    :param name: Название объекта/поля
+    :param name: Object/field name
 
     :raise AssertionError
     """

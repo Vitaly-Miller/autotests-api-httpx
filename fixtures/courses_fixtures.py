@@ -15,11 +15,11 @@ from schemas.users_schema import CreateUserSchema
 @allure.title('◎ Courses Client (fixture)')
 def courses_client(create_user: CreateUserSchema) -> CoursesClient:
     """
-    Фикстура получения экземпляра CoursesClient() (с Авторизацией)
+    Fixture that provides a CoursesClient() instance (with Authorization)
 
 
-    :param create_user: Вложенная Pydantic-фикстура создания пользователя
-    :return: Экземпляр CoursesClient() (с Авторизацией)
+    :param create_user: Nested Pydantic fixture that creates a user
+    :return: CoursesClient() instance (with Authorization)
     """
     courses_client = get_courses_client(create_user.auth_data)
     return courses_client            # CoursesClient()
@@ -35,14 +35,14 @@ def create_course_api(
     create_file: CreateFileSchema
 ) -> httpx.Response:
     """
-    API-фикстура создания курса
+    API fixture that creates a course
 
-    ✨ДЕДУПЛИКАЦИЯ внутри одного теста — это фундаментальное свойство Pytest.
-    ✨Один и тоже User! Несмотря на то, что обе фикстуры создают пользователя.
+    ✨DEDUPLICATION within a single test is a fundamental Pytest feature.
+    ✨The same User! Even though both fixtures create a user.
 
-    :param courses_client: Вложенная Pydantic-фикстура получения экземпляра CoursesClient (с Авторизацией)
-    :param create_user:    Вложенная Pydantic-фикстура создания пользователя (✨тот же User ⬆︎)
-    :param create_file:    Вложенная Pydantic-фикстура создания файла
+    :param courses_client: Nested Pydantic fixture that provides a CoursesClient instance (with Authorization)
+    :param create_user:    Nested Pydantic fixture that creates a user (✨the same User ⬆︎)
+    :param create_file:    Nested Pydantic fixture that creates a file
     :return: httpx.Response
     """
     create_course_data = CreateCourseRequestSchema(  # Инициализация Pydantic-модели c default fake-data
@@ -62,14 +62,14 @@ def create_course(
     create_file: CreateFileSchema
 ) -> CreateCourseSchema:
     """
-    Pydantic-фикстура создания курса
+    Pydantic fixture that creates a course
 
-    ✨ДЕДУПЛИКАЦИЯ внутри одного теста — это фундаментальное свойство Pytest.
-    ✨Один и тоже User! Несмотря на то, что обе фикстуры создают пользователя.
+    ✨DEDUPLICATION within a single test is a fundamental Pytest feature.
+    ✨The same User! Even though both fixtures create a user.
 
-    :param courses_client: Вложенная Pydantic-фикстура получения экземпляра CoursesClient (с Авторизацией)
-    :param create_user:    Вложенная Pydantic-фикстура создания пользователя (✨тот же User ⬆︎)
-    :param create_file:    Вложенная Pydantic-фикстура создания файла
+    :param courses_client: Nested Pydantic fixture that provides a CoursesClient instance (with Authorization)
+    :param create_user:    Nested Pydantic fixture that creates a user (✨the same User ⬆︎)
+    :param create_file:    Nested Pydantic fixture that creates a file
     :return: Pydantic-model (CoursesFullSchema) ✨<Request + Response>
     """
     create_course_data = CreateCourseRequestSchema(  # Инициализация Pydantic-модели c default fake-data, кроме:...
@@ -87,10 +87,10 @@ def create_course(
 @allure.title('▷ Get Courses (API-fixture)')
 def get_courses_api(courses_client: CoursesClient, create_user: CreateUserSchema) -> httpx.Response:
     """
-    API-фикстура получения списка курсов по User-ID
+    API fixture that gets a list of courses by User-ID
 
-    :param courses_client: Встроенная Pydantic-фикстура получения экземпляра CoursesClient()
-    :param create_user: Встроенная Pydantic-фикстура создания пользователя
+    :param courses_client: Built-in Pydantic fixture that provides a CoursesClient() instance
+    :param create_user: Built-in Pydantic fixture that creates a user
     :return: httpx.Response
     """
     user_id_query_model = GetCoursesQuerySchema(userId=create_user.user_id)       # Pydantic-model

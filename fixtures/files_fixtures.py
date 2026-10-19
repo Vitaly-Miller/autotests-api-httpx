@@ -15,10 +15,10 @@ from schemas.files_schema import CreateFileRequestSchema, CreateFileSchema, GetF
 @allure.title('◎ Files Client (fixture)')
 def files_client(create_user: CreateUserSchema) -> FilesClient:
     """
-    Фикстура получения экземпляра FilesClient() (c Авторизацией)
+    Fixture that provides a FilesClient() instance (with Authorization)
 
-    :param create_user: Вложенная Pydantic-фикстура создания пользователя
-    :return: Экземпляр класса class FilesClient() (c Base URL + АВТОРИЗАЦИЯ)
+    :param create_user: Nested Pydantic fixture that creates a user
+    :return: Instance of class FilesClient() (with Base URL + AUTHORIZATION)
     """
     files_client = get_files_client(create_user.auth_data)
     return files_client                                           # FilesClient()
@@ -30,9 +30,9 @@ def files_client(create_user: CreateUserSchema) -> FilesClient:
 @allure.title('▷ Create File (API-fixture)')
 def create_file_api(files_client: FilesClient) -> httpx.Response:
     """
-    API-фикстура создания файла
+    API fixture that creates a file
 
-    :param files_client: Вложенная фикстура получения экземпляра FilesClient (c Авторизация)
+    :param files_client: Nested fixture that provides a FilesClient instance (with Authorization)
     :return: httpx.Response
     """
     create_file_data = CreateFileRequestSchema()                  # Инициализация Pydantic-модели c default fake-data
@@ -45,9 +45,9 @@ def create_file_api(files_client: FilesClient) -> httpx.Response:
 @allure.title('▷ Create File (Pydantic-fixture)')
 def create_file(files_client: FilesClient) -> CreateFileSchema:
     """
-    Pydantic-фикстура создания файла
+    Pydantic fixture that creates a file
 
-    :param files_client: Вложенная фикстура получения экземпляра FilesClient (c Авторизацией)
+    :param files_client: Nested fixture that provides a FilesClient instance (with Authorization)
     :return: Pydantic-model (CreateFileSchema) ✨<Request + Response>
     """
     create_file_data = CreateFileRequestSchema()                  # Инициализация Pydantic-model c default fake-data
@@ -63,9 +63,9 @@ def create_file(files_client: FilesClient) -> CreateFileSchema:
 @allure.title('▷ Create temporary File (Pydantic-fixture)')
 def create_file_temp(files_client: FilesClient) -> Generator[CreateFileSchema]:
     """
-    Pydantic-фикстура создания временного файла + удаления после теста
+    Pydantic fixture that creates a temporary file + deletes it after the test
 
-    :param files_client: Вложенная фикстура получения экземпляра FilesClient (c Авторизация)
+    :param files_client: Nested fixture that provides a FilesClient instance (with Authorization)
     :return: httpx.Response
     """
     create_file_data = CreateFileRequestSchema()                  # Инициализация Pydantic-модели c default fake-data
@@ -83,10 +83,10 @@ def create_file_temp(files_client: FilesClient) -> Generator[CreateFileSchema]:
 @allure.title('▷ Get File (API-fixture)')
 def get_file_api(files_client: FilesClient, create_file: CreateFileSchema) -> httpx.Response:
     """
-    API-фикстура получения файла по ID
+    API fixture that gets a file by ID
 
-    :param files_client: Вложенная фикстура получения экземпляра FilesClient (c Авторизацией)
-    :param create_file: Вложенная Pydantic-фикстура создания файла
+    :param files_client: Nested fixture that provides a FilesClient instance (with Authorization)
+    :param create_file: Nested Pydantic fixture that creates a file
     :return: httpx.Response
     """
     response = files_client.get_file_api(create_file.file_id)     # ▶ Запрос через API-метод
@@ -98,10 +98,10 @@ def get_file_api(files_client: FilesClient, create_file: CreateFileSchema) -> ht
 @allure.title('▷ Get File (Pydantic-fixture)')
 def get_file(files_client: FilesClient, create_file: CreateFileSchema) -> GetFileResponseSchema:
     """
-    Pydantic-фикстура получения файла by ID
+    Pydantic fixture that gets a file by ID
 
-    :param files_client: Вложенная фикстура получения экземпляра FilesClient (c Авторизацией)
-    :param create_file: Вложенная Pydantic-фикстура создания файла
+    :param files_client: Nested fixture that provides a FilesClient instance (with Authorization)
+    :param create_file: Nested Pydantic fixture that creates a file
     :return: Pydantic-model (GetFileResponseSchema)
     """
     response_model = files_client.get_file(create_file.file_id)   # ▶ Запрос через Pydantic-метод
@@ -114,10 +114,10 @@ def get_file(files_client: FilesClient, create_file: CreateFileSchema) -> GetFil
 @allure.title('▷ Delete File (Pydantic-fixture)')
 def delete_file_api(files_client: FilesClient, create_file: CreateFileSchema) -> httpx.Response:
     """
-    API-фикстура удаления файла
+    API fixture that deletes a file
 
-    :param files_client: Вложенная фикстура получения экземпляра FilesClient (c Авторизацией)
-    :param create_file: Вложенная Pydantic-фикстура создания файла
+    :param files_client: Nested fixture that provides a FilesClient instance (with Authorization)
+    :param create_file: Nested Pydantic fixture that creates a file
     :return: httpx.Response
     """
     response = files_client.delete_file_api(create_file.file_id)   # ▶ Запрос через API-метод

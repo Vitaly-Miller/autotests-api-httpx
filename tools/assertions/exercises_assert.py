@@ -42,7 +42,7 @@ def assert_create_exercise_response_non_empty(response: CreateExerciseResponseSc
     """
     Create Exercise Response data is non-empty
 
-    - Используется: assert_exercise_non_empty()
+    - Used by: assert_exercise_non_empty()
 
     :param response: Pydantic-model (CreateExerciseResponseSchema)
     :raise AssertionError
@@ -96,7 +96,7 @@ def assert_get_exercise_response_non_empty(response: GetExerciseResponseSchema):
     """
     Get Exercise Response data is non-empty
 
-    - Используется: assert_exercise_non_empty()
+    - Used by: assert_exercise_non_empty()
 
     :param response: Pydantic-model (GetExerciseResponseSchema)
     :raise AssertionError

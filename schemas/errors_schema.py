@@ -16,7 +16,7 @@ class ErrorSchema(BaseModel):
 #-----------------------------------------------------------------------------------------------------------------------
 class ErrorResponseSchema(BaseModel):
     """
-    Схема ошибки при создании сущности (User, File, Exercise, etc.)
+    Error schema for entity creation (User, File, Exercise, etc.)
 
     .
     """
@@ -25,7 +25,7 @@ class ErrorResponseSchema(BaseModel):
 #---------------------------------------------------- NON-exist entity -------------------------------------------------
 class NotFoundErrorResponseSchema(BaseModel):
     """
-    Схема Response-ошибки при попытке получения несуществующей сущности
+    Response error schema for an attempt to get a non-existent entity
 
    - User
    - File

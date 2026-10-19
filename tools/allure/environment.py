@@ -7,10 +7,10 @@ import platform
 #=======================================================================================================================
 def create_allure_environment_file() -> None:
     """
-    Создает файл environment.properties в папке allure-results
+    Creates the environment.properties file in the allure-results folder
 
-    Собирает информацию об окружении теста (base_url, timeout, ОС, версия Python, хост)
-    и записывает ее в формате key=value — Allure отобразит эти данные на вкладке "Environment"
+    Collects information about the test environment (base_url, timeout, OS, Python version, host)
+    and writes it in key=value format — Allure displays this data on the "Environment" tab
 
     :return: None
     """

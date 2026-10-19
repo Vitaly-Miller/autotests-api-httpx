@@ -18,7 +18,7 @@ class HTTPXClientConfig(BaseModel):
         """
         HttpUrl —> 'str'
 
-        Использовать, если base_url: HttpUrl (Pydantic-аннотация)
+        Use when base_url: HttpUrl (Pydantic annotation)
 
         :return: Base URL (string)
         """

@@ -18,10 +18,10 @@ from schemas.exercises_schema import (
 @allure.title('◎ Exercises Client (fixture)')
 def exercises_client(create_user: CreateUserSchema) -> ExercisesClient:
     """
-    Фикстура получения экземпляра ExercisesClient() (c Авторизацией)
+    Fixture that provides an ExercisesClient() instance (with Authorization)
 
-    :param create_user: Вложенная Pydantic-фикстура создания пользователя
-    :return: Экземпляр ExercisesClient() (c Авторизацией)
+    :param create_user: Nested Pydantic fixture that creates a user
+    :return: ExercisesClient() instance (with Authorization)
     """
     exercises_client = get_exercises_client(create_user.auth_data)
     return exercises_client                                # ExercisesClient()
@@ -33,10 +33,10 @@ def exercises_client(create_user: CreateUserSchema) -> ExercisesClient:
 @allure.title('▷ Create Exercise (API-fixture)')
 def create_exercise_api(exercises_client: ExercisesClient, create_course: CreateCourseSchema) -> httpx.Response:
     """
-    API-фикстура создания задания
+    API fixture that creates an exercise
 
-    :param exercises_client: Вложенная Pydantic-фикстура получения экземпляра ExercisesClient() (с Авторизацией)
-    :param create_course: Вложенная Pydantic-фикстура создания курса (для получения Course-ID)
+    :param exercises_client: Nested Pydantic fixture that provides an ExercisesClient() instance (with Authorization)
+    :param create_course: Nested Pydantic fixture that creates a course (to get the Course-ID)
     :return: httpx.Response
     """
     create_exercise_data = CreateExerciseRequestSchema(   # Pydantic-model c default fake-data
@@ -51,10 +51,10 @@ def create_exercise_api(exercises_client: ExercisesClient, create_course: Create
 @allure.title('▷ Create Exercise (Pydantic-fixture)')
 def create_exercise(exercises_client: ExercisesClient, create_course: CreateCourseSchema) -> CreateExerciseSchema:
     """
-    Pydantic-фикстура создания задания
+    Pydantic fixture that creates an exercise
 
-    :param exercises_client: Вложенная Pydantic-фикстура получения экземпляра ExercisesClient() (с Авторизацией)
-    :param create_course: Вложенная Pydantic-фикстура создания курса (для получения Course-ID)
+    :param exercises_client: Nested Pydantic fixture that provides an ExercisesClient() instance (with Authorization)
+    :param create_course: Nested Pydantic fixture that creates a course (to get the Course-ID)
     :return: CreateExerciseSchema ✨<Request + Response>
     """
     exercise_data = CreateExerciseRequestSchema(         # Pydantic-model c default fake-data
@@ -71,10 +71,10 @@ def create_exercise(exercises_client: ExercisesClient, create_course: CreateCour
 @allure.title('▷ Get Exercise (API-fixture)')
 def get_exercise_api(exercises_client: ExercisesClient, create_exercise: CreateExerciseSchema) -> httpx.Response:
     """
-    API-фикстура получения Exercise по Exercise-ID
+    API fixture that gets an Exercise by Exercise-ID
 
-    :param exercises_client: Вложенная Pydantic-фикстура получения экземпляра ExercisesClient() (с Авторизацией)
-    :param create_exercise: Вложенная Pydantic-фикстура создания задания (для с Exercise-ID)
+    :param exercises_client: Nested Pydantic fixture that provides an ExercisesClient() instance (with Authorization)
+    :param create_exercise: Nested Pydantic fixture that creates an exercise (to get the Exercise-ID)
     :return: httpx.Response
     """
     response = exercises_client.get_exercise_api(create_exercise.exercise_id)     # ▶ Запрос через API-метод
@@ -86,10 +86,10 @@ def get_exercise_api(exercises_client: ExercisesClient, create_exercise: CreateE
 @allure.title('▷ Get Exercise (Pydantic-fixture)')
 def get_exercise(exercises_client: ExercisesClient, create_exercise: CreateExerciseSchema) -> GetExerciseResponseSchema:
     """
-    Pydantic-фикстура получения Exercise по Exercise-ID
+    Pydantic fixture that gets an Exercise by Exercise-ID
 
-    :param exercises_client: Вложенная Pydantic-фикстура получения экземпляра ExercisesClient() (с Авторизацией)
-    :param create_exercise: Вложенная Pydantic-фикстура создания задания (для получения Exercise-ID)
+    :param exercises_client: Nested Pydantic fixture that provides an ExercisesClient() instance (with Authorization)
+    :param create_exercise: Nested Pydantic fixture that creates an exercise (to get the Exercise-ID)
     :return: Pydantic-model (GetExerciseResponseSchema)
     """
     response_model = exercises_client.get_exercise(create_exercise.exercise_id)   # ▶ Запрос через Pydantic-метод
@@ -102,10 +102,10 @@ def get_exercise(exercises_client: ExercisesClient, create_exercise: CreateExerc
 @allure.title('▷ Get Exercises (API-fixture)')
 def get_exercises_api(exercises_client: ExercisesClient, create_course: CreateCourseSchema) -> httpx.Response:
     """
-    API-фикстура получения списка Exercises by Course-ID
+    API fixture that gets a list of Exercises by Course-ID
 
-    :param exercises_client: Вложенная Pydantic-фикстура получения экземпляра ExercisesClient() (с Авторизацией)
-    :param create_course: Вложенная Pydantic-фикстура создания курса (для получения Course-ID)
+    :param exercises_client: Nested Pydantic fixture that provides an ExercisesClient() instance (with Authorization)
+    :param create_course: Nested Pydantic fixture that creates a course (to get the Course-ID)
     :return: httpx.Response
     """
     course_id_query_model = GetExercisesQuerySchema(courseId=create_course.course_id) # Pydantic-model
@@ -120,10 +120,10 @@ def get_exercises_api(exercises_client: ExercisesClient, create_course: CreateCo
 @allure.title('▷ Update Exercise (API-fixture)')
 def update_exercise_api(exercises_client: ExercisesClient, create_exercise: CreateExerciseSchema) -> httpx.Response:
     """
-    API-фикстура обновления Exercise by ID
+    API fixture that updates an Exercise by ID
 
-    :param exercises_client: Вложенная Pydantic-фикстура получения экземпляра ExercisesClient() (с Авторизацией)
-    :param create_exercise: Вложенная Pydantic-фикстура создания задания (для получения Exercise-ID)
+    :param exercises_client: Nested Pydantic fixture that provides an ExercisesClient() instance (with Authorization)
+    :param create_exercise: Nested Pydantic fixture that creates an exercise (to get the Exercise-ID)
     :return: httpx.Response
     """
     new_exercise_data = UpdateExerciseRequestSchema()         # Pydantic-model c fake-data (Update ALL)
@@ -139,10 +139,10 @@ def update_exercise_api(exercises_client: ExercisesClient, create_exercise: Crea
 @allure.title('▷ Update Exercise (Pydantic-fixture)')
 def update_exercise(exercises_client: ExercisesClient, create_exercise: CreateExerciseSchema) -> UpdateExerciseResponseSchema:
     """
-    Pydantic-фикстура обновления Exercise by ID
+    Pydantic fixture that updates an Exercise by ID
 
-    :param exercises_client: Вложенная Pydantic-фикстура получения экземпляра ExercisesClient() (с Авторизацией)
-    :param create_exercise: Вложенная Pydantic-фикстура создания задания (для получения Exercise-ID)
+    :param exercises_client: Nested Pydantic fixture that provides an ExercisesClient() instance (with Authorization)
+    :param create_exercise: Nested Pydantic fixture that creates an exercise (to get the Exercise-ID)
     :return: httpx.Response
     """
     new_exercise_data = UpdateExerciseRequestSchema()        # Pydantic-model c fake-data (Update ALL)
@@ -159,10 +159,10 @@ def update_exercise(exercises_client: ExercisesClient, create_exercise: CreateEx
 @allure.title('▷ Delete Exercise (API-fixture)')
 def delete_exercise_api(exercises_client: ExercisesClient, create_exercise: CreateExerciseSchema) -> httpx.Response:
     """
-    API-фикстура удаления Exercise by ID
+    API fixture that deletes an Exercise by ID
 
-    :param exercises_client: Вложенная Pydantic-фикстура получения экземпляра ExercisesClient() (с Авторизацией)
-    :param create_exercise: Вложенная Pydantic-фикстура создания задания (для получения Exercise-ID)
+    :param exercises_client: Nested Pydantic fixture that provides an ExercisesClient() instance (with Authorization)
+    :param create_exercise: Nested Pydantic fixture that creates an exercise (to get the Exercise-ID)
     :return: httpx.Response
     """
     response = exercises_client.delete_exercise_api(create_exercise.exercise_id)   # ▶ Запрос через API-метод

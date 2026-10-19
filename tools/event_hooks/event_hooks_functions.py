@@ -1,7 +1,7 @@
 """
 Event Hooks Functions
 
-events_hooks — параметр httpx.Client, позволяющий выполнять дополнительные действия перед Request-запроса или после Response-ответа
+events_hooks — an httpx.Client parameter that allows performing additional actions before a Request or after a Response
 """
 import httpx
 import json
@@ -11,7 +11,7 @@ import shlex
 # Get API Base <=>
 def get_api_base(response: httpx.Response) -> str:
     """
-    Функция для получения API-Base (URL, Method, Status Code) при выполнении HTTP-запроса
+    Function that gets the API Base (URL, Method, Status Code) when making an HTTP request
 
     :param response: response: httpx.Response
     :return: api_base: API-Base (URL, Method, Status Code)
@@ -27,7 +27,7 @@ def get_api_base(response: httpx.Response) -> str:
 # Get API Request Body =>
 def get_api_request_body(response: httpx.Response):
     """
-    Функция для получения API Request Body (pretty) при выполнении HTTP-запроса
+    Function that gets the API Request Body (pretty) when making an HTTP request
 
     :param response: httpx.Response
     :return: API Request Body =>
@@ -48,7 +48,7 @@ def get_api_request_body(response: httpx.Response):
 # API Response Body <=
 def get_api_response_body(response: httpx.Response):
     """
-    Функция для получения API Response Body (pretty) при выполнении HTTP-запроса
+    Function that gets the API Response Body (pretty) when making an HTTP request
 
     :param response: httpx.Response
     :return: API Response Body <=
@@ -67,7 +67,7 @@ def get_api_response_body(response: httpx.Response):
 # Get API Request Headers =>
 def get_api_request_headers(response: httpx.Response):
     """
-    Функция для получения API Request Headers (pretty) при выполнении HTTP-запроса
+    Function that gets the API Request Headers (pretty) when making an HTTP request
 
     :param response: httpx.Response
     :return: API Request Headers =>
@@ -84,7 +84,7 @@ def get_api_request_headers(response: httpx.Response):
 # Get API Response Headers <=
 def get_api_response_headers(response: httpx.Response):
     """
-    Функция для получения API Response Headers (pretty) при выполнении HTTP-запроса
+    Function that gets the API Response Headers (pretty) when making an HTTP request
 
     :param response: httpx.Response
     :return: API Response Headers <=
@@ -102,18 +102,18 @@ def get_api_response_headers(response: httpx.Response):
 # cURL-command generator (без транспортных заголовков)
 def make_curl(request: httpx.Request, all_headers: bool = False) -> str:
     """
-    Функция генерирует команду cURL при выполнении HTTP-запроса
+    Function that generates a cURL command when making an HTTP request
 
     - Request Method
     - Request URL
-    - ⚠️БЕЗ ТРАНСПОРТНЫХ ЗАГОЛОВКОВ
+    - ⚠️WITHOUT TRANSPORT HEADERS
     - accept-encoding: (header)
-    - Request Body (если есть)
+    - Request Body (if any)
 
 
-    :param request: HTTP-запрос, из которого будет сформирована cURL-command
-    :param all_headers: Нужны ли автоматически вычисляемые транспортные заголовки в cURL команде (False - default)
-    :return: Строка с cURL-command
+    :param request: HTTP request from which the cURL command will be built
+    :param all_headers: Whether to include auto-computed transport headers in the cURL command (False - default)
+    :return: String with the cURL command
     """
     # HTTP-заголовки, которые не нужно переносить в cURL.
     # Они автоматически рассчитываются самим HTTP-клиентом (curl/Postman).
@@ -152,12 +152,12 @@ def make_curl(request: httpx.Request, all_headers: bool = False) -> str:
 # Log Request =>
 def get_log_request(request: httpx.Request) -> str:
     """
-    Функция формирует строку для лога с данными из httpx.Request (Method + Request-URL)
+    Function that builds a log string with data from httpx.Request (Method + Request-URL)
 
     ex. GET-request to https://wwww.example.com
 
-    :param request: httpx.Request, из которого будет сформирована строка с данными для лога
-    :return: Сформированная строка с данными для Request-лога (Method + Request-URL)
+    :param request: httpx.Request from which the log string will be built
+    :return: Built string with data for the Request log (Method + Request-URL)
     """
     log_request = f'{request.method}-request to {request.url}'   # Формируем сроку c данными для лога
     return log_request
@@ -166,12 +166,12 @@ def get_log_request(request: httpx.Request) -> str:
 # Log Response <=
 def get_log_response(response: httpx.Response) -> str:
     """
-     Функция формирует строку для лога с данными из httpx.Request (Status code + Response-URL)
+     Function that builds a log string with data from httpx.Response (Status code + Response-URL)
 
      ex. Status code: 200-OK from https://wwww.example.com
 
-     :param response: httpx.Response, из которого будет сформирована строка с данными для лога
-     :return: Сформированная строка с данными для Response-лога (Status code + Response-URL)
+     :param response: httpx.Response from which the log string will be built
+     :return: Built string with data for the Response log (Status code + Response-URL)
      """
     log_response = f'Status code: {response.status_code}-{response.reason_phrase} from {response.url}' # Формируем сроку c данными для лога
     return log_response

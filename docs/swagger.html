@@ -1,21 +1,21 @@
 <!DOCTYPE html>
-<!-- Статическая страница Swagger UI для GitHub Pages.
-     Спецификация (openapi.json) выгружается с тестового сервера в CI (см. .github/workflows/tests.yml)
-     и публикуется рядом с этой страницей. -->
+<!-- Static Swagger UI page for GitHub Pages.
+     The spec (openapi.json) is exported from the test server in CI (see .github/workflows/tests.yml)
+     and published next to this page. -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>API Test Server — Swagger UI</title>
-    <link rel="stylesheet" href="https://unpkg.com/swagger-ui-dist@5/swagger-ui.css">  <!-- Стили Swagger UI (CDN) -->
+    <link rel="stylesheet" href="https://unpkg.com/swagger-ui-dist@5/swagger-ui.css">  <!-- Swagger UI styles (CDN) -->
 </head>
 <body>
-<div id="swagger-ui"></div>                                                            <!-- Контейнер, в который рендерится UI -->
-<script src="https://unpkg.com/swagger-ui-dist@5/swagger-ui-bundle.js"></script>       <!-- Скрипт Swagger UI (CDN) -->
+<div id="swagger-ui"></div>                                                            <!-- Container the UI is rendered into -->
+<script src="https://unpkg.com/swagger-ui-dist@5/swagger-ui-bundle.js"></script>       <!-- Swagger UI script (CDN) -->
 <script>
     window.ui = SwaggerUIBundle({
-        url: 'openapi.json',      // OpenAPI-спецификация (лежит рядом на GitHub Pages)
-        dom_id: '#swagger-ui'     // Куда рендерить
+        url: 'openapi.json',                                // OpenAPI spec (located next to this page on GitHub Pages)
+        dom_id: '#swagger-ui'                               // Where to render
     });
 </script>
 </body>

@@ -13,9 +13,9 @@ from schemas.users_schema import CreateUserSchema, CreateUserRequestSchema
 @allure.title('◎ Users Client (Public) (fixture)')
 def users_client_public() -> UsersClientPublic:
     """
-    Фикстура получения экземпляра UsersClientPublic() (c Base URL)
+    Fixture that provides a UsersClientPublic() instance (with Base URL)
 
-    :return: Экземпляр UsersClientPublic() (c Base URL)
+    :return: UsersClientPublic() instance (with Base URL)
     """
     users_client_public = get_users_client_public()
     return users_client_public     # UsersClientPublic()
@@ -27,9 +27,9 @@ def users_client_public() -> UsersClientPublic:
 @allure.title('▷ Create User (API-fixture)')
 def create_user_api(users_client_public: UsersClientPublic) -> httpx.Response:
     """
-    API-фикстура создания пользователя
+    API fixture that creates a user
 
-    :param users_client_public: Вложенная фикстура получения экземпляра UsersClientPublic (с Base URL)
+    :param users_client_public: Nested fixture that provides a UsersClientPublic instance (with Base URL)
     :return: httpx.Response
     """
     create_user_data = CreateUserRequestSchema()                      # Инициализация Pydantic-model с default fake-data
@@ -43,9 +43,9 @@ def create_user_api(users_client_public: UsersClientPublic) -> httpx.Response:
 @allure.title('▷ Create User (Pydantic-fixture)')
 def create_user(users_client_public: UsersClientPublic) -> CreateUserSchema:
     """
-    Pydantic-фикстура создания пользователя
+    Pydantic fixture that creates a user
 
-    :param users_client_public: Вложенная фикстура получения экземпляра UsersClientPublic (с Base URL)
+    :param users_client_public: Nested fixture that provides a UsersClientPublic instance (with Base URL)
     :return: Pydantic-model (CreateUserSchema) ✨<Request + Response>
     """
     create_user_data = CreateUserRequestSchema()                                               # Инициализация модели с Default fake-data нового пользователя по Pydantic-схеме

@@ -14,9 +14,9 @@ from schemas.users_schema import CreateUserSchema
 @allure.title('◎ Auth Client (fixture)')
 def auth_client() -> AuthClient:
     """
-    Фикстура получения экземпляра AuthClient() (c Base URL)
+    Fixture that provides an AuthClient() instance (with Base URL)
 
-    :return: Экземпляр AuthClient() (c Base URL)
+    :return: AuthClient() instance (with Base URL)
     """
     auth_client = get_auth_client()
     return auth_client                                          # AuthClient()
@@ -28,10 +28,10 @@ def auth_client() -> AuthClient:
 @allure.title('▷ Authenticate User (API-fixture)')
 def auth_api(create_user: CreateUserSchema, auth_client: AuthClient) -> httpx.Response:
     """
-    API-фикстура авторизации пользователя (Log in)
+    API fixture for user authorization (Log in)
 
-    :param create_user: Вложенная Pydantic-фикстура создания пользователя
-    :param auth_client: Вложенная фикстура получения экземпляра AuthClient (c Base URL)
+    :param create_user: Nested Pydantic fixture that creates a user
+    :param auth_client: Nested fixture that provides an AuthClient instance (with Base URL)
     :return: httpx.Response
     """
     response = auth_client.login_api(create_user.auth_data)     # ▶ Запрос через API-метод
@@ -43,10 +43,10 @@ def auth_api(create_user: CreateUserSchema, auth_client: AuthClient) -> httpx.Re
 @allure.title('▷ Authenticate User (Pydantic-fixture)')
 def auth(create_user: CreateUserSchema, auth_client: AuthClient) -> AuthResponseSchema:
     """
-    Pydantic-фикстура авторизации пользователя (Log in)
+    Pydantic fixture for user authorization (Log in)
 
-    :param create_user: Вложенная Pydantic-фикстура создания пользователя
-    :param auth_client: Вложенная фикстура получения экземпляра AuthClient (c Base URL)
+    :param create_user: Nested Pydantic fixture that creates a user
+    :param auth_client: Nested fixture that provides an AuthClient instance (with Base URL)
     :return: Pydantic-model (AuthResponseSchema)
     """
     response_model = auth_client.login_pydantic(create_user.auth_data)   # ▶ Запрос через Pydantic-метод

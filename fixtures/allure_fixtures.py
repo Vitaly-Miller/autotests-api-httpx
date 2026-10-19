@@ -9,7 +9,7 @@ from tools.allure.environment import create_allure_environment_file
 @pytest.fixture(scope='session', autouse=True)   # Автоматически запускается на каждую тестовую сессию
 def save_allure_environment_file():
     """
-    Autouse-фикстура создает файл <environment.properties> в папке <allure-results>
+    Autouse fixture that creates the <environment.properties> file in the <allure-results> folder
 
     :return:
     """

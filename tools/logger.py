@@ -6,10 +6,10 @@ import logging
 #=======================================================================================================================
 def get_logger(name: str, console: bool = False) -> logging.Logger:
     """
-    Создает и настраивает Logger by logging
+    Creates and configures a Logger via logging
 
     :param name: Logger name
-    :param console: Выводить ли log в консоль (default = False)
+    :param console: Whether to output the log to the console (default = False)
     :return: logging.Logger
     """
     # 1.Logger

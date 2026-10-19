@@ -32,8 +32,8 @@ def assert_error_response(actual: ErrorResponseSchema, expected: ErrorResponseSc
     """
     Validation Error Response
 
-    - Сравнивает длину (количество полей) ключа "detail:"
-    - Сравнивает values (значения) ключа "detail:"
+    - Compares the length (number of fields) of the "detail:" key
+    - Compares the values of the "detail:" key
 
     :param actual: Pydantic-model (ErrorResponseSchema)
     :param expected: Pydantic-model (ErrorResponseSchema)
@@ -47,9 +47,9 @@ def assert_error_response(actual: ErrorResponseSchema, expected: ErrorResponseSc
 @allure.step('Validation Not Found Error Response')
 def assert_not_found_error_response(actual: NotFoundErrorResponseSchema, expected: NotFoundErrorResponseSchema):
     """
-    Validation Not Found Error Response (при попытке получить несуществующую сущность)
+    Validation Not Found Error Response (when trying to get a non-existent entity)
 
-    Сравнивает values (значения) ключа "detail:"
+    Compares the values of the "detail:" key
 
     :param actual: Pydantic-model (NotFoundErrorResponseSchema)
     :param expected: Pydantic-model (NotFoundErrorResponseSchema)
