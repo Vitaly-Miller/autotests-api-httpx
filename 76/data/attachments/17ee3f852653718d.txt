@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTE5VDIzOjA4OjEwLjIzOTk5NCIsInVzZXJfaWQiOiJjMmExNzllMC04ZTQxLTQ0ZTEtYTI1OS05OTIyMjM3Njc3NjIifQ.j4SMFfLeKz22Hjqym4g6xJvY2aS46whSusA6GnnSKLI' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Try turn your attack another.","courseId":"166b0637-1df2-46cd-8b41-6dbb29248958","maxScore":51,"minScore":10,"orderIndex":3993,"description":"Cup ready relate understand large.","estimatedTime":"4 weeks"}'

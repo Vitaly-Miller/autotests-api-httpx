@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTE5VDIzOjA4OjE1LjIyOTg1MyIsInVzZXJfaWQiOiJiODYxMTNlNy0yYmUzLTRlMDQtYTc2Yy1iMGUwMmY3NTk0NWYifQ.NQj382n058wdZpIF5FKFJ1fdw3_oYcF7zYZEpqqWMyU' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Read air instead wind last.","maxScore":52,"minScore":5,"description":"Tell clear according.","estimatedTime":"5 weeks","previewFileId":"fc03eac4-d256-4fd5-9c7b-0ec7fa9f6348","createdByUserId":"b86113e7-2be3-4e04-a76c-b0e02f75945f"}'

@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "281295c4-d3b2-4952-a362-23997a187756",
+    "title": "Two glass go organization summer film.",
+    "maxScore": 51,
+    "minScore": 3,
+    "description": "Across side your bit.",
+    "previewFile": {
+      "id": "c972dca1-9998-4c0f-b3d4-c5174b35f706",
+      "filename": "file_2763.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_2763.png"
+    },
+    "estimatedTime": "9 weeks",
+    "createdByUser": {
+      "id": "90a457a6-0e10-4a3c-85c8-abd19eeb8f7b",
+      "email": "test_48a03ac0@example.com",
+      "lastName": "Rios",
+      "firstName": "Kelly",
+      "middleName": "Kristen"
+    }
+  }
+}

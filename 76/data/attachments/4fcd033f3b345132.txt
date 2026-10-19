@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTE5VDIzOjA4OjE1LjAxMDMwNyIsInVzZXJfaWQiOiJiODYxMTNlNy0yYmUzLTRlMDQtYTc2Yy1iMGUwMmY3NTk0NWYifQ.Gu5YjCX3SZ1cLKJEIvQ0-CuXVHKdxN46SpQyTWGumLw' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Analysis professor hope eye.","courseId":"59db695c-cec3-44dc-88a4-dc4f301cf01b","maxScore":91,"minScore":27,"orderIndex":7064,"description":"Travel foreign job few.","estimatedTime":"9 weeks"}'

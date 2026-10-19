@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTE5VDIzOjA4OjE1Ljk3NTI4NSIsInVzZXJfaWQiOiI1ZWM1ZWM1ZS0yZGI2LTRjYTAtYWM4ZS1mY2I4NTllMWQ4ZWYifQ.nNBOJm_Rra5pl-PvNBjS3zFX252Gy2LJ50sBSeFKUmA' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Goal wonder stage.","courseId":"67578472-becc-4675-b605-7c8098080aca","maxScore":50,"minScore":24,"orderIndex":8959,"description":"Stage too study lot.","estimatedTime":"5 weeks"}'

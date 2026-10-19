@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTE5VDIzOjA4OjE0LjA3MjA5NSIsInVzZXJfaWQiOiI4NWU5MzdkMi01Nzk4LTQwYzEtYjZkZi00Y2YxMzhiMGIzYzMifQ.i92JjdG3H1rRLl1X9wy6PxSZQ1FLbrnETBW-in5-kNg' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Team camera pattern course any student laugh.","courseId":"f11fffba-80a2-4b0d-ae8e-8124550dc962","maxScore":56,"minScore":18,"orderIndex":1266,"description":"Happen page you them left could page.","estimatedTime":"6 weeks"}'

@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/exercises/9768a325-8210-4147-9696-27c0c4a8d4d6 \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTE5VDIzOjA4OjE1LjAxMDMwNyIsInVzZXJfaWQiOiJiODYxMTNlNy0yYmUzLTRlMDQtYTc2Yy1iMGUwMmY3NTk0NWYifQ.Gu5YjCX3SZ1cLKJEIvQ0-CuXVHKdxN46SpQyTWGumLw' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Reduce my effect morning teacher.","maxScore":90,"minScore":15,"orderIndex":21,"description":"To total why when.","estimatedTime":"7 weeks"}'

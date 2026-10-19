@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTE5VDIzOjA4OjEzLjEyMTE4MiIsInVzZXJfaWQiOiJhZWI3N2RhNC1jMTdiLTQwNjQtODBlYS02ZTdkNDkwOGMzMjMifQ.omUmvXE-iVy4Tt9DIyrFMdXw8qwZVPlvOP0xO349b7o' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Education significant protect.","courseId":"73eb058f-9f32-4b5a-ae3b-64a834c1c020","maxScore":70,"minScore":2,"orderIndex":5369,"description":"Rate happy on soldier. Push should around rate.","estimatedTime":"6 weeks"}'

@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTE5VDIzOjA4OjEyLjM3OTQ5NCIsInVzZXJfaWQiOiI0NzViNjgzYi1mYWQ1LTRjZmYtYTcxMi03N2FkZGI0M2FhMzMifQ.qKwnGIfSUPd3HG8vV63eM7MXnBmEc8pAYQ7Ak4eiQQ0' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Maybe player everything rate add.","maxScore":71,"minScore":25,"description":"Special matter paper turn consumer.","estimatedTime":"5 weeks","previewFileId":"c01bce3b-a859-4725-bfef-a6050a7d6532","createdByUserId":"475b683b-fad5-4cff-a712-77addb43aa33"}'

@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTE5VDIzOjA4OjA5LjQ5MTkwNCIsInVzZXJfaWQiOiI5MGE0NTdhNi0wZTEwLTRhM2MtODVjOC1hYmQxOWVlYjhmN2IifQ.s1mPWqM25SQmzeDIiwklc_PRsTBZ8pQXbTuaXjzyDmw' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Two glass go organization summer film.","maxScore":51,"minScore":3,"description":"Across side your bit.","estimatedTime":"9 weeks","previewFileId":"c972dca1-9998-4c0f-b3d4-c5174b35f706","createdByUserId":"90a457a6-0e10-4a3c-85c8-abd19eeb8f7b"}'

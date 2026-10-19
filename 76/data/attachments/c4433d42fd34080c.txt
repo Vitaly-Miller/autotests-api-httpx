@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTE5VDIzOjA4OjA3LjA3NDA4MyIsInVzZXJfaWQiOiI1NTM0YjU2MC05NmQzLTRjMWUtOGM5YS0zMGYwMWQzMzZkNTEifQ.yKI0nzwqlwffULtti8KAMDWnYm-LT-ENUz-BVFQIk5s' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Quality through all story service.","maxScore":66,"minScore":13,"description":"Through three growth his.","estimatedTime":"9 weeks","previewFileId":"efbbfe82-f134-4229-a556-9a7df583569f","createdByUserId":"5534b560-96d3-4c1e-8c9a-30f01d336d51"}'

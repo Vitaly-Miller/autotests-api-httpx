@@ -1,0 +1,25 @@
+{
+  "courses": [
+    {
+      "id": "7a592a52-c261-4140-9aca-38c64111fc18",
+      "title": "Difficult money he.",
+      "maxScore": 92,
+      "minScore": 27,
+      "description": "Glass network member say guess.",
+      "previewFile": {
+        "id": "a549cd3c-6846-4f71-9f17-dfa34a0c8e20",
+        "filename": "file_2464.png",
+        "directory": "Uploaded",
+        "url": "http://localhost:8000/static/Uploaded/file_2464.png"
+      },
+      "estimatedTime": "8 weeks",
+      "createdByUser": {
+        "id": "2cb3a5f8-affa-4628-81fe-5ffea089745d",
+        "email": "test_5afc09f0@example.com",
+        "lastName": "Grimes",
+        "firstName": "Kirk",
+        "middleName": "Russell"
+      }
+    }
+  ]
+}

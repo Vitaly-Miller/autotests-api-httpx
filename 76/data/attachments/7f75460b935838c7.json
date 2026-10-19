@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "0898b1e7-be6c-4390-a71b-5b27510208a9",
+    "title": "Instead skill blood.",
+    "maxScore": 59,
+    "minScore": 13,
+    "description": "Hope collection society customer answer position.",
+    "previewFile": {
+      "id": "b10bc57e-9719-4cbf-b214-cf260e746605",
+      "filename": "file_4162.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_4162.png"
+    },
+    "estimatedTime": "8 weeks",
+    "createdByUser": {
+      "id": "fb3fe308-813d-4abd-b950-96c3850b7074",
+      "email": "test_7c48985a@example.com",
+      "lastName": "Cunningham",
+      "firstName": "Matthew",
+      "middleName": "Lindsey"
+    }
+  }
+}

@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTE5VDIzOjA4OjEyLjE1NTgxNSIsInVzZXJfaWQiOiI0NzViNjgzYi1mYWQ1LTRjZmYtYTcxMi03N2FkZGI0M2FhMzMifQ.Mh1sVqFcDj5V1o3fKmV8DJp4keMJdDTFna9_lJL1zu8' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Prove pass sense bit old.","courseId":"fcf14961-0b4d-41af-8d2d-54b11f98ae1a","maxScore":78,"minScore":4,"orderIndex":8723,"description":"Wife week cover popular home.","estimatedTime":"8 weeks"}'

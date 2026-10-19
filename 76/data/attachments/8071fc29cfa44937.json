@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "3b1be612-27f2-4dbe-81e8-98b2827c20c3",
+    "title": "Pick individual future.",
+    "maxScore": 60,
+    "minScore": 25,
+    "description": "Up employee gas dark bit.",
+    "previewFile": {
+      "id": "4594ae3d-5483-4fc6-8081-0c5da6dd6f3d",
+      "filename": "file_3975.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_3975.png"
+    },
+    "estimatedTime": "5 weeks",
+    "createdByUser": {
+      "id": "39423c0d-0785-40af-a03a-49ddbb6cc8cf",
+      "email": "test_1ed503a3@example.com",
+      "lastName": "Brock",
+      "firstName": "Karen",
+      "middleName": "Carol"
+    }
+  }
+}

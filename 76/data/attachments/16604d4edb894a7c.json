@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "65f44a4c-da7b-4ea2-a8e9-25f3a28ef6be",
+    "title": "Tv her require.",
+    "maxScore": 84,
+    "minScore": 26,
+    "description": "Early agency nearly.",
+    "previewFile": {
+      "id": "15bfcac9-eef2-4973-85b8-a38e0d72ac43",
+      "filename": "file_8171.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_8171.png"
+    },
+    "estimatedTime": "7 weeks",
+    "createdByUser": {
+      "id": "69c118d4-c0d8-4126-b1d2-06ecccd96f04",
+      "email": "test_421fc0be@example.com",
+      "lastName": "Mitchell",
+      "firstName": "Elaine",
+      "middleName": "James"
+    }
+  }
+}

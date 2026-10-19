@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTE5VDIzOjA4OjE0LjI5MzI4MyIsInVzZXJfaWQiOiI4NWU5MzdkMi01Nzk4LTQwYzEtYjZkZi00Y2YxMzhiMGIzYzMifQ.0eUWPQ98p5nAX81IceJh8dOG9JcEwzPkyoSeWmAQxw4' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Build management customer cup store character.","maxScore":100,"minScore":8,"description":"Range including stage hard.","estimatedTime":"6 weeks","previewFileId":"db856e1b-7af3-4008-9af1-cf72592f92b3","createdByUserId":"85e937d2-5798-40c1-b6df-4cf138b0b3c3"}'

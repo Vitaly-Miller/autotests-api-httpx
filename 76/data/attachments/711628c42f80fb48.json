@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "166b0637-1df2-46cd-8b41-6dbb29248958",
+    "title": "Economic Congress expert five.",
+    "maxScore": 59,
+    "minScore": 12,
+    "description": "Choice will relationship gun week.",
+    "previewFile": {
+      "id": "130e4ada-ee9f-46dd-a536-1ad630e8237a",
+      "filename": "file_6425.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_6425.png"
+    },
+    "estimatedTime": "5 weeks",
+    "createdByUser": {
+      "id": "c2a179e0-8e41-44e1-a259-992223767762",
+      "email": "test_5b1cbf9b@example.com",
+      "lastName": "Torres",
+      "firstName": "Haley",
+      "middleName": "Steven"
+    }
+  }
+}

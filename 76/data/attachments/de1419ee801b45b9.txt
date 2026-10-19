@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTE5VDIzOjA4OjA2LjM2MDk4MyIsInVzZXJfaWQiOiJmYTM2OTVkNS02ZWY1LTRmMTUtYjg2OC1iMzVkOTQ5NjU3NmUifQ.arjsR8iEUQUBJNeGssgANXcD4nHNEmMFwDBOswJ_xxY' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Attention become simple.","maxScore":50,"minScore":4,"description":"One born break yes realize eye.","estimatedTime":"8 weeks","previewFileId":"6d769c6b-c706-4f89-bce9-1186d94d98df","createdByUserId":"fa3695d5-6ef5-4f15-b868-b35d9496576e"}'

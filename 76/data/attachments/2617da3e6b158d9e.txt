@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTE5VDIzOjA4OjA4LjUzMjU0OSIsInVzZXJfaWQiOiIzOTQyM2MwZC0wNzg1LTQwYWYtYTAzYS00OWRkYmI2Y2M4Y2YifQ.RAoLKbalTYHB3N-dlhZenB6Jjldsv9ng4hxjctDYgBs' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Firm kitchen religious political.","maxScore":70,"minScore":29,"description":"Answer bill guess allow thing stay hour.","estimatedTime":"6 weeks","previewFileId":"4594ae3d-5483-4fc6-8081-0c5da6dd6f3d","createdByUserId":"39423c0d-0785-40af-a03a-49ddbb6cc8cf"}'

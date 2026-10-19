@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "a9a55e67-c497-4c7f-a824-15d4f5d0be4d",
+    "title": "Attention become simple.",
+    "maxScore": 50,
+    "minScore": 4,
+    "description": "One born break yes realize eye.",
+    "previewFile": {
+      "id": "6d769c6b-c706-4f89-bce9-1186d94d98df",
+      "filename": "file_1607.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_1607.png"
+    },
+    "estimatedTime": "8 weeks",
+    "createdByUser": {
+      "id": "fa3695d5-6ef5-4f15-b868-b35d9496576e",
+      "email": "test_1b060a55@example.com",
+      "lastName": "Washington",
+      "firstName": "Paul",
+      "middleName": "Jordan"
+    }
+  }
+}

@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTE5VDIzOjA4OjExLjE4OTAyMSIsInVzZXJfaWQiOiJmYjNmZTMwOC04MTNkLTRhYmQtYjk1MC05NmMzODUwYjcwNzQifQ.QHa0ARjsdk9ONAY3ppJwbbMkDSkJAfZLVQIaNiF50lk' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Floor agree because mouth.","courseId":"0898b1e7-be6c-4390-a71b-5b27510208a9","maxScore":93,"minScore":2,"orderIndex":4589,"description":"Group record hair election happy.","estimatedTime":"5 weeks"}'

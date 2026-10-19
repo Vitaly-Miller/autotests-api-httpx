@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTE5VDIzOjA4OjExLjQxMTIyOCIsInVzZXJfaWQiOiJmYjNmZTMwOC04MTNkLTRhYmQtYjk1MC05NmMzODUwYjcwNzQifQ.kDOBm3y6zhqavsdm0xg6JWnW0Fj8SledWxKqDPIyP-w' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Instead skill blood.","maxScore":59,"minScore":13,"description":"Hope collection society customer answer position.","estimatedTime":"8 weeks","previewFileId":"b10bc57e-9719-4cbf-b214-cf260e746605","createdByUserId":"fb3fe308-813d-4abd-b950-96c3850b7074"}'

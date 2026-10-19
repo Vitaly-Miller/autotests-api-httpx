@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "f11fffba-80a2-4b0d-ae8e-8124550dc962",
+    "title": "Build management customer cup store character.",
+    "maxScore": 100,
+    "minScore": 8,
+    "description": "Range including stage hard.",
+    "previewFile": {
+      "id": "db856e1b-7af3-4008-9af1-cf72592f92b3",
+      "filename": "file_2843.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_2843.png"
+    },
+    "estimatedTime": "6 weeks",
+    "createdByUser": {
+      "id": "85e937d2-5798-40c1-b6df-4cf138b0b3c3",
+      "email": "test_887ddaa9@example.com",
+      "lastName": "Brock",
+      "firstName": "Amanda",
+      "middleName": "Thomas"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "fcf14961-0b4d-41af-8d2d-54b11f98ae1a",
+    "title": "Maybe player everything rate add.",
+    "maxScore": 71,
+    "minScore": 25,
+    "description": "Special matter paper turn consumer.",
+    "previewFile": {
+      "id": "c01bce3b-a859-4725-bfef-a6050a7d6532",
+      "filename": "file_3754.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_3754.png"
+    },
+    "estimatedTime": "5 weeks",
+    "createdByUser": {
+      "id": "475b683b-fad5-4cff-a712-77addb43aa33",
+      "email": "test_cd57f8b2@example.com",
+      "lastName": "Ford",
+      "firstName": "Joel",
+      "middleName": "Linda"
+    }
+  }
+}
