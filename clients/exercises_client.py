@@ -14,43 +14,44 @@ from schemas.exercises_schema import (
     GetExerciseResponseSchema, GetExercisesQuerySchema, UpdateExerciseRequestSchema,
     CreateExerciseResponseSchema, UpdateExerciseResponseSchema
 )
+
 #================================================= Exercises Client ====================================================
 class ExercisesClient(APIClient):
     """
-    Клиент для работы с /api/v1/exericises
+    Client for working with /api/v1/exercises
 
     .
     """
     #------------------------------------------------- Create Exercise -------------------------------------------------
     # API
-    @allure.step('▶ Create Exercise (API)')                       # Allure step Title
-    @tracker.track_coverage_httpx(f'{Endpoint.EXERCISES}')        # API Coverage tracker
+    @allure.step('▶ Create Exercise (API)')
+    @tracker.track_coverage_httpx(f'{Endpoint.EXERCISES}')
     def create_exercise_api(self, create_exercise_data: CreateExerciseRequestSchema) -> httpx.Response:
         """
-        API-метод создания задания
+        API method for creating an exercise
 
-        :param create_exercise_data: Pydantic-model с данными о задании
+        :param create_exercise_data: Pydantic model with exercise data
         :return: httpx.Response
         """
-        response = self.post(                                     # ▶ Запрос
-            url=Endpoint.EXERCISES,                               # Endpoint (via Enum)
-            json=create_exercise_data.model_dump(by_alias=True)   # Pydantic-model —> Dict (serialize)
+        response = self.post(
+            url=Endpoint.EXERCISES,
+            json=create_exercise_data.model_dump(by_alias=True)
         )
-        return response                                           # httpx.Response
+        return response
 
 
     # Pydantic-model
     @allure.step('▶ Create Exercise (Pydantic)')
     def create_exercise(self, exercise_data: CreateExerciseRequestSchema) -> CreateExerciseResponseSchema:
         """
-        Pydantic-метод создания задания
+        Pydantic method for creating an exercise
 
-        :param exercise_data: Pydantic-model с данными о задании
+        :param exercise_data: Pydantic model with exercise data
         :return: Pydantic-model (CreateExerciseResponseSchema)
         """
-        response = self.create_exercise_api(exercise_data)                                # ▶ Запрос через API-метод
-        response_model = CreateExerciseResponseSchema.model_validate_json(response.text)  # httpx.Response —> Pydantic-model (deserialize)
-        return response_model                                                             # Pydantic-model(CreateExerciseResponseSchema)
+        response = self.create_exercise_api(exercise_data)
+        response_model = CreateExerciseResponseSchema.model_validate_json(response.text)
+        return response_model
 
 
     #-------------------------------------------------- Get Exercise ---------------------------------------------------
@@ -59,27 +60,27 @@ class ExercisesClient(APIClient):
     @tracker.track_coverage_httpx(f'{Endpoint.EXERCISES}/{{exercise_id}}')
     def get_exercise_api(self, exercise_id: str) -> httpx.Response:
         """
-        API-метод получения информации о задании по Exercise-ID
+        API method for getting an exercise by Exercise-ID
 
         :param exercise_id: Exercise-ID
         :return: httpx.Response
         """
-        response = self.get(url=f'{Endpoint.EXERCISES}/{exercise_id}')       # ▶ Запрос
-        return response                                                      # httpx.Response
+        response = self.get(url=f'{Endpoint.EXERCISES}/{exercise_id}')
+        return response
 
 
     # Pydantic-model
     @allure.step('▶ Get Exercise by ID (Pydantic)')
     def get_exercise(self, exercise_id: str) -> GetExerciseResponseSchema:
         """
-        Pydantic-метод получения информации о задании по Exercise-ID
+        Pydantic method for getting an exercise by Exercise-ID
 
         :param exercise_id: Exercise-ID
         :return: Pydantic-model (GetExerciseResponseSchema)
         """
-        response = self.get_exercise_api(exercise_id)                                 # ▶ Запрос через API-метод
-        response_model = GetExerciseResponseSchema.model_validate_json(response.text) # httpx.Response —> Pydantic-model (deserialize)
-        return response_model                                                         # Pydantic-model (GetExerciseResponseSchema)
+        response = self.get_exercise_api(exercise_id)
+        response_model = GetExerciseResponseSchema.model_validate_json(response.text)
+        return response_model
 
 
     #-------------------------------------------------- Get Exercises --------------------------------------------------
@@ -88,15 +89,15 @@ class ExercisesClient(APIClient):
     @tracker.track_coverage_httpx(f'{Endpoint.EXERCISES}')
     def get_exercises_api(self, query_course_id: GetExercisesQuerySchema) -> httpx.Response:
         """
-        API-метод получения списка заданий по Course-ID (?query)
+        API method for getting a list of exercises by Course-ID (?query)
 
-        :param query_course_id: Pydantic-model с Course-ID (?query)
+        :param query_course_id: Pydantic model with Course-ID (?query)
         :return: httpx.Response
         """
-        response = self.get(                                      # ▶ Запрос c Query-параметром
-            url=Endpoint.EXERCISES,                               # Endpoint (via Enum)
-            params=query_course_id.model_dump(by_alias=True))     # Pydantic-model —> Dict (serialize)
-        return response                                           # httpx.Response
+        response = self.get(
+            url=Endpoint.EXERCISES,
+            params=query_course_id.model_dump(by_alias=True))
+        return response
 
 
     #------------------------------------------------- Update Exercise -------------------------------------------------
@@ -105,35 +106,35 @@ class ExercisesClient(APIClient):
     @tracker.track_coverage_httpx(f'{Endpoint.EXERCISES}/{{exercise_id}}')
     def update_exercise_api(self, exercise_id: str, new_exercise_data: UpdateExerciseRequestSchema) -> httpx.Response:
         """
-        API-метод частичного обновления данных задания
+        API method for partially updating an exercise
 
         :param exercise_id: Exercise-ID
-        :param new_exercise_data: Pydantic-model c данными, которые необходимо обновить
+        :param new_exercise_data: Pydantic model with the data to update
         :return: httpx.Response
         """
-        response = self.patch(                                     # ▶ Запрос
+        response = self.patch(
             url=f'{Endpoint.EXERCISES}/{exercise_id}',
-            json=new_exercise_data.model_dump(by_alias=True)       # Pydantic-model —> Dict (serialize)
+            json=new_exercise_data.model_dump(by_alias=True)
         )
-        return response                                            # httpx.Response
+        return response
 
 
     # Pydantic-model
     @allure.step('▶ Update Exercise by ID (Pydantic)')
     def update_exercise(self, exercise_id: str, new_exercise_data: UpdateExerciseRequestSchema) -> UpdateExerciseResponseSchema:
         """
-        Pydantic-метод частичного обновления данных задания
+        Pydantic method for partially updating an exercise
 
         :param exercise_id: Exercise-ID
-        :param new_exercise_data: Pydantic-model c данными, которые необходимо обновить
+        :param new_exercise_data: Pydantic model with the data to update
         :return: Pydantic-model (UpdateExerciseResponseSchema)
         """
-        response = self.update_exercise_api(          # ▶ Запрос через API-метод
-            exercise_id,                    # Передаем  Exercise-ID
-            new_exercise_data         # Передаем Pydantic-model данными, которые необходимо обновить
+        response = self.update_exercise_api(
+            exercise_id,
+            new_exercise_data
         )
-        response_model = UpdateExerciseResponseSchema.model_validate_json(response.text) # httpx.Response —> Pydantic-model (deserialize)
-        return response_model                            # Pydantic-model (UpdateExerciseResponseSchema)
+        response_model = UpdateExerciseResponseSchema.model_validate_json(response.text)
+        return response_model
 
 
     #------------------------------------------------- Delete Exercise -------------------------------------------------
@@ -142,26 +143,26 @@ class ExercisesClient(APIClient):
     @tracker.track_coverage_httpx(f'{Endpoint.EXERCISES}/{{exercise_id}}')
     def delete_exercise_api(self, exercise_id: str) -> httpx.Response:
         """
-        Метод удаление задания по Exercise-ID
+        API method for deleting an exercise by Exercise-ID
 
         :param exercise_id: Exercise-ID
         :return: httpx.Response
         """
-        response = self.delete(url=f'{Endpoint.EXERCISES}/{exercise_id}')   # ▶ Запрос
-        return response                                                     # httpx.Response
+        response = self.delete(url=f'{Endpoint.EXERCISES}/{exercise_id}')
+        return response
 
 
 #=================================================== Client (builder) ==================================================
 @allure.step('◎ Get Exercises Client')
 def get_exercises_client(auth_data: AuthDataSchema) -> ExercisesClient:
     """
-    Функция получения экземпляра ExercisesClient с настроенным HTTP-клиентом (с Авторизацией)
+    Returns an ExercisesClient instance with a preconfigured HTTP client (with authorization)
 
-    :param auth_data: Pydantic-model c данными для аутентификации пользователя (Email, Password)
-    :return: Экземпляр ExercisesClient (с Авторизацией)
+    :param auth_data: Pydantic model with user authentication data (email, password)
+    :return: ExercisesClient instance (with authorization)
     """
     exercises_client = ExercisesClient(client=get_httpx_client_private(auth_data))
-    return exercises_client                                                 # ExercisesClient()
+    return exercises_client
 
 
 #=======================================================================================================================

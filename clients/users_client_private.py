@@ -1,6 +1,6 @@
 """
 Users Client (🔒Private)
-(Для методов, требующих авторизации)
+(For methods that require authorization)
 """
 import httpx
 import allure
@@ -16,116 +16,116 @@ from schemas.users_schema import (
     UserUpdateResponseSchema
 )
 
-#============================================== Users Client (🔒Private) ===============================================
+#============================================== Users Client (Private) ===============================================
 class UsersClientPrivate(APIClient):
     """
-    Клиент для работы с /api/v1/users (🔒Private)
+    Client for working with /api/v1/users (🔒Private)
 
     .
     """
     #--------------------------------------------------- Get User Me ---------------------------------------------------
     # API
-    @allure.step('▶ Get User Me')                                       # Allure step Title
-    @tracker.track_coverage_httpx(f'{Endpoint.USERS}/me')               # API Coverage tracker
+    @allure.step('▶ Get User Me (API)')
+    @tracker.track_coverage_httpx(f'{Endpoint.USERS}/me')
     def get_user_me_api(self) -> httpx.Response:
         """
-        API-метод получения данных текущего пользователя
+        API method for getting the current user's data
 
         :return: httpx.Response
         """
-        response = self.get(url=f'{Endpoint.USERS}/me')                 # ▶ Запрос
-        return response                                                 # httpx.Response
+        response = self.get(url=f'{Endpoint.USERS}/me')
+        return response
 
 
     # Pydantic-model
     @allure.step('▶ Get User Me (Pydantic)')
     def get_user_me(self) -> GetUserMeResponseSchema:
         """
-        Pydantic-метод получения данных текущего пользователя
+        Pydantic method for getting the current user's data
 
         :return: Pydantic-model (GetUserMeResponseSchema)
         """
-        response = self.get_user_me_api()                                             # ▶ Запрос через API-метод
-        response_model = GetUserMeResponseSchema.model_validate_json(response.text)   # httpx.Response —> Pydantic-model (deserialize)
-        return response_model                                                         # Pydantic-model (GetUserMeResponseSchema)
+        response = self.get_user_me_api()
+        response_model = GetUserMeResponseSchema.model_validate_json(response.text)
+        return response_model
 
 
     #---------------------------------------------------- Get User -----------------------------------------------------
     # API
     @allure.step('▶ Get User by ID (API)')
-    @tracker.track_coverage_httpx(f'{Endpoint.USERS}/{{user_id}}')     # API Coverage tracker (id - заэкранировано)
+    @tracker.track_coverage_httpx(f'{Endpoint.USERS}/{{user_id}}')
     def get_user_api(self, user_id: str) -> httpx.Response:
         """
-        API-метод получения данных пользователя по User-ID
+        API method for getting user data by User-ID
 
         :param user_id: User-ID
         :return: httpx.Response
         """
-        response = self.get(url=f'{Endpoint.USERS}/{user_id}')         # ▶ Запрос
-        return response                                                # httpx.Response
+        response = self.get(url=f'{Endpoint.USERS}/{user_id}')
+        return response
 
 
     # Pydantic-model
     @allure.step('▶ Get User by ID (Pydantic)')
     def get_user_pydantic(self, user_id: str) -> GetUserResponseSchema:
         """
-        Pydantic-метод получения данных пользователя по User-ID
+        Pydantic method for getting user data by User-ID
 
         :param user_id: User-ID
         :return: Pydantic-model (GetUserResponseSchema)
         """
-        response = self.get_user_api(user_id)                                        # ▶ Запрос через API-метод
-        response_model = GetUserResponseSchema.model_validate_json(response.text)    # httpx.Response —> Pydantic-model (deserialize)
-        return response_model                                                        # Pydantic-model (GetUserResponseSchema)
+        response = self.get_user_api(user_id)
+        response_model = GetUserResponseSchema.model_validate_json(response.text)
+        return response_model
 
 
     #--------------------------------------------------- Update User ---------------------------------------------------
     # API
     @allure.step('▶ Update User by ID (API)')
-    @tracker.track_coverage_httpx(f'{Endpoint.USERS}/{{user_id}}')    # API Coverage tracker (id - заэкранировано)
+    @tracker.track_coverage_httpx(f'{Endpoint.USERS}/{{user_id}}')
     def update_user_api(self, user_id: str, update_data: UpdateUserRequestSchema) -> httpx.Response:
         """
-        API-метод частичного обновления данных пользователя по User-ID
+        API method for partially updating a user by User-ID
 
         :param user_id: User-ID
-        :param update_data: Pydantic-model c данными, которые необходимо обновить
+        :param update_data: Pydantic model with the data to update
         :return: httpx.Response
         """
-        response = self.patch(                                        # ▶ Запрос
+        response = self.patch(
             url=f'{Endpoint.USERS}/{user_id}',
-            json=update_data.model_dump(by_alias=True)                # Pydantic-model —> Dict (serialize)
+            json=update_data.model_dump(by_alias=True)
         )
-        return response                                               # httpx.Response
+        return response
 
 
     # Pydantic-model
     @allure.step('▶ Update User by ID (Pydantic)')
     def update_user_pydantic(self, user_id: str, update_data: UpdateUserRequestSchema) -> UserUpdateResponseSchema:
         """
-        Pydantic-метод частичного обновления данных пользователя по User-ID
+        Pydantic method for partially updating a user by User-ID
 
         :param user_id: User-ID
-        :param update_data: Pydantic-model c данными, которые необходимо обновить
+        :param update_data: Pydantic model with the data to update
         :return: Pydantic-model (UserUpdateResponseSchema)
         """
-        response = self.update_user_api(user_id, update_data)         # ▶ Запрос через API-метод
-        response_model = UserUpdateResponseSchema.model_validate_json(response.text)    # httpx.Response —> Pydantic-model (deserialize)
-        return response_model                                                           # Pydantic-model (UserUpdateResponseSchema)
+        response = self.update_user_api(user_id, update_data)
+        response_model = UserUpdateResponseSchema.model_validate_json(response.text)
+        return response_model
 
 
     #--------------------------------------------------- Delete User ---------------------------------------------------
     # API
     @allure.step('▶ Delete User by ID (API)')
-    @tracker.track_coverage_httpx(f'{Endpoint.USERS}/{{user_id}}')  # API Coverage tracker (id - заэкранировано)
+    @tracker.track_coverage_httpx(f'{Endpoint.USERS}/{{user_id}}')
     def delete_user_api(self, user_id: str) -> httpx.Response:
         """
-        API-метод удаления пользователя по User-ID
+        API method for deleting a user by User-ID
 
         :param user_id: User-ID
         :return: httpx.Response
         """
-        response = self.delete(url=f'{Endpoint.USERS}/{user_id}')   # ▶ Запрос
-        return response                                             # httpx.Response
+        response = self.delete(url=f'{Endpoint.USERS}/{user_id}')
+        return response
 
 
 
@@ -133,13 +133,13 @@ class UsersClientPrivate(APIClient):
 @allure.step('◎ Get Users Client (Private)')
 def get_users_client_private(auth_data: AuthDataSchema) -> UsersClientPrivate:
     """
-    Функция получения экземпляра UsersClientPrivate() с настроенным httpx.Client (Private)
+    Returns a UsersClientPrivate() instance with a configured httpx.Client (Private)
 
-    :param auth_data: Pydantic-model с данными для аутентификации пользователя (Email, Password)
-    :return: Настроенный экземпляр UsersClientPrivate()
+    :param auth_data: Pydantic model with user authentication data (email, password)
+    :return: Configured UsersClientPrivate() instance
     """
     users_client_private = UsersClientPrivate(client=get_httpx_client_private(auth_data))
-    return users_client_private                                     # UsersClientPrivate()
+    return users_client_private
 
 
 #=======================================================================================================================

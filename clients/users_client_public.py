@@ -1,6 +1,6 @@
 """
 Users Client (Public)
-(Для методов, НЕ требующих авторизации)
+(For methods that do NOT require authorization)
 """
 import httpx
 import allure
@@ -10,42 +10,43 @@ from clients.api_client import APIClient
 from clients.httpx_client_public import get_httpx_client_public
 from schemas.users_schema import CreateUserRequestSchema, CreateUserResponseSchema
 
+
 #================================================ Users Client (Public) ================================================
 class UsersClientPublic(APIClient):
     """
-    Клиент для работы с /api/v1/users (Public)
+    Client for working with /api/v1/users (Public)
 
     .
     """
-    #------------------------------------------------- Create User  ----------------------------------------------------
+    #------------------------------------------------- Create User -----------------------------------------------------
     # API
-    @allure.step('▶ Create User (API)')                               # Allure step Title
-    @tracker.track_coverage_httpx(f'{Endpoint.USERS}')                # API Coverage tracker
+    @allure.step('▶ Create User (API)')
+    @tracker.track_coverage_httpx(f'{Endpoint.USERS}')
     def create_user_api(self, create_user_data: CreateUserRequestSchema) -> httpx.Response:
         """
-        API-метод создания нового пользователя
+        API method for creating a new user
 
-        :param create_user_data: Pydantic-model c данными для создания пользователя
+        :param create_user_data: Pydantic model with user creation data
         :return: httpx.Response
         """
-        response = self.post(                                         # ▶ Запрос
-            url=Endpoint.USERS,                                       # Endpoint (via Enum)
-            json=create_user_data.model_dump(by_alias=True))          # Pydantic-model —> Dict (serialize)
-        return response                                               # httpx.Response
+        response = self.post(
+            url=Endpoint.USERS,
+            json=create_user_data.model_dump(by_alias=True))
+        return response
 
 
     # Pydantic-model
     @allure.step('▶ Create User (Pydantic)')
     def create_user(self, create_user_data: CreateUserRequestSchema) -> CreateUserResponseSchema:
         """
-        Pydantic-метод для создания нового пользователя
+        Pydantic method for creating a new user
 
-        :param create_user_data: Pydantic-model c данными для создания пользователя
+        :param create_user_data: Pydantic model with user creation data
         :return: Pydantic-model (CreateUserResponseSchema)
         """
-        response = self.create_user_api(create_user_data)                             # ▶ Запрос через API-метод
-        response_model = CreateUserResponseSchema.model_validate_json(response.text)  # httpx.Response —> Pydantic-model (deserialize)
-        return response_model                                                         # Pydantic-model (CreateUserResponseSchema)
+        response = self.create_user_api(create_user_data)
+        response_model = CreateUserResponseSchema.model_validate_json(response.text)
+        return response_model
 
 
 
@@ -53,12 +54,12 @@ class UsersClientPublic(APIClient):
 @allure.step('◎ Get Users Client (Public)')
 def get_users_client_public() -> UsersClientPublic:
     """
-    Функция получения экземпляра UsersClientPublic() с настроенным httpx.Client (Public)
+    Returns a UsersClientPublic() instance with a configured httpx.Client (Public)
 
-    :return: Настроенный экземпляр UsersClientPublic()
+    :return: Configured UsersClientPublic() instance
     """
     users_client_public = UsersClientPublic(client=get_httpx_client_public())
-    return users_client_public                                        # UsersClientPublic()
+    return users_client_public
 
 
 #=======================================================================================================================

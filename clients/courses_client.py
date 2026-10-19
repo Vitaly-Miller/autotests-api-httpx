@@ -17,6 +17,8 @@ from schemas.courses_schema import (
 class CoursesClient(APIClient):
     """
     Client for working with /api/v1/courses
+
+    .
     """
     #--------------------------------------------------- Get Courses ---------------------------------------------------
     # API

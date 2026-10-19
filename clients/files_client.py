@@ -12,40 +12,41 @@ from schemas.auth_schema import AuthDataSchema
 from schemas.files_schema import CreateFileRequestSchema, CreateFileResponseSchema, GetFileResponseSchema
 from clients.httpx_client_private import get_httpx_client_private
 
+
 #==================================================== Files Client =====================================================
 class FilesClient(APIClient):
     """
-    Клиент для работы с /api/v1/files
+    Client for working with /api/v1/files
 
     .
     """
     #---------------------------------------------------- Get File -----------------------------------------------------
     # API
-    @allure.step('▶ Get File by ID (API)')                          # Allure step Title
-    @tracker.track_coverage_httpx(f'{Endpoint.FILES}/{{file_id}}')  # API Coverage tracker (id - заэкранировано)
+    @allure.step('▶ Get File by ID (API)')
+    @tracker.track_coverage_httpx(f'{Endpoint.FILES}/{{file_id}}')
     def get_file_api(self, file_id: str) -> httpx.Response:
         """
-        API-метод получения файла (Download) по File-ID
+        API method for getting (downloading) a file by File-ID
 
         :param file_id: File-ID
         :return: httpx.Response
         """
-        response = self.get(url=f'{Endpoint.FILES}/{file_id}')      # ▶ Запрос
-        return response                                             # httpx.Response
+        response = self.get(url=f'{Endpoint.FILES}/{file_id}')
+        return response
 
 
     # Pydantic-model
     @allure.step('▶ Get File by ID (Pydantic)')
     def get_file(self, file_id: str) -> GetFileResponseSchema:
         """
-        Pydantic-метод получения файла (Download) по File-ID
+        Pydantic method for getting (downloading) a file by File-ID
 
         :param file_id: File-ID
-        :return: httpx.Response
+        :return: Pydantic-model (GetFileResponseSchema)
         """
-        response = self.get_file_api(file_id)                                      # ▶ Запрос через API-метод
-        response_model = GetFileResponseSchema.model_validate_json(response.text)  # httpx.Response —> Pydantic-model (deserialize)
-        return response_model                                                      # Pydantic-model (GetFileResponseSchema)
+        response = self.get_file_api(file_id)
+        response_model = GetFileResponseSchema.model_validate_json(response.text)
+        return response_model
 
 
     #--------------------------------------------------- Create File ---------------------------------------------------
@@ -54,50 +55,49 @@ class FilesClient(APIClient):
     @tracker.track_coverage_httpx(f'{Endpoint.FILES}')
     def create_file_api(self, create_file_data: CreateFileRequestSchema) -> httpx.Response:
         """
-        API-метод создания файла (Upload).
+        API method for creating (uploading) a file.
 
-        Файл передаётся байтами (не открытым файловым объектом),
-        чтобы API Swagger Coverage tracker мог перечитать тело запроса после выполнения ("seek of closed file")
+        The file is sent as bytes (not as an open file object)
+        so that the API Swagger Coverage tracker can re-read the request body afterwards ("seek of closed file")
 
-        :param create_file_data: Pydantic-model с данными о файле
+        :param create_file_data: Pydantic model with file data
         :return: httpx.Response
         """
-        response = self.post(                                                       # ▶ Запрос:
-            url=Endpoint.FILES,                                                     # URL запроса (endpoint через Enum)
-            # data=create_file_data,  # целиком -> Сервер получит лишние поля: 'filename' и 'directory' (✔️ничего страшного)
-            data={'filename': create_file_data.filename, 'directory': create_file_data.directory}, # Имя сохранения файла,  Директория сохранения
-            files={'upload_file': Path(create_file_data.upload_path).read_bytes()}  # Содержимое файла (bytes)
+        response = self.post(
+            url=Endpoint.FILES,
+            data={'filename': create_file_data.filename, 'directory': create_file_data.directory},
+            files={'upload_file': Path(create_file_data.upload_path).read_bytes()}
         )
-        return response                                                             # httpx.Response
+        return response
 
 
     # Pydantic-model
     @allure.step('▶ Create File (Pydantic)')
     def create_file(self, create_file_data: CreateFileRequestSchema) -> CreateFileResponseSchema:
         """
-        Pydantic-метод создания файла (Upload)
+        Pydantic method for creating (uploading) a file
 
-        :param create_file_data: Данные о создаваемом файле в формате Pydantic-model
+        :param create_file_data: Data of the file to create as a Pydantic model
         :return: Pydantic-model (CreateFileResponseSchema)
         """
-        response = self.create_file_api(create_file_data)                             # ▶ Запрос через API-метод
-        response_model = CreateFileResponseSchema.model_validate_json(response.text)  # httpx.Response —> Pydantic-model (deserialize)
-        return response_model                                                         # Pydantic-model (CreateFileResponseSchema)
+        response = self.create_file_api(create_file_data)
+        response_model = CreateFileResponseSchema.model_validate_json(response.text)
+        return response_model
 
 
     #--------------------------------------------------- Delete File ---------------------------------------------------
     # API
     @allure.step('▶ Delete File by ID (API)')
-    @tracker.track_coverage_httpx(f'{Endpoint.FILES}/{{file_id}}')   # API Coverage tracker (id - заэкранировано)
+    @tracker.track_coverage_httpx(f'{Endpoint.FILES}/{{file_id}}')
     def delete_file_api(self, file_id: str) -> httpx.Response:
         """
-        API-метод удаления файла
+        API method for deleting a file by File-ID
 
         :param file_id: File-ID
         :return: httpx.Response
         """
-        response = self.delete(url=f'{Endpoint.FILES}/{file_id}')    # ▶ Запрос
-        return response                                              # httpx.Response
+        response = self.delete(url=f'{Endpoint.FILES}/{file_id}')
+        return response
 
 
 
@@ -105,13 +105,13 @@ class FilesClient(APIClient):
 @allure.step('◎ Get Files Client')
 def get_files_client(auth_data: AuthDataSchema) -> FilesClient:
     """
-    Функция получения экземпляра FilesClient с настроенным HTTP-клиентом (с Авторизацией)
+    Returns a FilesClient instance with a preconfigured HTTP client (with authorization)
 
-    :param auth_data: Pydantic-model c данными для аутентификации пользователя (Email, Password)
-    :return: Экземпляр FilesClient (с Авторизацией)
+    :param auth_data: Pydantic model with user authentication data (email, password)
+    :return: FilesClient instance (with authorization)
     """
     files_client = FilesClient(client=get_httpx_client_private(auth_data))
-    return files_client                                              # FilesClient()
+    return files_client
 
 
 #=======================================================================================================================

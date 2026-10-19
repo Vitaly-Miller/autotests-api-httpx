@@ -14,6 +14,8 @@ from schemas.auth_schema import RefreshRequestSchema, AuthDataSchema, AuthRespon
 class AuthClient(APIClient):
     """
     Client for working with /api/v1/authentication
+
+    .
     """
     #--------------------------------------------------- Login ---------------------------------------------------------
     # API
