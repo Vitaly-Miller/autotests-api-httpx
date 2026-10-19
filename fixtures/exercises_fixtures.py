@@ -9,7 +9,7 @@ from schemas.courses_schema import CreateCourseSchema
 from schemas.users_schema import CreateUserSchema
 from schemas.exercises_schema import (
     CreateExerciseRequestSchema, CreateExerciseSchema,
-    GetExerciseResponseSchema, GetExercisesQwerySchema, UpdateExerciseRequestSchema, UpdateExerciseResponseSchema
+    GetExerciseResponseSchema, GetExercisesQuerySchema, UpdateExerciseRequestSchema, UpdateExerciseResponseSchema
 )
 
 #================================================== Exercises Client ===================================================
@@ -108,7 +108,7 @@ def get_exercises_api(exercises_client: ExercisesClient, create_course: CreateCo
     :param create_course: Вложенная Pydantic-фикстура создания курса (для получения Course-ID)
     :return: httpx.Response
     """
-    course_id_qwery_model = GetExercisesQwerySchema(courseId=create_course.course_id) # Pydantic-model
+    course_id_qwery_model = GetExercisesQuerySchema(courseId=create_course.course_id) # Pydantic-model
 
     response = exercises_client.get_exercises_api(course_id_qwery_model)              # ▶ Запрос через API-метод
     return response                                                                   # httpx.Response

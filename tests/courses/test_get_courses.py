@@ -6,7 +6,7 @@ import http
 import pytest
 import allure
 from clients.courses_client import CoursesClient
-from schemas.courses_schema import CreateCourseSchema, GetCoursesQwerySchema, GetCoursesResponseSchema
+from schemas.courses_schema import CreateCourseSchema, GetCoursesQuerySchema, GetCoursesResponseSchema
 from schemas.users_schema import CreateUserSchema
 from tools.allure.annotations import Epic, Feature, Story, Tag
 from tools.assertions.base_assert import assert_request_method, assert_status_code
@@ -46,7 +46,7 @@ class TestGetCourses:
             create_user: CreateUserSchema,                                           # Для User-ID
             create_course: CreateCourseSchema
     ):
-        user_id_qwery_model = GetCoursesQwerySchema(userId=create_user.user_id)       # Pydantic-model
+        user_id_qwery_model = GetCoursesQuerySchema(userId=create_user.user_id)       # Pydantic-model
         response = courses_client.get_courses_api(user_id_qwery_model)                # ▶ Запрос через API-метод
         response_model = GetCoursesResponseSchema.model_validate_json(response.text)  # httpx.Response —> Pydantic-model (deserialize)
 

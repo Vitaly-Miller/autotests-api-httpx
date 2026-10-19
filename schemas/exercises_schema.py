@@ -20,7 +20,7 @@ class GetExerciseRequestSchema(BaseModel):
     exercise_id: str
 
 #---------------------------------------------------- Get Exercises ----------------------------------------------------
-class GetExercisesQwerySchema(BaseModel):                                 # (?query)
+class GetExercisesQuerySchema(BaseModel):                                 # (?query)
     course_id: str = Field(alias='courseId', default_factory=fake.uuid4)  # ⚠️Default value for NEGATIVE tests only
 
 #--------------------------------------------------- Update Exercise ---------------------------------------------------

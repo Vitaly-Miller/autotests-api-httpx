@@ -11,7 +11,7 @@ from clients.httpx_client_private import get_httpx_client_private
 from schemas.auth_schema import AuthDataSchema
 from schemas.exercises_schema import (
     CreateExerciseRequestSchema,
-    GetExerciseResponseSchema, GetExercisesQwerySchema, UpdateExerciseRequestSchema,
+    GetExerciseResponseSchema, GetExercisesQuerySchema, UpdateExerciseRequestSchema,
     CreateExerciseResponseSchema, UpdateExerciseResponseSchema
 )
 #================================================= Exercises Client ====================================================
@@ -86,7 +86,7 @@ class ExercisesClient(APIClient):
     # API
     @allure.step('▶ Get Exercises by Course-ID (API)')
     @tracker.track_coverage_httpx(f'{Endpoint.EXERCISES}')
-    def get_exercises_api(self, query_course_id: GetExercisesQwerySchema) -> httpx.Response:
+    def get_exercises_api(self, query_course_id: GetExercisesQuerySchema) -> httpx.Response:
         """
         API-метод получения списка заданий по Course-ID (?query)
 

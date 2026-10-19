@@ -9,43 +9,42 @@ from clients.api_client import APIClient
 from clients.httpx_client_public import get_httpx_client_public
 from schemas.auth_schema import RefreshRequestSchema, AuthDataSchema, AuthResponseSchema
 
+
 #===================================================== Auth Client =====================================================
 class AuthClient(APIClient):
     """
-    Клиент для работы с /api/v1/authentication
-
-    .
+    Client for working with /api/v1/authentication
     """
     #--------------------------------------------------- Login ---------------------------------------------------------
     # API
-    @allure.step('▶ Login User (API)')                                 # Allure step Title
-    @tracker.track_coverage_httpx(f'{Endpoint.AUTH}/login')            # API Coverage tracker
+    @allure.step('▶ Login User (API)')
+    @tracker.track_coverage_httpx(f'{Endpoint.AUTH}/login')
     def login_api(self, auth_data: AuthDataSchema) -> httpx.Response:
         """
-        API-метод аутентификации пользователя (Log in)
+        API method for user authentication (log in)
 
-        :param auth_data: Pydantic-model c данными для аутентификации (Email и Password)
-        :return httpx.Response
+        :param auth_data: Pydantic model with authentication data (email and password)
+        :return: httpx.Response
         """
-        response = self.post(                                          # ▶ Запрос
-            url=f'{Endpoint.AUTH}/login',                              # Endpoint (via Enum)
-            json=auth_data.model_dump(by_alias=True)                   # Pydantic-model —> Dict (serialize)
+        response = self.post(
+            url=f'{Endpoint.AUTH}/login',
+            json=auth_data.model_dump(by_alias=True)
         )
-        return response                                                # httpx.Response
+        return response
 
 
     # Pydantic-model
     @allure.step('▶ Login User (Pydantic)')
     def login_pydantic(self, auth_data: AuthDataSchema) -> AuthResponseSchema:
         """
-        Pydantic-метод аутентификации пользователя (Log in)
+        Pydantic method for user authentication (log in)
 
-        :param auth_data: Данные с Email и Password в формате Pydantic-model
-        :return: Ответ с данными об авторизации пользователя в формате Pydantic-model
+        :param auth_data: Email and password as a Pydantic model
+        :return: User authentication response as a Pydantic model
         """
-        response = self.login_api(auth_data)                                    # ▶ Запрос через API-метод
-        response_model = AuthResponseSchema.model_validate_json(response.text)  # httpx.Response —> Pydantic-model (deserialize)
-        return response_model                                                   # Pydantic-model (AuthResponseSchema)
+        response = self.login_api(auth_data)
+        response_model = AuthResponseSchema.model_validate_json(response.text)
+        return response_model
 
 
     #-------------------------------------------------- Refresh --------------------------------------------------------
@@ -54,28 +53,28 @@ class AuthClient(APIClient):
     @tracker.track_coverage_httpx(f'{Endpoint.AUTH}/refresh')
     def refresh_api(self, refresh_token: RefreshRequestSchema) -> httpx.Response:
         """
-        API-метод обновления токена авторизации
+        API method for refreshing the access token
 
-        :param refresh_token: Pydantic-model c refresh_token
+        :param refresh_token: Pydantic model with refresh_token
         :return: httpx.Response
         """
-        response = self.post(                                     # ▶ Запрос
-            url=f'{Endpoint.AUTH}/refresh',                       # Endpoint (via Enum)
-            json=refresh_token.model_dump(by_alias=True)          # Pydantic-model —> Dict (serialize)
+        response = self.post(
+            url=f'{Endpoint.AUTH}/refresh',
+            json=refresh_token.model_dump(by_alias=True)
         )
-        return response                                           # httpx.Response
+        return response
 
 
 #================================================== Client (builder) ===================================================
 @allure.step('◎ Get Auth Client')
 def get_auth_client() -> AuthClient:
     """
-    Функция получения экземпляра AuthClient с уже настроенным http-клиентом
+    Returns an AuthClient instance with a preconfigured HTTP client
 
-    :return: Экземпляр AuthClient с (Base URL)
+    :return: AuthClient instance (with Base URL)
     """
     auth_client = AuthClient(client=get_httpx_client_public())
-    return auth_client                                            # AuthClient()
+    return auth_client
 
 
 #=======================================================================================================================

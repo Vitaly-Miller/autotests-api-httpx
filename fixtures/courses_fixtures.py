@@ -5,7 +5,7 @@ import httpx
 import pytest
 import allure
 from clients.courses_client import get_courses_client, CoursesClient
-from schemas.courses_schema import CreateCourseRequestSchema, CreateCourseSchema, GetCoursesQwerySchema
+from schemas.courses_schema import CreateCourseRequestSchema, CreateCourseSchema, GetCoursesQuerySchema
 from schemas.files_schema import CreateFileSchema
 from schemas.users_schema import CreateUserSchema
 
@@ -93,7 +93,7 @@ def get_courses_api(courses_client: CoursesClient, create_user: CreateUserSchema
     :param create_user: Встроенная Pydantic-фикстура создания пользователя
     :return: httpx.Response
     """
-    user_id_qwery_model = GetCoursesQwerySchema(userId=create_user.user_id)       # Pydantic-model
+    user_id_qwery_model = GetCoursesQuerySchema(userId=create_user.user_id)       # Pydantic-model
     response = courses_client.get_courses_api(user_id_qwery_model)                # ▶ Запрос через API-метод
     return response                                                               # httpx.Response
 

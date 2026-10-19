@@ -3,35 +3,34 @@ API Client
 """
 import httpx
 import allure
-from httpx._types import RequestData, RequestFiles   # NOQA  # для аннотации типов (работа с файлами)
-from typing import Any                                       # для аннотации типов
+from httpx._types import RequestData, RequestFiles
+from typing import Any
 
 #===================================================== API Client ======================================================
 class APIClient:
     def __init__(self, client: httpx.Client):
         """
-        Базовый API-клиент, принимающий httpx.Client-сессию.
+        Base API client that accepts a httpx.Client session.
 
-        :param client: Экземпляр httpx.Client для выполнения запросов
+        :param client: httpx.Client instance used to send requests
         """
         self.client = client
 
-    # GET ------------------------------------------------------------------------------------------------------------
+
     @allure.step('🟢 GET-request')
     def get(self,
             url: httpx.URL | str,
             params: httpx.QueryParams | None = None) -> httpx.Response:
         """
-        GET-запрос
+        GET request
 
-        :param url: URL-адрес эндпоинта
-        :param params: Параметры запроса в формате qwery (например, ?key=value) / None
+        :param url: Endpoint URL
+        :param params: Query string parameters (e.g. ?key=value) / None
         :return: httpx.Response
         """
         return self.client.get(url=url, params=params)
 
 
-    # POST -----------------------------------------------------------------------------------------------------------
     @allure.step('🟡 POST-request')
     def post(self,
              url: httpx.URL | str,
@@ -39,55 +38,52 @@ class APIClient:
              data: RequestData | None = None,
              files: RequestFiles | None = None) -> httpx.Response:
         """
-        POST-запрос
+        POST request
 
-        :param url: URL-адрес эндпоинта
-        :param json: Данные
-        :param data: Данные
-        :param files: Файлы для загрузки на сервер
+        :param url: Endpoint URL
+        :param json: Request body as JSON
+        :param data: Form data
+        :param files: Files to upload to the server
         :return: httpx.Response
         """
         return self.client.post(url=url, json=json, data=data, files=files)
 
 
-    # PATCH ----------------------------------------------------------------------------------------------------------
     @allure.step('🟣 PATCH-request')
     def patch(self,
               url: httpx.URL | str,
               json: Any | None = None) -> httpx.Response:
         """
-        PATCH-запрос (Частичное обновление)
+        PATCH request (partial update)
 
-        :param url: URL-адрес эндпоинта
-        :param json: Данные для частичного обновления
+        :param url: Endpoint URL
+        :param json: Data for the partial update
         :return: httpx.Response
         """
         return self.client.patch(url=url, json=json)
 
 
-    # PUT ------------------------------------------------------------------------------------------------------------
     @allure.step('🔵 PUT-request')
     def put(self,
             url: httpx.URL | str,
             json: Any | None = None) -> httpx.Response:
         """
-        PUT-запрос (Полное обновление)
+        PUT request (full update)
 
-        :param url: URL-адрес эндпоинта
-        :param json: Данные для обновления в формате JSON
+        :param url: Endpoint URL
+        :param json: Update data in JSON format
         :return: httpx.Response
         """
         return self.client.put(url=url, json=json)
 
 
-    # DELETE ---------------------------------------------------------------------------------------------------------
     @allure.step('🔴 DELETE-request')
     def delete(self,
                url: httpx.URL | str) -> httpx.Response:
         """
-        DELETE-запрос (удаление данных)
+        DELETE request (data deletion)
 
-        :param url: URL-адрес эндпоинта
+        :param url: Endpoint URL
         :return: httpx.Response
         """
         return self.client.delete(url=url)
