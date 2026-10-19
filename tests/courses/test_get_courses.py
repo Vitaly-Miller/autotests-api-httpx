@@ -46,8 +46,8 @@ class TestGetCourses:
             create_user: CreateUserSchema,                                           # Для User-ID
             create_course: CreateCourseSchema
     ):
-        user_id_qwery_model = GetCoursesQuerySchema(userId=create_user.user_id)       # Pydantic-model
-        response = courses_client.get_courses_api(user_id_qwery_model)                # ▶ Запрос через API-метод
+        user_id_query_model = GetCoursesQuerySchema(userId=create_user.user_id)       # Pydantic-model
+        response = courses_client.get_courses_api(user_id_query_model)                # ▶ Запрос через API-метод
         response_model = GetCoursesResponseSchema.model_validate_json(response.text)  # httpx.Response —> Pydantic-model (deserialize)
 
         # Assertions

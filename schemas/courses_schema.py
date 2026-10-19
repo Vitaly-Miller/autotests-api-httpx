@@ -22,7 +22,7 @@ class CreateCourseRequestSchema(BaseModel):
 
 
 #---------------------------------------------------- Get Courses ------------------------------------------------------
-class GetCoursesQuerySchema(BaseModel):                                   # ?qwery
+class GetCoursesQuerySchema(BaseModel):                                   # ?query
     user_id: str = Field(alias='userId', default_factory=fake.user_id)    # ⚠️️Default value for NEGATIVE test ONLY)
 
 

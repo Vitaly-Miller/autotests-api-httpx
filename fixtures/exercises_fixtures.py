@@ -108,9 +108,9 @@ def get_exercises_api(exercises_client: ExercisesClient, create_course: CreateCo
     :param create_course: Вложенная Pydantic-фикстура создания курса (для получения Course-ID)
     :return: httpx.Response
     """
-    course_id_qwery_model = GetExercisesQuerySchema(courseId=create_course.course_id) # Pydantic-model
+    course_id_query_model = GetExercisesQuerySchema(courseId=create_course.course_id) # Pydantic-model
 
-    response = exercises_client.get_exercises_api(course_id_qwery_model)              # ▶ Запрос через API-метод
+    response = exercises_client.get_exercises_api(course_id_query_model)              # ▶ Запрос через API-метод
     return response                                                                   # httpx.Response
 
 

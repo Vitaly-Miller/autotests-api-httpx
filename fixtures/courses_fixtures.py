@@ -93,8 +93,8 @@ def get_courses_api(courses_client: CoursesClient, create_user: CreateUserSchema
     :param create_user: Встроенная Pydantic-фикстура создания пользователя
     :return: httpx.Response
     """
-    user_id_qwery_model = GetCoursesQuerySchema(userId=create_user.user_id)       # Pydantic-model
-    response = courses_client.get_courses_api(user_id_qwery_model)                # ▶ Запрос через API-метод
+    user_id_query_model = GetCoursesQuerySchema(userId=create_user.user_id)       # Pydantic-model
+    response = courses_client.get_courses_api(user_id_query_model)                # ▶ Запрос через API-метод
     return response                                                               # httpx.Response
 
 
