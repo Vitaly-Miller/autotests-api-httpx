@@ -1,0 +1,4 @@
+         Request URL: http://localhost:8000/api/v1/files/26f0aac1-c96a-4b88-8682-735b2cde6498
+      Request Method: GET
+Response Status Code: 404-Not Found
+        Response URL: http://localhost:8000/api/v1/files/26f0aac1-c96a-4b88-8682-735b2cde6498

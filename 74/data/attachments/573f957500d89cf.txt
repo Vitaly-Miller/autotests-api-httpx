@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTE5VDAzOjEwOjU5LjA5ODMzOSIsInVzZXJfaWQiOiJjNjgyZDJlOC1iN2RhLTRkZmQtODYxMi1mMzQxZjE2OTJjOGMifQ.q-gtnTuYLHglRAkpqpksjA-OyuPv58S1H0i72xX0JvE' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Response weight stand visit against push.","maxScore":73,"minScore":12,"description":"Over yeah imagine many.","estimatedTime":"9 weeks","previewFileId":"a1ef4a65-42ff-4fe1-92ed-cb82b90e58b6","createdByUserId":"c682d2e8-b7da-4dfd-8612-f341f1692c8c"}'

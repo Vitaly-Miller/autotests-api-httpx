@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "ec947e5d-485b-49cc-91f6-b2eff606516b",
+    "title": "Response weight stand visit against push.",
+    "maxScore": 73,
+    "minScore": 12,
+    "description": "Over yeah imagine many.",
+    "previewFile": {
+      "id": "a1ef4a65-42ff-4fe1-92ed-cb82b90e58b6",
+      "filename": "file_4661.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_4661.png"
+    },
+    "estimatedTime": "9 weeks",
+    "createdByUser": {
+      "id": "c682d2e8-b7da-4dfd-8612-f341f1692c8c",
+      "email": "test_b0221b09@example.com",
+      "lastName": "Wood",
+      "firstName": "Karen",
+      "middleName": "Kerri"
+    }
+  }
+}

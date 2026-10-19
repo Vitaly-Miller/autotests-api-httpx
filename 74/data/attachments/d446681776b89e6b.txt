@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTE5VDAzOjExOjAxLjM0MzIwMSIsInVzZXJfaWQiOiJkNTVjMGFhMC01ZjYwLTRkMzMtODU2Yi03MDMwNjAwYTFjYTQifQ.oje1_XkEj4BrZY8W1rBJN6TrW_VhkLM0kQwYW0Q_H9E' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Someone learn issue.","maxScore":84,"minScore":8,"description":"One conference head often party how.","estimatedTime":"3 weeks","previewFileId":"fb3f6726-efe2-4fcb-8984-c88a59802219","createdByUserId":"d55c0aa0-5f60-4d33-856b-7030600a1ca4"}'

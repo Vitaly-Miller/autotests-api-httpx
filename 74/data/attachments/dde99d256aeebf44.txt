@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTE5VDAzOjExOjAyLjYyMDA2MSIsInVzZXJfaWQiOiI0MjdmYmFhOC1jZjIyLTRhNTYtODRiMy0yNmJiYjUwZjE3ZDQifQ.NixDyhmjDLynYDkhM0xZM4pHBa81fAhQWDWEO19jvNw' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Because poor particularly tough soldier.","maxScore":78,"minScore":18,"description":"With sometimes debate end. From never per decade.","estimatedTime":"5 weeks","previewFileId":"4bf05e93-3017-49c2-8eff-58cb6fbfbb54","createdByUserId":"427fbaa8-cf22-4a56-84b3-26bbb50f17d4"}'

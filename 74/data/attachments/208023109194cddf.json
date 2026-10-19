@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "4b73edf4-e1a1-48dd-9f7b-e3a9b69dcc97",
+    "title": "Because poor particularly tough soldier.",
+    "maxScore": 78,
+    "minScore": 18,
+    "description": "With sometimes debate end. From never per decade.",
+    "previewFile": {
+      "id": "4bf05e93-3017-49c2-8eff-58cb6fbfbb54",
+      "filename": "file_4233.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_4233.png"
+    },
+    "estimatedTime": "5 weeks",
+    "createdByUser": {
+      "id": "427fbaa8-cf22-4a56-84b3-26bbb50f17d4",
+      "email": "test_9601a6d8@example.com",
+      "lastName": "Hanson",
+      "firstName": "Alexandra",
+      "middleName": "Ronald"
+    }
+  }
+}

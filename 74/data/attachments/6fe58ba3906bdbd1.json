@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "c9d8446a-d6eb-4948-8f00-71775f43934a",
+    "title": "Physical itself wonder although.",
+    "maxScore": 50,
+    "minScore": 10,
+    "description": "Car word Mrs face five conference.",
+    "previewFile": {
+      "id": "03102cb0-0a74-4909-8d24-1269b9b1a08c",
+      "filename": "file_8770.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_8770.png"
+    },
+    "estimatedTime": "4 weeks",
+    "createdByUser": {
+      "id": "ade7dfa9-3b43-4592-b28b-7692515b6588",
+      "email": "test_ae6d5eb7@example.com",
+      "lastName": "Jones",
+      "firstName": "Erin",
+      "middleName": "Brian"
+    }
+  }
+}

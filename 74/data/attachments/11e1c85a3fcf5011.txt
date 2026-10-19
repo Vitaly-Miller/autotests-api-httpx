@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTE5VDAzOjExOjEwLjI3MzI5NiIsInVzZXJfaWQiOiJiZTlhYTZhNS0xNDUwLTQ3NjEtOTJhZC01ODBjOGQyZmZmYjIifQ.hPa6nGX1173DCC2VyZCIXr4s8ZThlbxdC2VhRqAY54g' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Sell keep cup among democratic.","maxScore":96,"minScore":15,"description":"Mean production everyone. Green test letter.","estimatedTime":"9 weeks","previewFileId":"3d752a74-3bab-43c0-9a5e-3e4e2f1443d7","createdByUserId":"be9aa6a5-1450-4761-92ad-580c8d2fffb2"}'

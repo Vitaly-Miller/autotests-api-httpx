@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTE5VDAzOjExOjA3LjQxNTAyNiIsInVzZXJfaWQiOiI0OTZmNzRmOS0yN2VlLTQ3YzktOGY5Ni0xZDc3YjNlMTcwOTQifQ.MzYbH6-BwNuHQvqqZ1wXTRYG1XcVPR3peR3-0eDMiM0' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Course technology center health.","courseId":"5da43ab2-b2df-4aad-b25c-84c272e54a50","maxScore":52,"minScore":4,"orderIndex":4667,"description":"Property also table college family include.","estimatedTime":"3 weeks"}'

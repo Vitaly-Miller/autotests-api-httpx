@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "316dfb93-3755-4c55-b239-fc768f5d5d5b",
+    "title": "Bring get speech positive hospital.",
+    "maxScore": 56,
+    "minScore": 24,
+    "description": "Walk toward science message.",
+    "previewFile": {
+      "id": "fc21a943-f3b9-45e8-87a9-fc6282a26089",
+      "filename": "file_8704.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_8704.png"
+    },
+    "estimatedTime": "9 weeks",
+    "createdByUser": {
+      "id": "ddc2d7f7-42a3-48f9-8727-8d2dc77205a1",
+      "email": "test_51b69663@example.com",
+      "lastName": "Vazquez",
+      "firstName": "Melanie",
+      "middleName": "Anthony"
+    }
+  }
+}

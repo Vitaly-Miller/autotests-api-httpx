@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTE5VDAzOjExOjA2LjEzNTU5NiIsInVzZXJfaWQiOiJkZGMyZDdmNy00MmEzLTQ4ZjktODcyNy04ZDJkYzc3MjA1YTEifQ.73elGiGF9tzETh7yeKOm5Y3hWHQSNQpGzdloukyJVac' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Research wide environmental career.","courseId":"316dfb93-3755-4c55-b239-fc768f5d5d5b","maxScore":95,"minScore":10,"orderIndex":3041,"description":"Quality simple us past to me.","estimatedTime":"5 weeks"}'

@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTE5VDAzOjExOjA4LjY3NTc4NSIsInVzZXJfaWQiOiI2NjVjM2JkZi05NjJiLTQ4ZTctYjVjZS01NTQ2YjNiYmNiY2QifQ.rekRTuCvfLlMEbrfA325pTw-U_v-TD5cjCv4MEXhHzQ' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Several strategy foreign her order.","courseId":"7fd883a8-e6df-47bf-8cce-2d1a783c8390","maxScore":96,"minScore":16,"orderIndex":2178,"description":"Mouth career seem film.","estimatedTime":"9 weeks"}'

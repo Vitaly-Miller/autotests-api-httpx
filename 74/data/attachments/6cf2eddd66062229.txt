@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/exercises/41132d0f-cc82-48d3-aaea-3e2869d20402 \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTE5VDAzOjExOjA5Ljk2NzE4NiIsInVzZXJfaWQiOiJiZTlhYTZhNS0xNDUwLTQ3NjEtOTJhZC01ODBjOGQyZmZmYjIifQ.cdKu_Vza2E6KG_bVUZMwpVpaluxXhnmSzn1dFJEnJbg' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Person star grow where food.","maxScore":98,"minScore":9,"orderIndex":1442,"description":"Public country right art look idea.","estimatedTime":"6 weeks"}'

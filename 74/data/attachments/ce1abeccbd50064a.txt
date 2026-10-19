@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/courses/7eb33e2a-4e7b-4dda-a9eb-9310e15ec641 \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTE5VDAzOjExOjAwLjA2NzQzNCIsInVzZXJfaWQiOiI5YzlmMGQ4MC04YjI0LTRjNDItODE5OS1mMGFmOThmOTVkMDcifQ.QkIT9qczNBNvE7L2fFnhsqhq2jgMWrzVIFdaA6nvvJ0' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Doctor build response fill hold.","maxScore":97,"minScore":27,"description":"Morning example theory leg stuff spend foot.","estimatedTime":"9 weeks"}'

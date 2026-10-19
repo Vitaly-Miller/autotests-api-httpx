@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTE5VDAzOjEwOjU2LjE5NDMwOCIsInVzZXJfaWQiOiJhNjBiYWY5MC04N2VjLTQzNzEtYjYzMS01ZGMyMjljODM2ZDAifQ.pRpP0kNlOChwITDM6-IO1SNyvHPOTEkzwEskx5aAJDA' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Big necessary ball.","maxScore":54,"minScore":25,"description":"Make others phone financial whole.","estimatedTime":"3 weeks","previewFileId":"526dd39e-58ee-4109-bb16-b6b1848edd9f","createdByUserId":"a60baf90-87ec-4371-b631-5dc229c836d0"}'

@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "b1a00142-441a-4365-9f05-71905dd7e8d3",
+    "title": "Someone learn issue.",
+    "maxScore": 84,
+    "minScore": 8,
+    "description": "One conference head often party how.",
+    "previewFile": {
+      "id": "fb3f6726-efe2-4fcb-8984-c88a59802219",
+      "filename": "file_5496.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_5496.png"
+    },
+    "estimatedTime": "3 weeks",
+    "createdByUser": {
+      "id": "d55c0aa0-5f60-4d33-856b-7030600a1ca4",
+      "email": "test_052d01d4@example.com",
+      "lastName": "Gomez",
+      "firstName": "Anthony",
+      "middleName": "Stephen"
+    }
+  }
+}

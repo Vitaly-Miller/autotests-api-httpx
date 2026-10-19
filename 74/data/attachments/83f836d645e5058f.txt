@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTE5VDAzOjExOjA2LjQzNDc5NCIsInVzZXJfaWQiOiJkZGMyZDdmNy00MmEzLTQ4ZjktODcyNy04ZDJkYzc3MjA1YTEifQ.fIFF6WyEht1SvgKdkCv3EKBpwhO1omELE-FZIXdC-Jo' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Bring get speech positive hospital.","maxScore":56,"minScore":24,"description":"Walk toward science message.","estimatedTime":"9 weeks","previewFileId":"fc21a943-f3b9-45e8-87a9-fc6282a26089","createdByUserId":"ddc2d7f7-42a3-48f9-8727-8d2dc77205a1"}'

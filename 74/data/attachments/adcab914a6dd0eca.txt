@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTE5VDAzOjExOjA4Ljk3NjA3NyIsInVzZXJfaWQiOiI2NjVjM2JkZi05NjJiLTQ4ZTctYjVjZS01NTQ2YjNiYmNiY2QifQ.zwMPvP2B1XB9JXG_CCvkyfju3wdYYgKH5E_zfPI7PD0' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Grow matter yard plant.","maxScore":95,"minScore":8,"description":"Soldier leg away experience than might.","estimatedTime":"8 weeks","previewFileId":"cd682a2a-14e9-4eda-8063-3b6e847ef6ae","createdByUserId":"665c3bdf-962b-48e7-b5ce-5546b3bbcbcd"}'

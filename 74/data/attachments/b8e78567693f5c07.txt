@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTE5VDAzOjExOjAxLjA0MzkzMCIsInVzZXJfaWQiOiJkNTVjMGFhMC01ZjYwLTRkMzMtODU2Yi03MDMwNjAwYTFjYTQifQ.bQK8ms2zkSNGpbHeR8ffxqEvRxiuMUWy4B0q_a77jNU' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Side car use onto with.","courseId":"b1a00142-441a-4365-9f05-71905dd7e8d3","maxScore":72,"minScore":2,"orderIndex":7912,"description":"Only realize truth best decade finish.","estimatedTime":"7 weeks"}'

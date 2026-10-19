@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "7eb33e2a-4e7b-4dda-a9eb-9310e15ec641",
+    "title": "Social authority other.",
+    "maxScore": 60,
+    "minScore": 27,
+    "description": "Write reduce common down. Summer fish ball.",
+    "previewFile": {
+      "id": "8d2540da-af4d-4cbc-8cea-2dfd81b2d834",
+      "filename": "file_8402.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_8402.png"
+    },
+    "estimatedTime": "3 weeks",
+    "createdByUser": {
+      "id": "9c9f0d80-8b24-4c42-8199-f0af98f95d07",
+      "email": "test_b08ff0ef@example.com",
+      "lastName": "Lopez",
+      "firstName": "Anthony",
+      "middleName": "Kelly"
+    }
+  }
+}

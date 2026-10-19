@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTE5VDAzOjExOjA3LjcxNDA5NCIsInVzZXJfaWQiOiI0OTZmNzRmOS0yN2VlLTQ3YzktOGY5Ni0xZDc3YjNlMTcwOTQifQ.Sv775jB00TAKArj3Jy7zVhR-6zr-4aLuEweez9uiZNE' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Key if mission.","maxScore":92,"minScore":1,"description":"Gas deal measure sea blood candidate sport pay.","estimatedTime":"3 weeks","previewFileId":"19de2eba-d48c-46e7-980a-3221e40d78ad","createdByUserId":"496f74f9-27ee-47c9-8f96-1d77b3e17094"}'

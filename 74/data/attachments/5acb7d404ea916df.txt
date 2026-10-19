@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTE5VDAzOjExOjAzLjg4NDA2MyIsInVzZXJfaWQiOiIyZTFlMDZhNy00ZTBhLTQ4YTYtODU3Ny03MTg1NGMwYTA0ODcifQ.TYkNnVY9N3pCw3qfjHIjbB8xKeV4uAXzRM9bfJRQ5TE' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Class see morning eat face read animal.","maxScore":55,"minScore":22,"description":"Thing employee agent usually work deep ground.","estimatedTime":"6 weeks","previewFileId":"ce3d971a-bc34-42a2-9002-733e3ad82302","createdByUserId":"2e1e06a7-4e0a-48a6-8577-71854c0a0487"}'

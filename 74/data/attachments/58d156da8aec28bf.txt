@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTE5VDAzOjExOjA0Ljg2NzI5MyIsInVzZXJfaWQiOiI2NDQ2MDE4NC05YzhiLTQyNWEtYTVlMC0wY2JmMmQxNTYyNDQifQ.mq39b6ZR_mrrTCEUJwQHRnNoIA81MVUoL5lWLFpb1rM' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Take we financial citizen report.","courseId":"b2f9325d-7e21-4b5d-b721-0f2dbabfd7f8","maxScore":53,"minScore":26,"orderIndex":8016,"description":"Top discussion we plant.","estimatedTime":"5 weeks"}'

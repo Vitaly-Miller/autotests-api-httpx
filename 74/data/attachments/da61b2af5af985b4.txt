@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTE5VDAzOjExOjA1LjE2NjM0MyIsInVzZXJfaWQiOiI2NDQ2MDE4NC05YzhiLTQyNWEtYTVlMC0wY2JmMmQxNTYyNDQifQ.UkQBwYNnNZ_vFONg5yLBR-u36ArioJx1XYx8KMclqb0' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Number over social mean hot young.","maxScore":77,"minScore":7,"description":"Someone him other same pretty.","estimatedTime":"6 weeks","previewFileId":"1ea19dd4-1385-4430-8354-ad2f2508010e","createdByUserId":"64460184-9c8b-425a-a5e0-0cbf2d156244"}'

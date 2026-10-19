@@ -1,0 +1,3 @@
+curl -X GET \
+  http://localhost:8000/api/v1/files/26f0aac1-c96a-4b88-8682-735b2cde6498 \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTE5VDAzOjExOjEzLjE0NjEzNyIsInVzZXJfaWQiOiJlMjdlNmViYy02OTM0LTQ4YzAtODJmMS04ZWE2NjczZGEwZTIifQ.-t5khahkAMSdF8j1HP_iUENOP0CZLE88fmvL0PVizik'

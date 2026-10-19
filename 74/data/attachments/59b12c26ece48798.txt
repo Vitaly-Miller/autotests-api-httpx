@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTE5VDAzOjExOjAzLjU4NTAzOCIsInVzZXJfaWQiOiIyZTFlMDZhNy00ZTBhLTQ4YTYtODU3Ny03MTg1NGMwYTA0ODcifQ.4gwhiwe3RdIdhfpMvLHWyppnSGsmOvl1fueLCML9zcc' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Later animal tough economy.","courseId":"56d0f239-9cdd-4fd4-883a-c29117fbf6ef","maxScore":97,"minScore":7,"orderIndex":8826,"description":"Laugh world hour house. Yes data clearly open.","estimatedTime":"3 weeks"}'

@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "7fd883a8-e6df-47bf-8cce-2d1a783c8390",
+    "title": "Grow matter yard plant.",
+    "maxScore": 95,
+    "minScore": 8,
+    "description": "Soldier leg away experience than might.",
+    "previewFile": {
+      "id": "cd682a2a-14e9-4eda-8063-3b6e847ef6ae",
+      "filename": "file_5252.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_5252.png"
+    },
+    "estimatedTime": "8 weeks",
+    "createdByUser": {
+      "id": "665c3bdf-962b-48e7-b5ce-5546b3bbcbcd",
+      "email": "test_b851c082@example.com",
+      "lastName": "Taylor",
+      "firstName": "Angela",
+      "middleName": "Sarah"
+    }
+  }
+}

@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/exercises/c62f9a06-caa3-466f-a32e-c00eddb85d48 \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTE5VDAzOjExOjA4LjY3NTc4NSIsInVzZXJfaWQiOiI2NjVjM2JkZi05NjJiLTQ4ZTctYjVjZS01NTQ2YjNiYmNiY2QifQ.rekRTuCvfLlMEbrfA325pTw-U_v-TD5cjCv4MEXhHzQ' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Despite popular interest large also.","maxScore":78,"minScore":13,"orderIndex":4494,"description":"It recently artist unit.","estimatedTime":"4 weeks"}'

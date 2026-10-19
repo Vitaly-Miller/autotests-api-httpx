@@ -1,0 +1,25 @@
+{
+  "courses": [
+    {
+      "id": "cca91209-3763-40a8-9d99-7b8da6b1b602",
+      "title": "Door card eight pass peace career.",
+      "maxScore": 86,
+      "minScore": 5,
+      "description": "Boy body moment on shake.",
+      "previewFile": {
+        "id": "e81d8811-804a-4152-bb4c-31b95aedb204",
+        "filename": "file_1122.png",
+        "directory": "Uploaded",
+        "url": "http://localhost:8000/static/Uploaded/file_1122.png"
+      },
+      "estimatedTime": "9 weeks",
+      "createdByUser": {
+        "id": "7047eac9-5fb7-498c-b939-9bbbbca70336",
+        "email": "test_c1e89f13@example.com",
+        "lastName": "Reynolds",
+        "firstName": "Robert",
+        "middleName": "Connie"
+      }
+    }
+  ]
+}

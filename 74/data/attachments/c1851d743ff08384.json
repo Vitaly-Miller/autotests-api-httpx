@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "b2f9325d-7e21-4b5d-b721-0f2dbabfd7f8",
+    "title": "Number over social mean hot young.",
+    "maxScore": 77,
+    "minScore": 7,
+    "description": "Someone him other same pretty.",
+    "previewFile": {
+      "id": "1ea19dd4-1385-4430-8354-ad2f2508010e",
+      "filename": "file_6334.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_6334.png"
+    },
+    "estimatedTime": "6 weeks",
+    "createdByUser": {
+      "id": "64460184-9c8b-425a-a5e0-0cbf2d156244",
+      "email": "test_2404b0b2@example.com",
+      "lastName": "Roth",
+      "firstName": "Lori",
+      "middleName": "Tamara"
+    }
+  }
+}

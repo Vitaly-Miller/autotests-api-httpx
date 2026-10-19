@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "f2648152-19cb-4889-93f3-c3db6b321d6f",
+    "title": "Big necessary ball.",
+    "maxScore": 54,
+    "minScore": 25,
+    "description": "Make others phone financial whole.",
+    "previewFile": {
+      "id": "526dd39e-58ee-4109-bb16-b6b1848edd9f",
+      "filename": "file_1993.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_1993.png"
+    },
+    "estimatedTime": "3 weeks",
+    "createdByUser": {
+      "id": "a60baf90-87ec-4371-b631-5dc229c836d0",
+      "email": "test_e3e854ed@example.com",
+      "lastName": "Dyer",
+      "firstName": "Hailey",
+      "middleName": "Clarence"
+    }
+  }
+}
