@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "137a271e-75a2-4cdd-80c9-bd5679e8b7ae",
+    "title": "Marriage lot building standard purpose difference white.",
+    "maxScore": 61,
+    "minScore": 19,
+    "description": "Guy moment before each very hit away soon.",
+    "previewFile": {
+      "id": "a7adfbd9-af74-40c5-bf7d-dabb1620de3e",
+      "filename": "file_5138.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_5138.png"
+    },
+    "estimatedTime": "4 weeks",
+    "createdByUser": {
+      "id": "f938a9a8-e73d-43ff-a3bc-a6aaa70cd0e0",
+      "email": "test_5ca1fa7c@example.com",
+      "lastName": "Garcia",
+      "firstName": "John",
+      "middleName": "Alexandra"
+    }
+  }
+}

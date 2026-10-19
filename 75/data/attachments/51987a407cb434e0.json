@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "f9562c33-4d52-4572-9f3a-94d2f144db2b",
+    "title": "Management they test side.",
+    "maxScore": 64,
+    "minScore": 17,
+    "description": "Operation concern rather drive ago catch thank.",
+    "previewFile": {
+      "id": "fcabb024-8ba6-4312-9538-bc04889870f4",
+      "filename": "file_1952.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_1952.png"
+    },
+    "estimatedTime": "2 weeks",
+    "createdByUser": {
+      "id": "e8787a5e-04e3-421c-93cd-8e9cae244f2f",
+      "email": "test_c35331cc@example.com",
+      "lastName": "Foley",
+      "firstName": "Kevin",
+      "middleName": "Jeffrey"
+    }
+  }
+}

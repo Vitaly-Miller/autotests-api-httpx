@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTE5VDE5OjQ0OjUxLjgzODY0NCIsInVzZXJfaWQiOiI1Yjg0MzU0Zi03YzAwLTQzZTUtOGJiOS01ZTg0M2QxYzM3Y2UifQ.PuTtc-1yIdt5y5Hsw6GH6WR6zlty78EP63FT37D5eZ8' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Public compare magazine.","courseId":"face8402-9328-46b4-bfc5-9d94dda1423d","maxScore":58,"minScore":4,"orderIndex":2271,"description":"Management win step manage work that.","estimatedTime":"2 weeks"}'

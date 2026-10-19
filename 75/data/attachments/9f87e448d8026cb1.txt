@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTE5VDE5OjQ0OjUwLjE1MjYzNSIsInVzZXJfaWQiOiJhMzU3NGE3Yi0zMDI2LTQwZmUtYjYwNy03MjlmYzU5Y2RmOTQifQ.-MKBmsEZkIj5AQDCthpKHJlLv-nybr20ZaGmT0oQ0_c' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Child forget society born turn.","maxScore":51,"minScore":22,"description":"There himself manager.","estimatedTime":"7 weeks","previewFileId":"92183305-8b3e-47f6-82d4-565197002510","createdByUserId":"a3574a7b-3026-40fe-b607-729fc59cdf94"}'

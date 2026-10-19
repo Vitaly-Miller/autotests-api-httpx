@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "c5c266f3-6c2d-4de4-b2f8-76bea2da9ea2",
+    "title": "Head result man open.",
+    "maxScore": 72,
+    "minScore": 19,
+    "description": "Pick catch test growth.",
+    "previewFile": {
+      "id": "054b9c25-032a-4883-b7da-320ff09fd4cc",
+      "filename": "file_7927.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_7927.png"
+    },
+    "estimatedTime": "9 weeks",
+    "createdByUser": {
+      "id": "f09cb2b1-0772-4be4-bbd4-fe0a4d5390e8",
+      "email": "test_f4cb78a7@example.com",
+      "lastName": "Watkins",
+      "firstName": "Brandon",
+      "middleName": "Savannah"
+    }
+  }
+}

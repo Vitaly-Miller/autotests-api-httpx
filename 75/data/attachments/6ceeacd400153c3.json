@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "49cc7432-63c6-4f6a-846e-2a8b576b9e00",
+    "title": "Computer whole recent than be popular.",
+    "maxScore": 84,
+    "minScore": 8,
+    "description": "Him what avoid require hotel.",
+    "previewFile": {
+      "id": "950da580-1c32-48e6-b073-a5a740706bf9",
+      "filename": "file_7066.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_7066.png"
+    },
+    "estimatedTime": "8 weeks",
+    "createdByUser": {
+      "id": "fdadc896-5b77-4194-a10a-13b766bf27bf",
+      "email": "test_f496754f@example.com",
+      "lastName": "Lane",
+      "firstName": "April",
+      "middleName": "Eric"
+    }
+  }
+}

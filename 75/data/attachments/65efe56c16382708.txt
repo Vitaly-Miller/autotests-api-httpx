@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTE5VDE5OjQ0OjUyLjc1OTI4NyIsInVzZXJfaWQiOiJmOTM4YTlhOC1lNzNkLTQzZmYtYTNiYy1hNmFhYTcwY2QwZTAifQ.nEc4PRm2LpeVuYgEsgJTWAe58uXL0HnMSyvjofl5oB8' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Yard service card call throughout political.","courseId":"137a271e-75a2-4cdd-80c9-bd5679e8b7ae","maxScore":78,"minScore":25,"orderIndex":7016,"description":"Audience speak meet morning little gun.","estimatedTime":"3 weeks"}'

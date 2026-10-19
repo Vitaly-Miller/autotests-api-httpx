@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTE5VDE5OjQ0OjQ3LjMwMjU3OSIsInVzZXJfaWQiOiJjOWNhNDliZi1iMTRlLTQ0ZTEtYTdhYS0zMjg2ZTc0MDM4MjIifQ.qenlKV46tA4tkvTWL_QRJg8p27HU-Q0uOul5EC6A3Go' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Mean word different yourself either executive.","maxScore":51,"minScore":22,"description":"Quite white kid foreign cost.","estimatedTime":"6 weeks","previewFileId":"3128417d-290c-4836-a973-328c4d1a4d9a","createdByUserId":"c9ca49bf-b14e-44e1-a7aa-3286e7403822"}'

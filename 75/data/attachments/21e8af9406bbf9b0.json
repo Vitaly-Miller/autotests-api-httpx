@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "44575156-15f2-4707-a66b-34af12656f95",
+    "title": "Pass three American.",
+    "maxScore": 88,
+    "minScore": 5,
+    "description": "Responsibility think prepare admit.",
+    "previewFile": {
+      "id": "2f727b10-2c5b-46c9-8ae4-c5ba101fd603",
+      "filename": "file_6843.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_6843.png"
+    },
+    "estimatedTime": "2 weeks",
+    "createdByUser": {
+      "id": "fb85af4c-4868-48fa-83eb-7979e38d4e4a",
+      "email": "test_cb215b93@example.com",
+      "lastName": "Reilly",
+      "firstName": "Michael",
+      "middleName": "Daniel"
+    }
+  }
+}

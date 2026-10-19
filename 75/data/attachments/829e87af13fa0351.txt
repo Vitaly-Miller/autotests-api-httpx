@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTE5VDE5OjQ0OjUzLjk4ODczMSIsInVzZXJfaWQiOiJmMDljYjJiMS0wNzcyLTRiZTQtYmJkNC1mZTBhNGQ1MzkwZTgifQ.M4x_bzgkSgZgrWcOlinKb6TTFeD926kY8_sc5Cpp5FI' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Head result man open.","maxScore":72,"minScore":19,"description":"Pick catch test growth.","estimatedTime":"9 weeks","previewFileId":"054b9c25-032a-4883-b7da-320ff09fd4cc","createdByUserId":"f09cb2b1-0772-4be4-bbd4-fe0a4d5390e8"}'

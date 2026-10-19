@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/courses/b79bd035-8406-4c3c-b449-284f85bf22c1 \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTE5VDE5OjQ0OjQ2LjM1OTAzMiIsInVzZXJfaWQiOiI0ZjMxM2VlNi04ZjA4LTQzMmUtOWI1Ni0zNWYzYzgyMGQzZmQifQ.sdtCa1aJan5PAz0HjZWZFZcSnw62bd9L4L0usn6HIj8' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Wind respond voice relate Mrs too.","maxScore":56,"minScore":2,"description":"Carry woman hot.","estimatedTime":"5 weeks"}'

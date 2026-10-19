@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "8c742018-aed4-415b-9d87-d3c3db5a59f6",
+    "title": "Thousand environmental stand heavy suggest ground.",
+    "maxScore": 50,
+    "minScore": 20,
+    "description": "Wish medical picture reveal.",
+    "previewFile": {
+      "id": "cef1b270-bc19-4af1-a102-cdf328a5bf36",
+      "filename": "file_2068.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_2068.png"
+    },
+    "estimatedTime": "3 weeks",
+    "createdByUser": {
+      "id": "9240b9f3-15b1-48ea-b3d3-cce4e9cb8cce",
+      "email": "test_7d28ae7a@example.com",
+      "lastName": "Monroe",
+      "firstName": "Claudia",
+      "middleName": "Thomas"
+    }
+  }
+}

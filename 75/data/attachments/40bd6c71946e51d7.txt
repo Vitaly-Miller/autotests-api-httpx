@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTE5VDE5OjQ0OjQ4Ljk2NjkzOCIsInVzZXJfaWQiOiI0MGYxODMxZS04NTVhLTQ4YzktOGM1Zi04MjExNjQ0MWYwYTMifQ.Y6EG3xKdhJz8f8d12ZD_WIuVvZhP61d4g25VDMK1E2E' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Production really garden.","courseId":"af7dbe14-f2a0-43be-b34b-b56500dc39a8","maxScore":77,"minScore":11,"orderIndex":2755,"description":"Herself exist test establish who answer dinner.","estimatedTime":"8 weeks"}'

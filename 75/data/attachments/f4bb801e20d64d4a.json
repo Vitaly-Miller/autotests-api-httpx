@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "af7dbe14-f2a0-43be-b34b-b56500dc39a8",
+    "title": "Green own go.",
+    "maxScore": 68,
+    "minScore": 11,
+    "description": "Feel young enter think other truth.",
+    "previewFile": {
+      "id": "3ca25a1f-6368-4318-954b-b31236a73602",
+      "filename": "file_4887.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_4887.png"
+    },
+    "estimatedTime": "2 weeks",
+    "createdByUser": {
+      "id": "40f1831e-855a-48c9-8c5f-82116441f0a3",
+      "email": "test_f8af9534@example.com",
+      "lastName": "Bowen",
+      "firstName": "Mary",
+      "middleName": "Melody"
+    }
+  }
+}

@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTE5VDE5OjQ0OjUwLjg3MTQyNCIsInVzZXJfaWQiOiJmYjg1YWY0Yy00ODY4LTQ4ZmEtODNlYi03OTc5ZTM4ZDRlNGEifQ.hfwC9mCl6Gi5PVYglACrLaM85JbRxzTS9AcDg0z3WX8' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Question each third interesting increase.","courseId":"44575156-15f2-4707-a66b-34af12656f95","maxScore":76,"minScore":27,"orderIndex":615,"description":"Mind left describe light.","estimatedTime":"2 weeks"}'

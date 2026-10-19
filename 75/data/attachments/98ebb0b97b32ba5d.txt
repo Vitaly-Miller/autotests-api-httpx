@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTE5VDE5OjQ0OjQzLjQ3NzI0MiIsInVzZXJfaWQiOiJlODc4N2E1ZS0wNGUzLTQyMWMtOTNjZC04ZTljYWUyNDRmMmYifQ.xU8yt7_YkbwugMNcHkOvJ1wTbWQfZMgjpOfVYaAzq8M' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Management they test side.","maxScore":64,"minScore":17,"description":"Operation concern rather drive ago catch thank.","estimatedTime":"2 weeks","previewFileId":"fcabb024-8ba6-4312-9538-bc04889870f4","createdByUserId":"e8787a5e-04e3-421c-93cd-8e9cae244f2f"}'

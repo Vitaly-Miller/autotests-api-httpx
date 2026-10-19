@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "face8402-9328-46b4-bfc5-9d94dda1423d",
+    "title": "Development maybe control.",
+    "maxScore": 94,
+    "minScore": 18,
+    "description": "Energy at general tax move hospital.",
+    "previewFile": {
+      "id": "ef99dc3c-f19a-498e-9937-15a120b79205",
+      "filename": "file_6007.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_6007.png"
+    },
+    "estimatedTime": "8 weeks",
+    "createdByUser": {
+      "id": "5b84354f-7c00-43e5-8bb9-5e843d1c37ce",
+      "email": "test_e6b8a2e2@example.com",
+      "lastName": "Powell",
+      "firstName": "Sean",
+      "middleName": "Melanie"
+    }
+  }
+}

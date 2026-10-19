@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTE5VDE5OjQ0OjQ1LjYzOTY2NCIsInVzZXJfaWQiOiIyZjQzZDc4MC1kNzY2LTQ4ZDEtODgxZS05ZWMzOWUwOGFjYzAifQ.yrG9Ygtsk7P3iQn5QW86WnAOPw8l7aNkL7ThyhRZq7w' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Course force current low according court.","maxScore":64,"minScore":30,"description":"Story top care. Develop movement standard cold.","estimatedTime":"7 weeks","previewFileId":"35b6ab79-2b2e-4d85-a5b7-653cb0362f14","createdByUserId":"2f43d780-d766-48d1-881e-9ec39e08acc0"}'

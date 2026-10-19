@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "a80fb952-c45f-4e40-b854-23168d189459",
+    "title": "Child forget society born turn.",
+    "maxScore": 51,
+    "minScore": 22,
+    "description": "There himself manager.",
+    "previewFile": {
+      "id": "92183305-8b3e-47f6-82d4-565197002510",
+      "filename": "file_4213.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_4213.png"
+    },
+    "estimatedTime": "7 weeks",
+    "createdByUser": {
+      "id": "a3574a7b-3026-40fe-b607-729fc59cdf94",
+      "email": "test_5ac65a21@example.com",
+      "lastName": "Davis",
+      "firstName": "Lee",
+      "middleName": "Rachel"
+    }
+  }
+}

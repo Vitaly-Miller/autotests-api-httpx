@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTE5VDE5OjQ0OjQ0LjE5MjkyMSIsInVzZXJfaWQiOiI5MjQwYjlmMy0xNWIxLTQ4ZWEtYjNkMy1jY2U0ZTljYjhjY2UifQ.kIP0Mz2xBFAJ5s_Jrx-kqSsHbFkfTUHnkvl8tXn9JGs' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Thousand environmental stand heavy suggest ground.","maxScore":50,"minScore":20,"description":"Wish medical picture reveal.","estimatedTime":"3 weeks","previewFileId":"cef1b270-bc19-4af1-a102-cdf328a5bf36","createdByUserId":"9240b9f3-15b1-48ea-b3d3-cce4e9cb8cce"}'

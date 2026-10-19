@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTE5VDE5OjQ0OjQ2LjM1OTAzMiIsInVzZXJfaWQiOiI0ZjMxM2VlNi04ZjA4LTQzMmUtOWI1Ni0zNWYzYzgyMGQzZmQifQ.sdtCa1aJan5PAz0HjZWZFZcSnw62bd9L4L0usn6HIj8' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Positive simply my have.","maxScore":90,"minScore":1,"description":"Task leave seven here interesting reality.","estimatedTime":"2 weeks","previewFileId":"46702e88-630d-415b-9232-f8952394b78f","createdByUserId":"4f313ee6-8f08-432e-9b56-35f3c820d3fd"}'

@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTE5VDE5OjQ0OjQ3LjA3OTQyNiIsInVzZXJfaWQiOiJjOWNhNDliZi1iMTRlLTQ0ZTEtYTdhYS0zMjg2ZTc0MDM4MjIifQ.OFPQBycfSOjSs7VreHCdzPkaG-ldlJsnCp9PyNAhnBE' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Back may here.","courseId":"b6fc9982-7629-4723-8332-e2f96782c59a","maxScore":60,"minScore":24,"orderIndex":5673,"description":"Learn lawyer billion agent region.","estimatedTime":"2 weeks"}'

@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "27a50fbc-48d2-4285-b624-c570b7c5b9b3",
+    "title": "News bed east.",
+    "maxScore": 63,
+    "minScore": 9,
+    "description": "Close owner quite behavior.",
+    "previewFile": {
+      "id": "e98842d3-63f8-4cc8-ad0d-9ab875834d47",
+      "filename": "file_9342.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_9342.png"
+    },
+    "estimatedTime": "5 weeks",
+    "createdByUser": {
+      "id": "7b633391-ba9c-4732-a732-f56f2d9a3d19",
+      "email": "test_9bc05303@example.com",
+      "lastName": "Santana",
+      "firstName": "Daniel",
+      "middleName": "Michael"
+    }
+  }
+}

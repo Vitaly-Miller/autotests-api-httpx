@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "b6fc9982-7629-4723-8332-e2f96782c59a",
+    "title": "Mean word different yourself either executive.",
+    "maxScore": 51,
+    "minScore": 22,
+    "description": "Quite white kid foreign cost.",
+    "previewFile": {
+      "id": "3128417d-290c-4836-a973-328c4d1a4d9a",
+      "filename": "file_8294.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_8294.png"
+    },
+    "estimatedTime": "6 weeks",
+    "createdByUser": {
+      "id": "c9ca49bf-b14e-44e1-a7aa-3286e7403822",
+      "email": "test_e7df3813@example.com",
+      "lastName": "Jimenez",
+      "firstName": "Henry",
+      "middleName": "Michael"
+    }
+  }
+}

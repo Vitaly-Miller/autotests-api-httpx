@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTE5VDE5OjQ0OjUzLjc2NDE4MSIsInVzZXJfaWQiOiJmMDljYjJiMS0wNzcyLTRiZTQtYmJkNC1mZTBhNGQ1MzkwZTgifQ.sUXkigmYhyUnw8R9H1xhFZaoEBggebQyHpAkHfJXY9Q' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Run travel remain instead.","courseId":"c5c266f3-6c2d-4de4-b2f8-76bea2da9ea2","maxScore":94,"minScore":27,"orderIndex":9503,"description":"Open military day phone commercial.","estimatedTime":"2 weeks"}'

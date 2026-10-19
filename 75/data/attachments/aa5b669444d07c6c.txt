@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTE5VDE5OjQ0OjQ5LjE4NzgzNyIsInVzZXJfaWQiOiI0MGYxODMxZS04NTVhLTQ4YzktOGM1Zi04MjExNjQ0MWYwYTMifQ.EFwb8QmkOMl1BSe5KMwqo2V_Vy9YXbqb1XxT4wcYjJ4' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Green own go.","maxScore":68,"minScore":11,"description":"Feel young enter think other truth.","estimatedTime":"2 weeks","previewFileId":"3ca25a1f-6368-4318-954b-b31236a73602","createdByUserId":"40f1831e-855a-48c9-8c5f-82116441f0a3"}'

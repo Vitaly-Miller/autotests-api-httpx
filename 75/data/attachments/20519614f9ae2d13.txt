@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTE5VDE5OjQ0OjUxLjA5MzQyMyIsInVzZXJfaWQiOiJmYjg1YWY0Yy00ODY4LTQ4ZmEtODNlYi03OTc5ZTM4ZDRlNGEifQ.fhgLl1BzMxNjVNBsSUKG_0JGBnlAO77cFORz8G8y3lI' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Pass three American.","maxScore":88,"minScore":5,"description":"Responsibility think prepare admit.","estimatedTime":"2 weeks","previewFileId":"2f727b10-2c5b-46c9-8ae4-c5ba101fd603","createdByUserId":"fb85af4c-4868-48fa-83eb-7979e38d4e4a"}'

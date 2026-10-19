@@ -1,0 +1,62 @@
+{
+  "$defs": {
+    "ErrorSchema": {
+      "properties": {
+        "type": {
+          "title": "Type",
+          "type": "string"
+        },
+        "loc": {
+          "items": {
+            "type": "string"
+          },
+          "title": "Loc",
+          "type": "array"
+        },
+        "msg": {
+          "title": "Msg",
+          "type": "string"
+        },
+        "input": {
+          "title": "Input"
+        },
+        "ctx": {
+          "anyOf": [
+            {
+              "additionalProperties": true,
+              "type": "object"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Ctx"
+        }
+      },
+      "required": [
+        "type",
+        "loc",
+        "msg",
+        "input"
+      ],
+      "title": "ErrorSchema",
+      "type": "object"
+    }
+  },
+  "description": "Схема ошибки при создании сущности (User, File, Exercise, etc.)\n\n.",
+  "properties": {
+    "detail": {
+      "items": {
+        "$ref": "#/$defs/ErrorSchema"
+      },
+      "title": "Detail",
+      "type": "array"
+    }
+  },
+  "required": [
+    "detail"
+  ],
+  "title": "ErrorResponseSchema",
+  "type": "object"
+}

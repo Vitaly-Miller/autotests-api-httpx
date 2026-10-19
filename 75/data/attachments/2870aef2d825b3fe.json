@@ -1,0 +1,25 @@
+{
+  "courses": [
+    {
+      "id": "6dc7b8d2-266c-4d0a-ba40-b856d83260b8",
+      "title": "Course force current low according court.",
+      "maxScore": 64,
+      "minScore": 30,
+      "description": "Story top care. Develop movement standard cold.",
+      "previewFile": {
+        "id": "35b6ab79-2b2e-4d85-a5b7-653cb0362f14",
+        "filename": "file_9221.png",
+        "directory": "Uploaded",
+        "url": "http://localhost:8000/static/Uploaded/file_9221.png"
+      },
+      "estimatedTime": "7 weeks",
+      "createdByUser": {
+        "id": "2f43d780-d766-48d1-881e-9ec39e08acc0",
+        "email": "test_38057690@example.com",
+        "lastName": "Williams",
+        "firstName": "John",
+        "middleName": "Steven"
+      }
+    }
+  ]
+}
