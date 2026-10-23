@@ -8,7 +8,7 @@ from tools.data_generator import fake
 #================================================== ⬆︎REQUEST schemas ==================================================
 #----------------------------------------------------- Create User -----------------------------------------------------
 class CreateUserRequestSchema(BaseModel):
-    email: EmailStr = Field(default_factory=fake.email)  # ⚠️Возможно придется заменить на str. А то будут падать негативные тесты при валидации Email
+    email: EmailStr = Field(default_factory=fake.email)  # ⚠️May need to replace with str, otherwise negative tests will fail on Email validation
     password: str = Field(default_factory=fake.password)
     last_name: str = Field(alias='lastName', default_factory=fake.last_name)
     first_name: str = Field(alias='firstName', default_factory=fake.first_name)
@@ -21,7 +21,7 @@ class CreateUserRequestSchema(BaseModel):
 
 #----------------------------------------------------- Update User -----------------------------------------------------
 class UpdateUserRequestSchema(BaseModel):
-    email: EmailStr | None = Field(default_factory=fake.email) # ⚠️Возможно придется заменить на str. А то будут падать негативные тесты при валидации Email
+    email: EmailStr | None = Field(default_factory=fake.email) # ⚠️May need to replace with str, otherwise negative tests will fail on Email validation
     last_name: str | None = Field(alias='lastName', default_factory=fake.last_name)
     first_name: str | None = Field(alias='firstName', default_factory=fake.first_name)
     middle_name: str | None = Field(alias='middleName', default_factory=fake.middle_name)
@@ -31,7 +31,7 @@ class UpdateUserRequestSchema(BaseModel):
 #----------------------------------------------------- "user": {} ------------------------------------------------------
 class UserSchema(BaseModel):
     id: str
-    email: EmailStr   # ⚠️Возможно придется заменить на str. А то будут падать негативные тесты при валидации Email
+    email: EmailStr   # ⚠️May need to replace with str, otherwise negative tests will fail on Email validation
     last_name: str = Field(alias='lastName')
     first_name: str = Field(alias='firstName')
     middle_name: str = Field(alias='middleName')
@@ -58,7 +58,7 @@ class CreateUserSchema(BaseModel):
     request: CreateUserRequestSchema    # ┐
     response: CreateUserResponseSchema  # ┘
 
-    # --- Методы прямого доступа к данным ---
+    # --- Direct data access methods ---
     # Email
     @property
     def email(self) -> str:

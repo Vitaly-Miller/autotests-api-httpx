@@ -78,7 +78,7 @@ def assert_create_file_empty_filename_error_response(response: httpx.Response):
     """
     with allure.step('Create File Error Response by empty "filename"'):
         actual_response = ErrorResponseSchema.model_validate_json(response.text)   # httpx.Response  —> Pydantic-model (deserialize)
-        expected_response = ErrorResponseSchema(                                   # Инициализация ожидаемой Pydantic-model
+        expected_response = ErrorResponseSchema(                                   # Initialize expected Pydantic model
             detail=[
                 ErrorSchema(
                     type='missing',
@@ -102,7 +102,7 @@ def assert_create_file_empty_directory_error_response(response: httpx.Response):
     """
     with allure.step('Create File Error Response by empty "directory"'):
         actual_response = ErrorResponseSchema.model_validate_json(response.text)   # httpx.Response —> Pydantic-model (deserialize)
-        expected_response = ErrorResponseSchema(                                   # Инициализация ожидаемой Pydantic-model
+        expected_response = ErrorResponseSchema(                                   # Initialize expected Pydantic model
             detail=[
                 ErrorSchema(
                     type='missing',
@@ -138,8 +138,8 @@ def assert_get_file_invalid_id_error_response(response: httpx.Response):
                 type='uuid_parsing',
                 loc=['path', 'file_id'],
                 msg='Input should be a valid UUID, invalid character: found `i` at 0',
-                input=response.json()['detail'][0]['input'],        # 👈 тут 'invalid File-ID' при передаче (пока решил так)
-                ctx={"error": 'invalid character: found `i` at 0'}  # ⚠️ Допилить - не учитывать символы после <...`i` at> ...
+                input=response.json()['detail'][0]['input'],        # 👈 here 'invalid File-ID' is passed (decided this way for now)
+                ctx={"error": 'invalid character: found `i` at 0'}  # ⚠️ TODO - ignore characters after <...`i` at> ...
             )
         ]
     )

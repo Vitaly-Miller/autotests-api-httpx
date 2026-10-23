@@ -30,8 +30,8 @@ def courses_client(create_user: CreateUserSchema) -> CoursesClient:
 @pytest.fixture
 @allure.title('▷ Create Course (API-fixture)')
 def create_course_api(
-    courses_client: CoursesClient,    # ┐  ✨ДЕДУПЛИКАЦИЯ внутри одного теста — это фундаментальное свойство Pytest
-    create_user: CreateUserSchema,    # ┘  ✨Один и тоже User! Несмотря на то, что обе фикстуры создают пользователя
+    courses_client: CoursesClient,    # ┐  ✨DEDUPLICATION within a single test is a fundamental Pytest feature
+    create_user: CreateUserSchema,    # ┘  ✨Same User! Even though both fixtures create a user
     create_file: CreateFileSchema
 ) -> httpx.Response:
     """
@@ -45,11 +45,11 @@ def create_course_api(
     :param create_file:    Nested Pydantic fixture that creates a file
     :return: httpx.Response
     """
-    create_course_data = CreateCourseRequestSchema(  # Инициализация Pydantic-модели c default fake-data
-        previewFileId=create_file.file_id,           # Заменяем default на реальный File-ID
-        createdByUserId=create_user.user_id          # Заменяем default на реальный User-ID
+    create_course_data = CreateCourseRequestSchema(  # Initialize Pydantic model with default fake data
+        previewFileId=create_file.file_id,           # Replace default with real File-ID
+        createdByUserId=create_user.user_id          # Replace default with real User-ID
     )
-    response = courses_client.create_course_api(create_course_data)   # ▶ Запрос через API-метод
+    response = courses_client.create_course_api(create_course_data)   # ▶ Request via API method
     return response                                                   # httpx.Response
 
 
@@ -57,8 +57,8 @@ def create_course_api(
 @pytest.fixture
 @allure.title('▷ Create Course (Pydantic-fixture)')
 def create_course(
-    courses_client: CoursesClient,    # ┐  ✨ДЕДУПЛИКАЦИЯ внутри одного теста — это фундаментальное свойство Pytest
-    create_user: CreateUserSchema,    # ┘  ✨Один и тоже User! Несмотря на то, что обе фикстуры создают пользователя
+    courses_client: CoursesClient,    # ┐  ✨DEDUPLICATION within a single test is a fundamental Pytest feature
+    create_user: CreateUserSchema,    # ┘  ✨Same User! Even though both fixtures create a user
     create_file: CreateFileSchema
 ) -> CreateCourseSchema:
     """
@@ -72,12 +72,12 @@ def create_course(
     :param create_file:    Nested Pydantic fixture that creates a file
     :return: Pydantic-model (CoursesFullSchema) ✨<Request + Response>
     """
-    create_course_data = CreateCourseRequestSchema(  # Инициализация Pydantic-модели c default fake-data, кроме:...
-        previewFileId=create_file.file_id,           # ... Заменяем default на реальный File-ID
-        createdByUserId=create_user.user_id          # ... Заменяем default на реальный User-ID
+    create_course_data = CreateCourseRequestSchema(  # Initialize Pydantic model with default fake data, except:...
+        previewFileId=create_file.file_id,           # ... Replace default with real File-ID
+        createdByUserId=create_user.user_id          # ... Replace default with real User-ID
     )
-    response_model = courses_client.create_course(create_course_data)   # ▶ Запрос через Pydantic-метод
-    response_model_full = CreateCourseSchema(request=create_course_data, response=response_model)   # Инициализация Pydantic-model (CoursesFullSchema) ✨<Request + Response>
+    response_model = courses_client.create_course(create_course_data)   # ▶ Request via Pydantic method
+    response_model_full = CreateCourseSchema(request=create_course_data, response=response_model)   # Initialize Pydantic model (CoursesFullSchema) ✨<Request + Response>
     return response_model_full                       # Pydantic-model (CoursesFullSchema) ✨<Request + Response>
 
 
@@ -94,7 +94,7 @@ def get_courses_api(courses_client: CoursesClient, create_user: CreateUserSchema
     :return: httpx.Response
     """
     user_id_query_model = GetCoursesQuerySchema(userId=create_user.user_id)       # Pydantic-model
-    response = courses_client.get_courses_api(user_id_query_model)                # ▶ Запрос через API-метод
+    response = courses_client.get_courses_api(user_id_query_model)                # ▶ Request via API method
     return response                                                               # httpx.Response
 
 

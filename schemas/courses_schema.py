@@ -70,7 +70,7 @@ class CreateCourseSchema(BaseModel):
     request: CreateCourseRequestSchema    # ┐
     response: CreateCourseResponseSchema  # ┘
 
-    # ------- Методы прямого доступа к данным -------
+    # ------- Direct data access methods -------
     @property
     def course_id(self) -> str:
         return self.response.course.id

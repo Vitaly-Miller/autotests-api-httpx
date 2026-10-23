@@ -25,9 +25,9 @@ from tools.tool import Tool
 @allure.severity(allure.severity_level.NORMAL)                # ] Allure Severity
 #-----------------------------------------------------------------------------------------------------------------------
 class TestGetCourses:
-    @allure.title('Get Courses (v.1 - Через фикстуру полного цикла)')
+    @allure.title('Get Courses (v.1 - Via full-cycle fixture)')
     def test_get_courses_1(self, create_course: CreateCourseSchema, get_courses_api: httpx.Response):
-        response = get_courses_api                                                    # Сохранение ответа API-фикстуры
+        response = get_courses_api                                                    # Save API fixture response
         response_model = GetCoursesResponseSchema.model_validate_json(response.text)  # httpx.Response —> Pydantic-model (deserialize)
 
         # Assertions
@@ -35,19 +35,19 @@ class TestGetCourses:
         assert_request_method(response.request.method, http.HTTPMethod.GET)  # Method: GET
         assert_get_courses_responses(
             response_model,
-            [create_course.response])                           # Список курсов соответствует созданным курсам
+            [create_course.response])                           # Course list matches created courses
         validate_json_schema(response, GetCoursesResponseSchema)     # JSON Schema validation
 
 
-    @allure.title('Get Courses (v.1 - Через Pydantic-фикстуры)')
+    @allure.title('Get Courses (v.1 - Via Pydantic fixtures)')
     def test_get_courses_2(
             self,
             courses_client: CoursesClient,
-            create_user: CreateUserSchema,                                           # Для User-ID
+            create_user: CreateUserSchema,                                           # For User-ID
             create_course: CreateCourseSchema
     ):
         user_id_query_model = GetCoursesQuerySchema(userId=create_user.user_id)       # Pydantic-model
-        response = courses_client.get_courses_api(user_id_query_model)                # ▶ Запрос через API-метод
+        response = courses_client.get_courses_api(user_id_query_model)                # ▶ Request via API method
         response_model = GetCoursesResponseSchema.model_validate_json(response.text)  # httpx.Response —> Pydantic-model (deserialize)
 
         # Assertions
@@ -55,7 +55,7 @@ class TestGetCourses:
         assert_request_method(response.request.method, http.HTTPMethod.GET)  # Method: GET
         assert_get_courses_responses(
             response_model,
-            [create_course.response]                              # Список курсов соответствует созданным курсам
+            [create_course.response]                              # Course list matches created courses
         )
         validate_json_schema(response, GetCoursesResponseSchema)       # JSON Schema validation
 

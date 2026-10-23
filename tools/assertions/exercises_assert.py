@@ -48,7 +48,7 @@ def assert_create_exercise_response_non_empty(response: CreateExerciseResponseSc
     :raise AssertionError
     """
     logger.info('Create Exercise Response data is non-empty')
-    assert_exercise_non_empty(response.exercise)   # передаем объект exercise{}
+    assert_exercise_non_empty(response.exercise)   # pass exercise{} object
 
 
 @allure.step('Response data = Request data')
@@ -86,7 +86,7 @@ def assert_exercise_id(response: CreateExerciseResponseSchema | GetExerciseRespo
     logger.info('Exercise-ID validation')
     assert_is_value(response.exercise.id, 'exercise_id')                        # NON-empty File-ID
     assert_length(response.exercise.id, 36, 'exercise_id')       # File-ID length = 36 chars
-    if exercise_id:                                                                        # Если передать Exercise-ID, то проверяем его:
+    if exercise_id:                                                                        # If Exercise-ID is passed, check it:
         assert_equal(response.exercise.id, exercise_id,'exercise_id')  # Actual Exercise-ID = Expected Exercise-ID
 
 
@@ -102,7 +102,7 @@ def assert_get_exercise_response_non_empty(response: GetExerciseResponseSchema):
     :raise AssertionError
     """
     logger.info('Get Exercise Response data is non-empty')
-    assert_exercise_non_empty(response.exercise)   # передаем объект exercise{}
+    assert_exercise_non_empty(response.exercise)   # pass exercise{} object
 
 
 #--------------------------------------------------- Update exercise ---------------------------------------------------

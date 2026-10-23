@@ -26,8 +26,8 @@ from tools.tool import Tool
 class TestDeleteExercise:
     @allure.title('Delete Exercise')
     def test_delete_exercise(self, exercises_client: ExercisesClient, create_exercise: CreateExerciseSchema):
-        delete_response = exercises_client.delete_exercise_api(create_exercise.exercise_id)  # ▶ Запрос через API-метод (delete)
-        get_response = exercises_client.get_exercise_api(create_exercise.exercise_id)        # ▶ Запрос через API-метод (get)
+        delete_response = exercises_client.delete_exercise_api(create_exercise.exercise_id)  # ▶ Request via API method (delete)
+        get_response = exercises_client.get_exercise_api(create_exercise.exercise_id)        # ▶ Request via API method (get)
 
         # Assertions (Delete Exercise)
         assert_status_code(delete_response.status_code, http.HTTPStatus.OK)   # Status code: 200

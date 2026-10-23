@@ -24,9 +24,9 @@ from tools.tool import Tool
 @allure.severity(allure.severity_level.NORMAL)                # ] Allure Severity
 #-----------------------------------------------------------------------------------------------------------------------
 class TestUpdateExercise:
-    @allure.title('Update Exercise (v.1 - Через API-фикстуру полного цикла)')
-    def test_update_exercise_1(self, update_exercise_api: httpx.Response):    # Через API-фикстуру полного цикла
-        response = update_exercise_api                                        # Сохраняем ответ API-фикстуры
+    @allure.title('Update Exercise (v.1 - Via full-cycle API fixture)')
+    def test_update_exercise_1(self, update_exercise_api: httpx.Response):    # Via full-cycle API fixture
+        response = update_exercise_api                                        # Save API fixture response
 
         # Assertions
         assert_status_code(response.status_code, http.HTTPStatus.OK)          # Status code: 200
@@ -34,12 +34,12 @@ class TestUpdateExercise:
         validate_json_schema(response, UpdateExerciseResponseSchema)          # Validate JSON schema
 
 
-    @allure.title('Update Exercise (v.2 - Через фикстуры: exercises_client, create_exercise)')
+    @allure.title('Update Exercise (v.2 - Via fixtures: exercises_client, create_exercise)')
     def test_update_exercise_2(self, exercises_client: ExercisesClient, create_exercise: CreateExerciseSchema):
         new_exercise_data = UpdateExerciseRequestSchema()       # Pydantic-model with fake-data (Update ALL data)
-        response = exercises_client.update_exercise_api(        # ▶ Запрос через API-метод
-            create_exercise.exercise_id,              # Передаем Exercise-ID
-            new_exercise_data                   # Передаем Pydantic-model c данными, которые необходимо обновить
+        response = exercises_client.update_exercise_api(        # ▶ Request via API method
+            create_exercise.exercise_id,              # Pass Exercise-ID
+            new_exercise_data                   # Pass Pydantic model with data to update
         )
         response_model = UpdateExerciseResponseSchema.model_validate_json(response.text)  # httpx.Response —> Pydantic-model (deserialize)
         # Assertions

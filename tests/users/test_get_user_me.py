@@ -27,9 +27,9 @@ from tools.tool import Tool
 @allure.severity(allure.severity_level.NORMAL)       # ] Allure Severity
 #-----------------------------------------------------------------------------------------------------------------------
 class TestGetUserMe:
-    @allure.title('Get User Me (v.1 - Через фикстуру полного цикла)')
+    @allure.title('Get User Me (v.1 - Via full-cycle fixture)')
     def test_get_user_me_1(self, get_user_me_api: httpx.Response):
-        response = get_user_me_api                                                    # Сохраняем ответ API-фикстуры (httpx.Response)
+        response = get_user_me_api                                                    # Save API fixture response (httpx.Response)
         response_model = CreateUserResponseSchema.model_validate_json(response.text)  # httpx.Response —> Pydantic-model (parsing-deserialize)
 
         # Assertions
@@ -40,9 +40,9 @@ class TestGetUserMe:
         validate_json_schema(response, GetUserMeResponseSchema)       # JSON schema validation
 
 
-    @allure.title('Get User Me (v.2 - Через фикстуру получения экземпляра UsersClientPrivate)')
+    @allure.title('Get User Me (v.2 - Via UsersClientPrivate instance fixture)')
     def test_get_user_me_2(self, users_client_private: UsersClientPrivate):
-        response = users_client_private.get_user_me_api()                             # ▶ Запрос через API-метод
+        response = users_client_private.get_user_me_api()                             # ▶ Request via API method
         response_model = CreateUserResponseSchema.model_validate_json(response.text)  # httpx.Response —> Pydantic-model (parsing-deserialize)
 
         # Assertions
@@ -58,38 +58,38 @@ class TestGetUserMe:
     def test_get_user_me_3_manual(self):
         #----------------------- Pre-conditions --------------------
         # Create User
-        users_client_public = get_users_client_public()   # Получаем экземпляр UsersClientPublic (с Base URL)
-        create_user_data = CreateUserRequestSchema()      # Инициализация Pydantic-модели с default fake-data нового пользователя
-        users_client_public.create_user(create_user_data) # ▶ Запрос через Pydantic-метод
-        auth_data = AuthDataSchema(                       # Инициализируем модель с default-данными для авторизации
-            email=create_user_data.email,                 # Замена default на —> реальное значение
-            password=create_user_data.password            # Замена default на —> реальное значение
+        users_client_public = get_users_client_public()   # Get UsersClientPublic instance (with Base URL)
+        create_user_data = CreateUserRequestSchema()      # Initialize Pydantic model with default fake data for a new user
+        users_client_public.create_user(create_user_data) # ▶ Request via Pydantic method
+        auth_data = AuthDataSchema(                       # Initialize model with default auth data
+            email=create_user_data.email,                 # Replace default with —> real value
+            password=create_user_data.password            # Replace default with —> real value
         )
         #------------------------ Get User Me -----------------------
-        get_user_me_client = get_users_client_private(auth_data)     # Получаем экземпляр UsersClientPrivate
-        response = get_user_me_client.get_user_me_api()              # ▶ Запрос через API-метод
+        get_user_me_client = get_users_client_private(auth_data)     # Get UsersClientPrivate instance
+        response = get_user_me_client.get_user_me_api()              # ▶ Request via API method
         response_model = CreateUserResponseSchema.model_validate_json(response.text)  # httpx.Response —> Pydantic-model (parsing-deserialize) (Deserialize for Assertions)
 
         #------------------------ Assertions ------------------------
-        # v.1 - Base API assertions (⚠️Hard coding не рекомендуется)
-        assert response.status_code == 200, '❌Status code is incorrect!'           # проверка статус-кода    (Hard coding)
-        assert response.request.method == 'GET', '❌Request Method is incorrect!'   # проверка метода запроса (Hard coding)
+        # v.1 - Base API assertions (⚠️Hard coding is not recommended)
+        assert response.status_code == 200, '❌Status code is incorrect!'           # status code check    (Hard coding)
+        assert response.request.method == 'GET', '❌Request Method is incorrect!'   # request method check (Hard coding)
 
-        # v.2 - Base API assertions (через HTTPStatus и HTTPMethod)
-        assert response.status_code == HTTPStatus.OK, '❌Incorrect status code!'         # проверка статус-кода    (через HTTPStatus)
-        assert response.request.method == HTTPMethod.GET, '❌Incorrect Request Method!'  # проверка метода запроса (через HTTPMethod)
+        # v.2 - Base API assertions (via HTTPStatus and HTTPMethod)
+        assert response.status_code == HTTPStatus.OK, '❌Incorrect status code!'         # status code check    (via HTTPStatus)
+        assert response.request.method == HTTPMethod.GET, '❌Incorrect Request Method!'  # request method check (via HTTPMethod)
 
         # Fields values assertions:
-        assert response_model.user.email == create_user_data.email, '❌Разные Email!'                    # проверка отправленного и полученного Email
-        assert response_model.user.last_name == create_user_data.last_name, '❌Разные Last Name!'        # проверка отправленного и полученного Last Name
-        assert response_model.user.first_name == create_user_data.first_name, '❌Разные First Name!'     # проверка отправленного и полученного First Name
-        assert response_model.user.middle_name == create_user_data.middle_name, '❌Разные Middle Name!'  # проверка отправленного и полученного Middle Name
+        assert response_model.user.email == create_user_data.email, '❌Different Email!'                    # check sent vs received Email
+        assert response_model.user.last_name == create_user_data.last_name, '❌Different Last Name!'        # check sent vs received Last Name
+        assert response_model.user.first_name == create_user_data.first_name, '❌Different First Name!'     # check sent vs received First Name
+        assert response_model.user.middle_name == create_user_data.middle_name, '❌Different Middle Name!'  # check sent vs received Middle Name
 
         # JSON schema validation
         jsonschema.validate(
-            instance=response.json(),                             # Данные для валидации
-            schema=CreateUserResponseSchema.model_json_schema(),  # JSON-схема, сгенерированная из Pidantic-схемы
-            format_checker=jsonschema.FormatChecker()             # Проверка форматов
+            instance=response.json(),                             # Data to validate
+            schema=CreateUserResponseSchema.model_json_schema(),  # JSON schema generated from Pydantic schema
+            format_checker=jsonschema.FormatChecker()             # Format checking
         )
 
 #=======================================================================================================================

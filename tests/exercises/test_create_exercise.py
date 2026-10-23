@@ -29,9 +29,9 @@ from tools.tool import Tool
 @allure.severity(allure.severity_level.NORMAL)                # ] Allure Severity
 #-----------------------------------------------------------------------------------------------------------------------
 class TestCreateExercise:
-    @allure.title('Create Exercise (v.1 - Через API-фикстуру полного цикла)')
-    def test_create_exercise_1(self, create_exercise_api: httpx.Response):     # Через API-фикстуру полного цикла        ┐
-        response = create_exercise_api                                         # Сохраняем ответ API-фикстуры            ┘
+    @allure.title('Create Exercise (v.1 - Via full-cycle API fixture)')
+    def test_create_exercise_1(self, create_exercise_api: httpx.Response):     # Via full-cycle API fixture        ┐
+        response = create_exercise_api                                         # Save API fixture response            ┘
         response_model = CreateExerciseResponseSchema.model_validate_json(response.text)           # httpx.Response —> Pydantic-model (deserialize)
         request_model = CreateExerciseRequestSchema.model_validate_json(response.request.content)  # httpx.Response —> Pydantic-model (deserialize)
 
@@ -44,16 +44,16 @@ class TestCreateExercise:
         validate_json_schema(response, CreateExerciseResponseSchema)         # JSON Schema validation
 
 
-    @allure.title('Create Exercise (v.2 - Через фикстуры: exercises_client, create_course)')
+    @allure.title('Create Exercise (v.2 - Via fixtures: exercises_client, create_course)')
     def test_create_exercise_2(                                       #                                                  ─┐
             self,                                                     #                                                   │
-            exercises_client: ExercisesClient,                        # Фикстура получения экземпляра ExercisesClient()   │
-            create_course: CreateCourseSchema                         # Pydantic-фикстура создания курса                  │
+            exercises_client: ExercisesClient,                        # Fixture providing an instance of ExercisesClient()   │
+            create_course: CreateCourseSchema                         # Pydantic fixture creating a course                  │
     ):                                                                #                                                   │
         create_exercise_data = CreateExerciseRequestSchema(           # Pydantic-model c fake-data                        │
-            courseId=create_course.course_id                          # Fake data —> Реальное значение из фикстуры        │
+            courseId=create_course.course_id                          # Fake data —> real value from fixture        │
         )                                                             #                                                  ─┘
-        response = exercises_client.create_exercise_api(create_exercise_data)             # ▶ Запрос через API-метод
+        response = exercises_client.create_exercise_api(create_exercise_data)             # ▶ Request via API method
         response_model = CreateExerciseResponseSchema.model_validate_json(response.text)  # httpx.Response —> Pydantic-model (deserialize)
 
         # Assertions

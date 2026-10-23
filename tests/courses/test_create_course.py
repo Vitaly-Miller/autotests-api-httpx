@@ -26,9 +26,9 @@ from tools.tool import Tool
 @allure.severity(allure.severity_level.NORMAL)                # ] Allure Severity
 #-----------------------------------------------------------------------------------------------------------------------
 class TestCreateCourse:
-    @allure.title('Create Course (v.1 - Через API-фикстуру полного цикла)')
-    def test_create_course_1(self, create_course_api: httpx.Response):              # Через API-фикстуру полного цикла
-        response = create_course_api                                                # Сохраняем ответ API-фикстуры
+    @allure.title('Create Course (v.1 - Via full-cycle API fixture)')
+    def test_create_course_1(self, create_course_api: httpx.Response):              # Via full-cycle API fixture
+        response = create_course_api                                                # Save API fixture response
         response_model = CreateCourseResponseSchema.model_validate_json(response.text)           # httpx.Response —> Pydantic-model (deserialize)
         request_model = CreateCourseRequestSchema.model_validate_json(response.request.content)  # Request —> Pydantic-model
 
@@ -39,19 +39,19 @@ class TestCreateCourse:
         validate_json_schema(response, CreateCourseResponseSchema)              # JSON Schema validation
 
 
-    @allure.title('Create Course (v.2 - Через Pydantic-фикстуры)')
+    @allure.title('Create Course (v.2 - Via Pydantic fixtures)')
     def test_create_course_2(
             self,
-            courses_client: CoursesClient,                           # Фикстура получения экземпляра CoursesClient()
-            create_user: CreateUserSchema,                           # Pydantic-фикстура создания пользователя
-            create_file: CreateFileSchema                            # Pydantic-фикстура создания файла
+            courses_client: CoursesClient,                           # Fixture providing an instance of CoursesClient()
+            create_user: CreateUserSchema,                           # Pydantic fixture creating a user
+            create_file: CreateFileSchema                            # Pydantic fixture creating a file
             ):
 
-        create_course_data_model = CreateCourseRequestSchema(        # Инициализация Pydantic-model c Fake data
-            previewFileId=create_file.file_id,                       # Fake data —> Реальные данные из фикстуры
-            createdByUserId=create_user.user_id                      # Fake data —> Реальные данные из фикстуры
+        create_course_data_model = CreateCourseRequestSchema(        # Initialize Pydantic model with fake data
+            previewFileId=create_file.file_id,                       # Fake data —> real data from fixture
+            createdByUserId=create_user.user_id                      # Fake data —> real data from fixture
         )
-        response = courses_client.create_course_api(create_course_data_model)           # ▶ Запрос через API-метод
+        response = courses_client.create_course_api(create_course_data_model)           # ▶ Request via API method
         response_model = CreateCourseResponseSchema.model_validate_json(response.text)  # httpx.Response —> Pydantic-model (deserialize)
 
         # Assertions

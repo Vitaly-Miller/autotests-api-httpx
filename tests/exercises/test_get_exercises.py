@@ -22,7 +22,7 @@ from tools.tool import Tool
 class TestGetExercises:
     @allure.title('Get Exercises')
     def test_get_exercises(self, create_exercise_api: httpx.Response, get_exercises_api: httpx.Response):
-        response = get_exercises_api                                                     # Сохраняем ответ API-фикстуры
+        response = get_exercises_api                                                     # Save API fixture response
 
         # Assertions
         assert_status_code(response.status_code, http.HTTPStatus.OK)          # Status code: 200

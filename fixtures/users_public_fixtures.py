@@ -32,10 +32,10 @@ def create_user_api(users_client_public: UsersClientPublic) -> httpx.Response:
     :param users_client_public: Nested fixture that provides a UsersClientPublic instance (with Base URL)
     :return: httpx.Response
     """
-    create_user_data = CreateUserRequestSchema()                      # Инициализация Pydantic-model с default fake-data
-    response = users_client_public.create_user_api(create_user_data)  # ▶ Запрос через API-метод.
+    create_user_data = CreateUserRequestSchema()                      # Initialize Pydantic model with default fake data
+    response = users_client_public.create_user_api(create_user_data)  # ▶ Request via API method.
     return response                                                   # httpx.Response
-                                   # ❗️Если тут нужно добраться до Request c 'password' - через парсинг JSON —> {dict}:
+                                   # ❗️To get the Request with 'password' here - parse JSON —> {dict}:
                                    # request_body = json.loads(response.request.content)
                                    # password = request_body["password"]
 # Pydantic-model (full)
@@ -48,9 +48,9 @@ def create_user(users_client_public: UsersClientPublic) -> CreateUserSchema:
     :param users_client_public: Nested fixture that provides a UsersClientPublic instance (with Base URL)
     :return: Pydantic-model (CreateUserSchema) ✨<Request + Response>
     """
-    create_user_data = CreateUserRequestSchema()                                               # Инициализация модели с Default fake-data нового пользователя по Pydantic-схеме
-    response_model = users_client_public.create_user(create_user_data)                         # ︎▶ Запрос через Pydantic-метод
-    response_model_full = CreateUserSchema(request=create_user_data, response=response_model)  # Инициализация Pydantic-model (CreateUserSchema) ✨<Request + Response>
+    create_user_data = CreateUserRequestSchema()                                               # Initialize model with default fake data for a new user via Pydantic schema
+    response_model = users_client_public.create_user(create_user_data)                         # ︎▶ Request via Pydantic method
+    response_model_full = CreateUserSchema(request=create_user_data, response=response_model)  # Initialize Pydantic model (CreateUserSchema) ✨<Request + Response>
     return response_model_full                                                                 # Pydantic-model (CreateUserSchema) ✨<Request + Response>
 
 

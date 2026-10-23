@@ -26,9 +26,9 @@ class TestUpdateCourse:
     @allure.title('Update Course')                            # Allure step Title
     def test_update_course(self, courses_client: CoursesClient, create_course: CreateCourseSchema):
         new_course_data = UpdateCourseRequestSchema()         # Pydantic-model with fake-data (Update ALL)
-        response = courses_client.update_course_api(          # ▶ Запрос через API-метод
-            create_course.response.course.id,        # ID обновляемого курса
-            new_course_data                    # Обновляемые данные
+        response = courses_client.update_course_api(          # ▶ Request via API method
+            create_course.response.course.id,        # ID of the course to update
+            new_course_data                    # Data to update
         )
         response_model = UpdateCourseResponseSchema.model_validate_json(response.text)  # httpx.Response —> Pydantic-model (deserialize)
 

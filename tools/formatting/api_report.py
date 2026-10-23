@@ -37,8 +37,8 @@ class Report:
 
     # Status code
     def api_status_code(self):
-        code = self.response.status_code            # Код            (например: 200)
-        reason = self.response.reason_phrase        # Описание кода  (например: OK)
+        code = self.response.status_code            # Code           (e.g.: 200)
+        reason = self.response.reason_phrase        # Code reason    (e.g.: OK)
         if code < 200:   color = ANSI.SUNRISE       # 1xx
         elif code < 300: color = ANSI.BRIGHT_GREEN  # 2xx
         elif code < 400: color = ANSI.SUNRISE       # 3xx
@@ -51,7 +51,7 @@ class Report:
     # Response time
     def api_response_time(self, max_sec=5.0):                    # Max sec limit = ⚠️default value
         response_time = self.response.elapsed.total_seconds()    # 0.12345
-        round_response_time = round(response_time, 3)            # 0.12345 —> 0.123 (округление)
+        round_response_time = round(response_time, 3)            # 0.12345 —> 0.123 (rounding)
         if round_response_time < max_sec:
             color = ANSI.DARK_GREEN
         else:
@@ -70,7 +70,7 @@ class Report:
                 print(request_body_json)
             else:
                 print(f'{{\n\t<none>\n}}')
-        except Exception:     # NOQA <— ⚠️Заменить на except httpx.RequestNotRead:
+        except Exception:     # NOQA <— ⚠️Replace with except httpx.RequestNotRead:
             print(f'{{\n\t<multipart/stream>\n}}')
 
 

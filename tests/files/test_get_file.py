@@ -31,7 +31,7 @@ from tools.tool import Tool
 class TestGetFile:
     @allure.title('Get File by ID')
     def test_get_file(self, files_client: FilesClient, create_file: CreateFileSchema):
-        response = files_client.get_file_api(create_file.file_id)                       # ▶ Запрос через API-метод
+        response = files_client.get_file_api(create_file.file_id)                       # ▶ Request via API method
         response_model = GetFileResponseSchema.model_validate_json(response.text)       # httpx.Response —> Pydantic-model (deserialize)
 
         # Assertions
@@ -56,7 +56,7 @@ class TestGetFileNegative:
     @allure.title('Get File by INVALID File-ID (non-UUID) (negative)')
     def test_get_file_by_invalid_file_id(self, files_client: FilesClient):
         invalid_file_id = 'id_123'                                         # Invalid File-ID (non-UUID format)
-        response = files_client.get_file_api(invalid_file_id)              # ▶ Запрос через API-метод с Invalid File-ID
+        response = files_client.get_file_api(invalid_file_id)              # ▶ Request via API method with Invalid File-ID
 
         # Assertions
         assert_status_code(response.status_code, http.HTTPStatus.UNPROCESSABLE_ENTITY) # Status code: 422
@@ -69,7 +69,7 @@ class TestGetFileNegative:
     @allure.title('Get File by non-existent File-ID (negative)')
     def test_get_non_existent_file(self, files_client: FilesClient):
         non_existent_file_id = fake.uuid4()                           # Generate Non-Existent File-ID (UUID format)
-        response = files_client.get_file_api(non_existent_file_id)    # ▶ Запрос через API-метод с Non-existent File-ID
+        response = files_client.get_file_api(non_existent_file_id)    # ▶ Request via API method with Non-existent File-ID
 
         # Assertions
         assert_status_code(response.status_code, http.HTTPStatus.NOT_FOUND)  # Status code: 404

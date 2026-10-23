@@ -145,8 +145,8 @@ class Fake:
         return f'file_{number}.png'
 
 
-#========================================== Helper ✨(ГЛОБАЛЬНАЯ ПЕРЕМЕННАЯ) ===========================================
-# Инициализация экземпляров класса Fake() c вариантами настроек
+#========================================== Helper ✨(GLOBAL VARIABLE) =================================================
+# Initialize Fake() class instances with settings variants
 fake = Fake(faker=Faker())                     # en_US - Default
 fake_ru = Fake(faker=Faker(locale='ru_RU'))    # ru_RU
 

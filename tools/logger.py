@@ -13,21 +13,21 @@ def get_logger(name: str, console: bool = False) -> logging.Logger:
     :return: logging.Logger
     """
     # 1.Logger
-    logger = logging.getLogger(name)         # Создаем Logger и присваиваем ему динамическое название name (из функции)
-    logger.setLevel(logging.DEBUG)           # Уровень (глубина) логирования - DEBUG и выше (все)
+    logger = logging.getLogger(name)         # Create Logger and give it a dynamic name (from the function)
+    logger.setLevel(logging.DEBUG)           # Logging level (depth) - DEBUG and above (all)
 
     # 2.Handler
-    handler = logging.StreamHandler()        # Создаем Handler (обработчик) - StreamHandler
-    handler.setLevel(logging.DEBUG)          # Уровень (глубина) логирования - DEBUG и выше (все)
+    handler = logging.StreamHandler()        # Create Handler - StreamHandler
+    handler.setLevel(logging.DEBUG)          # Logging level (depth) - DEBUG and above (all)
 
-    # 3.Formatter                     время        имя         уровень       сообщение
-    formatter = logging.Formatter('%(asctime)s | %(name)s | %(levelname)s | %(message)s')   # Форматирование лога
+    # 3.Formatter                     time         name        level         message
+    formatter = logging.Formatter('%(asctime)s | %(name)s | %(levelname)s | %(message)s')   # Log formatting
 
     # 4.ADD
-    handler.setFormatter(formatter)          # Добавляем Handler (обработчик) в Formatter
+    handler.setFormatter(formatter)          # Set Formatter on Handler
 
-    if console:                              # Условие, если console=True (default - False)
-        logger.addHandler(handler)           # Выводить log в консоль
+    if console:                              # If console=True (default - False)
+        logger.addHandler(handler)           # Output log to console
 
     return logger
 

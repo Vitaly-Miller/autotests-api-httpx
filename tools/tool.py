@@ -13,7 +13,7 @@ from tools.formatting.api_report import Report
 #=======================================================================================================================
 class Tool:
     #----------------------------------------------- Get Test name -----------------------------------------------------
-    # (⚠️НЕ ИСПОЛЬЗУЕТСЯ)
+    # (⚠️NOT USED)
     @staticmethod
     def name_test():
         stack = inspect.stack()
@@ -23,7 +23,7 @@ class Tool:
         return f'👉[{file}] --> [{test}] -> [{check}]\n'
 
     #-------------------------------------------- 💾Save & Read .env ---------------------------------------------------
-    # (⚠️НЕ ИСПОЛЬЗУЕТСЯ)
+    # (⚠️NOT USED)
     # Save KEY-VALUE to .env
     @staticmethod
     def save_env(key, env_key: str):
@@ -32,14 +32,14 @@ class Tool:
         except Exception: # NOQA
             print(f'\t{ANSI.RED}⚠️ NOT Saved to .env ⚠️: {ANSI.ORANGE}"{key}"{ANSI.RESET}')
 
-    # (⚠️НЕ ИСПОЛЬЗУЕТСЯ)
+    # (⚠️NOT USED)
     # Read VALUE from .env
     @staticmethod
     def read_env(env_key: str):
-        key_value = dotenv_values('.env')      # ← перечитывает файл каждый раз
+        key_value = dotenv_values('.env')      # ← re-reads the file every time
         return key_value.get(env_key)
 
-    # (⚠️НЕ ИСПОЛЬЗУЕТСЯ)
+    # (⚠️NOT USED)
     # Saving USER DATA to .env (3-in-1)
     @staticmethod
     def save_user_data(response: httpx.Response):
@@ -54,8 +54,8 @@ class Tool:
 
     @staticmethod
     def api_report(response: httpx.Response):
-        report = Report(response)       # Экземпляр класса (инициализация)
-        report.api_title()              # Методы класса:   (вызовы)
+        report = Report(response)       # Class instance (initialization)
+        report.api_title()              # Class methods:   (calls)
         report.api_url()
         report.api_method()
         report.api_status_code()

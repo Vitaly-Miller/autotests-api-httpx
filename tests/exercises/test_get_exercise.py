@@ -24,9 +24,9 @@ from tools.tool import Tool
 @allure.severity(allure.severity_level.NORMAL)                # ] Allure Severity
 #-----------------------------------------------------------------------------------------------------------------------
 class TestGetExercise:
-    @allure.title('Get Exercise (v.1 - Через API-фикстуру полного цикла)')
-    def test_get_exercise_1(self, get_exercise_api: httpx.Response):                  # Через API-фикстуру полного цикла
-        response = get_exercise_api                                                   # Сохраняем ответ API-фикстуры
+    @allure.title('Get Exercise (v.1 - Via full-cycle API fixture)')
+    def test_get_exercise_1(self, get_exercise_api: httpx.Response):                  # Via full-cycle API fixture
+        response = get_exercise_api                                                   # Save API fixture response
         response_model = GetExerciseResponseSchema.model_validate_json(response.text) # httpx.Response —> Pydantic-model (deserialize)
 
         # Assertions
@@ -37,13 +37,13 @@ class TestGetExercise:
         validate_json_schema(response, GetExerciseResponseSchema)             # JSON Schema validation
 
 
-    @allure.title('Get Exercise (v.2 - Через фикстуры: exercises_client, create_exercise)')
+    @allure.title('Get Exercise (v.2 - Via fixtures: exercises_client, create_exercise)')
     def test_get_exercise_2(
             self,
-            exercises_client: ExercisesClient,             # Фикстура получения экземпляра ExercisesClient()
-            create_exercise: CreateExerciseSchema          # Pydantic-фикстура создания задания
+            exercises_client: ExercisesClient,             # Fixture providing an instance of ExercisesClient()
+            create_exercise: CreateExerciseSchema          # Pydantic fixture creating an exercise
     ):
-        response = exercises_client.get_exercise_api(create_exercise.exercise_id)       # ▶ Запрос через API-метод
+        response = exercises_client.get_exercise_api(create_exercise.exercise_id)       # ▶ Request via API method
         response_model = GetExerciseResponseSchema.model_validate_json(response.text)   # httpx.Response —> Pydantic-model (deserialize)
 
         # Assertions

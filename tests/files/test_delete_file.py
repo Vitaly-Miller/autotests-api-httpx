@@ -26,8 +26,8 @@ from tools.tool import Tool
 class TestDeleteFile:
     @allure.title('Delete File by ID')
     def test_delete_file(self, files_client: FilesClient, create_file: CreateFileSchema):
-        delete_file_response = files_client.delete_file_api(create_file.file_id)          # ▶ Запрос на удаление File через API-метод
-        get_non_existent_file_response = files_client.get_file_api(create_file.file_id)   # ▶ Запрос на получение non-existent File через API-метод
+        delete_file_response = files_client.delete_file_api(create_file.file_id)          # ▶ Request to delete File via API method
+        get_non_existent_file_response = files_client.get_file_api(create_file.file_id)   # ▶ Request to get non-existent File via API method
 
         # Assertions (Delete File)
         assert_status_code(delete_file_response.status_code, http.HTTPStatus.OK)             # Status code: 200

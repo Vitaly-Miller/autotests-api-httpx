@@ -40,8 +40,8 @@ def assert_error_response(actual: ErrorResponseSchema, expected: ErrorResponseSc
     :return: ValidationError
     """
     logger.info('Validation Error Response')
-    assert_length_equal(actual.detail, expected.detail, 'detail') # Сравнивает длины "detail:"
-    assert_equal(actual.detail, expected.detail, 'detail')        # Сравнивает значения "detail:"
+    assert_length_equal(actual.detail, expected.detail, 'detail') # Compares "detail:" lengths
+    assert_equal(actual.detail, expected.detail, 'detail')        # Compares "detail:" values
 
 
 @allure.step('Validation Not Found Error Response')
@@ -56,7 +56,7 @@ def assert_not_found_error_response(actual: NotFoundErrorResponseSchema, expecte
     :return: ValidationError
     """
     logger.info('Validation Not Found Error Response')
-    assert_equal(actual.detail, expected.detail, 'detail')        # Сравнивает значения "detail:"
+    assert_equal(actual.detail, expected.detail, 'detail')        # Compares "detail:" values
 
 
 #=======================================================================================================================

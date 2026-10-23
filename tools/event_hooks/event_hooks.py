@@ -31,41 +31,41 @@ def api_report_event_hook(response: httpx.Response):
 
     :param response: httpx.Response, passed automatically by the public/private httpx client (builder)
         """
-    response.read()                                      # Дочитываем тело ответа —
-                                                         # — иначе .text/.json() недоступны внутри response event hook
+    response.read()                                      # Read the response body —
+                                                         # — otherwise .text/.json() are unavailable inside the response event hook
     # API Base <=>
     allure.attach(                                       # Allure attachment:
-        body=get_api_base(response),                     # - Прикрепляемый объект (функция)
+        body=get_api_base(response),                     # - Attached object (function)
         name='API Base <=>',                             # - Allure attachment title
-        attachment_type=allure.attachment_type.TEXT      # - Тип отображения объекта в отчете
+        attachment_type=allure.attachment_type.TEXT      # - Object display type in the report
     )
 
     # API Request Body =>
     allure.attach(                                       # Allure attachment:
-        body=get_api_request_body(response),             # - Прикрепляемый объект (функция)
+        body=get_api_request_body(response),             # - Attached object (function)
         name='API Request Body =>',                      # - Allure attachment title
-        attachment_type=allure.attachment_type.JSON      # - Тип отображения объекта в отчете
+        attachment_type=allure.attachment_type.JSON      # - Object display type in the report
     )
 
     # API Response Body <=
     allure.attach(                                       # Allure attachment:
-        body=get_api_response_body(response),            # - Прикрепляемый объект (функция)
+        body=get_api_response_body(response),            # - Attached object (function)
         name='API Response Body <=',                     # - Allure attachment title
-        attachment_type=allure.attachment_type.JSON      # - Тип отображения объекта в отчете
+        attachment_type=allure.attachment_type.JSON      # - Object display type in the report
     )
 
     # API Request Headers =>
     allure.attach(                                       # Allure attachment:
-        body=get_api_request_headers(response),          # - Прикрепляемый объект (функция)
+        body=get_api_request_headers(response),          # - Attached object (function)
         name='API Request Headers =>',                   # - Allure attachment title
-        attachment_type=allure.attachment_type.JSON      # - Тип отображения объекта в отчете
+        attachment_type=allure.attachment_type.JSON      # - Object display type in the report
     )
 
     # API Response Headers <=
     allure.attach(                                       # Allure attachment:
-        body=get_api_response_headers(response),         # - Прикрепляемый объект (функция)
+        body=get_api_response_headers(response),         # - Attached object (function)
         name='API Response Headers <=',                  # - Allure attachment title
-        attachment_type=allure.attachment_type.JSON      # - Тип отображения объекта в отчете
+        attachment_type=allure.attachment_type.JSON      # - Object display type in the report
     )
 
 
@@ -78,9 +78,9 @@ def curl_command_event_hook(response: httpx.Response):
     :param response: httpx.Response, passed automatically by the public/private httpx client (builder)
     """
     allure.attach(                                       # Allure attachment:
-        body=make_curl(response.request),                # - Прикрепляемый объект (функция)
+        body=make_curl(response.request),                # - Attached object (function)
         name='cURL command',                             # - Allure attachment title
-        attachment_type=allure.attachment_type.TEXT      # - Тип отображения отчете
+        attachment_type=allure.attachment_type.TEXT      # - Display type in the report
     )
 
 
@@ -94,7 +94,7 @@ def log_request_event_hook(request: httpx.Request):
 
     :param request: httpx.Request
     """
-    logger.info(get_log_request(request))                # Вызываем соответствующую функию
+    logger.info(get_log_request(request))                # Call the corresponding function
 
 
 # Log Response <=
@@ -106,7 +106,7 @@ def log_response_event_hook(response: httpx.Response):
 
     :param response: httpx.Response
     """
-    logger.info(get_log_response(response))              # Вызываем соответствующую функию
+    logger.info(get_log_response(response))              # Call the corresponding function
 
 
 #=======================================================================================================================

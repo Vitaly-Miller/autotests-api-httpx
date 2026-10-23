@@ -12,7 +12,7 @@ class HTTPXClientConfig(BaseModel):
     timeout: float | int | None = None
 
     #╴╴╴╴╴╴╴╴╴╴╴╴╴╴╴╴╴╴╴╴╴╴╴╴╴╴╴╴╴╴╴╴╴╴╴╴╴┐
-    # Использовать, если base_url: HttpUrl
+    # Use if base_url: HttpUrl
     @property
     def base_url_str(self) -> str:
         """
@@ -31,31 +31,31 @@ class TestDataConfig(BaseModel):
 
 #---------------------------------------------- MAIN Class + .env-config -----------------------------------------------
 class Settings(BaseSettings):
-    model_config = SettingsConfigDict(        # CONFIG файла с переменными окружения (.env)
-        extra='allow',                        # Разрешаем дополнительные переменные (например для CI) (optional)
-        env_file='.env',                      # - Название файла с переменными окружения (.env)
-        env_file_encoding='utf-8',            # - Кодировка файла с переменными окружения (.env)
-        env_nested_delimiter='.'              # - Разделитель вложенных моделей в .env (ex. HTTPX_CLIENT.BASE_URL='...')
+    model_config = SettingsConfigDict(        # CONFIG of the environment variables file (.env)
+        extra='allow',                        # Allow extra variables (e.g. for CI) (optional)
+        env_file='.env',                      # - Environment variables file name (.env)
+        env_file_encoding='utf-8',            # - Environment variables file encoding (.env)
+        env_nested_delimiter='.'              # - Nested models delimiter in .env (ex. HTTPX_CLIENT.BASE_URL='...')
     )
-    # Вложенные Pydantic-models:
+    # Nested Pydantic models:
     httpx_client: HTTPXClientConfig
     test_data: TestDataConfig
     allure_results_dir: Path = Path('allure-results')
     # allure_results_dir: DirectoryPath
 
 
-    # #-------------- Создает папку, если её нет --------------
+    # #-------------- Creates the folder if it does not exist --------------
     # @classmethod
     # def initialize(cls) -> "Settings":
-    #     allure_results_dir = DirectoryPath('allure-results')   # Название папки
-    #     allure_results_dir.mkdir(exist_ok=True)                # Создает папку, если её нет
+    #     allure_results_dir = DirectoryPath('allure-results')   # Folder name
+    #     allure_results_dir.mkdir(exist_ok=True)                # Creates the folder if it does not exist
     #
     #     return Settings(allure_results_dir=allure_results_dir)
 
 
 #--------------------------------------------------- Helper ✨ ---------------------------------------------------------
-#settings = Settings.initialize()      # Инициализация класса-Pydantic-model (Settings) методом .initialize
-settings = Settings()                  # Инициализация класса-Pydantic-model (Settings)
+#settings = Settings.initialize()      # Initialize Pydantic model class (Settings) via .initialize
+settings = Settings()                  # Initialize Pydantic model class (Settings)
 
 
 #=======================================================================================================================

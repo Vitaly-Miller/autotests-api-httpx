@@ -6,7 +6,7 @@ from tools.data_generator import fake
 
 #================================================== ⬆︎REQUEST schemas ==================================================
 #------------------------------------------------------Auth/Login ------------------------------------------------------
-class AuthDataSchema(BaseModel, frozen=True):             # ✨← frozen делает модель иммутабельной и хэшируемой для lru_cache
+class AuthDataSchema(BaseModel, frozen=True):             # ✨← frozen makes the model immutable and hashable for lru_cache
     email: str = Field(default_factory=fake.email)        # ⚠️ Default value for NEGATIVE test ONLY
     password: str = Field(default_factory=fake.password)  # ⚠️ Default value for NEGATIVE test ONLY
 

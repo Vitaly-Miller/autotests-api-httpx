@@ -8,7 +8,7 @@ from tools.data_generator import fake
 #--------------------------------------------------- Create Exercise ---------------------------------------------------
 class CreateExerciseRequestSchema(BaseModel):
     title: str = Field(default_factory=fake.sentence)
-    course_id: str = Field(alias='courseId', default_factory=fake.uuid4)    # ⚠️Default value for NEGATIVE tests only    (Но сервер не проверяет наличие course_id в системе. Валидация только по формату UUID)
+    course_id: str = Field(alias='courseId', default_factory=fake.uuid4)    # ⚠️Default value for NEGATIVE tests only    (But the server doesn't check course_id existence. Only UUID format is validated)
     max_score: int = Field(alias='maxScore', strict=True, default_factory=fake.max_score)
     min_score: int = Field(alias='minScore', strict=True, default_factory=fake.min_score)
     order_index: int = Field(alias='orderIndex', default_factory=fake.random_int)
@@ -70,7 +70,7 @@ class CreateExerciseSchema(BaseModel):
     request: CreateExerciseRequestSchema    # ┐
     response: CreateExerciseResponseSchema  # ┘
 
-    #--- Методы прямого доступа к данным ---
+    #--- Direct data access methods ---
     # Exercise-ID
     @property
     def exercise_id(self):

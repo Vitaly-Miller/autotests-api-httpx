@@ -31,7 +31,7 @@ class TestCreateFile:
     @allure.title('Create File')
     def test_create_file(self, files_client: FilesClient):
         file_data = CreateFileRequestSchema()                                         # Pydantic-model with fake-data
-        response = files_client.create_file_api(file_data)                            # ▶ Запрос через API-метод
+        response = files_client.create_file_api(file_data)                            # ▶ Request via API method
         response_model = CreateFileResponseSchema.model_validate_json(response.text)  # httpx.Response —> Pydantic-model (deserialize)
 
         # Assertions
@@ -61,7 +61,7 @@ class TestCreateFileNegative:
         create_file_data = CreateFileRequestSchema(                                 # Pydantic-model with fake-data...
            filename=''                                                              # ... + EMPTY File Name
         )
-        response = files_client.create_file_api(create_file_data)                   # ▶ Запрос через API-метод
+        response = files_client.create_file_api(create_file_data)                   # ▶ Request via API method
 
         # Assertions
         assert_status_code(response.status_code, http.HTTPStatus.UNPROCESSABLE_ENTITY) # Status code: 422
@@ -75,7 +75,7 @@ class TestCreateFileNegative:
         create_file_data = CreateFileRequestSchema(                                 # Pydantic-model with fake-data...
            directory=''                                                             # ... + EMPTY Directory
         )
-        response = files_client.create_file_api(create_file_data)                   # ▶ Запрос через API-метод
+        response = files_client.create_file_api(create_file_data)                   # ▶ Request via API method
 
         # Assertions
         assert_status_code(response.status_code, http.HTTPStatus.UNPROCESSABLE_ENTITY) # Status code: 422

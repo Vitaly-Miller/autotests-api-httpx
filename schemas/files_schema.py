@@ -8,18 +8,18 @@ from tools.data_generator import fake
 #================================================= ⬆︎REQUEST Schemas ===================================================
 #----------------------------------------------------- Create File -----------------------------------------------------
 class CreateFileRequestSchema(BaseModel):
-    filename: str = Field(default_factory=fake.png_file_name)            # Новое имя файла при сохранении на сервере
-    directory: str = Field(default='Uploaded')                           # Директория сохранения файла на сервере
-    upload_path: str = Field(default=settings.test_data.image_png_file)  # Путь к файлу (from .env)
+    filename: str = Field(default_factory=fake.png_file_name)            # New file name when saved on the server
+    directory: str = Field(default='Uploaded')                           # Directory where the file is saved on the server
+    upload_path: str = Field(default=settings.test_data.image_png_file)  # File path (from .env)
 
 
 #================================================= ⬇︎RESPONSE Schemas ==================================================
 #----------------------------------------------------- "file": {}  -----------------------------------------------------
 class FileSchema(BaseModel):
     id: str           # File-ID
-    filename: str     # Новое имя файла при сохранении на сервере
-    directory: str    # Директория сохранения файла на сервере
-    url: str          # URL-адрес файла на сервере
+    filename: str     # New file name when saved on the server
+    directory: str    # Directory where the file is saved on the server
+    url: str          # File URL on the server
 
 #----------------------------------------------------- Create File -----------------------------------------------------
 class CreateFileResponseSchema(BaseModel):
@@ -35,23 +35,23 @@ class CreateFileSchema(BaseModel):
     request: CreateFileRequestSchema    # ┐
     response: CreateFileResponseSchema  # ┘
 
-    #--- Методы прямого доступа к данным ---
+    #--- Direct data access methods ---
     # File-ID
     @property
     def file_id(self):
         return self.response.file.id
 
-    # File name (Новое имя файла при сохранении на сервере)
+    # File name (New file name when saved on the server)
     @property
     def file_mame(self):
         return self.request.filename
 
-    # Directory (Директория сохранения файла на сервере)
+    # Directory (Directory where the file is saved on the server)
     @property
     def directory(self):
         return self.request.directory
 
-    # URL (Адрес файла на сервере)
+    # URL (File address on the server)
     @property
     def url(self):
         return self.request.upload_path

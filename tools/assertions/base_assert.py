@@ -3,7 +3,7 @@ Base assertions
 """
 import http
 import allure
-from typing import Any, Sized                                       # Sized - объект, у которого есть длина (len)
+from typing import Any, Sized                                       # Sized - an object that has a length (len)
 from tools.logger import get_logger
 
 #-------------- Logger -------------
@@ -30,7 +30,7 @@ def assert_status_code(actual: int, expected: int):
     with allure.step(f'Status code: {pretty_expected}'):            # Allure step title (inner)
         error_message = \
             (f'⚠️ Status code is incorrect!\n'                      # 
-             f'{exp} {expected}\n'                                  # Формируем Error Message
+             f'{exp} {expected}\n'                                  # Build Error Message
              f'{act} {actual}\n')                                   #
         logger.info(f'Status code: {pretty_expected}')
         assert actual == expected, error_message
@@ -48,7 +48,7 @@ def assert_request_method(actual: str, expected: str):
     with allure.step(f'Request method: {expected}'):     # Allure step title (inner)
         error_message = \
             (f'⚠️ Request Method is incorrect!\n'        #
-             f'{exp} {expected}\n'                       # Формируем Error Message
+             f'{exp} {expected}\n'                       # Build Error Message
              f'{act} {actual}\n')                        #
         logger.info(f'Request method: {expected}')
         assert actual == expected, error_message
@@ -73,7 +73,7 @@ def assert_equal(actual: Any, expected: Any | str, name: str):
     """
     error_message = \
         (f'⚠️ Values of "{name}" are NOT equal!\n'   #
-         f'{exp} "{name}": {expected}\n'             # Формируем Error Message
+         f'{exp} "{name}": {expected}\n'             # Build Error Message
          f'{act} "{name}": {actual}\n')              #
     logger.info(f'Values of Actual "{name}" = Expected "{name}"')
     assert actual == expected, error_message
@@ -97,7 +97,7 @@ def assert_not_equal(obj_1: Any, obj_1_name: str, obj_2: Any, obj_2_name: str):
     error_message = \
         (f'⚠️ Values of "{obj_1_name} and "{obj_2_name}" are equal!\n' #
          f'"{obj_1_name}": "{obj_1}"\n'                                # 
-         f'"{obj_2_name}": "{obj_2}"\n'                                # Формируем Error Message
+         f'"{obj_2_name}": "{obj_2}"\n'                                # Build Error Message
          f'{exp} "{obj_1_name}" value ≠ "{obj_2_name}" value\n'        #
          f'{act} "{obj_1_name}" value = "{obj_2_name}" value\n')       #
     logger.info(f'Values of "{obj_1_name}" ≠ "{obj_2_name}"')
@@ -117,7 +117,7 @@ def assert_is_value(actual: Any, name: str):
     """
     error_message = \
         (f'⚠️ "{name}" value is empty!\n'            #
-         f'{exp} "{name}": "...some value..."\n'     #  Формируем Error Message
+         f'{exp} "{name}": "...some value..."\n'     #  Build Error Message
          f'{act} "{name}": "" <— Empty/None\n')      #
     logger.info(f'Value of "{name}" is non-empty')
     assert actual, error_message
@@ -137,7 +137,7 @@ def assert_length(obj: Sized, expected_length: int, obj_name: str):
     """
     error_message = \
         (f'⚠️ Incorrect "{obj_name}" value length!\n'   #
-         f'{exp} {expected_length}\n'                   # Формируем Error Message
+         f'{exp} {expected_length}\n'                   # Build Error Message
          f'{act} {len(obj)}\n')                         #
     logger.info(f'Length of "{obj_name}" = {expected_length}')
     assert len(obj) == expected_length, error_message
@@ -157,7 +157,7 @@ def assert_length_equal(actual: Sized, expected: Sized, name: str):
     with allure.step(f'Lengths of Actual {name} = Expected {name} = {len(expected)}'):
         error_message = \
             (f'⚠️ Values "{name}" have different lengths!\n'   #
-             f'{exp} {len(expected)}\n'                        # Формируем Error Message
+             f'{exp} {len(expected)}\n'                        # Build Error Message
              f'{act} {len(actual)}\n')                         #
         logger.info(f'Lengths of Actual "{name}" = Expected "{name}" = {len(expected)}')
         assert len(actual) == len(expected), error_message
