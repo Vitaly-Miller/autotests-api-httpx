@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTIzVDAyOjIxOjQzLjI1ODA5MiIsInVzZXJfaWQiOiIzMjJiMjg5Ni04YWFkLTQwNTEtOWM3Mi1iNmE4M2UzMGMxYzkifQ.X6nVC3d3JfovBXd3gFZjBp_6TH8YtmslmdZVVeZdhos' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Own case scene soldier lead so.","maxScore":67,"minScore":29,"description":"Everything else bed specific know.","estimatedTime":"6 weeks","previewFileId":"8b46f9bd-fc76-49d4-bb9b-e0b94e1dfa6d","createdByUserId":"322b2896-8aad-4051-9c72-b6a83e30c1c9"}'

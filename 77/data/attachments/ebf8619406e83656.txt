@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/exercises/9e965323-7fc6-43eb-ac18-92a893990a8d \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTIzVDAyOjIxOjUwLjYwOTcyNyIsInVzZXJfaWQiOiI3NGUzZTBiMS04MmEyLTRiMjAtODg5OS05MjhkOGUwMGU4ZTQifQ.k4g50xoHRLfzBNNWUaJzsAiaVyC1YNylz26rL0u0GBY' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Military standard son food.","maxScore":79,"minScore":21,"orderIndex":6418,"description":"Enter describe morning watch.","estimatedTime":"2 weeks"}'

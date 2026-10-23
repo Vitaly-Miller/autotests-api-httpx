@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTIzVDAyOjIxOjM4Ljc3MzgzNiIsInVzZXJfaWQiOiI2MmU1N2IxNi03M2RiLTQwM2EtOTA2Zi03ZWFmN2Y3M2E0OTYifQ.G6VNykIMm7gkBz1fpwBvsw4-INrN2Us_NVTQMOo4TfQ' \
+  -H 'content-type: application/json' \
+  -d '{"title":"There successful whatever alone next true.","maxScore":78,"minScore":19,"description":"Our decade Mrs central. Door training point he.","estimatedTime":"8 weeks","previewFileId":"69d4299d-760f-4921-be90-0fe403662771","createdByUserId":"62e57b16-73db-403a-906f-7eaf7f73a496"}'

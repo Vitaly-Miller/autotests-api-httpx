@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "110a4420-b335-43e4-a29b-83b369a5be5c",
+    "title": "Future you sometimes key.",
+    "maxScore": 50,
+    "minScore": 2,
+    "description": "During big eight.",
+    "previewFile": {
+      "id": "daf8edf6-23b4-4dbc-bf36-3535de03ca31",
+      "filename": "file_4153.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_4153.png"
+    },
+    "estimatedTime": "2 weeks",
+    "createdByUser": {
+      "id": "74e3e0b1-82a2-4b20-8899-928d8e00e8e4",
+      "email": "test_55e79310@example.com",
+      "lastName": "Richmond",
+      "firstName": "David",
+      "middleName": "Tara"
+    }
+  }
+}

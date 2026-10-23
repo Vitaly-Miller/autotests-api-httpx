@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "956d74a7-f961-4197-bebe-d33b55c2b5ef",
+    "title": "There successful whatever alone next true.",
+    "maxScore": 78,
+    "minScore": 19,
+    "description": "Our decade Mrs central. Door training point he.",
+    "previewFile": {
+      "id": "69d4299d-760f-4921-be90-0fe403662771",
+      "filename": "file_8399.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_8399.png"
+    },
+    "estimatedTime": "8 weeks",
+    "createdByUser": {
+      "id": "62e57b16-73db-403a-906f-7eaf7f73a496",
+      "email": "test_42454133@example.com",
+      "lastName": "Aguirre",
+      "firstName": "Amy",
+      "middleName": "Sara"
+    }
+  }
+}

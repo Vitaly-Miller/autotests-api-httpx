@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "c19d322e-81e8-42d3-b338-3148b0d2aa5e",
+    "title": "Hold structure trade set base.",
+    "maxScore": 98,
+    "minScore": 23,
+    "description": "Notice job safe finish consumer.",
+    "previewFile": {
+      "id": "6cd29846-3ac9-4972-a927-de15e3b1f97f",
+      "filename": "file_3444.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_3444.png"
+    },
+    "estimatedTime": "2 weeks",
+    "createdByUser": {
+      "id": "688eb089-eadb-4706-97e4-3e259f162f64",
+      "email": "test_41e85fa4@example.com",
+      "lastName": "Garcia",
+      "firstName": "Maurice",
+      "middleName": "Jason"
+    }
+  }
+}

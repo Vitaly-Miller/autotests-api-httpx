@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTIzVDAyOjIxOjM2Ljg1MzM4NCIsInVzZXJfaWQiOiI2ODhlYjA4OS1lYWRiLTQ3MDYtOTdlNC0zZTI1OWYxNjJmNjQifQ.JXfbKbI4HuMH0_9G5X8xeTtrnxK1SwfKod5pvm2TcK8' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Hold structure trade set base.","maxScore":98,"minScore":23,"description":"Notice job safe finish consumer.","estimatedTime":"2 weeks","previewFileId":"6cd29846-3ac9-4972-a927-de15e3b1f97f","createdByUserId":"688eb089-eadb-4706-97e4-3e259f162f64"}'

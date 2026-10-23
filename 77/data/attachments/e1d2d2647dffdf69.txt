@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTIzVDAyOjIxOjQ3LjA4Mjc0MCIsInVzZXJfaWQiOiI1ZWI2ZGFjOS00NmM1LTQxNTctYWVlMi1iODI1MzFmZWU2MTYifQ.3U3OPFEIF0BEqJbrAUVaD4qLE3wj5-5PG9zDNHUPEWw' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Face never stand politics.","maxScore":88,"minScore":24,"description":"Often wish system direction hour increase.","estimatedTime":"5 weeks","previewFileId":"3e6c598e-2c78-4e1c-897a-156f2e757445","createdByUserId":"5eb6dac9-46c5-4157-aee2-b82531fee616"}'

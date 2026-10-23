@@ -1,0 +1,3 @@
+curl -X GET \
+  http://localhost:8000/api/v1/users/me \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTIzVDAyOjIxOjU4LjA3MDI5OCIsInVzZXJfaWQiOiI5YzVhZDFkZC1iN2QyLTQ3YmYtOTQ2Mi02Y2UyMmExNWQyYjUifQ.FJdMQ4XMngoqcdrSDWMXxsYn7a7iI7mCZgZdiwlGfgA'

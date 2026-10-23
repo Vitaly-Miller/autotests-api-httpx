@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "cae790c0-bcc0-4b94-8372-21d1ce64d754",
+    "title": "End care on without.",
+    "maxScore": 87,
+    "minScore": 17,
+    "description": "Church these commercial up pull chance.",
+    "previewFile": {
+      "id": "31e99497-6c69-4fdb-8700-b293cc3aab11",
+      "filename": "file_4410.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_4410.png"
+    },
+    "estimatedTime": "5 weeks",
+    "createdByUser": {
+      "id": "bdab5a04-cf47-4a52-b1db-6094338eb617",
+      "email": "test_df9a9be0@example.com",
+      "lastName": "Hughes",
+      "firstName": "Katherine",
+      "middleName": "Daniel"
+    }
+  }
+}

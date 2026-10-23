@@ -1,0 +1,4 @@
+curl -X POST \
+  http://localhost:8000/api/v1/files \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTIzVDAyOjIxOjU0LjQ0MzExMSIsInVzZXJfaWQiOiI5ZWM3MzdkMC0wYWZmLTRjNmEtYjc0My0wMTljZjJhN2M4MzMifQ.7Syr-D63X1nTmWOH1DTp7xs7l5CGwD0i0Y8Ma4ZfrNU' \
+  -H 'content-type: multipart/form-data; boundary=e9c0c2f9b0441f692a11aaeabee3be41'

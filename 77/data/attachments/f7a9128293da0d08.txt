@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTIzVDAyOjIxOjQ5LjYyNjgwNyIsInVzZXJfaWQiOiJhODQ4MDIzZS1iYmMyLTQ3M2ItYmQzZC04NDQ0NDE3MzkyNjgifQ.plOA5_wTDi4V-8DpNOLc3EslCl_S9JpuEYpj0aFCv3s' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Food subject opportunity street first.","maxScore":70,"minScore":20,"description":"Many page character state.","estimatedTime":"8 weeks","previewFileId":"5d7aadcd-06f8-45a4-ac80-eb95454d281f","createdByUserId":"a848023e-bbc2-473b-bd3d-844441739268"}'

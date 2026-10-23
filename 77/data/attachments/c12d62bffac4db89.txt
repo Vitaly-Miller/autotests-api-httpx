@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTIzVDAyOjIxOjQ1LjUwOTAwMCIsInVzZXJfaWQiOiJhYzUzZDc5OS1jM2ZkLTQ2NzQtOGM0OC0xNWY4Yzk5YTkxNGQifQ.MHboJ1PhfhFnEKAY2MCZJ23Wm-_UbhsKGDbiYNw2lEI' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Agree company town risk.","courseId":"b3b9d5c1-563c-461a-969c-d4d8f9a84982","maxScore":51,"minScore":27,"orderIndex":511,"description":"Out table window catch grow foreign keep.","estimatedTime":"7 weeks"}'

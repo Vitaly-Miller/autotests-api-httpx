@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "0e07f1d5-b9a3-4696-b23d-577541e331d7",
+    "title": "Require reality win also strong.",
+    "maxScore": 69,
+    "minScore": 26,
+    "description": "Bag generation behavior impact training.",
+    "previewFile": {
+      "id": "4a3da5f5-9747-4518-96f7-0bca530e09b5",
+      "filename": "file_1791.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_1791.png"
+    },
+    "estimatedTime": "3 weeks",
+    "createdByUser": {
+      "id": "83bd2d00-cc34-4883-8902-d412c27ee986",
+      "email": "test_44d2b03a@example.com",
+      "lastName": "Davidson",
+      "firstName": "Randy",
+      "middleName": "Susan"
+    }
+  }
+}

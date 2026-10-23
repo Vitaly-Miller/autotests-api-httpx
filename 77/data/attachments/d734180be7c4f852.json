@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "8be3c06e-ff8d-4bc0-a6a3-fa4cc4b8d966",
+    "title": "Own case scene soldier lead so.",
+    "maxScore": 67,
+    "minScore": 29,
+    "description": "Everything else bed specific know.",
+    "previewFile": {
+      "id": "8b46f9bd-fc76-49d4-bb9b-e0b94e1dfa6d",
+      "filename": "file_8222.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_8222.png"
+    },
+    "estimatedTime": "6 weeks",
+    "createdByUser": {
+      "id": "322b2896-8aad-4051-9c72-b6a83e30c1c9",
+      "email": "test_70144311@example.com",
+      "lastName": "Moore",
+      "firstName": "Toni",
+      "middleName": "Cameron"
+    }
+  }
+}

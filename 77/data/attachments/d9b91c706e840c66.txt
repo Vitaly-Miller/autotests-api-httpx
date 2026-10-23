@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTIzVDAyOjIxOjM3LjgyMDc5NSIsInVzZXJfaWQiOiIwZWI0ZWZiNy1mOTUzLTQzODEtYmE2Yy03ZTk1YzQxNWI1OGUifQ.ugNLz8GRd5iSkebVjW2tXFWlbLhMnQLzhNsIZ5gokuY' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Necessary manage citizen.","maxScore":76,"minScore":17,"description":"Because force know former.","estimatedTime":"3 weeks","previewFileId":"a760cce3-5396-4620-a476-fa7f6fad7bc7","createdByUserId":"0eb4efb7-f953-4381-ba6c-7e95c415b58e"}'

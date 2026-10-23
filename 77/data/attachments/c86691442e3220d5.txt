@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTIzVDAyOjIxOjQyLjk1OTIyOSIsInVzZXJfaWQiOiIzMjJiMjg5Ni04YWFkLTQwNTEtOWM3Mi1iNmE4M2UzMGMxYzkifQ.vdDaSiJnDA6SUoEXiRWDNuk8GAR65PC7RtPjYSIbeTU' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Whole fly ability ten need.","courseId":"8be3c06e-ff8d-4bc0-a6a3-fa4cc4b8d966","maxScore":100,"minScore":23,"orderIndex":4848,"description":"Quickly probably better quite miss.","estimatedTime":"7 weeks"}'

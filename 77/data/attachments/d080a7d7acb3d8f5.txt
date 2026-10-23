@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTIzVDAyOjIxOjQ2Ljc4MzAyNSIsInVzZXJfaWQiOiI1ZWI2ZGFjOS00NmM1LTQxNTctYWVlMi1iODI1MzFmZWU2MTYifQ.AeA-Hz-AQJrYfACvUCM3mo8K7aMgM_hEsy7tAvKgODE' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Long sort listen.","courseId":"15632cbf-2595-479c-bfb5-239dabb5bcb9","maxScore":56,"minScore":7,"orderIndex":1294,"description":"Animal goal red child team myself day number.","estimatedTime":"7 weeks"}'

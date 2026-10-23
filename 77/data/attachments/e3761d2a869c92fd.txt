@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTIzVDAyOjIxOjM5Ljc1MTMxNiIsInVzZXJfaWQiOiI5NWUzYTE4Ni00YTYwLTRlZDUtODk4ZS05MmVmMzQ4YmJhMzYifQ.Tth_tfUBm0Q-WlRMj724nYAxyO4v-xLM-6RIlx3i-ug' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Girl range during course wall.","maxScore":74,"minScore":24,"description":"Risk name think current red professor lot.","estimatedTime":"3 weeks","previewFileId":"a64a49d1-a857-40c8-9deb-11bd531932fe","createdByUserId":"95e3a186-4a60-4ed5-898e-92ef348bba36"}'

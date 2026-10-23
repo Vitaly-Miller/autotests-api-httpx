@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "6d372834-515c-4c0f-a0b9-2d77bdda9130",
+    "title": "Statement remain station who.",
+    "maxScore": 76,
+    "minScore": 30,
+    "description": "Sound there American leave gun attack.",
+    "previewFile": {
+      "id": "89c256d1-d091-45cf-868d-f575b7951763",
+      "filename": "file_8719.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_8719.png"
+    },
+    "estimatedTime": "8 weeks",
+    "createdByUser": {
+      "id": "8a602f86-4f4f-4870-a472-2cbd80580f9d",
+      "email": "test_dff64e1c@example.com",
+      "lastName": "Weaver",
+      "firstName": "Alexandra",
+      "middleName": "Michael"
+    }
+  }
+}

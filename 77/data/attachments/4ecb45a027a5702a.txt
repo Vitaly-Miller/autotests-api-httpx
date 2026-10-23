@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTIzVDAyOjIxOjQ5LjMyNjg0MiIsInVzZXJfaWQiOiJhODQ4MDIzZS1iYmMyLTQ3M2ItYmQzZC04NDQ0NDE3MzkyNjgifQ.YbCsZhreisl93e8yCkXnqdkU5wqTuKcj0RxnqFvMgzs' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Until before friend account.","courseId":"615310c2-0e21-4be4-8d8b-f69fa661f943","maxScore":70,"minScore":7,"orderIndex":9984,"description":"Vote ok hand ground.","estimatedTime":"9 weeks"}'

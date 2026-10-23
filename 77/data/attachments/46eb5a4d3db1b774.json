@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "15632cbf-2595-479c-bfb5-239dabb5bcb9",
+    "title": "Face never stand politics.",
+    "maxScore": 88,
+    "minScore": 24,
+    "description": "Often wish system direction hour increase.",
+    "previewFile": {
+      "id": "3e6c598e-2c78-4e1c-897a-156f2e757445",
+      "filename": "file_8404.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_8404.png"
+    },
+    "estimatedTime": "5 weeks",
+    "createdByUser": {
+      "id": "5eb6dac9-46c5-4157-aee2-b82531fee616",
+      "email": "test_8b41cde5@example.com",
+      "lastName": "Mendez",
+      "firstName": "Rachel",
+      "middleName": "Terri"
+    }
+  }
+}

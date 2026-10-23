@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "48304bdc-c444-445a-a35f-cc0d7bc187ef",
+    "title": "Child anything condition that stay oil.",
+    "maxScore": 71,
+    "minScore": 9,
+    "description": "Nature simple pick big win necessary blood pay.",
+    "previewFile": {
+      "id": "43f47dbd-2571-415e-81d5-215478cd1ba8",
+      "filename": "file_5900.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_5900.png"
+    },
+    "estimatedTime": "6 weeks",
+    "createdByUser": {
+      "id": "19a0f544-1da9-48e1-9590-06695c8ec6c5",
+      "email": "test_0c3332de@example.com",
+      "lastName": "Wallace",
+      "firstName": "Kimberly",
+      "middleName": "Tommy"
+    }
+  }
+}

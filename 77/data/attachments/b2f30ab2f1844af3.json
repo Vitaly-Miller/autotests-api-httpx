@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "3a227a93-687a-43dd-be4a-8f15928f6948",
+    "title": "Girl range during course wall.",
+    "maxScore": 74,
+    "minScore": 24,
+    "description": "Risk name think current red professor lot.",
+    "previewFile": {
+      "id": "a64a49d1-a857-40c8-9deb-11bd531932fe",
+      "filename": "file_6406.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_6406.png"
+    },
+    "estimatedTime": "3 weeks",
+    "createdByUser": {
+      "id": "95e3a186-4a60-4ed5-898e-92ef348bba36",
+      "email": "test_fb82a476@example.com",
+      "lastName": "Brown",
+      "firstName": "Sharon",
+      "middleName": "Brandi"
+    }
+  }
+}
