@@ -42,23 +42,23 @@ def assert_token(response: AuthResponseSchema):
     :raise AssertionError
     """
     logger.info('Tokens validation')
-    assert_equal(                              # Access Token type = 'bearer'
+    assert_equal(
         response.token.token_type,
         'bearer',
         'token_type')
 
-    assert_not_equal(                          # Access token ≠ Refresh token
+    assert_not_equal(
         response.token.access_token,
         'access_token',
         response.token.refresh_token,
         'refresh_token')
 
-    assert_length(                             # Access token length = 199 chars
+    assert_length(
         response.token.access_token,
         199,
         'access_token')
 
-    assert_length(                             # Refresh token length = 199 chars
+    assert_length(
         response.token.refresh_token,
         199,
         'refresh_token')

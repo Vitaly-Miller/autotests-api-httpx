@@ -54,8 +54,8 @@ def assert_user_id(response: CreateUserResponseSchema):
     :raise AssertionError
     """
     logger.info('User-ID validation')
-    assert_is_value(response.user.id, 'id')                    # User-ID is NOT-empty
-    assert_length(response.user.id, 36, 'id')   # User-ID length = 36 chars
+    assert_is_value(response.user.id, 'id')
+    assert_length(response.user.id, 36, 'id')
 
 
 #=======================================================================================================================

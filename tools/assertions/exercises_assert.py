@@ -84,10 +84,10 @@ def assert_exercise_id(response: CreateExerciseResponseSchema | GetExerciseRespo
     :raise AssertionError
     """
     logger.info('Exercise-ID validation')
-    assert_is_value(response.exercise.id, 'exercise_id')                        # NON-empty File-ID
-    assert_length(response.exercise.id, 36, 'exercise_id')       # File-ID length = 36 chars
-    if exercise_id:                                                                        # If Exercise-ID is passed, check it:
-        assert_equal(response.exercise.id, exercise_id,'exercise_id')  # Actual Exercise-ID = Expected Exercise-ID
+    assert_is_value(response.exercise.id, 'exercise_id')
+    assert_length(response.exercise.id, 36, 'exercise_id')
+    if exercise_id:
+        assert_equal(response.exercise.id, exercise_id,'exercise_id')
 
 
 #---------------------------------------------------- Get exercise -----------------------------------------------------
@@ -102,7 +102,7 @@ def assert_get_exercise_response_non_empty(response: GetExerciseResponseSchema):
     :raise AssertionError
     """
     logger.info('Get Exercise Response data is non-empty')
-    assert_exercise_non_empty(response.exercise)   # pass exercise{} object
+    assert_exercise_non_empty(response.exercise)
 
 
 #--------------------------------------------------- Update exercise ---------------------------------------------------
@@ -137,9 +137,9 @@ def assert_exercise_not_found_error_response(response: httpx.Response):
     :param response: httpx.Response
     :return: AssertionError
     """
-    actual_response = NotFoundErrorResponseSchema.model_validate_json(response.text)  # httpx.Response —> Pydantic-model (deserialize)
+    actual_response = NotFoundErrorResponseSchema.model_validate_json(response.text)
     expected_response = NotFoundErrorResponseSchema(
-        detail='Exercise not found'                                                   # Expected error message
+        detail='Exercise not found'
     )
     logger.info('Get File Not Found Error Response by non-existent exercise')
     assert_not_found_error_response(actual_response, expected_response)

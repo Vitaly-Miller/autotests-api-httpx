@@ -70,7 +70,7 @@ class Report:
                 print(request_body_json)
             else:
                 print(f'{{\n\t<none>\n}}')
-        except Exception:     # NOQA <— ⚠️Replace with except httpx.RequestNotRead:
+        except Exception:     # NOQA
             print(f'{{\n\t<multipart/stream>\n}}')
 
 

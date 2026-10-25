@@ -31,41 +31,41 @@ def api_report_event_hook(response: httpx.Response):
 
     :param response: httpx.Response, passed automatically by the public/private httpx client (builder)
         """
-    response.read()                                      # Read the response body —
-                                                         # — otherwise .text/.json() are unavailable inside the response event hook
+    response.read()
+
     # API Base <=>
-    allure.attach(                                       # Allure attachment:
-        body=get_api_base(response),                     # - Attached object (function)
-        name='API Base <=>',                             # - Allure attachment title
-        attachment_type=allure.attachment_type.TEXT      # - Object display type in the report
+    allure.attach(
+        body=get_api_base(response),
+        name='API Base <=>',
+        attachment_type=allure.attachment_type.TEXT
     )
 
     # API Request Body =>
-    allure.attach(                                       # Allure attachment:
-        body=get_api_request_body(response),             # - Attached object (function)
-        name='API Request Body =>',                      # - Allure attachment title
-        attachment_type=allure.attachment_type.JSON      # - Object display type in the report
+    allure.attach(
+        body=get_api_request_body(response),
+        name='API Request Body =>',
+        attachment_type=allure.attachment_type.JSON
     )
 
     # API Response Body <=
-    allure.attach(                                       # Allure attachment:
-        body=get_api_response_body(response),            # - Attached object (function)
-        name='API Response Body <=',                     # - Allure attachment title
-        attachment_type=allure.attachment_type.JSON      # - Object display type in the report
+    allure.attach(
+        body=get_api_response_body(response),
+        name='API Response Body <=',
+        attachment_type=allure.attachment_type.JSON
     )
 
     # API Request Headers =>
-    allure.attach(                                       # Allure attachment:
-        body=get_api_request_headers(response),          # - Attached object (function)
-        name='API Request Headers =>',                   # - Allure attachment title
-        attachment_type=allure.attachment_type.JSON      # - Object display type in the report
+    allure.attach(
+        body=get_api_request_headers(response),
+        name='API Request Headers =>',
+        attachment_type=allure.attachment_type.JSON
     )
 
     # API Response Headers <=
-    allure.attach(                                       # Allure attachment:
-        body=get_api_response_headers(response),         # - Attached object (function)
-        name='API Response Headers <=',                  # - Allure attachment title
-        attachment_type=allure.attachment_type.JSON      # - Object display type in the report
+    allure.attach(
+        body=get_api_response_headers(response),
+        name='API Response Headers <=',
+        attachment_type=allure.attachment_type.JSON
     )
 
 
@@ -77,10 +77,10 @@ def curl_command_event_hook(response: httpx.Response):
 
     :param response: httpx.Response, passed automatically by the public/private httpx client (builder)
     """
-    allure.attach(                                       # Allure attachment:
-        body=make_curl(response.request),                # - Attached object (function)
-        name='cURL command',                             # - Allure attachment title
-        attachment_type=allure.attachment_type.TEXT      # - Display type in the report
+    allure.attach(
+        body=make_curl(response.request),
+        name='cURL command',
+        attachment_type=allure.attachment_type.TEXT
     )
 
 
@@ -94,7 +94,7 @@ def log_request_event_hook(request: httpx.Request):
 
     :param request: httpx.Request
     """
-    logger.info(get_log_request(request))                # Call the corresponding function
+    logger.info(get_log_request(request))
 
 
 # Log Response <=
@@ -106,7 +106,7 @@ def log_response_event_hook(response: httpx.Response):
 
     :param response: httpx.Response
     """
-    logger.info(get_log_response(response))              # Call the corresponding function
+    logger.info(get_log_response(response))
 
 
 #=======================================================================================================================

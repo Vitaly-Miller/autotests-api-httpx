@@ -39,7 +39,7 @@ def assert_create_file_response(response: CreateFileResponseSchema, request: Cre
     :param request: Pydantic-model (CreateFileRequestSchema)
     :raise AssertionError
     """
-    expected_url = f'{settings.httpx_client.base_url}/static/{request.directory}/{request.filename}'  # URL for comparison
+    expected_url = f'{settings.httpx_client.base_url}/static/{request.directory}/{request.filename}'
     logger.info('Response data = Request data')
     assert_equal(response.file.filename,request.filename,'filename')
     assert_equal(response.file.directory,request.directory,'directory')
@@ -60,10 +60,10 @@ def assert_file_id(response: CreateFileResponseSchema | GetFileResponseSchema, f
     :raise AssertionError
     """
     logger.info('File-ID validation')
-    assert_is_value(response.file.id, 'id')                      # File-ID is non-empty
-    assert_length(response.file.id,36,'id')       # File-ID length = 36 chars
+    assert_is_value(response.file.id, 'id')
+    assert_length(response.file.id,36,'id')
     if file_id:
-        assert_equal(response.file.id, file_id, 'id')   # Actual File-ID = Expected File-ID
+        assert_equal(response.file.id, file_id, 'id')
 
 
 
@@ -77,8 +77,8 @@ def assert_create_file_empty_filename_error_response(response: httpx.Response):
     :return: AssertionError
     """
     with allure.step('Create File Error Response by empty "filename"'):
-        actual_response = ErrorResponseSchema.model_validate_json(response.text)   # httpx.Response  —> Pydantic-model (deserialize)
-        expected_response = ErrorResponseSchema(                                   # Initialize expected Pydantic model
+        actual_response = ErrorResponseSchema.model_validate_json(response.text)
+        expected_response = ErrorResponseSchema(
             detail=[
                 ErrorSchema(
                     type='missing',
@@ -101,8 +101,8 @@ def assert_create_file_empty_directory_error_response(response: httpx.Response):
     :return: AssertionError
     """
     with allure.step('Create File Error Response by empty "directory"'):
-        actual_response = ErrorResponseSchema.model_validate_json(response.text)   # httpx.Response —> Pydantic-model (deserialize)
-        expected_response = ErrorResponseSchema(                                   # Initialize expected Pydantic model
+        actual_response = ErrorResponseSchema.model_validate_json(response.text)
+        expected_response = ErrorResponseSchema(
             detail=[
                 ErrorSchema(
                     type='missing',
@@ -131,15 +131,15 @@ def assert_get_file_invalid_id_error_response(response: httpx.Response):
     :param response: httpx.Response
     :return: AssertionError
     """
-    actual_response = ErrorResponseSchema.model_validate_json(response.text)   # httpx.Response —> Pydantic-model (deserialize)
+    actual_response = ErrorResponseSchema.model_validate_json(response.text)
     expected_response = ErrorResponseSchema(
         detail=[
             ErrorSchema(
                 type='uuid_parsing',
                 loc=['path', 'file_id'],
                 msg='Input should be a valid UUID, invalid character: found `i` at 0',
-                input=response.json()['detail'][0]['input'],        # 👈 here 'invalid File-ID' is passed (decided this way for now)
-                ctx={"error": 'invalid character: found `i` at 0'}  # ⚠️ TODO - ignore characters after <...`i` at> ...
+                input=response.json()['detail'][0]['input'],
+                ctx={"error": 'invalid character: found `i` at 0'}
             )
         ]
     )
@@ -158,9 +158,9 @@ def assert_get_file_not_found_error_response(response: httpx.Response):
     :param response: httpx.Response
     :return: AssertionError
     """
-    actual_response = NotFoundErrorResponseSchema.model_validate_json(response.text)  # httpx.Response —> Pydantic-model (deserialize)
+    actual_response = NotFoundErrorResponseSchema.model_validate_json(response.text)
     expected_response = NotFoundErrorResponseSchema(
-        detail='File not found'                                                       # Expected error message
+        detail='File not found'
     )
     logger.info('Get File Not Found Error Response by non-existent file')
     assert_not_found_error_response(actual_response, expected_response)
