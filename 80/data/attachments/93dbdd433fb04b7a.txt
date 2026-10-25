@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTI1VDA0OjI4OjI2LjE3NjU3NSIsInVzZXJfaWQiOiI2ODI0YTcyOC05ZjEyLTRkYWUtYTY1MS1lYzJiZmJjODcyMTAifQ.W75WJIMQTEIaBZtgfzG15iUYeElo0fw4jimsoT4ITwk' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Purpose window important.","courseId":"1e9e9510-c557-4452-98de-769d677eed9e","maxScore":52,"minScore":7,"orderIndex":6957,"description":"Under really ahead list anyone animal.","estimatedTime":"3 weeks"}'

@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "4e8ed3e8-dce3-4747-a6f1-35cb084dd7f6",
+    "title": "Between kid speech to against might.",
+    "maxScore": 67,
+    "minScore": 3,
+    "description": "Ball system food stop laugh.",
+    "previewFile": {
+      "id": "b6651c25-2f80-4d47-b3cc-09f891027e5a",
+      "filename": "file_4899.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_4899.png"
+    },
+    "estimatedTime": "2 weeks",
+    "createdByUser": {
+      "id": "8614d670-58cf-40b2-b830-f95d2348ae92",
+      "email": "test_8f1df34c@example.com",
+      "lastName": "Benson",
+      "firstName": "Briana",
+      "middleName": "Douglas"
+    }
+  }
+}

@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTI1VDA0OjI4OjI3LjEzMTc3OCIsInVzZXJfaWQiOiI4NjE0ZDY3MC01OGNmLTQwYjItYjgzMC1mOTVkMjM0OGFlOTIifQ.QKB3RNRqVrFi4gWTUnV6odM3ZsQjWdo5rFvmhTMp8DM' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Around network me.","courseId":"4e8ed3e8-dce3-4747-a6f1-35cb084dd7f6","maxScore":56,"minScore":7,"orderIndex":3354,"description":"Class point research event yourself place.","estimatedTime":"4 weeks"}'

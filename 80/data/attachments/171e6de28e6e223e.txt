@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTI1VDA0OjI4OjIwLjY0NDY2NCIsInVzZXJfaWQiOiIzNDkwOTIwMy1hYTgyLTQxZWYtOGJmZS0xODg1OTc4ZTQ5YTEifQ.uagF8994LTjwx0MUniU6UP3N4M4PygI26PTcOKbhx2s' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Item scientist test save prepare next.","maxScore":99,"minScore":29,"description":"Blood choose open both.","estimatedTime":"9 weeks","previewFileId":"8abae57a-4a49-4ab6-ab31-f33c6466ad57","createdByUserId":"34909203-aa82-41ef-8bfe-1885978e49a1"}'

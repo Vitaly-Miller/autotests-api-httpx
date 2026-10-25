@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTI1VDA0OjI4OjIzLjI3Mzc4OSIsInVzZXJfaWQiOiIwMTQ5YzM2Yy00M2EzLTRlNDktOGRlZS0xYWQ0NmJhODA0YjQifQ.aGGYuQsAEhl_MftFV1qaIb0sskhUM_pa3hcaBfv7ALQ' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Build weight rest another.","courseId":"cdbc3587-06dc-4c13-b67f-c21b2978327f","maxScore":80,"minScore":14,"orderIndex":6570,"description":"Station easy measure person.","estimatedTime":"6 weeks"}'

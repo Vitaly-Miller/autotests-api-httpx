@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "393ff120-7700-41e0-b763-085537cffd47",
+    "title": "Table democratic these.",
+    "maxScore": 86,
+    "minScore": 8,
+    "description": "Ball Republican raise.",
+    "previewFile": {
+      "id": "295649d3-e69b-4ccf-b4fb-4a790ae3e772",
+      "filename": "file_8279.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_8279.png"
+    },
+    "estimatedTime": "6 weeks",
+    "createdByUser": {
+      "id": "3dd898dc-f9f3-4ff2-9d5c-4b96a7427e69",
+      "email": "test_830b71a9@example.com",
+      "lastName": "Rodriguez",
+      "firstName": "Brenda",
+      "middleName": "Brenda"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "1e9e9510-c557-4452-98de-769d677eed9e",
+    "title": "Even three boy meet save.",
+    "maxScore": 61,
+    "minScore": 17,
+    "description": "Dream add ten world. Less in say herself not.",
+    "previewFile": {
+      "id": "8dca2ca0-92db-44e2-9166-1890eb09e1e8",
+      "filename": "file_3878.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_3878.png"
+    },
+    "estimatedTime": "3 weeks",
+    "createdByUser": {
+      "id": "6824a728-9f12-4dae-a651-ec2bfbc87210",
+      "email": "test_8371fa18@example.com",
+      "lastName": "Bradley",
+      "firstName": "Brett",
+      "middleName": "Michelle"
+    }
+  }
+}

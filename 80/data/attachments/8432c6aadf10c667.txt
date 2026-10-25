@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTI1VDA0OjI4OjI3LjM1NDMzNiIsInVzZXJfaWQiOiI4NjE0ZDY3MC01OGNmLTQwYjItYjgzMC1mOTVkMjM0OGFlOTIifQ.qKouWexcxVT1N8kfw-w_8tlKVfmhXq5vdSljMRxkC4Q' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Between kid speech to against might.","maxScore":67,"minScore":3,"description":"Ball system food stop laugh.","estimatedTime":"2 weeks","previewFileId":"b6651c25-2f80-4d47-b3cc-09f891027e5a","createdByUserId":"8614d670-58cf-40b2-b830-f95d2348ae92"}'

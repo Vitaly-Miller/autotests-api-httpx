@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTI1VDA0OjI4OjE5LjkyNTQxNiIsInVzZXJfaWQiOiI1YjAyOGNmMy00YmNjLTRiY2QtYjcwMi0yODJkZTk4OGMzMDgifQ.pqIX30902E_2N7nBm29mtSslQ_org6X1d8OvVJC37rQ' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Growth house action knowledge.","maxScore":97,"minScore":23,"description":"Less space accept discussion threat throw create.","estimatedTime":"7 weeks","previewFileId":"d9871455-7f1c-494e-8375-3f10b76477a6","createdByUserId":"5b028cf3-4bcc-4bcd-b702-282de988c308"}'

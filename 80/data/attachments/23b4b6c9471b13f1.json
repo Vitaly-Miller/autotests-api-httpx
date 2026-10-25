@@ -1,0 +1,25 @@
+{
+  "courses": [
+    {
+      "id": "6507a090-31c3-4679-a766-caa3411e2f99",
+      "title": "Growth house action knowledge.",
+      "maxScore": 97,
+      "minScore": 23,
+      "description": "Less space accept discussion threat throw create.",
+      "previewFile": {
+        "id": "d9871455-7f1c-494e-8375-3f10b76477a6",
+        "filename": "file_6600.png",
+        "directory": "Uploaded",
+        "url": "http://localhost:8000/static/Uploaded/file_6600.png"
+      },
+      "estimatedTime": "7 weeks",
+      "createdByUser": {
+        "id": "5b028cf3-4bcc-4bcd-b702-282de988c308",
+        "email": "test_bd40e03c@example.com",
+        "lastName": "Hansen",
+        "firstName": "Ray",
+        "middleName": "Kimberly"
+      }
+    }
+  ]
+}

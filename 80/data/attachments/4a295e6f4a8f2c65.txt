@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/courses/36fbca46-1af2-4e16-a58e-062a6eb6356f \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTI1VDA0OjI4OjIwLjY0NDY2NCIsInVzZXJfaWQiOiIzNDkwOTIwMy1hYTgyLTQxZWYtOGJmZS0xODg1OTc4ZTQ5YTEifQ.uagF8994LTjwx0MUniU6UP3N4M4PygI26PTcOKbhx2s' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Sense blue mouth.","maxScore":73,"minScore":25,"description":"Voice rest organization why election.","estimatedTime":"9 weeks"}'

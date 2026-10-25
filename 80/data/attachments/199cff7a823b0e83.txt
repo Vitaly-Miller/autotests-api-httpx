@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTI1VDA0OjI4OjI4LjExMjI5MiIsInVzZXJfaWQiOiJlZDMzY2Y4ZC04NzdiLTQ4YjAtOTlmMy0xNTcyNDM5NDQzNTgifQ.ix52lB0jMc-zUt3vPJQBLy2K1beNakHODkSwJMAFd0g' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Fear include sport.","courseId":"6902b4d6-0c30-47c2-bde6-8d7bff054e01","maxScore":73,"minScore":7,"orderIndex":2796,"description":"Indicate water agency pick a edge.","estimatedTime":"7 weeks"}'

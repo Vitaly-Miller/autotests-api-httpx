@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTI1VDA0OjI4OjI1LjQ0MzExOCIsInVzZXJfaWQiOiI4ZTM3MDVhYy1jNTBkLTRkODctYjEyMy00ZTk0OTViNzI2NDUifQ.Zw_xf_LHS9udo9hwzzRoPfu7eRm9SEFwnlsq_vXJROU' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Energy five tax wonder grow meet.","maxScore":95,"minScore":26,"description":"Concern suffer site begin sister six rest.","estimatedTime":"8 weeks","previewFileId":"58bee0b9-e49c-427f-81cb-ac7098b368aa","createdByUserId":"8e3705ac-c50d-4d87-b123-4e9495b72645"}'

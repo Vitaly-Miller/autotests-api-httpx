@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "45e3835a-41f6-4bad-a271-b12066c1c809",
+    "title": "Physical owner decade church professor.",
+    "maxScore": 93,
+    "minScore": 5,
+    "description": "Congress until military degree live to.",
+    "previewFile": {
+      "id": "60a7f5fe-0a8d-4e98-9371-a70f906841a1",
+      "filename": "file_2245.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_2245.png"
+    },
+    "estimatedTime": "7 weeks",
+    "createdByUser": {
+      "id": "58b8dc0d-e401-4bb7-b54e-08774ad2eaa5",
+      "email": "test_c8ddbd60@example.com",
+      "lastName": "Melendez",
+      "firstName": "Keith",
+      "middleName": "Juan"
+    }
+  }
+}

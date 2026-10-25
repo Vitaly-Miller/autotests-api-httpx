@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTI1VDA0OjI4OjI0LjQ5MjQ0NCIsInVzZXJfaWQiOiI0NDFjNjFlNy1jZTBlLTQyMmQtODIyNy0wYTgxZmI3NTdjMjMifQ.SLVVfqViSp--RoxdzbKJ63wPKXRdi9ZLX8uM7_kkgJY' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Herself energy would PM.","maxScore":95,"minScore":16,"description":"Avoid do more sometimes.","estimatedTime":"3 weeks","previewFileId":"0b2e29e2-1b11-4667-8401-aeb07167fe28","createdByUserId":"441c61e7-ce0e-422d-8227-0a81fb757c23"}'

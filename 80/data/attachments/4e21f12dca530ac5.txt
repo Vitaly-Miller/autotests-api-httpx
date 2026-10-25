@@ -1,0 +1,18 @@
+INFO | HTTPX-Client: POST-request to http://localhost:8000/api/v1/users
+INFO | HTTPX-Client: Status code: 200-OK from http://localhost:8000/api/v1/users
+INFO | HTTPX-Client: POST-request to http://localhost:8000/api/v1/authentication/login
+INFO | HTTPX-Client: Status code: 200-OK from http://localhost:8000/api/v1/authentication/login
+INFO | HTTPX-Client: POST-request to http://localhost:8000/api/v1/authentication/login
+INFO | HTTPX-Client: Status code: 200-OK from http://localhost:8000/api/v1/authentication/login
+INFO | HTTPX-Client: POST-request to http://localhost:8000/api/v1/authentication/login
+INFO | HTTPX-Client: Status code: 200-OK from http://localhost:8000/api/v1/authentication/login
+INFO | HTTPX-Client: POST-request to http://localhost:8000/api/v1/files
+INFO | HTTPX-Client: Status code: 200-OK from http://localhost:8000/api/v1/files
+INFO | HTTPX-Client: POST-request to http://localhost:8000/api/v1/courses
+INFO | HTTPX-Client: Status code: 200-OK from http://localhost:8000/api/v1/courses
+INFO | HTTPX-Client: POST-request to http://localhost:8000/api/v1/exercises
+INFO | HTTPX-Client: Status code: 200-OK from http://localhost:8000/api/v1/exercises
+INFO | HTTPX-Client: GET-request to http://localhost:8000/api/v1/exercises?courseId=1e9e9510-c557-4452-98de-769d677eed9e
+INFO | HTTPX-Client: Status code: 200-OK from http://localhost:8000/api/v1/exercises?courseId=1e9e9510-c557-4452-98de-769d677eed9e
+INFO | - Base-assert: Status code: 200-OK
+INFO | - Base-assert: Request method: GET

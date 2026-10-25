@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTI1VDA0OjI4OjIxLjM2Njc5MCIsInVzZXJfaWQiOiIzZGQ4OThkYy1mOWYzLTRmZjItOWQ1Yy00Yjk2YTc0MjdlNjkifQ.dNjE_2zNnpDqPm3I3j20SBwHqWUzh4NGlZ0216u48k8' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Generation reality agree woman.","courseId":"393ff120-7700-41e0-b763-085537cffd47","maxScore":93,"minScore":25,"orderIndex":6876,"description":"Week visit owner development ready.","estimatedTime":"5 weeks"}'

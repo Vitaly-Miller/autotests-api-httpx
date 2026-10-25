@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "635d815d-2a6c-49ec-bb11-e01e4c05384d",
+    "title": "Ready add thought.",
+    "maxScore": 65,
+    "minScore": 23,
+    "description": "Hair security newspaper realize them term.",
+    "previewFile": {
+      "id": "f269d338-1940-4da9-afa1-4cf02fcd14e6",
+      "filename": "file_6419.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_6419.png"
+    },
+    "estimatedTime": "9 weeks",
+    "createdByUser": {
+      "id": "0e2118a0-663b-43bc-92f8-30c4649e64f7",
+      "email": "test_b4824906@example.com",
+      "lastName": "Hull",
+      "firstName": "Ryan",
+      "middleName": "Gregory"
+    }
+  }
+}

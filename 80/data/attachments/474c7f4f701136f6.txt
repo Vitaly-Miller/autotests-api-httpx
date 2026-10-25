@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTI1VDA0OjI4OjI1LjIxNzQzOCIsInVzZXJfaWQiOiI4ZTM3MDVhYy1jNTBkLTRkODctYjEyMy00ZTk0OTViNzI2NDUifQ.ot3iu12kqRg-3NGSrm5IVCI8w4jtJnjDX8zskM7qZWw' \
+  -H 'content-type: application/json' \
+  -d '{"title":"According agency ask their.","courseId":"f5704229-2103-4ac8-a8bf-fc9ef1e1cab6","maxScore":60,"minScore":20,"orderIndex":2944,"description":"Detail miss table black ball.","estimatedTime":"8 weeks"}'

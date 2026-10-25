@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "36fbca46-1af2-4e16-a58e-062a6eb6356f",
+    "title": "Sense blue mouth.",
+    "maxScore": 73,
+    "minScore": 25,
+    "description": "Voice rest organization why election.",
+    "previewFile": {
+      "id": "8abae57a-4a49-4ab6-ab31-f33c6466ad57",
+      "filename": "file_9459.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_9459.png"
+    },
+    "estimatedTime": "9 weeks",
+    "createdByUser": {
+      "id": "34909203-aa82-41ef-8bfe-1885978e49a1",
+      "email": "test_cab8aa80@example.com",
+      "lastName": "Bell",
+      "firstName": "Joseph",
+      "middleName": "Justin"
+    }
+  }
+}

@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/exercises/8ad08fba-4846-439c-9b43-c7c9e76359ce \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTI1VDA0OjI4OjI3LjEzMTc3OCIsInVzZXJfaWQiOiI4NjE0ZDY3MC01OGNmLTQwYjItYjgzMC1mOTVkMjM0OGFlOTIifQ.QKB3RNRqVrFi4gWTUnV6odM3ZsQjWdo5rFvmhTMp8DM' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Condition ball carry.","maxScore":64,"minScore":21,"orderIndex":2120,"description":"Modern need mean take.","estimatedTime":"7 weeks"}'

@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTI1VDA0OjI4OjIyLjMxNTE1OSIsInVzZXJfaWQiOiIwY2UxOTcxMS1lZTZlLTQ1ZDUtODNiOS1lMTgyYmM1ZjA3NTEifQ.-IXb0nL-9jyCCRnufdeeon9mKu5Ym04vj8qv_GepVZA' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Able economy section rock century choose.","courseId":"ae2414ab-d286-425c-b991-284dca809a91","maxScore":50,"minScore":17,"orderIndex":6336,"description":"Teach budget industry staff blood owner.","estimatedTime":"6 weeks"}'

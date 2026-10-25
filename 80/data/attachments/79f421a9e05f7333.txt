@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTI1VDA0OjI4OjE4LjQ4MzE3MiIsInVzZXJfaWQiOiIxMjU1ZDgwMy01YWQxLTQ4MzgtOTNhMi0xNzQ5ZDgwM2ZiYzgifQ.I79C1qBuFaLxTdmBJW6Qe6ZJf1ZHK55NXtHtgcNWqJE' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Six huge fund term force.","maxScore":70,"minScore":7,"description":"Fast people draw although step teacher wall film.","estimatedTime":"5 weeks","previewFileId":"bfdab0b1-c3b8-41f7-9cfb-cc57e3000559","createdByUserId":"1255d803-5ad1-4838-93a2-1749d803fbc8"}'

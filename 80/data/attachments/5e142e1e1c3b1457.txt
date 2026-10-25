@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTI1VDA0OjI4OjE3Ljc2NDg0MCIsInVzZXJfaWQiOiIwZTIxMThhMC02NjNiLTQzYmMtOTJmOC0zMGM0NjQ5ZTY0ZjcifQ.Op2exjL9bTf0RxnbwVz1lSs3t3PfTRw3wBgqaWht_Wo' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Ready add thought.","maxScore":65,"minScore":23,"description":"Hair security newspaper realize them term.","estimatedTime":"9 weeks","previewFileId":"f269d338-1940-4da9-afa1-4cf02fcd14e6","createdByUserId":"0e2118a0-663b-43bc-92f8-30c4649e64f7"}'

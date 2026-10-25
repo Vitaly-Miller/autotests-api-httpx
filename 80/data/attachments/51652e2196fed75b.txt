@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTI1VDA0OjI4OjI0LjI0MTIwNCIsInVzZXJfaWQiOiI0NDFjNjFlNy1jZTBlLTQyMmQtODIyNy0wYTgxZmI3NTdjMjMifQ.HFZ-qiUCoYk_ZxOlMAp1UQ9au6CWu3jdkChngp3sM9M' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Word Democrat minute rule.","courseId":"be0f4ef5-1708-419d-8fe9-827573eeeb95","maxScore":94,"minScore":29,"orderIndex":9600,"description":"Senior yet behavior.","estimatedTime":"9 weeks"}'

@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "6902b4d6-0c30-47c2-bde6-8d7bff054e01",
+    "title": "Represent drug lot.",
+    "maxScore": 74,
+    "minScore": 1,
+    "description": "Dog scene case yeah. Just paper scene leave.",
+    "previewFile": {
+      "id": "74c97855-eec9-43ed-a439-de59257633b9",
+      "filename": "file_8329.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_8329.png"
+    },
+    "estimatedTime": "9 weeks",
+    "createdByUser": {
+      "id": "ed33cf8d-877b-48b0-99f3-157243944358",
+      "email": "test_3a22b7ff@example.com",
+      "lastName": "Reynolds",
+      "firstName": "David",
+      "middleName": "Riley"
+    }
+  }
+}

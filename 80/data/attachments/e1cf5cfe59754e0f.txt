@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTI1VDA0OjI4OjE5LjE4OTkwNCIsInVzZXJfaWQiOiI1OGI4ZGMwZC1lNDAxLTRiYjctYjU0ZS0wODc3NGFkMmVhYTUifQ.pkMW2oTfZ7czN_sBx8_Lu0A7bllQ6gf9PN2NK505AyI' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Physical owner decade church professor.","maxScore":93,"minScore":5,"description":"Congress until military degree live to.","estimatedTime":"7 weeks","previewFileId":"60a7f5fe-0a8d-4e98-9371-a70f906841a1","createdByUserId":"58b8dc0d-e401-4bb7-b54e-08774ad2eaa5"}'

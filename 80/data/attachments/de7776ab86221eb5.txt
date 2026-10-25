@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTI1VDA0OjI4OjI4LjMzNjM1MyIsInVzZXJfaWQiOiJlZDMzY2Y4ZC04NzdiLTQ4YjAtOTlmMy0xNTcyNDM5NDQzNTgifQ.XL4LIRqz9L5LFXzeVjlxgr6VkRSrtkK_NbQ-WIFb2_k' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Represent drug lot.","maxScore":74,"minScore":1,"description":"Dog scene case yeah. Just paper scene leave.","estimatedTime":"9 weeks","previewFileId":"74c97855-eec9-43ed-a439-de59257633b9","createdByUserId":"ed33cf8d-877b-48b0-99f3-157243944358"}'

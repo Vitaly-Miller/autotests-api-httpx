@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "f5704229-2103-4ac8-a8bf-fc9ef1e1cab6",
+    "title": "Energy five tax wonder grow meet.",
+    "maxScore": 95,
+    "minScore": 26,
+    "description": "Concern suffer site begin sister six rest.",
+    "previewFile": {
+      "id": "58bee0b9-e49c-427f-81cb-ac7098b368aa",
+      "filename": "file_5525.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_5525.png"
+    },
+    "estimatedTime": "8 weeks",
+    "createdByUser": {
+      "id": "8e3705ac-c50d-4d87-b123-4e9495b72645",
+      "email": "test_707e14a2@example.com",
+      "lastName": "Charles",
+      "firstName": "Tyler",
+      "middleName": "Billy"
+    }
+  }
+}
