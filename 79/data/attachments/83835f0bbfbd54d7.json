@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "1fc03783-a4a2-48be-a09c-407933df1bd6",
+    "title": "Plant professor authority health management.",
+    "maxScore": 55,
+    "minScore": 26,
+    "description": "Leader according past. Son truth week different.",
+    "previewFile": {
+      "id": "e5ee80c5-01f9-4b29-a107-82cc1fc39d63",
+      "filename": "file_8047.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_8047.png"
+    },
+    "estimatedTime": "5 weeks",
+    "createdByUser": {
+      "id": "7c904f46-84c7-42a5-82dd-c8889b88a494",
+      "email": "test_60d9429f@example.com",
+      "lastName": "Fritz",
+      "firstName": "Mary",
+      "middleName": "Stephanie"
+    }
+  }
+}

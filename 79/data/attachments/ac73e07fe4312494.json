@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "d163eefc-0942-40a8-aabd-76ca4f03928b",
+    "title": "Want who right.",
+    "maxScore": 51,
+    "minScore": 12,
+    "description": "Happy vote do site remain single.",
+    "previewFile": {
+      "id": "09eb3ddd-f685-4766-944e-f2f90c01486c",
+      "filename": "file_3175.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_3175.png"
+    },
+    "estimatedTime": "5 weeks",
+    "createdByUser": {
+      "id": "52904367-8ef8-4eb2-a439-6d23aafb353a",
+      "email": "test_eeedde88@example.com",
+      "lastName": "Beltran",
+      "firstName": "Mathew",
+      "middleName": "Matthew"
+    }
+  }
+}

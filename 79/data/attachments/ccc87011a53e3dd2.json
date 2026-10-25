@@ -1,0 +1,25 @@
+{
+  "courses": [
+    {
+      "id": "a3cf8278-5950-4a8e-ba92-ef2606c828cc",
+      "title": "Effect certainly from change machine car.",
+      "maxScore": 67,
+      "minScore": 4,
+      "description": "Raise enough air talk real recognize.",
+      "previewFile": {
+        "id": "4863264c-28fa-4db3-8219-f866172ec9d6",
+        "filename": "file_7200.png",
+        "directory": "Uploaded",
+        "url": "http://localhost:8000/static/Uploaded/file_7200.png"
+      },
+      "estimatedTime": "4 weeks",
+      "createdByUser": {
+        "id": "a0445107-f6c5-4845-b013-50a6342b3b02",
+        "email": "test_0fbdbc7d@example.com",
+        "lastName": "Allen",
+        "firstName": "Kelsey",
+        "middleName": "Tony"
+      }
+    }
+  ]
+}

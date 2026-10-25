@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTI1VDAyOjQzOjM2LjQ3MjY1OSIsInVzZXJfaWQiOiJhMDQ0NTEwNy1mNmM1LTQ4NDUtYjAxMy01MGE2MzQyYjNiMDIifQ.sVkotCvZnhnl-8PenvLbeLNLKslty7QvI9b3NEDZ88I' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Effect certainly from change machine car.","maxScore":67,"minScore":4,"description":"Raise enough air talk real recognize.","estimatedTime":"4 weeks","previewFileId":"4863264c-28fa-4db3-8219-f866172ec9d6","createdByUserId":"a0445107-f6c5-4845-b013-50a6342b3b02"}'

@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "4eaa2ffa-b67d-49ac-b917-813d3716034a",
+    "title": "Why better tend budget.",
+    "maxScore": 91,
+    "minScore": 7,
+    "description": "Represent do year value. Wait truth old church.",
+    "previewFile": {
+      "id": "38a217e8-a5a5-4fbd-803c-1caa33944cee",
+      "filename": "file_9419.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_9419.png"
+    },
+    "estimatedTime": "7 weeks",
+    "createdByUser": {
+      "id": "02685662-0e94-4642-9479-00733ba595a1",
+      "email": "test_5cbae211@example.com",
+      "lastName": "Andrews",
+      "firstName": "Lisa",
+      "middleName": "Cindy"
+    }
+  }
+}

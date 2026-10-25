@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "7440ab60-32ca-4d46-941e-085f4adbafab",
+    "title": "Wish author happen.",
+    "maxScore": 51,
+    "minScore": 18,
+    "description": "Picture third five do station fund.",
+    "previewFile": {
+      "id": "3799c661-5048-4300-b965-2f6a44abb094",
+      "filename": "file_7988.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_7988.png"
+    },
+    "estimatedTime": "6 weeks",
+    "createdByUser": {
+      "id": "8b125407-82fb-4590-893e-42acccb5c8c8",
+      "email": "test_cb9a4e19@example.com",
+      "lastName": "Garcia",
+      "firstName": "Veronica",
+      "middleName": "Jessica"
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "ce684fa3-4be5-472f-ade9-e1144dce1040",
+    "title": "Free friend various lay behavior.",
+    "maxScore": 68,
+    "minScore": 15,
+    "description": "Eye civil door similar local.",
+    "previewFile": {
+      "id": "9841a0b3-f322-4758-94b6-d2af28b0b172",
+      "filename": "file_1517.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_1517.png"
+    },
+    "estimatedTime": "7 weeks",
+    "createdByUser": {
+      "id": "44b58c38-72ad-4c0f-8f6c-d3992131719c",
+      "email": "test_acd64e38@example.com",
+      "lastName": "Patrick",
+      "firstName": "Paul",
+      "middleName": "Jason"
+    }
+  }
+}

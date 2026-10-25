@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTI1VDAyOjQzOjQ2LjUxMzE0NyIsInVzZXJfaWQiOiI1MjkwNDM2Ny04ZWY4LTRlYjItYTQzOS02ZDIzYWFmYjM1M2EifQ.HfiQqCQH_3fv7vvDdziCw2TOdAXf3dxUDtcHwjdfAVk' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Want who right.","maxScore":51,"minScore":12,"description":"Happy vote do site remain single.","estimatedTime":"5 weeks","previewFileId":"09eb3ddd-f685-4766-944e-f2f90c01486c","createdByUserId":"52904367-8ef8-4eb2-a439-6d23aafb353a"}'

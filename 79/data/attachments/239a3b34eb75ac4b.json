@@ -1,0 +1,25 @@
+{
+  "courses": [
+    {
+      "id": "b1d42e04-9e7a-47da-8af7-e7b35fc31ca7",
+      "title": "Stop car name him media share.",
+      "maxScore": 95,
+      "minScore": 13,
+      "description": "Per mission politics understand.",
+      "previewFile": {
+        "id": "6e7058bd-448b-4fa0-bd27-f0bcd817aa96",
+        "filename": "file_6982.png",
+        "directory": "Uploaded",
+        "url": "http://localhost:8000/static/Uploaded/file_6982.png"
+      },
+      "estimatedTime": "7 weeks",
+      "createdByUser": {
+        "id": "c15e2a5d-6c50-42f3-941e-ef21715a9a1e",
+        "email": "test_00936b1c@example.com",
+        "lastName": "Hansen",
+        "firstName": "Zachary",
+        "middleName": "Benjamin"
+      }
+    }
+  ]
+}

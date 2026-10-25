@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/courses/af1e4961-d654-4a4d-aff2-26cf6272caa0 \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTI1VDAyOjQzOjM3LjQ1NDQ2NyIsInVzZXJfaWQiOiJjYmM4MTg3MC0zZDE3LTQ5OGQtOWQ1ZS1jOWM2NmIzODNkNTYifQ.IBbPCA2u7i_5XRNOmiBo5SNeZFxhShiZoCqkZgSVyjY' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Interest how teacher report.","maxScore":98,"minScore":30,"description":"Event energy executive street such pattern.","estimatedTime":"2 weeks"}'

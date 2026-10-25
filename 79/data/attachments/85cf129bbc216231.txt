@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTI1VDAyOjQzOjM4Ljc1MTE3NyIsInVzZXJfaWQiOiI3YzkwNGY0Ni04NGM3LTQyYTUtODJkZC1jODg4OWI4OGE0OTQifQ.mTsdiob7RKuEQl15OKIXbxqbMg0-qm3sqzlSJNAnpk4' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Plant professor authority health management.","maxScore":55,"minScore":26,"description":"Leader according past. Son truth week different.","estimatedTime":"5 weeks","previewFileId":"e5ee80c5-01f9-4b29-a107-82cc1fc39d63","createdByUserId":"7c904f46-84c7-42a5-82dd-c8889b88a494"}'

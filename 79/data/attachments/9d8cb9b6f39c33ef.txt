@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTI1VDAyOjQzOjM4LjQ1MDMxOCIsInVzZXJfaWQiOiI3YzkwNGY0Ni04NGM3LTQyYTUtODJkZC1jODg4OWI4OGE0OTQifQ._wMSaJxrWwMjvBVW8uwsY9JzeJgJfdvZTC1o0Xpsg1A' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Purpose relate card push.","courseId":"1fc03783-a4a2-48be-a09c-407933df1bd6","maxScore":93,"minScore":20,"orderIndex":128,"description":"Stuff federal describe fish especially.","estimatedTime":"7 weeks"}'

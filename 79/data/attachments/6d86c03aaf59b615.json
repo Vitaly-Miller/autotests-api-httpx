@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "ee898025-239f-4367-b075-f8cfc8cb93ba",
+    "title": "Skill sport reason where.",
+    "maxScore": 57,
+    "minScore": 4,
+    "description": "Then require whose civil anything either.",
+    "previewFile": {
+      "id": "097d9077-253b-4a14-9054-5963114f5a23",
+      "filename": "file_2097.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_2097.png"
+    },
+    "estimatedTime": "6 weeks",
+    "createdByUser": {
+      "id": "8d2ba17e-422b-4543-a544-3380d3287a01",
+      "email": "test_7a35375f@example.com",
+      "lastName": "Rodgers",
+      "firstName": "Nathan",
+      "middleName": "Elizabeth"
+    }
+  }
+}

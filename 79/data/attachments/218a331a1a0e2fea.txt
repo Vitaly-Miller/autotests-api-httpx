@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTI1VDAyOjQzOjQ2LjIxMTUxNCIsInVzZXJfaWQiOiI1MjkwNDM2Ny04ZWY4LTRlYjItYTQzOS02ZDIzYWFmYjM1M2EifQ.0AeZDaIwh8FPtsVoloKwO9joNlE2Bxv98JTD01hIqOU' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Three drop green week far mean newspaper.","courseId":"d163eefc-0942-40a8-aabd-76ca4f03928b","maxScore":63,"minScore":30,"orderIndex":6701,"description":"Trip behind idea tell nation newspaper her week.","estimatedTime":"5 weeks"}'

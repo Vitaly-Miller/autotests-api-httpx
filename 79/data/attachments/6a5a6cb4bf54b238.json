@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "74386df1-5e25-49ea-8499-971ca85bedfd",
+    "title": "Like agreement case.",
+    "maxScore": 61,
+    "minScore": 23,
+    "description": "Specific need serious.",
+    "previewFile": {
+      "id": "aea2f26b-984b-4744-8897-b793becba0a5",
+      "filename": "file_9446.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_9446.png"
+    },
+    "estimatedTime": "7 weeks",
+    "createdByUser": {
+      "id": "f5b179be-4096-4346-8c90-5b4f12a1e044",
+      "email": "test_31289cea@example.com",
+      "lastName": "Hurley",
+      "firstName": "Gerald",
+      "middleName": "Paige"
+    }
+  }
+}

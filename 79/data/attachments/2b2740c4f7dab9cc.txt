@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTI1VDAyOjQzOjM5LjczOTE2MiIsInVzZXJfaWQiOiIyZTdlYTY4NS1iZWZmLTRmMjYtOTUyNy00YzUyNzJhOGNlMTgifQ.1PJXoPN53OJPhlsYyS9w-679Ad-FKAJlt3O3626HXvY' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Debate chance kind.","courseId":"2077f7b1-f59d-498d-a84d-1c646d5e1dfb","maxScore":84,"minScore":13,"orderIndex":8239,"description":"Off white bank move.","estimatedTime":"2 weeks"}'

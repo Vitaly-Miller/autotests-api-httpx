@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTI1VDAyOjQzOjM0LjUwNDQyOCIsInVzZXJfaWQiOiI1YzgxYmRhYi0xNDBlLTRjODMtYjQ2ZC05Y2E1MDU4OTQwMzcifQ.mf9AQHbL_PdBNkgPmB3CLGJfquFI7T2ausuMO_1pMeU' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Beat many major.","maxScore":77,"minScore":25,"description":"Upon group industry drive defense station local.","estimatedTime":"3 weeks","previewFileId":"852a9dbb-40db-49e5-89cc-63d73603a5fa","createdByUserId":"5c81bdab-140e-4c83-b46d-9ca505894037"}'

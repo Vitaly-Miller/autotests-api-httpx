@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "af1e4961-d654-4a4d-aff2-26cf6272caa0",
+    "title": "Interest how teacher report.",
+    "maxScore": 98,
+    "minScore": 30,
+    "description": "Event energy executive street such pattern.",
+    "previewFile": {
+      "id": "6314556e-e212-476c-be10-77d34c0a270b",
+      "filename": "file_7846.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_7846.png"
+    },
+    "estimatedTime": "2 weeks",
+    "createdByUser": {
+      "id": "cbc81870-3d17-498d-9d5e-c9c66b383d56",
+      "email": "test_68c26323@example.com",
+      "lastName": "Herman",
+      "firstName": "Rebecca",
+      "middleName": "Samuel"
+    }
+  }
+}

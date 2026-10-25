@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "a98e2f51-0e33-40c7-aef8-5fb5dc1100ce",
+    "title": "Beat many major.",
+    "maxScore": 77,
+    "minScore": 25,
+    "description": "Upon group industry drive defense station local.",
+    "previewFile": {
+      "id": "852a9dbb-40db-49e5-89cc-63d73603a5fa",
+      "filename": "file_6667.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_6667.png"
+    },
+    "estimatedTime": "3 weeks",
+    "createdByUser": {
+      "id": "5c81bdab-140e-4c83-b46d-9ca505894037",
+      "email": "test_6ef8affd@example.com",
+      "lastName": "Jennings",
+      "firstName": "Rebecca",
+      "middleName": "Evelyn"
+    }
+  }
+}

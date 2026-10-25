@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTI1VDAyOjQzOjQzLjkyNzQ2MCIsInVzZXJfaWQiOiIwMjY4NTY2Mi0wZTk0LTQ2NDItOTQ3OS0wMDczM2JhNTk1YTEifQ.psCOzF-0WXXw7RZIvCIFotH4ZJ07FHyNc6Y5Jt_Ev5Q' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Why better tend budget.","maxScore":91,"minScore":7,"description":"Represent do year value. Wait truth old church.","estimatedTime":"7 weeks","previewFileId":"38a217e8-a5a5-4fbd-803c-1caa33944cee","createdByUserId":"02685662-0e94-4642-9479-00733ba595a1"}'

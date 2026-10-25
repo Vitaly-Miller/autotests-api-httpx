@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "a759ab5b-022c-426e-adbd-bf09da5de88d",
+    "title": "Beautiful drive major firm effort hotel.",
+    "maxScore": 65,
+    "minScore": 9,
+    "description": "Lead start law collection.",
+    "previewFile": {
+      "id": "52c75db4-722b-45f8-8763-f98c2860faa4",
+      "filename": "file_1618.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_1618.png"
+    },
+    "estimatedTime": "6 weeks",
+    "createdByUser": {
+      "id": "c3047dc7-7168-4637-bea5-f20c2ce50e57",
+      "email": "test_1035936a@example.com",
+      "lastName": "Terry",
+      "firstName": "Timothy",
+      "middleName": "Daniel"
+    }
+  }
+}

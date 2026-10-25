@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTI1VDAyOjQzOjM3LjQ1NDQ2NyIsInVzZXJfaWQiOiJjYmM4MTg3MC0zZDE3LTQ5OGQtOWQ1ZS1jOWM2NmIzODNkNTYifQ.IBbPCA2u7i_5XRNOmiBo5SNeZFxhShiZoCqkZgSVyjY' \
+  -H 'content-type: application/json' \
+  -d '{"title":"More responsibility east article visit world.","maxScore":69,"minScore":13,"description":"Clear front notice free.","estimatedTime":"6 weeks","previewFileId":"6314556e-e212-476c-be10-77d34c0a270b","createdByUserId":"cbc81870-3d17-498d-9d5e-c9c66b383d56"}'

@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTI1VDAyOjQzOjQzLjYyNjIwNCIsInVzZXJfaWQiOiIwMjY4NTY2Mi0wZTk0LTQ2NDItOTQ3OS0wMDczM2JhNTk1YTEifQ.9E084Eld0LXbWn_lazXFR97GulSW7LJKe4fM2Y4vQR4' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Easy be alone born think.","courseId":"4eaa2ffa-b67d-49ac-b917-813d3716034a","maxScore":98,"minScore":19,"orderIndex":80,"description":"Control believe you.","estimatedTime":"3 weeks"}'

@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTI1VDAyOjQzOjQ3LjUxMzQxMCIsInVzZXJfaWQiOiI4ZDJiYTE3ZS00MjJiLTQ1NDMtYTU0NC0zMzgwZDMyODdhMDEifQ.rqe2buzm1J8dR8lsMqTfvipGkiOYQ-llCuE0hIy2rao' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Boy describe country.","courseId":"ee898025-239f-4367-b075-f8cfc8cb93ba","maxScore":52,"minScore":12,"orderIndex":6367,"description":"Magazine if always remain finish body wish.","estimatedTime":"6 weeks"}'

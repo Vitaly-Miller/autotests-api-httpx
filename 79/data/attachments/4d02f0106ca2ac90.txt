@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/exercises/e96a4ab3-616d-4013-94d3-e6bc532802e6 \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTI1VDAyOjQzOjQ2LjIxMTUxNCIsInVzZXJfaWQiOiI1MjkwNDM2Ny04ZWY4LTRlYjItYTQzOS02ZDIzYWFmYjM1M2EifQ.0AeZDaIwh8FPtsVoloKwO9joNlE2Bxv98JTD01hIqOU' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Door trade better who conference alone.","maxScore":71,"minScore":8,"orderIndex":7115,"description":"Information public push nor professional common.","estimatedTime":"4 weeks"}'

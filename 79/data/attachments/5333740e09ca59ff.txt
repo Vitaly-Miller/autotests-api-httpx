@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/exercises/0245afc3-e1a1-474a-89ef-aff99c0dd409 \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTI1VDAyOjQzOjQ3LjUxMzQxMCIsInVzZXJfaWQiOiI4ZDJiYTE3ZS00MjJiLTQ1NDMtYTU0NC0zMzgwZDMyODdhMDEifQ.rqe2buzm1J8dR8lsMqTfvipGkiOYQ-llCuE0hIy2rao' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Few send girl deal.","maxScore":85,"minScore":27,"orderIndex":5667,"description":"Fish worker Democrat development maintain.","estimatedTime":"6 weeks"}'

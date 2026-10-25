@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTI1VDAyOjQzOjQxLjAxNTgzMSIsInVzZXJfaWQiOiJmNWIxNzliZS00MDk2LTQzNDYtOGM5MC01YjRmMTJhMWUwNDQifQ.J0fjpWXsDp2umsmcl4DuTEKw7vjd83GM7x-C1DTJTB0' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Would almost deal toward boy.","courseId":"74386df1-5e25-49ea-8499-971ca85bedfd","maxScore":65,"minScore":29,"orderIndex":5098,"description":"Fine serve standard remain.","estimatedTime":"4 weeks"}'

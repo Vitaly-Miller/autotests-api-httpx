@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTI1VDAyOjQzOjQwLjA0MDEyMiIsInVzZXJfaWQiOiIyZTdlYTY4NS1iZWZmLTRmMjYtOTUyNy00YzUyNzJhOGNlMTgifQ.GRGLbX-_gVVXxOm60D0fPHsV4w_VqMEmiKsOUDdZCQk' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Business sister which reveal east base.","maxScore":55,"minScore":18,"description":"Actually move sense condition low commercial.","estimatedTime":"9 weeks","previewFileId":"532d29d1-7a1f-43e4-8fd5-2f9bbbada1aa","createdByUserId":"2e7ea685-beff-4f26-9527-4c5272a8ce18"}'
