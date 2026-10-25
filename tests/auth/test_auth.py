@@ -16,44 +16,44 @@ from tools.tool import Tool
 
 #=======================================================================================================================
 # Class annotations
-@pytest.mark.auth                                         # ┐
-@pytest.mark.smoke                                        # │ Pytest Marks
-@pytest.mark.regression                                   # ┘
-@allure.tag(Tag.REGRESSION, Tag.SMOKE, Tag.AUTH)    # ] Allure Tags
-@allure.epic(Epic.API)                                    # ┐
-@allure.feature(Feature.AUTH)                             # │ Allure Behaviors
-@allure.story(Story.LOGIN)                                # ┘
-@allure.severity(allure.severity_level.BLOCKER)           # ] Allure Severity
+@pytest.mark.auth
+@pytest.mark.smoke
+@pytest.mark.regression
+@allure.tag(Tag.REGRESSION, Tag.SMOKE, Tag.AUTH)
+@allure.epic(Epic.API)
+@allure.feature(Feature.AUTH)
+@allure.story(Story.LOGIN)
+@allure.severity(allure.severity_level.BLOCKER)
 #-----------------------------------------------------------------------------------------------------------------------
 class TestAuth:
-    @allure.title('Authentication (v.1 - Via full-cycle API fixture)')     # Allure step Title
+    @allure.title('Authentication (v.1 - Via full-cycle API fixture)')
     def test_auth_1(self, auth_api: httpx.Response):
-        response = auth_api                                                      # Save API fixture response (httpx.Response)
-        response_model = AuthResponseSchema.model_validate_json(response.text)   # httpx.Response —> Pydantic-model (deserialize)
+        response = auth_api
+        response_model = AuthResponseSchema.model_validate_json(response.text)
 
         # Assertions
-        assert_status_code(response.status_code, HTTPStatus.OK)           # Status code: 200
-        assert_request_method(response.request.method, HTTPMethod.POST)   # Method: POST
-        assert_auth_response_non_empty(response_model)                                   # Response data is non-empty
-        assert_token(response_model)                                                     # Token validation
-        validate_json_schema(response, AuthResponseSchema)               # JSON schema validation
+        assert_status_code(response.status_code, HTTPStatus.OK)
+        assert_request_method(response.request.method, HTTPMethod.POST)
+        assert_auth_response_non_empty(response_model)
+        assert_token(response_model)
+        validate_json_schema(response, AuthResponseSchema)
 
 
-    @allure.title('Authentication (v.2 - Via fixtures: create_user + auth_client)')    # Allure step Title
+    @allure.title('Authentication (v.2 - Via fixtures: create_user + auth_client)')
     def test_auth_2(self, create_user: CreateUserSchema, auth_client: AuthClient):
-        auth_data = AuthDataSchema(                            # Pydantic-model with fake-data (Email and Password),...
-            email=create_user.email,                           # ... replace default with —> real value from fixture
-            password=create_user.password                      # ... replace default with —> real value from fixture
+        auth_data = AuthDataSchema(
+            email=create_user.email,
+            password=create_user.password
         )
-        response = auth_client.login_api(auth_data)                              # ▶ Request via API method
-        response_model = AuthResponseSchema.model_validate_json(response.text)   # httpx.Response —> Pydantic-model (deserialize)
+        response = auth_client.login_api(auth_data)
+        response_model = AuthResponseSchema.model_validate_json(response.text)
 
         # Assertions
-        assert_status_code(response.status_code, HTTPStatus.OK)           # Status code: 200
-        assert_request_method(response.request.method, HTTPMethod.POST)   # Method: POST
-        assert_auth_response_non_empty(response_model)                                   # Response data is non-empty
-        assert_token(response_model)                                                     # Token validation
-        validate_json_schema(response, AuthResponseSchema)               # JSON schema validation
+        assert_status_code(response.status_code, HTTPStatus.OK)
+        assert_request_method(response.request.method, HTTPMethod.POST)
+        assert_auth_response_non_empty(response_model)
+        assert_token(response_model)
+        validate_json_schema(response, AuthResponseSchema)
 
 
 #=======================================================================================================================

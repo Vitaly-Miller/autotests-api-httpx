@@ -20,49 +20,49 @@ from tools.tool import Tool
 
 #=======================================================================================================================
 # Class annotations
-@pytest.mark.exercises                                        # ┐ Pytest Marks
-@pytest.mark.regression                                       # ┘
-@allure.tag(Tag.REGRESSION, Tag.EXERCISES, Tag.CREATE)  # ] Allure Tags
-@allure.epic(Epic.API)                                        # ┐
-@allure.feature(Feature.EXERCISES)                            # │ Allure Behaviors
-@allure.story(Story.CREATE)                                   # ┘
-@allure.severity(allure.severity_level.NORMAL)                # ] Allure Severity
+@pytest.mark.exercises
+@pytest.mark.regression
+@allure.tag(Tag.REGRESSION, Tag.EXERCISES, Tag.CREATE)
+@allure.epic(Epic.API)
+@allure.feature(Feature.EXERCISES)
+@allure.story(Story.CREATE)
+@allure.severity(allure.severity_level.NORMAL)
 #-----------------------------------------------------------------------------------------------------------------------
 class TestCreateExercise:
     @allure.title('Create Exercise (v.1 - Via full-cycle API fixture)')
-    def test_create_exercise_1(self, create_exercise_api: httpx.Response):     # Via full-cycle API fixture        ┐
-        response = create_exercise_api                                         # Save API fixture response            ┘
-        response_model = CreateExerciseResponseSchema.model_validate_json(response.text)           # httpx.Response —> Pydantic-model (deserialize)
-        request_model = CreateExerciseRequestSchema.model_validate_json(response.request.content)  # httpx.Response —> Pydantic-model (deserialize)
+    def test_create_exercise_1(self, create_exercise_api: httpx.Response):
+        response = create_exercise_api
+        response_model = CreateExerciseResponseSchema.model_validate_json(response.text)
+        request_model = CreateExerciseRequestSchema.model_validate_json(response.request.content)
 
         # Assertions
-        assert_status_code(response.status_code, http.HTTPStatus.OK)          # Status Code: 200
-        assert_request_method(response.request.method, http.HTTPMethod.POST)  # Method: POST
-        assert_create_exercise_response_non_empty(response_model)                            # Response data is non-empty
-        assert_create_exercise_response(response_model, request_model)      # Response data = Request data
-        assert_exercise_id(response_model)                                                   # Exercise-ID validation
-        validate_json_schema(response, CreateExerciseResponseSchema)         # JSON Schema validation
+        assert_status_code(response.status_code, http.HTTPStatus.OK)
+        assert_request_method(response.request.method, http.HTTPMethod.POST)
+        assert_create_exercise_response_non_empty(response_model)
+        assert_create_exercise_response(response_model, request_model)
+        assert_exercise_id(response_model)
+        validate_json_schema(response, CreateExerciseResponseSchema)
 
 
     @allure.title('Create Exercise (v.2 - Via fixtures: exercises_client, create_course)')
-    def test_create_exercise_2(                                       #                                                  ─┐
-            self,                                                     #                                                   │
-            exercises_client: ExercisesClient,                        # Fixture providing an instance of ExercisesClient()   │
-            create_course: CreateCourseSchema                         # Pydantic fixture creating a course                  │
-    ):                                                                #                                                   │
-        create_exercise_data = CreateExerciseRequestSchema(           # Pydantic-model c fake-data                        │
-            courseId=create_course.course_id                          # Fake data —> real value from fixture        │
-        )                                                             #                                                  ─┘
-        response = exercises_client.create_exercise_api(create_exercise_data)             # ▶ Request via API method
-        response_model = CreateExerciseResponseSchema.model_validate_json(response.text)  # httpx.Response —> Pydantic-model (deserialize)
+    def test_create_exercise_2(
+            self,
+            exercises_client: ExercisesClient,
+            create_course: CreateCourseSchema
+    ):
+        create_exercise_data = CreateExerciseRequestSchema(
+            courseId=create_course.course_id
+        )
+        response = exercises_client.create_exercise_api(create_exercise_data)
+        response_model = CreateExerciseResponseSchema.model_validate_json(response.text)
 
         # Assertions
-        assert_status_code(response.status_code, http.HTTPStatus.OK)           # Status Code: 200
-        assert_request_method(response.request.method, http.HTTPMethod.POST)   # Method: POST
-        assert_create_exercise_response_non_empty(response_model)                             # Response data is non-empty
-        assert_create_exercise_response(response_model, create_exercise_data) # Response data = Request data
-        assert_exercise_id(response_model)                                                    # Exercise-ID validation
-        validate_json_schema(response, CreateExerciseResponseSchema)           # JSON Schema validation
+        assert_status_code(response.status_code, http.HTTPStatus.OK)
+        assert_request_method(response.request.method, http.HTTPMethod.POST)
+        assert_create_exercise_response_non_empty(response_model)
+        assert_create_exercise_response(response_model, create_exercise_data)
+        assert_exercise_id(response_model)
+        validate_json_schema(response, CreateExerciseResponseSchema)
 
 
 #=======================================================================================================================

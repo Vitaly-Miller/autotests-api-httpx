@@ -14,29 +14,29 @@ from tools.tool import Tool
 
 #=======================================================================================================================
 # Class annotations
-@pytest.mark.courses                                          # ┐ Pytest Marks
-@pytest.mark.regression                                       # ┘
-@allure.tag(Tag.REGRESSION, Tag.COURSES, Tag.UPDATE)    # ] Allure Tags
-@allure.epic(Epic.API)                                        # ┐
-@allure.feature(Feature.COURSES)                              # │ Allure Behaviors
-@allure.story(Story.UPDATE)                                   # ┘
-@allure.severity(allure.severity_level.NORMAL)                # ] Allure Severity
+@pytest.mark.courses
+@pytest.mark.regression
+@allure.tag(Tag.REGRESSION, Tag.COURSES, Tag.UPDATE)
+@allure.epic(Epic.API)
+@allure.feature(Feature.COURSES)
+@allure.story(Story.UPDATE)
+@allure.severity(allure.severity_level.NORMAL)
 #-----------------------------------------------------------------------------------------------------------------------
 class TestUpdateCourse:
-    @allure.title('Update Course')                            # Allure step Title
+    @allure.title('Update Course')
     def test_update_course(self, courses_client: CoursesClient, create_course: CreateCourseSchema):
-        new_course_data = UpdateCourseRequestSchema()         # Pydantic-model with fake-data (Update ALL)
-        response = courses_client.update_course_api(          # ▶ Request via API method
-            create_course.response.course.id,        # ID of the course to update
-            new_course_data                    # Data to update
+        new_course_data = UpdateCourseRequestSchema()
+        response = courses_client.update_course_api(
+            create_course.response.course.id,
+            new_course_data
         )
-        response_model = UpdateCourseResponseSchema.model_validate_json(response.text)  # httpx.Response —> Pydantic-model (deserialize)
+        response_model = UpdateCourseResponseSchema.model_validate_json(response.text)
 
         # Assertions
-        assert_status_code(response.status_code, http.HTTPStatus.OK)          # Status code: 200
-        assert_request_method(response.request.method, http.HTTPMethod.PATCH) # Method: PATCH
-        assert_update_course_response(response_model, new_course_data)       # Response data = Request data
-        validate_json_schema(response, UpdateCourseResponseSchema)           # JSON schema validation
+        assert_status_code(response.status_code, http.HTTPStatus.OK)
+        assert_request_method(response.request.method, http.HTTPMethod.PATCH)
+        assert_update_course_response(response_model, new_course_data)
+        validate_json_schema(response, UpdateCourseResponseSchema)
 
 
 #=======================================================================================================================

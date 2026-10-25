@@ -11,22 +11,22 @@ from tools.tool import Tool
 
 #=======================================================================================================================
 # Class annotations
-@pytest.mark.exercises                                        # ┐ Pytest Marks
-@pytest.mark.regression                                       # ┘
-@allure.tag(Tag.REGRESSION, Tag.EXERCISES, Tag.GET)     # ] Allure Tags
-@allure.epic(Epic.API)                                        # ┐
-@allure.feature(Feature.EXERCISES)                            # │ Allure Behaviors
-@allure.story(Story.GET)                                      # ┘
-@allure.severity(allure.severity_level.NORMAL)                # ] Allure Severity
+@pytest.mark.exercises
+@pytest.mark.regression
+@allure.tag(Tag.REGRESSION, Tag.EXERCISES, Tag.GET)
+@allure.epic(Epic.API)
+@allure.feature(Feature.EXERCISES)
+@allure.story(Story.GET)
+@allure.severity(allure.severity_level.NORMAL)
 #-----------------------------------------------------------------------------------------------------------------------
 class TestGetExercises:
     @allure.title('Get Exercises')
     def test_get_exercises(self, create_exercise_api: httpx.Response, get_exercises_api: httpx.Response):
-        response = get_exercises_api                                                     # Save API fixture response
+        response = get_exercises_api
 
         # Assertions
-        assert_status_code(response.status_code, http.HTTPStatus.OK)          # Status code: 200
-        assert_request_method(response.request.method, http.HTTPMethod.GET)   # Method: GET
+        assert_status_code(response.status_code, http.HTTPStatus.OK)
+        assert_request_method(response.request.method, http.HTTPMethod.GET)
 
 
 #=======================================================================================================================

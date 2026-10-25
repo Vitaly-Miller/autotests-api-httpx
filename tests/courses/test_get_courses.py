@@ -16,48 +16,48 @@ from tools.tool import Tool
 
 #=======================================================================================================================
 # Class annotations
-@pytest.mark.courses                                          # ┐ Pytest Marks
-@pytest.mark.regression                                       # ┘
-@allure.tag(Tag.REGRESSION, Tag.COURSES, Tag.GET)       # ] Allure Tags
-@allure.epic(Epic.API)                                        # ┐
-@allure.feature(Feature.COURSES)                              # │ Allure Behaviors
-@allure.story(Story.GET)                                      # ┘
-@allure.severity(allure.severity_level.NORMAL)                # ] Allure Severity
+@pytest.mark.courses
+@pytest.mark.regression
+@allure.tag(Tag.REGRESSION, Tag.COURSES, Tag.GET)
+@allure.epic(Epic.API)
+@allure.feature(Feature.COURSES)
+@allure.story(Story.GET)
+@allure.severity(allure.severity_level.NORMAL)
 #-----------------------------------------------------------------------------------------------------------------------
 class TestGetCourses:
     @allure.title('Get Courses (v.1 - Via full-cycle fixture)')
     def test_get_courses_1(self, create_course: CreateCourseSchema, get_courses_api: httpx.Response):
-        response = get_courses_api                                                    # Save API fixture response
-        response_model = GetCoursesResponseSchema.model_validate_json(response.text)  # httpx.Response —> Pydantic-model (deserialize)
+        response = get_courses_api
+        response_model = GetCoursesResponseSchema.model_validate_json(response.text)
 
         # Assertions
-        assert_status_code(response.status_code, http.HTTPStatus.OK)         # Status Code: 200
-        assert_request_method(response.request.method, http.HTTPMethod.GET)  # Method: GET
+        assert_status_code(response.status_code, http.HTTPStatus.OK)
+        assert_request_method(response.request.method, http.HTTPMethod.GET)
         assert_get_courses_responses(
             response_model,
-            [create_course.response])                           # Course list matches created courses
-        validate_json_schema(response, GetCoursesResponseSchema)     # JSON Schema validation
+            [create_course.response])
+        validate_json_schema(response, GetCoursesResponseSchema)
 
 
     @allure.title('Get Courses (v.1 - Via Pydantic fixtures)')
     def test_get_courses_2(
             self,
             courses_client: CoursesClient,
-            create_user: CreateUserSchema,                                           # For User-ID
+            create_user: CreateUserSchema,
             create_course: CreateCourseSchema
     ):
-        user_id_query_model = GetCoursesQuerySchema(userId=create_user.user_id)       # Pydantic-model
-        response = courses_client.get_courses_api(user_id_query_model)                # ▶ Request via API method
-        response_model = GetCoursesResponseSchema.model_validate_json(response.text)  # httpx.Response —> Pydantic-model (deserialize)
+        user_id_query_model = GetCoursesQuerySchema(userId=create_user.user_id)
+        response = courses_client.get_courses_api(user_id_query_model)
+        response_model = GetCoursesResponseSchema.model_validate_json(response.text)
 
         # Assertions
-        assert_status_code(response.status_code, http.HTTPStatus.OK)         # Status Code: 200
-        assert_request_method(response.request.method, http.HTTPMethod.GET)  # Method: GET
+        assert_status_code(response.status_code, http.HTTPStatus.OK)
+        assert_request_method(response.request.method, http.HTTPMethod.GET)
         assert_get_courses_responses(
             response_model,
-            [create_course.response]                              # Course list matches created courses
+            [create_course.response]
         )
-        validate_json_schema(response, GetCoursesResponseSchema)       # JSON Schema validation
+        validate_json_schema(response, GetCoursesResponseSchema)
 
 
 #=======================================================================================================================
