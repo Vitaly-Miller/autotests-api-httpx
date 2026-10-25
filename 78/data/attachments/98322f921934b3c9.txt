@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTI1VDAyOjI3OjQ5LjgzNzUwNSIsInVzZXJfaWQiOiIxNDk3NGEyZC01ZDRhLTQzODctYjQzNy0xNWU2NTgxMmE4ZTAifQ.Nbrl7I7MX7LrYs5jI45yllTA-vKc00wr2U-9PQC10oY' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Those half station.","courseId":"724c26e4-f980-438c-9bfc-03ad49aa8402","maxScore":67,"minScore":24,"orderIndex":6517,"description":"Government manage land him apply help.","estimatedTime":"3 weeks"}'

@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTI1VDAyOjI3OjUxLjIzOTQxNCIsInVzZXJfaWQiOiIyMGYzMTZlMC0xNTdkLTQ3MTEtOWY3NC05ZjQyMmMwMzhlNGMifQ.gk1ELumlsg6OfrCU1IJq9zZ8eXOILQNmYm0FCD7Coyk' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Stand particularly phone.","maxScore":68,"minScore":5,"description":"Son station three upon shoulder eye page.","estimatedTime":"2 weeks","previewFileId":"a87add69-3412-4ca3-89ee-654b5cc68923","createdByUserId":"20f316e0-157d-4711-9f74-9f422c038e4c"}'

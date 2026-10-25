@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTI1VDAyOjI3OjQ0LjE0ODUyNyIsInVzZXJfaWQiOiI4MjY5Y2JkMy1mNjRlLTQ2YTUtOGIwNS0xNDU2NDFkN2M1ZWUifQ.ol3Yz0ye1KcBPhY4bheK5bdUbb7izMhcCiH1cmRSqr8' \
+  -H 'content-type: application/json' \
+  -d '{"title":"After economic enough past allow.","maxScore":84,"minScore":28,"description":"For song forget trip plant.","estimatedTime":"9 weeks","previewFileId":"2b973e84-7f79-439b-b94a-4bc5b4b7766a","createdByUserId":"8269cbd3-f64e-46a5-8b05-145641d7c5ee"}'

@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTI1VDAyOjI3OjQzLjI5MzAxOCIsInVzZXJfaWQiOiI2NDM0NWU1ZS03YzQyLTQ1YWEtOGQ4MS1hZjZmNTIyZmM3ZTkifQ.JBvS6Wa0D-JohQUSbW-R5s2-jpO5iHeoqbvvQVyd5QQ' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Stay practice commercial.","maxScore":61,"minScore":2,"description":"Animal sign agency war his range toward.","estimatedTime":"3 weeks","previewFileId":"372399ec-3ac1-4f4a-a20b-b9effd6e275e","createdByUserId":"64345e5e-7c42-45aa-8d81-af6f522fc7e9"}'

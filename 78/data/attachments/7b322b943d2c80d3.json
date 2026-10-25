@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "90eb34a3-139e-442f-91dc-1faee12688f7",
+    "title": "Stand particularly phone.",
+    "maxScore": 68,
+    "minScore": 5,
+    "description": "Son station three upon shoulder eye page.",
+    "previewFile": {
+      "id": "a87add69-3412-4ca3-89ee-654b5cc68923",
+      "filename": "file_6199.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_6199.png"
+    },
+    "estimatedTime": "2 weeks",
+    "createdByUser": {
+      "id": "20f316e0-157d-4711-9f74-9f422c038e4c",
+      "email": "test_1ca79f15@example.com",
+      "lastName": "Gutierrez",
+      "firstName": "Ashley",
+      "middleName": "Sarah"
+    }
+  }
+}

@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTI1VDAyOjI3OjUzLjIzOTgwMiIsInVzZXJfaWQiOiJlZTgyNGUzOS02OWM3LTQ2NDctYTZlMi0wNzk5M2RmNGZlOGIifQ.k1LsxvZh0EcOroORkIluq53Ykvv7nXAaYzDmEcOo1Rk' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Wide party education team such.","courseId":"39f9e07d-8672-4168-bfef-a2dbe75e571b","maxScore":72,"minScore":24,"orderIndex":7566,"description":"Allow perhaps quickly hour.","estimatedTime":"6 weeks"}'

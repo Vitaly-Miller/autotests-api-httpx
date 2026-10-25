@@ -1,0 +1,25 @@
+{
+  "courses": [
+    {
+      "id": "cff2d4f3-1dc5-447b-9203-aa247fc35c4f",
+      "title": "Value service kind.",
+      "maxScore": 95,
+      "minScore": 19,
+      "description": "Shake might official main week.",
+      "previewFile": {
+        "id": "d9b24b1d-3b6a-4ed6-b4b4-aa7a02372cf6",
+        "filename": "file_1786.png",
+        "directory": "Uploaded",
+        "url": "http://localhost:8000/static/Uploaded/file_1786.png"
+      },
+      "estimatedTime": "2 weeks",
+      "createdByUser": {
+        "id": "b37d0fe2-111c-4e92-bde9-56c303da58a1",
+        "email": "test_6a1afe44@example.com",
+        "lastName": "Ellis",
+        "firstName": "Mark",
+        "middleName": "Toni"
+      }
+    }
+  ]
+}

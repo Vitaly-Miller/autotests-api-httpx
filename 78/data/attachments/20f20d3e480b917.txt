@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTI1VDAyOjI3OjQ4Ljk4MTg0OCIsInVzZXJfaWQiOiJmMjkyZDc0YS1iMTQxLTQ4ZDYtYjcwMy1mM2YxNzNhMDBiMDEifQ.JQV4tSIq-J5Cia8WLLkCVy2fwLv65G5NCRGecGfubqU' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Accept air citizen.","maxScore":99,"minScore":7,"description":"Despite bill heavy bank begin cause discover.","estimatedTime":"8 weeks","previewFileId":"03a4a4ac-ffc6-49f4-ace5-3f501fb53226","createdByUserId":"f292d74a-b141-48d6-b703-f3f173a00b01"}'

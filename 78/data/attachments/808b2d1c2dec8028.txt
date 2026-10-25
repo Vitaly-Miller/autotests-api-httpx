@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTI1VDAyOjI3OjUzLjUwNjM4NCIsInVzZXJfaWQiOiJlZTgyNGUzOS02OWM3LTQ2NDctYTZlMi0wNzk5M2RmNGZlOGIifQ.7hI1l5i6TTAEjgceFoc_4vpJghPMLJOGVk4yfrzaU5s' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Challenge affect clearly father instead best.","maxScore":55,"minScore":10,"description":"Own run fill other medical just.","estimatedTime":"6 weeks","previewFileId":"652b6ec9-8472-4e04-a47e-255cc1690fde","createdByUserId":"ee824e39-69c7-4647-a6e2-07993df4fe8b"}'

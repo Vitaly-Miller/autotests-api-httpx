@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "f041c912-cd14-417a-9e99-27044736c8b7",
+    "title": "Particular surface worker major.",
+    "maxScore": 72,
+    "minScore": 2,
+    "description": "Project our daughter gas.",
+    "previewFile": {
+      "id": "e68321bb-e7c8-4b52-9dc3-f6d32e502fc8",
+      "filename": "file_8875.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_8875.png"
+    },
+    "estimatedTime": "7 weeks",
+    "createdByUser": {
+      "id": "86697ba2-7b8f-4219-a349-9cc3cb63c956",
+      "email": "test_7971881a@example.com",
+      "lastName": "Hoffman",
+      "firstName": "Gloria",
+      "middleName": "Robert"
+    }
+  }
+}

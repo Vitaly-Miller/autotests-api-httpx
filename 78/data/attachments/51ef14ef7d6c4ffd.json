@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "c3f3dc9e-faa3-42d0-b888-285b1d12d38e",
+    "title": "Source institution save grow how.",
+    "maxScore": 53,
+    "minScore": 10,
+    "description": "Official writer single.",
+    "previewFile": {
+      "id": "43e47d04-4492-4dfa-a327-ed6a46170f6f",
+      "filename": "file_8392.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_8392.png"
+    },
+    "estimatedTime": "5 weeks",
+    "createdByUser": {
+      "id": "bf52cc0e-2090-4ecc-8716-ea5557c6dcfb",
+      "email": "test_0a02c68d@example.com",
+      "lastName": "Taylor",
+      "firstName": "Steven",
+      "middleName": "Jimmy"
+    }
+  }
+}

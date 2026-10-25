@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTI1VDAyOjI3OjQ4LjcxNDgwNyIsInVzZXJfaWQiOiJmMjkyZDc0YS1iMTQxLTQ4ZDYtYjcwMy1mM2YxNzNhMDBiMDEifQ.NtekOzW9RIhWr-QBIRTW_AMqryC2IriyQbrrCPwM-b4' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Open no officer.","courseId":"5ed81adf-b3f3-4f19-b9b8-1207b03b8038","maxScore":94,"minScore":12,"orderIndex":8975,"description":"Organization police southern heavy.","estimatedTime":"4 weeks"}'

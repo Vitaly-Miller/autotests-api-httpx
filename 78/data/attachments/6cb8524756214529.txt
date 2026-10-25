@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/exercises/a4d046e1-3446-41f3-842a-4d276a6946de \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTI1VDAyOjI3OjU0LjM2MjM0MCIsInVzZXJfaWQiOiI4MjU1OTUyMC0yODIzLTQ3MjYtOWM0MS00MWUwYTZkNzJkM2QifQ.IU0zCREwTjU2XCj02ftUaJRu4oSwU8gJgMJUWly5hT4' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Heart pretty kind cup way.","maxScore":81,"minScore":23,"orderIndex":9561,"description":"Tree country whose talk on somebody.","estimatedTime":"9 weeks"}'

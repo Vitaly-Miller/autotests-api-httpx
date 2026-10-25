@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "724c26e4-f980-438c-9bfc-03ad49aa8402",
+    "title": "Entire bill television.",
+    "maxScore": 100,
+    "minScore": 20,
+    "description": "Find strong particularly let others able.",
+    "previewFile": {
+      "id": "6aa258bc-8337-411f-addf-db934dbd8e86",
+      "filename": "file_5434.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_5434.png"
+    },
+    "estimatedTime": "9 weeks",
+    "createdByUser": {
+      "id": "14974a2d-5d4a-4387-b437-15e65812a8e0",
+      "email": "test_93ace564@example.com",
+      "lastName": "Chen",
+      "firstName": "Thomas",
+      "middleName": "Stacy"
+    }
+  }
+}

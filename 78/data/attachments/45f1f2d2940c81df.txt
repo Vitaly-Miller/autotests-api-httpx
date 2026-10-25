@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTI1VDAyOjI3OjQ2LjcyNzg0OSIsInVzZXJfaWQiOiJiZjUyY2MwZS0yMDkwLTRlY2MtODcxNi1lYTU1NTdjNmRjZmIifQ.neXhtOp2PpihJUXtQi4wWaXcT4bp_QEhSNP41x_1l1g' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Place very like those modern edge follow.","maxScore":73,"minScore":20,"description":"Example central edge lot.","estimatedTime":"2 weeks","previewFileId":"43e47d04-4492-4dfa-a327-ed6a46170f6f","createdByUserId":"bf52cc0e-2090-4ecc-8716-ea5557c6dcfb"}'

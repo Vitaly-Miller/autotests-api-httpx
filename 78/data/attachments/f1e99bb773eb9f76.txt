@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTI1VDAyOjI3OjUyLjM2Mjg5MiIsInVzZXJfaWQiOiIxN2M4NDUyNi1kMDZhLTRlNDEtOTQ2YS00OWJlYzRjMGRmMWMifQ.Z3YtcgdoJ1NPolxE7zlwyqY_7RlYEnTJu9w2hhb6-_0' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Develop look discussion collection.","maxScore":59,"minScore":17,"description":"Its gas firm describe contain.","estimatedTime":"9 weeks","previewFileId":"d658d8e8-7a5f-450b-b9a0-eab57ad4f16a","createdByUserId":"17c84526-d06a-4e41-946a-49bec4c0df1c"}'

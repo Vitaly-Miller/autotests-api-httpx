@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/courses/c3f3dc9e-faa3-42d0-b888-285b1d12d38e \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTI1VDAyOjI3OjQ2LjcyNzg0OSIsInVzZXJfaWQiOiJiZjUyY2MwZS0yMDkwLTRlY2MtODcxNi1lYTU1NTdjNmRjZmIifQ.neXhtOp2PpihJUXtQi4wWaXcT4bp_QEhSNP41x_1l1g' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Source institution save grow how.","maxScore":53,"minScore":10,"description":"Official writer single.","estimatedTime":"5 weeks"}'

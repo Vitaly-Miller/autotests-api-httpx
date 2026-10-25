@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "ceb336ea-242f-4a36-a43f-1c577250804d",
+    "title": "Candidate drive look lot these include.",
+    "maxScore": 78,
+    "minScore": 11,
+    "description": "Author at day appear manager item.",
+    "previewFile": {
+      "id": "a6580ac6-8a23-43ed-9861-8519a6e3b485",
+      "filename": "file_4899.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_4899.png"
+    },
+    "estimatedTime": "8 weeks",
+    "createdByUser": {
+      "id": "a7c72793-c133-464f-be13-fda2767b4513",
+      "email": "test_397f42dc@example.com",
+      "lastName": "Pacheco",
+      "firstName": "Justin",
+      "middleName": "Katelyn"
+    }
+  }
+}

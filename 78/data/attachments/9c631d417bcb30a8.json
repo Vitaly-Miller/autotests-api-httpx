@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "83d2fa62-d453-4eb7-82a5-977c160008a1",
+    "title": "Stay practice commercial.",
+    "maxScore": 61,
+    "minScore": 2,
+    "description": "Animal sign agency war his range toward.",
+    "previewFile": {
+      "id": "372399ec-3ac1-4f4a-a20b-b9effd6e275e",
+      "filename": "file_2804.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_2804.png"
+    },
+    "estimatedTime": "3 weeks",
+    "createdByUser": {
+      "id": "64345e5e-7c42-45aa-8d81-af6f522fc7e9",
+      "email": "test_7f61eec4@example.com",
+      "lastName": "Mason",
+      "firstName": "Chloe",
+      "middleName": "Maria"
+    }
+  }
+}

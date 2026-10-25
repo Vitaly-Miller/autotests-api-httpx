@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "5ed81adf-b3f3-4f19-b9b8-1207b03b8038",
+    "title": "Accept air citizen.",
+    "maxScore": 99,
+    "minScore": 7,
+    "description": "Despite bill heavy bank begin cause discover.",
+    "previewFile": {
+      "id": "03a4a4ac-ffc6-49f4-ace5-3f501fb53226",
+      "filename": "file_9391.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_9391.png"
+    },
+    "estimatedTime": "8 weeks",
+    "createdByUser": {
+      "id": "f292d74a-b141-48d6-b703-f3f173a00b01",
+      "email": "test_735bc6d0@example.com",
+      "lastName": "Hancock",
+      "firstName": "Mary",
+      "middleName": "Melinda"
+    }
+  }
+}

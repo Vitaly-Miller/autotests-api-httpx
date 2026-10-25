@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "84abfe20-33b5-4374-b56b-6e74a57a63cc",
+    "title": "Fight sea suffer health economic sit.",
+    "maxScore": 64,
+    "minScore": 9,
+    "description": "Common doctor list oil hear senior.",
+    "previewFile": {
+      "id": "b38b777a-f168-4798-a107-6ffb052d6191",
+      "filename": "file_2642.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_2642.png"
+    },
+    "estimatedTime": "7 weeks",
+    "createdByUser": {
+      "id": "2334a545-46f5-43f9-aac2-e9f877abc9c7",
+      "email": "test_8288154f@example.com",
+      "lastName": "Lewis",
+      "firstName": "Alexandra",
+      "middleName": "Timothy"
+    }
+  }
+}

@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTI1VDAyOjI3OjQ3LjU4NjY2NSIsInVzZXJfaWQiOiI4NjY5N2JhMi03YjhmLTQyMTktYTM0OS05Y2MzY2I2M2M5NTYifQ.WqBzzmK4-82DISJaHeTSvocn3OkFaQiEmF5b0ajr0mQ' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Many nearly dinner hold.","courseId":"f041c912-cd14-417a-9e99-27044736c8b7","maxScore":81,"minScore":23,"orderIndex":9923,"description":"Animal morning total Democrat red.","estimatedTime":"9 weeks"}'

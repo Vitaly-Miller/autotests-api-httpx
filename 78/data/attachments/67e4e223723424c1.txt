@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTI1VDAyOjI3OjU1Ljc2OTUxMCIsInVzZXJfaWQiOiJhN2M3Mjc5My1jMTMzLTQ2NGYtYmUxMy1mZGEyNzY3YjQ1MTMifQ.4EXVmel2WLiLlO2bp8N7d6mG1yno-TH3zqsGxm6vH4k' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Candidate drive look lot these include.","maxScore":78,"minScore":11,"description":"Author at day appear manager item.","estimatedTime":"8 weeks","previewFileId":"a6580ac6-8a23-43ed-9861-8519a6e3b485","createdByUserId":"a7c72793-c133-464f-be13-fda2767b4513"}'

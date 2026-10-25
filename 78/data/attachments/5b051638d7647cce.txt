@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTI1VDAyOjI3OjQ1Ljg3MjMwMiIsInVzZXJfaWQiOiIyMzM0YTU0NS00NmY1LTQzZjktYWFjMi1lOWY4NzdhYmM5YzcifQ.HQDjbNK0-9v2s-4aQdKqwFVReqNpzwnse3IzMBW9xWA' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Fight sea suffer health economic sit.","maxScore":64,"minScore":9,"description":"Common doctor list oil hear senior.","estimatedTime":"7 weeks","previewFileId":"b38b777a-f168-4798-a107-6ffb052d6191","createdByUserId":"2334a545-46f5-43f9-aac2-e9f877abc9c7"}'

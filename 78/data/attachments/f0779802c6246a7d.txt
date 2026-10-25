@@ -1,0 +1,4 @@
+         Request URL: http://localhost:8000/api/v1/courses/c3f3dc9e-faa3-42d0-b888-285b1d12d38e
+      Request Method: PATCH
+Response Status Code: 200-OK
+        Response URL: http://localhost:8000/api/v1/courses/c3f3dc9e-faa3-42d0-b888-285b1d12d38e

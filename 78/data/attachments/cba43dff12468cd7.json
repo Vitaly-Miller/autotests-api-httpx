@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "56c330a0-0701-40b6-be51-b5df171d1a52",
+    "title": "After economic enough past allow.",
+    "maxScore": 84,
+    "minScore": 28,
+    "description": "For song forget trip plant.",
+    "previewFile": {
+      "id": "2b973e84-7f79-439b-b94a-4bc5b4b7766a",
+      "filename": "file_2452.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_2452.png"
+    },
+    "estimatedTime": "9 weeks",
+    "createdByUser": {
+      "id": "8269cbd3-f64e-46a5-8b05-145641d7c5ee",
+      "email": "test_9a4f50f2@example.com",
+      "lastName": "Jenkins",
+      "firstName": "Aaron",
+      "middleName": "Deborah"
+    }
+  }
+}

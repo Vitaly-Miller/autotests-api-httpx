@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTI1VDAyOjI3OjUwLjEwNDEyMCIsInVzZXJfaWQiOiIxNDk3NGEyZC01ZDRhLTQzODctYjQzNy0xNWU2NTgxMmE4ZTAifQ.Q5rftf59gHFwl3811NNvwVoli2WNqzUk6eNjXC68dhE' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Entire bill television.","maxScore":100,"minScore":20,"description":"Find strong particularly let others able.","estimatedTime":"9 weeks","previewFileId":"6aa258bc-8337-411f-addf-db934dbd8e86","createdByUserId":"14974a2d-5d4a-4387-b437-15e65812a8e0"}'
