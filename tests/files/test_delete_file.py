@@ -15,29 +15,29 @@ from tools.tool import Tool
 
 #=======================================================================================================================
 # Class annotations
-@pytest.mark.files                                         # ┐ Pytest Marks
-@pytest.mark.regression                                    # ┘
-@allure.tag(Tag.REGRESSION, Tag.FILES, Tag.DELETE)   # ] Allure Tags
-@allure.epic(Epic.API)                                     # ┐
-@allure.feature(Feature.FILES)                             # │ Allure Behaviors
-@allure.story(Story.DELETE)                                # ┘
-@allure.severity(allure.severity_level.NORMAL)             # ] Allure Severity
+@pytest.mark.files
+@pytest.mark.regression
+@allure.tag(Tag.REGRESSION, Tag.FILES, Tag.DELETE)
+@allure.epic(Epic.API)
+@allure.feature(Feature.FILES)
+@allure.story(Story.DELETE)
+@allure.severity(allure.severity_level.NORMAL)
 #-----------------------------------------------------------------------------------------------------------------------
 class TestDeleteFile:
     @allure.title('Delete File by ID')
     def test_delete_file(self, files_client: FilesClient, create_file: CreateFileSchema):
-        delete_file_response = files_client.delete_file_api(create_file.file_id)          # ▶ Request to delete File via API method
-        get_non_existent_file_response = files_client.get_file_api(create_file.file_id)   # ▶ Request to get non-existent File via API method
+        delete_file_response = files_client.delete_file_api(create_file.file_id)
+        get_non_existent_file_response = files_client.get_file_api(create_file.file_id)
 
         # Assertions (Delete File)
-        assert_status_code(delete_file_response.status_code, http.HTTPStatus.OK)             # Status code: 200
-        assert_request_method(delete_file_response.request.method, http.HTTPMethod.DELETE)   # Method: DELETE
+        assert_status_code(delete_file_response.status_code, http.HTTPStatus.OK)
+        assert_request_method(delete_file_response.request.method, http.HTTPMethod.DELETE)
 
         # Assertions (Get deleted File)
-        assert_status_code(get_non_existent_file_response.status_code, http.HTTPStatus.NOT_FOUND)  # Status code: 404
-        assert_request_method(get_non_existent_file_response.request.method, http.HTTPMethod.GET)  # Method: GET
-        assert_get_file_not_found_error_response(get_non_existent_file_response)                                  # Error message: "File not found"
-        validate_json_schema(get_non_existent_file_response, NotFoundErrorResponseSchema)         # JSON schema validation
+        assert_status_code(get_non_existent_file_response.status_code, http.HTTPStatus.NOT_FOUND)
+        assert_request_method(get_non_existent_file_response.request.method, http.HTTPMethod.GET)
+        assert_get_file_not_found_error_response(get_non_existent_file_response)
+        validate_json_schema(get_non_existent_file_response, NotFoundErrorResponseSchema)
 
 
 #=======================================================================================================================
