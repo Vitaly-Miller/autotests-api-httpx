@@ -1,6 +1,6 @@
 """
 Other Tools
-(⚠️WORK IN PROGRESS)
+(⚠️NOT USED)
 """
 import httpx
 import inspect
@@ -13,7 +13,6 @@ from tools.formatting.api_report import Report
 #=======================================================================================================================
 class Tool:
     #----------------------------------------------- Get Test name -----------------------------------------------------
-    # (⚠️NOT USED)
     @staticmethod
     def name_test():
         stack = inspect.stack()
@@ -22,8 +21,7 @@ class Tool:
         check = stack[1].function
         return f'👉[{file}] --> [{test}] -> [{check}]\n'
 
-    #-------------------------------------------- 💾Save & Read .env ---------------------------------------------------
-    # (⚠️NOT USED)
+    #---------------------------------------------- Save & Read .env ---------------------------------------------------
     # Save KEY-VALUE to .env
     @staticmethod
     def save_env(key, env_key: str):
@@ -32,14 +30,14 @@ class Tool:
         except Exception: # NOQA
             print(f'\t{ANSI.RED}⚠️ NOT Saved to .env ⚠️: {ANSI.ORANGE}"{key}"{ANSI.RESET}')
 
-    # (⚠️NOT USED)
+
     # Read VALUE from .env
     @staticmethod
     def read_env(env_key: str):
-        key_value = dotenv_values('.env')      # ← re-reads the file every time
+        key_value = dotenv_values('.env')
         return key_value.get(env_key)
 
-    # (⚠️NOT USED)
+
     # Saving USER DATA to .env (3-in-1)
     @staticmethod
     def save_user_data(response: httpx.Response):
@@ -49,13 +47,12 @@ class Tool:
         Tool.save_env(request_body['clientEmail'], 'CLIENT_EMAIL')
         Tool.save_env(response_body['accessToken'], 'ACCESS_TOKEN')
 
-    #----------------------------------------- ✨API REPORT in console -------------------------------------------------
+    #------------------------------------------- API REPORT in console -------------------------------------------------
     """ ⚠️USE IN THE FINAL -> Tool.api_report(response)"""
-
     @staticmethod
     def api_report(response: httpx.Response):
-        report = Report(response)       # Class instance (initialization)
-        report.api_title()              # Class methods:   (calls)
+        report = Report(response)
+        report.api_title()
         report.api_url()
         report.api_method()
         report.api_status_code()

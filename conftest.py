@@ -1,13 +1,10 @@
 """
 conftest.py (via Pytest Plugins)
-"""
-"""
 Uses pytest_plugins - all fixtures are in separate module files
 """
-from pathlib import Path            # for <Auto Plugins path>
+from pathlib import Path
 
 #================================================ Plugins path (Manual) ================================================
-# Manual path to plugins (fixture module files) ⚠ WITHOUT the .py extension
 pytest_plugins = (
     'fixtures.users_public_fixtures',     # ┐
     'fixtures.users_private_fixtures',    # │
@@ -19,11 +16,12 @@ pytest_plugins = (
     'fixtures.allure_fixtures'            # Allure's fixture
 )
 
-#================================================ Plugins path (✨Auto) ================================================
-# Automatically registers all module files from the fixtures/ folder (except __init__.py)
+#================================================ Plugins path (Auto) ==================================================
 # pytest_plugins = [
 #     f'fixtures.{file.stem}'
 #     for file in Path(__file__).parent.glob('fixtures/*.py')
 #     if file.name != '__init__.py'
 # ]
+
+
 #=======================================================================================================================

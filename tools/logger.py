@@ -13,21 +13,22 @@ def get_logger(name: str, console: bool = False) -> logging.Logger:
     :return: logging.Logger
     """
     # 1.Logger
-    logger = logging.getLogger(name)         # Create Logger and give it a dynamic name (from the function)
-    logger.setLevel(logging.DEBUG)           # Logging level (depth) - DEBUG and above (all)
+    logger = logging.getLogger(name)
+    logger.setLevel(logging.DEBUG)
 
     # 2.Handler
-    handler = logging.StreamHandler()        # Create Handler - StreamHandler
-    handler.setLevel(logging.DEBUG)          # Logging level (depth) - DEBUG and above (all)
+    handler = logging.StreamHandler()
+    handler.setLevel(logging.DEBUG)
 
-    # 3.Formatter                     time         name        level         message
-    formatter = logging.Formatter('%(asctime)s | %(name)s | %(levelname)s | %(message)s')   # Log formatting
+    # 3.Formatter
+    formatter = logging.Formatter('%(asctime)s | %(name)s | %(levelname)s | %(message)s')
 
     # 4.ADD
-    handler.setFormatter(formatter)          # Set Formatter on Handler
+    handler.setFormatter(formatter)
 
-    if console:                              # If console=True (default - False)
-        logger.addHandler(handler)           # Output log to console
+    # 5.Output log to console
+    if console:
+        logger.addHandler(handler)
 
     return logger
 

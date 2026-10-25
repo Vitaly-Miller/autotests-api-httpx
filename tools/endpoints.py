@@ -1,5 +1,5 @@
 """
-Endpoints + Enum
+Endpoints
 """
 from enum import StrEnum
 

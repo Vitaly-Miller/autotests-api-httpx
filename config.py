@@ -5,6 +5,7 @@ from pathlib import Path
 from pydantic import BaseModel, HttpUrl, FilePath
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
+
 #================================================== Settings Classes ===================================================
 #----------------------------------------------------- Sub-Classes -----------------------------------------------------
 class HTTPXClientConfig(BaseModel):
@@ -31,11 +32,11 @@ class TestDataConfig(BaseModel):
 
 #---------------------------------------------- MAIN Class + .env-config -----------------------------------------------
 class Settings(BaseSettings):
-    model_config = SettingsConfigDict(        # CONFIG of the environment variables file (.env)
-        extra='allow',                        # Allow extra variables (e.g. for CI) (optional)
-        env_file='.env',                      # - Environment variables file name (.env)
-        env_file_encoding='utf-8',            # - Environment variables file encoding (.env)
-        env_nested_delimiter='.'              # - Nested models delimiter in .env (ex. HTTPX_CLIENT.BASE_URL='...')
+    model_config = SettingsConfigDict(
+        extra='allow',
+        env_file='.env',
+        env_file_encoding='utf-8',
+        env_nested_delimiter='.'
     )
     # Nested Pydantic models:
     httpx_client: HTTPXClientConfig
@@ -47,15 +48,15 @@ class Settings(BaseSettings):
     # #-------------- Creates the folder if it does not exist --------------
     # @classmethod
     # def initialize(cls) -> "Settings":
-    #     allure_results_dir = DirectoryPath('allure-results')   # Folder name
-    #     allure_results_dir.mkdir(exist_ok=True)                # Creates the folder if it does not exist
+    #     allure_results_dir = DirectoryPath('allure-results')
+    #     allure_results_dir.mkdir(exist_ok=True)
     #
     #     return Settings(allure_results_dir=allure_results_dir)
 
 
-#--------------------------------------------------- Helper ✨ ---------------------------------------------------------
-#settings = Settings.initialize()      # Initialize Pydantic model class (Settings) via .initialize
-settings = Settings()                  # Initialize Pydantic model class (Settings)
+#------------------------------------------------------ Helper ---------------------------------------------------------
+#settings = Settings.initialize()
+settings = Settings()
 
 
 #=======================================================================================================================

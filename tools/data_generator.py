@@ -11,11 +11,6 @@ class Fake:
     .
     """
     def __init__(self, faker: Faker):
-        """
-        Initialization
-
-        :param faker: Instance of the Faker() class used to generate data.
-        """
         self.faker = faker
 
     #------------------------------------------------ User Credentials -------------------------------------------------
@@ -145,7 +140,7 @@ class Fake:
         return f'file_{number}.png'
 
 
-#========================================== Helper ✨(GLOBAL VARIABLE) =================================================
+#======================================================= Helper ========================================================
 # Initialize Fake() class instances with settings variants
 fake = Fake(faker=Faker())                     # en_US - Default
 fake_ru = Fake(faker=Faker(locale='ru_RU'))    # ru_RU
