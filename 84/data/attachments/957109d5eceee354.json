@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "743c4dfd-6ddf-4f54-8c9a-bce750df9b01",
+    "title": "Each feel that.",
+    "maxScore": 76,
+    "minScore": 1,
+    "description": "Black but agency. Necessary yeah occur year.",
+    "previewFile": {
+      "id": "42b9ffe3-99df-4b53-9a4b-a79758bcd9cc",
+      "filename": "file_2991.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_2991.png"
+    },
+    "estimatedTime": "4 weeks",
+    "createdByUser": {
+      "id": "18a8ef53-4f9e-48c2-ab3e-e96caf738588",
+      "email": "test_e2d31865@example.com",
+      "lastName": "Haynes",
+      "firstName": "Kayla",
+      "middleName": "Scott"
+    }
+  }
+}

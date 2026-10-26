@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTI2VDIxOjAyOjU3LjQ1ODI5NCIsInVzZXJfaWQiOiJhNzM2ZDc1NS04ZDJiLTRjYjItYmQ3OC0zOGVhY2FlMjBlMDAifQ.6MWkDhlwF7FRqoUq4vXbAOaY8rHi6fV3t_qMfpmzDf8' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Enter course PM occur own mean.","maxScore":77,"minScore":30,"description":"Daughter head present even.","estimatedTime":"8 weeks","previewFileId":"6b7b9dfe-324d-4a85-8f9a-ba41ff67b670","createdByUserId":"a736d755-8d2b-4cb2-bd78-38eacae20e00"}'

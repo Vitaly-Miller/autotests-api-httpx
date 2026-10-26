@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTI2VDIxOjAyOjU1Ljg2MjA4MSIsInVzZXJfaWQiOiI0ZTcwNzg2MS00YjQ5LTQ5MWQtYjBjMy0xNTQwNGUyNjI2NzcifQ.Yf3UZSel90_dGRIHwdlRGU79g5aExX7hRHxRrL7eiS4' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Finish of spend personal effort.","courseId":"c8c1ce78-a7d3-4eb5-94b2-5c1def571be8","maxScore":50,"minScore":5,"orderIndex":7401,"description":"Fight sound single hit response however general.","estimatedTime":"5 weeks"}'

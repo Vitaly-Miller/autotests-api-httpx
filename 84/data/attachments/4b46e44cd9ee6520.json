@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "7d3f8b56-8b81-4a32-96bb-21fb82812fcb",
+    "title": "Already even leg list focus situation.",
+    "maxScore": 63,
+    "minScore": 18,
+    "description": "Collection before national decision more.",
+    "previewFile": {
+      "id": "1a50aba8-305c-4ac7-8a9a-4ccdff6418b8",
+      "filename": "file_1078.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_1078.png"
+    },
+    "estimatedTime": "7 weeks",
+    "createdByUser": {
+      "id": "ed0c88f1-6a1e-474f-962e-3f221d03ad6d",
+      "email": "test_cda81cc9@example.com",
+      "lastName": "Burke",
+      "firstName": "Jennifer",
+      "middleName": "Michael"
+    }
+  }
+}

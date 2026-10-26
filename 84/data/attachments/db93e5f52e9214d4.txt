@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTI2VDIxOjAyOjQ1LjgzOTQ1NyIsInVzZXJfaWQiOiI5YzQ3OTgyYS1hYzI3LTRiN2UtOTgzYy03ZmY4YmVjYjQzZDAifQ.HC92RNPt97SZb_8AX2tUrut6F1vLR-GmebT4N5dG92Y' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Think inside create stuff become lose.","maxScore":81,"minScore":9,"description":"Direction per yes girl picture minute.","estimatedTime":"6 weeks","previewFileId":"361007d9-539f-4fa8-bbf5-2b43f2557373","createdByUserId":"9c47982a-ac27-4b7e-983c-7ff8becb43d0"}'

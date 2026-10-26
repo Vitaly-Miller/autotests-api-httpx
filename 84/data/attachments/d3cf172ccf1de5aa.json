@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "c8c1ce78-a7d3-4eb5-94b2-5c1def571be8",
+    "title": "Threat PM lot.",
+    "maxScore": 63,
+    "minScore": 10,
+    "description": "Box clearly reduce option full but.",
+    "previewFile": {
+      "id": "259751af-cb9b-4300-8d7d-4a9ffdef1107",
+      "filename": "file_6670.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_6670.png"
+    },
+    "estimatedTime": "8 weeks",
+    "createdByUser": {
+      "id": "4e707861-4b49-491d-b0c3-15404e262677",
+      "email": "test_bd0ed4da@example.com",
+      "lastName": "Barron",
+      "firstName": "Mary",
+      "middleName": "Jasmine"
+    }
+  }
+}

@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTI2VDIxOjAyOjU3LjE1NzUzOSIsInVzZXJfaWQiOiJhNzM2ZDc1NS04ZDJiLTRjYjItYmQ3OC0zOGVhY2FlMjBlMDAifQ.ZoRyJwG8z8weiMgF5V8dGA4l8igTj4HNQ3HMPu4FKt4' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Goal fact seven for.","courseId":"1639c140-f16f-476d-a97b-97ed8c0ad593","maxScore":69,"minScore":24,"orderIndex":8,"description":"Partner air these tend.","estimatedTime":"3 weeks"}'

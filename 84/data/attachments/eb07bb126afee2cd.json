@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "f46ebceb-7823-4999-8e9f-2e03493a6f4f",
+    "title": "Spring than research.",
+    "maxScore": 53,
+    "minScore": 7,
+    "description": "Wonder cause apply call listen leave.",
+    "previewFile": {
+      "id": "fd59f028-da0a-4c04-b74d-4d871dbf827e",
+      "filename": "file_8185.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_8185.png"
+    },
+    "estimatedTime": "7 weeks",
+    "createdByUser": {
+      "id": "49c608af-8814-4bf7-b593-21e593b77632",
+      "email": "test_10b6ad51@example.com",
+      "lastName": "Little",
+      "firstName": "Eddie",
+      "middleName": "Alvin"
+    }
+  }
+}

@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTI2VDIxOjAyOjUzLjI3OTEwNCIsInVzZXJfaWQiOiIyMTFiZmVhZS1jZjJkLTQ1NmUtYTM0OC1iOThlZDJhNzM3ZTUifQ.Rycy6rIam43YK56b6JONBGpHf8yuaPiVRlQDtlBnIPg' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Mrs fund entire.","courseId":"7eb91878-f4db-4762-82de-87886c1c6088","maxScore":61,"minScore":3,"orderIndex":8319,"description":"Past recently no win much magazine.","estimatedTime":"8 weeks"}'

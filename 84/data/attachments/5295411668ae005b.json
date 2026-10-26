@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "c6f5761d-0e52-447f-af88-b30383f5fe05",
+    "title": "Follow here subject animal.",
+    "maxScore": 51,
+    "minScore": 4,
+    "description": "Type cell speak item seem economic possible.",
+    "previewFile": {
+      "id": "85f54a62-02b4-48dd-ae1b-5bdc84091c70",
+      "filename": "file_6150.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_6150.png"
+    },
+    "estimatedTime": "9 weeks",
+    "createdByUser": {
+      "id": "5ab707c1-bcac-405b-9aa6-2113d55a74f8",
+      "email": "test_dcfb36b1@example.com",
+      "lastName": "Cohen",
+      "firstName": "Mike",
+      "middleName": "Miguel"
+    }
+  }
+}

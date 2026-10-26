@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/courses/743c4dfd-6ddf-4f54-8c9a-bce750df9b01 \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTI2VDIxOjAyOjQ5Ljc0Mjc2MCIsInVzZXJfaWQiOiIxOGE4ZWY1My00ZjllLTQ4YzItYWIzZS1lOTZjYWY3Mzg1ODgifQ.7GmFkzqH_XyDzTXLuKgrgZzfCx1OWbdHphTvx3DGvKI' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Each feel that.","maxScore":76,"minScore":1,"description":"Black but agency. Necessary yeah occur year.","estimatedTime":"4 weeks"}'

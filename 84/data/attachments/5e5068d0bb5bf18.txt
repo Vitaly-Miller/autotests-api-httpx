@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTI2VDIxOjAyOjU0Ljg4MTQ0MSIsInVzZXJfaWQiOiJlZDA3NzgxZi1mNjBmLTQzMDMtYTM5Mi1jZThlNDZkMjA5ZTAifQ.MLWUELMK_ZjOrAL_qz5NiDAYRhktLBcr3zbMFzo71Pw' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Recent it staff so.","maxScore":53,"minScore":9,"description":"Office teacher plan which send stay although.","estimatedTime":"6 weeks","previewFileId":"20f88bb7-e41f-499e-8092-2dce3068b45b","createdByUserId":"ed07781f-f60f-4303-a392-ce8e46d209e0"}'

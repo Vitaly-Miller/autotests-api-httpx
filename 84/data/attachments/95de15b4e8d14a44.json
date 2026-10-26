@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "bace279f-3db7-4333-855d-f9296e556f3b",
+    "title": "Recent it staff so.",
+    "maxScore": 53,
+    "minScore": 9,
+    "description": "Office teacher plan which send stay although.",
+    "previewFile": {
+      "id": "20f88bb7-e41f-499e-8092-2dce3068b45b",
+      "filename": "file_7545.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_7545.png"
+    },
+    "estimatedTime": "6 weeks",
+    "createdByUser": {
+      "id": "ed07781f-f60f-4303-a392-ce8e46d209e0",
+      "email": "test_3ec38612@example.com",
+      "lastName": "Carney",
+      "firstName": "Carol",
+      "middleName": "David"
+    }
+  }
+}

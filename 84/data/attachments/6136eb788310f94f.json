@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "9d52343a-6315-4ee3-a73f-a13806a08f1f",
+    "title": "Think inside create stuff become lose.",
+    "maxScore": 81,
+    "minScore": 9,
+    "description": "Direction per yes girl picture minute.",
+    "previewFile": {
+      "id": "361007d9-539f-4fa8-bbf5-2b43f2557373",
+      "filename": "file_1863.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_1863.png"
+    },
+    "estimatedTime": "6 weeks",
+    "createdByUser": {
+      "id": "9c47982a-ac27-4b7e-983c-7ff8becb43d0",
+      "email": "test_f8db50c0@example.com",
+      "lastName": "Kim",
+      "firstName": "Jeff",
+      "middleName": "Lucas"
+    }
+  }
+}

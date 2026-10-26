@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTI2VDIxOjAyOjU5LjcyMTgzNiIsInVzZXJfaWQiOiIxNmJmY2U3MS04ODFlLTRiODgtYTk5Mi03OTUwOTUwZDdkYTkifQ.NsJfHjWXhDS8qDUgtJA6FYA95LE5gGotVzG5mBh3Siw' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Direction state during realize job name.","courseId":"a41a6f76-a594-4261-9267-ca95b36f5ca6","maxScore":93,"minScore":17,"orderIndex":3706,"description":"Power skill approach level ready.","estimatedTime":"4 weeks"}'

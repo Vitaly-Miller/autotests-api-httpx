@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "0bb56105-a1d4-4dad-9b84-0980af62cb31",
+    "title": "Area color director leader include.",
+    "maxScore": 92,
+    "minScore": 6,
+    "description": "Final director heavy area fund open.",
+    "previewFile": {
+      "id": "2eb8ac09-1717-4981-a2b2-daea1a2ef92b",
+      "filename": "file_7429.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_7429.png"
+    },
+    "estimatedTime": "3 weeks",
+    "createdByUser": {
+      "id": "ba6094fb-2896-4094-a308-3bad6584cba5",
+      "email": "test_519e8681@example.com",
+      "lastName": "Doyle",
+      "firstName": "David",
+      "middleName": "Kelsey"
+    }
+  }
+}

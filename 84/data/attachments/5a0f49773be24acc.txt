@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTI2VDIxOjAyOjU0LjU4MDYwOCIsInVzZXJfaWQiOiJlZDA3NzgxZi1mNjBmLTQzMDMtYTM5Mi1jZThlNDZkMjA5ZTAifQ.fhJisxg0srA4hSr8JmdT1HpeywpydvYI_0HtLqSTku4' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Memory author run.","courseId":"bace279f-3db7-4333-855d-f9296e556f3b","maxScore":75,"minScore":24,"orderIndex":5416,"description":"Poor everything culture treatment nation benefit.","estimatedTime":"9 weeks"}'

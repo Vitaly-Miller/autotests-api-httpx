@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTI2VDIxOjAyOjQ2LjgxNDY2MiIsInVzZXJfaWQiOiI0OWM2MDhhZi04ODE0LTRiZjctYjU5My0yMWU1OTNiNzc2MzIifQ.wsdhebKLUeS7JhJo06xBHqBFSXFADTjR2Aqs-qNpghY' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Spring than research.","maxScore":53,"minScore":7,"description":"Wonder cause apply call listen leave.","estimatedTime":"7 weeks","previewFileId":"fd59f028-da0a-4c04-b74d-4d871dbf827e","createdByUserId":"49c608af-8814-4bf7-b593-21e593b77632"}'

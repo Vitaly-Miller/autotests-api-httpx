@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "1639c140-f16f-476d-a97b-97ed8c0ad593",
+    "title": "Enter course PM occur own mean.",
+    "maxScore": 77,
+    "minScore": 30,
+    "description": "Daughter head present even.",
+    "previewFile": {
+      "id": "6b7b9dfe-324d-4a85-8f9a-ba41ff67b670",
+      "filename": "file_8773.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_8773.png"
+    },
+    "estimatedTime": "8 weeks",
+    "createdByUser": {
+      "id": "a736d755-8d2b-4cb2-bd78-38eacae20e00",
+      "email": "test_42569bc1@example.com",
+      "lastName": "Rollins",
+      "firstName": "Joshua",
+      "middleName": "Donna"
+    }
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "description": " Response error schema for an attempt to get a non-existent entity\n\n- User\n- File\n- Course\n- Exercise\n ",
+  "properties": {
+    "detail": {
+      "title": "Detail",
+      "type": "string"
+    }
+  },
+  "required": [
+    "detail"
+  ],
+  "title": "NotFoundErrorResponseSchema",
+  "type": "object"
+}

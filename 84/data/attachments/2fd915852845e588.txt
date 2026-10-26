@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTI2VDIxOjAyOjUyLjAwODU0NCIsInVzZXJfaWQiOiJiYTYwOTRmYi0yODk2LTQwOTQtYTMwOC0zYmFkNjU4NGNiYTUifQ.0h3P532oAdr58VL0cNOVkNcFBxj14EFEugrVW59hcfk' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Something on memory over treatment bit.","courseId":"0bb56105-a1d4-4dad-9b84-0980af62cb31","maxScore":94,"minScore":6,"orderIndex":3777,"description":"Over finish result story ago.","estimatedTime":"8 weeks"}'

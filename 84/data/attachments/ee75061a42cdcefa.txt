@@ -1,0 +1,5 @@
+curl -X PATCH \
+  http://localhost:8000/api/v1/exercises/9c8fa73c-2060-4bd8-8d67-d777ad4a43dc \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTI2VDIxOjAyOjU4LjQzMjg0NCIsInVzZXJfaWQiOiJlZDBjODhmMS02YTFlLTQ3NGYtOTYyZS0zZjIyMWQwM2FkNmQifQ.PgIdyCPX6WF11NQ17dId1koQFDZMUIO-N2kFn7JdXsg' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Right born eat.","maxScore":57,"minScore":15,"orderIndex":1782,"description":"Institution current cell local.","estimatedTime":"3 weeks"}'

@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTI2VDIxOjAyOjQ3Ljc4MzQ0NCIsInVzZXJfaWQiOiJjZjUwYjI2OS0xY2ZhLTQxMDgtOTNmNC03ZThjMmRiMTQyMWYifQ.vj_kpwN9WqyrvD6Z1rKFT9DD-Zo6wgNZFMFIU4-sx4E' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Event two reach.","maxScore":59,"minScore":28,"description":"Bit nature follow machine feel ready.","estimatedTime":"6 weeks","previewFileId":"f2ae4b0f-c136-46d6-99ef-49c6007383ca","createdByUserId":"cf50b269-1cfa-4108-93f4-7e8c2db1421f"}'

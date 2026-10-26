@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/exercises \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTI2VDIxOjAyOjUwLjcyMjU4MCIsInVzZXJfaWQiOiI1ZDZhYjBiYi0xOWY1LTQzNTUtYjgwOC1mYjc4ZDU3NTdlZDcifQ.1_v7ICXQH_oXEIxV0ZvHDvcATm5m3xP-IciXN6bS8pI' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Sound probably paper her somebody picture.","courseId":"a647fab1-9509-4223-a1f5-6404b59b5892","maxScore":79,"minScore":29,"orderIndex":6490,"description":"Area out environment allow. Dark them mind hit.","estimatedTime":"7 weeks"}'

@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "5bb214db-5f5f-4839-bc25-afeb0617562c",
+    "title": "Event two reach.",
+    "maxScore": 59,
+    "minScore": 28,
+    "description": "Bit nature follow machine feel ready.",
+    "previewFile": {
+      "id": "f2ae4b0f-c136-46d6-99ef-49c6007383ca",
+      "filename": "file_4551.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_4551.png"
+    },
+    "estimatedTime": "6 weeks",
+    "createdByUser": {
+      "id": "cf50b269-1cfa-4108-93f4-7e8c2db1421f",
+      "email": "test_2c530a9a@example.com",
+      "lastName": "James",
+      "firstName": "Joseph",
+      "middleName": "Zachary"
+    }
+  }
+}

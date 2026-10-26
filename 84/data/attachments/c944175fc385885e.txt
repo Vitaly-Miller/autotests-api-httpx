@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTI2VDIxOjAyOjU4LjczMzczOCIsInVzZXJfaWQiOiJlZDBjODhmMS02YTFlLTQ3NGYtOTYyZS0zZjIyMWQwM2FkNmQifQ.TTY_yl2GOPomYEb8BrXlSrfMaIkUo4budRrmATGo3oo' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Already even leg list focus situation.","maxScore":63,"minScore":18,"description":"Collection before national decision more.","estimatedTime":"7 weeks","previewFileId":"1a50aba8-305c-4ac7-8a9a-4ccdff6418b8","createdByUserId":"ed0c88f1-6a1e-474f-962e-3f221d03ad6d"}'

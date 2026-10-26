@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "7eb91878-f4db-4762-82de-87886c1c6088",
+    "title": "Back relate something whom care standard.",
+    "maxScore": 99,
+    "minScore": 9,
+    "description": "Sign attorney Democrat Mrs.",
+    "previewFile": {
+      "id": "1a6fdf34-de05-46ae-8227-820dbcf127db",
+      "filename": "file_8719.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_8719.png"
+    },
+    "estimatedTime": "3 weeks",
+    "createdByUser": {
+      "id": "211bfeae-cf2d-456e-a348-b98ed2a737e5",
+      "email": "test_71a503e7@example.com",
+      "lastName": "Martin",
+      "firstName": "Caleb",
+      "middleName": "Michael"
+    }
+  }
+}

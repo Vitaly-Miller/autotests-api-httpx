@@ -1,0 +1,23 @@
+{
+  "course": {
+    "id": "a647fab1-9509-4223-a1f5-6404b59b5892",
+    "title": "Born right trouble official brother successful.",
+    "maxScore": 95,
+    "minScore": 7,
+    "description": "Cup budget woman avoid home.",
+    "previewFile": {
+      "id": "88e2a26c-e2d9-476c-9967-75dac415532a",
+      "filename": "file_6444.png",
+      "directory": "Uploaded",
+      "url": "http://localhost:8000/static/Uploaded/file_6444.png"
+    },
+    "estimatedTime": "8 weeks",
+    "createdByUser": {
+      "id": "5d6ab0bb-19f5-4355-b808-fb78d5757ed7",
+      "email": "test_007680ff@example.com",
+      "lastName": "Thompson",
+      "firstName": "Brittany",
+      "middleName": "Caitlin"
+    }
+  }
+}

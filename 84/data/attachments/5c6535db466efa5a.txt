@@ -1,0 +1,5 @@
+curl -X POST \
+  http://localhost:8000/api/v1/courses \
+  -H 'authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHBpcmUiOiIyMDI2LTEwLTI2VDIxOjAyOjQ5Ljc0Mjc2MCIsInVzZXJfaWQiOiIxOGE4ZWY1My00ZjllLTQ4YzItYWIzZS1lOTZjYWY3Mzg1ODgifQ.7GmFkzqH_XyDzTXLuKgrgZzfCx1OWbdHphTvx3DGvKI' \
+  -H 'content-type: application/json' \
+  -d '{"title":"Daughter point forget.","maxScore":86,"minScore":6,"description":"Reality live than reveal laugh one rather far.","estimatedTime":"4 weeks","previewFileId":"42b9ffe3-99df-4b53-9a4b-a79758bcd9cc","createdByUserId":"18a8ef53-4f9e-48c2-ab3e-e96caf738588"}'
