@@ -14,11 +14,8 @@ Built with **Python**, **HTTPX**, **Pytest**, **Pydantic**, **Allure**, **Faker*
 ---
 
 > **⚠️ A note on code comments.**  
-> The code is deliberately annotated in detail — nearly every line
-> carries a comment explaining what it does and why. This is an intentional choice for
-> a portfolio project: it lets a reviewer follow every implementation decision without leaving the
-> file. In production code I would keep comments far more sparing, reserving them for non-obvious
-> constraints and decisions.
+> Comments are kept for non-obvious constraints and decisions, while the code itself is structured
+> into clearly labelled sections so a reviewer can navigate each file at a glance.
 
 ---
 ## ✨ Highlights
