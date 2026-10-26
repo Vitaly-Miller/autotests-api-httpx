@@ -8,20 +8,17 @@ from tools.data_generator import fake
 #================================================== ⬆︎REQUEST schemas ==================================================
 #----------------------------------------------------- Create User -----------------------------------------------------
 class CreateUserRequestSchema(BaseModel):
-    email: EmailStr = Field(default_factory=fake.email)  # ⚠️May need to replace with str, otherwise negative tests will fail on Email validation
+    email: EmailStr = Field(default_factory=fake.email)
     password: str = Field(default_factory=fake.password)
     last_name: str = Field(alias='lastName', default_factory=fake.last_name)
     first_name: str = Field(alias='firstName', default_factory=fake.first_name)
     middle_name: str = Field(alias='middleName', default_factory=fake.middle_name)
 
-#------------------------------------------------------ Get User -------------------------------------------------------
-
-
 
 
 #----------------------------------------------------- Update User -----------------------------------------------------
 class UpdateUserRequestSchema(BaseModel):
-    email: EmailStr | None = Field(default_factory=fake.email) # ⚠️May need to replace with str, otherwise negative tests will fail on Email validation
+    email: EmailStr | None = Field(default_factory=fake.email)
     last_name: str | None = Field(alias='lastName', default_factory=fake.last_name)
     first_name: str | None = Field(alias='firstName', default_factory=fake.first_name)
     middle_name: str | None = Field(alias='middleName', default_factory=fake.middle_name)
@@ -31,7 +28,7 @@ class UpdateUserRequestSchema(BaseModel):
 #----------------------------------------------------- "user": {} ------------------------------------------------------
 class UserSchema(BaseModel):
     id: str
-    email: EmailStr   # ⚠️May need to replace with str, otherwise negative tests will fail on Email validation
+    email: EmailStr
     last_name: str = Field(alias='lastName')
     first_name: str = Field(alias='firstName')
     middle_name: str = Field(alias='middleName')
@@ -53,10 +50,10 @@ class UserUpdateResponseSchema(BaseModel):
     user: UserSchema
 
 
-#======================================== Full schema (⬆︎Request + ⬇Response) ✨=======================================
+#======================================== Full schema (⬆︎Request + ⬇Response) ==========================================
 class CreateUserSchema(BaseModel):
-    request: CreateUserRequestSchema    # ┐
-    response: CreateUserResponseSchema  # ┘
+    request: CreateUserRequestSchema
+    response: CreateUserResponseSchema
 
     # --- Direct data access methods ---
     # Email
@@ -93,8 +90,8 @@ class CreateUserSchema(BaseModel):
     @property
     def auth_data(self) -> AuthDataSchema:
         return AuthDataSchema(
-            email=self.email,       # Email     ┐
-            password=self.password  # Password  ┘
+            email=self.email,
+            password=self.password
         )
 
 #=======================================================================================================================

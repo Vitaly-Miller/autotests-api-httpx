@@ -19,7 +19,7 @@ def users_client_private(create_user: CreateUserSchema) -> UsersClientPrivate:
     :return: UsersClientPrivate() instance (with Authorization)
     """
     client = get_users_client_private(create_user.auth_data)
-    return client                                          # UsersClientPrivate()
+    return client
 
 
 #----------------------------------------------------- Get User Me -----------------------------------------------------
@@ -33,8 +33,8 @@ def get_user_me_api(users_client_private: UsersClientPrivate) -> httpx.Response:
     :param users_client_private: Fixture that provides a UsersClientPrivate instance (with Authorization)
     :return: httpx.Response
     """
-    response = users_client_private.get_user_me_api()     # ▶ Request via API method
-    return response                                       # httpx.Response
+    response = users_client_private.get_user_me_api()
+    return response
 
 
 # Pydantic-model
@@ -47,8 +47,8 @@ def get_user_me(users_client_private: UsersClientPrivate) -> GetUserMeResponseSc
     :param users_client_private: UsersClientPrivate instance (with Authorization)
     :return: Pydantic-model (GetUserMeResponseSchema)
     """
-    response_model = users_client_private.get_user_me()    # ▶ Request via Pydantic method
-    return response_model                                  # Pydantic-model (GetUserMeResponseSchema)
+    response_model = users_client_private.get_user_me()
+    return response_model
 
 
 #=======================================================================================================================

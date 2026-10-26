@@ -24,7 +24,7 @@ def exercises_client(create_user: CreateUserSchema) -> ExercisesClient:
     :return: ExercisesClient() instance (with Authorization)
     """
     exercises_client = get_exercises_client(create_user.auth_data)
-    return exercises_client                                # ExercisesClient()
+    return exercises_client
 
 
 #-------------------------------------------------- Create exercise ----------------------------------------------------
@@ -39,11 +39,11 @@ def create_exercise_api(exercises_client: ExercisesClient, create_course: Create
     :param create_course: Nested Pydantic fixture that creates a course (to get the Course-ID)
     :return: httpx.Response
     """
-    create_exercise_data = CreateExerciseRequestSchema(   # Pydantic-model c default fake-data
-        courseId=create_course.course_id                  # Default —> real Course-ID from fixture
+    create_exercise_data = CreateExerciseRequestSchema(
+        courseId=create_course.course_id
     )
-    response = exercises_client.create_exercise_api(create_exercise_data)  # ▶ Request via API method
-    return response                                       # httpx.Response
+    response = exercises_client.create_exercise_api(create_exercise_data)
+    return response
 
 
 # Pydantic-model (full)
@@ -57,12 +57,12 @@ def create_exercise(exercises_client: ExercisesClient, create_course: CreateCour
     :param create_course: Nested Pydantic fixture that creates a course (to get the Course-ID)
     :return: CreateExerciseSchema ✨<Request + Response>
     """
-    exercise_data = CreateExerciseRequestSchema(         # Pydantic-model c default fake-data
-        courseId=create_course.course_id                 # Default —> real Course-ID from fixture
+    exercise_data = CreateExerciseRequestSchema(
+        courseId=create_course.course_id
     )
-    response_model = exercises_client.create_exercise(exercise_data)   # ▶ Request via Pydantic method
-    response_model_full = CreateExerciseSchema(request=exercise_data, response=response_model)  # Initialize Pydantic model (CoursesFullSchema) ✨<Request + Response>
-    return response_model_full                           # Pydantic-model (CreateExerciseSchema) ✨<Request + Response>
+    response_model = exercises_client.create_exercise(exercise_data)
+    response_model_full = CreateExerciseSchema(request=exercise_data, response=response_model)
+    return response_model_full
 
 
 #---------------------------------------------------- Get exercise -----------------------------------------------------
@@ -77,8 +77,8 @@ def get_exercise_api(exercises_client: ExercisesClient, create_exercise: CreateE
     :param create_exercise: Nested Pydantic fixture that creates an exercise (to get the Exercise-ID)
     :return: httpx.Response
     """
-    response = exercises_client.get_exercise_api(create_exercise.exercise_id)     # ▶ Request via API method
-    return response                                                               # httpx.Response
+    response = exercises_client.get_exercise_api(create_exercise.exercise_id)
+    return response
 
 
 # Pydantic-model
@@ -92,8 +92,8 @@ def get_exercise(exercises_client: ExercisesClient, create_exercise: CreateExerc
     :param create_exercise: Nested Pydantic fixture that creates an exercise (to get the Exercise-ID)
     :return: Pydantic-model (GetExerciseResponseSchema)
     """
-    response_model = exercises_client.get_exercise(create_exercise.exercise_id)   # ▶ Request via Pydantic method
-    return response_model                                                         # Pydantic-model (GetExercisesResponseSchema)
+    response_model = exercises_client.get_exercise(create_exercise.exercise_id)
+    return response_model
 
 
 #---------------------------------------------------- Get exercises ----------------------------------------------------
@@ -108,10 +108,10 @@ def get_exercises_api(exercises_client: ExercisesClient, create_course: CreateCo
     :param create_course: Nested Pydantic fixture that creates a course (to get the Course-ID)
     :return: httpx.Response
     """
-    course_id_query_model = GetExercisesQuerySchema(courseId=create_course.course_id) # Pydantic-model
+    course_id_query_model = GetExercisesQuerySchema(courseId=create_course.course_id)
 
-    response = exercises_client.get_exercises_api(course_id_query_model)              # ▶ Request via API method
-    return response                                                                   # httpx.Response
+    response = exercises_client.get_exercises_api(course_id_query_model)
+    return response
 
 
 #--------------------------------------------------- Update exercise ---------------------------------------------------
@@ -126,12 +126,12 @@ def update_exercise_api(exercises_client: ExercisesClient, create_exercise: Crea
     :param create_exercise: Nested Pydantic fixture that creates an exercise (to get the Exercise-ID)
     :return: httpx.Response
     """
-    new_exercise_data = UpdateExerciseRequestSchema()         # Pydantic-model c fake-data (Update ALL)
-    response = exercises_client.update_exercise_api(          # ▶ Request via API method
-        create_exercise.exercise_id,                # Pass Exercise-ID
-        new_exercise_data                     # Pass data to update
+    new_exercise_data = UpdateExerciseRequestSchema()
+    response = exercises_client.update_exercise_api(
+        create_exercise.exercise_id,
+        new_exercise_data
     )
-    return response                                           # httpx.Response
+    return response
 
 
 # Pydantic-model
@@ -145,12 +145,12 @@ def update_exercise(exercises_client: ExercisesClient, create_exercise: CreateEx
     :param create_exercise: Nested Pydantic fixture that creates an exercise (to get the Exercise-ID)
     :return: httpx.Response
     """
-    new_exercise_data = UpdateExerciseRequestSchema()        # Pydantic-model c fake-data (Update ALL)
-    response_model = exercises_client.update_exercise(       # ▶ Request via Pydantic method
-        create_exercise.exercise_id,               # Pass Exercise-ID
-        new_exercise_data                    # Pass data to update
+    new_exercise_data = UpdateExerciseRequestSchema()
+    response_model = exercises_client.update_exercise(
+        create_exercise.exercise_id,
+        new_exercise_data
     )
-    return response_model                                    # Pydantic-model (UpdateExerciseResponseSchema)
+    return response_model
 
 
 #--------------------------------------------------- Delete exercise ---------------------------------------------------

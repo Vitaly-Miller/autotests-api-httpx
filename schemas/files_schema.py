@@ -8,18 +8,18 @@ from tools.data_generator import fake
 #================================================= ⬆︎REQUEST Schemas ===================================================
 #----------------------------------------------------- Create File -----------------------------------------------------
 class CreateFileRequestSchema(BaseModel):
-    filename: str = Field(default_factory=fake.png_file_name)            # New file name when saved on the server
-    directory: str = Field(default='Uploaded')                           # Directory where the file is saved on the server
-    upload_path: str = Field(default=settings.test_data.image_png_file)  # File path (from .env)
+    filename: str = Field(default_factory=fake.png_file_name)
+    directory: str = Field(default='Uploaded')
+    upload_path: str = Field(default=settings.test_data.image_png_file)
 
 
 #================================================= ⬇︎RESPONSE Schemas ==================================================
 #----------------------------------------------------- "file": {}  -----------------------------------------------------
 class FileSchema(BaseModel):
-    id: str           # File-ID
-    filename: str     # New file name when saved on the server
-    directory: str    # Directory where the file is saved on the server
-    url: str          # File URL on the server
+    id: str
+    filename: str
+    directory: str
+    url: str
 
 #----------------------------------------------------- Create File -----------------------------------------------------
 class CreateFileResponseSchema(BaseModel):
@@ -30,10 +30,10 @@ class GetFileResponseSchema(BaseModel):
     file: FileSchema
 
 
-#======================================== Full Schema (⬆︎Request + ⬇Response) ✨=======================================
+#======================================== Full Schema (⬆︎Request + ⬇Response) ==========================================
 class CreateFileSchema(BaseModel):
-    request: CreateFileRequestSchema    # ┐
-    response: CreateFileResponseSchema  # ┘
+    request: CreateFileRequestSchema
+    response: CreateFileResponseSchema
 
     #--- Direct data access methods ---
     # File-ID

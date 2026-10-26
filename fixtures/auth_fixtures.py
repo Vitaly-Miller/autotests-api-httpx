@@ -19,7 +19,7 @@ def auth_client() -> AuthClient:
     :return: AuthClient() instance (with Base URL)
     """
     auth_client = get_auth_client()
-    return auth_client                                          # AuthClient()
+    return auth_client
 
 
 #-------------------------------------------------------- Auth ---------------------------------------------------------
@@ -34,8 +34,8 @@ def auth_api(create_user: CreateUserSchema, auth_client: AuthClient) -> httpx.Re
     :param auth_client: Nested fixture that provides an AuthClient instance (with Base URL)
     :return: httpx.Response
     """
-    response = auth_client.login_api(create_user.auth_data)     # ▶ Request via API method
-    return response                                             # httpx.Response
+    response = auth_client.login_api(create_user.auth_data)
+    return response
 
 
 # Pydantic-model
@@ -49,8 +49,8 @@ def auth(create_user: CreateUserSchema, auth_client: AuthClient) -> AuthResponse
     :param auth_client: Nested fixture that provides an AuthClient instance (with Base URL)
     :return: Pydantic-model (AuthResponseSchema)
     """
-    response_model = auth_client.login_pydantic(create_user.auth_data)   # ▶ Request via Pydantic method
-    return response_model                                                # Pydantic-model (AuthResponseSchema)
+    response_model = auth_client.login_pydantic(create_user.auth_data)
+    return response_model
 
 
 #=======================================================================================================================

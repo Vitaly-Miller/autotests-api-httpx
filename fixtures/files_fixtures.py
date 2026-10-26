@@ -21,7 +21,7 @@ def files_client(create_user: CreateUserSchema) -> FilesClient:
     :return: Instance of class FilesClient() (with Base URL + AUTHORIZATION)
     """
     files_client = get_files_client(create_user.auth_data)
-    return files_client                                           # FilesClient()
+    return files_client
 
 
 #----------------------------------------------------- Create File -----------------------------------------------------
@@ -35,9 +35,9 @@ def create_file_api(files_client: FilesClient) -> httpx.Response:
     :param files_client: Nested fixture that provides a FilesClient instance (with Authorization)
     :return: httpx.Response
     """
-    create_file_data = CreateFileRequestSchema()                  # Initialize Pydantic model with default fake data
-    response = files_client.create_file_api(create_file_data)     # ▶ Request via API method
-    return response                                               # httpx.Response
+    create_file_data = CreateFileRequestSchema()
+    response = files_client.create_file_api(create_file_data)
+    return response
 
 
 # Pydantic-model
@@ -50,12 +50,13 @@ def create_file(files_client: FilesClient) -> CreateFileSchema:
     :param files_client: Nested fixture that provides a FilesClient instance (with Authorization)
     :return: Pydantic-model (CreateFileSchema) ✨<Request + Response>
     """
-    create_file_data = CreateFileRequestSchema()                  # Initialize Pydantic model with default fake data
-    response_model = files_client.create_file(create_file_data)   # ▶ Request via Pydantic method
-    response_model_full = CreateFileSchema(                       # Initialize Pydantic model (CreateFileSchema) ✨<Request + Response>
+    create_file_data = CreateFileRequestSchema()
+    response_model = files_client.create_file(create_file_data)
+    response_model_full = CreateFileSchema(
         request=create_file_data,
-        response=response_model)
-    return response_model_full                                    # Pydantic-model (CreateFileSchema) ✨<Request + Response>
+        response=response_model
+    )
+    return response_model_full
 
 
 # Pydantic-model (full) + delete file
@@ -68,13 +69,14 @@ def create_file_temp(files_client: FilesClient) -> Generator[CreateFileSchema]:
     :param files_client: Nested fixture that provides a FilesClient instance (with Authorization)
     :return: httpx.Response
     """
-    create_file_data = CreateFileRequestSchema()                  # Initialize Pydantic model with default fake data
-    response_model = files_client.create_file(create_file_data)   # ▶ Request via Pydantic method
-    response_model_full = CreateFileSchema(                       # Initialize Pydantic model (CreateFileSchema) ✨<Request + Response>
+    create_file_data = CreateFileRequestSchema()
+    response_model = files_client.create_file(create_file_data)
+    response_model_full = CreateFileSchema(
         request=create_file_data,
-        response=response_model)
-    yield response_model_full                                     # Pydantic-model (CreateFileSchema) ✨<Request + Response>
-    files_client.delete_file_api(response_model_full.file_id)     # Delete file after test
+        response=response_model
+    )
+    yield response_model_full
+    files_client.delete_file_api(response_model_full.file_id)
 
 
 #------------------------------------------------------ Get File -------------------------------------------------------
@@ -89,8 +91,8 @@ def get_file_api(files_client: FilesClient, create_file: CreateFileSchema) -> ht
     :param create_file: Nested Pydantic fixture that creates a file
     :return: httpx.Response
     """
-    response = files_client.get_file_api(create_file.file_id)     # ▶ Request via API method
-    return response                                               # httpx.Response
+    response = files_client.get_file_api(create_file.file_id)
+    return response
 
 
 # Pydantic-model
@@ -104,8 +106,8 @@ def get_file(files_client: FilesClient, create_file: CreateFileSchema) -> GetFil
     :param create_file: Nested Pydantic fixture that creates a file
     :return: Pydantic-model (GetFileResponseSchema)
     """
-    response_model = files_client.get_file(create_file.file_id)   # ▶ Request via Pydantic method
-    return response_model                                         # Pydantic-model (GetFileResponseSchema)
+    response_model = files_client.get_file(create_file.file_id)
+    return response_model
 
 
 #----------------------------------------------------- Delete File -----------------------------------------------------
@@ -120,8 +122,8 @@ def delete_file_api(files_client: FilesClient, create_file: CreateFileSchema) ->
     :param create_file: Nested Pydantic fixture that creates a file
     :return: httpx.Response
     """
-    response = files_client.delete_file_api(create_file.file_id)   # ▶ Request via API method
-    return response                                                # httpx.Response
+    response = files_client.delete_file_api(create_file.file_id)
+    return response
 
 
 #=======================================================================================================================

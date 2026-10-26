@@ -14,16 +14,16 @@ class CreateCourseRequestSchema(BaseModel):
     min_score: int = Field(alias='minScore', strict=True, default_factory=fake.min_score)
     description: str = Field(default_factory=fake.text)
     estimated_time: str = Field(alias='estimatedTime', default_factory=fake.estimated_time)
-    preview_file_id: str = Field(alias='previewFileId', default_factory=fake.uuid4)           # ⚠️Default value for NEGATIVE test ONLY
-    created_by_user_id: str = Field(alias='createdByUserId', default_factory=fake.user_id)    # ⚠️️Default value for NEGATIVE test ONLY
+    preview_file_id: str = Field(alias='previewFileId', default_factory=fake.uuid4)
+    created_by_user_id: str = Field(alias='createdByUserId', default_factory=fake.user_id)
 
 #---------------------------------------------------- Get Course -------------------------------------------------------
 
 
 
 #---------------------------------------------------- Get Courses ------------------------------------------------------
-class GetCoursesQuerySchema(BaseModel):                                   # ?query
-    user_id: str = Field(alias='userId', default_factory=fake.user_id)    # ⚠️️Default value for NEGATIVE test ONLY)
+class GetCoursesQuerySchema(BaseModel):
+    user_id: str = Field(alias='userId', default_factory=fake.user_id)
 
 
 #---------------------------------------------------- Update Course ----------------------------------------------------
@@ -44,8 +44,8 @@ class CourseSchema(BaseModel):
     min_score: int = Field(alias='minScore')
     description: str
     estimated_time: str = Field(alias='estimatedTime')
-    preview_file: FileSchema = Field(alias='previewFile')       # {}
-    created_by_user: UserSchema = Field(alias='createdByUser')  # {}
+    preview_file: FileSchema = Field(alias='previewFile')
+    created_by_user: UserSchema = Field(alias='createdByUser')
 
 #--------------------------------------------------- Create Course -----------------------------------------------------
 class CreateCourseResponseSchema(BaseModel):
@@ -67,8 +67,8 @@ class UpdateCourseResponseSchema(BaseModel):
 #======================================== Full schema (⬆︎Request + ⬇Response) ✨=======================================
 #---------------------------------------------------- Create Course ----------------------------------------------------
 class CreateCourseSchema(BaseModel):
-    request: CreateCourseRequestSchema    # ┐
-    response: CreateCourseResponseSchema  # ┘
+    request: CreateCourseRequestSchema
+    response: CreateCourseResponseSchema
 
     # ------- Direct data access methods -------
     @property
@@ -136,8 +136,8 @@ class CreateCourseSchema(BaseModel):
 
 #---------------------------------------------------- Update Course ----------------------------------------------------
 class UpdateCourseSchema(BaseModel):
-    request: UpdateCourseRequestSchema    # ┐
-    response: UpdateCourseResponseSchema  # ┘
+    request: UpdateCourseRequestSchema
+    response: UpdateCourseResponseSchema
 
 
 #=======================================================================================================================

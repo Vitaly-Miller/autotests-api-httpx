@@ -8,7 +8,7 @@ from tools.data_generator import fake
 #--------------------------------------------------- Create Exercise ---------------------------------------------------
 class CreateExerciseRequestSchema(BaseModel):
     title: str = Field(default_factory=fake.sentence)
-    course_id: str = Field(alias='courseId', default_factory=fake.uuid4)    # ⚠️Default value for NEGATIVE tests only    (But the server doesn't check course_id existence. Only UUID format is validated)
+    course_id: str = Field(alias='courseId', default_factory=fake.uuid4)
     max_score: int = Field(alias='maxScore', strict=True, default_factory=fake.max_score)
     min_score: int = Field(alias='minScore', strict=True, default_factory=fake.min_score)
     order_index: int = Field(alias='orderIndex', default_factory=fake.random_int)
@@ -20,8 +20,8 @@ class GetExerciseRequestSchema(BaseModel):
     exercise_id: str
 
 #---------------------------------------------------- Get Exercises ----------------------------------------------------
-class GetExercisesQuerySchema(BaseModel):                                 # (?query)
-    course_id: str = Field(alias='courseId', default_factory=fake.uuid4)  # ⚠️Default value for NEGATIVE tests only
+class GetExercisesQuerySchema(BaseModel):
+    course_id: str = Field(alias='courseId', default_factory=fake.uuid4)
 
 #--------------------------------------------------- Update Exercise ---------------------------------------------------
 class UpdateExerciseRequestSchema(BaseModel):
@@ -65,7 +65,7 @@ class UpdateExerciseResponseSchema(BaseModel):
 
 
 
-#======================================== Full Schema (⬆︎Request + ⬇Response) ✨=======================================
+#======================================== Full Schema (⬆︎Request + ⬇Response) ==========================================
 class CreateExerciseSchema(BaseModel):
     request: CreateExerciseRequestSchema    # ┐
     response: CreateExerciseResponseSchema  # ┘
